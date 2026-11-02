@@ -1,0 +1,33 @@
+{
+  "name": "neurips-2026-explorer",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --host 0.0.0.0",
+    "collect": "node scripts/collect.mjs",
+    "validate": "node scripts/validate-data.mjs --allow-count-change",
+    "test": "node --test tests/data.test.mjs",
+    "test:e2e": "playwright test",
+    "download:pdfs": "node scripts/download-pdfs.mjs",
+    "snapshot:create": "node scripts/snapshot.mjs --create",
+    "snapshot:restore": "node scripts/snapshot.mjs --restore"
+  },
+  "dependencies": {
+    "lucide-react": "^0.468.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.56.0",
+    "@types/node": "^22.19.0",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "@vitejs/plugin-react": "^5.1.0",
+    "typescript": "~5.9.3",
+    "vite": "^7.1.0"
+  },
+  "engines": { "node": ">=22.12.0" }
+}

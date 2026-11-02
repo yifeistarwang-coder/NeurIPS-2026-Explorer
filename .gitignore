@@ -1,0 +1,12 @@
+node_modules/
+dist/
+data/raw/
+data/pdfs/
+.pi/
+playwright-report/
+test-results/
+.env
+.env.*
+!.env.example
+*.log
+.DS_Store

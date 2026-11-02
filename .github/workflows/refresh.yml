@@ -1,0 +1,58 @@
+name: Refresh Official Dataset
+
+on:
+  workflow_dispatch:
+    inputs:
+      accept_count_change:
+        description: 'Accept a reviewed official source count different from the original 9152 records'
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: official-dataset-refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Restore reproducible baseline
+        run: npm run snapshot:restore
+      - name: Fetch and validate official metadata and abstracts
+        env:
+          ACCEPT_COUNT_CHANGE: ${{ inputs.accept_count_change }}
+        run: |
+          if [ "$ACCEPT_COUNT_CHANGE" = "true" ]; then
+            npm run collect -- --allow-count-change
+          else
+            npm run collect
+          fi
+      - run: npm test
+      - run: npm run validate
+      - name: Preserve new raw snapshot
+        run: npm run snapshot:create
+      - name: Commit validated dataset
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add public/data data/snapshots
+          if ! git diff --cached --quiet; then
+            git commit -m 'chore(data): refresh official NeurIPS snapshot'
+            git push
+          fi
+      - name: Explicitly trigger publication
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run pages.yml --ref main
+      - name: Snapshot summary
+        run: node -e "const fs=require('fs');const m=JSON.parse(fs.readFileSync('public/data/manifest.json'));fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY,JSON.stringify({records:m.totalPapers,distinctOfficialIds:m.uniqueOfficialEventIds,abstracts:m.abstractsAvailable,missing:m.abstractsMissing},null,2))"

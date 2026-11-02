@@ -1,0 +1,4 @@
+* text=auto eol=lf
+# Published exports are byte-checksummed and preserve source text and CSV CRLFs.
+public/data/** -text -whitespace
+data/snapshots/*.gz binary

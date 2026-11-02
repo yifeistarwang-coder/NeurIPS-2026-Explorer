@@ -1,0 +1,353 @@
+{
+  "updatedAt": "2026-11-02T05:43:58.850Z",
+  "expectedCount": 9152,
+  "totalPapers": 9152,
+  "abstractsAvailable": 6310,
+  "abstractsMissing": 2842,
+  "pdfLinksAvailable": 9078,
+  "officialTopicCount": 3115,
+  "inferredTopicCount": 6037,
+  "sourceUrls": [
+    "https://neurips.cc/static/virtual/data/neurips-2026-orals-posters.json",
+    "https://neurips.cc/static/virtual/data/neurips-2026-abstracts.json",
+    "https://neurips.cc/virtual/2026/loc/sydney/papers.html"
+  ],
+  "sources": [
+    {
+      "name": "metadata",
+      "url": "https://neurips.cc/static/virtual/data/neurips-2026-orals-posters.json",
+      "sha256": "330f0dee8ad763a9d19b5b9f2e0cdd26a8172dfa5f0bdb3a83ad9210cb61dca1",
+      "bytes": 19867781,
+      "status": "cached",
+      "cacheFile": "metadata.json"
+    },
+    {
+      "name": "abstracts",
+      "url": "https://neurips.cc/static/virtual/data/neurips-2026-abstracts.json",
+      "sha256": "5df5f5d03780d09d340b1fcf5895cbd0f025e92c0b9848562535dab011a566c6",
+      "bytes": 8998827,
+      "status": "cached",
+      "cacheFile": "abstracts.json"
+    }
+  ],
+  "totalSourceEvents": 9278,
+  "oralPresentationsExcluded": 126,
+  "uniqueOfficialEventIds": 6000,
+  "uniquePaperUrls": 5947,
+  "repeatedPosterRows": 3152,
+  "uniqueEventsWithAbstracts": 4038,
+  "uniqueEventsMissingAbstracts": 1962,
+  "duplicatePolicy": "Oral presentations excluded. Repeated Poster source rows retained to reproduce the requested official snapshot row count; repeated IDs receive deterministic --N suffixes. totalPapers counts rows, not distinct research papers. Consult uniqueOfficialEventIds and uniquePaperUrls for distinct-source counts.",
+  "pdfPolicy": "OpenReview PDF links are derived with URL parsing when official PDF URLs are absent. No derived link is claimed verified. PDF files are not included in these exports.",
+  "pdfLinksDerived": 9078,
+  "pdfLinksOfficial": 0,
+  "pdfLinksVerified": 0,
+  "paperLinksMissing": 73,
+  "topicInference": {
+    "method": "Deterministic bilingual keyword scoring of title (weight 5) and abstract (weight 1); multiword phrases have weight 3. Stable taxonomy order resolves ties; no matches use General Machine Learning / Everything Else.",
+    "version": 2,
+    "officialTopicsPreserved": true,
+    "inferredTopicsAreOfficial": false
+  },
+  "openreview": {
+    "status": "blocked",
+    "notesFetched": 0,
+    "abstractsAdded": 0,
+    "probes": [
+      {
+        "url": "https://api2.openreview.net/notes?content.venueid=NeurIPS.cc%2F2026%2FConference&limit=1000&offset=0",
+        "status": 403,
+        "sha256": "78f432a25c7d1405b92a88a27105704496bd9c95ed7cb6b4472773ee3e412301",
+        "error": "HTTP 403 fetching https://api2.openreview.net/notes?content.venueid=NeurIPS.cc%2F2026%2FConference&limit=1000&offset=0: {\"name\":\"ChallengeRequiredError\",\"message\":\"Challenge verification required (2026-11-02-2940571)\",\"status\":403,\"details\":{\"challengeUrl\":\"https://openreview.net/challenge?redirect=https%3A%2F%2Fapi2.openreview.net%2Fnote"
+      },
+      {
+        "url": "https://api2.openreview.net/notes?invitation=NeurIPS.cc%2F2026%2FConference%2F-%2FSubmission&limit=1000&offset=0",
+        "status": 403,
+        "sha256": "bf280adc1140ec14d3da83443ef24c045230eafb5d1086d974f160284e22feda",
+        "error": "HTTP 403 fetching https://api2.openreview.net/notes?invitation=NeurIPS.cc%2F2026%2FConference%2F-%2FSubmission&limit=1000&offset=0: {\"name\":\"ChallengeRequiredError\",\"message\":\"Challenge verification required (2026-11-02-2940798)\",\"status\":403,\"details\":{\"challengeUrl\":\"https://openreview.net/challenge?redirect=https%3A%2F%2Fapi2.openreview.net%2Fnote"
+      },
+      {
+        "url": "https://api2.openreview.net/notes?content.venue=NeurIPS+2026+poster&limit=1000&offset=0&details=original",
+        "status": 403,
+        "sha256": "8451f4a628f356a09ec1dc034210db31b893aee5c4586623c82737ae155e0ea8",
+        "error": "HTTP 403 fetching https://api2.openreview.net/notes?content.venue=NeurIPS+2026+poster&limit=1000&offset=0&details=original: {\"name\":\"ChallengeRequiredError\",\"message\":\"Challenge verification required (2026-11-02-2940856)\",\"status\":403,\"details\":{\"challengeUrl\":\"https://openreview.net/challenge?redirect=https%3A%2F%2Fapi2.openreview.net%2Fnote"
+      }
+    ],
+    "attemptedAt": "2026-11-02T05:27:01.414Z",
+    "error": "HTTP 403 fetching https://api2.openreview.net/notes?content.venue=NeurIPS+2026+poster&limit=1000&offset=0&details=original: {\"name\":\"ChallengeRequiredError\",\"message\":\"Challenge verification required (2026-11-02-2940856)\",\"status\":403,\"details\":{\"challengeUrl\":\"https://openreview.net/challenge?redirect=https%3A%2F%2Fapi2.openreview.net%2Fnote"
+  },
+  "artifacts": {
+    "papers.json": {
+      "bytes": 18398003,
+      "sha256": "cd2ab9543ab39b6584395c3e5606d341f83e68d3c1c641073468293d7cde68b3"
+    },
+    "topics.json": {
+      "bytes": 14002,
+      "sha256": "33dc5c0551d6f3d8a06d924e96fad8d1757bc4e8e45b01e53abb5614c2e70e8b"
+    },
+    "papers.csv": {
+      "bytes": 13417132,
+      "sha256": "da829e9a029375b0e206136c7f45877746600fe9313fb01fbd92a901b7e5eae7"
+    },
+    "topics/applications-applications.md": {
+      "bytes": 47852,
+      "sha256": "147a36e375e732e251574b7a5c707ee808f398de6208526b1eec4e70b2a847b0"
+    },
+    "topics/applications-chemistry-and-drug-discovery.md": {
+      "bytes": 192844,
+      "sha256": "386ccb9e42773966502d7bc0f363c14ba248dbe2ba764977eecc5f4a66dfd21a"
+    },
+    "topics/applications-climate.md": {
+      "bytes": 30212,
+      "sha256": "3e1fa3719405e2e6b87322897e57ab166f68cf04c62b11eedf591b41e17420c8"
+    },
+    "topics/applications-genetics-cell-biology-etc.md": {
+      "bytes": 131964,
+      "sha256": "e5c5005861b8d06f9f5625de5b70b4a07a2a2038564d94629d6d7fb4996e20e7"
+    },
+    "topics/applications-health.md": {
+      "bytes": 282698,
+      "sha256": "642eeba93ee91b881ed36e549f79c5bf0b2ba55f9b83a586b19344c9413cd5da"
+    },
+    "topics/applications-language-speech-and-dialog.md": {
+      "bytes": 303139,
+      "sha256": "d5cc3ee175a9ebea3fcce156930ae89c3c917231751a5566ae5f82b2f78d398a"
+    },
+    "topics/applications-neuroscience-cognitive-science.md": {
+      "bytes": 262641,
+      "sha256": "08732f71359b3729bb9e123c2320b1383af16704f9defbb055e7050ae48abefc"
+    },
+    "topics/applications-physics.md": {
+      "bytes": 227966,
+      "sha256": "172262f1eba9c1bf04cf02c136cdef304c550898ea25f98ced0f214a96de00a4"
+    },
+    "topics/applications-robotics.md": {
+      "bytes": 318984,
+      "sha256": "747d7b8e368834be286d7eff50f7237fa902ddf09136a640ecd5bff038b4725d"
+    },
+    "topics/applications-time-series.md": {
+      "bytes": 266443,
+      "sha256": "7715db705a11b53e40aa226f7583d5dfea2cd22a8d48244263c1d32a3aa77b56"
+    },
+    "topics/applications-everything-else.md": {
+      "bytes": 45227,
+      "sha256": "4276a43685d5860351c343d41fc876b332800e86789b625593c55ac0b6cae993"
+    },
+    "topics/computer-vision-3d-rendering-reconstruction.md": {
+      "bytes": 430315,
+      "sha256": "8f3e080dd536866a3ef724ac91ac5af6ed86c1e9a14c5c11d8ff0edf927558e4"
+    },
+    "topics/computer-vision-classification-and-understanding.md": {
+      "bytes": 154891,
+      "sha256": "81f50312cecb435b1c6bea5cb6a9d555436720aeb64ebe8b556f7a1163feaf63"
+    },
+    "topics/computer-vision-image-and-video-generation.md": {
+      "bytes": 499219,
+      "sha256": "fe8ff6cb37099e150236957d274fe32f8668d3c2c601ab077bf6688ea7097383"
+    },
+    "topics/computer-vision-segmentation.md": {
+      "bytes": 108263,
+      "sha256": "709bf20026579a8731561f5af55ddb99024d1f84be5fff195b81565b1bad5fe1"
+    },
+    "topics/computer-vision-vision-models-multimodal.md": {
+      "bytes": 881128,
+      "sha256": "1bee19e6fd972c67bf757f5cf7d18435c9cdbac547cf143860baebbeb6c6366d"
+    },
+    "topics/computer-vision-everything-else.md": {
+      "bytes": 622384,
+      "sha256": "e180e77d0d979d91cfe366558533258cd2cfa205e275542d08f0e1faa496ba3a"
+    },
+    "topics/data-centric-ai-data-centric-ai-methods-and-tools.md": {
+      "bytes": 148108,
+      "sha256": "65e04f8abbe2e32600bbc4b4cd0221c0a141ab7db4ed2822e51358bd24c5d188"
+    },
+    "topics/data-centric-ai-everything-else.md": {
+      "bytes": 212098,
+      "sha256": "09abdc9ea84bdafac89592729b9d7ec222989cc3c6b72755fbb34c6aa2a5f25e"
+    },
+    "topics/deep-learning-algorithms.md": {
+      "bytes": 276065,
+      "sha256": "3d0de5db77f125c25ce64cf3269b6585f8f99cc95e15752b61d5477a4a242c7b"
+    },
+    "topics/deep-learning-attention-mechanisms.md": {
+      "bytes": 100290,
+      "sha256": "fad8a7a8f861d8264638be277247d3a44b9cc0ab87c34e337a434d93ceb760df"
+    },
+    "topics/deep-learning-generative-models-and-autoencoders.md": {
+      "bytes": 689698,
+      "sha256": "370d2214c927f8731fd736e3ba04a57e888004bd7056a661acb7acda714b6677"
+    },
+    "topics/deep-learning-graph-neural-networks.md": {
+      "bytes": 191235,
+      "sha256": "be3a4e22e0ab9462ce8f42cf6134a0303dc947983111e3652e7efef3a49a726e"
+    },
+    "topics/deep-learning-robustness.md": {
+      "bytes": 231959,
+      "sha256": "b8438fdf5f488090295309ace524012236f078903e872c4859e4f5125d8e3d2a"
+    },
+    "topics/deep-learning-theory.md": {
+      "bytes": 82804,
+      "sha256": "1774e5a2b7f7a21dc7abaecef5576f49d0e605ebc8171c22997a683cd76bdc41"
+    },
+    "topics/deep-learning-everything-else.md": {
+      "bytes": 78595,
+      "sha256": "8618f62d2c97f80b64fcf646b85356105c45fae9a0412a2a96390b88fc68bd3b"
+    },
+    "topics/general-machine-learning-causality.md": {
+      "bytes": 152500,
+      "sha256": "73491a32125b4692fb080f39f1fbced6f3468b1a60701368fb5347051bf2140d"
+    },
+    "topics/general-machine-learning-representation-learning.md": {
+      "bytes": 356318,
+      "sha256": "140d4301e733bcf13631d56baedb0be231408ef9daa840b0db3e5cc1d3e0d381"
+    },
+    "topics/general-machine-learning-transfer-multitask-and-meta-learning.md": {
+      "bytes": 169826,
+      "sha256": "2316defc61d2fa9e571cc4d964c7b5e473e8f2889778e37e859eeb541778a4e1"
+    },
+    "topics/general-machine-learning-everything-else.md": {
+      "bytes": 723067,
+      "sha256": "91104621cca97274bbf694cba6fbb844aa5d09b770aac8d3f4dbea3dc5d77b3b"
+    },
+    "topics/optimization-optimization.md": {
+      "bytes": 290513,
+      "sha256": "dd0fa5571e73b82694d5dc85d0bb6fbe48b8ca622ab5d1f635fc03de03fdd520"
+    },
+    "topics/optimization-bayesian-black-box-optimization.md": {
+      "bytes": 67099,
+      "sha256": "685420adb70e98cca7e5a41ca46dd63eb56b7c564d34b1b547dbea0d2ce5e13e"
+    },
+    "topics/optimization-discrete-optimization.md": {
+      "bytes": 36069,
+      "sha256": "6ef53fbfd145d21e889309f1351198697034d90c5d35bf4b0272b993a06ea81a"
+    },
+    "topics/optimization-large-scale-parallel-and-distributed.md": {
+      "bytes": 39567,
+      "sha256": "4885f1b5d86dc9f83d25ae756d035c6c6bf0e2d160892c96a770a00d416ef8c0"
+    },
+    "topics/optimization-neural-network-optimization.md": {
+      "bytes": 133748,
+      "sha256": "5124af542123295db0151abd58ea1a418994103446c122865ba2856ea24b459e"
+    },
+    "topics/optimization-optimization-and-learning-under-uncertainty.md": {
+      "bytes": 32768,
+      "sha256": "c4aeefe258185f29b50189d8ae026fc06b1dfd4543837770d5a08d932a891458"
+    },
+    "topics/optimization-stochastic-convex-optimization.md": {
+      "bytes": 100743,
+      "sha256": "3d47aea4b15ebbcd4d0a7f43718307ebd055c03a0ac107aa5d0948f4303b3ccd"
+    },
+    "topics/optimization-everything-else.md": {
+      "bytes": 16738,
+      "sha256": "3056bb345f359a4b6223e205c8e74958b803d7eb79b1c08dd53a27cd7efddb94"
+    },
+    "topics/probabilistic-methods-probabilistic-methods.md": {
+      "bytes": 57184,
+      "sha256": "9b5cea5bf907c4d3777214d82068e3e187a7ba7288f00be32b24746911412a35"
+    },
+    "topics/probabilistic-methods-bayesian-models-and-methods.md": {
+      "bytes": 116073,
+      "sha256": "11daa572ad9a68e9761aedee02746980e5e82b9f76b26cca7543d27cd9734247"
+    },
+    "topics/probabilistic-methods-gaussian-processes.md": {
+      "bytes": 20784,
+      "sha256": "afccff243758122d31dcb39c27d251035cce92e0d00a69141bd555d227afdc09"
+    },
+    "topics/probabilistic-methods-monte-carlo-and-sampling-methods.md": {
+      "bytes": 56833,
+      "sha256": "4fc23cf9232fea2991c71c9d6e22309ad7e8faab3228e381a750e05184f556b8"
+    },
+    "topics/probabilistic-methods-everything-else.md": {
+      "bytes": 8947,
+      "sha256": "7a4eca3085f54e5bb649d9b3e147b64662853a54a962c7709351483fc4ddb094"
+    },
+    "topics/reinforcement-learning-batch-offline.md": {
+      "bytes": 60464,
+      "sha256": "4d46c474dd4a2f431102cdbd9022f0a8ec7107f953848cc29a6a0b0c289e891a"
+    },
+    "topics/reinforcement-learning-deep-rl.md": {
+      "bytes": 448718,
+      "sha256": "64b83a0d53ce9f86faa798af8789c1f35b3deec1387224946b5a850d8793e8ee"
+    },
+    "topics/reinforcement-learning-multi-agent.md": {
+      "bytes": 246890,
+      "sha256": "99388991143239dd4156d72b5a1a519c62fc59c8edef7eb0a99a070c608c5993"
+    },
+    "topics/reinforcement-learning-everything-else.md": {
+      "bytes": 162790,
+      "sha256": "223582de1951e8d98cd476ff2199458f6e8b70f1122d4dfb0fe0cbfa92377f0c"
+    },
+    "topics/social-aspects-social-aspects.md": {
+      "bytes": 44816,
+      "sha256": "2ae7bf93ea4269922b59312109df17c5b0c5856227431ff5e28d5e1b6a6c9c1b"
+    },
+    "topics/social-aspects-accountability-transparency-and-interpretability.md": {
+      "bytes": 249519,
+      "sha256": "52e90b17f9787aecb5fe621fd541ca0648443e71b0f5663fb737fd48789ba828"
+    },
+    "topics/social-aspects-fairness-equity-justice-and-safety.md": {
+      "bytes": 291129,
+      "sha256": "9fb0edea03de134b445e37d3a6ce76c0ec47e79f566113b3c33e923d47d557c1"
+    },
+    "topics/social-aspects-privacy-preserving-statistics-and-machine-learning.md": {
+      "bytes": 146640,
+      "sha256": "e114d3c92e58891d5de0d261c7204bf4ac5b484f38c831201eb38c90e9d4b96b"
+    },
+    "topics/social-aspects-trustworthy-machine-learning.md": {
+      "bytes": 260525,
+      "sha256": "25d8ab60c7077ecc48e7b77fd72a3805e235d3bbb0ac74dc125be07d859bd289"
+    },
+    "topics/social-aspects-everything-else.md": {
+      "bytes": 15137,
+      "sha256": "ca897ddf23899b07ea4e314d83921e675baa08c30574a1972dfc00037f27792d"
+    },
+    "topics/theory-domain-adaptation-and-transfer-learning.md": {
+      "bytes": 12557,
+      "sha256": "41856c6fdf2ec8ec0b6e1595ee9841f5410a6d69105d42f5e4d3d17f60bb086e"
+    },
+    "topics/theory-game-theory.md": {
+      "bytes": 57511,
+      "sha256": "466df24266b047d9c1faf404be57a67158a8b109a358566bc1b501fa803387fd"
+    },
+    "topics/theory-learning-theory.md": {
+      "bytes": 301856,
+      "sha256": "7bcfc4a2a231cc2bc2ea5de8c4fc1ae84d784b4a6cda84c74198414f89b6a7c5"
+    },
+    "topics/theory-reinforcement-learning-and-planning.md": {
+      "bytes": 61615,
+      "sha256": "c3992cd2f75ead6e75d06fbafc48453db6f6beefb1f43b4172de0ca953c1403a"
+    },
+    "topics/theory-everything-else.md": {
+      "bytes": 87702,
+      "sha256": "4f6f3b57f4847cd83fb1fbe9b7f0485de47501654d626746ab1bc9419559827e"
+    },
+    "topics/language-models-nlp-large-language-models.md": {
+      "bytes": 1611239,
+      "sha256": "f884d9358b51475d5cf568104c31234780f2623f48346449112fe5d7fa1d4297"
+    },
+    "topics/language-models-nlp-reasoning-and-agents.md": {
+      "bytes": 387349,
+      "sha256": "6fc1a37033a741f41d70ec7011eeb8fdf06aa0c8f2bbde00b8a087c71c977ea8"
+    },
+    "topics/language-models-nlp-natural-language-processing.md": {
+      "bytes": 75174,
+      "sha256": "0877c42858b55a60a84db95fee0852c6d1ffcf34b441cc072c74a38681debad8"
+    },
+    "topics/ml-systems-efficiency-efficient-models-and-inference.md": {
+      "bytes": 163383,
+      "sha256": "929d6da3b18775cf289d2a264bcb54865579520c996d57384dbc820c6ce4724b"
+    },
+    "topics/ml-systems-efficiency-distributed-and-federated-learning.md": {
+      "bytes": 59413,
+      "sha256": "ba0eeea922d2251c015a8762cea486ab80e3dae0830cb7cedb0417af0b202041"
+    },
+    "topics/ml-systems-efficiency-hardware-and-infrastructure.md": {
+      "bytes": 43741,
+      "sha256": "91b84c7ce0cd5ecf2ecd1c2a8ee17e8d1229b15beda7fefc81d203dc776852fe"
+    },
+    "topics/index.md": {
+      "bytes": 6965,
+      "sha256": "c9b2f7b5cbc8d9994376a92000ed9533c6ed90191f0072d0b5d2d40e8c4225e5"
+    }
+  }
+}

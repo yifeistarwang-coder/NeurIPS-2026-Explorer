@@ -1,0 +1,1016 @@
+# Data\-centric AI / Data\-centric AI methods and tools
+
+以数据为中心的人工智能 / 数据方法与工具
+
+95 source poster records. Repeated source event IDs are retained and explicitly marked.
+
+Topic labels marked inferred are keyword-based, not official conference labels. PDF links marked derived are unverified. Missing abstracts are left empty in the JSON and CSV exports.
+
+## Smart Picks in the Dark: Towards Efficient RLVR for Reasoning via Tracing Metacognitive Pivots
+
+**Authors:** Guangcheng Zhu; Shenzhi Yang; Haobo Wang; Xing Zheng; Yingfan Ma; Xuening Feng; Zhongqi Chen; Bowen Song; Weiqiang Wang; Gang Chen
+
+**ID:** 150817 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=f6NxXBLsMW>) | [PDF](<https://openreview.net/pdf?id=f6NxXBLsMW>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150817>)
+
+_Abstract unavailable from the accessible public sources._
+
+## LoRIF: Low\-Rank Influence Functions for Scalable Training Data Attribution
+
+**Authors:** Shuangqi Li; Hieu Minh Le; Jingyi Xu; Mathieu Salzmann
+
+**ID:** 149043 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=tIJbQhZCF4>) | [PDF](<https://openreview.net/pdf?id=tIJbQhZCF4>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149043>)
+
+_Abstract unavailable from the accessible public sources._
+
+## RAD\-TFM: Robust and Domain\-Adapted Tabular Foundation Models
+
+**Authors:** Matthew Peroni; Franck Le; Vadim Sheinin
+
+**ID:** 155295 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=6dfLwFHIwj>) | [PDF](<https://openreview.net/pdf?id=6dfLwFHIwj>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155295>)
+
+The development of tabular foundation models \(TFMs\) has accelerated in recent years, showing strong potential to outperform traditional ML methods for structured data\. A key finding is that TFMs can be pretrained entirely on synthetic datasets, opening opportunities to design data generators that encourage desirable model properties\. Prior work has mainly focused on crafting high\-quality priors over generators to improve overall pretraining performance\. Our insight is that parameterizing the generator distribution enables an adversarial, distributional robustness perspective: during training, we can adapt the generator to emphasize datasets that are particularly challenging for the model, which we formalize by introducing an optimality gap measure\. Further, we develop a method to align the synthetic data generation with real\-world datasets from a given domain, constraining the adversary to generate "realistic'" data\. Together, these algorithms comprise the Robust and Domain\-Adapted Tabular Foundation Models \(RAD\-TFM\)  pipeline, a model\-agnostic adversarial training framework\. Applied to the TabPFN V2 classifier, RAD\-TFM improves performance across 6 diverse tabular benchmarks, with up to a 11\\% increase in mean normalized AUC over the original TabPFN and other baseline algorithms, with only 100k additional training datasets, less than 0\.1\\% of the original pretraining data\. These results highlight a promising new direction for targeted adversarial training and fine\-tuning of TFMs using synthetic data alone\.
+
+## ProgramBench: Can Language Models Rebuild Programs From Scratch?
+
+**Authors:** John Yang; Kilian Lieret; Jeffrey Ma; Parth Thakkar; Dmitrii Pedchenko; Sten Sootla; Emily McMilin; Pengcheng Yin; Rui Hou; Gabriel Synnaeve; Diyi Yang; Ofir Press
+
+**ID:** 139090 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=liufgqTAEe>) | [PDF](<https://openreview.net/pdf?id=liufgqTAEe>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139090>)
+
+Turning ideas into full software projects from scratch has become a popular use case for language models\. Agents are being deployed to seed, maintain, and grow codebases over extended periods with minimal human oversight\. Such settings require models to make high\-level software architecture decisions\. However, existing benchmarks measure focused, limited tasks such as fixing a single bug or developing a single, specified feature\. We therefore introduce ProgramBench to measure the ability of software engineering agents to develop software holisitically\. In ProgramBench, given only a program and its documentation, agents must architect and implement a codebase that matches the reference executable’s behavior\. End\-to\-end behavioral tests are generated via agent\-driven fuzzing, enabling evaluation without prescribing implementation structure\. Our 200 tasks range from compact CLI tools to widely used software such as FFmpeg, SQLite, and the PHP interpreter\. We evaluate 9 LMs and find that none fully resolve any task, with the best model passing 95% of tests on only 3% of tasks\. Models favor monolithic, single\-file implementations that diverge sharply from human\-written code\.
+
+## HARP: Training\-Free Dual\-Profile Agentic Communication for LLM\-Based Recommendation
+
+**Authors:** Zhen Tao; Xun Zhou; Xuhui Chen; Ziyue Qiao; Qingqiang Sun
+
+**ID:** 150693 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=gDV5BRXpfO>) | [PDF](<https://openreview.net/pdf?id=gDV5BRXpfO>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150693>)
+
+In LLM\-based recommendation, memory effectively plays the role of a user\-level agent, typically built on top of a memory\-augmented backbone\.  Yet under this paradigm users and items remain asymmetric participants: only the user is given a structured profile; that profile is consumed inside a bandwidth\-limited reranker prompt; and it is frozen after warmup\.  Starting from this observation, we recast LLM\-based recommendation as an agentic\-communication process in four stages \-\-\- Build a self\-description, Transmit it along the collaborative graph, Understand the other side, and Sync it from the next interaction\.  Analysing the dominant memory\-augmented paradigm through this formulation, we identify three open communication challenges that current pipelines leave unaddressed: the item side never produces a comparable self\-description \(one\-sided Build\); profile\-level signals are routed only into a bandwidth\-limited reranker prompt rather than into the retrieval stage where they would not compete for context tokens \(prompt\-trapped Understand\); and the user's description is frozen after warmup with no principled update rule \(absent Sync\)\.  We instantiate the missing stages as HARP \(Homophily\-aware Agentic Recommendation via dual Profiles\}\), a training\-free, three\-operator addition to a frozen LLM backbone: a rule\-extracted symmetric item profile \(zero extra LLM calls\), a channel\-decomposable profile\-level homophily $\\mathcal\{H\}\(\\phi\_u,\\phi\_i\)$ consumed at retrieval time rather than inside the reranker prompt, and a critic\-gated single\-pass reflective update realising in\-context profile evolution without any gradient step\.  On four public benchmarks \(Yelp, Amazon Books, MovieTV, Goodreads\), HARP lifts Hit@1 over the strongest published baseline by $6\.9\\%$\-\-$24\.0\\%$, with family\-wise Holm\-corrected $p&lt;10^\{\-9\}$ on every dataset\.  Ablations and a per\-case attribution study isolate each operator as a distinct, complementary source of gain; we also quantify and openly report the trade\-off introduced by the reflective pass\.  Our contribution is a unified formulation of agentic communication for LLM\-based recommendation, together with a training\-free three\-operator instantiation on top of it\.
+
+## Dataset Distillation via Drifting
+
+**Authors:** George Cazenavette; Angelina Quan; Giannis Daras; Antonio Torralba; Vincent Sitzmann
+
+**ID:** 155633 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=477JMtoDLS>) | [PDF](<https://openreview.net/pdf?id=477JMtoDLS>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155633>)
+
+The task of \\textit\{dataset distillation\} aims to find a small set of synthetic images such that training a model on them reproduces the performance of the same model trained on a much larger dataset of real samples\. Existing distillation methods focus on synthesizing datasets that enable training \\textit\{randomly initialized\} models\. In contrast, state\-of\-the\-art vision approaches are increasingly building on large, pre\-trained self\-supervised models rather than training from scratch\. In this paper, we investigate the problem of distilling datasets that enable us to optimally train \\textit\{linear probes\} on top of such large, pre\-trained vision models\. We introduce a method of dataset distillation for this task called \\textit\{Linear Gradient Matching\} that optimizes the synthetic images such that, when passed through a pre\-trained feature extractor, they induce gradients in the linear classifier similar to those produced by the real data\. Our method yields synthetic data that outperform all real\-image baselines and, remarkably, generalize across pre\-trained vision models, enabling us, for instance, to train a linear CLIP probe that performs competitively using a dataset distilled via a DINO backbone\. Further, we show that our distilled datasets are exceptionally effective for fine\-grained classification and provide a valuable tool for model interpretability, predicting, among other things, how similar two models' embedding spaces are under the platonic representation hypothesis or whether a model is sensitive to spurious correlations in adversarial datasets\.
+
+## EgoBench: An Interactive Egocentric Multimodal Benchmark for Tool\-Using Agents
+
+**Authors:** Yunqi Liu; Tong Niu; Zitong Wang; Zhenlong Dai; Yuqi Qing; Weiqiang Wang; Jian liu
+
+**ID:** 139324 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=XE0MVQWYya>) | [PDF](<https://openreview.net/pdf?id=XE0MVQWYya>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139324>)
+
+As AI agents increasingly operate in open, real\-world environments, they require a deep synergy of multimodal perception, tool invocation with multi\-hop reasoning, and dynamic interaction with users\. However, existing benchmarks fail to jointly evaluate these capabilities due to challenges in designing strictly coupled multi\-capability tasks, simulating natural and task\-constrained user feedback, and ensuring objective evaluation of dynamic interaction\. To bridge this gap, we introduce EgoBench, the first interactive multimodal benchmark for tool\-using agents\. EgoBench comprises 1,590 egocentric\-video\-grounded tasks covering five daily scenarios, along with a user\-agent\-tool interactive environment for evaluation\. We implement a three\-stage synergistic pipeline through which each task is designed to enforce the joint application of visual perception and tool\-augmented multi\-hop reasoning\. We additionally develop a multi\-agent simulated user to evaluate agents' interaction capabilities, which generates high\-fidelity, task\-aligned responses to agents\. Furthermore, we establish a deterministic joint validation framework that guarantees objective assessment through process\-based and result\-based equivalence\. Benchmarking eight video\-MLLM agents on EgoBench reveals a severe performance ceiling: the best\-performing model achieves only a 34\.95% average Joint Success Rate across the three interaction modes\. Finally, we conduct a multi\-dimensional error analysis to disentangle failure modes, exposing capability bottlenecks for advancing future AI agents\.
+
+## In\-context learning to predict critical transitions in dynamical systems
+
+**Authors:** Yunus Sevinchan; Juan Nathaniel; Kai Ueltzhöffer; Carla Roesch; Tobias Weber; Vaios Laschos; Hang Fan; Gregor Ramien; Johannes Haux; Pierre Gentine; Benjamin Herdeanu
+
+**ID:** 155891 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=24hX13I66G>) | [PDF](<https://openreview.net/pdf?id=24hX13I66G>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155891>)
+
+Critical transitions – abrupt, often irreversible changes in system dynamics – arise across human and natural systems, often with catastrophic consequences\. Real\-world observations of such shifts remain scarce, preventing the development of reliable early warning systems\. Conventional statistical and spectral indicators, such as increasing variance, tend to fail under realistic conditions of limited data and correlated noise, whereas existing deep learning classifiers do not extrapolate beyond their training data distribution\. In this work, we introduce TipPFN, an in\-context learning \(ICL\) framework that uses a prior\-data fitted network to infer a system's proximity to a critical transition\. Trained on our novel synthetic data generator, which is based on canonical bifurcation scenarios coupled to diverse, randomized stochastic dynamics, TipPFN flexibly capitalizes on contexts of various sizes, complexity and dimensionalities\. We demonstrate robust, state\-of\-the\-art early detection of critical transitions in previously unseen tipping regimes, sim\-to\-real examples, and real\-world observations in both ICL and zero\-shot settings\.
+
+## SurvCancel: A Longitudinal Dataset and Benchmark for Dynamic Order Cancellation Prediction in On\-Demand Ride\-Sharing Systems
+
+**Authors:** Huayang Liu; Mingyu Zheng; Wei Zhang; Yijun Bian; Kai Wang
+
+**ID:** 138871 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=zsQOS0D6s7>) | [PDF](<https://openreview.net/pdf?id=zsQOS0D6s7>) | [Official poster](<https://neurips.cc/virtual/2026/poster/138871>)
+
+_Abstract unavailable from the accessible public sources._
+
+## Patch Rebirth: Fast and Transferable Model Inversion of Vision Transformers
+
+**Authors:** Seongsoo Heo; Dong\-Wan Choi
+
+**ID:** 152421 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=TF4aZ1sOeQ>) | [PDF](<https://openreview.net/pdf?id=TF4aZ1sOeQ>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152421>)
+
+_Abstract unavailable from the accessible public sources._
+
+## Breaking the Quality–Privacy Tradeoff in Tabular Data Generation via In\-Context Learning
+
+**Authors:** Xinyan Han; yan Lu; Xiaoyu Lin; Yuanyuan Jiang; Yuanrui Wang; Xuanyue Li; Wenchao Zou; Xingxuan Zhang
+
+**ID:** 152928 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=PKGG71vTok>) | [PDF](<https://openreview.net/pdf?id=PKGG71vTok>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152928>)
+
+Tabular data synthesis aims to generate high\-quality data while preserving privacy\. However, we find that existing tabular generative models exhibit a clear tradeoff in the small\-data regime: improving data quality typically comes at the cost of increased memorization of training samples, thereby weakening privacy protection\. This tradeoff arises because small training sets make it difficult for dataset\-specific generative models to distinguish generalizable structure from sample\-specific patterns\.  To address this, we propose DiffICL, which formulates tabular data generation as an in\-context learning problem\. Instead of fitting each dataset from scratch, DiffICL leverages pretrained structural priors learned from a large collection of datasets, enabling it to infer data distributions from limited context rather than memorizing individual samples\. We evaluate DiffICL on 14 real\-world datasets\. Results show that DiffICL improves both data quality and privacy, and generates synthetic data that provides effective data augmentation\. Our findings suggest that the quality–privacy tradeoff can be improved through better training paradigms\.
+
+## A Compass for Useful Data: Online Data Selection via Alignment\-Gated Fisher Geometry
+
+**Authors:** Jingwen Zhang; Jianrui Shi; Zheng Wang; Wanfang Chen; Yaping Wang; Kaixuan Zhang
+
+**ID:** 155971 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=1Sqambi1v4>) | [PDF](<https://openreview.net/pdf?id=1Sqambi1v4>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155971>)
+
+Online data selection is typically driven by per\-sample scores such as loss, uncertainty, or gradient norm, which measure how strongly the model reacts to a candidate but not what parameter update the candidate would induce\. What an online learner should select is therefore not the most striking example, but the one whose update is most worth taking\. To make this concrete, we score a candidate by the movement induced by its update, using a Fisher\-whitened information gain that evaluates the update in the loss geometry rather than by raw gradient size\. Movement, however, is not yet progress, so we pass this score through a \\emph\{Descent Alignment Gate\}, a soft factor that retains it only when the induced update agrees with the descent direction\. This yields a sample\-level score favoring updates that are both informative and descent\-aligned\. To make the criterion compatible with training, we extend it from samples to batches, where selected updates should not only score well individually but also complement one another\. We capture this with the \\emph\{Gated Fisher Volume\}, a log\-determinant batch objective that reduces to the per\-sample score on a singleton, grows with the volume spanned by the chosen updates in the Fisher geometry, and admits a greedy algorithm with a constant\-factor approximation guarantee\. Across supervised fine\-tuning benchmarks, our selector consistently outperforms online selection baselines under matched training budgets\.  More broadly, the framework reframes data selection itself: rather than a spotlight on conspicuous examples, it acts as a compass toward updates worth taking\.
+
+## Diagnosing and Repairing Citation Failures in Generative Engine Optimization
+
+**Authors:** Zhihua Tian; Yuhan Chen; Yao Tang; Jian Liu; Ruoxi Jia
+
+**ID:** 153428 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=LQ9A5Gzy4H>) | [PDF](<https://openreview.net/pdf?id=LQ9A5Gzy4H>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153428>)
+
+Generative Engine Optimization \(GEO\) aims to improve content visibility in AI\-generated responses\. However, existing methods measure contribution—how much a document influences a response—rather than citation, the mechanism that actually drives traffic back to creators\. Also, these methods apply generic rewriting rules uniformly, failing to diagnose why individual document are not cited\. This paper introduces a diagnostic approach to GEO that asks why a document fails to be cited and intervenes accordingly\. We develop a unified framework comprising: \(1\) the first taxonomy of citation failure modes spanning different stages of a citation pipeline; \(2\) AgentGEO, an agentic system that diagnoses failures using this taxonomy, selects targeted repairs from a corresponding tool library, and iterates until citation is achieved; and \(3\) a document\-centric benchmark evaluating whether optimizations generalize across held\-out queries\. AgentGEO achieves 15\-40\\% relative improvement in citation rates across engines and citation methods, while modifying only 5\\% of content, compared to 25\\% for baselines\. Our analysis reveals that generic optimization can harm long\-tail content and some documents face challenges that optimization alone cannot fully address—findings with implications for equitable visibility in AI\-mediated information access\.
+
+## BLADE: Scalable Bi\-level Adaptive Data Selection for LLM Training
+
+**Authors:** Jiaxing Wang; Deping Xiang; Jin Xu; Zirui Liu; Zicheng Zhang; Guoqiang Gong; Jun Fang; Chao Liu; Pengzhang Liu; Tongxuan Liu; Ke Zhang; Qixia Jiang
+
+**ID:** 152234 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=UZM2vsjS66>) | [PDF](<https://openreview.net/pdf?id=UZM2vsjS66>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152234>)
+
+_Abstract unavailable from the accessible public sources._
+
+## Real In, Real Out: What If We Only Use Real Data for Scene Text Editing?
+
+**Authors:** Xingsong Ye; Yongkun Du; Jiaxin Zhang; Chong Sun; Zhineng Chen
+
+**ID:** 153296 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=MJEQhPRV6b>) | [PDF](<https://openreview.net/pdf?id=MJEQhPRV6b>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153296>)
+
+Aiming to modify textual content while preserving the original style, Scene Text Editing \(STE\) has significant practical value in many applications\. STE typically requires paired images before and after editing for training\. However, recent approaches rely heavily on synthetic paired data and complex disentanglement strategies\. They struggle to faithfully capture the diversify and complexity of natural scenes, often producing artifacts or hallucinations\. In this work, we challenge the common practice and investigate whether STE can be driven by turning each real sample into its own paired supervision\. Concretely, we explore multiple ways to disrupt the original image \(e\.g\., Crop, Shuffle, Mask\) to construct self\-paired training data, and build a strong baseline \(TextRIRO\) upon a conditional diffusion architecture\. Our experiments show that combining character\-column shuffling with image cropping \(Shuffle&amp;Crop\) effectively destroys text semantics while preserving key style cues, enabling the model to learn editing behaviors directly from real text images\. With this concise yet real\-oriented design, TextRIRO achieves promising performance in both accuracy and visual realism across real\-world benchmarks, substantially mitigating the synthetic\-to\-real domain gap\. Furthermore, we leverage TextRIRO to build TextRIRO\-3M, a large\-scale realistic dataset for long\-text recognition by concatenating edited and original images\. Experimental results show that training recognition models with TextRIRO\-3M significantly improves recognition accuracy, demonstrating that TextRIRO provides highly useful training resources for downstream tasks\. Overall, TextRIRO lifts STE to realistic, reliable, and widely applicable new levels\. Code is provided in the supplement, and data will be released upon acceptance\.
+
+## Benchmark Health Index: A Systematic Framework for Benchmarking the Benchmarks of LLMs
+
+**Authors:** Longyuan Zhu; Hairan Hua; Linlin Miao; Wei Wang; 必应 赵
+
+**ID:** 138960 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=tsoDWPkJOz>) | [PDF](<https://openreview.net/pdf?id=tsoDWPkJOz>) | [Official poster](<https://neurips.cc/virtual/2026/poster/138960>)
+
+Large Language Models \(LLMs\) are advancing rapidly, yet the benchmarks used to measure this progress are becoming increasingly unreliable\. Score inflation and selective reporting have eroded the authority of standard benchmarks, leaving the community uncertain about which evaluation results remain trustworthy\. We introduce the \*\*Benchmark Health Index \(BHI\)\*\*, a pure data\-driven framework for auditing evaluation sets along three orthogonal and complementary axes: \(1\) \*\*Capability Discrimination\*\*, measuring how sharply a benchmark separates model performance beyond noise; \(2\) \*\*Anti\-Saturation\*\*, estimating remaining headroom before ceiling effects erode resolution and thus the benchmark's expected longevity; and \(3\) \*\*Impact\*\*, measuring capability\-weighted benchmark adoption across the model ecosystem\. By distilling \*\*158\*\* validated benchmarks from the technical reports of \*\*117\*\* representative models released between \*\*2025\*\* and \*\*April 2026\*\*, we systematically characterize the evaluation landscape\. BHI is the \*\*first framework\*\* to quantify benchmark health at a macro level, providing a well\-grounded quantitative basis for benchmark selection and supporting the dynamic filtering and continuous updating of evaluation sets\. Our comprehensive analysis not only identifies benchmarks that remain highly credible but also exposes pervasive structural issues\. By establishing a rigorous foundation for selection and management, BHI elevates evaluation practice from heuristic\-based judgment to a quantifiable and interpretable scientific process\. Our code is available online at
+
+## Transcoda: End\-to\-End Zero\-Shot Optical Music Recognition via Data\-Centric Synthetic Training
+
+**Authors:** Daniel Dratschuk; Paul Swoboda
+
+**ID:** 155049 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=8pzICTUGAk>) | [PDF](<https://openreview.net/pdf?id=8pzICTUGAk>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155049>)
+
+Optical Music Recognition \(OMR\), the task of transcribing sheet music into a structured textual representation, is currently bottlenecked by a lack of large\-scale, annotated datasets of real scans\. This forces models to rely on either few\-shot transfer or synthetic training pipelines that remain overly simplistic\. A secondary challenge is encoding non\-uniqueness: in the popular Humdrum \*\*kern format for transcribing music, multiple different text encodings can render into the same visual sheet music\. This one\-to\-many mapping creates a harder learning task and introduces high uncertainty during decoding\. We propose Transcoda, an OMR system built on \(i\) an advanced synthetic data generation pipeline, \(ii\) a normalization of the \*\*kern encoding to enforce a unique normal form and \(iii\) grammar\-based decoding to ensure the syntactic correctness of the output\. This approach allows us to train a compact 59M\-parameter model in just 6 hours on a single GPU that outperforms billion\-parameter baselines\. Transcoda achieves the best score among state of the art baselines on a newly curated benchmark of synthetically rendered scores at 18\.46% OMR\-NED \(compared to 43\.91% for the next\-best system, Legato\) and reduces the error rate on historical Polish scans to 63\.97% OMR\-NED \(down from 80\.16% for SMT\+\+\)\. We will make our model, data and generation pipeline publicly available upon publication of the paper\.
+
+## Training Data Attribution in Diffusion Models via Mirrored Unlearning and Noise\-Consistent Skew
+
+**Authors:** Joan Serrà; Dipam Goswami; Fabio Morreale; Wei\-Hsiang Liao; Yuki Mitsufuji
+
+**ID:** 153796 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=Id0XHHT9w8>) | [PDF](<https://openreview.net/pdf?id=Id0XHHT9w8>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153796>)
+
+Training data attribution \(TDA\) should enable generative model interpretability and foster a variety of related downstream tasks\. Nonetheless, current TDA approaches lack reliability and robustness, preventing their adoption in real\-world setups\. In this paper, we take a decisive step towards more reliable and robust TDA for diffusion models\. We propose to perform TDA with mirrored unlearning and noise\-consistent skew \(MUCS\)\. The idea is to fine\-tune a second model with bounded mirrored gradient ascent, and to measure the normalized skew of this model with respect to the original one using consistent noise samples\. We show that, while being conceptually simple and generic, MUCS systematically outperforms existing methods on three different datasets by a large margin\. We additionally study the effect that core design choices have on final performance, and analyze novel aspects regarding the overlap of influential instances across generated items and the potential of ensembling TDA approaches\. We believe that our findings may have broader implications for more general unlearning setups, as well as for tasks requiring the comparison of diffusion losses\.
+
+## SurvCancel: A Longitudinal Dataset and Benchmark for Dynamic Order Cancellation Prediction in On\-Demand Ride\-Sharing Systems
+
+**Authors:** Huayang Liu; Mingyu Zheng; Wei Zhang; Yijun Bian; Kai Wang
+
+**ID:** 138871\-\-2 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
+
+**Repeated source row:** 138871
+
+[Paper](<https://openreview.net/forum?id=zsQOS0D6s7>) | [PDF](<https://openreview.net/pdf?id=zsQOS0D6s7>) | [Official poster](<https://neurips.cc/virtual/2026/poster/138871>)
+
+_Abstract unavailable from the accessible public sources._
+
+## Model Distribution\-Aware Multimodal Dataset Distillation
+
+**Authors:** Jiajun Shen; Yonglin Wu; Ruonan Yu; Xinchao Wang
+
+**ID:** 148787 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=v4TjuVDghY>) | [PDF](<https://openreview.net/pdf?id=v4TjuVDghY>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148787>)
+
+Multimodal dataset distillation \(MDD\) seeks to synthesize compact surrogates from large\-scale image\-text corpora, reducing the high cost of pre\-training\. Although recent feature\-matching methods have improved the efficiency of MDD, they often suffer from initialization overfitting, which distorts the cross\-modal structure and severely degrades retrieval performance under unseen initializations\. To mitigate this issue, we propose $\\textbf\{MDA\-DD\}$, which enhances generalization via a dynamic staggered model queue\. We further identify two architectural bottlenecks in prior work: structurally redundant projections and inefficient covariance computation\. For the former, we design an asymmetric dual projection to reduce redundancy while preserving balanced bidirectional cross\-modal alignment\. For the latter, we introduce a Second\-Order Cross\-Modal Moment \(SOCM\) objective, which efficiently captures both mean and correlation statistics across modalities\. Experiments on Flickr30K and MS\-COCO show that $\\textbf\{MDA\-DD\}$ consistently surpasses existing methods, yielding notable retrieval improvements \(e\.g\., \+12\.9 IR@1 and \+18\.2 TR@1 in the 100\-pair setting\) and matching or exceeding baselines trained on 500 pairs using only 100 pairs\.
+
+## Susceptibilities for Neural Networks Learning from Physical Data
+
+**Authors:** Rohan Hitchcock; Gary W Delaney; Jonathan H Manton; Richard Scalzo; Jingge Zhu
+
+**ID:** 153639 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=JqmNxWsIQE>) | [PDF](<https://openreview.net/pdf?id=JqmNxWsIQE>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153639>)
+
+Neural networks that are trained on data arising from a physical system must somehow learn regularities induced by the underlying physical laws\. In this setting, concepts from statistical physics provide powerful tools for analysing how physical laws influence the learning process\. In this paper we explain how \*susceptibilities\* \-\-\- which measure the response of a neural network to perturbations of a parameter of the data distribution \-\-\- can be applied when learning from physical data\. We show that such susceptibilities can identify the conditions under which specific input features are most informative for learning, guiding data selection, a prediction we validate experimentally\. For distributions lacking a natural parameter, we propose introducing one via an arbitrary scalar function of the physical state, and demonstrate that susceptibilities track the emergence of specific capabilities \(such as collision detection\) during training\.
+
+## Self\-Consuming Generative Models with Co\-Evolving Human Preferences
+
+**Authors:** Xiukun Wei; Tian Xie; Ding Zhu; Xueru Zhang
+
+**ID:** 148960 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=tsXMIKjzrO>) | [PDF](<https://openreview.net/pdf?id=tsXMIKjzrO>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148960>)
+
+Generative models are increasingly trained in self\-consuming iterative loops, where users curate preferred samples from model\-generated candidates and the curated samples are used to train future generations of the model\. Prior work has largely assumed fixed user preferences, but in practice exposure to model outputs gradually reshapes what users perceive as desirable, creating a feedback loop in which model distributions and user preferences co\-evolve\. We take a first step toward understanding the long\-term behavior of such coupled dynamics\. We show that when training relies entirely on user\-curated synthetic data, iterative curation amplifies initial biases and drives the system toward one of multiple \*singleton\* equilibria in which the instance holding an initial advantage eventually dominates\.  In contrast, injecting reference data into training at a sufficiently large rate fundamentally changes the dynamics and yields a \*unique globally attracting\* equilibrium\. Building on this insight, we study how reference\-data injection can be used to control long\-term outcomes, and propose an efficient algorithm that jointly selects a reference distribution and its mixing weight to steer the coupled system toward equilibria that preserve desired attributes while minimizing data collection costs\.
+
+## Does the Question Really Matter? Training\-Free Data Selection for Vision\-Language SFT
+
+**Authors:** Peng Sun; Yi Yang; Huawen Shen; Yi Ban; Tianfan Fu; Yanbo Wang; Yuqiang Li
+
+**ID:** 150111 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=kcBOe422p2>) | [PDF](<https://openreview.net/pdf?id=kcBOe422p2>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150111>)
+
+Visual instruction tuning is crucial for improving vision\-language large models \(VLLMs\)\. However, many samples can be solved via linguistic patterns or common\-sense shortcuts, without genuine cross\-modal reasoning, limiting the effectiveness of multimodal learning\. Prior data selection methods often rely on costly proxy model training and focus on difficulty or diversity, failing to capture a sample’s true contribution to vision\-language joint reasoning\. In this paper, we propose CVS, a training\-free data selection method based on the insight that, for high\-quality multimodal samples, introducing the question should substantially alter the model’s assessment of answer validity given an image\. CVS leverages a frozen VLLM as an evaluator and measures the discrepancy in answer validity with and without conditioning on the question, enabling the identification of samples that require vision\-language joint reasoning while filtering semantic\-conflict noise\. Experiments on Vision\-Flan and The Cauldron show that CVS achieves solid performance across datasets\. On Vision\-Flan, CVS outperforms full\-data training by 3\.5\\% and 4\.8\\% using only 10\\% and 15\\% of the data, respectively, and remains robust on the highly heterogeneous Cauldron dataset\. Moreover, CVS reduces computational cost by 17\.3\\% and 44\.4\\% compared to COINCIDE and XMAS\. The code is anonymously available at https://anonymous\.4open\.science/r/CVS\-ABAA\.
+
+## Are Easier or Harder Examples Better? Rethinking Data Selection for Reward Models and Preference Optimization
+
+**Authors:** Kevin Christian Wibisono; Aya Ismail; Pedro O\. Pinheiro; Yixin Wang; Kyunghyun Cho; Nataša Tagasovska; Rajesh Ranganath
+
+**ID:** 151585 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=ZVpkdTlkIZ>) | [PDF](<https://openreview.net/pdf?id=ZVpkdTlkIZ>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151585>)
+
+Despite being crucial for effective LLM alignment, data selection remains understudied\. Prior work on reward model \(RM\) training and policy optimization \(e\.g\., DPO, GRPO\) identifies \*example difficulty\*, the reward gap between chosen and rejected responses, as a key factor, but findings conflict: some favor easier examples with larger gaps, others harder ones\. To isolate difficulty from confounders, we \*assume access to a reference RM\* and systematically study data selection across RM, DPO, and GRPO training\. When difficulty is measured via the reference RM, \*easier pairs consistently outperform harder ones\*, especially for smaller base models: using only the top 20% easiest examples often matches or exceeds full\-dataset performance while cutting post\-training costs $5\\times$\. However, \*this advantage hinges on reward estimation quality\*\. As the difficulty signal is corrupted by noise or estimated with a weak proxy RM, the easy\-example advantage shrinks and can reverse\. A signal\-to\-noise analysis explains why: larger\-gap examples yield more reliable gradient directions, an advantage that weakens with noisier reward estimates\. These results suggest that \*conflicting findings in prior work partly stem from differences in reward reliability and signal mismatch\*\.
+
+## ViCoR: Estimating Visual Necessity via Counterfactual Residuals for Multimodal Medical Data Selection
+
+**Authors:** Haotian Gan; Yudong Li; Xintian Li; Jiarui Han; Weidong Tang
+
+**ID:** 154516 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=D0DvVACDW0>) | [PDF](<https://openreview.net/pdf?id=D0DvVACDW0>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154516>)
+
+Medical vision\-language models often exhibit hidden stratification, where high overall performance masks failures on subtle visual findings and overlapping clinical conditions\. We trace this failure mode to modality imbalance during fine\-tuning, where strong linguistic priors can suppress visually grounded learning and induce plausible but weakly grounded rationales\. Existing data selection methods usually score image\-text pairs as holistic units, without separating visually necessary samples from shortcut\-solvable ones\. To address this problem, we propose ViCoR, a counterfactual\-residual\-based data selection method for Med\-VLM fine\-tuning\. ViCoR estimates visual necessity through image\-dependent optimization residuals, calibrates the resulting scores with medical supervision compatibility, and constructs a diversity\-aware fine\-tuning subset\. Across two backbones, four external generalization benchmarks, and one multi\-disease robustness benchmark, ViCoR\-selected 20\\% subsets achieve the strongest average performance compared with full\-data fine\-tuning and selection baselines\. Gradient\-level analysis and perturbation audits further show that ViCoR enriches image\-dependent training signals and strengthens image\-level and evidence\-region dependence\. The code will be released to support future research\.
+
+## X\-AVDD: Cross\-Attentive Audio\-Visual Dataset Distillation
+
+**Authors:** Saumyaranjan Mohanty; Aravind Reddy; Konda Reddy Mopuri
+
+**ID:** 153215 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=MzMWvUkNZw>) | [PDF](<https://openreview.net/pdf?id=MzMWvUkNZw>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153215>)
+
+\*Audio\-visual dataset distillation\* aims to synthesize a small dataset from a large paired audio\-visual dataset, while nearly preserving the training utility for neural networks\. Existing approaches such as DM and AVDD face two critical limitations: 1\) they are memory\-intensive, making them difficult to scale to complex architectures and higher samples\-per\-class \(SPC\) settings, and 2\) they often fail to preserve strong cross\-modal semantic correspondence\. To tackle these issues, we propose \*\*X\-AVDD\*\*, a \*\*cross\-attention\-based\*\* distillation method that explicitly captures inter\-modal relationships during synthesis\. By decoupling cross\-modal alignment from joint optimization, X\-AVDD is substantially more memory\-efficient, reducing end\-to\-end synthesis cost by $\\sim 8\\times$ GPU\-hours, while producing highly aligned synthetic data\. Empirically, X\-AVDD significantly outperforms other audio\-visual distillation methods\. On VGGSound, an audio\-visual dataset of short YouTube clips, X\-AVDD improves top\-1 test accuracy from $8\.2$% → $24\.0$% at SPC=$10$ and $9\.8$% → $26\.5$% at SPC=$20$\. Furthermore, X\-AVDD improves cross\-architecture generalization \(e\.g\., $25\.5$% → $35\.3$% for a ViT target on AVE dataset at SPC=$50$\) and successfully scales to complex architectures such as AudioCLIP, achieving $62\.3$% accuracy using only $5\.65$% of the full dataset, against the full dataset accuracy of $72\.4$\\% while completing in $9\\times$ lower training time compared to the full dataset\.
+
+## The Complexity Kink: LLM Rubric Instruments for Causal Inference on Code Generation Reliability
+
+**Authors:** Michael Hernandez; Tian Zhao
+
+**ID:** 138945 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=ucjCOJf47M>) | [PDF](<https://openreview.net/pdf?id=ucjCOJf47M>) | [Official poster](<https://neurips.cc/virtual/2026/poster/138945>)
+
+Measuring complexity from a model's own code is biased by failure: a hard prompt can produce a short, broken program that looks simple\. We instead score each prompt's structure on six dimensions from the prompt alone, never from generated code or test results\. We draw 5,000 Python prompts across six bands of a preliminary single\-rater score, and four out\-of\-panel LLM judges rescore every prompt \(19,997 scores; composite ICC\(2,1\) = 0\.872 on the 4,998 prompts with all four\)\. Twenty\-one models answer every prompt \(105,000 generations\), and an independent LLM auditor, checked against known\-answer cases, reviews each unit\-test verdict\. Averaged over models, pass rate has a nonmonotone breakpoint at composite $\\hat\{\\gamma\}=14\.0$: 83\.4\\% at or below, 90\.1\\% above\. That jump is not a law of difficulty\. With task\-type fixed effects the breakpoint stays at 14\.0 but the adjusted jump shrinks from 6\.8 to 0\.4 points, and neither of the benchmark's two prompt sources reproduces the jump on its own\. Nineteen models pass more often above their own breakpoint and two less often, and one of those two declines, Gemini 3\.1 Pro Preview's, comes from 156 API calls that returned nothing\. In post hoc follow\-up, Kimi K2\.5 shows the clearest decline: with a prompt\-source control, and within the later source alone, its break is at 14\.25, where its later\-source pass rate falls from 0\.848 to 0\.808 \(95\\% interval $\[14\.00,14\.75\]$\)\. A 365\-prompt audit\-clean extension matches the original raw test outcomes at bins 15 and 16 but adds only 14 prompts above bin 16\. Among failed generations with measurable output complexity, 25\.0\\% pair a prompt composite above 8 with output complexity of at most 10, twice the share among passing ones\. The pooled breakpoint moves to 11\.25 on raw test outcomes and 13\.75 under the partial audit used at submission\. Human agreement with the index is moderate and rater\-dependent, paraphrase and cross\-language rescoring preserve its ordering, and overidentification tests reject the six dimensions as instruments, so we treat the composite as an index and make no causal claim\. The contribution is a prompt\-side way to locate where each model's pass rate changes and to test how much that depends on the prompt mix and on how success is scored\.
+
+## Learning Generalizable Hand\-Object Tracking Control without Human Demonstrations
+
+**Authors:** Runyi Yu; Xiaoyi Lin; Hok W Tsui; Yinhuai Wang; PENG Zhijie; Hui Zhang; Qihan Zhao; Ke Fan; Miao Li; Jie Song; Jingbo Wang; Qifeng Chen; Ping Tan
+
+**ID:** 152634 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=RcH4CFYczG>) | [PDF](<https://openreview.net/pdf?id=RcH4CFYczG>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152634>)
+
+We present a system for learning generalizable hand\-object tracking controllers purely from synthetic data, without requiring any human demonstrations\. Our approach makes two key contributions: \(1\) HOP, a Hand\-Object Planner, which can synthesize diverse hand\-object trajectories; and \(2\) HOT, a Hand\-Object Tracker that bridges synthetic\-to\-physical transfer through reinforcement learning and interaction imitation learning, delivering a generalizable controller conditioned on target hand\-object states\. Our method extends to diverse object shapes and hand morphologies\. Through extensive evaluations, we show that our approach enables dexterous hands to track challenging, long\-horizon sequences including object re\-arrangement and agile in\-hand reorientation\. These results represent a significant step toward scalable foundation controllers for manipulation that can learn entirely from synthetic data, breaking the data bottleneck that has long constrained progress in dexterous manipulation\.
+
+## Towards a Universal Causal Reasoner
+
+**Authors:** Qirun Dai; Xiao Liu; Jiawei Zhang; Dylan Zhang; Hao Peng; Chenhao Tan
+
+**ID:** 153248 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=MeL6BM40Ro>) | [PDF](<https://openreview.net/pdf?id=MeL6BM40Ro>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153248>)
+
+Despite the importance of causal reasoning, training LLMs to perform causal reasoning remains underexplored\. Existing data efforts mostly focus on benchmarking LLMs on specific aspects of causality, rendering them less suitable for training generalizable causal reasoners\. To address this, we propose UniCo, a data generation framework that both \(1\) addresses 18 causal query types across Pearl's Causal Ladder and \(2\) translates symbolic samples into code and narrative domains to simulate real\-world use cases where causal terms are not explicitly specified\. To ensure data quality, UniCo grounds answers with exact causal inference and filter cases with reasoning shortcuts\. Upon supervised\-finetuning with 66\.6K UniCo\-generated instances, Qwen3\-4B, Qwen3\-8B and Olmo\-3\-7B\-Instruct achieve an average of 22\.9% improvements across all 18 in\-distribution query types, and 8\.1% over state\-of\-the\-art causal data generation frameworks on 7 established causal benchmarks outside the training distribution\. Furthermore, in real\-world medical understanding, legal decision, and tabular reasoning, UniCo\-trained models consistently display more faithful reasoning traces, outperforming the base models by an average of 20\.2% in faithfulness metrics\. These suggest that causality\-centered training not only strengthens causal reasoning, but also equips LLMs with a causal mindset in general reasoning tasks\.
+
+## RAD\-TFM: Robust and Domain\-Adapted Tabular Foundation Models
+
+**Authors:** Matthew Peroni; Franck Le; Vadim Sheinin
+
+**ID:** 155295\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+**Repeated source row:** 155295
+
+[Paper](<https://openreview.net/forum?id=6dfLwFHIwj>) | [PDF](<https://openreview.net/pdf?id=6dfLwFHIwj>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155295>)
+
+The development of tabular foundation models \(TFMs\) has accelerated in recent years, showing strong potential to outperform traditional ML methods for structured data\. A key finding is that TFMs can be pretrained entirely on synthetic datasets, opening opportunities to design data generators that encourage desirable model properties\. Prior work has mainly focused on crafting high\-quality priors over generators to improve overall pretraining performance\. Our insight is that parameterizing the generator distribution enables an adversarial, distributional robustness perspective: during training, we can adapt the generator to emphasize datasets that are particularly challenging for the model, which we formalize by introducing an optimality gap measure\. Further, we develop a method to align the synthetic data generation with real\-world datasets from a given domain, constraining the adversary to generate "realistic'" data\. Together, these algorithms comprise the Robust and Domain\-Adapted Tabular Foundation Models \(RAD\-TFM\)  pipeline, a model\-agnostic adversarial training framework\. Applied to the TabPFN V2 classifier, RAD\-TFM improves performance across 6 diverse tabular benchmarks, with up to a 11\\% increase in mean normalized AUC over the original TabPFN and other baseline algorithms, with only 100k additional training datasets, less than 0\.1\\% of the original pretraining data\. These results highlight a promising new direction for targeted adversarial training and fine\-tuning of TFMs using synthetic data alone\.
+
+## ProgramBench: Can Language Models Rebuild Programs From Scratch?
+
+**Authors:** John Yang; Kilian Lieret; Jeffrey Ma; Parth Thakkar; Dmitrii Pedchenko; Sten Sootla; Emily McMilin; Pengcheng Yin; Rui Hou; Gabriel Synnaeve; Diyi Yang; Ofir Press
+
+**ID:** 139090\-\-2 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+**Repeated source row:** 139090
+
+[Paper](<https://openreview.net/forum?id=liufgqTAEe>) | [PDF](<https://openreview.net/pdf?id=liufgqTAEe>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139090>)
+
+Turning ideas into full software projects from scratch has become a popular use case for language models\. Agents are being deployed to seed, maintain, and grow codebases over extended periods with minimal human oversight\. Such settings require models to make high\-level software architecture decisions\. However, existing benchmarks measure focused, limited tasks such as fixing a single bug or developing a single, specified feature\. We therefore introduce ProgramBench to measure the ability of software engineering agents to develop software holisitically\. In ProgramBench, given only a program and its documentation, agents must architect and implement a codebase that matches the reference executable’s behavior\. End\-to\-end behavioral tests are generated via agent\-driven fuzzing, enabling evaluation without prescribing implementation structure\. Our 200 tasks range from compact CLI tools to widely used software such as FFmpeg, SQLite, and the PHP interpreter\. We evaluate 9 LMs and find that none fully resolve any task, with the best model passing 95% of tests on only 3% of tasks\. Models favor monolithic, single\-file implementations that diverge sharply from human\-written code\.
+
+## Synthetic Tasks for Training AutoResearch
+
+**Authors:** Ziyang Cai; Seyyedamirhossein Saeidi; Harkirat Singh Behl
+
+**ID:** 152335 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=TqCbmUrduo>) | [PDF](<https://openreview.net/pdf?id=TqCbmUrduo>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152335>)
+
+With the advent of AI agents, automated scientific discovery is becoming an increasingly plausible goal\. However, training agents to autonomously execute the engineering\-heavy labor of machine learning \(ML\) research requires massive, process\-level supervision\. Existing static benchmarks omit critical intermediate steps such as debugging and incremental reasoning, and manual data collection is prohibitively expensive\. To overcome this data bottleneck, we introduce ML\-AutoResearch \(ML\-AR\), a scalable pipeline for automatically generating synthetic, end\-to\-end ML research tasks\. Each task defines a complete research cycle, including problem specification, dataset selection, baseline implementation, and iterative improvement\. To ensure realism and executability, tasks are grounded in real\-world datasets and refined via an automated self\-debugging procedure without requiring human supervision\. We construct a large\-scale dataset of teacher trajectories on these synthetic tasks to train student agents via supervised fine\-tuning\. We evaluate the resulting agents across 3 diverse ML research benchmarks\. Our comprehensive experiments across 2 distinct model families and 3 model sizes demonstrate that training on ML\-AR trajectories yields consistent and significant capability gains\. Fine\-tuning improves the Aggregation Under the Performance \(AUP\) by up to 18% and substantially boosts overall pass rates, highlighting robust out\-of\-domain generalization\.
+
+## EcoGEO: Trajectory\-Aware Evidence Ecosystems for Web\-Enabled LLM Search Agents
+
+**Authors:** Hengwei Ye; Jiasheng Mao; Zhenhan Guan; Zheng Tian
+
+**ID:** 153813 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=IWhjevkPn4>) | [PDF](<https://openreview.net/pdf?id=IWhjevkPn4>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153813>)
+
+Web\-enabled LLM agents are changing how online information influences search outcomes\. Existing Generative Engine Optimization \(GEO\) studies mainly focus on individual webpages\. However, agentic web search is not a single\-document setting: an agent may issue queries, crawl pages, follow links, reformulate searches, and synthesize evidence across multiple browsing steps\. Influence therefore depends not only on page content, but also on how pages are organized, connected, and encountered along the agent's browsing trajectory\. We study this shift through Ecosystem Generative Engine Optimization \(EcoGEO\), which treats GEO as an environment\-level influence problem for web\-enabled LLM agents\. To instantiate this perspective, we propose TRACE, a Trajectory\-Aware Coordinated Evidence Ecosystem\. Given a recommendation query and a fictional target product, our method builds a controlled evidence environment that coordinates an agent\-facing navigation entry page with heterogeneous support pages\. These pages use shared terminology, internal links, and consistent product attributes to introduce, verify, and reinforce the target product\. We evaluate our method on OPR\-Bench, a benchmark for open\-ended product recommendation\. Experiments show that it consistently outperforms page\-level GEO baselines in final target recommendation\. Trajectory\-level metrics further show increased initial target\-result crawls, target\-specific follow\-up searches, and internal\-link crawls, suggesting that the gains come from shaping the agent's evidence\-acquisition process rather than merely adding more target\-related content\. Overall, our findings support an ecosystem research paradigm for GEO, where web\-enabled LLM agents are studied in relation to the broader evidence environments that guide search, browsing, and answer synthesis\.
+
+## DD\-Ranking: Rethinking the Evaluation of Dataset Distillation
+
+**Authors:** Zekai Li; Xinhao Zhong; Samir Khaki; Zhiyuan Liang; Yuhao Zhou; Mingjia Shi; Ziqiao Wang; Xuanlei Zhao; Wangbo Zhao; Ziheng Qin; Mengxuan Wu; Pengfei Zhou; Haonan Wang; David Junhao Zhang; Jia\-Wei Liu; Shaobo Wang; Dai Liu; Linfeng Zhang; Guang Li; Kun Wang; Zheng Zhu; Zhiheng Ma; Joey Tianyi Zhou; Jiancheng Lv; Yaochu Jin; Peihao Wang; Kaipeng Zhang; Yiran Huang; Zhiwei Deng; Xindi Wu; George Cazenavette; Yuzhang Shang; Justin CUI; Jindong Gu; Qian Zheng; Hao Ye; Shuo Wang; Xiaobo Wang; Yan Yan; Angela Yao; Mike Zheng Shou; Tianlong Chen; Hakan Bilen; Baharan Mirzasoleiman; Manolis Kellis; Konstantinos N Plataniotis; Zhangyang &amp;amp;quot;Atlas&amp;amp;quot; Wang; Bo Zhao; Yang You; Kai Wang
+
+**ID:** 139355 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=UreH0QGZXp>) | [PDF](<https://openreview.net/pdf?id=UreH0QGZXp>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139355>)
+
+_Abstract unavailable from the accessible public sources._
+
+## The Deadline Effect: Identifying and Correcting Temporal Bias in Human Evaluation
+
+**Authors:** Shiyan Liu
+
+**ID:** 154797 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=At4p3kXMIV>) | [PDF](<https://openreview.net/pdf?id=At4p3kXMIV>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154797>)
+
+_Abstract unavailable from the accessible public sources._
+
+## Learning Digital Twins under Drift: Optimal Tracking Rates for Non\-Stationary Dynamical Systems
+
+**Authors:** David Li; Honggang Wang
+
+**ID:** 152808 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=QErFsIRxnJ>) | [PDF](<https://openreview.net/pdf?id=QErFsIRxnJ>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152808>)
+
+We study online identification of linear\-in\-parameter dynamical systems whose true parameters drift over time\. Measuring non\-stationarity through the path variation $V\_T = \\sum\_\{t=1\}^\{T\-1\}\\\|\\theta\_\{t\+1\}^\\star \- \\theta\_t^\\star\\\|$, we make two contributions\. First, we give a clean blockwise dynamic\-regret analysis for continuous projected online gradient descent, yielding $E\[R\_T\] = O\(T/\\sqrt\{\\tilde W\} \+ \\tilde W V\_T\)$ and hence the oracle\-tuned rate $O\(T^\{2/3\}V\_T^\{1/3\}\)$ \. Second, we propose a residual\-based adaptive step size and prove an oracle\-proxy comparison theorem: when the residual proxy tracks the local prediction\-error signal with lower\-order overhead, the adaptive algorithm inherits the oracle scaling\. Experiments on synthetic systems and real turbofan\-engine degradation data \(NASA C\-MAPSS\) support the matched\-regime slope prediction on synthetic data, diagnose the failure regime when proxy overhead dominates, and show a clear unsupervised health\-indicator trend in the residual proxy on FD001\. A separate fast\-rate guarantee under persistent excitation and a tube MPC integration are deferred to the appendix\.
+
+## OopsWorld\! Operation\-Grounded Seamless World Generation
+
+**Authors:** Dongping Chen; Tianyi Zhou
+
+**ID:** 152375 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=TYAayuMqM6>) | [PDF](<https://openreview.net/pdf?id=TYAayuMqM6>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152375>)
+
+We study seamless world generation, where a model must update a persistent visual world according to online user operations rather than full next\-scene descriptions\. To make this task well\-defined, we introduce an operation\-centric taxonomy that represents each scene with a global\-local schema and each boundary with a typed operator program specifying change and preservation\. This taxonomy enables SeamlessWorld, a synthetic data and benchmark pipeline with 8 operation families, 23 atomic operators, dual prompt surfaces, and schema\-derived evaluation probes\. We then develop OopsWorld, a causal video generator that learns from SeamlessWorld using operation\-conditioned decoupled distillation: the student is driven by operation prompts and visual history, while scene\-conditioned teachers provide target\-state supervision\. We further apply dynamics curriculum learning to progressively compose simple edits into high\-dynamic world transitions\. OopsWorld substantially improves dynamic responsiveness and long\-video quality, achieving 91\.67 VBench Dynamics and 80\.42 Long\-Quality with 100K samples\. A systematic explicit\-\-implicit study further reveals a persistent operation\-prompting gap in current systems, especially for preserving visual anchors, calling for operation\-driven world models beyond next\-scene prompt switching\.
+
+## MMFineReason: Closing the Multimodal Reasoning Gap via Open Data\-Centric Methods
+
+**Authors:** Honglin Lin; Zheng Liu; Yun Zhu; Chonghan Qin; Juekai Lin; Xiaoran Shang; Conghui He; Bin CUI; Wentao Zhang; Lijun Wu
+
+**ID:** 139294 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=Z3ctdgrbBf>) | [PDF](<https://openreview.net/pdf?id=Z3ctdgrbBf>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139294>)
+
+_Abstract unavailable from the accessible public sources._
+
+## Readiness\-Aware Sample Selection for Noisy Labels with Class Imbalance
+
+**Authors:** Chihyeon Choi; Sangho Lee; Jiho Hong; Youngdoo Son; Hyungrok Do
+
+**ID:** 153563 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=KRjwe8CvhI>) | [PDF](<https://openreview.net/pdf?id=KRjwe8CvhI>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153563>)
+
+_Abstract unavailable from the accessible public sources._
+
+## COHE: Auditing Non\-Transitivity in Sample Difficulty Proxies for Vision Models
+
+**Authors:** Dayena Jeong; Sunglok Choi
+
+**ID:** 139659 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=CRLrnZHHFd>) | [PDF](<https://openreview.net/pdf?id=CRLrnZHHFd>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139659>)
+
+_Abstract unavailable from the accessible public sources._
+
+## MMFineReason: Closing the Multimodal Reasoning Gap via Open Data\-Centric Methods
+
+**Authors:** Honglin Lin; Zheng Liu; Yun Zhu; Chonghan Qin; Juekai Lin; Xiaoran Shang; Conghui He; Bin CUI; Wentao Zhang; Lijun Wu
+
+**ID:** 139294\-\-2 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
+
+**Repeated source row:** 139294
+
+[Paper](<https://openreview.net/forum?id=Z3ctdgrbBf>) | [PDF](<https://openreview.net/pdf?id=Z3ctdgrbBf>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139294>)
+
+_Abstract unavailable from the accessible public sources._
+
+## Readiness\-Aware Sample Selection for Noisy Labels with Class Imbalance
+
+**Authors:** Chihyeon Choi; Sangho Lee; Jiho Hong; Youngdoo Son; Hyungrok Do
+
+**ID:** 153563\-\-2 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
+
+**Repeated source row:** 153563
+
+[Paper](<https://openreview.net/forum?id=KRjwe8CvhI>) | [PDF](<https://openreview.net/pdf?id=KRjwe8CvhI>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153563>)
+
+_Abstract unavailable from the accessible public sources._
+
+## COHE: Auditing Non\-Transitivity in Sample Difficulty Proxies for Vision Models
+
+**Authors:** Dayena Jeong; Sunglok Choi
+
+**ID:** 139659\-\-2 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
+
+**Repeated source row:** 139659
+
+[Paper](<https://openreview.net/forum?id=CRLrnZHHFd>) | [PDF](<https://openreview.net/pdf?id=CRLrnZHHFd>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139659>)
+
+_Abstract unavailable from the accessible public sources._
+
+## Can LLMs Reliably Grade Olympiad Proofs? A Controlled Study of Mathematical Verification with LLMs
+
+**Authors:** Azim Ospanov; Zijin Feng; Ding Ding; Chengwu Liu; Haoli Bai; Jiacheng Sun; Lifeng Shang; Farzan Farnia
+
+**ID:** 153381 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=Ln6SxXlGAj>) | [PDF](<https://openreview.net/pdf?id=Ln6SxXlGAj>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153381>)
+
+Large Language Models \(LLMs\) have made remarkable progress on solving competition\-level mathematics, yet their ability to verifying natural\-language mathematical proofs remains relatively underexplored\. Current proof verification primarily relies on expert inspection that is costly to scale and Olympiad\-level problems represent a significant challenge in this area, as they require the meticulous evaluation of every claim in the reasoning chain\. In this paper, we present a systematic study of LLM\-based verification in this setting\. Specifically, we introduce a human\-curated dataset of 48 USAMO 2025 candidate solutions with expert grading, conduct a broad study of existing LLM verifiers in Olympiad mathematics across frontier models\. We also propose an iterative self\-critique pipeline TROJAN to generates high\-fidelity adversarial proofs at scale\. Our evaluation spans 20 models on 7 metrics across two prompt styles with three inference methods and three prompt templates, illustrating that the state\-of\-the\-art models still have more room for improvement\. To address this gap, we propose MABGrader, a Multi\-Armed Bandit framework that reframes grading as arm selection over the discrete score space\. MABGrader outperforms the SOTA ProofGrader by 26\.4% in Quadratic Weighted Kappa and reduces grading error by 14%\.
+
+## Efficient Benchmarking Is Just Feature Selection and Multiple Regression
+
+**Authors:** Sam Bowyer; Acyr Locatelli; Kris Cao
+
+**ID:** 139637 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=E0CrL9qFym>) | [PDF](<https://openreview.net/pdf?id=E0CrL9qFym>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139637>)
+
+Efficient benchmarking techniques aim to lower the computational cost of evaluating LLMs by predicting full benchmark scores using only a subset of a benchmark's questions\. By reframing this problem as an instance of multiple regression with feature selection, we find that existing efficient benchmarking methods can be greatly improved by simply using kernel ridge regression at the prediction stage\. Additionally, using an information\-theoretic feature\-selection algorithm called minimum redundancy maximum relevance \(mRMR\), we can further improve upon these methods by selecting question subsets that will be maximally useful for prediction\. Except in very data\-poor settings, these approaches consistently achieve smaller prediction errors \(in both MAE and RMSE\), and greater ranking correlation between predicted and true scores \(in both Spearman $\\rho$ and Kendall $\\tau$\) across a range of benchmarks using both binary and continuous metrics\. Furthermore, mRMR subsampling is much faster than competitor methods \(which often involve fitting probabilistic models or running clustering algorithms\), and is more likely to select the same questions under different random seeds or training data splits\.
+
+## Generative Active Learning via Bayesian Acquisition for Improving the Efficiency of Synthetic Data
+
+**Authors:** Jeongjun Lee; Gyeonghoon Ko; Juho Lee
+
+**ID:** 149816 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=n94j33Dy4F>) | [PDF](<https://openreview.net/pdf?id=n94j33Dy4F>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149816>)
+
+_Abstract unavailable from the accessible public sources._
+
+## Fair Division of Work in Collaborative Mean Estimation via Bargaining
+
+**Authors:** Michael O\. Harding; Alex Clinton; Kirthevasan Kandasamy
+
+**ID:** 154171 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=Fil0EoNr7j>) | [PDF](<https://openreview.net/pdf?id=Fil0EoNr7j>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154171>)
+
+Data collection is a critical component of modern machine learning pipelines\. In many settings, multiple agents, such as hospitals or research labs, can collaborate to share the burden of data collection rather than each bearing it alone\. But how should the work be divided among these agents fairly? Studying this question is complicated by heterogeneity in agents' data collection costs and data quality, and by the fact that fairness itself is subjective and use\-case\-dependent\.  We study these challenges in the context of PAC mean estimation, where agents wish to estimate an unknown scalar $\\mu$ to within accuracy $\\epsilon$ with probability at least $1\-\\delta$, via samples from distributions with common mean $\\mu\\,$\. Agents may incur different costs to collect their samples, and their distributions may have different variances \(data qualities\)\. Our first contribution is a framework that casts collaborative data collection as a bargaining problem, where agents specify a notion of utility \(e\.g\., negative cost incurred, or cost savings relative to working alone\) and a welfare function over agent utilities\. By maximizing the welfare over the feasible set of data collection amounts \(i\.e\. there is enough data to satisfy $\(\\epsilon,\\delta\)$\-PAC mean estimation\), we obtain a fair division of work\. Drawing on classical fairness axioms from the microeconomics literature, the family of admissible welfare functions takes a specific one\-parameter form that includes utilitarian, egalitarian, and Nash bargaining as special cases\. When agents' noise variances \(data qualities\) are known, this yields a clean characterization of the fair division\. Our second contribution addresses the more challenging setting where variances are unknown\. As the feasible set of data collection amounts itself depends on the variances, it is impossible to specify a fair division of work upfront\.  We propose an online algorithm that combines plug\-in variance estimates with carefully calibrated forced sampling, and show that it is asymptotically optimal: the ratio of the achieved welfare to the welfare of the true fair division converges to 1 almost surely as either $\\epsilon$ or $\\delta$ goes to 0\. We further show that our estimator asymptotically exactly meets the specified error tolerance and failure probability\.
+
+## NADS: Navigator\-Guided Data Selection for Mitigating Catastrophic Forgetting in Fine\-Tuning
+
+**Authors:** JIANHAO ZHANG; Ou Wu; Yi Du
+
+**ID:** 148869 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=uZIL1Rr7jG>) | [PDF](<https://openreview.net/pdf?id=uZIL1Rr7jG>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148869>)
+
+Catastrophic forgetting is a central obstacle in single\-stage fine\-tuning of large language models \(LLMs\) on a new task, especially when the original pretraining data are unavailable\. Synthetic data offers a practical mitigation path, but candidate pools are often noisy and redundant, making effective selection essential\. Existing methods often rely on indirect proxy signals whose alignment with actual training benefit can be limited, while utility\-\-diversity selection over large candidate pools remains computationally demanding\. To address these challenges, we propose $\\textbf\{NA\}$vigator\-guided $\\textbf\{D\}$ata $\\textbf\{S\}$election \($\\textbf\{NADS\}$\), a fine\-tuning framework for LLMs\. NADS first follows the target fine\-tuning recipe without preservation regularization to obtain a navigator model, whose deviation from the pretrained model exposes recipe\-induced capability drift\. It then uses the predictive divergence between the navigator and the pretrained model to score forgetting\-aware utility for each synthetic candidate, and constructs a constraint set through an efficient utility\-\-diversity selection strategy\. Finally, NADS fine\-tunes on the new\-task data while distilling pretrained behavior on the selected constraints to preserve general capabilities\. Experiments show that NADS delivers a stronger balance between new\-task performance and general capability preservation, while reducing utility\-\-diversity selection overhead\.
+
+## Efficient Dataset Distillation for Pre\-Trained Self\-Supervised Models via Statistical Flow Matching
+
+**Authors:** Qianxin Xia; JIAWEI DU; Yuhan Zhang; xin zhang; Xuewan He; Wenbo Jiang; Jielei Wang; Tao Luo; Guoming Lu
+
+**ID:** 155616 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=4DqCJdPblC>) | [PDF](<https://openreview.net/pdf?id=4DqCJdPblC>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155616>)
+
+Dataset distillation seeks to synthesize a highly compact surrogate dataset that achieves performance comparable to the original dataset on downstream tasks\. For the scenario where pre\-trained self\-supervised models serve as priors, traditional $\\textit\{Linear Gradient Matching\}$ optimizes synthetic images by encouraging them to mimic the gradient updates induced by real images on the linear probe or classifier\. However, this batch\-level formulation requires loading thousands of real images and applying multiple differentiable augmentations to synthetic images at each distillation step, leading to substantial computational and memory overheads\. In this paper, we revisit the linear gradient and theoretically derive that it is essentially a $\\textit\{local\}$ relative distribution directed from target class centers toward non\-target class centers, which we term \`\`flow”\. This property causes instability and suboptimality, often necessitating expensive multiple augmentations to compensate\. To address this, we introduce $\\textit\{Statistical Flow Matching\}$, a stable and efficient supervised learning framework that optimizes synthetic images by aligning $\\textit\{global\}$ statistical flows in the original data\. Our approach loads raw statistics only once and performs a single augmentation pass on the synthetic data, achieving performance comparable to or better than the state\-of\-the\-art method with 10× less GPU memory usage and 4× faster distillation time\. Moreover, increasing the number of augmentations for our method yields further performance gains while incurring lower additional cost\.
+
+## Benchmarks Are Not Atomic: Composition\-Aware LLM Evaluation using BenchHub
+
+**Authors:** Eunsu Kim; Haneul Yoo; Guijin Son; Hitesh Patel; Amit Agarwal; Alice Oh
+
+**ID:** 139267 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=asBdEGcCLc>) | [PDF](<https://openreview.net/pdf?id=asBdEGcCLc>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139267>)
+
+LLM benchmarks are often treated as coherent measurement units, yet they are heterogeneous collections of instances spanning diverse domains, skills, formats, and contexts\. As a result, aggregate benchmark scores can conflate model capability with benchmark composition, obscuring what existing benchmarks actually cover\. We introduce BenchHub, a composition\-aware evaluation framework that represents benchmarks as distributions over instance\-level attributes\. BenchHub integrates 54 benchmarks comprising 839K samples across 10 languages\. It enables researchers to inspect benchmark contents, uncover reusable coverage hidden behind benchmark names, transparently compare benchmarks, and construct controllable evaluation sets for application\-aligned model selection\. Using BenchHub, we show that similarly motivated benchmarks can differ substantially in internal composition, existing benchmarks often contain reusable coverage beyond their stated purposes, models exhibit fine\-grained category\-level performance variation hidden by aggregate scores, and model rankings can shift under different reweighting and resampling configurations\. Our results motivate evaluation practices that make benchmark composition explicit, inspectable, and controllable\.
+
+## Guiding Data Allocation for Robust Subpopulation Generalization
+
+**Authors:** Zhaoying Pan; Yipei Wang; Shenyu Lu; Xiaoqian Wang
+
+**ID:** 153167 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=NLzY8w4ead>) | [PDF](<https://openreview.net/pdf?id=NLzY8w4ead>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153167>)
+
+_Abstract unavailable from the accessible public sources._
+
+## SAFE\-DRIFT: Data Selection for Supervised Fine\-tuning with Controllable Off\-Target Drifts
+
+**Authors:** Yeo Jin Jung; Yating Liu; Lalchand Pandia; Claire Donnat
+
+**ID:** 151214 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=c6eraD0tjd>) | [PDF](<https://openreview.net/pdf?id=c6eraD0tjd>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151214>)
+
+_Abstract unavailable from the accessible public sources._
+
+## PRIME: A Modular Approach for Private Synthetic Data
+
+**Authors:** Miguel Fuentes; Brett Mullins; Cecilia Ferrando; Cameron Musco; Daniel Sheldon
+
+**ID:** 153567 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=KQh9ulA7J7>) | [PDF](<https://openreview.net/pdf?id=KQh9ulA7J7>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153567>)
+
+_Abstract unavailable from the accessible public sources._
+
+## When Form Changes but Logic Doesn’t: Building Logic\-invariant LLMs through Structures
+
+**Authors:** Xuyuan Liu; Xinshuai Dong; Elynn Chen; Yujun Yan
+
+**ID:** 154219 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=FK8bpwDTcv>) | [PDF](<https://openreview.net/pdf?id=FK8bpwDTcv>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154219>)
+
+_Abstract unavailable from the accessible public sources._
+
+## Same Words, Different Judgments: How Preferences Vary Across Modalities
+
+**Authors:** Aaron Broukhim; Nadir Weibel; Eshin Jolly
+
+**ID:** 139412 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=SDNH5wA9Vo>) | [PDF](<https://openreview.net/pdf?id=SDNH5wA9Vo>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139412>)
+
+_Abstract unavailable from the accessible public sources._
+
+## JudgmentBench: Comparing Rubric and Preference Evaluation for Quality Assessment
+
+**Authors:** Russell Yang; Ruishi Chen; Pierce Kelaita; Riya Ranjan; Sibo Ma; Charles Dickens; Matthew Guillod; Megan Ma; Julian Nyarko
+
+**ID:** 139683 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=AkC78nUjam>) | [PDF](<https://openreview.net/pdf?id=AkC78nUjam>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139683>)
+
+Two methodologies dominate current practices of benchmarking: rubric\-based scoring evaluates items against predefined criteria, whereas comparative judgment elicits pairwise preferences between outputs\. Although both methodologies are widely used, the choice between them is rarely justified\. We release JudgmentBench, a benchmark of 30 real\-world legal tasks, paired with 1,539 rubric scores and 1,530 pairwise preference judgments collected from practicing attorneys—including at major U\.S\. law firms—with substantial experience\. The annotations constitute the first publicly available dataset in a high\-expertise domain in which both supervision signals are elicited from the same experts on the same items\. Using LLM\-generated outputs at three constructed quality levels, we provide an initial empirical comparison: comparative judgments recover the intended quality ordering substantially better than rubrics \(mean Spearman's rank correlation of 0\.908 vs\. 0\.150, $\\widehat\{D\}=0\.758$ \[0\.494, 1\.021\]\) while requiring less than half the annotation time\. The patterns hold for human annotators and LLM autograders\. Beyond this initial comparison, the paired structure of the dataset supports a broader research agenda on how expert judgment should be elicited, aggregated, and used as supervision in domains without verifiable ground truth\.
+
+## SODA: Selective Optimization with Deferred BN Alignment for Efficient Dataset Distillation
+
+**Authors:** Xinyue Bi; Jiacheng Cui; Yaxin Luo; Xinyi Shang; Jiacheng Liu; Xiaohan Zhao; Zhiqiang Shen
+
+**ID:** 150571 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=hAi08GriqP>) | [PDF](<https://openreview.net/pdf?id=hAi08GriqP>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150571>)
+
+Recent AI research has increasingly evolved along two complementary directions: model\-centric learning, which improves architectures and training algorithms, and data\-centric learning, which improves the quality and compression of training data\. Within data\-centric learning, dataset distillation on large\-scale datasets has attracted growing attention, with decoupled distillation methods like SRe$^2$L, G\-VBSM, LPQLD, FADRM have emerged as a representative paradigm\. These methods typically synthesize compact datasets by matching the Batch Norm statistics of a teacher network, using BN alignment as an effective training objective\. However, modern networks often contain many BN layers, and enforcing alignment at every layer introduces substantial computational redundancy\. More importantly, we observe that not all BN layers provide equally informative supervision or consistent performance gains\. Motivated by this, we propose SODA, a novel Selective Optimization with Deferred BN Alignment framework for efficient dataset distillation\. SODA selectively identifies and optimizes informative BN alignment objectives while deferring unnecessary or low\-value alignment computations, substantially improving both distillation efficiency and synthetic data quality\. We further provide a theoretical analysis explaining why selective and deferred BN alignment can simultaneously reduce optimization cost and improve generalization\. Extensive experiments across multiple datasets of CIFAR\-100, Tiny\-ImageNet, ImageNet\-1K and its subsets thereof demonstrate that SODA achieves state\-of\-the\-art performance while offering significantly improved computational efficiency over existing BN\-matching\-based dataset distillation methods, surpassing FADRM\+ by \+1\.6\\% on ImageNet\-1K IPC=10 under ResNet\-18 while delivering a $1\.54\\times$ speedup\.
+
+## Learning Digital Twins under Drift: Optimal Tracking Rates for Non\-Stationary Dynamical Systems
+
+**Authors:** David Li; Honggang Wang
+
+**ID:** 152808\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+**Repeated source row:** 152808
+
+[Paper](<https://openreview.net/forum?id=QErFsIRxnJ>) | [PDF](<https://openreview.net/pdf?id=QErFsIRxnJ>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152808>)
+
+We study online identification of linear\-in\-parameter dynamical systems whose true parameters drift over time\. Measuring non\-stationarity through the path variation $V\_T = \\sum\_\{t=1\}^\{T\-1\}\\\|\\theta\_\{t\+1\}^\\star \- \\theta\_t^\\star\\\|$, we make two contributions\. First, we give a clean blockwise dynamic\-regret analysis for continuous projected online gradient descent, yielding $E\[R\_T\] = O\(T/\\sqrt\{\\tilde W\} \+ \\tilde W V\_T\)$ and hence the oracle\-tuned rate $O\(T^\{2/3\}V\_T^\{1/3\}\)$ \. Second, we propose a residual\-based adaptive step size and prove an oracle\-proxy comparison theorem: when the residual proxy tracks the local prediction\-error signal with lower\-order overhead, the adaptive algorithm inherits the oracle scaling\. Experiments on synthetic systems and real turbofan\-engine degradation data \(NASA C\-MAPSS\) support the matched\-regime slope prediction on synthetic data, diagnose the failure regime when proxy overhead dominates, and show a clear unsupervised health\-indicator trend in the residual proxy on FD001\. A separate fast\-rate guarantee under persistent excitation and a tube MPC integration are deferred to the appendix\.
+
+## OopsWorld\! Operation\-Grounded Seamless World Generation
+
+**Authors:** Dongping Chen; Tianyi Zhou
+
+**ID:** 152375\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+**Repeated source row:** 152375
+
+[Paper](<https://openreview.net/forum?id=TYAayuMqM6>) | [PDF](<https://openreview.net/pdf?id=TYAayuMqM6>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152375>)
+
+We study seamless world generation, where a model must update a persistent visual world according to online user operations rather than full next\-scene descriptions\. To make this task well\-defined, we introduce an operation\-centric taxonomy that represents each scene with a global\-local schema and each boundary with a typed operator program specifying change and preservation\. This taxonomy enables SeamlessWorld, a synthetic data and benchmark pipeline with 8 operation families, 23 atomic operators, dual prompt surfaces, and schema\-derived evaluation probes\. We then develop OopsWorld, a causal video generator that learns from SeamlessWorld using operation\-conditioned decoupled distillation: the student is driven by operation prompts and visual history, while scene\-conditioned teachers provide target\-state supervision\. We further apply dynamics curriculum learning to progressively compose simple edits into high\-dynamic world transitions\. OopsWorld substantially improves dynamic responsiveness and long\-video quality, achieving 91\.67 VBench Dynamics and 80\.42 Long\-Quality with 100K samples\. A systematic explicit\-\-implicit study further reveals a persistent operation\-prompting gap in current systems, especially for preserving visual anchors, calling for operation\-driven world models beyond next\-scene prompt switching\.
+
+## Two is better than one: designing heterogeneous scales in binary rating systems
+
+**Authors:** Liren Shan; Alec Sun; Jingyan Wang
+
+**ID:** 148218 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=zTVNhgFzsK>) | [PDF](<https://openreview.net/pdf?id=zTVNhgFzsK>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148218>)
+
+Online platforms often struggle with inflated, uninformative user ratings\. This issue can be mitigated by better design of the data collection mechanism, for example through changing the phrasing of user questions\. Previous work optimizes a single rating scale to best distinguish the inherent qualities of items under binary feedback\. In this paper, we demonstrate the power of utilizing different rating scales for different users\. First, we show that a designer can always split a single rating scale into two to improve item rankings\. Next, we formally characterize the optimal design of multiple scales as a series of 0\-1 step functions whose threshold values are evenly spaced\. Finally, we consider an adaptive model where subsequent rating scales can depend on the responses from previous users and show that adaptivity leads to even greater distinguishing power\. All in all, our theoretical results show that using heterogeneous scales significantly improves item rankings on platforms\.
+
+## M$^3$: Reframing Training Measures for Discretized Physical Simulations
+
+**Authors:** Yuan Mei; Xingyu Song; Xiaowen Song; Naoya Takeishi
+
+**ID:** 149542 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=pMw0ClT3bM>) | [PDF](<https://openreview.net/pdf?id=pMw0ClT3bM>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149542>)
+
+Neural surrogate models for physical simulations are trained on discretized samples of continuous domains, where the induced empirical measure leads to uneven supervision, biasing optimization and causing spatial inconsistencies in physical fidelity\. To mitigate this measure\-induced bias, we propose M$^3$ \(Multi\-scale Morton Measure\), a scalable framework that balances training measures by partitioning space according to physical variation and allocating supervision across multiple scales\. Applied to three industrial\-scale datasets with diverse discretizations, M$^3$ consistently improves predictions in the continuous physical domain, achieving up to 4\.7$\\times$ lower error in large\-scale volumetric cases\. These gains persist under aggressive subsampling \(160M $\\rightarrow$ 16M $\\rightarrow$ 1\.6M points\), where M$^3$\-trained models outperform those trained on higher\-resolution data, reducing physics\-weighted relative $L\_2$ error by 3\-\-4$\\times$ and the corresponding MSE by up to 13$\\times$\. These results highlight data distribution as a key factor in operator learning and position M$^3$ as a scalable, data\-efficient approach for physically consistent modeling\.
+
+## Towards Generalizable Data Valuation: Learning an End\-to\-end Deep Model to Compute Shapley Values
+
+**Authors:** Zhiyu Chen; Jicong Fan
+
+**ID:** 155035 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=8vClXC5kYN>) | [PDF](<https://openreview.net/pdf?id=8vClXC5kYN>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155035>)
+
+Data Shapley has emerged as a premier framework for data valuation, yet its practical utility is severely hampered by exponential computational complexity and the need for costly model retraining\. Unlike existing methods that compute values independently for each dataset, we propose GenSHAP, a novel graph\-based paradigm that reformulates data valuation as a transferable learning task\. GenSHAP learns an amortised deep model capable of predicting Data Shapley values for any unseen classification dataset in a single forward pass\. Our framework utilises a relation\-based dataset representation method and a hybrid GIN\-Transformer architecture to capture local and global inter\-sample dependencies\. We further introduce GenSHAP\-S, which augments these structural representations with low\-budget marginal contribution probes to achieve high\-fidelity valuation\. Extensive experiments demonstrate that GenSHAP closely approximates high\-budget permutation\-Shapley reference estimates and excels in downstream tasks such as data removal and addition while reducing valuation time from hours to seconds\. The source code is available in the anonymous repository\~\\footnote\{\\url\{https://anonymous\.4open\.science/r/GenSHAP/\}\}\.
+
+## Neural Reconstruction of LiDAR Point Clouds under Jamming Attacks via Full\-Waveform Representation and Simultaneous Laser Sensing
+
+**Authors:** Ryo Yoshida; Takami Sato; Wenlun Zhang; Yuki Hayakawa; Shota Nagai; Kazuma Ikeda
+
+**ID:** 154337 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=EM3vywy1qY>) | [PDF](<https://openreview.net/pdf?id=EM3vywy1qY>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154337>)
+
+LiDAR sensors are critical for autonomous driving perception, yet remain vulnerable to spoofing attacks\. Jamming attacks inject high\-frequency laser pulses that completely blind LiDAR sensors by overwhelming authentic returns with malicious signals\. We discover that while point clouds become randomized, the underlying full\-waveform data retains distinguishable signatures between attack and legitimate signals\. In this work, we propose PULSAR\-Net, capable of reconstructing authentic point clouds under jamming attacks by leveraging previously underutilized intermediate full\-waveform representations and simultaneous laser sensing in modern LiDAR systems\. PULSAR\-Net adopts a novel U\-Net architecture with axial spatial attention mechanisms specifically designed to identify attack\-induced signals from authentic object returns in the full\-waveform representation\. To address the lack of full\-waveform representations in existing LiDAR datasets under jamming attacks, we introduce a physics\-aware dataset generation pipeline that synthesizes realistic full\-waveform representations under jamming attacks\. Despite being trained exclusively on synthetic data, PULSAR\-Net achieves reconstruction rates of 92\\% and 73\\% for vehicles obscured by jamming attacks in real\-world static and driving scenarios, respectively\.
+
+## VeriScope: Measuring Verification\-Ready Verilog Artifacts
+
+**Authors:** Wei Zhang; Jian Yang; jiajun wu; Junhang Cheng; Chufan He; Yihang Lou; Xianglong Liu
+
+**ID:** 138988 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=sH1tih031m>) | [PDF](<https://openreview.net/pdf?id=sH1tih031m>) | [Official poster](<https://neurips.cc/virtual/2026/poster/138988>)
+
+Large language models \(LLMs\) are increasingly used in hardware\-oriented coding workflows, yet open resources for evaluating first\-pass RTL beyond execution remain limited\. We present VeriScope, an open benchmark and evaluation suite of 568 problems spanning basic combinational gates through module\-level designs and a 95\-task L4\+ top\-end slice \(92 L4 system tasks plus 3 L5 stress tests\)\. A developer agent receives a natural\-language task brief, returns a single RTL draft, and that artifact is evaluated through objective execution plus RTL\-level and artifact\-level review incorporating waveform and circuit evidence\. Across 26 public models plus two 32B calibration baselines, the best systems reach about 84/100 combined score on the full benchmark but drop to the high 70s on L3–L4\+\. The 60/40 combined leaderboard largely tracks functional execution \(Spearman 0\.998 with a functional\-only ranking\), while artifact scores are most useful as a post\-simulation screening signal: 29\.6% of L3–L4\+ simulation\-passing submissions receive artifact score below 6 and therefore need additional verification evidence\. A 100\-sample manual taxonomy of such disagreements finds 70% testbench coverage gaps, 12% real RTL defects, and 18% judge hallucinations \(Wilson 95% intervals reported in the analysis\), showing that artifact review surfaces both under\-tested passes and model defects, but should not be treated as a standalone leaderboard refinement\.
+
+## Synthetic Tasks for Training AutoResearch
+
+**Authors:** Ziyang Cai; Seyyedamirhossein Saeidi; Harkirat Singh Behl
+
+**ID:** 152335\-\-2 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+**Repeated source row:** 152335
+
+[Paper](<https://openreview.net/forum?id=TqCbmUrduo>) | [PDF](<https://openreview.net/pdf?id=TqCbmUrduo>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152335>)
+
+With the advent of AI agents, automated scientific discovery is becoming an increasingly plausible goal\. However, training agents to autonomously execute the engineering\-heavy labor of machine learning \(ML\) research requires massive, process\-level supervision\. Existing static benchmarks omit critical intermediate steps such as debugging and incremental reasoning, and manual data collection is prohibitively expensive\. To overcome this data bottleneck, we introduce ML\-AutoResearch \(ML\-AR\), a scalable pipeline for automatically generating synthetic, end\-to\-end ML research tasks\. Each task defines a complete research cycle, including problem specification, dataset selection, baseline implementation, and iterative improvement\. To ensure realism and executability, tasks are grounded in real\-world datasets and refined via an automated self\-debugging procedure without requiring human supervision\. We construct a large\-scale dataset of teacher trajectories on these synthetic tasks to train student agents via supervised fine\-tuning\. We evaluate the resulting agents across 3 diverse ML research benchmarks\. Our comprehensive experiments across 2 distinct model families and 3 model sizes demonstrate that training on ML\-AR trajectories yields consistent and significant capability gains\. Fine\-tuning improves the Aggregation Under the Performance \(AUP\) by up to 18% and substantially boosts overall pass rates, highlighting robust out\-of\-domain generalization\.
+
+## The Deadline Effect: Identifying and Correcting Temporal Bias in Human Evaluation
+
+**Authors:** Shiyan Liu
+
+**ID:** 154797\-\-2 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
+
+**Repeated source row:** 154797
+
+[Paper](<https://openreview.net/forum?id=At4p3kXMIV>) | [PDF](<https://openreview.net/pdf?id=At4p3kXMIV>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154797>)
+
+_Abstract unavailable from the accessible public sources._
+
+## Towards Generalizable Data Valuation: Learning an End\-to\-end Deep Model to Compute Shapley Values
+
+**Authors:** Zhiyu Chen; Jicong Fan
+
+**ID:** 155035\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+**Repeated source row:** 155035
+
+[Paper](<https://openreview.net/forum?id=8vClXC5kYN>) | [PDF](<https://openreview.net/pdf?id=8vClXC5kYN>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155035>)
+
+Data Shapley has emerged as a premier framework for data valuation, yet its practical utility is severely hampered by exponential computational complexity and the need for costly model retraining\. Unlike existing methods that compute values independently for each dataset, we propose GenSHAP, a novel graph\-based paradigm that reformulates data valuation as a transferable learning task\. GenSHAP learns an amortised deep model capable of predicting Data Shapley values for any unseen classification dataset in a single forward pass\. Our framework utilises a relation\-based dataset representation method and a hybrid GIN\-Transformer architecture to capture local and global inter\-sample dependencies\. We further introduce GenSHAP\-S, which augments these structural representations with low\-budget marginal contribution probes to achieve high\-fidelity valuation\. Extensive experiments demonstrate that GenSHAP closely approximates high\-budget permutation\-Shapley reference estimates and excels in downstream tasks such as data removal and addition while reducing valuation time from hours to seconds\. The source code is available in the anonymous repository\~\\footnote\{\\url\{https://anonymous\.4open\.science/r/GenSHAP/\}\}\.
+
+## Neural Reconstruction of LiDAR Point Clouds under Jamming Attacks via Full\-Waveform Representation and Simultaneous Laser Sensing
+
+**Authors:** Ryo Yoshida; Takami Sato; Wenlun Zhang; Yuki Hayakawa; Shota Nagai; Kazuma Ikeda
+
+**ID:** 154337\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+**Repeated source row:** 154337
+
+[Paper](<https://openreview.net/forum?id=EM3vywy1qY>) | [PDF](<https://openreview.net/pdf?id=EM3vywy1qY>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154337>)
+
+LiDAR sensors are critical for autonomous driving perception, yet remain vulnerable to spoofing attacks\. Jamming attacks inject high\-frequency laser pulses that completely blind LiDAR sensors by overwhelming authentic returns with malicious signals\. We discover that while point clouds become randomized, the underlying full\-waveform data retains distinguishable signatures between attack and legitimate signals\. In this work, we propose PULSAR\-Net, capable of reconstructing authentic point clouds under jamming attacks by leveraging previously underutilized intermediate full\-waveform representations and simultaneous laser sensing in modern LiDAR systems\. PULSAR\-Net adopts a novel U\-Net architecture with axial spatial attention mechanisms specifically designed to identify attack\-induced signals from authentic object returns in the full\-waveform representation\. To address the lack of full\-waveform representations in existing LiDAR datasets under jamming attacks, we introduce a physics\-aware dataset generation pipeline that synthesizes realistic full\-waveform representations under jamming attacks\. Despite being trained exclusively on synthetic data, PULSAR\-Net achieves reconstruction rates of 92\\% and 73\\% for vehicles obscured by jamming attacks in real\-world static and driving scenarios, respectively\.
+
+## Learning How to Cube
+
+**Authors:** Ferhat Erata; Sam Kouteili; Thanos Typaldos; Timos Antonopoulos; Robert B Jones; Byron Cook; Ruzica Piskac
+
+**ID:** 148433 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=xpTnC6GT2x>) | [PDF](<https://openreview.net/pdf?id=xpTnC6GT2x>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148433>)
+
+Despite the effectiveness of Cube\-and\-Conquer \(C&amp;C\) for solving challenging Boolean Satisfiability \(SAT\) problems, no prior work has shown that transformer\-based models can learn effective cubing heuristics\. We introduce a neuro\-symbolic post\-training framework for this task\. We design an MCTS\-based data curation pipeline that uses symbolic heuristics to explore splitting decisions over SAT competition formulas, producing preference data grounded in solver statistics and augmented with reasoning traces from a teacher model\. Our two\-stage post\-training, supervised fine\-tuning \(SFT\) followed by direct preference optimization \(DPO\), enables a 4B\-parameter model to achieve a pass@5 score of 53 on 100 SAT competition benchmarks, surpassing frontier LLMs such as Claude\-Sonnet\-4 \(50\) and matching the best symbolic heuristic \(53\)\. Ablations show that SFT alone improves pass@5 from 46 to 51, with DPO adding 2 additional benchmarks; an entropy/agreement ablation on realized first\-cube decisions further shows that SFT, not DPO, accounts for the root\-level decision diversity that produces complementary per\-run coverage over deterministic symbolic methods\. This demonstrates that transformers can be trained to make effective cubing decisions in a domain traditionally dominated by symbolic methods\.
+
+## Can We Trust Item Response Theory for AI Evaluation?
+
+**Authors:** Han Jiang; Sunbeom Kwon; Jinwen Luo; Ziang Xiao; Susu Zhang
+
+**ID:** 139287 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=ZKNcOHJwjy>) | [PDF](<https://openreview.net/pdf?id=ZKNcOHJwjy>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139287>)
+
+AI benchmarks increasingly leverage item\-level statistical models, particularly item response theory \(IRT\), to estimate capabilities, rank systems, select informative examples, and diagnose benchmark quality\. However, AI benchmark data often departs from the data regimes encountered in human testing, for which standard IRT estimation tools were originally developed: these benchmarks typically involve fewer evaluated models, far more items, and capability distributions that may be skewed, clustered, or multimodal\. We examine how these regime mismatches challenge the reliability of IRT modeling for AI evaluation\. Using item parameters and capability distributions derived from six widely used LLM benchmarks, we simulate response matrices under three common IRT models and compare four estimators used in recent benchmark studies: marginal maximum likelihood, Markov chain Monte Carlo, variational inference, and a neural pseudo\-Siamese estimator\. Across 18,000 simulation runs, we systematically evaluate computational feasibility, scalability, and the reliability of IRT inferences about model rankings, predicted performance, and item characteristics\. Results show that classical estimators can become computationally infeasible for large benchmarks, whereas scalable estimators can produce unreliable item\-level and ranking inferences with small or non\-normally distributed model sets\. This study identifies when latent trait models reliably support or risk distorting AI benchmarking claims, and what sample sizes and diagnostics are needed for trustworthy use\.
+
+## EcoGEO: Trajectory\-Aware Evidence Ecosystems for Web\-Enabled LLM Search Agents
+
+**Authors:** Hengwei Ye; Jiasheng Mao; Zhenhan Guan; Zheng Tian
+
+**ID:** 153813\-\-2 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+**Repeated source row:** 153813
+
+[Paper](<https://openreview.net/forum?id=IWhjevkPn4>) | [PDF](<https://openreview.net/pdf?id=IWhjevkPn4>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153813>)
+
+Web\-enabled LLM agents are changing how online information influences search outcomes\. Existing Generative Engine Optimization \(GEO\) studies mainly focus on individual webpages\. However, agentic web search is not a single\-document setting: an agent may issue queries, crawl pages, follow links, reformulate searches, and synthesize evidence across multiple browsing steps\. Influence therefore depends not only on page content, but also on how pages are organized, connected, and encountered along the agent's browsing trajectory\. We study this shift through Ecosystem Generative Engine Optimization \(EcoGEO\), which treats GEO as an environment\-level influence problem for web\-enabled LLM agents\. To instantiate this perspective, we propose TRACE, a Trajectory\-Aware Coordinated Evidence Ecosystem\. Given a recommendation query and a fictional target product, our method builds a controlled evidence environment that coordinates an agent\-facing navigation entry page with heterogeneous support pages\. These pages use shared terminology, internal links, and consistent product attributes to introduce, verify, and reinforce the target product\. We evaluate our method on OPR\-Bench, a benchmark for open\-ended product recommendation\. Experiments show that it consistently outperforms page\-level GEO baselines in final target recommendation\. Trajectory\-level metrics further show increased initial target\-result crawls, target\-specific follow\-up searches, and internal\-link crawls, suggesting that the gains come from shaping the agent's evidence\-acquisition process rather than merely adding more target\-related content\. Overall, our findings support an ecosystem research paradigm for GEO, where web\-enabled LLM agents are studied in relation to the broader evidence environments that guide search, browsing, and answer synthesis\.
+
+## Learning Digital Twins under Drift: Optimal Tracking Rates for Non\-Stationary Dynamical Systems
+
+**Authors:** David Li; Honggang Wang
+
+**ID:** 152808\-\-3 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+**Repeated source row:** 152808
+
+[Paper](<https://openreview.net/forum?id=QErFsIRxnJ>) | [PDF](<https://openreview.net/pdf?id=QErFsIRxnJ>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152808>)
+
+We study online identification of linear\-in\-parameter dynamical systems whose true parameters drift over time\. Measuring non\-stationarity through the path variation $V\_T = \\sum\_\{t=1\}^\{T\-1\}\\\|\\theta\_\{t\+1\}^\\star \- \\theta\_t^\\star\\\|$, we make two contributions\. First, we give a clean blockwise dynamic\-regret analysis for continuous projected online gradient descent, yielding $E\[R\_T\] = O\(T/\\sqrt\{\\tilde W\} \+ \\tilde W V\_T\)$ and hence the oracle\-tuned rate $O\(T^\{2/3\}V\_T^\{1/3\}\)$ \. Second, we propose a residual\-based adaptive step size and prove an oracle\-proxy comparison theorem: when the residual proxy tracks the local prediction\-error signal with lower\-order overhead, the adaptive algorithm inherits the oracle scaling\. Experiments on synthetic systems and real turbofan\-engine degradation data \(NASA C\-MAPSS\) support the matched\-regime slope prediction on synthetic data, diagnose the failure regime when proxy overhead dominates, and show a clear unsupervised health\-indicator trend in the residual proxy on FD001\. A separate fast\-rate guarantee under persistent excitation and a tube MPC integration are deferred to the appendix\.
+
+## OopsWorld\! Operation\-Grounded Seamless World Generation
+
+**Authors:** Dongping Chen; Tianyi Zhou
+
+**ID:** 152375\-\-3 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+**Repeated source row:** 152375
+
+[Paper](<https://openreview.net/forum?id=TYAayuMqM6>) | [PDF](<https://openreview.net/pdf?id=TYAayuMqM6>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152375>)
+
+We study seamless world generation, where a model must update a persistent visual world according to online user operations rather than full next\-scene descriptions\. To make this task well\-defined, we introduce an operation\-centric taxonomy that represents each scene with a global\-local schema and each boundary with a typed operator program specifying change and preservation\. This taxonomy enables SeamlessWorld, a synthetic data and benchmark pipeline with 8 operation families, 23 atomic operators, dual prompt surfaces, and schema\-derived evaluation probes\. We then develop OopsWorld, a causal video generator that learns from SeamlessWorld using operation\-conditioned decoupled distillation: the student is driven by operation prompts and visual history, while scene\-conditioned teachers provide target\-state supervision\. We further apply dynamics curriculum learning to progressively compose simple edits into high\-dynamic world transitions\. OopsWorld substantially improves dynamic responsiveness and long\-video quality, achieving 91\.67 VBench Dynamics and 80\.42 Long\-Quality with 100K samples\. A systematic explicit\-\-implicit study further reveals a persistent operation\-prompting gap in current systems, especially for preserving visual anchors, calling for operation\-driven world models beyond next\-scene prompt switching\.
+
+## Two is better than one: designing heterogeneous scales in binary rating systems
+
+**Authors:** Liren Shan; Alec Sun; Jingyan Wang
+
+**ID:** 148218\-\-2 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+**Repeated source row:** 148218
+
+[Paper](<https://openreview.net/forum?id=zTVNhgFzsK>) | [PDF](<https://openreview.net/pdf?id=zTVNhgFzsK>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148218>)
+
+Online platforms often struggle with inflated, uninformative user ratings\. This issue can be mitigated by better design of the data collection mechanism, for example through changing the phrasing of user questions\. Previous work optimizes a single rating scale to best distinguish the inherent qualities of items under binary feedback\. In this paper, we demonstrate the power of utilizing different rating scales for different users\. First, we show that a designer can always split a single rating scale into two to improve item rankings\. Next, we formally characterize the optimal design of multiple scales as a series of 0\-1 step functions whose threshold values are evenly spaced\. Finally, we consider an adaptive model where subsequent rating scales can depend on the responses from previous users and show that adaptivity leads to even greater distinguishing power\. All in all, our theoretical results show that using heterogeneous scales significantly improves item rankings on platforms\.
+
+## Limits and Potential of Score\-Based Data Valuation: Redundancy, Complementarity, and Non\-Monotonicity
+
+**Authors:** Kumar Kshitij Patel; Sai Praneeth Karimireddy; Raul Fernandez; Manolis Zampetakis
+
+**ID:** 149315 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=r5I5zWXtOq>) | [PDF](<https://openreview.net/pdf?id=r5I5zWXtOq>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149315>)
+
+Score\-based valuation methods, such as Shapley values and Leave\-one\-out \(LOO\), are widely used to assign value to data in modern machine learning pipelines, including for tasks such as attribution, selection, and pricing, yet it remains unclear when these scalar scores reliably guide downstream decisions\. We show that their success is governed by three structural properties of the learning problem: substitutability, complementarity, and non\-monotonicity\. Substitutability \(redundancy\) can collapse pointwise credit, causing Shapley and LOO to fail even under monotone submodular valuations; bounded curvature limits this collapse and helps recover constant\-factor approximation\. Complementarity can break common score\-based rules and greedy\-style adaptive selection, though these effects diminish with sufficient coverage\. Non\-monotonicity implies that all non\-adaptive methods, including score\-based approaches, can fail, establishing a separation from adaptive algorithms\. Our theoretical results, supported by empirical evidence, provide a structural view of data valuation and motivate a simple practical pipeline: deduplicate to reduce redundancy, ensure coverage to suppress complementarity, and then choose between score\-based or adaptive methods based on non\-monotonic effects\.
+
+## Are Multimodal Benchmarks Really Useful? Item\-Level Multimodal Benchmark Diagnosis via Structure\-Response Co\-Calibration
+
+**Authors:** Shiqi Zhang; Weixin Zeng; Ziheng Zhang; Jiuyang Tang; Xiang Zhao
+
+**ID:** 139183 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=fzADHlYut6>) | [PDF](<https://openreview.net/pdf?id=fzADHlYut6>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139183>)
+
+Multimodal benchmarks are central to evaluating whether models can reason over information from multiple modalities\. However, existing literature has revealed that some benchmarks may contain shortcut items that can be answered from a single modality or from answer\-option regularities alone, thus failing to reflecting models' true cross\-modal inference ability\. Existing methods for assessing benchmarks typically rely either on intrinsic item structure or extrinsic model response behavior, which are not adequate for a comprehensive diagnosis\.  To fill in this gap, we propose SRCoD, a structure\-response co\-calibrated diagnosis framework for item\-level diagnosis of modality dependence in multimodal benchmarks\. SRCoD estimates sample\-wise multimodal information structure from benchmark content and target answers, and uses this signal as a soft structural anchor for modality\-conditioned item response modeling\. The learned model produces a calibrated item\-level diagnostic profile that reflects how strongly an item depends on different forms of modality evidence, enabling fine\-grained benchmark analysis beyond aggregate accuracy\.  SRCoD also provides interpretable attribution of the diagnosis results\. Extensive experiments on two complementary protocols, i\.e\., benchmark\-refinement oriented validation and human\-labeled item validation, demonstrate that SRCoD outperforms state\-of\-the\-art benchmark diagnosis methods\. Our code and data are available at https://anonymous\.4open\.science/r/SRCoD\-61B0\.
+
+## VeriContest: A Competitive\-Programming Benchmark for Verifiable Code Generation
+
+**Authors:** Zichen Xie; Mrigank Pawagi; Yuxin Liu; Aaditi Rai; Lize Shao; John Berberian; Sicong Che; Wenxi Wang
+
+**ID:** 139699 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=9vAOEu7dQE>) | [PDF](<https://openreview.net/pdf?id=9vAOEu7dQE>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139699>)
+
+Large language models can now generate useful code from natural language, but their outputs still come without correctness guarantees\. Verifiable code generation offers a path beyond testing by requiring models to produce not only executable code, but also formal specifications and machine\-checkable proofs\. Progress in this direction, however, is difficult to measure: existing benchmarks are often small, focus on only one part of the pipeline, lack ground\-truth proofs or rigorous specification validation, or target verification settings far from mainstream software development\. We present VeriContest, a benchmark of 946 competitive\-programming problems from LeetCode and Codeforces for verifiable code generation in Rust with Verus\. Each problem pairs a natural language description with expert\-validated formal specifications, judge\-accepted Rust code, Verus\-checked proofs, and positive and negative test suites\. VeriContest is constructed through a three\-phase pipeline that scales from manually verified seed problems to semi\-automated expansion with human\-in\-the\-loop review\. To further strengthen benchmark quality, we use testing as an additional quality\-assurance layer for validating postcondition completeness\. VeriContest supports both isolated and compositional evaluation of specification generation, code generation, proof generation, and end\-to\-end verified program synthesis\. Evaluating ten state\-of\-the\-art models reveals a sharp gap between ordinary coding ability and verifiable code generation: the strongest model reaches 92\.18% on natural\-language\-to\-code generation, but only 48\.31% on specification generation, 13\.95% on proof generation, and 5\.29% end\-to\-end\. These results identify proof and specification generation as the central bottlenecks for current models and establish VeriContest as a rigorous platform for measuring and training future systems that generate code with machine\-checkable correctness\.
+
+## Smart Picks in the Dark: Towards Efficient RLVR for Reasoning via Tracing Metacognitive Pivots
+
+**Authors:** Guangcheng Zhu; Shenzhi Yang; Haobo Wang; Xing Zheng; Yingfan Ma; Xuening Feng; Zhongqi Chen; Bowen Song; Weiqiang Wang; Gang Chen
+
+**ID:** 150817\-\-2 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
+
+**Repeated source row:** 150817
+
+[Paper](<https://openreview.net/forum?id=f6NxXBLsMW>) | [PDF](<https://openreview.net/pdf?id=f6NxXBLsMW>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150817>)
+
+_Abstract unavailable from the accessible public sources._
+
+## LoRIF: Low\-Rank Influence Functions for Scalable Training Data Attribution
+
+**Authors:** Shuangqi Li; Hieu Minh Le; Jingyi Xu; Mathieu Salzmann
+
+**ID:** 149043\-\-2 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
+
+**Repeated source row:** 149043
+
+[Paper](<https://openreview.net/forum?id=tIJbQhZCF4>) | [PDF](<https://openreview.net/pdf?id=tIJbQhZCF4>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149043>)
+
+_Abstract unavailable from the accessible public sources._
+
+## Efficient Benchmarking Is Just Feature Selection and Multiple Regression
+
+**Authors:** Sam Bowyer; Acyr Locatelli; Kris Cao
+
+**ID:** 139637\-\-2 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+**Repeated source row:** 139637
+
+[Paper](<https://openreview.net/forum?id=E0CrL9qFym>) | [PDF](<https://openreview.net/pdf?id=E0CrL9qFym>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139637>)
+
+Efficient benchmarking techniques aim to lower the computational cost of evaluating LLMs by predicting full benchmark scores using only a subset of a benchmark's questions\. By reframing this problem as an instance of multiple regression with feature selection, we find that existing efficient benchmarking methods can be greatly improved by simply using kernel ridge regression at the prediction stage\. Additionally, using an information\-theoretic feature\-selection algorithm called minimum redundancy maximum relevance \(mRMR\), we can further improve upon these methods by selecting question subsets that will be maximally useful for prediction\. Except in very data\-poor settings, these approaches consistently achieve smaller prediction errors \(in both MAE and RMSE\), and greater ranking correlation between predicted and true scores \(in both Spearman $\\rho$ and Kendall $\\tau$\) across a range of benchmarks using both binary and continuous metrics\. Furthermore, mRMR subsampling is much faster than competitor methods \(which often involve fitting probabilistic models or running clustering algorithms\), and is more likely to select the same questions under different random seeds or training data splits\.
+
+## Generative Active Learning via Bayesian Acquisition for Improving the Efficiency of Synthetic Data
+
+**Authors:** Jeongjun Lee; Gyeonghoon Ko; Juho Lee
+
+**ID:** 149816\-\-2 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
+
+**Repeated source row:** 149816
+
+[Paper](<https://openreview.net/forum?id=n94j33Dy4F>) | [PDF](<https://openreview.net/pdf?id=n94j33Dy4F>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149816>)
+
+_Abstract unavailable from the accessible public sources._
+
+## Self\-Consuming Generative Models with Co\-Evolving Human Preferences
+
+**Authors:** Xiukun Wei; Tian Xie; Ding Zhu; Xueru Zhang
+
+**ID:** 148960\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+**Repeated source row:** 148960
+
+[Paper](<https://openreview.net/forum?id=tsXMIKjzrO>) | [PDF](<https://openreview.net/pdf?id=tsXMIKjzrO>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148960>)
+
+Generative models are increasingly trained in self\-consuming iterative loops, where users curate preferred samples from model\-generated candidates and the curated samples are used to train future generations of the model\. Prior work has largely assumed fixed user preferences, but in practice exposure to model outputs gradually reshapes what users perceive as desirable, creating a feedback loop in which model distributions and user preferences co\-evolve\. We take a first step toward understanding the long\-term behavior of such coupled dynamics\. We show that when training relies entirely on user\-curated synthetic data, iterative curation amplifies initial biases and drives the system toward one of multiple \*singleton\* equilibria in which the instance holding an initial advantage eventually dominates\.  In contrast, injecting reference data into training at a sufficiently large rate fundamentally changes the dynamics and yields a \*unique globally attracting\* equilibrium\. Building on this insight, we study how reference\-data injection can be used to control long\-term outcomes, and propose an efficient algorithm that jointly selects a reference distribution and its mixing weight to steer the coupled system toward equilibria that preserve desired attributes while minimizing data collection costs\.
+
+## Does the Question Really Matter? Training\-Free Data Selection for Vision\-Language SFT
+
+**Authors:** Peng Sun; Yi Yang; Huawen Shen; Yi Ban; Tianfan Fu; Yanbo Wang; Yuqiang Li
+
+**ID:** 150111\-\-2 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+**Repeated source row:** 150111
+
+[Paper](<https://openreview.net/forum?id=kcBOe422p2>) | [PDF](<https://openreview.net/pdf?id=kcBOe422p2>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150111>)
+
+Visual instruction tuning is crucial for improving vision\-language large models \(VLLMs\)\. However, many samples can be solved via linguistic patterns or common\-sense shortcuts, without genuine cross\-modal reasoning, limiting the effectiveness of multimodal learning\. Prior data selection methods often rely on costly proxy model training and focus on difficulty or diversity, failing to capture a sample’s true contribution to vision\-language joint reasoning\. In this paper, we propose CVS, a training\-free data selection method based on the insight that, for high\-quality multimodal samples, introducing the question should substantially alter the model’s assessment of answer validity given an image\. CVS leverages a frozen VLLM as an evaluator and measures the discrepancy in answer validity with and without conditioning on the question, enabling the identification of samples that require vision\-language joint reasoning while filtering semantic\-conflict noise\. Experiments on Vision\-Flan and The Cauldron show that CVS achieves solid performance across datasets\. On Vision\-Flan, CVS outperforms full\-data training by 3\.5\\% and 4\.8\\% using only 10\\% and 15\\% of the data, respectively, and remains robust on the highly heterogeneous Cauldron dataset\. Moreover, CVS reduces computational cost by 17\.3\\% and 44\.4\\% compared to COINCIDE and XMAS\. The code is anonymously available at https://anonymous\.4open\.science/r/CVS\-ABAA\.
+
+## Are Easier or Harder Examples Better? Rethinking Data Selection for Reward Models and Preference Optimization
+
+**Authors:** Kevin Christian Wibisono; Aya Ismail; Pedro O\. Pinheiro; Yixin Wang; Kyunghyun Cho; Nataša Tagasovska; Rajesh Ranganath
+
+**ID:** 151585\-\-2 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+**Repeated source row:** 151585
+
+[Paper](<https://openreview.net/forum?id=ZVpkdTlkIZ>) | [PDF](<https://openreview.net/pdf?id=ZVpkdTlkIZ>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151585>)
+
+Despite being crucial for effective LLM alignment, data selection remains understudied\. Prior work on reward model \(RM\) training and policy optimization \(e\.g\., DPO, GRPO\) identifies \*example difficulty\*, the reward gap between chosen and rejected responses, as a key factor, but findings conflict: some favor easier examples with larger gaps, others harder ones\. To isolate difficulty from confounders, we \*assume access to a reference RM\* and systematically study data selection across RM, DPO, and GRPO training\. When difficulty is measured via the reference RM, \*easier pairs consistently outperform harder ones\*, especially for smaller base models: using only the top 20% easiest examples often matches or exceeds full\-dataset performance while cutting post\-training costs $5\\times$\. However, \*this advantage hinges on reward estimation quality\*\. As the difficulty signal is corrupted by noise or estimated with a weak proxy RM, the easy\-example advantage shrinks and can reverse\. A signal\-to\-noise analysis explains why: larger\-gap examples yield more reliable gradient directions, an advantage that weakens with noisier reward estimates\. These results suggest that \*conflicting findings in prior work partly stem from differences in reward reliability and signal mismatch\*\.
+
+## ViCoR: Estimating Visual Necessity via Counterfactual Residuals for Multimodal Medical Data Selection
+
+**Authors:** Haotian Gan; Yudong Li; Xintian Li; Jiarui Han; Weidong Tang
+
+**ID:** 154516\-\-2 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+**Repeated source row:** 154516
+
+[Paper](<https://openreview.net/forum?id=D0DvVACDW0>) | [PDF](<https://openreview.net/pdf?id=D0DvVACDW0>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154516>)
+
+Medical vision\-language models often exhibit hidden stratification, where high overall performance masks failures on subtle visual findings and overlapping clinical conditions\. We trace this failure mode to modality imbalance during fine\-tuning, where strong linguistic priors can suppress visually grounded learning and induce plausible but weakly grounded rationales\. Existing data selection methods usually score image\-text pairs as holistic units, without separating visually necessary samples from shortcut\-solvable ones\. To address this problem, we propose ViCoR, a counterfactual\-residual\-based data selection method for Med\-VLM fine\-tuning\. ViCoR estimates visual necessity through image\-dependent optimization residuals, calibrates the resulting scores with medical supervision compatibility, and constructs a diversity\-aware fine\-tuning subset\. Across two backbones, four external generalization benchmarks, and one multi\-disease robustness benchmark, ViCoR\-selected 20\\% subsets achieve the strongest average performance compared with full\-data fine\-tuning and selection baselines\. Gradient\-level analysis and perturbation audits further show that ViCoR enriches image\-dependent training signals and strengthens image\-level and evidence\-region dependence\. The code will be released to support future research\.
+
+## X\-AVDD: Cross\-Attentive Audio\-Visual Dataset Distillation
+
+**Authors:** Saumyaranjan Mohanty; Aravind Reddy; Konda Reddy Mopuri
+
+**ID:** 153215\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+**Repeated source row:** 153215
+
+[Paper](<https://openreview.net/forum?id=MzMWvUkNZw>) | [PDF](<https://openreview.net/pdf?id=MzMWvUkNZw>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153215>)
+
+\*Audio\-visual dataset distillation\* aims to synthesize a small dataset from a large paired audio\-visual dataset, while nearly preserving the training utility for neural networks\. Existing approaches such as DM and AVDD face two critical limitations: 1\) they are memory\-intensive, making them difficult to scale to complex architectures and higher samples\-per\-class \(SPC\) settings, and 2\) they often fail to preserve strong cross\-modal semantic correspondence\. To tackle these issues, we propose \*\*X\-AVDD\*\*, a \*\*cross\-attention\-based\*\* distillation method that explicitly captures inter\-modal relationships during synthesis\. By decoupling cross\-modal alignment from joint optimization, X\-AVDD is substantially more memory\-efficient, reducing end\-to\-end synthesis cost by $\\sim 8\\times$ GPU\-hours, while producing highly aligned synthetic data\. Empirically, X\-AVDD significantly outperforms other audio\-visual distillation methods\. On VGGSound, an audio\-visual dataset of short YouTube clips, X\-AVDD improves top\-1 test accuracy from $8\.2$% → $24\.0$% at SPC=$10$ and $9\.8$% → $26\.5$% at SPC=$20$\. Furthermore, X\-AVDD improves cross\-architecture generalization \(e\.g\., $25\.5$% → $35\.3$% for a ViT target on AVE dataset at SPC=$50$\) and successfully scales to complex architectures such as AudioCLIP, achieving $62\.3$% accuracy using only $5\.65$% of the full dataset, against the full dataset accuracy of $72\.4$\\% while completing in $9\\times$ lower training time compared to the full dataset\.
+
+## Subdata Selection: A Unified Framework for Optimal Selection and Statistical Efficiency Assessment
+
+**Authors:** Min Yang; Wei Zheng; John Stufken; Ming\-Chung Chang; Ting Tian; Xueqin Wang
+
+**ID:** 149020 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=tRze0atkNs>) | [PDF](<https://openreview.net/pdf?id=tRze0atkNs>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149020>)
+
+When labeling is expensive or datasets exceed computing capacity, selecting an informative subset of data is a practical necessity\. Identifying such subdata is a classical NP\-hard problem due to its inherent discreteness\. While many subdata selection methods have been proposed for parametric models, two fundamental challenges remain: first, how can we accurately assess the statistical efficiency of selected subdata relative to the theoretical optimum? Second, given $N$ data points and a subdata size $n$, which $n$ points should be selected to achieve high statistical efficiency? We address both challenges within a unified framework\. We develop a new information\-based subdata selection methodology grounded in optimal approximate design theory, yielding subdata that approaches the theoretical optimum\. Our algorithm is general, accommodates arbitrary $N$ and $n$, supports multiple optimality criteria, and is accompanied by a convergence proof\. Crucially, our framework provides, for the first time, tight lower and upper bounds on the statistical efficiency of subdata selected by any method, enabling accurate and rigorous benchmarking across the literature\. This benchmarking capability reveals the true performance landscape of existing methods and shows that many of them have been operating substantially below their theoretical potential\. The subdata produced by our methodology is highly efficient and outperforms all existing methods\.
+
+## Can We Trust Item Response Theory for AI Evaluation?
+
+**Authors:** Han Jiang; Sunbeom Kwon; Jinwen Luo; Ziang Xiao; Susu Zhang
+
+**ID:** 139287\-\-2 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+**Repeated source row:** 139287
+
+[Paper](<https://openreview.net/forum?id=ZKNcOHJwjy>) | [PDF](<https://openreview.net/pdf?id=ZKNcOHJwjy>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139287>)
+
+AI benchmarks increasingly leverage item\-level statistical models, particularly item response theory \(IRT\), to estimate capabilities, rank systems, select informative examples, and diagnose benchmark quality\. However, AI benchmark data often departs from the data regimes encountered in human testing, for which standard IRT estimation tools were originally developed: these benchmarks typically involve fewer evaluated models, far more items, and capability distributions that may be skewed, clustered, or multimodal\. We examine how these regime mismatches challenge the reliability of IRT modeling for AI evaluation\. Using item parameters and capability distributions derived from six widely used LLM benchmarks, we simulate response matrices under three common IRT models and compare four estimators used in recent benchmark studies: marginal maximum likelihood, Markov chain Monte Carlo, variational inference, and a neural pseudo\-Siamese estimator\. Across 18,000 simulation runs, we systematically evaluate computational feasibility, scalability, and the reliability of IRT inferences about model rankings, predicted performance, and item characteristics\. Results show that classical estimators can become computationally infeasible for large benchmarks, whereas scalable estimators can produce unreliable item\-level and ranking inferences with small or non\-normally distributed model sets\. This study identifies when latent trait models reliably support or risk distorting AI benchmarking claims, and what sample sizes and diagnostics are needed for trustworthy use\.
+
+## EcoGEO: Trajectory\-Aware Evidence Ecosystems for Web\-Enabled LLM Search Agents
+
+**Authors:** Hengwei Ye; Jiasheng Mao; Zhenhan Guan; Zheng Tian
+
+**ID:** 153813\-\-3 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+**Repeated source row:** 153813
+
+[Paper](<https://openreview.net/forum?id=IWhjevkPn4>) | [PDF](<https://openreview.net/pdf?id=IWhjevkPn4>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153813>)
+
+Web\-enabled LLM agents are changing how online information influences search outcomes\. Existing Generative Engine Optimization \(GEO\) studies mainly focus on individual webpages\. However, agentic web search is not a single\-document setting: an agent may issue queries, crawl pages, follow links, reformulate searches, and synthesize evidence across multiple browsing steps\. Influence therefore depends not only on page content, but also on how pages are organized, connected, and encountered along the agent's browsing trajectory\. We study this shift through Ecosystem Generative Engine Optimization \(EcoGEO\), which treats GEO as an environment\-level influence problem for web\-enabled LLM agents\. To instantiate this perspective, we propose TRACE, a Trajectory\-Aware Coordinated Evidence Ecosystem\. Given a recommendation query and a fictional target product, our method builds a controlled evidence environment that coordinates an agent\-facing navigation entry page with heterogeneous support pages\. These pages use shared terminology, internal links, and consistent product attributes to introduce, verify, and reinforce the target product\. We evaluate our method on OPR\-Bench, a benchmark for open\-ended product recommendation\. Experiments show that it consistently outperforms page\-level GEO baselines in final target recommendation\. Trajectory\-level metrics further show increased initial target\-result crawls, target\-specific follow\-up searches, and internal\-link crawls, suggesting that the gains come from shaping the agent's evidence\-acquisition process rather than merely adding more target\-related content\. Overall, our findings support an ecosystem research paradigm for GEO, where web\-enabled LLM agents are studied in relation to the broader evidence environments that guide search, browsing, and answer synthesis\.
+
+## Temporal Prototype Alignment for Frozen\-Feature Dataset Distillation
+
+**Authors:** Rui Ding; Jing Hu; Mei Chen; Xi Wu; Hualin zhou; Fan Wu; Kehua Guo; Tao Gu
+
+**ID:** 149275 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=rX3bv5k1ck>) | [PDF](<https://openreview.net/pdf?id=rX3bv5k1ck>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149275>)
+
+Dataset distillation condenses large\-scale training sets into compact synthetic data\. Recent frozen\-feature distillation methods, such as Linear Gradient Matching, make ImageNet\-scale synthesis feasible by matching gradients in pretrained representation spaces, but their reliance on exhaustive spatial view ensembles incurs memory and I/O costs that grow linearly with the number of augmentations\. We propose Temporal Prototype Alignment \(TPA\), an online temporal gradient estimation framework for frozen\-feature dataset distillation\. TPA replaces spatial Monte Carlo gradient averaging with a temporal prototype estimator that accumulates stable semantic signals across optimization steps\. An adaptive momentum gate modulates the estimator according to local signal reliability, reducing gradient variance while keeping memory complexity independent of the number of spatial views\. To improve cross\-architecture transfer, we introduce a consensus alignment objective that distills shared structure from multiple pretrained teachers while mitigating model\-specific artifacts\. Across ImageNet\-scale and fine\-grained benchmarks, TPA substantially reduces memory overhead, enables distillation on consumer\-grade GPUs, and improves transfer to heterogeneous CNN and Vision Transformer backbones\. These results suggest that online temporal estimation provides an efficient alternative to spatial ensembling for frozen\-feature dataset distillation\.
+
+## BLADE: Scalable Bi\-level Adaptive Data Selection for LLM Training
+
+**Authors:** Jiaxing Wang; Deping Xiang; Jin Xu; Zirui Liu; Zicheng Zhang; Guoqiang Gong; Jun Fang; Chao Liu; Pengzhang Liu; Tongxuan Liu; Ke Zhang; Qixia Jiang
+
+**ID:** 152234\-\-2 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
+
+**Repeated source row:** 152234
+
+[Paper](<https://openreview.net/forum?id=UZM2vsjS66>) | [PDF](<https://openreview.net/pdf?id=UZM2vsjS66>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152234>)
+
+_Abstract unavailable from the accessible public sources._
+
+## Real In, Real Out: What If We Only Use Real Data for Scene Text Editing?
+
+**Authors:** Xingsong Ye; Yongkun Du; Jiaxin Zhang; Chong Sun; Zhineng Chen
+
+**ID:** 153296\-\-2 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+**Repeated source row:** 153296
+
+[Paper](<https://openreview.net/forum?id=MJEQhPRV6b>) | [PDF](<https://openreview.net/pdf?id=MJEQhPRV6b>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153296>)
+
+Aiming to modify textual content while preserving the original style, Scene Text Editing \(STE\) has significant practical value in many applications\. STE typically requires paired images before and after editing for training\. However, recent approaches rely heavily on synthetic paired data and complex disentanglement strategies\. They struggle to faithfully capture the diversify and complexity of natural scenes, often producing artifacts or hallucinations\. In this work, we challenge the common practice and investigate whether STE can be driven by turning each real sample into its own paired supervision\. Concretely, we explore multiple ways to disrupt the original image \(e\.g\., Crop, Shuffle, Mask\) to construct self\-paired training data, and build a strong baseline \(TextRIRO\) upon a conditional diffusion architecture\. Our experiments show that combining character\-column shuffling with image cropping \(Shuffle&amp;Crop\) effectively destroys text semantics while preserving key style cues, enabling the model to learn editing behaviors directly from real text images\. With this concise yet real\-oriented design, TextRIRO achieves promising performance in both accuracy and visual realism across real\-world benchmarks, substantially mitigating the synthetic\-to\-real domain gap\. Furthermore, we leverage TextRIRO to build TextRIRO\-3M, a large\-scale realistic dataset for long\-text recognition by concatenating edited and original images\. Experimental results show that training recognition models with TextRIRO\-3M significantly improves recognition accuracy, demonstrating that TextRIRO provides highly useful training resources for downstream tasks\. Overall, TextRIRO lifts STE to realistic, reliable, and widely applicable new levels\. Code is provided in the supplement, and data will be released upon acceptance\.
+
+## SWE\-Git\-Bench: A Worktree\-Level Benchmark for Real Merge Conflict Resolution
+
+**Authors:** Wei Zhang; Jian Yang; jiajun wu; Zidan Tang; Siwei Wu
+
+**ID:** 139812 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=37pMYoL9Iz>) | [PDF](<https://openreview.net/pdf?id=37pMYoL9Iz>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139812>)
+
+_Abstract unavailable from the accessible public sources._
+
+## \\$OneMillion\-Bench: How Far are Language Agents from Human Experts?
+
+**Authors:** Yang Liu; Jiaqi Li; Jun Bai; Qianyu Yang; Xiaobo Hu; Tao Peng; Zaiyuan Wang; Jiayun Dong; Chun Zhang; Zixia Jia; Kaiyuan Chen; Yanglihong Xiao; Lingyue Yin; Tiliang Duan; Ge Zhang; Gang Yao; Hao Chen; Jianpeng Jiao; Zilong Zheng
+
+**ID:** 139822 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=2gAr3pMVHH>) | [PDF](<https://openreview.net/pdf?id=2gAr3pMVHH>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139822>)
+
+_Abstract unavailable from the accessible public sources._
+
+## InfCLIP: Unified Data Valuation for CLIP Pretraining via Influence\-Inspired Scoring
+
+**Authors:** Nohyun Ki; Hye Won Chung
+
+**ID:** 150869 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=elAMBRgvsw>) | [PDF](<https://openreview.net/pdf?id=elAMBRgvsw>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150869>)
+
+Effective data valuation is essential for machine learning, especially for CLIP pretraining, where models are trained on massive and inherently noisy image\-text datasets\. Existing CLIP data selection methods often combine heuristic signals such as alignment, target similarity, and diversity, but lack a unified principle for estimating sample contribution\. This can lead to inconsistent performance across data regimes and obscures how each sample contributes to downstream performance\. In this work, we propose InfCLIP, a principled influence\-based approach for data selection in CLIP pretraining\. InfCLIP estimates the contribution of each training sample to a target task by leveraging feature representations and temperature\-rescaled softmax distributions, enabling efficient computation without retraining or access to model internals\. This formulation provides a unified view of alignment, informativeness, uniqueness, and target relevance within a single framework\. Empirically, InfCLIP consistently outperforms existing data selection methods across a wide range of benchmarks, including zero\-shot evaluation on ImageNet and distribution\-shifted datasets\. We also show that Self\-InfCLIP enables efficient training\-set analysis, including noise detection and memorization\-aware data assessment, without additional retraining\.
+
