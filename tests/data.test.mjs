@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import { mkdtemp, mkdir, readFile, rm, writeFile } from 'node:fs/promises';
 import os from 'node:os';
 import path from 'node:path';
+import { gunzipSync } from 'node:zlib';
 import { fileURLToPath } from 'node:url';
 import { execFileSync } from 'node:child_process';
 import {
@@ -342,5 +343,8 @@ test('generated official snapshot has complete contracts and honest availability
   assert.equal(manifest.pdfLinksVerified, 0);
   assert.ok(manifest.uniqueOfficialEventIds <= manifest.totalPapers);
   assert.ok(manifest.sources.every((source) => /^[a-f0-9]{64}$/.test(source.sha256)));
+  const compressed = await readFile(path.join(root, 'public/data/papers.json.gz'));
+  assert.deepEqual(gunzipSync(compressed), await readFile(path.join(root, 'public/data/papers.json')));
+  assert.ok(compressed.length < manifest.artifacts['papers.json'].bytes / 2);
   assert.ok(manifest.sourceUrls.includes(SOURCE_URLS.listing));
 });

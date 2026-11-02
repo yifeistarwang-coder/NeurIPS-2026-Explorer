@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import { randomUUID } from 'node:crypto';
 import { mkdir, readFile, rm, writeFile } from 'node:fs/promises';
 import path from 'node:path';
+import { gzipSync } from 'node:zlib';
 import {
   EXPECTED_COUNT, SOURCE_URLS, atomicWrite, derivePdfUrl, fetchWithRetry, httpUrl,
   isMain, jsonText, markdownText, markdownUrl, papersCsv, readJson, replaceDirectory, sha256,
@@ -263,7 +264,9 @@ export async function publishDataset({ papers, topics, manifest }, outputDir, op
     artifacts[file] = { bytes: bytes.length, sha256: sha256(bytes) };
   }
   try {
-    await artifact('papers.json', jsonText({ papers }));
+    const paperJson = jsonText({ papers });
+    await artifact('papers.json', paperJson);
+    await artifact('papers.json.gz', gzipSync(paperJson, { level: 9 }));
     await artifact('topics.json', jsonText(topics));
     await artifact('papers.csv', papersCsv(papers));
     const index = ['# NeurIPS 2026 topic-organized abstracts', '', `Poster records: ${papers.length}; unique official event IDs: ${manifest.uniqueOfficialEventIds}.`, '', 'Repeated source rows are retained to reproduce the supplied snapshot. Missing abstracts are not synthesized. Inferred topics and unverified derived PDF links are labeled per record.', ''];

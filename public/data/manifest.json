@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-02T05:43:58.850Z",
+  "updatedAt": "2026-11-02T05:54:43.633Z",
   "expectedCount": 9152,
   "totalPapers": 9152,
   "abstractsAvailable": 6310,
@@ -80,6 +80,10 @@
     "papers.json": {
       "bytes": 18398003,
       "sha256": "cd2ab9543ab39b6584395c3e5606d341f83e68d3c1c641073468293d7cde68b3"
+    },
+    "papers.json.gz": {
+      "bytes": 4630269,
+      "sha256": "7293a2456aa0c52889f353490aa476e34492894b7d78f6bf870c3bf2bcc4176e"
     },
     "topics.json": {
       "bytes": 14002,

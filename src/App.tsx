@@ -128,8 +128,15 @@ export default function App() {
       try {
         const base = import.meta.env.BASE_URL;
         const [papers, topics, manifest] = await Promise.all(['papers.json', 'topics.json', 'manifest.json'].map(async name => {
-          const response = await fetch(`${base}data/${name}`, { signal: controller.signal });
-          if (!response.ok) throw new Error(`${name}: HTTP ${response.status}`);
+          const compressed = name === 'papers.json' && typeof DecompressionStream !== 'undefined';
+          const file = compressed ? `${name}.gz` : name;
+          const response = await fetch(`${base}data/${file}`, { signal: controller.signal });
+          if (!response.ok) throw new Error(`${file}: HTTP ${response.status}`);
+          // Fetch already decodes bodies when the server sends Content-Encoding.
+          if (compressed && !response.headers.get('content-encoding')) {
+            if (!response.body) throw new Error('Compressed dataset has no response body');
+            return new Response(response.body.pipeThrough(new DecompressionStream('gzip'))).json();
+          }
           return response.json();
         }));
         if (!Array.isArray(papers.papers) || !Array.isArray(topics.categories) || typeof manifest.totalPapers !== 'number') throw new Error('Invalid dataset format');

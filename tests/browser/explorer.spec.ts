@@ -103,12 +103,28 @@ test('source-row toggle and original-abstract filter use correct counts', async 
 });
 
 test('failed data fetch has retry recovery', async ({ page }) => {
-  await page.route('**/data/papers.json', route => route.fulfill({ status: 503, body: 'unavailable' }));
+  const endpoint = /\/data\/papers\.json(?:\.gz)?$/;
+  await page.route(endpoint, route => route.fulfill({ status: 503, body: 'unavailable' }));
   await page.goto('/');
   await expect(page.getByRole('alert')).toContainText('论文数据加载失败');
-  await page.unroute('**/data/papers.json');
+  await page.unroute(endpoint);
   await page.getByRole('button', { name: '重新加载' }).click();
   await expect(page.locator('.paper-row')).toHaveCount(30);
+});
+
+test('static hosts without Content-Encoding load the precompressed data correctly', async ({ page }) => {
+  await page.route('**/data/papers.json.gz', route => route.fulfill({ status: 200, contentType: 'application/gzip', body: readFileSync('public/data/papers.json.gz') }));
+  await ready(page);
+  await expect(page.locator('.result-summary')).toContainText(comma(manifest.uniqueOfficialEventIds));
+});
+
+test('browsers without streaming decompression can load the original JSON', async ({ page }) => {
+  await page.addInitScript(() => { Object.defineProperty(window, 'DecompressionStream', { value: undefined, configurable: true }); });
+  const requested: string[] = [];
+  page.on('request', request => requested.push(request.url()));
+  await ready(page);
+  expect(requested.some(url => url.endsWith('/data/papers.json'))).toBeTruthy();
+  expect(requested.some(url => url.endsWith('/data/papers.json.gz'))).toBeFalsy();
 });
 
 test('narrow and wide layouts do not overflow or overlap paper controls', async ({ page }) => {
