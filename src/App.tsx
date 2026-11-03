@@ -42,6 +42,28 @@ function bibtex(paper: Paper) {
   const key = `neurips2026_${paper.id.replace(/[^a-zA-Z0-9]/g, '')}`;
   return `@inproceedings{${key},\n  title = {${clean(paper.title)}},\n  author = {${paper.authors.map(clean).join(' and ')}},\n  booktitle = {Advances in Neural Information Processing Systems},\n  year = {2026},\n  url = {${clean(paper.paperUrl || paper.posterUrl || REPOSITORY)}}\n}`;
 }
+async function fetchDatasetJson(name: string, base: string, signal: AbortSignal) {
+  const compressed = name === 'papers.json' && typeof DecompressionStream !== 'undefined';
+  const file = compressed ? `${name}.gz` : name;
+  let lastError: unknown;
+  for (let attempt = 0; attempt < 3; attempt++) {
+    try {
+      const response = await fetch(`${base}data/${file}`, { signal });
+      if (!response.ok) throw new Error(`${file}: HTTP ${response.status}`);
+      if (compressed && !response.headers.get('content-encoding')) {
+        if (!response.body) throw new Error('Compressed dataset has no response body');
+        return await new Response(response.body.pipeThrough(new DecompressionStream('gzip'))).json();
+      }
+      return await response.json();
+    } catch (reason) {
+      if (signal.aborted) throw reason;
+      lastError = reason;
+      if (attempt < 2) await new Promise(resolve => window.setTimeout(resolve, 500 * 2 ** attempt));
+    }
+  }
+  throw lastError;
+}
+
 function download(data: string, filename: string, type: string) {
   const url = URL.createObjectURL(new Blob([data], { type }));
   const anchor = document.createElement('a'); anchor.href = url; anchor.download = filename; anchor.click();
@@ -130,18 +152,7 @@ export default function App() {
     const load = async () => {
       try {
         const base = import.meta.env.BASE_URL;
-        const [papers, topics, manifest] = await Promise.all(['papers.json', 'topics.json', 'manifest.json'].map(async name => {
-          const compressed = name === 'papers.json' && typeof DecompressionStream !== 'undefined';
-          const file = compressed ? `${name}.gz` : name;
-          const response = await fetch(`${base}data/${file}`, { signal: controller.signal });
-          if (!response.ok) throw new Error(`${file}: HTTP ${response.status}`);
-          // Fetch already decodes bodies when the server sends Content-Encoding.
-          if (compressed && !response.headers.get('content-encoding')) {
-            if (!response.body) throw new Error('Compressed dataset has no response body');
-            return new Response(response.body.pipeThrough(new DecompressionStream('gzip'))).json();
-          }
-          return response.json();
-        }));
+        const [papers, topics, manifest] = await Promise.all(['papers.json', 'topics.json', 'manifest.json'].map(name => fetchDatasetJson(name, base, controller.signal)));
         if (!Array.isArray(papers.papers) || !Array.isArray(topics.categories) || typeof manifest.totalPapers !== 'number') throw new Error('Invalid dataset format');
         if (!controller.signal.aborted) { setDataset({ papers: papers.papers, categories: topics.categories, manifest }); setLoading(false); }
       } catch (reason) { if (!controller.signal.aborted) { setError(reason instanceof Error ? reason.message : String(reason)); setLoading(false); } }
