@@ -2,29 +2,119 @@
 
 计算机视觉 / 图像分割
 
-61 source poster records. Repeated source event IDs are retained and explicitly marked.
+66 source poster records. Repeated source event IDs are retained and explicitly marked.
 
 Topic labels marked inferred are keyword-based, not official conference labels. PDF links marked derived are unverified. Missing abstracts are left empty in the JSON and CSV exports.
 
-## Beyond Pixel\-wise Supervision: Local Structure Regularization for Semantic Segmentation
+## Unsupervised Domain Adaptation for Semantic Segmentation Based on Instance Spatial Geometry
 
-**Authors:** Wei Huang; Chenying Liu; Yilei Shi; Zhitong Xiong; Xiaoxiang Zhu
+**Authors:** Binglin Hao; Huajun Liu
 
-**ID:** 154585 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+**ID:** 153211 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=CUmOv8veJ1>) | [PDF](<https://openreview.net/pdf?id=CUmOv8veJ1>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154585>)
+[Paper](<https://openreview.net/forum?id=N19qO7k1Lr>) | [PDF](<https://openreview.net/pdf?id=N19qO7k1Lr>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153211>)
 
-Visual foundation models \(VFMs\) provide strong region\-level representations for semantic segmentation, substantially improving high\-level semantic understanding\. However, accurate boundary recovery remains challenging, especially for fine structures and semantic transitions\. A key reason is that conventional pixel\-level supervision largely treats pixels independently and lacks explicit modeling of local structure and neighboring\-pixel relationships\. To address this issue, we propose a Local Structure \(LS\) regularization framework that constrains the second\-order local organization of semantic transition regions\. Unlike existing boundary losses that mainly supervise contour location, distance, overlap, or topology, LS models boundary neighborhoods through a structure\-tensor representation of semantic probability fields\. It decomposes local boundary structure into two complementary cues: Local Structure Magnitude \(LSM\), which measures the strength of anisotropic class transitions, and Local Structure Orientation \(LSO\), which describes their dominant geometric orientation\. LS is model\-agnostic, compatible with different VFM\-backbone\-decoder combinations, and introduces no extra inference cost\. Extensive experiments on four diverse datasets show that LS consistently improves boundary\-sensitive performance while also enhancing overall IoU, demonstrating its effectiveness for boundary\-structure learning in semantic segmentation\.
+Unsupervised domain adaptation\(UDA\) for semantic segmentation transfers knowledge from synthetic to real domains, where geometric cues such as depth are commonly exploited to reduce the domain gap\. However, existing depth\-aware methods fail to explicitly model the domain\-invariant spatial structures among semantic instances, and current self\-training schemes weight pseudo\-labels solely by prediction confidence, ignoring geometric consistency, which limits their reliability under domain shift\. To address these issues, we propose an instance\-wise geometric modeling framework that captures inter\-instance spatial relations, including directional concentration and dominant direction, beyond conventional depth representations\. These geometry\-aware features are further integrated into pseudo\-label weighting to enforce geometric\-semantic consistency during self\-training, leading to more stable and accurate pseudo supervision\. Experiments on standard benchmarks show that our method significantly outperforms state\-of\-the\-art UDA approaches\.
 
-## Pixels to Tokens: Token Space Efficient Active Learning for Low\-Budget Semantic Segmentation
+## Adapting Vision Transformers to Organoid Imaging
 
-**Authors:** Utku Cicek; Mahip Singh; Ziyao Shang; Kimathi Kaai; C Thomas; Pablo Guerrero; Alexander Wong; Sirisha Rambhatla
+**Authors:** Yu Takagi
 
-**ID:** 148535 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+**ID:** 150605 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=xBIIoVBT4V>) | [PDF](<https://openreview.net/pdf?id=xBIIoVBT4V>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148535>)
+[Paper](<https://openreview.net/forum?id=gtWsD9XmKl>) | [PDF](<https://openreview.net/pdf?id=gtWsD9XmKl>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150605>)
 
-Semantic segmentation typically requires dense pixel\-level annotations, creating a prohibitive bottleneck for budget\-constrained applications\. While foundation models and vision transformers \(ViTs\) have redefined visual representations, current active learning \(AL\) strategies for these backbones largely operate at the patch or region level, where annotation requirements remain high\. Extending ViT\-based AL to the pixel\-level, low\-budget regime is uniquely challenging: with as little as one pixel query per image, a method must simultaneously identify the most informative locations and train a reliable decoder head from an extremely sparse signal\. We introduce TEAL \(Token\-space Efficient Active Learning\), the first pixel\-level AL framework built around ViT representations\. TEAL uses a frozen DINOv3 backbone and performs diversity\-based selection directly on its native token lattice, avoiding the artifacts introduced by interpolating token embeddings to dense pixel resolutions\. Our framework applies a two\-level MaxHerding strategy over multi\-layer token descriptors to select representative candidates, followed by margin\-based uncertainty refinement on a finer decoder grid\. Across CamVid, Cityscapes, ADE20K, and Pascal Context, TEAL consistently outperforms previous baselines under extreme label scarcity\. After 10 rounds of 1\-pixel\-per\-image queries, TEAL improves over the strongest baseline by up to $\+\\textbf\{14\.65\}$ mIoU on CamVid and $\+\\textbf\{23\.34\}$ mIoU on Pascal Context, showing that ViT token spaces provide an effective geometry for extremely\-low\-budget active segmentation\.
+Organoids are an increasingly central scientific platform for drug screening, disease modeling, and regenerative medicine\. Because organoid form is closely tied to function, AI\-driven image analysis has drawn intense interest, yet every existing organoid imaging study evaluates representations on a single dataset and no work has quantitatively compared representations across the breadth of public organoid datasets\. We close this gap with \\textbf\{OrgBench\}, a benchmark of 12 vision foundation models \(VFMs\) on 13 public organoid\-imaging datasets spanning detection, segmentation, classification, and temporal outcome prediction\. The benchmark reveals a structured domain gap: task\-family winners shift across the benchmark and parameter count is a poor predictor of transfer\. Building on this, we introduce \\textbf\{OrgFM\}, a small bottleneck adapter that we continually pre\-train on unlabeled organoid images while keeping a general\-purpose vision transformer frozen\. On the OrgBench task\-family aggregates, OrgFM improves over its frozen base backbone\. Layer\- and feature\-level interventions localize the gains to a small set of late\-layer morphology\-sensitive features: the adapter sparsely supplements, rather than replaces, the base representation\. Together, this is the first cross\-task, cross\-backbone study of organoid imaging at scale; the OrgBench/OrgFM pairing establishes that the parameter\-efficient adapter direction is a promising path for organoid representations and clarifies why it works\.
+
+## RiSE: Residual Subspace Expert for Generalizable Text\-Centric Image Forgery Localization
+
+**Authors:** Kahim Wong; Kemou Li; Yiming Chen; Haiwei Wu; Jiantao Zhou
+
+**ID:** 153544 | **Topic source:** official | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=KaKH1k0VkJ>) | [PDF](<https://openreview.net/pdf?id=KaKH1k0VkJ>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153544>)
+
+As AI\-assisted image editing becomes increasingly prevalent, Text\-Centric Image Forgery Localization \(TFL\) is essential for protecting trust in financial and legal records\. However, we observe that existing TFL detectors predominantly rely on Full\-Parameter Fine\-Tuning \(FPFT\) and fail to generalize to unseen forgery types because FPFT can induce low\-rank feature collapse and overfit training artifacts\. Meanwhile, prior detectors capture diverse forgery traces with a single unified representation, making subtle traces entangled and difficult to learn\. To address these challenges, we propose RiSE, a Residual Subspace Expert model that preserves pre\-trained priors by freezing principal SVD components and adapting only the residual subspaces with a ViT\-only segmentor to avoid feature collapse\. RiSE introduces forgery\-aware residual experts, where each expert is trained independently on a training subset with a particular forgery type, and we show that cross\-domain localization performance improves consistently as more experts are added\. At inference, we introduce Latent Perturbation Confidence \(LPC\), which selects the most confident expert by analytically computing the latent\-perturbed output\. LPC enables efficient confidence estimation with a single forward pass, avoiding repeated forward passes on perturbed samples and improving expert selection\. By training on synthetic forgery data, RiSE with 1 expert outperforms state\-of\-the\-art methods on real\-world forgery images by 20\.4\\% while reducing training steps by $10\\times$\. Scaling the number of experts to 9 yields a 35\.8\\% gain\. RiSE also remains effective with DCT feature fusion, even when the majority of the parameters is frozen with RGB\-only pretraining\. The code is in the supplementary material\.
+
+## Learning Semantic Consistency for Open\-Vocabulary Dense Perception
+
+**Authors:** Li Ding; Junjie Wang; Jingjun Yang; Jiaze Wang; Libo Qin; Li Jiang; Zhuotao Tian
+
+**ID:** 149492 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=pk1bEKqimS>) | [PDF](<https://openreview.net/pdf?id=pk1bEKqimS>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149492>)
+
+Open\-vocabulary dense perception requires grounding language\-specified concepts in local regions for recognition, localization, and segmentation beyond closed category sets\. CLIP learns image\-level vision\-language alignment, whereas dense prediction requires spatially precise and semantically reliable local features\. Although recent dense CLIP adaptation methods reduce this gap through region\-level semantic transfer and spatial correlation guidance, maintaining stable local semantics under contextual variation remains challenging\. Specifically, the global contextual modeling in CLIP may introduce undesirable dependencies into local features\. Changes in background, scale, viewpoint, or scene layout may cause identical object regions to yield inconsistent dense representations, leading to unstable correspondences and semantic drift\. Moreover, spatial correlation guidance from visual foundation models captures visual relatedness between patches, but not whether coherent regions correspond to the queried textual concept, leaving concept\-level dense alignment under\-constrained\. To address these issues, we introduce Semantic Spatial Consistency Learning $\\textbf\{\(SSCL\)\}$, an adaptation method with two complementary objectives: 1\) Context\-Invariant Spatiotemporal Consistency \(CISC\) enforces semantic consistency for the same anchor region under varying contexts to mitigate context\-induced feature drift; 2\) Structure\-Guided Semantic Refinement \(SGSR\) leverages spatial affinities from a frozen visual foundation model to refine CLIP text\-patch responses, producing text\-conditioned dense supervision with improved spatial coherence and concept\-level alignment\. Experiments on video instance segmentation, region classification, semantic segmentation, and object detection show consistent gains over the baseline methods, demonstrating the effectiveness and generalization capability of the proposed SSCL\. Our code and models will be made publicly available\.
+
+## FM\-ChangeNet: Learning Change through Pathwise Feature Transport
+
+**Authors:** Roie Kazoom; George Leifman; Genady Beryozkin
+
+**ID:** 149587 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=oz7opgUeZG>) | [PDF](<https://openreview.net/pdf?id=oz7opgUeZG>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149587>)
+
+We present FM\-ChangeNet, a pathwise\-supervised framework for change detection that reformulates bi\-temporal reasoning as continuous transport in feature space rather than static endpoint comparison\. Given encoded pre and post\-temporal representations, we construct intermediate latent states and learn a time\-conditioned velocity field $\\hat\{v\}\_\\theta\(z\_t,t\)$ along the transformation trajectory\. This pathwise formulation constrains the predictor over a continuum of intermediate states, providing a denser and less ambiguous supervision signal than conventional endpoint\-only segmentation and enabling the model to capture temporal evolution explicitly\. The learned velocity field is not only a transport mechanism but also an interpretable representation of change: its magnitude serves as a spatially localized change cue that helps distinguish true structural variation from nuisance effects such as illumination shifts and spatial misalignment\. We develop a hierarchical multi\-scale architecture with cross\-temporal alignment, time\-conditioned coarse\-to\-fine flow decoding, and a unified objective that couples flow supervision, trajectory consistency, spatial regularization, and segmentation loss\. Experiments on remote sensing benchmarks show that the proposed framework produces more structured and robust change representations while achieving state\-of\-the\-art performance\.
+
+## Topology\-Aware Optimal Transport for Source\-Free Test\-Time Adaptation in Anomaly Segmentation
+
+**Authors:** Ali Zia; Usman Ali; Abdelwahed Khamis; Muhammad Umer Ramzan; Abdul Rehman; Wei Xiang
+
+**ID:** 150154 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=kG41FPloKc>) | [PDF](<https://openreview.net/pdf?id=kG41FPloKc>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150154>)
+
+Deep topological data analysis \(TDA\) offers a principled framework for capturing structural invariants such as connectivity and cycles that persist across scales, making it a natural fit for anomaly segmentation \(AS\)\. Unlike threshold\-based binarisation, which produces brittle masks under test\-time distribution shift \(TTDS\), TDA allows anomalies to be characterised as disruptions to global structure rather than local fluctuations\. We introduce TopoOT, a topology\-aware optimal transport \(OT\) framework for source\-free test\-time adaptation in AS\. Our key innovation is Optimal Transport Chaining, which sequentially aligns persistence diagrams \(PDs\) across thresholds and filtrations, yielding geodesic stability scores that identify features consistently preserved across scales\. These stability\-aware pseudo\-labels supervise a lightweight head updated online using only unlabelled target samples, without access to source data or target labels, with OT\-consistency and contrastive objectives, ensuring robust adaptation under TTDS\. Across standard 2D and 3D anomaly detection benchmarks, TopoOT achieves state\-of\-the\-art performance, outperforming second\-best methods by up to \+24\.1\\% mean F1 on 2D datasets and \+10\.2\\% on 3D AS benchmarks\.
+
+## FuseAdapt: Adaptation\-Space Fusion for Multi\-Modal Semantic Segmentation with Missing Modalities
+
+**Authors:** Xin Zhang; Robby Tan
+
+**ID:** 152520 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=SWGx6oxOoy>) | [PDF](<https://openreview.net/pdf?id=SWGx6oxOoy>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152520>)
+
+Multi\-modal semantic segmentation benefits from complementary sensors, but this benefit is fragile when some modalities are degraded or missing at test time\. Many existing methods rely on dedicated fusion modules or multi\-branch cross\-modal encoders, and the fusion often becomes unreliable when modalities are absent, leading to substantial performance drops\. We propose FuseAdapt , a parameter\-efficient framework that performs fusion within the adaptation space of a frozen vision foundation model \(VFM\), exploring whether VFM priors can serve as an effective shared backbone for multi\-modal segmentation\. Instead of attaching a standalone fusion network, FuseAdapt assigns each modality a lightweight adaptation branch and performs adaptation\-space fusion by routing trainable adaptation updates across modalities inside the frozen backbone\. The pretrained VFM remains fixed while modality\-specific corrections and explicit cross\-modal interaction are learned through the adaptation paths\. To handle missing modalities, we further introduce Predictive Modality Modeling \(PMM\) , a direct representation\-level objective for cross\-modal redundancy\. During training, PMM masks a target modality and predicts its embedding from the visible ones, supervised by a teacher target computed under full\-modality input\. PMM is used only during training and adds no inference\-time overhead\. Across three multi\-modal segmentation benchmarks \(MCubeS, DELIVER, MUSES\), FuseAdapt consistently improves both modality\-complete and modality\-incomplete segmentation with a small trainable budget, yielding up to \+3\.01 mIoU under full modalities and \+12\.56 mIoU under missing modalities over prior state\-of\-the\-art\.
+
+## Attack\-Inference Aligned Universal Adversarial Attacks on Video Object Segmentation
+
+**Authors:** Ruiqi Shen; Chang Liu; Henghui Ding
+
+**ID:** 153756 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=Ivv7XxpFxV>) | [PDF](<https://openreview.net/pdf?id=Ivv7XxpFxV>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153756>)
+
+Modern video object segmentation \(VOS\) relies on a two\-stage paradigm for robust performance: target initialization and memory\-based propagation\. However, existing adversarial attacks on VOS often overlook this fundamental feature\. To bridge this gap, we propose AUV, an adversarial framework that Aligns with the Universal two\-stage paradigm of VOS models\. Specifically, AUV optimizes a single universal adversarial perturbation \(UAP\) through decoupled training strategies tailored for both initialization and propagation stages\. To ensure prompt\-agnosticism across all modalities, including masks, points, boxes, and language, AUV optimizes the UAP to disrupt the shared memory space for latent\-level target erosion\. Extensive experiments show that AUV establishes a new state\-of\-the\-art for VOS attacks, such as degrading mask\-based SAM3 to only 8\.4 J&amp;F on DAVIS17\-val \(compared to 55\.4 for previous SOTA under the same training setup\), while consistently outperforming prior methods on other VOS models including SAM2, Cutie, and XMem\. Notably, AUV exhibits superior temporal dynamics with the fastest onset and the most enduring persistence, while uniquely supporting flexible any\-time mid\-video attack, revealing vulnerabilities in real\-world streaming applications\. Our code and checkpoint will be made publicly available\.
+
+## eSAM: Editing SAM3 Attention for Training\-Free Referring Segmentation
+
+**Authors:** Yaoting Wang; Yun Zhou; Hengrui Hu; Chang Liu; Henghui Ding
+
+**ID:** 153788 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=If1BheAYFE>) | [PDF](<https://openreview.net/pdf?id=If1BheAYFE>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153788>)
+
+Referring expression segmentation \(RES\) aims to produce a pixel\-level mask for the object described by a free\-form natural language expression, in either images \(RIS\) or videos \(RVOS\)\. Existing zero\-shot approaches reduce the cost of mask\-language annotation but still rely on auxiliary training stages or multi\-model pipelines\. The recently released SAM 3 introduces native text\-prompted segmentation within a single foundation model\. However, directly applying it to RES generates unexpected weak performance\. We trace this gap to an attention sink in SAM 3's multimodal fusion encoder, where the start\-of\-text token absorbs on average $54\.8\\%$ of each image patch's cross\-attention mass, leaving content tokens with limited influence on the fused visual features\. Suppressing the sink alone is insufficient, as the released attention mass spreads without direction; closing the gap requires both suppressing the sink and providing patch\-dependent spatial guidance that routes attention to semantically relevant content tokens\. Building on these findings, we introduce eSAM, a fully training\-free framework that edits SAM\~3's cross\-attention without any parameter updates\. With Attention Mask Editing \(AME\), eSAM edits the attention map, suppressing the sink while injecting a CLIPSeg\-derived spatial prior that directs released attention toward relevant content tokens\. Further with Value Tensor Editing \(VTE\), eSAM rescales the value tensors, amplifying the magnitude with which content tokens contribute to the fused output\. On both RIS \(RefCOCO/\+/g\) and RVOS \(Ref\-DAVIS17, Ref\-YouTube\-VOS, MeViS\) benchmarks, eSAM achieves new state\-of\-the\-art results among training\-free methods\.
+
+## UGO: Unified Architecture for General Multi\-Object Tracking by Segmentation
+
+**Authors:** Jer Pelhan; Alan Lukezic; Matej Kristan
+
+**ID:** 152769 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=QWQDuX9NHf>) | [PDF](<https://openreview.net/pdf?id=QWQDuX9NHf>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152769>)
+
+General multi\-object tracking \(GMOT\) tracks all instances of a user\-specified category from a single first\-frame exemplar\. Prior work relies on bounding boxes and surrogate training, and struggles with non\-rigid objects, crowded scenes, and distractors\. We introduce UGO, a unified GMOT tracker that pairs a pretrained exemplar\-conditioned detection head with an instance\-propagation head in a common architecture\. A novel training\-free, energy\-minimization consolidation method converts overlapping proposals into exclusive pixel\-wise masks and detections, resolving over\-segmentation, duplicates, and conflicts\. A hierarchical memory spanning global and instance levels improves recall and per\-instance segmentation accuracy using a new memory management protocol\. UGO sets a new state\-of\-the\-art on GMOT benchmarks and video object counting, and is competitive with specialist MOT methods, establishing a strong paradigm for unified, open\-category multi\-object tracking\.
+
+## MvFFN: Multi\-view Floor\-Plan Feed\-Forward Network for Unposed Wide\-Baseline Panorama Layout Reconstruction
+
+**Authors:** Yuguang Li; Yichuan \(Ethan\) Deng; Zixuan Liu; Ivaylo Boyadzhiev; Xiuyuan Wu; Xinyu Zou; Linda Shapiro; Alex Colburn
+
+**ID:** 153655 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=Jj9p7hflDa>) | [PDF](<https://openreview.net/pdf?id=Jj9p7hflDa>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153655>)
+
+Reconstructing accurate camera poses and floor\-plan layouts from sparse, unposed, wide\-baseline RGB panoramas remains a challenging open problem\. Direct multi\-room floor\-plan prediction is especially difficult in this setting: pose, geometry, semantics, and global layout structure are tightly coupled, yet a complete floor\-plan is hard to learn as a single global output\. Our key insight is to keep the model's predictions strictly local\. Multi\-view Ordered Wall Instance Segmentation \(MOIS\) is designed around this concept\. Each panorama column predicts only the wall it observes plus the next two adjacent walls in clockwise order\. The global wall partition, room layouts, and shared coordinates emerge from deterministic aggregation of overlapping local predictions\. Building on MOIS, we propose Multi\-view floor\-plan Feed\-Forward Network \(MvFFN\), which jointly predicts coarse camera poses, dense global geometry, and per\-wall semantic outputs\. A downstream Layout Chaining \(LC\) post processing pipeline then assembles these predictions into multi\-room floor\-plans with shared global coordinates, consistent wall identities, and connected room structure\. The dense MOIS predictions recover cross\-view wall identity and local within\-room connectivity more accurately than composed modular baselines, and the assembled layouts substantially outperform prior methods on wall and junction level accuracy\. We also introduce the ZInD\-CrossView dataset, which augments ZInD with globally unique wall instances and cross\-view segmentation labels for this task\.
 
 ## PARI: Policy\-Driven Active Residual Intervention for Weakly Supervised Point Cloud Segmentation
 
@@ -36,15 +126,15 @@ Semantic segmentation typically requires dense pixel\-level annotations, creatin
 
 3D Weakly Supervised Semantic Segmentation \(3D\-WSSS\) on point clouds aims to learn dense 3D semantics from extremely sparse point\-level annotations\. Existing methods follow a passive paradigm based on pseudo\-label propagation or consistency regularization, leading to two key issues: 1\) Lack of targeted intervention, where erroneous predictions are not explicitly identified and corrected, resulting in severe error accumulation; 2\) Limited contextual awareness, where supervision is restricted to point\- or view\-level self\-augmentation consistency, failing to capture the intricate contextual correlations embedded within the scene\. To address these limitations, we propose a Policy\-driven Active Residual Intervention \(PARI\) framework for 3D\-WSSS, where an Active Intervention Agent \(AIA\) explicitly localizes high\-risk points under the guidance of a Confidence\-aware Reward Shaping \(CRS\) strategy, and a Bias\-aware Refinement Module \(BRM\) subsequently executes targeted refinement by exploiting rich spatial and semantic scene contexts\. Specifically, AIA actively localizes high\-risk points from uncertainty maps and prediction priors, while BRM refines them through residual correction based on hybrid spatial\-feature context\. CRS introduces a high\-confidence suppression reward that discourages unnecessary intervention on reliable predictions, and a low\-confidence exploration reward that encourages intervention on uncertain predictions\. Experiments on S3DIS and ScanNetV2 demonstrate state\-of\-the\-art performance under various weak supervision settings with strong cross\-backbone generalization, even surpassing the same\-backbone fully supervised counterpart with 1% annotations\.
 
-## On the Relaxation of Conditional Independence Assumption for Image Segmentation
+## Anatomy\-aware Spatio\-Temporal Modeling for Echocardiography Segmentation
 
-**Authors:** Zixun Wang; Ben Dai
+**Authors:** Seok\-Hwan Oh; Guil Jung; Myeong\-Gee Kim; Young\-Min Kim; hyeonjik lee; Sang\-yun Kim; Hyuksool Kwon; Hyeon\-Min Bae
 
-**ID:** 154387 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+**ID:** 155842 | **Topic source:** official | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=DwqwJHYbqV>) | [PDF](<https://openreview.net/pdf?id=DwqwJHYbqV>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154387>)
+[Paper](<https://openreview.net/forum?id=2TtThaZ1Ks>) | [PDF](<https://openreview.net/pdf?id=2TtThaZ1Ks>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155842>)
 
-In semantic segmentation, a recent line of RankSEG methods directly optimizes Dice/IoU scores at inference time, improving alignment with evaluation metrics without modifying model training\. Despite its theoretical and empirical success, RankSEG relies on the restrictive Conditional Independence Assumption \(CIA\), which ignores crucial label correlations and therefore degrades performance in ambiguous or low\-contrast scenarios\. However, accounting for full label dependence is computationally prohibitive, requiring $\\mathcal\{O\}\(d^3\)$ time\. To address this, we replace the CIA with a Spatially Localized Dependence \(SLD\) structure that captures local label correlations while keeping the dependence model tractable\. We further overcome the remaining computational bottleneck via a Reciprocal Moment Approximation coupled with a novel fixed\-point optimization strategy that eliminates exhaustive search\. The proposed algorithm achieves a highly practical $\\mathcal\{O\}\(d \\log d\)$ complexity and consistently outperforms conventional argmax and CIA\-based RankSEG across diverse segmentation benchmarks\. Improvements are significant in low\-contrast or small\-object scenarios, where label dependence offers valuable signals complementary to image information for accurate segmentation\.
+Echocardiography segmentation plays a central role in quantitative cardiovascular assessment\. However, automated echocardiography segmentation remains challenging due to speckle noise, poorly defined anatomical boundaries, acquisition variability, and the limited anatomical coverage of existing benchmarks\. Conventional segmentation methods demonstrate limited accuracy under such low image quality and domain shifts\. Inspired by the observation that expert cardiologists can maintain reliable anatomical delineation by leveraging their structural understanding of the cardiac anatomy, we propose that incorporating anatomical priors into echocardiography segmentation models can improve both precision and robustness\. To this end, we propose AST\-Seg, an anatomy\-aware spatio\-temporal framework for echocardiography segmentation\. AST\-Seg introduces an anatomy\-aware feature encoder that regularizes transformer attention with anatomy\-derived spatial\-relation priors, and a Deformable Spatio\-Temporal Mamba module that captures localized and periodic cardiac motion through adaptive spatial aggregation followed by temporal state\-space modeling\. In addition, we curate an Echocardiography Anatomy \(EA\) dataset with pixel\-level annotations for 12 clinically relevant cardiac anatomy, enabling comprehensive multi\-structure cardiac interpretation\. Extensive experiments on in\-distribution CAMUS and EA datasets, as well as an out\-of\-distribution point\-of\-care echocardiography dataset, demonstrate that AST\-Seg provides domain\-generalized segmentation with improved precision\.
 
 ## GRAPE: Graph\-Augmented Prototype Explanations for Interactive Medical Image Diagnosis
 
@@ -66,45 +156,25 @@ Prototype\-based medical image classifiers have three clinical gaps: they treat 
 
 Topology supervision relies on meaningful structural targets, yet this assumption can fail under structurally unreliable pseudo supervision\. In pseudo\-label learning, the topology induced by pseudo masks may already contain distorted components, broken connections, or spurious holes, making direct supervision\-side topology fitting unreliable and potentially propagating structural errors\. We address this problem by reformulating topology supervision as trainable topology\-side correction\. Specifically, we propose a differentiable persistent\-homology proxy loss that derives topology signals from a soft Euler\-characteristic trajectory and threshold\-wise structural variation, without computing or matching persistence barcodes\. We further introduce a conservative topology\-consistency injection mechanism that regulates when, how strongly, and in which direction these signals enter optimization\. We validate the proposed reformulation in unsupervised camouflaged object detection, a challenging setting where pseudo masks often contain severe structural distortions\. Experiments under controlled same\-carrier comparisons show consistent improvements in both task\-level detection performance and topology\-level structural reliability\. These results suggest that, under structurally unreliable pseudo supervision, topology supervision is more effective when derived as trainable proxy signals and introduced into optimization conservatively\. Code is available at https://anonymous\.4open\.science/r/LPHP/\.
 
-## BrainEM: A Large\-Scale and Diverse Benchmark for EM Neuron Segmentation in Connectomics
+## Bridging Academia and Industry: A Comprehensive Benchmark for Attributed Graph Clustering
 
-**Authors:** Zhenghua Li; Lanyue Zhang; Zekang Yang; Kai Li; Yuwei Peng; Song\-Hai Shi; Xiaolin Hu
+**Authors:** Yunhui Liu; Pengyu Qiu; Yu Xing; Peng Du; Yongchao Liu; Chuntao Hong; Jiajun Zheng; Tao Zheng; Tieke He
 
-**ID:** 139121 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+**ID:** 139018 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=juzLIwAl0Y>) | [PDF](<https://openreview.net/pdf?id=juzLIwAl0Y>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139121>)
+[Paper](<https://openreview.net/forum?id=qBpyipVo0p>) | [PDF](<https://openreview.net/pdf?id=qBpyipVo0p>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139018>)
 
-Connectomics requires dense segmentation of large\-scale electron microscopy \(EM\) volumes using models trained on small labeled blocks\. In practice, a connectomics lab facing a new raw volume has two options: annotate a small block and train on it, or skip annotation and train on the union of available public labeled datasets\. We introduce BrainEM, a benchmark that formalizes these options as two standard tracks: the Same\-Source Track \(Annotate\-and\-Train\) and the Cross\-Source Track \(Reuse\-and\-Train\)\. BrainEM brings together 16 EM datasets, including one in\-house mouse dataset that we contribute, spanning multiple species, imaging modalities, and resolutions\. We further add large\-scale test volumes that bring the evaluation closer to realistic practice, and four diverse test targets in the Cross\-Source Track\. The data, post\-processing, and evaluation metrics are fixed across all methods, and the framework is fully model\-data decoupled so that new methods can be added with minimal effort\. We conduct a systematic evaluation of six representative baselines covering the main technical directions in EM neuron segmentation, making BrainEM the first systematic evaluation at large scale and across diverse cross\-source targets\. The results differ from prior small\-scale evaluations: rankings on the Same\-Source Track no longer match those reported on small CREMI splits, and methods diverge sharply on the Cross\-Source Track\. Both tracks still leave clear room for improvement\. We release BrainEM as a public platform to support unified comparison and faster method development in connectomics\. All datasets and code are available at https://github\.com/kwinderic/BrainEM
+Attributed Graph Clustering \(AGC\) is a fundamental unsupervised task that integrates structural topology and node attributes to uncover latent patterns in graph\-structured data\. Despite its significance in industrial applications such as fraud detection and user segmentation, a significant chasm persists between academic research and real\-world deployment\. Current evaluation protocols suffer from the small\-scale, high\-homophily citation datasets, non\-scalable full\-batch training paradigms, and a reliance on supervised metrics that fail to reflect performance in label\-scarce environments\. To bridge these gaps, we present \`PyAGC\`, a comprehensive, production\-ready benchmark and library designed to stress\-test AGC methods across diverse scales and structural properties\. We unify existing methodologies into a modular Encode\-Cluster\-Optimize framework and, for the first time, provide memory\-efficient, mini\-batch implementations for a wide array of state\-of\-the\-art AGC algorithms\. Our benchmark curates 12 diverse datasets, ranging from $2\.7 \\times 10^3$ to $1\.1 \\times 10^8$ nodes, specifically incorporating industrial graphs with complex tabular features and low homophily\. Furthermore, we advocate for a holistic evaluation protocol that mandates unsupervised structural metrics and efficiency profiling alongside traditional supervised metrics\. Battle\-tested in high\-stakes industrial workflows at Ant Group, this benchmark offers the community a robust, reproducible, and scalable platform to advance AGC research towards realistic deployment\. The code and resources are publicly available via \[GitHub\]\(https://github\.com/Cloudy1225/PyAGC\), \[PyPI\]\(https://pypi\.org/project/pyagc\), and \[Docs\]\(https://pyagc\.readthedocs\.io\)\. We invite readers to our \[latest survey\]\(https://arxiv\.org/abs/2603\.20829\) for the unified framework and industrial perspective that complement this benchmark\.
 
-## SetCon: Towards Open\-Ended Referring Segmentation via Set\-Level Concept Prediction
+## S2D: Sparse\-To\-Dense Keymask Distillation for Unsupervised Video Instance Segmentation
 
-**Authors:** Zhixiong Zhang; Yizhuo Li; Shuangrui Ding; Yuhang Zang; Shengyuan Ding; Long Xing; Yibin Wang; Qiaosheng Zhang; Jiaqi Wang
+**Authors:** Leon Sick; Lukas Hoyer; Dominik Engel; Pedro Hermosilla; Timo Ropinski
 
-**ID:** 150414 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+**ID:** 153406 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=iDe99buVDR>) | [PDF](<https://openreview.net/pdf?id=iDe99buVDR>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150414>)
+[Paper](<https://openreview.net/forum?id=LZrfx4HTdR>) | [PDF](<https://openreview.net/pdf?id=LZrfx4HTdR>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153406>)
 
-Referring segmentation grounds natural\-language queries to pixel\-level masks, but extending it to complex scenarios with multiple instances, cross\-category groups, or open\-ended target sets remains challenging\. Previous Large Vision Language Model \(LVLM\)\-based methods represent referred targets with one or more special tokens sequentially, treating multiple targets as separate outputs rather than a coherent set and offering little incentive to capture set\-level properties such as completeness and mutual exclusivity\. We reformulate open\-ended referring segmentation as explicit set\-level concept prediction and propose Set\-Concept Segmentation \(SetCon\), which uses LVLM\-generated natural\-language concepts, instead of segmentation\-specific tokens, as semantic conditions for joint mask\-set decoding\. A hierarchical semantic decomposition first predicts a shared set\-level concept defining the target scope and then refines it into fine\-grained concept groups aligned with target subsets\. To support this, a two\-stage annotation pipeline augments existing reasoning segmentation datasets with hierarchical semantic supervision \(236k samples, 784k concept phrases\)\. SetCon achieves state\-of\-the\-art results on image benchmarks \(\+3\.3 gIoU on gRefCOCO, \+12\.1 gIoU on MUSE\), with margins that grow as the number of referred targets increases\. The concept interface also transfers to video under a detect\-and\-track setting, yielding new state\-of\-the\-art results on seven referring video benchmarks, including \+10\.9 J&amp;F on MeViS and \+12\.4 J&amp;F on Ref\-SeCVOS\. The code, model checkpoints, and dataset annotations will be released\.
-
-## TerraMesh\-Masks: Open‑Vocabulary Segmentation for Earth Observation
-
-**Authors:** Benedikt Blumenstiel; Hugues Devimeux; Johannes Jakubik; Konrad Schindler
-
-**ID:** 139302 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=YaQSEoAs6p>) | [PDF](<https://openreview.net/pdf?id=YaQSEoAs6p>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139302>)
-
-Open‑vocabulary segmentation \(OVS\) enables models to segment a variety of concepts specified in natural language, removing the need for fixed label sets and fine\-tuning\. While recent OVS approaches have shown strong performance on natural images, they transfer poorly to Earth observation \(EO\) data due to differing semantics, scales, sensing modality, and geographic context\. To date, large‑scale EO‑specific datasets and benchmarks for OVS remain scarce\. We, therefore, introduce TerraMesh\-Masks, a large\-scale open\-vocabulary segmentation dataset for EO, comprising 16 million binary masks aligned with nine million multimodal TerraMesh samples and annotated using OpenStreetMap and Overture\-derived semantics\. In addition, we provide an expert\-reviewed evaluation set of 523 samples covering over 200 classes to enable robust evaluation\. To demonstrate and analyze the impact of TerraMesh\-Masks, we build an open\-vocabulary version of TerraMind\. Our results demonstrate significantly improved  performance over general\-purpose state\-of\-the\-art models reaching 35\.15% IoU versus 16\.29% for DINOv3\.txt and 11\.33% for SAM\-3\. We release the dataset publicly under a permissive license at https://huggingface\.co/datasets/ibm\-esa\-geospatial/TerraMesh\-Masks\.
-
-## Redefining Instance Matching: A Unified Framework for Part\-Aware Matching in Panoptic Segmentation Evaluation
-
-**Authors:** Erik Großkopf; Soumya Snigdha Kundu; Hendrik Möller; Nicolas Münster; Mehdi Astaraki; Paula T Buzduga; Kerstin Ritter; Benedikt Wiestler; Jan Kirschke; Jonathan Shapey; Tom Vercauteren; Florian Kofler
-
-**ID:** 139024 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=pf5FQox6pD>) | [PDF](<https://openreview.net/pdf?id=pf5FQox6pD>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139024>)
-
-The Panoptic Quality \(PQ\) metric is the standard for jointly evaluating instance and semantic segmentation\.  However, its original definition relies on a One\-to\-One matching between predicted and ground truth segments, which is only straightforward when the IoU threshold exceeds 0\.5\.  Below 0\.5, multiple matching strategies emerge in a poorly explored problem space\.  We systematically elucidate this space by recasting segment matching as a constrained bipartite assignment problem\.  Independently bounding the prediction\- and ground\-truth\-side degrees yields four matching strategies: One\-to\-One, Many\-to\-One, One\-to\-Many, and Many\-to\-Many\.  We show that the first three are well\-defined within the PQ framework, while Many\-to\-Many falls outside it\.  These strategies become relevant when instances are fragmented, adjacent objects are difficult to delineate, or annotations are noisy\.  Central to our framework is a vertex\-based accounting of TP, FN, and FP, anchored to ground truth and predicted segments rather than to matching edges\.  We further show that the framework extends naturally to part\-aware panoptic segmentation, and we explore part\-aware evaluation on biomedical data\.  Across configurable case studies we report how different combinations of thresholds and matching strategies behave in practice\.  We release a unified open\-source package built on Panoptica\.  It exposes Voronoi\-based region\-wise analysis, part\-aware evaluation, and Area Under Threshold Curve computations as configurable options\.
+In recent years, the state\-of\-the\-art in unsupervised video instance segmentation has heavily relied on synthetic video data, generated from object\-centric image datasets such as ImageNet\. However, video synthesis by artificially shifting and scaling image instance masks fails to accurately model realistic instance motion in videos, such as perspective changes, movement by parts of one or multiple instances, or camera motion\. To tackle this issue, we propose an unsupervised video instance segmentation model trained exclusively on real video data\. We start from unsupervised instance segmentation masks on individual video frames\. However, single\-frame segmentations exhibit temporal noise and their quality varies through the video\. Therefore, we establish temporal coherence by identifying high\-quality keymasks in the video by leveraging deep motion priors\. The sparse keymask pseudo\-annotations are then used to train a segmentation model for implicit mask propagation, for which we propose a Sparse\-To\-Dense Distillation approach aided by a Temporal DropLoss\. After training the final model on the resulting dense labelset, our approach outperforms the current state\-of\-the\-art across various benchmarks\.
 
 ## TopoRefine: Plug\-and\-Play Topology\-Aware Contour Refinement for Building Segmentation
 
@@ -126,37 +196,25 @@ Building segmentation has recently benefited from foundation segmentation models
 
 Open\-vocabulary semantic segmentation \(OVSS\) models enable dense prediction for classes specified at test time, but continual test\-time adaptation \(CTTA\) over long, non\-stationary streams can corrupt their language\-aligned semantic interface, which we diagnose through synonym\-prompt text alignment\. We propose Cross\-Foundation Complementary Learning Systems \(XF\-CLS\), a source\-free OVSS\-CTTA framework that makes lightweight online adaptation stable over long horizons\. Inspired by Complementary Learning Systems, which couple rapid plastic learning with slow consolidation, XF\-CLS decouples plasticity from stabilization: a single fast online adaptation path updates only a small set of visual normalization parameters, a horizon\-aware, source\-anchored slow parameter memory consolidates stable changes and recovers from drift, and a frozen cross\-foundation structural observer supplies a non\-drifting structural prior for reliability\-aware recovery and dense output refinement\. Rather than training an additional teacher or using cross\-foundation pseudo\-label supervision, the frozen path preserves the open\-vocabulary interface while correcting degraded visual structure\. On long\-horizon Cityscapes\-to\-ACDC and OnDA streams, XF\-CLS achieves 32\.92 and 30\.75 mIoU, improving the NACLIP no\-adapt baseline by \+9\.00 and \+4\.13 mIoU, respectively, and outperforming continual OVSS\-TTA baselines\. Decomposition studies and text\-alignment diagnostics show that source\-anchored recovery prevents long\-horizon collapse, while frozen cross\-foundation refinement adds consistent gains without updating extra parameters\. XF\-CLS provides a stable, parameter\-efficient route to source\-free continual open\-vocabulary dense prediction, with inference overhead dominated by one additional frozen\-backbone forward pass\.
 
-## Image Generation for Automotive Lidar Open\-vocabulary Semantic Segmentation
+## VideoMaMa\+\+: Temporally Consistent Video Matting via Preserve\-and\-Refine Tokens
 
-**Authors:** Nermin Samet; Gilles Puy; Renaud Marlet
+**Authors:** Sangbeom Lim; Seoung Wug Oh; Heeji Yoon; Seungryong Kim; Joon\-Young Lee
 
-**ID:** 151641 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+**ID:** 148674 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=Z5dOCGOl4Y>) | [PDF](<https://openreview.net/pdf?id=Z5dOCGOl4Y>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151641>)
+[Paper](<https://openreview.net/forum?id=vxJjCRu1Km>) | [PDF](<https://openreview.net/pdf?id=vxJjCRu1Km>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148674>)
 
-This paper presents a new method for the zero\-shot open\-vocabulary semantic segmentation \(OVSS\) of 3D automotive lidar data\. To circumvent the recognized image\-text modality gap that is intrinsic to approaches based on Vision Language Models \(VLMs\) such as CLIP, our method relies instead on image generation from text, to create prototype images\. Given a 3D network distilled from a 2D Vision Foundation Model \(VFM\), we then label a point cloud by matching 3D point features with 2D image features of these prototypes\. Our method is state\-of\-the\-art for OVSS on nuScenes and SemanticKITTI\.
+Diffusion\-based video matting has recently emerged as a leading approach, leveraging video diffusion priors from internet\-scale pretraining to achieve strong zero\-shot generalization from limited synthetic data\. However, the heavy compute of these diffusion backbones limits inference to a short chunk of just 6\-\-24 frames, so even ordinary videos span multiple chunks\. Because each chunk is matted independently from coarse mask guidance, existing methods fail to maintain consistency across chunk boundaries, producing flickering edges and discontinuous transparency\.     We address this with a mask\-guided diffusion\-matting framework built on two ideas\. The RGB and mask conditioning are represented as separate token streams that interact through full spatio\-temporal self\-attention, letting the model adaptively combine fine RGB texture with coarse mask layout rather than committing to a fixed channel\-wise fusion\. On top of this, we propose a novel pair of learnable embeddings, the preserve token and the refine token, that act as a per\-frame conditioning interface and enable a sliding\-window inference scheme in which already\-generated mattes are propagated across chunk boundaries for local temporal consistency, complemented by a globally shared reference anchor at every chunk to prevent error accumulation in long sequences without any additional training\.     Across standard video matting benchmarks and in\-the\-wild long footage, our framework outperforms prior diffusion\-based methods in both fine\-detail accuracy and temporal consistency, and uniquely maintains consistency across chunk boundaries on long videos\. Our code and weights will be publicly released\.
 
-## WaveMamba: Wave\-Inspired Cross\-Modal Fusion for Robust event\-image Semantic Segmentation
+## From Pixels to Concepts: Do Segmentation Models Understand What They Segment?
 
-**Authors:** Adeel F Mirza; Zaiyue Yang; Muntazir Hussain
+**Authors:** Shuang Liang; Zeqing Wang; Yuxian LI; Xihui Liu; Han Wang
 
-**ID:** 151756 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+**ID:** 139321 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=YIa3B1RBBV>) | [PDF](<https://openreview.net/pdf?id=YIa3B1RBBV>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151756>)
+[Paper](<https://openreview.net/forum?id=XP1FvR8d8X>) | [PDF](<https://openreview.net/pdf?id=XP1FvR8d8X>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139321>)
 
-Event\-image semantic segmentation is promising for autonomous driving and robotics because event cameras complement frame images under rapid motion, low illumination, and high dynamic range\. However, effective multimodal segmentation remains difficult due to asynchronous sensing, sparse\-dense modality mismatch, and the cost of heavy cross\-modal interaction modules\. We propose WaveMamba, a dual\-branch event\-image semantic segmentation framework that combines hierarchical GroupMamba encoders with a Mamba\-Wave Cross\-Modal Fusion \(MWCMF\) module\. Instead of relying on explicit registration or attention\-heavy fusion, MWCMF performs implicit cross\-modal propagation through channel\-wise and spatial\-wise wave\-guided gating in the spectral domain, followed by Mamba\-based refinement\. Experiments on DDD17 and DSEC show that WaveMamba achieves state\-of\-the\-art 78\.75 and 76\.00 mIoU, respectively\. Under rain\- and fog\-corrupted evaluation on DSEC, WaveMamba further attains 74\.0 mIoU, indicating improved robustness under degraded visual conditions\.
-
-## Beyond Pixel\-wise Supervision: Local Structure Regularization for Semantic Segmentation
-
-**Authors:** Wei Huang; Chenying Liu; Yilei Shi; Zhitong Xiong; Xiaoxiang Zhu
-
-**ID:** 154585\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 154585
-
-[Paper](<https://openreview.net/forum?id=CUmOv8veJ1>) | [PDF](<https://openreview.net/pdf?id=CUmOv8veJ1>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154585>)
-
-Visual foundation models \(VFMs\) provide strong region\-level representations for semantic segmentation, substantially improving high\-level semantic understanding\. However, accurate boundary recovery remains challenging, especially for fine structures and semantic transitions\. A key reason is that conventional pixel\-level supervision largely treats pixels independently and lacks explicit modeling of local structure and neighboring\-pixel relationships\. To address this issue, we propose a Local Structure \(LS\) regularization framework that constrains the second\-order local organization of semantic transition regions\. Unlike existing boundary losses that mainly supervise contour location, distance, overlap, or topology, LS models boundary neighborhoods through a structure\-tensor representation of semantic probability fields\. It decomposes local boundary structure into two complementary cues: Local Structure Magnitude \(LSM\), which measures the strength of anisotropic class transitions, and Local Structure Orientation \(LSO\), which describes their dominant geometric orientation\. LS is model\-agnostic, compatible with different VFM\-backbone\-decoder combinations, and introduces no extra inference cost\. Extensive experiments on four diverse datasets show that LS consistently improves boundary\-sensitive performance while also enhancing overall IoU, demonstrating its effectiveness for boundary\-structure learning in semantic segmentation\.
+Segmentation is a fundamental vision task underlying numerous downstream applications\. Recent promptable segmentation models, such as Segment Anything Model 3 \(SAM3\), extend segmentation from category\-agnostic mask prediction to concept\-guided localization conditioned on high\-level textual prompts\. However, existing benchmarks primarily evaluate mask accuracy or object presence, leaving unclear whether these models faithfully ground the queried concept or instead rely on visually salient but semantically misleading cues\. We introduce CAFE: \\textbf\{C\}ounterfactual \\textbf\{A\}ttribute \\textbf\{F\}actuality \\textbf\{E\}valuation, a novel benchmark for evaluating concept\-faithful segmentation in promptable segmentation models\. Our \\textbf\{CAFE\} is built on attribute\-level counterfactual manipulation: the target region and ground\-truth mask are preserved, while attributes such as surface appearance, context, or material composition are modified to introduce misleading semantic cues\. The benchmark contains 2,146 paired test samples, each consisting of a target image, a ground\-truth mask, a positive prompt, and a misleading negative prompt\. These samples cover three counterfactual categories: Superficial Mimicry \(\\textbf\{SM\}\), Context Conflict \(\\textbf\{CC\}\), and Ontological Conflict \(\\textbf\{OC\}\)\. We evaluate various model types and sizes on our CAFE\. Experiments reveal a systematic gap between localization quality and concept discrimination: models often generate accurate masks even for misleading prompts, suggesting that strong mask prediction does not necessarily imply faithful semantic grounding\. Our CAFE provides a controlled benchmark for diagnosing whether promptable segmentation models perform concept\-faithful grounding rather than shortcut\-driven mask retrieval\.
 
 ## RipBench: A Unified Benchmark for Multi\-Level Rip Current Detection, Classification and Segmentation
 
@@ -172,71 +230,37 @@ Rip currents are a serious and often under\-addressed threat to beach safety, an
 
 **Authors:** Junhyub Lee; Seunghun Chae; Hyosu Kim
 
-**ID:** 139427 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
+**ID:** 139427 | **Topic source:** official | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
 
 [Paper](<https://openreview.net/forum?id=RQWfvcKFll>) | [PDF](<https://openreview.net/pdf?id=RQWfvcKFll>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139427>)
 
-_Abstract unavailable from the accessible public sources._
+We formalize and enable the task of open tree decomposition, which segments an image into hierarchical trees of visual components with unconstrained granularity and flexibility\. Specifically, we provide the foundation benchmark for this new paradigm with the following three key contributions\. First, we overcome the prohibitively high cognitive and physical bottlenecks of manual annotation by developing a fully automated generation pipeline that synergizes the semantic reasoning of Large Vision\-Language Models \(LVLMs\) with the precise geometric grounding of SAM 3\. Second, leveraging this pipeline, we construct COCOTree, a massive\-scale benchmark featuring over 21K images and 1\.8M structural nodes\. By embracing an open\-vocabulary space of over 3\.5K unique labels, it successfully captures the long\-tail distribution of complex physical assemblies\. Notably, rigorous human evaluation confirms our generated annotations demonstrate strong alignment with human structural judgment\. Third, we establish a standardized evaluation protocol by proposing the Open Tree Quality \(OTQ\) metric, which jointly assesses mask precision, label accuracy, and structural consistency\. We release our dataset and benchmark code at https://github\.com/melonkick3090/COCOTree\.
 
-## Focusable Monocular Depth Estimation
+## When Noise Meets Long\-Tail: Feature\-Threshold Dual Calibration for Robust Pseudo\-Labeling
 
-**Authors:** Yuxin Du; Tao Lin; Zile Zhong; Runting Li; Xiyao Chen; Jiting Liu; Chenglin Liu; Yingcong Chen; Yuqian Fu; Bo Zhao
+**Authors:** Ping Guo; Zhiqi Huang; Xinran Li
 
-**ID:** 153419 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+**ID:** 156014 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=LTHElHJrAh>) | [PDF](<https://openreview.net/pdf?id=LTHElHJrAh>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153419>)
+[Paper](<https://openreview.net/forum?id=1A8tQcymU6>) | [PDF](<https://openreview.net/pdf?id=1A8tQcymU6>) | [Official poster](<https://neurips.cc/virtual/2026/poster/156014>)
 
-Monocular depth foundation models generalize well across scenes, yet they are typically optimized with uniform pixel\-wise objectives that do not distinguish user\-specified or task\-relevant target regions from the surrounding context\. We therefore introduce Focusable Monocular Depth Estimation \(FDE\), a region\-aware depth estimation task in which, given a specified target region, the model is required to prioritize foreground depth accuracy, preserve sharp boundary transitions, and maintain coherent global scene geometry\. To prioritize task\-critical region modeling, we propose FocusDepth, a prompt\-conditioned monocular relative depth estimation framework that guides depth modeling to focus on target regions via box/text prompts\. The core Multi\-Scale Spatial\-Aligned Fusion \(MSSA\) in FocusDepth spatially aligns multi\-scale features from Segment Anything Model 3 to the Depth Anything family and injects them through scale\-specific, gated conditional fusion\. This enables dense prompt cue injection without disrupting geometric representations, thereby endowing the depth estimation model with focused perception capability\. To study FDE, we establish FDE\-Bench, a target\-centric monocular relative depth benchmark built from image\-target\-depth triplets across five datasets, containing 252\.9K/72\.5K train/val triplets and 972 categories spanning real\-world and embodied simulation environments\. On FDE\-Bench, FocusDepth consistently improves over globally fine\-tuned DA2/DA3 baselines under both box and text prompts, with the largest gains appearing in target boundary and foreground regions while preserving global scene geometry\. Ablations show that MSSA's spatial alignment is the key design factor, as disrupting prompt\-geometry correspondence increases AbsRel by up to 13\.8%\.
-
-## MonoChunk3D: Monocular Online 3D Instance Segmentation with Persistent Instance States
-
-**Authors:** Yibo Zhao; Jingzhi Zhou; Yigong Zhang; Jian Yang; Jin Xie
-
-**ID:** 155123 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=8F9VWmr6fN>) | [PDF](<https://openreview.net/pdf?id=8F9VWmr6fN>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155123>)
-
-_Abstract unavailable from the accessible public sources._
-
-## Towards Visual Query Segmentation in the Wild
-
-**Authors:** Bing Fan; Minghao Li; Hanzhi Zhang; Shaohua Dong; NAGA PRUDHVI MAREEDU; Xiaoqiong Liu; Weishi Shi; Yunhe Feng; Yan Huang; Heng Fan
-
-**ID:** 139583 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=Gx9LtAgUon>) | [PDF](<https://openreview.net/pdf?id=Gx9LtAgUon>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139583>)
-
-_Abstract unavailable from the accessible public sources._
+Pseudo\-labeling has become a cornerstone of learning from unlabeled data in semantic segmentation\. Yet its effectiveness drops sharply in real\-world scenarios where strong imaging noise and long\-tailed class distributions occur together\. We trace this failure to a vicious cycle of pseudo\-label degradation\. Imaging noise entangles foreground and background features, lowering prediction confidence across all classes, while long\-tailed distributions leave tail classes with far fewer training samples and inherently lower confidence\. Under fixed high\-threshold filtering, these tail\-class predictions are systematically filtered out, so they receive no supervision from unlabeled data and thus features keep degrading in subsequent iterations\. Critically, noise and long\-tail are not independent obstacles but mutually amplifying ones, and addressing either alone is insufficient\. To break this cycle, we propose FTC\-Seg, a Feature\-Threshold dual\-Calibration framework built on a standard teacher\-student framework\. At the feature level, Orthogonal Prototype Reconstruction \(OPR\) uses a set of learnable orthogonal prototypes to residually purify pixel\-wise features, widening the margin between weak foreground targets and noisy backgrounds\. At the threshold level, Adaptive Threshold Calibration \(ATC\) dynamically adjusts class\-specific thresholds based on learning difficulty and prediction\-distribution bias, rescuing low\-confidence pseudo\-labels of tail classes from systematic exclusion\. Extensive experiments on four public benchmarks spanning three distinct noise modalities show that FTC\-Seg achieves strong performance against state\-of\-the\-art methods, with particularly substantial gains on tail classes\. Our results establish that jointly calibrating features and thresholds is essential for robust pseudo\-labeling under compounded noise and class imbalance\.
 
 ## MonoChunk3D: Monocular Online 3D Instance Segmentation with Persistent Instance States
 
 **Authors:** Yibo Zhao; Jingzhi Zhou; Yigong Zhang; Jian Yang; Jin Xie
 
-**ID:** 155123\-\-2 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 155123
+**ID:** 155123 | **Topic source:** official | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
 
 [Paper](<https://openreview.net/forum?id=8F9VWmr6fN>) | [PDF](<https://openreview.net/pdf?id=8F9VWmr6fN>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155123>)
 
-_Abstract unavailable from the accessible public sources._
-
-## Exploiting Fine\-Tuning Structures to Improve Adversarial Transferability on Downstream SAM
-
-**Authors:** Shixiong Jiang; Jialiang Fan; Mengyu Liu; Pengfei Gu; Danny Z Chen; Fanxin Kong
-
-**ID:** 155142 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=82YaF5fhKq>) | [PDF](<https://openreview.net/pdf?id=82YaF5fhKq>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155142>)
-
-Combining the Segment Anything Model \(SAM\) with fine\-tuning techniques allows SAM to be effectively adapted to various downstream image segmentation tasks\. However, this adaptability introduces new security vulnerabilities related to adversarial attacks\. In this paper, we investigate the adversarial transferability between the original SAM and its fine\-tuned downstream models\. Under limited knowledge conditions of the downstream models, we propose a novel structure\-exploiting transferable attack \(SETA\) method\. Our framework mimics the fine\-tuning architecture and estimates the parameter distributions of the downstream models to improve the transferability of the generated adversarial samples\. Experimental results demonstrate the efficacy of our proposed method in creating adversarial examples against various downstream fine\-tuned SAM models\.
+Monocular online 3D instance segmentation enables embodied agents to build object\-level 3D understanding while continuously exploring their environments\. Unlike RGB\-D settings, monocular RGB streams lack direct depth and camera pose information, making geometry reconstruction necessary for 3D segmentation\. Recent reconstruction foundation models \(RFMs\) have made this task more feasible by recovering 3D geometry and cross\-view cues from monocular images\. However, reconstructed geometry remains noisy and incomplete, and streaming observations provide only partial views of object instances, making local observations insufficient for stable instance representations and temporally consistent segmentation\. We propose MonoChunk3D, an online 3D instance segmentation framework that incrementally reconstructs, aligns, and segments incoming monocular RGB chunks\. Rather than treating reconstructed geometry merely as input, the framework adaptively integrates complementary RFM\-derived cross\-view priors with 3D geometric features to initialize current\-chunk instance queries\. To overcome the limitations of local observations, we maintain compact persistent instance states composed of explicit prototypes, implicit query embeddings, and spatial bounds to preserve long\-term instance context\. These states are propagated as history\-aware queries and jointly decoded with current\-chunk queries, allowing the preserved instance context to directly guide current\-chunk segmentation\. The resulting predictions are associated with historical instances to update the persistent states, enabling temporally consistent segmentation over streaming observations\. Experiments on ScanNet200, ScanNetV2, and SceneNN show that MonoChunk3D achieves consistent improvements over existing methods in the monocular online setting\.
 
 ## BrainEM: A Large\-Scale and Diverse Benchmark for EM Neuron Segmentation in Connectomics
 
 **Authors:** Zhenghua Li; Lanyue Zhang; Zekang Yang; Kai Li; Yuwei Peng; Song\-Hai Shi; Xiaolin Hu
 
-**ID:** 139121\-\-2 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 139121
+**ID:** 139121 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
 [Paper](<https://openreview.net/forum?id=juzLIwAl0Y>) | [PDF](<https://openreview.net/pdf?id=juzLIwAl0Y>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139121>)
 
@@ -246,23 +270,11 @@ Connectomics requires dense segmentation of large\-scale electron microscopy \(E
 
 **Authors:** Zhixiong Zhang; Yizhuo Li; Shuangrui Ding; Yuhang Zang; Shengyuan Ding; Long Xing; Yibin Wang; Qiaosheng Zhang; Jiaqi Wang
 
-**ID:** 150414\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 150414
+**ID:** 150414 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
 [Paper](<https://openreview.net/forum?id=iDe99buVDR>) | [PDF](<https://openreview.net/pdf?id=iDe99buVDR>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150414>)
 
 Referring segmentation grounds natural\-language queries to pixel\-level masks, but extending it to complex scenarios with multiple instances, cross\-category groups, or open\-ended target sets remains challenging\. Previous Large Vision Language Model \(LVLM\)\-based methods represent referred targets with one or more special tokens sequentially, treating multiple targets as separate outputs rather than a coherent set and offering little incentive to capture set\-level properties such as completeness and mutual exclusivity\. We reformulate open\-ended referring segmentation as explicit set\-level concept prediction and propose Set\-Concept Segmentation \(SetCon\), which uses LVLM\-generated natural\-language concepts, instead of segmentation\-specific tokens, as semantic conditions for joint mask\-set decoding\. A hierarchical semantic decomposition first predicts a shared set\-level concept defining the target scope and then refines it into fine\-grained concept groups aligned with target subsets\. To support this, a two\-stage annotation pipeline augments existing reasoning segmentation datasets with hierarchical semantic supervision \(236k samples, 784k concept phrases\)\. SetCon achieves state\-of\-the\-art results on image benchmarks \(\+3\.3 gIoU on gRefCOCO, \+12\.1 gIoU on MUSE\), with margins that grow as the number of referred targets increases\. The concept interface also transfers to video under a detect\-and\-track setting, yielding new state\-of\-the\-art results on seven referring video benchmarks, including \+10\.9 J&amp;F on MeViS and \+12\.4 J&amp;F on Ref\-SeCVOS\. The code, model checkpoints, and dataset annotations will be released\.
-
-## Efficient SAM 3 Adaptation for Multi\-Class Semantic Segmentation via Dense Competitive Representations
-
-**Authors:** WENBIN LIAO; Hao Zhu; Yike Ma; Hao Jiang; Feng Dai
-
-**ID:** 149034 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=tLUmLVigLs>) | [PDF](<https://openreview.net/pdf?id=tLUmLVigLs>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149034>)
-
-_Abstract unavailable from the accessible public sources._
 
 ## Universal Cross\-Prompt Adversarial Attacks on Promptable Concept Segmentation
 
@@ -294,13 +306,31 @@ Moving Object Segmentation \(MOS\) aims to discover, segment, and track objects 
 
 Several disruptive research directions have recently emerged in computer vision, including foundation models achieving previously unseen zero\-shot performance in scene understanding, even interactively, and generative models that synthesize extremely realistic images\. The latter have also been shown to be highly effective in scene understanding tasks thanks to their rich priors\. However, for promptable segmentation, foundation models struggle with accurately segmenting an object's region, leading to false positives and over\-segmentation\. Notably, early attempts that leverage generative priors use prompts only during post\-processing, yielding suboptimal segments because the process is agnostic to the user input\. In this paper, we target these limitations with Prompt2Seg, a spatial conditioning framework for diffusion\-based segmentation\. Prompt2Seg augments a frozen diffusion segmentation model with a conditioning branch\. Our approach takes spatial prompts, represented as 2D Gaussians or confidence maps, as explicit input signals, training the model to respond directly to user intent\. Fine\-tuned on a deliberately constrained set of object categories drawn from Hypersim and Virtual KITTI 2, Prompt2Seg generalizes zero\-shot to a wide range of unseen object types and visual domains\. We evaluate on seven datasets ranging from standard benchmarks to more challenging domains, including paintings, egocentric views, and X\-ray data\. Furthermore, we demonstrate that Prompt2Seg consistently outperforms the underlying diffusion segmentation backbone across all benchmarks\. Our results suggest that the rich priors encoded in generative pretraining, combined with principled spatial conditioning, offer a compelling path toward broadly generalizing interactive segmentation without large\-scale mask supervision\.
 
+## Cyclic Discrete Diffusion: A Novel Multi\-Class Segmentation Refinement Technique
+
+**Authors:** LIBO CHEN; Souvik Ghosh; Vinay Namboodiri
+
+**ID:** 155503 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=55XffjPoPJ>) | [PDF](<https://openreview.net/pdf?id=55XffjPoPJ>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155503>)
+
+We cast image segmentation refinement as a \\textit\{discrete\} diffusion process\. To solve this task we introduce Cyclic Discrete Diffusion \(CDD\), a novel forward–reverse formulation with a cyclic label topology that maps a discrete label set to the uniform distribution and back\. Instead of injecting Gaussian noise as is done for continuous diffusion, CDD evolves segmentation masks through label jumps: at each step, every pixel either remains in its current class or jumps to the next label with a fixed rate\. This jump\-or\-stay mechanism defines a finite\-state Markov process with bounded forward and reverse steps, featuring analytically consistent and tractable reverse dynamics\.      CDD operates natively in a multi\-class label space, enabling joint      refinement of all classes in a single pass without requiring class\-wise decomposition, as commonly needed in prior binary refinement approaches\. The proposed formulation admits a finite and controllable number of refinement steps, for which we provide a theoretical characterization based on spectral gap analysis\. We evaluate CDD across diverse segmentation tasks, including multi\-class semantic,      instance\-level, and binary segmentation refinement\. Our method consistently improves both region accuracy and boundary quality across multiple backbones and datasets\.
+
+## Early Semantic Grounding in Image Editing Models for Zero\-Shot Referring Image Segmentation
+
+**Authors:** Jingxuan He; Xiyu Wang; Yunke Wang; Mengyu Zheng; Chang Xu
+
+**ID:** 152496 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=ShIHKjhGRF>) | [PDF](<https://openreview.net/pdf?id=ShIHKjhGRF>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152496>)
+
+Instruction\-based image editing \(IIE\) models have recently demonstrated strong capability in modifying specific image regions according to natural language instructions, which implicitly requires identifying where an edit should be applied\. This indicates that such models inherently perform language\-conditioned visual semantic grounding\. In this work, we investigate whether this implicit grounding can be leveraged for zero\-shot referring image segmentation \(RIS\), a task that requires pixel\-level localization of objects described by natural language expressions\. Through systematic analysis, we reveal that strong foreground\-background separability emerges in the internal representations of these models at the earliest denoising timestep, well before any visible image transformation occurs\. Building on this insight, we propose a training\-free framework that repurposes pretrained image editing models for RIS by exploiting their intermediate representations\. Our approach decomposes localization into two complementary components: attention\-based spatial priors that estimate where to focus, and feature\-based semantic discrimination that determines what to segment\. By leveraging feature\-space separability, the framework produces accurate segmentation masks using only a single denoising step, without requiring full image synthesis\. Extensive experiments on RefCOCO, RefCOCO\+, and RefCOCOg demonstrate that our method achieves superior performance over existing zero\-shot baselines\.
+
 ## Focusable Monocular Depth Estimation
 
 **Authors:** Yuxin Du; Tao Lin; Zile Zhong; Runting Li; Xiyao Chen; Jiting Liu; Chenglin Liu; Yingcong Chen; Yuqian Fu; Bo Zhao
 
-**ID:** 153419\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 153419
+**ID:** 153419 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
 [Paper](<https://openreview.net/forum?id=LTHElHJrAh>) | [PDF](<https://openreview.net/pdf?id=LTHElHJrAh>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153419>)
 
@@ -326,48 +356,6 @@ Few\-Shot Semantic Segmentation \(FSS\) models achieve strong performance in seg
 
 Temporal action segmentation \(TAS\) is commonly trained on large banks of pre\-extracted frame features rather than raw RGB video, but storing and replaying those features becomes a practical bottleneck for long\-form video, especially in incremental TAS where past\-task data must remain available to mitigate catastrophic forgetting\. Recent TAS replay and condensation methods reduce this burden, but they rely on dense frame\-wise annotations and allocate storage through fixed segment\-level structures, limiting their flexibility for long procedural videos whose frame complexity varies substantially over time\.  We introduce Adaptive Residual\-Quantized Variational AutoEncoder \(ARQ\-VAE\), a compact and label\-free memory representation for TAS features that learns a discrete residual quantization of frame\-level video features and then adaptively truncates the residual chain on a per\-frame basis, retaining only the residual prefix that best reconstructs each frame feature\. This yields a practical compact feature memory that does not depend on frame\-wise labels and can therefore support multiple TAS settings with the same stored representation, while a lightweight fine\-tuning stage further improves reconstruction quality for the truncated codes that are actually retained\. Across standard TAS benchmarks, ARQ\-VAE achieves a substantially improved storage\-\-performance trade\-off over prior replay and condensation baselines\. On Breakfast, our final representation reduces training\-set storage from 28 GB for the original I3D feature bank to 10 MB while retaining strong downstream segmentation performance; with ASFormer, it achieves 71\.5 Edit and 51\.2 F1@50 in the supervised setting\. We further show that the same label\-free memory remains effective for incremental and unsupervised TAS, and transfers to an alternative pretrained feature space based on DINOv3\. We position ARQ\-VAE as a practical memory representation for TAS, and a promising direction for broader dataset condensation applications\.
 
-## RiSE: Residual Subspace Expert for Generalizable Text\-Centric Image Forgery Localization
-
-**Authors:** Kahim Wong; Kemou Li; Yiming Chen; Haiwei Wu; Jiantao Zhou
-
-**ID:** 153544 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=KaKH1k0VkJ>) | [PDF](<https://openreview.net/pdf?id=KaKH1k0VkJ>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153544>)
-
-_Abstract unavailable from the accessible public sources._
-
-## Early Semantic Grounding in Image Editing Models for Zero\-Shot Referring Image Segmentation
-
-**Authors:** Jingxuan He; Xiyu Wang; Yunke Wang; Mengyu Zheng; Chang Xu
-
-**ID:** 152496 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=ShIHKjhGRF>) | [PDF](<https://openreview.net/pdf?id=ShIHKjhGRF>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152496>)
-
-_Abstract unavailable from the accessible public sources._
-
-## RAWild: Toward Sensor\-Agnostic RAW Object Detection via Physics\-Guided Curve and Grid Modeling
-
-**Authors:** Shuhong Liu; Gengjia Chang; Jun Liu; Xuangeng Chu; Yinqiang Zheng; Tatsuya Harada; Ziteng Cui
-
-**ID:** 153638 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=JsJIzf63sJ>) | [PDF](<https://openreview.net/pdf?id=JsJIzf63sJ>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153638>)
-
-_Abstract unavailable from the accessible public sources._
-
-## Adaptive Residual Quantization for Memory\-Efficient Temporal Action Segmentation
-
-**Authors:** Gerard L Donahue; Guven Gergerli; Ayush Gupta; Reza Ghoddoosian; Enna Sachdeva; Faizan Siddiqui
-
-**ID:** 150739\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 150739
-
-[Paper](<https://openreview.net/forum?id=fkjPOMuoxA>) | [PDF](<https://openreview.net/pdf?id=fkjPOMuoxA>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150739>)
-
-Temporal action segmentation \(TAS\) is commonly trained on large banks of pre\-extracted frame features rather than raw RGB video, but storing and replaying those features becomes a practical bottleneck for long\-form video, especially in incremental TAS where past\-task data must remain available to mitigate catastrophic forgetting\. Recent TAS replay and condensation methods reduce this burden, but they rely on dense frame\-wise annotations and allocate storage through fixed segment\-level structures, limiting their flexibility for long procedural videos whose frame complexity varies substantially over time\.  We introduce Adaptive Residual\-Quantized Variational AutoEncoder \(ARQ\-VAE\), a compact and label\-free memory representation for TAS features that learns a discrete residual quantization of frame\-level video features and then adaptively truncates the residual chain on a per\-frame basis, retaining only the residual prefix that best reconstructs each frame feature\. This yields a practical compact feature memory that does not depend on frame\-wise labels and can therefore support multiple TAS settings with the same stored representation, while a lightweight fine\-tuning stage further improves reconstruction quality for the truncated codes that are actually retained\. Across standard TAS benchmarks, ARQ\-VAE achieves a substantially improved storage\-\-performance trade\-off over prior replay and condensation baselines\. On Breakfast, our final representation reduces training\-set storage from 28 GB for the original I3D feature bank to 10 MB while retaining strong downstream segmentation performance; with ASFormer, it achieves 71\.5 Edit and 51\.2 F1@50 in the supervised setting\. We further show that the same label\-free memory remains effective for incremental and unsupervised TAS, and transfers to an alternative pretrained feature space based on DINOv3\. We position ARQ\-VAE as a practical memory representation for TAS, and a promising direction for broader dataset condensation applications\.
-
 ## When Trackers Fail: VLM\-Guided Verification and Recovery for Robust Video Object Segmentation
 
 **Authors:** Valay Mahesh Bundele; Susmit Agrawal; Mehran Hosseinzadeh; The Nam Nguyen; Hendrik PA Lensch
@@ -388,153 +376,85 @@ Recent segmentation\-based trackers built on foundation models such as Segment A
 
 Video Object Segmentation \(VOS\) in complex and long videos is increasingly important for real\-world applications, where target objects often appear only intermittently within long temporal horizons\. However, existing benchmarks largely focus on temporally salient objects that remain visible for most of the video\. To address this gap, we introduce FaVOS \(A Benchmark for Video Object Segmentation with Fractional Temporal Visibility\), a benchmark designed to evaluate VOS methods under low temporal visibility\. We show that, in this regime, the standard $\\mathcal\{J\}$\\&amp;$\\mathcal\{F\}$ metric can collapse VOS evaluation into absence classification, because empty predictions receive high rewards on target\-absent frames\. Consequently, even a trivial empty\-mask predictor can outperform strong models such as SAM 3, revealing a fundamental mismatch between current metrics and practical VOS performance\. To mitigate this issue, we propose Volumetric $\\mathcal\{J\}$\\&amp;$\\mathcal\{F\}$, which evaluates mask sequences as spatio\-temporal volumes and reduces the dominance of target\-absence rewards while preserving sensitivity to segmentation quality and temporal structure\.
 
-## Localize Any Object in X\-Ray Security Scans without Human Annotation
+## RAWild: Toward Sensor\-Agnostic RAW Object Detection via Physics\-Guided Curve and Grid Modeling
 
-**Authors:** Yaqi Cai; Mingxuan Liu; Lorenzo Vaquero; Ning Wang; Nan Pu; Feng Xue; Elisa Ricci; Nicu Sebe
+**Authors:** Shuhong Liu; Gengjia Chang; Jun Liu; Xuangeng Chu; Yinqiang Zheng; Tatsuya Harada; Ziteng Cui
 
-**ID:** 152225 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
+**ID:** 153638 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=UcwEHDEJdH>) | [PDF](<https://openreview.net/pdf?id=UcwEHDEJdH>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152225>)
+[Paper](<https://openreview.net/forum?id=JsJIzf63sJ>) | [PDF](<https://openreview.net/pdf?id=JsJIzf63sJ>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153638>)
 
-_Abstract unavailable from the accessible public sources._
+Camera sensor RAW data offers intrinsic advantages for object detection, including richer bit depth, preserved physical information, and freedom from image signal processor \(ISP\) distortions\. However, varying exposure conditions, spectral sensitivities, and bit depths across devices introduce substantially larger domain gaps than sRGB, making sensor\-agnostic generalization a fundamental challenge\. In this study, we present a physics\-guided global\-local tone mapping framework for sensor\-agnostic RAW object detection\. By factoring sensor\-induced variations into a global tonal correction and a spatially adaptive local color adjustment, both driven by RAW distribution priors, our framework enables a single network to train jointly across heterogeneous sensors\. To further support cross\-sensor generalization, we construct a physics\-based RAW simulation pipeline that synthesizes realistic sensor outputs spanning diverse spectral sensitivities, illuminants, and sensor non\-idealities\. Extensive experiments across multiple RAW benchmarks, covering bit depths from 12 to 24, demonstrate state\-of\-the\-art \(SOTA\) performance in single\-dataset, mixed\-dataset, and challenging robustness settings\.
 
-## VideoMaMa\+\+: Temporally Consistent Video Matting via Preserve\-and\-Refine Tokens
+## AdapToPASS: Ambiguity\-aware Adaptive Spherical Transformer for Panoramic Semantic Segmentation
 
-**Authors:** Sangbeom Lim; Seoung Wug Oh; Heeji Yoon; Seungryong Kim; Joon\-Young Lee
+**Authors:** Soumyaratna Debnath; weiming zhang; Shriram Damodaran; Dingwen Xiao; Lin Wang
 
-**ID:** 148674 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+**ID:** 151962 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=vxJjCRu1Km>) | [PDF](<https://openreview.net/pdf?id=vxJjCRu1Km>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148674>)
+[Paper](<https://openreview.net/forum?id=WWQOepiVLd>) | [PDF](<https://openreview.net/pdf?id=WWQOepiVLd>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151962>)
 
-Diffusion\-based video matting has recently emerged as a leading approach, leveraging video diffusion priors from internet\-scale pretraining to achieve strong zero\-shot generalization from limited synthetic data\. However, the heavy compute of these diffusion backbones limits inference to a short chunk of just 6\-\-24 frames, so even ordinary videos span multiple chunks\. Because each chunk is matted independently from coarse mask guidance, existing methods fail to maintain consistency across chunk boundaries, producing flickering edges and discontinuous transparency\.     We address this with a mask\-guided diffusion\-matting framework built on two ideas\. The RGB and mask conditioning are represented as separate token streams that interact through full spatio\-temporal self\-attention, letting the model adaptively combine fine RGB texture with coarse mask layout rather than committing to a fixed channel\-wise fusion\. On top of this, we propose a novel pair of learnable embeddings, the preserve token and the refine token, that act as a per\-frame conditioning interface and enable a sliding\-window inference scheme in which already\-generated mattes are propagated across chunk boundaries for local temporal consistency, complemented by a globally shared reference anchor at every chunk to prevent error accumulation in long sequences without any additional training\.     Across standard video matting benchmarks and in\-the\-wild long footage, our framework outperforms prior diffusion\-based methods in both fine\-detail accuracy and temporal consistency, and uniquely maintains consistency across chunk boundaries on long videos\. Our code and weights will be publicly released\.
+Spherical Transformers have emerged as a promising framework for panoramic semantic segmentation \(PASS\) by operating directly on spherical geometry and alleviating projection\-induced distortions\. However, existing architectures rely on assumptions of canonical spherical structure and stable viewpoints, which are frequently violated in real\-world $360^\\circ$ imagery due to unconstrained camera motion, introducing significant contextual and geometric ambiguity\. Consequently, they lack adaptive mechanisms to model such ambiguity, limiting robustness to unseen spherical transformations\. In contrast, biological perception is inherently ambiguity\-aware: rather than estimating uncertainty probabilistically, it adapts to fluctuations in cue reliability caused by geometric and contextual variations, enabling stable interpretation under complex visual transformations\. Motivated by these observations, we first present a systematic analysis of existing PASS architectures under various unseen spherical transformations\. Following this, we introduce AdapToPASS, a novel, bio\-inspired Spherical Transformer that adaptively models contextual and geometric ambiguities for robust panoramic semantic segmentation\. At the core of AdapToPASS are the Adaptive Spherical Attention \(AdaSpA\) blocks that dynamically modulate attention according to local contextual ambiguity, mimicking the adaptive, context\-driven perception of biological vision\. To address geometric ambiguities, AdapToPASS employs Bifocal Spherical Representation that reconciles the trade\-off between field of view and spatial resolution; along with boundary supervision to emulate the boundary\-sensitive nature of biological vision\. We evaluate AdapToPASS in both indoor and outdoor semantic segmentation, where it consistently outperforms prior state\-of\-the\-art methods\. We further validate AdapToPASS under unseen spherical transformations, where it demonstrates strong robustness and surpasses the next\-best method by \+13\.38% relative improvement in mIoU on Stanford2D3D and \+18\.77% on WildPASS\. Additionally, we introduce a lightweight variant, AdapToPASS\-Tiny, with fewer than 2M parameters, which surpasses compact baselines while retaining robustness to spherical transformations\.
 
-## From Pixels to Concepts: Do Segmentation Models Understand What They Segment?
+## Fractal\-G: Topology\-Aware Heterogeneous Graphs for Medical Image Segmentation
 
-**Authors:** Shuang Liang; Zeqing Wang; Yuxian LI; Xihui Liu; Han Wang
+**Authors:** Bai Sun; Zixuan Tang
 
-**ID:** 139321 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+**ID:** 151924 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=XP1FvR8d8X>) | [PDF](<https://openreview.net/pdf?id=XP1FvR8d8X>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139321>)
+[Paper](<https://openreview.net/forum?id=WrIli56RIP>) | [PDF](<https://openreview.net/pdf?id=WrIli56RIP>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151924>)
 
-Segmentation is a fundamental vision task underlying numerous downstream applications\. Recent promptable segmentation models, such as Segment Anything Model 3 \(SAM3\), extend segmentation from category\-agnostic mask prediction to concept\-guided localization conditioned on high\-level textual prompts\. However, existing benchmarks primarily evaluate mask accuracy or object presence, leaving unclear whether these models faithfully ground the queried concept or instead rely on visually salient but semantically misleading cues\. We introduce CAFE: \\textbf\{C\}ounterfactual \\textbf\{A\}ttribute \\textbf\{F\}actuality \\textbf\{E\}valuation, a novel benchmark for evaluating concept\-faithful segmentation in promptable segmentation models\. Our \\textbf\{CAFE\} is built on attribute\-level counterfactual manipulation: the target region and ground\-truth mask are preserved, while attributes such as surface appearance, context, or material composition are modified to introduce misleading semantic cues\. The benchmark contains 2,146 paired test samples, each consisting of a target image, a ground\-truth mask, a positive prompt, and a misleading negative prompt\. These samples cover three counterfactual categories: Superficial Mimicry \(\\textbf\{SM\}\), Context Conflict \(\\textbf\{CC\}\), and Ontological Conflict \(\\textbf\{OC\}\)\. We evaluate various model types and sizes on our CAFE\. Experiments reveal a systematic gap between localization quality and concept discrimination: models often generate accurate masks even for misleading prompts, suggesting that strong mask prediction does not necessarily imply faithful semantic grounding\. Our CAFE provides a controlled benchmark for diagnosing whether promptable segmentation models perform concept\-faithful grounding rather than shortcut\-driven mask retrieval\.
+Medical image segmentation requires the precise alignment of macroscopic semantics and microscopic geometry, yet existing representation paradigms struggle to balance massive low\-frequency semantic context with ultra\-sparse, high\-frequency boundary details\. To address this fundamental information asymmetry, we introduce Fractal\-G, a plug\-and\-play multi\-scale fusion module that presents a continuous Grid\-Graph\-Grid feature reconstruction paradigm\. Within this framework, an Uncertainty\-Aware Fission Router dynamically translates regular image grids into a non\-uniform heterogeneous graph, adaptively allocating dense microscopic nodes to complex boundaries while retaining sparse macroscopic nodes in homogeneous background regions\. To ensure unbiased feature aggregation across these varying physical scales, an Area\-Aware Continuous Neighborhood Graph explicitly incorporates physical node sizes into the topological message passing\. Finally, a Topology\-Aware Implicit Renderer projects the unstructured graph back into dense, artifact\-free continuous feature fields\. Extensive experiments on diverse medical image segmentation tasks \(including skin lesions and polyps\) demonstrate that Fractal\-G easily integrable with mainstream backbones, consistently achieving state\-of\-the\-art geometric fidelity and cross\-resolution robustness with only 12\\% GFLOPs increase \(U\-Net based\)\. Our code is publicly available at https://anonymous\.4open\.science/r/Fractal\-G/\.
 
-## Focusable Monocular Depth Estimation
+## CT\-Lesion: A Multi\-Region CT Dataset for Co\-existing Lesion Segmentation and Detection
 
-**Authors:** Yuxin Du; Tao Lin; Zile Zhong; Runting Li; Xiyao Chen; Jiting Liu; Chenglin Liu; Yingcong Chen; Yuqian Fu; Bo Zhao
+**Authors:** Ruihan Lu; Leiqiang Pan; Shijie Wang; Dingyi Zhang; Jianjun Shen; Xin Yu
 
-**ID:** 153419\-\-3 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+**ID:** 139728 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-**Repeated source row:** 153419
+[Paper](<https://openreview.net/forum?id=7utEDwCdTe>) | [PDF](<https://openreview.net/pdf?id=7utEDwCdTe>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139728>)
 
-[Paper](<https://openreview.net/forum?id=LTHElHJrAh>) | [PDF](<https://openreview.net/pdf?id=LTHElHJrAh>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153419>)
+Lesion analysis in CT imaging, the task of identifying and delineating abnormal regions across diverse anatomical sites, plays a fundamental role in clinical diagnosis\. Existing CT lesion datasets typically focus on a single disease type within a specific region\. This design leads to two main limitations\. First, co\-existing lesions outside the predefined categories are left unannotated, so models may treat real lesions as background during training\. Second, lesion categories within any single region follow a long\-tailed distribution, in which rare but clinically important categories are underrepresented\. However, collecting enough samples for every rare category within a single region is often impractical\. We observe that certain lesion categories are rare in one region but occur more frequently in another, motivating the use of cross\-region complementarity for lesion detection\. In this work, we curate a multi\-region CT lesion dataset, namely CT\-Lesion, which covers brain, chest, and abdomen CT images\. Our CT\-Lesion is sourced from a private cohort of 500 clinical CT scans\. Seven radiologists spent approximately 1,600 working hours delineating lesions of any type, rather than restricting annotations to a predefined set of categories\. As a result, CT\-Lesion provides clinically confirmed voxel\-level segmentation masks and 28 fine\-grained lesion labels\. Moreover, we further group the lesions into 9 coarse categories to alleviate data scarcity issues\. To demonstrate the effectiveness and utility of CT\-Lesion, we benchmark the representative methods on CT\-Lesion for lesion segmentation and detection\. Furthermore, pretraining on CT\-Lesion improves model performance on external benchmarks, including LiTS, KiTS, and LIDC\-IDRI, demonstrating its potential as a transferable resource for CT lesion analysis\. Our dataset is available at Kaggle\.
 
-Monocular depth foundation models generalize well across scenes, yet they are typically optimized with uniform pixel\-wise objectives that do not distinguish user\-specified or task\-relevant target regions from the surrounding context\. We therefore introduce Focusable Monocular Depth Estimation \(FDE\), a region\-aware depth estimation task in which, given a specified target region, the model is required to prioritize foreground depth accuracy, preserve sharp boundary transitions, and maintain coherent global scene geometry\. To prioritize task\-critical region modeling, we propose FocusDepth, a prompt\-conditioned monocular relative depth estimation framework that guides depth modeling to focus on target regions via box/text prompts\. The core Multi\-Scale Spatial\-Aligned Fusion \(MSSA\) in FocusDepth spatially aligns multi\-scale features from Segment Anything Model 3 to the Depth Anything family and injects them through scale\-specific, gated conditional fusion\. This enables dense prompt cue injection without disrupting geometric representations, thereby endowing the depth estimation model with focused perception capability\. To study FDE, we establish FDE\-Bench, a target\-centric monocular relative depth benchmark built from image\-target\-depth triplets across five datasets, containing 252\.9K/72\.5K train/val triplets and 972 categories spanning real\-world and embodied simulation environments\. On FDE\-Bench, FocusDepth consistently improves over globally fine\-tuned DA2/DA3 baselines under both box and text prompts, with the largest gains appearing in target boundary and foreground regions while preserving global scene geometry\. Ablations show that MSSA's spatial alignment is the key design factor, as disrupting prompt\-geometry correspondence increases AbsRel by up to 13\.8%\.
+## U\-Bench: A Comprehensive Understanding of U\-Net through 100\-Variant Benchmarking
 
-## Matching\-Based Few\-Shot Semantic Segmentation Models Are Interpretable by Design
+**Authors:** Fenghe Tang; Chengqi Dong; Wenxin \(Wendy\) Ma; Zikang Xu; Heqin Zhu; Zihang Jiang; Rongsheng Wang; Yuhao Wang; Chenxu Wu; Yingtai Li; S\. Kevin Zhou
 
-**Authors:** Pasquale De Marinis; Uzay Kaymak; Rogier Brussee; Gennaro Vessio; Giovanna Castellano
+**ID:** 138939 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-**ID:** 150223\-\-2 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+[Paper](<https://openreview.net/forum?id=v9KRWVJIjb>) | [PDF](<https://openreview.net/pdf?id=v9KRWVJIjb>) | [Official poster](<https://neurips.cc/virtual/2026/poster/138939>)
 
-**Repeated source row:** 150223
+Over the past decade, U\-Net has been the dominant architecture in medical image segmentation, leading to the development of thousands of U\-shaped variants\. Despite its widespread adoption, there is still no comprehensive benchmark to systematically evaluate their performance and utility, largely because of insufficient statistical validation and limited consideration of efficiency and generalization across diverse datasets\. To bridge this gap, we present U\-Bench, the first large\-scale, statistically rigorous 2D benchmark that evaluates 100 U\-Net variants across 28 datasets and 10 imaging modalities\. Our contributions are threefold: \(1\) Comprehensive Evaluation: U\-Bench evaluates models along three key dimensions: statistical robustness, zero\-shot generalization, and computational efficiency\. We introduce a novel metric, U\-Score, which jointly captures the performance\-efficiency trade\-off, offering a deployment\-oriented perspective on model progress\. \(2\) Systematic Analysis and Model Selection Guidance: We summarize key findings from the large\-scale evaluation and systematically analyze the impact of dataset characteristics and architectural paradigms on model performance\. Based on these insights, we propose a model advisor agent to guide researchers in selecting the most suitable models for specific datasets and tasks\. \(3\) Public Availability: We provide all code, models, protocols, and weights, enabling the community to reproduce our results and extend the benchmark with future methods\. In summary, U\-Bench not only exposes gaps in previous evaluations but also establishes a foundation for fair, reproducible, and practically relevant benchmarking in the next decade of U\-Net\-based segmentation models\. The weights, datasets, and results will be released after the acceptance\.
 
-[Paper](<https://openreview.net/forum?id=jqykrG5xAb>) | [PDF](<https://openreview.net/pdf?id=jqykrG5xAb>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150223>)
+## NormLift: From Lifted Features To Semantic Reliability In 3D Gaussian Splatting
 
-Few\-Shot Semantic Segmentation \(FSS\) models achieve strong performance in segmenting novel classes with minimal labeled examples, yet their decision\-making processes remain largely opaque\. While explainable AI has advanced significantly in standard computer vision tasks, interpretability in FSS remains underexplored despite its critical importance for understanding model behavior and guiding support set selection in data\-scarce scenarios\. We argue that matching\-based FSS models are interpretable by design: their core similarity computation between support and query features constitutes an inherent attribution mechanism\. Our approach, Affinity Explainer \(AffEx\), makes this intrinsic interpretability explicit by extracting attribution maps directly from matching scores at multiple feature levels, without requiring gradients or external perturbations\. We extend standard interpretability evaluation metrics to the FSS domain and propose additional metrics to better capture the practical utility of explanations in few\-shot scenarios\. Comprehensive experiments on FSS benchmark datasets demonstrate that AffEx significantly outperforms adapted standard attribution methods, confirming that the matching mechanism itself is the key driver of interpretability\. Qualitative analysis reveals structured, coherent attention patterns that align with model architectures and enable effective model diagnosis, laying the groundwork for interpretable FSS research\.
+**Authors:** Yihan Zang; Da Li; Dominik Engel; Shinkyu Park; Ivan Viola
 
-## BrainEM: A Large\-Scale and Diverse Benchmark for EM Neuron Segmentation in Connectomics
+**ID:** 151918 | **Topic source:** official | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
 
-**Authors:** Zhenghua Li; Lanyue Zhang; Zekang Yang; Kai Li; Yuwei Peng; Song\-Hai Shi; Xiaolin Hu
+[Paper](<https://openreview.net/forum?id=WvJHXxwn2e>) | [PDF](<https://openreview.net/pdf?id=WvJHXxwn2e>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151918>)
 
-**ID:** 139121\-\-3 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+Training\-free weighted aggregation is widely used to lift 2D semantic features onto 3D Gaussians for open\-vocabulary scene understanding, yet its theoretical role remains insufficiently understood\. Existing analyses typically justify this operation from the rendering side, treating Gaussian features as linearly composable Euclidean variables for reconstructing 2D feature maps\. However, this view does not match downstream 3D usage, where each Gaussian is often queried independently in a cosine\-based embedding space\. We revisit feature lifting from the 3D side and formulate per\-Gaussian assignment as a cosine alignment problem on the CLIP unit sphere\. Under this objective, the $\\ell\_2$\-normalized semantic back\-projected feature emerges as the closed\-form solution, providing a complementary interpretation of the standard lifting rule from the perspective of per\-Gaussian semantic assignment\. The same formulation further yields a norm decomposition into intra\-view and inter\-view consistency, suggesting that feature magnitude itself can serve as a semantic reliability signal\. Calibrated by effective multi\-view support, this reliability score guides a mode\-voting refinement that preserves CLIP feature validity by avoiding linear averaging\. Experiments on open\-vocabulary 3D semantic segmentation show that NormLift is an efficient, training\-free framework that achieves strong performance across evaluation protocols\.
 
-**Repeated source row:** 139121
+## Preference\-Guided Adaptation for Open\-Vocabulary Semantic Segmentation via Prompt Disagreement
 
-[Paper](<https://openreview.net/forum?id=juzLIwAl0Y>) | [PDF](<https://openreview.net/pdf?id=juzLIwAl0Y>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139121>)
+**Authors:** Hyun\-Kurl Jang; Jihun Kim; Kuk\-Jin Yoon
 
-Connectomics requires dense segmentation of large\-scale electron microscopy \(EM\) volumes using models trained on small labeled blocks\. In practice, a connectomics lab facing a new raw volume has two options: annotate a small block and train on it, or skip annotation and train on the union of available public labeled datasets\. We introduce BrainEM, a benchmark that formalizes these options as two standard tracks: the Same\-Source Track \(Annotate\-and\-Train\) and the Cross\-Source Track \(Reuse\-and\-Train\)\. BrainEM brings together 16 EM datasets, including one in\-house mouse dataset that we contribute, spanning multiple species, imaging modalities, and resolutions\. We further add large\-scale test volumes that bring the evaluation closer to realistic practice, and four diverse test targets in the Cross\-Source Track\. The data, post\-processing, and evaluation metrics are fixed across all methods, and the framework is fully model\-data decoupled so that new methods can be added with minimal effort\. We conduct a systematic evaluation of six representative baselines covering the main technical directions in EM neuron segmentation, making BrainEM the first systematic evaluation at large scale and across diverse cross\-source targets\. The results differ from prior small\-scale evaluations: rankings on the Same\-Source Track no longer match those reported on small CREMI splits, and methods diverge sharply on the Cross\-Source Track\. Both tracks still leave clear room for improvement\. We release BrainEM as a public platform to support unified comparison and faster method development in connectomics\. All datasets and code are available at https://github\.com/kwinderic/BrainEM
+**ID:** 154181 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
 
-## SetCon: Towards Open\-Ended Referring Segmentation via Set\-Level Concept Prediction
+[Paper](<https://openreview.net/forum?id=FcPsdOYorV>) | [PDF](<https://openreview.net/pdf?id=FcPsdOYorV>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154181>)
 
-**Authors:** Zhixiong Zhang; Yizhuo Li; Shuangrui Ding; Yuhang Zang; Shengyuan Ding; Long Xing; Yibin Wang; Qiaosheng Zhang; Jiaqi Wang
+Open\-vocabulary semantic segmentation \(OVSS\) enables pixel\-level prediction over arbitrary text\-specified vocabularies and has shown strong generalization on common benchmarks\. However, OVSS performance often degrades in specialized domains such as medical imaging, remote sensing, and industrial inspection, where dense pixel\-level masks for adaptation are costly to obtain and require domain\-specific expertise\. We propose a preference\-guided adaptation framework that replaces dense mask supervision with binary preferences\. We observe that different prompt templates produce systematically different segmentations for the same image, a phenomenon we call prompt disagreement, and we repurpose it as a built\-in source of preference supervision\. Building on this, we mine localized preference queries from regions of high cross\-template uncertainty, and adapt the OVSS model with Region\-Localized Preference Optimization \(RLPO\) together with consistency regularization that stabilizes updates outside the queried region\. Across extensive experiments on the MESS benchmark, the proposed method achieves consistent gains across diverse OVSS backbones without any pixel\-level annotation, and remains effective under noisy preferences\.
 
-**ID:** 150414\-\-3 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+## Codebook\-Guided Cross\-Modal Knowledge Distillation for Structurally Heterogeneous Features
 
-**Repeated source row:** 150414
+**Authors:** Dae Ung Jo; Jongin Lim; YoungJoon Yoo; Daeho Um
 
-[Paper](<https://openreview.net/forum?id=iDe99buVDR>) | [PDF](<https://openreview.net/pdf?id=iDe99buVDR>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150414>)
+**ID:** 155243 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
 
-Referring segmentation grounds natural\-language queries to pixel\-level masks, but extending it to complex scenarios with multiple instances, cross\-category groups, or open\-ended target sets remains challenging\. Previous Large Vision Language Model \(LVLM\)\-based methods represent referred targets with one or more special tokens sequentially, treating multiple targets as separate outputs rather than a coherent set and offering little incentive to capture set\-level properties such as completeness and mutual exclusivity\. We reformulate open\-ended referring segmentation as explicit set\-level concept prediction and propose Set\-Concept Segmentation \(SetCon\), which uses LVLM\-generated natural\-language concepts, instead of segmentation\-specific tokens, as semantic conditions for joint mask\-set decoding\. A hierarchical semantic decomposition first predicts a shared set\-level concept defining the target scope and then refines it into fine\-grained concept groups aligned with target subsets\. To support this, a two\-stage annotation pipeline augments existing reasoning segmentation datasets with hierarchical semantic supervision \(236k samples, 784k concept phrases\)\. SetCon achieves state\-of\-the\-art results on image benchmarks \(\+3\.3 gIoU on gRefCOCO, \+12\.1 gIoU on MUSE\), with margins that grow as the number of referred targets increases\. The concept interface also transfers to video under a detect\-and\-track setting, yielding new state\-of\-the\-art results on seven referring video benchmarks, including \+10\.9 J&amp;F on MeViS and \+12\.4 J&amp;F on Ref\-SeCVOS\. The code, model checkpoints, and dataset annotations will be released\.
+[Paper](<https://openreview.net/forum?id=7C9JPmZMKT>) | [PDF](<https://openreview.net/pdf?id=7C9JPmZMKT>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155243>)
 
-## Cyclic Discrete Diffusion: A Novel Multi\-Class Segmentation Refinement Technique
-
-**Authors:** LIBO CHEN; Souvik Ghosh; Vinay Namboodiri
-
-**ID:** 155503 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=55XffjPoPJ>) | [PDF](<https://openreview.net/pdf?id=55XffjPoPJ>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155503>)
-
-We cast image segmentation refinement as a \\textit\{discrete\} diffusion process\. To solve this task we introduce Cyclic Discrete Diffusion \(CDD\), a novel forward–reverse formulation with a cyclic label topology that maps a discrete label set to the uniform distribution and back\. Instead of injecting Gaussian noise as is done for continuous diffusion, CDD evolves segmentation masks through label jumps: at each step, every pixel either remains in its current class or jumps to the next label with a fixed rate\. This jump\-or\-stay mechanism defines a finite\-state Markov process with bounded forward and reverse steps, featuring analytically consistent and tractable reverse dynamics\.      CDD operates natively in a multi\-class label space, enabling joint      refinement of all classes in a single pass without requiring class\-wise decomposition, as commonly needed in prior binary refinement approaches\. The proposed formulation admits a finite and controllable number of refinement steps, for which we provide a theoretical characterization based on spectral gap analysis\. We evaluate CDD across diverse segmentation tasks, including multi\-class semantic,      instance\-level, and binary segmentation refinement\. Our method consistently improves both region accuracy and boundary quality across multiple backbones and datasets\.
-
-## RiSE: Residual Subspace Expert for Generalizable Text\-Centric Image Forgery Localization
-
-**Authors:** Kahim Wong; Kemou Li; Yiming Chen; Haiwei Wu; Jiantao Zhou
-
-**ID:** 153544\-\-2 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 153544
-
-[Paper](<https://openreview.net/forum?id=KaKH1k0VkJ>) | [PDF](<https://openreview.net/pdf?id=KaKH1k0VkJ>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153544>)
-
-_Abstract unavailable from the accessible public sources._
-
-## TopoRefine: Plug\-and\-Play Topology\-Aware Contour Refinement for Building Segmentation
-
-**Authors:** Yunhui Zhu; Buliao Huang
-
-**ID:** 148776\-\-2 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 148776
-
-[Paper](<https://openreview.net/forum?id=v8bM1HAB90>) | [PDF](<https://openreview.net/pdf?id=v8bM1HAB90>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148776>)
-
-Building segmentation has recently benefited from foundation segmentation models such as SAM, which offer strong generalization and scalable deployment through simple prompts\. However, SAM\-style models still produce pixel\-wise masks, whose fragmented regions and irregular boundaries often fail to preserve the geometric regularity of buildings, making direct contour vectorization unreliable\. Existing attempts to improve building polygonization typically modify the segmentation decoder or introduce additional polygon prediction branches, increasing adaptation costs and weakening the portability of pretrained foundation models\. In this paper, we ask whether accurate building polygonization can be achieved directly from frozen segmentation outputs, without modifying or retraining the underlying model\. To this end, we propose TopoRefine, a plug\-and\-play topology\-aware contour refinement framework that converts predicted contours into geometry\-consistent building polygons\. Unlike conventional contour refinement methods, which follow a fixed\-topology paradigm and can only adjust a predefined set of contour points, TopoRefine performs topology\-adaptive polygon evolution by jointly modeling vertex insertion, vertex deletion, and coordinate refinement\. This allows the refined polygon to correct structural errors inherited from frozen segmentation outputs and progressively align with the underlying building geometry\. Extensive experiments on three building segmentation benchmarks demonstrate that TopoRefine generalizes across different segmentation pipelines and consistently improves both segmentation accuracy and geometric consistency, achieving notable gains such as \+6\.17\\% AP and \+3\.53\\% PolySim on SAM 3\.
-
-## Cross\-Foundation Complementary Learning Systems for Continual Test\-Time Adaptation in Open\-Vocabulary Semantic Segmentation
-
-**Authors:** Guan\-Yu Chen; Wei\-Hua Li; Huei\-Fang Yang; Chu\-Song Chen
-
-**ID:** 148739\-\-2 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 148739
-
-[Paper](<https://openreview.net/forum?id=vP6mCzbls0>) | [PDF](<https://openreview.net/pdf?id=vP6mCzbls0>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148739>)
-
-Open\-vocabulary semantic segmentation \(OVSS\) models enable dense prediction for classes specified at test time, but continual test\-time adaptation \(CTTA\) over long, non\-stationary streams can corrupt their language\-aligned semantic interface, which we diagnose through synonym\-prompt text alignment\. We propose Cross\-Foundation Complementary Learning Systems \(XF\-CLS\), a source\-free OVSS\-CTTA framework that makes lightweight online adaptation stable over long horizons\. Inspired by Complementary Learning Systems, which couple rapid plastic learning with slow consolidation, XF\-CLS decouples plasticity from stabilization: a single fast online adaptation path updates only a small set of visual normalization parameters, a horizon\-aware, source\-anchored slow parameter memory consolidates stable changes and recovers from drift, and a frozen cross\-foundation structural observer supplies a non\-drifting structural prior for reliability\-aware recovery and dense output refinement\. Rather than training an additional teacher or using cross\-foundation pseudo\-label supervision, the frozen path preserves the open\-vocabulary interface while correcting degraded visual structure\. On long\-horizon Cityscapes\-to\-ACDC and OnDA streams, XF\-CLS achieves 32\.92 and 30\.75 mIoU, improving the NACLIP no\-adapt baseline by \+9\.00 and \+4\.13 mIoU, respectively, and outperforming continual OVSS\-TTA baselines\. Decomposition studies and text\-alignment diagnostics show that source\-anchored recovery prevents long\-horizon collapse, while frozen cross\-foundation refinement adds consistent gains without updating extra parameters\. XF\-CLS provides a stable, parameter\-efficient route to source\-free continual open\-vocabulary dense prediction, with inference overhead dominated by one additional frozen\-backbone forward pass\.
-
-## Image Generation for Automotive Lidar Open\-vocabulary Semantic Segmentation
-
-**Authors:** Nermin Samet; Gilles Puy; Renaud Marlet
-
-**ID:** 151641\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 151641
-
-[Paper](<https://openreview.net/forum?id=Z5dOCGOl4Y>) | [PDF](<https://openreview.net/pdf?id=Z5dOCGOl4Y>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151641>)
-
-This paper presents a new method for the zero\-shot open\-vocabulary semantic segmentation \(OVSS\) of 3D automotive lidar data\. To circumvent the recognized image\-text modality gap that is intrinsic to approaches based on Vision Language Models \(VLMs\) such as CLIP, our method relies instead on image generation from text, to create prototype images\. Given a 3D network distilled from a 2D Vision Foundation Model \(VFM\), we then label a point cloud by matching 3D point features with 2D image features of these prototypes\. Our method is state\-of\-the\-art for OVSS on nuScenes and SemanticKITTI\.
-
-## WaveMamba: Wave\-Inspired Cross\-Modal Fusion for Robust event\-image Semantic Segmentation
-
-**Authors:** Adeel F Mirza; Zaiyue Yang; Muntazir Hussain
-
-**ID:** 151756\-\-2 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 151756
-
-[Paper](<https://openreview.net/forum?id=YIa3B1RBBV>) | [PDF](<https://openreview.net/pdf?id=YIa3B1RBBV>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151756>)
-
-Event\-image semantic segmentation is promising for autonomous driving and robotics because event cameras complement frame images under rapid motion, low illumination, and high dynamic range\. However, effective multimodal segmentation remains difficult due to asynchronous sensing, sparse\-dense modality mismatch, and the cost of heavy cross\-modal interaction modules\. We propose WaveMamba, a dual\-branch event\-image semantic segmentation framework that combines hierarchical GroupMamba encoders with a Mamba\-Wave Cross\-Modal Fusion \(MWCMF\) module\. Instead of relying on explicit registration or attention\-heavy fusion, MWCMF performs implicit cross\-modal propagation through channel\-wise and spatial\-wise wave\-guided gating in the spectral domain, followed by Mamba\-based refinement\. Experiments on DDD17 and DSEC show that WaveMamba achieves state\-of\-the\-art 78\.75 and 76\.00 mIoU, respectively\. Under rain\- and fog\-corrupted evaluation on DSEC, WaveMamba further attains 74\.0 mIoU, indicating improved robustness under degraded visual conditions\.
+Cross\-modal knowledge distillation transfers knowledge from a teacher modality to a student modality\. Existing feature\-level alignment methods typically assume that teacher and student features reside in structurally alignable representation spaces\. However, this assumption does not hold when cross\-modal features are structurally heterogeneous and lack clear unit\-level correspondence, such as 2D spatial visual grids and 1D temporal audio sequences, thereby limiting the applicability of feature\-level alignment\. To address this challenge, we propose a cross\-modal distillation framework that enables effective knowledge transfer across structurally heterogeneous feature spaces via a vector\-quantized codebook\. Specifically, teacher features are abstracted into a set of vector\-form codes regardless of their original feature structure, and the selected codes serve as concept\-level anchors for student learning\. Code selection is guided by both task relevance and student compatibility, allowing the student to receive transferable teacher knowledge without requiring direct unit\-level feature alignment\. Experimental results across diverse cross\-modal distillation scenarios demonstrate the effectiveness of the proposed framework on classification and semantic segmentation tasks\.
 
 ## S$^2$\-RL: Sample\-Set Dual Reinforcement Learning for Generative Semantic Segmentation Dataset Distillation
 
@@ -546,61 +466,21 @@ Event\-image semantic segmentation is promising for autonomous driving and robot
 
 While dataset distillation has witnessed significant advances in image classification, its extension to dense prediction tasks such as semantic segmentation is plagued by two core bottlenecks: bi\-level optimization\-based approaches suffer from prohibitive computational costs stemming from pixel\-wise gradient unrolling, whereas proxy\-based generative methods merely infuse visual textures into fixed semantic masks derived from real data, thus failing to condense rich semantic knowledge into a compact set of informative, novel scene generations\. To address both bottlenecks simultaneously, we propose a novel Sample\-Set Reinforcement Learning \(S$^2$\-RL\) framework for generative semantic segmentation dataset distillation \(SSDD\)\. Specifically, S$^2$\-RL formulates SSDD as a diffusion model based text\-to\-image generation paradigm, enabling flexible generation of images with informative, novel semantic distributions via a concise text prompt\. Furthermore, we fine\-tune a diffusion policy via GRPO, leveraging a sample\-set dual reward paradigm: for individual samples, it enforces semantic alignment with input text prompts and intra\-class feature diversity; for sample sets, it maximizes inter\-sample semantic distribution diversity by solving a contextual multi\-armed bandit problem\. These design choices enable S$^2$\-RL to distill large\-scale semantic segmentation datasets into a compact set of generated samples that encapsulate diverse, informative semantic knowledge without the need of pixel\-wise gradient unrolling\. Extensive experiments on the ADE20K and COCO datasets demonstrate that S$^2$\-RL achieves substantial and consistent improvements over state\-of\-the\-art baselines, establishing a new benchmark for SSDD\.
 
-## RAWild: Toward Sensor\-Agnostic RAW Object Detection via Physics\-Guided Curve and Grid Modeling
+## Prism: Harmonizing Missing Modalities via Implicit Structural Alignment on Lightweight Pulse RWKV for Multimodal Crack Segmentation
 
-**Authors:** Shuhong Liu; Gengjia Chang; Jun Liu; Xuangeng Chu; Yinqiang Zheng; Tatsuya Harada; Ziteng Cui
+**Authors:** Hui Liu; Chen Jia; Fan Shi; Xu Cheng; Mianzhao Wang; Jiangpeng Zheng; Shengyong Chen
 
-**ID:** 153638\-\-2 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
+**ID:** 150387 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-**Repeated source row:** 153638
+[Paper](<https://openreview.net/forum?id=iQNEliPPRi>) | [PDF](<https://openreview.net/pdf?id=iQNEliPPRi>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150387>)
 
-[Paper](<https://openreview.net/forum?id=JsJIzf63sJ>) | [PDF](<https://openreview.net/pdf?id=JsJIzf63sJ>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153638>)
-
-_Abstract unavailable from the accessible public sources._
-
-## VideoMaMa\+\+: Temporally Consistent Video Matting via Preserve\-and\-Refine Tokens
-
-**Authors:** Sangbeom Lim; Seoung Wug Oh; Heeji Yoon; Seungryong Kim; Joon\-Young Lee
-
-**ID:** 148674\-\-2 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 148674
-
-[Paper](<https://openreview.net/forum?id=vxJjCRu1Km>) | [PDF](<https://openreview.net/pdf?id=vxJjCRu1Km>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148674>)
-
-Diffusion\-based video matting has recently emerged as a leading approach, leveraging video diffusion priors from internet\-scale pretraining to achieve strong zero\-shot generalization from limited synthetic data\. However, the heavy compute of these diffusion backbones limits inference to a short chunk of just 6\-\-24 frames, so even ordinary videos span multiple chunks\. Because each chunk is matted independently from coarse mask guidance, existing methods fail to maintain consistency across chunk boundaries, producing flickering edges and discontinuous transparency\.     We address this with a mask\-guided diffusion\-matting framework built on two ideas\. The RGB and mask conditioning are represented as separate token streams that interact through full spatio\-temporal self\-attention, letting the model adaptively combine fine RGB texture with coarse mask layout rather than committing to a fixed channel\-wise fusion\. On top of this, we propose a novel pair of learnable embeddings, the preserve token and the refine token, that act as a per\-frame conditioning interface and enable a sliding\-window inference scheme in which already\-generated mattes are propagated across chunk boundaries for local temporal consistency, complemented by a globally shared reference anchor at every chunk to prevent error accumulation in long sequences without any additional training\.     Across standard video matting benchmarks and in\-the\-wild long footage, our framework outperforms prior diffusion\-based methods in both fine\-detail accuracy and temporal consistency, and uniquely maintains consistency across chunk boundaries on long videos\. Our code and weights will be publicly released\.
-
-## From Pixels to Concepts: Do Segmentation Models Understand What They Segment?
-
-**Authors:** Shuang Liang; Zeqing Wang; Yuxian LI; Xihui Liu; Han Wang
-
-**ID:** 139321\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 139321
-
-[Paper](<https://openreview.net/forum?id=XP1FvR8d8X>) | [PDF](<https://openreview.net/pdf?id=XP1FvR8d8X>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139321>)
-
-Segmentation is a fundamental vision task underlying numerous downstream applications\. Recent promptable segmentation models, such as Segment Anything Model 3 \(SAM3\), extend segmentation from category\-agnostic mask prediction to concept\-guided localization conditioned on high\-level textual prompts\. However, existing benchmarks primarily evaluate mask accuracy or object presence, leaving unclear whether these models faithfully ground the queried concept or instead rely on visually salient but semantically misleading cues\. We introduce CAFE: \\textbf\{C\}ounterfactual \\textbf\{A\}ttribute \\textbf\{F\}actuality \\textbf\{E\}valuation, a novel benchmark for evaluating concept\-faithful segmentation in promptable segmentation models\. Our \\textbf\{CAFE\} is built on attribute\-level counterfactual manipulation: the target region and ground\-truth mask are preserved, while attributes such as surface appearance, context, or material composition are modified to introduce misleading semantic cues\. The benchmark contains 2,146 paired test samples, each consisting of a target image, a ground\-truth mask, a positive prompt, and a misleading negative prompt\. These samples cover three counterfactual categories: Superficial Mimicry \(\\textbf\{SM\}\), Context Conflict \(\\textbf\{CC\}\), and Ontological Conflict \(\\textbf\{OC\}\)\. We evaluate various model types and sizes on our CAFE\. Experiments reveal a systematic gap between localization quality and concept discrimination: models often generate accurate masks even for misleading prompts, suggesting that strong mask prediction does not necessarily imply faithful semantic grounding\. Our CAFE provides a controlled benchmark for diagnosing whether promptable segmentation models perform concept\-faithful grounding rather than shortcut\-driven mask retrieval\.
-
-## RipBench: A Unified Benchmark for Multi\-Level Rip Current Detection, Classification and Segmentation
-
-**Authors:** Andrei Dumitriu; Aakash Ralhan; Florin Miron; Florin Tatui; Radu Tudor Ionescu; Radu Timofte
-
-**ID:** 139371\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 139371
-
-[Paper](<https://openreview.net/forum?id=UL7UbwuqbU>) | [PDF](<https://openreview.net/pdf?id=UL7UbwuqbU>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139371>)
-
-Rip currents are a serious and often under\-addressed threat to beach safety, and the leading cause of coastal drownings worldwide\. They are difficult to detect due to their amorphous structure, similarity to the background, and large variability in viewpoints and environments\. Despite their dangers and growing interest in automated detection, existing research remains fragmented across datasets, metrics, models and approaches, leading to an incomplete understanding of model performance\. We introduce RipBench, a unified benchmark that enables controlled evaluation of rip current detection spanning multiple tasks, including classification, axis\-aligned and oriented object detection, and instance, semantic, and panoptic segmentation, on the same data with standardized splits\. This allows direct comparison of model performance on all levels of visual abstraction\. Across $304$ videos \($303\{,\}491$ frames\) collected from diverse coastlines, our results expose a clear performance gap between coarse recognition and precise spatial understanding\. While models achieve near\-saturated classification performance, accurate localization proves to be a substantially more challenging task, with performance varying across tasks\. All tasks are supported with carefully curated annotations and evaluated using both standard and safety\-critical metrics, with a focus on the $F\_2$ score to emphasize recall in this safety\-critical setting\. RipBench, along with multiple baseline models per task, is publicly available at \\url\{https://RipBench\.ai\} to support progress in real\-world, multi\-task vision for beach safety\.
+In multimodal crack segmentation for industrial facilities, the key challenge is preventing missing modalities from degrading pixel\-level performance while keeping computation low\. Existing methods struggle to harmonize missing modality effects and to efficiently, adaptively perceive cross\-modal topology\. We propose Prism, resilient to any modality miss, leveraging implicit structural alignment to harmonize missing data for high\-quality segmentation at low computational cost\. Prism comprises Modal Reconstructor \(MoRe\), Prompt\-as\-Knowledge Distillation \(PaKD\), a Sparse Gated Pulse Propagation Mixer \(PulseMixer\), and an Uncertainty\-guided Connectivity Propagation Fusion module \(UCPF\)\. MoRe utilizes the manifolds of available modalities to probabilistically harmonize missing data, empowered by PaKD to master where to look via prompt distillation\. PulseMixer efficiently breaks the static parameterization bottleneck and perceives anisotropic textures via Pulse Propagation Insight \(PPI\) and sparse gating\. UCPF fuses cross\-modal cues using uncertainty estimation to produce clear segmentation maps while suppressing background noise\. Experiments on three multimodal crack datasets demonstrate strong performance under diverse modality\-miss scenarios\. On the depth dataset with 90\\% missing depth modal, Prism achieves 0\.8217 in F1 and 0\.8478 in mIoU with only 2\.62M parameters\.
 
 ## Pixels to Tokens: Token Space Efficient Active Learning for Low\-Budget Semantic Segmentation
 
 **Authors:** Utku Cicek; Mahip Singh; Ziyao Shang; Kimathi Kaai; C Thomas; Pablo Guerrero; Alexander Wong; Sirisha Rambhatla
 
-**ID:** 148535\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 148535
+**ID:** 148535 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
 [Paper](<https://openreview.net/forum?id=xBIIoVBT4V>) | [PDF](<https://openreview.net/pdf?id=xBIIoVBT4V>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148535>)
 
@@ -620,37 +500,51 @@ Domain generalised semantic segmentation \(DGSS\) has recently benefited from co
 
 **Authors:** Zixun Wang; Ben Dai
 
-**ID:** 154387\-\-2 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 154387
+**ID:** 154387 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
 [Paper](<https://openreview.net/forum?id=DwqwJHYbqV>) | [PDF](<https://openreview.net/pdf?id=DwqwJHYbqV>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154387>)
 
 In semantic segmentation, a recent line of RankSEG methods directly optimizes Dice/IoU scores at inference time, improving alignment with evaluation metrics without modifying model training\. Despite its theoretical and empirical success, RankSEG relies on the restrictive Conditional Independence Assumption \(CIA\), which ignores crucial label correlations and therefore degrades performance in ambiguous or low\-contrast scenarios\. However, accounting for full label dependence is computationally prohibitive, requiring $\\mathcal\{O\}\(d^3\)$ time\. To address this, we replace the CIA with a Spatially Localized Dependence \(SLD\) structure that captures local label correlations while keeping the dependence model tractable\. We further overcome the remaining computational bottleneck via a Reciprocal Moment Approximation coupled with a novel fixed\-point optimization strategy that eliminates exhaustive search\. The proposed algorithm achieves a highly practical $\\mathcal\{O\}\(d \\log d\)$ complexity and consistently outperforms conventional argmax and CIA\-based RankSEG across diverse segmentation benchmarks\. Improvements are significant in low\-contrast or small\-object scenarios, where label dependence offers valuable signals complementary to image information for accurate segmentation\.
 
-## Pixels to Tokens: Token Space Efficient Active Learning for Low\-Budget Semantic Segmentation
+## Efficient SAM 3 Adaptation for Multi\-Class Semantic Segmentation via Dense Competitive Representations
 
-**Authors:** Utku Cicek; Mahip Singh; Ziyao Shang; Kimathi Kaai; C Thomas; Pablo Guerrero; Alexander Wong; Sirisha Rambhatla
+**Authors:** WENBIN LIAO; Hao Zhu; Yike Ma; Hao Jiang; Feng Dai
 
-**ID:** 148535\-\-3 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+**ID:** 149034 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-**Repeated source row:** 148535
+[Paper](<https://openreview.net/forum?id=tLUmLVigLs>) | [PDF](<https://openreview.net/pdf?id=tLUmLVigLs>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149034>)
 
-[Paper](<https://openreview.net/forum?id=xBIIoVBT4V>) | [PDF](<https://openreview.net/pdf?id=xBIIoVBT4V>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148535>)
+The Segment Anything Model 3 \(SAM 3\) has achieved significant progress in \*Promptable Concept Segmentation \(PCS\)\* by processing short noun phrases to generate segmentation masks with unique instance identifiers\. While SAM3 excels at single\-concept segmentation, it falls short in complex, real\-world environments where multiple concepts must be segmented simultaneously\. In particular, SAM3 typically fails to simultaneously process concepts with semantic overlap, leading to semantic misclassifications and redundant mask predictions\. Moreover, as the number of concepts increases, the independent inference paradigm introduces prohibitive inference latency\. To address these limitations, we propose the \*\*D\*\*ense \*\*C\*\*ompetitive \*\*R\*\*epresentations \*\*SAM\*\* \(\*\*DCR\-SAM\*\*\) framework\. By decoupling cross\-modal interactions, the proposed method alleviates the inference latency\. To resolve semantic misclassifications, DCR\-SAM dynamically aligns textual concepts with visual representations and incorporates a dense competition head to enforce explicit inter\-class competition\. Furthermore, a learnable background token is applied to absorb non\-target objects dynamically\. These mechanisms effectively suppress overlapping predictions and generate high\-fidelity masks\. Extensive experimental evaluations across multiple benchmarks demonstrate that the proposed framework: I\) achieves a 2\.3\\% $\\sim$ 10\.7\\% performance improvement over state\-of\-the\-art methods, II\) delivers a 33$\\times$ inference speedup compared to the native SAM 3, and III\) exhibits strong robustness across diverse scenarios\. All code will be released\.
 
-Semantic segmentation typically requires dense pixel\-level annotations, creating a prohibitive bottleneck for budget\-constrained applications\. While foundation models and vision transformers \(ViTs\) have redefined visual representations, current active learning \(AL\) strategies for these backbones largely operate at the patch or region level, where annotation requirements remain high\. Extending ViT\-based AL to the pixel\-level, low\-budget regime is uniquely challenging: with as little as one pixel query per image, a method must simultaneously identify the most informative locations and train a reliable decoder head from an extremely sparse signal\. We introduce TEAL \(Token\-space Efficient Active Learning\), the first pixel\-level AL framework built around ViT representations\. TEAL uses a frozen DINOv3 backbone and performs diversity\-based selection directly on its native token lattice, avoiding the artifacts introduced by interpolating token embeddings to dense pixel resolutions\. Our framework applies a two\-level MaxHerding strategy over multi\-layer token descriptors to select representative candidates, followed by margin\-based uncertainty refinement on a finer decoder grid\. Across CamVid, Cityscapes, ADE20K, and Pascal Context, TEAL consistently outperforms previous baselines under extreme label scarcity\. After 10 rounds of 1\-pixel\-per\-image queries, TEAL improves over the strongest baseline by up to $\+\\textbf\{14\.65\}$ mIoU on CamVid and $\+\\textbf\{23\.34\}$ mIoU on Pascal Context, showing that ViT token spaces provide an effective geometry for extremely\-low\-budget active segmentation\.
+## Improved Weakly Supervised Semantic Segmentation with A Relationally Optimized Prototype Memory Bank Framework
 
-## MonoChunk3D: Monocular Online 3D Instance Segmentation with Persistent Instance States
+**Authors:** Xiang Zhong; Qiudan Zhang; Jianmin Jiang
 
-**Authors:** Yibo Zhao; Jingzhi Zhou; Yigong Zhang; Jian Yang; Jin Xie
+**ID:** 150702 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
 
-**ID:** 155123\-\-3 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
+[Paper](<https://openreview.net/forum?id=g8pvSlGjKC>) | [PDF](<https://openreview.net/pdf?id=g8pvSlGjKC>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150702>)
 
-**Repeated source row:** 155123
+Confronted by the existing prototype\-based methods that often fail to capture complex intra\-class variations and inter\-class semantic relationships, weakly supervised semantic segmentation \(WSSS\) faces persistent challenges due to the inherent incompleteness and boundary inaccuracies of Class Activation Maps \(CAMs\)\. To tackle these critical limitations, we propose a relationally optimized prototype Memory bank \(RO\-PMB\) framework in this paper, where the integration of Graph Neural Networks \(GNNs\) with a dynamically optimized global prototype memory bank is pioneered to explicitly model and learn the intricate semantic relationships among all prototypes\. Specifically, our Prototype Relationship Diagram Construction \(PRDC\) module leverages GNNs for contextual message passing over a learned prototype graph, enriching global prototypes with crucial associative knowledge\. As a result, a subsequent context\-aware refinement process is sustained to inject structured semantic information into local image\-specific prototypes, thereby generating CAMs with unparalleled completeness and boundary precisions\. Extensive experiments validate that, compared with the existing representative state of the arts in multi\-stage WSSS baselines, our proposed RO\-PMB achieves competitive and superior performances on a range of challenging benchmarks, such as PASCAL VOC and MS COCO etc\. Code will be released\.
 
-[Paper](<https://openreview.net/forum?id=8F9VWmr6fN>) | [PDF](<https://openreview.net/pdf?id=8F9VWmr6fN>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155123>)
+## EviSAM3: Evidence\-Driven SAM3 for Referring Remote Sensing Image Segmentation
 
-_Abstract unavailable from the accessible public sources._
+**Authors:** Yuhang Duan; Xiaoshuai Wu; Chengqi Zhang; Jincheng Lu; Mingwei Zhang; Yu Liu
+
+**ID:** 150827 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=f1JHxI12WT>) | [PDF](<https://openreview.net/pdf?id=f1JHxI12WT>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150827>)
+
+Referring Remote Sensing Image Segmentation \(RRSIS\) aims to segment target objects from remote sensing images based on natural language descriptions, requiring precise vision–language alignment under significant ambiguity\. Despite the strong generalization ability of Segment Anything Model 3 \(SAM3\), the large spatial extent and varying scales of targets in remote sensing images intensify the ambiguity of referring expressions\. This poses a major challenge for fine\-grained segmentation\. To address the challenge, we propose \*\*EviSAM3\*\*, an evidence\-driven parameter\-efficient adaptation framework that mimics human decision\-making by dynamically accumulating partial evidence\. Specifically, EviSAM3 progressively integrates cross\-modal evidence through an evidence memory bank, where each incoming piece is aggregated via momentum\-based updates\. As evidence accumulates, the model performs iterative evidence rectification to resolve ambiguity under incomplete observations\. Meanwhile, the contributions of different evidence are adaptively modulated based on their diagnostic relevance, allowing more informative evidence to dominate the reasoning process and guide the final prediction\. Extensive experiments demonstrate that EviSAM3 consistently outperforms state\-of\-the\-art methods, particularly in challenging scenarios with high ambiguity and significant scale variation\. The code is available in the supplementary material\.
+
+## BAPM: Boundary\-Aware Prompt Mining for Training\-Free Few\-Shot Medical Image Segmentation
+
+**Authors:** Qi Wen; Jiezhou He; Zhiming Luo; Shaozi Li
+
+**ID:** 155064 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=8jdITJxUI9>) | [PDF](<https://openreview.net/pdf?id=8jdITJxUI9>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155064>)
+
+Few\-shot medical image segmentation has shown great potential in reducing annotation costs for clinical applications\.  Recently, many few\-shot methods have explored the Segment Anything Model \(SAM\) for training\-free medical image segmentation via prompt engineering\.  However, existing approaches mainly focus on locating positive prompts from support images while overlooking informative background cues, making them prone to over\-segmentation in anatomically similar regions\.  Moreover, simply introducing negative prompts cannot effectively suppress boundary leakage, and may even interfere with SAM’s mask decoding process, resulting in worse performance than using positive prompts alone\. To address this limitation, we propose a training\-free support\-query framework, termed Boundary\-Aware Prompt Mining, which introduces boundary\-aware negative prompting for SAM\-based few\-shot medical image segmentation\.  Specifically, we introduce a Prototype\-guided Positive Prompt strategy, which adopts a multi\-center prompting mechanism to construct multiple foreground prototypes, enabling comprehensive spatial coverage in query images\.  Furthermore, we propose a Boundary\-band Ambiguity Filtering strategy that identifies a boundary\-adjacent background band and progressively removes ambiguous pixels and unreliable clusters highly similar to the foreground, enabling the selection of reliable negative prompts for suppressing false positives near foreground boundaries\.  The generated positive and negative prompts are jointly fed into SAM to produce refined segmentation results without additional training\. Extensive experiments on Abd\-MRI and Abd\-CT datasets demonstrate that our method consistently outperforms existing approaches, highlighting its effectiveness and robustness under limited annotation settings\. Code will be released upon acceptance\.
 
 ## $\\textbf\{EchMo\}$: End\-to\-End Radar Echo Segmentation
 
@@ -661,4 +555,114 @@ _Abstract unavailable from the accessible public sources._
 [Paper](<https://openreview.net/forum?id=XjkYV50z9m>) | [PDF](<https://openreview.net/pdf?id=XjkYV50z9m>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151818>)
 
 This paper presents an End\-to\-End learnable radar semantic segmentation network using I/Q echoes as input for Doppler radars, named as $\\textbf\{EchMo\} \(\\text\{\\textbf\{ech\}o\-in\-\\textbf\{m\}ask\-\\textbf\{o\}ut\}\)$\. EchMo reinterprets the steps of conventional radar signal processing \(RSP\) in a deeply learnable manner, including pulse compression \(traditionally implemented via matched filtering\), moving target indication \(MTI\), coherent integration \(CI\), and target detection\. Ultimately, it achieves a single compact learnable deep model that goes from I/Q echoes to target semantic segmentation in one step, delivering a streamlined differentiable computational graph and substantial efficiency gains\. Experimental results show that, compared to conventional pipeline or deep models based on intermediate radio\-frequency \(RF\) representation, EchMo achieves better results and offers a more interpretable foundation\. EchMo is the first pulse\-Doppler I/Q echo\-based end\-to\-end radar semantic segmentation deep architecture, which is a milestone for the fields of RSP, remote sensing, and modern deep learning\. The code link for review: https://anonymous\.4open\.science/anonymize/EchMo\-6877\.
+
+## TerraMesh\-Masks: Open‑Vocabulary Segmentation for Earth Observation
+
+**Authors:** Benedikt Blumenstiel; Hugues Devimeux; Johannes Jakubik; Konrad Schindler
+
+**ID:** 139302 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=YaQSEoAs6p>) | [PDF](<https://openreview.net/pdf?id=YaQSEoAs6p>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139302>)
+
+Open‑vocabulary segmentation \(OVS\) enables models to segment a variety of concepts specified in natural language, removing the need for fixed label sets and fine\-tuning\. While recent OVS approaches have shown strong performance on natural images, they transfer poorly to Earth observation \(EO\) data due to differing semantics, scales, sensing modality, and geographic context\. To date, large‑scale EO‑specific datasets and benchmarks for OVS remain scarce\. We, therefore, introduce TerraMesh\-Masks, a large\-scale open\-vocabulary segmentation dataset for EO, comprising 16 million binary masks aligned with nine million multimodal TerraMesh samples and annotated using OpenStreetMap and Overture\-derived semantics\. In addition, we provide an expert\-reviewed evaluation set of 523 samples covering over 200 classes to enable robust evaluation\. To demonstrate and analyze the impact of TerraMesh\-Masks, we build an open\-vocabulary version of TerraMind\. Our results demonstrate significantly improved  performance over general\-purpose state\-of\-the\-art models reaching 35\.15% IoU versus 16\.29% for DINOv3\.txt and 11\.33% for SAM\-3\. We release the dataset publicly under a permissive license at https://huggingface\.co/datasets/ibm\-esa\-geospatial/TerraMesh\-Masks\.
+
+## Redefining Instance Matching: A Unified Framework for Part\-Aware Matching in Panoptic Segmentation Evaluation
+
+**Authors:** Erik Großkopf; Soumya Snigdha Kundu; Hendrik Möller; Nicolas Münster; Mehdi Astaraki; Paula T Buzduga; Kerstin Ritter; Benedikt Wiestler; Jan Kirschke; Jonathan Shapey; Tom Vercauteren; Florian Kofler
+
+**ID:** 139024 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=pf5FQox6pD>) | [PDF](<https://openreview.net/pdf?id=pf5FQox6pD>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139024>)
+
+The Panoptic Quality \(PQ\) metric is the standard for jointly evaluating instance and semantic segmentation\.  However, its original definition relies on a One\-to\-One matching between predicted and ground truth segments, which is only straightforward when the IoU threshold exceeds 0\.5\.  Below 0\.5, multiple matching strategies emerge in a poorly explored problem space\.  We systematically elucidate this space by recasting segment matching as a constrained bipartite assignment problem\.  Independently bounding the prediction\- and ground\-truth\-side degrees yields four matching strategies: One\-to\-One, Many\-to\-One, One\-to\-Many, and Many\-to\-Many\.  We show that the first three are well\-defined within the PQ framework, while Many\-to\-Many falls outside it\.  These strategies become relevant when instances are fragmented, adjacent objects are difficult to delineate, or annotations are noisy\.  Central to our framework is a vertex\-based accounting of TP, FN, and FP, anchored to ground truth and predicted segments rather than to matching edges\.  We further show that the framework extends naturally to part\-aware panoptic segmentation, and we explore part\-aware evaluation on biomedical data\.  Across configurable case studies we report how different combinations of thresholds and matching strategies behave in practice\.  We release a unified open\-source package built on Panoptica\.  It exposes Voronoi\-based region\-wise analysis, part\-aware evaluation, and Area Under Threshold Curve computations as configurable options\.
+
+## Image Generation for Automotive Lidar Open\-vocabulary Semantic Segmentation
+
+**Authors:** Nermin Samet; Gilles Puy; Renaud Marlet
+
+**ID:** 151641 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=Z5dOCGOl4Y>) | [PDF](<https://openreview.net/pdf?id=Z5dOCGOl4Y>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151641>)
+
+This paper presents a new method for the zero\-shot open\-vocabulary semantic segmentation \(OVSS\) of 3D automotive lidar data\. To circumvent the recognized image\-text modality gap that is intrinsic to approaches based on Vision Language Models \(VLMs\) such as CLIP, our method relies instead on image generation from text, to create prototype images\. Given a 3D network distilled from a 2D Vision Foundation Model \(VFM\), we then label a point cloud by matching 3D point features with 2D image features of these prototypes\. Our method is state\-of\-the\-art for OVSS on nuScenes and SemanticKITTI\.
+
+## WaveMamba: Wave\-Inspired Cross\-Modal Fusion for Robust event\-image Semantic Segmentation
+
+**Authors:** Adeel F Mirza; Zaiyue Yang; Muntazir Hussain
+
+**ID:** 151756 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=YIa3B1RBBV>) | [PDF](<https://openreview.net/pdf?id=YIa3B1RBBV>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151756>)
+
+Event\-image semantic segmentation is promising for autonomous driving and robotics because event cameras complement frame images under rapid motion, low illumination, and high dynamic range\. However, effective multimodal segmentation remains difficult due to asynchronous sensing, sparse\-dense modality mismatch, and the cost of heavy cross\-modal interaction modules\. We propose WaveMamba, a dual\-branch event\-image semantic segmentation framework that combines hierarchical GroupMamba encoders with a Mamba\-Wave Cross\-Modal Fusion \(MWCMF\) module\. Instead of relying on explicit registration or attention\-heavy fusion, MWCMF performs implicit cross\-modal propagation through channel\-wise and spatial\-wise wave\-guided gating in the spectral domain, followed by Mamba\-based refinement\. Experiments on DDD17 and DSEC show that WaveMamba achieves state\-of\-the\-art 78\.75 and 76\.00 mIoU, respectively\. Under rain\- and fog\-corrupted evaluation on DSEC, WaveMamba further attains 74\.0 mIoU, indicating improved robustness under degraded visual conditions\.
+
+## Beyond Pixel\-wise Supervision: Local Structure Regularization for Semantic Segmentation
+
+**Authors:** Wei Huang; Chenying Liu; Yilei Shi; Zhitong Xiong; Xiaoxiang Zhu
+
+**ID:** 154585 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=CUmOv8veJ1>) | [PDF](<https://openreview.net/pdf?id=CUmOv8veJ1>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154585>)
+
+Visual foundation models \(VFMs\) provide strong region\-level representations for semantic segmentation, substantially improving high\-level semantic understanding\. However, accurate boundary recovery remains challenging, especially for fine structures and semantic transitions\. A key reason is that conventional pixel\-level supervision largely treats pixels independently and lacks explicit modeling of local structure and neighboring\-pixel relationships\. To address this issue, we propose a Local Structure \(LS\) regularization framework that constrains the second\-order local organization of semantic transition regions\. Unlike existing boundary losses that mainly supervise contour location, distance, overlap, or topology, LS models boundary neighborhoods through a structure\-tensor representation of semantic probability fields\. It decomposes local boundary structure into two complementary cues: Local Structure Magnitude \(LSM\), which measures the strength of anisotropic class transitions, and Local Structure Orientation \(LSO\), which describes their dominant geometric orientation\. LS is model\-agnostic, compatible with different VFM\-backbone\-decoder combinations, and introduces no extra inference cost\. Extensive experiments on four diverse datasets show that LS consistently improves boundary\-sensitive performance while also enhancing overall IoU, demonstrating its effectiveness for boundary\-structure learning in semantic segmentation\.
+
+## Localize Any Object in X\-Ray Security Scans without Human Annotation
+
+**Authors:** Yaqi Cai; Mingxuan Liu; Lorenzo Vaquero; Ning Wang; Nan Pu; Feng Xue; Elisa Ricci; Nicu Sebe
+
+**ID:** 152225 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=UcwEHDEJdH>) | [PDF](<https://openreview.net/pdf?id=UcwEHDEJdH>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152225>)
+
+Universal object localization in X\-ray security inspection is critical for automated threat detection in safety\-critical venues\. However, unlike everyday RGB images that dominate web\-scale visual data, X\-ray scans exhibit distinct color patterns, ambiguous boundaries, and compositional structures caused by volumetric superposition\. These gaps hinder the direct zero\-shot transfer of dense perception foundation models trained on web\-scale RGB data\. Moreover, annotated X\-ray data is scarce and requires expert labeling, limiting both the training of generalizable X\-ray native models and the adaptation of RGB foundation models for X\-ray data via fine\-tuning\. Given these challenges, the bright promise of highly generalizable perception models, enabled by data scaling laws in the RGB domain, remains largely out of reach for X\-ray inspection\. To this end, we introduce LAO\-X, a fully self\-supervised framework that Locates Any Object in X\-ray scans using diverse synthesized image\-\-annotation pairs with granularity\-aware supervision\. LAO\-X first designs a saliency\-guided X\-ray object mining module to separate diverse object instances, which are then used for physics\-guided synthesis in the absorbance domain\. LAO\-X further incorporates an occlusion\-controlled curriculum strategy to fine\-tune a Segment Anything Model 2 \(SAM2\) localizer, progressively adapting it to X\-ray scans with increasing object counts and overlap levels\. Experiments on six X\-ray benchmarks show that LAO\-X substantially improves category\-agnostic localization, achieving 2\\% to 23\\% mAP gains over SAM2 and X\-ray specific baselines in heavily cluttered scenarios, entirely without human\-annotated labels\.
+
+## A probabilistic model of visual segmentation explains early visual cortical dynamics
+
+**Authors:** Tridib K\. Biswas; Ruben Coen\-Cagli
+
+**ID:** 154567 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=CdtOCPVGrR>) | [PDF](<https://openreview.net/pdf?id=CdtOCPVGrR>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154567>)
+
+Neural dynamics are a central feature of biological neural systems\. In the visual cortex, the functional role of neural dynamics is poorly understood, particularly for static stimuli\. The statistics of still natural images have long been used by models that successfully predict firing in the early visual cortex\. Those models assume that neurons represent inferences about latent image features, but they often ignore the dynamics of said inference\. Here, we test if inferential dynamics for images explain visual\-cortical dynamics\. To do so, we present a biologically plausible model of cortical computation that assumes the inference of features is coupled with inference about how those features are organized into meaningful parts, also known as segmentation\. Given an input image, our model iterates between inferring the features and the segments, through recurrence, thus inducing dynamics in the feature representation\. We make theoretical and exact predictions for the induced neural dynamics\. Our model predicts both gain and variability in evoked responses to natural images, and we show that it captures classical single\-neuron experimental findings such as gain dynamics and variability decay during stimulus presentation\. The model also predicts that those metrics are more heterogeneous than previously thought, reflecting the complexity of inference for natural scenes, and that their population\-level organization reflects the inferred segments\. Finally, our analytical formulation provides a clear interpretation of those results\. Insights from our normative model could generalize to segmentation problems in other experimental modalities, and help address the cost of inference in artificial networks\.
+
+## Exploiting Fine\-Tuning Structures to Improve Adversarial Transferability on Downstream SAM
+
+**Authors:** Shixiong Jiang; Jialiang Fan; Mengyu Liu; Pengfei Gu; Danny Z Chen; Fanxin Kong
+
+**ID:** 155142 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=82YaF5fhKq>) | [PDF](<https://openreview.net/pdf?id=82YaF5fhKq>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155142>)
+
+Combining the Segment Anything Model \(SAM\) with fine\-tuning techniques allows SAM to be effectively adapted to various downstream image segmentation tasks\. However, this adaptability introduces new security vulnerabilities related to adversarial attacks\. In this paper, we investigate the adversarial transferability between the original SAM and its fine\-tuned downstream models\. Under limited knowledge conditions of the downstream models, we propose a novel structure\-exploiting transferable attack \(SETA\) method\. Our framework mimics the fine\-tuning architecture and estimates the parameter distributions of the downstream models to improve the transferability of the generated adversarial samples\. Experimental results demonstrate the efficacy of our proposed method in creating adversarial examples against various downstream fine\-tuned SAM models\.
+
+## ReSCUE: Re\-translation with Sentence Commitment for Unsegmented Long\-Form Simultaneous Sign Language Translation
+
+**Authors:** Sihan Ren; Gaozheng Li; Yuanshang Quan; Yiming Qin; Fuyi Yang; Chang Liu; Lan Xu; Minye Wu
+
+**ID:** 148549 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=x3TDc55pgu>) | [PDF](<https://openreview.net/pdf?id=x3TDc55pgu>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148549>)
+
+Simultaneous Sign Language Translation \(SLT\) is critical for real\-time communication, yet existing methods remain largely confined to sentence\-level, offline settings that assume pre\-segmented inputs\. These assumptions hinder deployment in realistic scenarios involving continuous, unsegmented video streams\.  We present ReSCUE, a unified framework for simultaneous SLT on unsegmented long\-form sign language videos that aligns training and inference with realistic streaming conditions\. ReSCUE combines inference\-aware training to handle partial inputs, non\-signing pauses, and multi\-sentence contexts, stabilized re\-translation to enable low\-latency yet revisable predictions with reduced output flicker, and a sentence commitment mechanism for online segmentation and memory management\.  Experiments on standard sentence\-level benchmarks show that ReSCUE achieves lower latency and the best translation quality under low\-latency settings\. On long\-form unsegmented datasets, ReSCUE approaches the translation quality of oracle offline systems that use ground\-truth sentence boundaries, while operating at substantially lower latency, demonstrating its practicality for real\-world streaming scenarios\.
+
+## Variational Wasserstein Model on Riemannian Manifolds for Image Segmentation
+
+**Authors:** Jisui Huang; Yue Wu; Ke Chen; Na Lei
+
+**ID:** 148294 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=ywA5LS4EJj>) | [PDF](<https://openreview.net/pdf?id=ywA5LS4EJj>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148294>)
+
+The data fidelity term plays a crucial role in variational image segmentation\. Recently, optimal transport \(OT\)\-based variational models have improved segmentation by globally matching predicted feature distributions with reference distributions\. However, existing OT\-based methods usually rely on color or intensity similarity, which can be insufficient when foreground and background regions share similar appearance\. We address this limitation by incorporating geodesic distance into the OT cost on a Riemannian feature manifold, allowing the transport cost to jointly encode spatial proximity, appearance similarity, and boundary information\. The proposed model is well\-defined: we prove existence of minimizers and convexity of the energy functional\. It is also tractable: the OT terms admit differentiable transport\-map representations, avoiding storage of the full pairwise transport matrix and enabling efficient gradient\-based optimization\. Experiments on BraTS and RESECT show that our method consistently outperforms traditional variational models, OT\-based baselines, and prompt\-based deep segmentation models, particularly when foreground and background have overlapping intensity or color patterns\.
+
+## Learning What to Predict: Downstream\-Guided Task Design for Continued Pretraining
+
+**Authors:** Shuqi Ke; Giulia Fanti
+
+**ID:** 149814 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=n9Wa5CFzZ3>) | [PDF](<https://openreview.net/pdf?id=n9Wa5CFzZ3>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149814>)
+
+Continued pretraining is optimized on a fixed self\-supervised task but selected by downstream performance\. This creates a coarse feedback loop: practitioners evaluate checkpoints, revise data mixtures or objectives, and rerun pretraining runs, while individual pretraining updates receive no signal about whether they help the target capability\. We ask whether a small set of verifiable downstream examples can provide step\-level feedback during continued pretraining without becoming learner supervision\. We introduce V\-pretraining, which separates a learner trained only by a self\-supervised loss from a lightweight task designer that constructs targets or views for unlabeled batches\. Given the current learner and an unlabeled batch, V\-pretraining estimates the downstream value of a candidate target or view construction by the first\-order predicted decrease in downstream loss after the self\-supervised update it induces\. The designer is trained to increase this value; the learner then applies the resulting self\-supervised update with targets or views detached, so downstream labels never directly update learner parameters\. V\-pretraining can be used to learn adaptive top\-$K$ soft targets for language modeling and learned views for self\-supervised vision\. Under wall\-clock\-matched continued pretraining, V\-pretraining improves GSM8K Pass@1 for Qwen models using 1,024 GSM8K examples only as feedback, including a \+7\.4 point single\-run gain for Qwen2\.5\-0\.5B\. In vision, V\-pretraining improves DINOv3 transfer to ADE20K semantic segmentation and NYUv2 depth estimation while preserving ImageNet linear accuracy, indicating that feedback\-guided task construction improves target downstream capabilities without collapsing general\-purpose representations\.
 

@@ -2,189 +2,139 @@
 
 应用 / 语言、语音与对话
 
-196 source poster records. Repeated source event IDs are retained and explicitly marked.
+164 source poster records. Repeated source event IDs are retained and explicitly marked.
 
 Topic labels marked inferred are keyword-based, not official conference labels. PDF links marked derived are unverified. Missing abstracts are left empty in the JSON and CSV exports.
-
-## Mitigating Knowledge Conflicts in Retrieval\-Augmented Generation via Inference\-Time Representation Editing
-
-**Authors:** Dahyun Jung; Jaehyung Seo; Heuiseok Lim
-
-**ID:** 148202 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=zbapcKkECb>) | [PDF](<https://openreview.net/pdf?id=zbapcKkECb>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148202>)
-
-Retrieval\-Augmented Generation \(RAG\) has been widely adopted to enable Large Language Models \(LLMs\) to ground their responses in external knowledge sources\. Nonetheless, recent studies show that conflicts between the retrieved external knowledge and the model’s parametric knowledge can lead to hallucinatory outputs, and this problem is exacerbated when the retrieved documents contain noise\. In this work, we propose Conflict\-Aware Representation Editing \(CARE\), an inference\-time representation editing method for improving LLM robustness under noisy knowledge conflict settings\. CARE learns a latent editing direction from intermediate representations associated with correct and incorrect generations, and uses this direction to mitigate conflict\-associated activation patterns during inference\. We evaluate CARE across Question Answering \(QA\) benchmarks and LLMs, showing improvements over retrieval\-based and conflict\-mitigation baselines, especially under noisy retrieval conditions\.
-
-## Remember Your Trace: Memory\-Guided Long\-Horizon Agentic Framework for Consistent and Hierarchical Repository\-Level Code Documentation
-
-**Authors:** Suyoung Bae; Jaehoon Lee; Changkyu Choi; YunSeok Choi; Jee\-Hyong Lee
-
-**ID:** 154827 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=Ae5q87uyOE>) | [PDF](<https://openreview.net/pdf?id=Ae5q87uyOE>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154827>)
-
-_Abstract unavailable from the accessible public sources._
-
-## Efficient Streaming Audio\-Visual Target Speaker Extraction for Real\-World Acoustic Scenes
-
-**Authors:** Wendi Sang; Kai Li; Yifan Li; Jianqiang Huang; Xiaolin Hu
-
-**ID:** 149515 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=pYHqkfI3QP>) | [PDF](<https://openreview.net/pdf?id=pYHqkfI3QP>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149515>)
-
-_Abstract unavailable from the accessible public sources._
-
-## Predictive–Generative Drift Decomposition for Speech Enhancement and Separation
-
-**Authors:** Julius Richter; Yoshiki Masuyama; Christoph Boeddeker; Takahiro Edo; Gordon Wichern; Jonathan Le Roux
-
-**ID:** 148915 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=uDy9sLEeWb>) | [PDF](<https://openreview.net/pdf?id=uDy9sLEeWb>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148915>)
-
-We propose a plug\-and\-play framework for speech enhancement and separation that augments predictive methods with a generative speech prior\. Our approach, termed Stochastic Interpolant Prior for Speech \(SIPS\), builds on stochastic interpolants and leverages their flexibility to bridge predictive and generative modeling\. Specifically, we decompose the interpolation dynamics into a task\-specific drift and a stochastic denoising component, allowing a predictive estimate to be integrated directly into the generative sampling process\. This results in a mathematically grounded framework for combining strong pretrained predictors with the expressive power of generative models\. To this end, we train a score model using only clean speech, yielding a degradation\-agnostic prior that can be reused across tasks\. During inference, the predictor provides a deterministic drift that steers the sampling process toward a task\-consistent estimate, while the score model preserves perceptual naturalness\. Unlike prior hybrid approaches, which typically rely on architecture\-specific conditioning and are tied to particular predictors or degradation settings, SIPS provides a unified framework that generalizes across predictors and additive degradation tasks\. We demonstrate its effectiveness for both speech enhancement and speech separation using recent predictors such as SEMamba and FlexIO\. The proposed method consistently improves perceptual quality, achieving gains up \+1\.0 NISQA for speech separation\.
-
-## WavFlow: Flowing Through Waveforms for Audio Generation
-
-**Authors:** Feiyan Zhou; Luyuan Wang; Shoufa Chen; Zhe Wang; Zhiheng Liu; Yuren Cong; Xiaohui Zhang; Fanny Yang; Belinda Zeng
-
-**ID:** 152430 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=TAxLVhUYlj>) | [PDF](<https://openreview.net/pdf?id=TAxLVhUYlj>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152430>)
-
-Modern audio generation predominantly relies on latent\-space compression, introducing additional complexity and potential information loss\. In this work, we challenge this paradigm with WavFlow, a framework that generates high\-fidelity audio directly in raw waveform space without intermediate representations\. To overcome the inherent difficulties of modeling high\-dimensional and low\-energy signals, we reshape audio into 2D token grids through waveform patchify and introduce amplitude lifting to align signal scales, enabling stable optimization via direct x\-prediction in flow matching\. To capture complex semantic alignment and temporal synchronization, we leverage an automated data pipeline to curate 5M high\-quality video\-text\-audio triplets, allowing the model to learn fine\-grained acoustic patterns from scratch\. Experimental results show that WavFlow achieves state\-of\-the\-art results on the video\-to\-audio benchmark VGGSound \(FD\_PaSST 55\.82, IS\_PANNs 17\.40, DeSync 0\.44\) and the text\-to\-audio benchmark AudioCaps \(FD\_PANNs 10\.63\), outperforming established latent\-based methods\. Our work demonstrates that such intermediate compression is not a prerequisite for high\-quality synthesis, offering a simpler and more scalable alternative for multimodal audio generation\.
-
-## Geometric Alignment without Functional Equivalence: A Layer\-wise Analysis of the Speech\-Text Modality Gap
-
-**Authors:** Ming\-Hao Hsu; Xiaohai Tian; Jun Zhang; Lu Lu; Yuxuan Wang; Zhizheng Wu
-
-**ID:** 153576 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=KNuSWirJEG>) | [PDF](<https://openreview.net/pdf?id=KNuSWirJEG>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153576>)
-
-_Abstract unavailable from the accessible public sources._
 
 ## Hearing is Believing? Evaluating and Analyzing Audio Language Model Sycophancy with SYAUDIO
 
 **Authors:** Junchi Yao; Lokranjan Lakshmikanthan; Annie Zhao; Danielle Zhao; Shu Yang; Zikang Ding; Di Wang; Lijie Hu
 
-**ID:** 148254 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
+**ID:** 148254 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
 [Paper](<https://openreview.net/forum?id=zGOpgI7plw>) | [PDF](<https://openreview.net/pdf?id=zGOpgI7plw>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148254>)
 
-_Abstract unavailable from the accessible public sources._
+Audio Language Models \(ALMs\) have recently shown strong capabilities in unified reasoning over speech, sound, and natural language; yet we find that they can inherit sycophancy, the tendency to agree with user assertions even when they contradict objective evidence\. This failure mode is especially concerning for audio\-conditioned reasoning, where a model must preserve evidence from acoustic events, speaker characteristics, and speech rate while responding to potentially misleading user feedback\. However, unlike text and vision\-language sycophancy, ALM sycophancy has not been systematically studied\. We therefore introduce SYAUDIO, the first benchmark dedicated to evaluating sycophancy in ALMs, consisting of 4,319 audio questions spanning Audio Perception, Audio Reasoning, Audio Math, and Audio Ethics\. Built upon established audio benchmarks and augmented with TTS\-generated arithmetic and moral reasoning tasks, SYAUDIO enables systematic evaluation across multiple domains and sycophancy types with carefully verified data quality, including a human\-speaker validation of the TTS pipeline\. Using this benchmark, we identify substantial and audio\-specific sycophancy patterns under realistic conditions involving noise and speech rate, and further show that supervised fine\-tuning reduces misleading susceptibility while decode\-time steering reveals controllable hidden\-state directions for both misleading susceptibility and correction receptiveness\.
 
-## Rethinking Entropy Allocation in LLM\-based ASR: Understanding the Dynamics between Speech Encoders and Large Language Models
+## Build\-and\-Find: An Effort\-Aware Protocol for Evaluating Agent\-Managed Codebases
 
-**Authors:** Yuan Xie; Jiaqi Song; Xianliang Wang; Ming Lei; Jie Gao
+**Authors:** Jhen\-Ke Lin
 
-**ID:** 154756 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+**ID:** 138900 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=BBvPhHF8Mj>) | [PDF](<https://openreview.net/pdf?id=BBvPhHF8Mj>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154756>)
+[Paper](<https://openreview.net/forum?id=y48mj8HiWu>) | [PDF](<https://openreview.net/pdf?id=y48mj8HiWu>) | [Official poster](<https://neurips.cc/virtual/2026/poster/138900>)
 
-Integrating large language models \(LLMs\) into automatic speech recognition \(ASR\) has become a dominant paradigm\. Although recent LLM\-based ASR models have shown promising performance on public benchmarks, it remains challenging to balance recognition quality with latency and overhead, while hallucinations further limit real\-world deployment\. In this study, we revisit LLM\-based ASR from an entropy allocation perspective and introduce three encoder\-side diagnostics to characterize how training paradigms shape uncertainty reduction across the speech encoder\-LLM interface\. To remedy entropy\-allocation inefficiencies in prevailing approaches, we propose a capability\-boundary\-aware multi\-stage training strategy that targets parameter efficiency and robustness to hallucinations\. Specifically, we redesign the pretraining strategy to alleviate the speech\-text modality gap, and further introduce an iterative asynchronous SFT stage between alignment and joint SFT to preserve functional decoupling and constrain encoder representation drift\. Experiments on various benchmarks show that our method achieves competitive performance against state\-of\-the\-art models using only 2\.3B parameters, while also effectively mitigating hallucinations through our decoupling\-oriented design\.
+Most coding\-agent benchmarks ask whether generated code behaves correctly\. That remains essential, but repository\-level engineering is increasingly agent\-managed: one agent writes a repository, and later agents inspect, audit, or extend it as working context\. In that setting, a generated repository is not only an answer to a task but also a communication artifact for future work\. Even when strong agents nearly satisfy the visible behavioral objective, repositories can differ in how clearly they expose the intended behavior and design choices behind that behavior\. We introduce Build\-and\-Find, a protocol for evaluating whether downstream agents can recover those intended choices from generated repositories, and how much inspection that recovery requires\. For each task, a builder sees a hidden repository specification and creates a codebase; a finder sees only the codebase and a specification\-traced multiple\-choice question bank\. The protocol separates behavioral correctness from artifact\-side recovery and reports recovery accuracy, repeatability, implementation coverage, and inspection effort\. Accuracy and stability act as gates: effort is interpreted only when recovery succeeds reliably\. Among artifacts from which the same intent can be recovered, lower effort by the same finder suggests that the artifact makes that intent easier to locate\. Question\-only and spec\-only controls quantify generic priors and specification access, while audits separate omitted claims from finder failures and check whether correct answers cite artifact evidence\. In the released high\-prior task pack, recovery accuracy is near saturation, so inspection effort and finder\-specific effects provide the main panel\-local comparison\. We release the harness, tasks, generated artifacts, records, canonical tables, reports, scripts, metadata, licenses, and evidence audit to support auditable extensions and private task packs\.
 
-## Actionable Hallucination Detection: Translating Latent Uncertainty into Agentic Critique
+## MemForest: Efficient Agent Memory Management via EventTree Partitioning and Progressive Merging
 
-**Authors:** Sanidhya Vijayvargiya; Rahul Lokesh
+**Authors:** JunXi Wang; Jiayi Zhu; Te Sun; Chen Zhang; Siyuan Li; Xuyang Liu; Zichen Wen; Xiaobing Tu; Jinkui Ren; Xiantao Zhang; Ziqi Yuan; Linfeng Zhang
 
-**ID:** 155358 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+**ID:** 148407 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=6CdA8QbHL5>) | [PDF](<https://openreview.net/pdf?id=6CdA8QbHL5>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155358>)
+[Paper](<https://openreview.net/forum?id=y5eRcv808g>) | [PDF](<https://openreview.net/pdf?id=y5eRcv808g>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148407>)
 
-Large Language Models \(LLMs\) deployed as AI agents frequently exhibit a task\-completion bias, executing hallucinated, undesired actions to force a resolution rather than expressing uncertainty\. Existing detection methods fail to provide actionable, real\-time correction as they either do not localize the hallucinations or incur prohibitive inference latency\. We introduce the Latent Critic, a lightweight low\-rank adapter \(LoRA\) that operates concurrently with a frozen base LLM's generation to actively restructure the transformer's residual stream\-\-\-amplifying epistemic uncertainty signals and translating them into localized, natural language feedback within a single sequence\. By refining the base model's native uncertainty signals, this manipulation of the latent space enables highly reliable, granular detection without the overhead of secondary inference loops\. Mechanistic analysis via activation patching and layer\-wise probing shows that this rank\-invariant behavior restructures pre\-existing uncertainty geometry into a linearly separable representation\. Using tool\-calling as an instantiation of granular hallucinations, we validate the detection and downstream improvements enabled by the Latent Critic architecture across Qwen and Llama\-based models\. Demonstrating superior real\-time efficacy, our approach significantly outperforms equivalent\-scale external detectors and internal probes in isolating hallucinations \(0\.870 vs\. 0\.695 F1\), achieving &gt;80% accuracy in localization \(e\.g\., ungrounded: date\)\. When deployed in a closed\-loop ReAct environment, the Critic acts as a zero\-latency guardrail, intercepting hallucinations before execution to prevent undesired actions while simultaneously enabling efficient agent self\-correction\.
+Agent memory systems have demonstrated significant potential in tasks such as long\-term dialogue, personalized assistants, and video understanding\. However, as inference progresses, continuously accumulated memory imposes substantial storage and retrieval burdens\. To address this issue, we propose MemForest, a general memory compression framework adaptable to various agent memory systems\. Specifically, MemForest leverages both global semantic similarity and local temporal continuity of memory events to partition the historical memory into a set of event\-centric independent units\. For each independent unit, the framework constructs a maximum spanning tree structure, referred to as an EventTree, and performs progressive merging by iteratively selecting high\-weight edges, thereby effectively compressing redundant memory nodes and reducing storage overhead\. In addition, we introduce an anchor\-guided propagation retrieval mechanism, which retrieves more relevant memory nodes from the temporal neighborhoods of key memory nodes, thereby enabling more accurate memory retrieval\. Extensive experiments demonstrate the effectiveness of MemForest\. Under the unimodal Mem0 framework, across three benchmarks \(LoCoMo, LongMemEval, and PersonaMem\), MemForest preserves 97\.1% of the original performance while compressing 50% of historical memory, achieving a 1\.89× retrieval speedup\. Under the multimodal M3\-Agent framework, across two benchmarks \(M3\-Bench\-robot and M3\-Bench\-web\), MemForest retains 99\.7% of the original performance under a 50% compression ratio, while achieving a 2\.24× retrieval speedup\. Our code is available in the supplementary materials, and all data will be released on GitHub\.
 
-## Task Success Is Not Enough: Side\-effect\-Aware Evaluation of Tool\-Using Language Model Agents
+## Do Speech BCIs Need Larger Models? Rethinking Neural Decoding beyond Scaling
 
-**Authors:** Jiaju Huang; Shaobin Chen; Xinglong Liang; Xinyu Ma; Hao YANG; Yue Sun; Wei Ke; Tao Tan
+**Authors:** Zehui Feng; Weichuan Wang; Xiaohan Chen; Cuntai Guan; Ting Han
 
-**ID:** 138911 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+**ID:** 154135 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=xJdBs3VVTg>) | [PDF](<https://openreview.net/pdf?id=xJdBs3VVTg>) | [Official poster](<https://neurips.cc/virtual/2026/poster/138911>)
+[Paper](<https://openreview.net/forum?id=FyITsmx1Ga>) | [PDF](<https://openreview.net/pdf?id=FyITsmx1Ga>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154135>)
 
-Tool\-using language model agents are usually evaluated by whether they finish the user's task\. That metric misses a common failure: an agent can complete the requested work while also taking an unauthorized side\-effecting action, such as writing to the wrong object, expanding the scope of the request, or contacting an unintended recipient\. We call this failure mode collateral damage \(CD\)\. We introduce SABench \(Side\-effect\-Aware Benchmark\), a benchmark of 201 email, calendar, and ticket tasks\. Each task crosses one of four state structures \(independent, dependent, externally reachable, cross\-tool\) with one of four trap families \(ambiguity, mis\-targeting, cascade harm, overreach\), and each task has a deterministic trace\-based oracle for both goal satisfaction and authorization compliance\. Across 2,211 model\-task pairs from 11 frontier LLMs spanning major commercial and open model families, 15\.2% of all runs incur CD, with risk concentrated in ambiguity tasks \(38\.8% violation rate\) while non\-ambiguous traps average 8\.4% CD\. Among goal\-satisfied runs, 12\.8% still produce unauthorized writes\. Cross\-tool and dependent states have about twice the CD rate of independent states\. CD rates vary by 4\.7x across models at comparable goal rates, which suggests that task success alone is a poor proxy for safe tool use\. The SABench task corpus is released at https://huggingface\.co/datasets/anon\-sabench\-2026/sabench; the traces, oracle, code, and analysis pipeline are released at https://anonymous\.4open\.science/r/sabench\-artifact\.
+Recent speech brain\-computer interfaces \(BCIs\) increasingly rely on large models and complex multi\-stage pipelines for neural decoding\. However, in speech BCI, where training data are scarce, noisy, and expensive to collect, the benefits of model scaling remain unclear\. This work revisits a fundamental question: $\\textbf\{are large models truly necessary for accurate neural decoding?\}$ We propose $\\textbf\{\\textit\{BEST\}\}$ \($\\textbf\{\\textit\{B\}\}$rain\-$\\textbf\{\\textit\{E\}\}$ncoding\-$\\textbf\{\\textit\{S\}\}$peech\-$\\textbf\{\\textit\{T\}\}$ext\), a two\-stage framework for efficient neural\-to\-text decoding\. Instead of relying on large generative models or phoneme\-centric pipelines, $\\textbf\{\\textit\{BEST\}\}$ introduces hierarchical intermediate representations and a compact speech\-oriented decoder that directly maps neural activity to text\. This design preserves essential structure while significantly reducing computational cost, enabling robust generalization in low\-resource settings and practical deployment under constrained resources\. On the Brain\-to\-Text ’24 and ’25 benchmarks, $\\textbf\{\\textit\{BEST\}\}$ achieves word error rates \(WERs\) of 6\.19\\% and 1\.62\\%, espectively, using only 3\.7\\% of the parameters required by comparable methods\. Beyond these results, we provide three key insights: \(1\) decoder scaling yields non\-monotonic gains; \(2\) cross\-modal alignment is more critical than model size; and \(3\) overfitting degards sequence\-level performance\. Representation analysis further reveals a consistent neural→audio→text alignment pathway\.
 
-## Adaptive Compression and Targeted Perturbation: A Unified Framework for Generalized Audio Deepfake Detection
+## Unified Synthesis of Compositional Speech and Sound from Free\-Form Text Prompts
 
-**Authors:** Jianqiao Cui; haoxian zhu; Yanghao Zhang; Hanbiao Meng
+**Authors:** Yuyue Wang; Xihua Wang; Xin Cheng; Yijing Chen; Ruihua Song
 
-**ID:** 151194 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+**ID:** 154811 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=cFddukqYcW>) | [PDF](<https://openreview.net/pdf?id=cFddukqYcW>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151194>)
+[Paper](<https://openreview.net/forum?id=Am7V8MfDiN>) | [PDF](<https://openreview.net/pdf?id=Am7V8MfDiN>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154811>)
 
-Existing audio deepfake detection \(ADD\) methods frequently struggle with limited generalization, as fixed bottleneck architectures fail to adapt to the heterogeneous information densities inherent in diverse spoofing artifacts\. Moreover, standard augmentation often incurs a pathological robustness\-accuracy trade\-off\. In this paper, we propose a unified ADD framework to address these challenges\. Our approach integrates: \(1\) an Adaptive Audio Feature Integration \(AAFI\) module that dynamically selects optimal latent dimensions via a compression pool and a stochastic exploration mechanism, ensuring flexible representations across multi\-type dynamic attacks; and \(2\) a Mel\-Band Adversarial Perturbation \(Mel\-BAP\) strategy that applies targeted regularization in the mel\-spectrogram domain to encourage the learning of invariant decision boundaries\.   Extensive evaluations on benchmarks including ADD 2022, FakeOrReal, and In\-the\-Wild demonstrate that our Whisper\-small based model achieves a state\-of\-the\-art average Equal Error Rate \(EER\) of 1\.51\\%\. Compared to existing SOTA models such as the 3\-billion\-parameter Resemble\-Detect\-3B\-Omni, our framework reduces parameter count by up to 91\.6\\% while improving average EER by 60\.7\\%\. Notably, the model exhibits exceptional zero\-shot transferability, achieving 3\.91\-\-5\.65\\% EER on unseen languages and maintaining high resilience against real\-world acoustic distortions\. This work provides a scalable and efficient “plug\-in” solution for enhancing trust and security in the audio Web ecosystem\.
+Audio generation has made significant progress, yet synthesizing unified audio where speech and sounds are naturally composited remains a challenge\. Current methods either rely on disjoint pipelines, which fail to capture fine\-grained interactions, or require structured inputs and external text rewriting, which limits the flexibility of free\-form text prompts\. In this paper, we introduce a new task: Free\-Form\-Text\-Prompt\-to\-Unified\-Audio generation, which aims to directly synthesize unified audio containing speech, sound, and their composites from unconstrained natural language\. To address this task, we propose PlanAudio, a unified, autoregressive LLM\-based framework\. First, it simplifies the model architecture by leveraging intrinsic LLM reasoning capability instead of traditional text encoders\. Second, it introduces a semantic latent chain\-of\-thought mechanism, an implicit planning mechanism that bridges high\-level semantic understanding and low\-level acoustic synthesis\. Furthermore, we create PlanAudio\-Bench, a specialized benchmark for evaluating composite audio scenarios\. We perform evaluations in the scenarios of speech, sound, and their composites\. The results demonstrate that PlanAudio generally outperforms the existing pipeline and unified baselines, while staying competitive with models designed for a single scenario\. Our analysis further reveals the superiority of semantic latent CoT over other CoT mechanisms and highlights the importance of continuous multi\-scenario training curricula\.
 
-## TrajWiki: Source\-Grounded Memory Trajectories for Long\-Horizon Dialogue Agents
+## EmpathyChat: Structured Cognitive Reasoning in Empathetic Spoken Dialogue
 
-**Authors:** Jingyu Sun; Yuyang Xue; Mingyang Li; Zhengtao Yao; Jiachen Li; Yang Cui; Wenhao Cai; Haozhe Liu; Fangying Wang; Magdalene K Montgomery; Syed M Baker; Hongpeng Zhou
+**Authors:** Dingdong WANG; Shujie LIU; Jinyu Li; Yuxuan Hu; Yayue Deng; Yunrui Cai; Jincenzi Wu; Jianwei Yu; Helen Meng
 
-**ID:** 155885 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
+**ID:** 155140 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=26nRwIZFcb>) | [PDF](<https://openreview.net/pdf?id=26nRwIZFcb>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155885>)
+[Paper](<https://openreview.net/forum?id=83C9MlXWbY>) | [PDF](<https://openreview.net/pdf?id=83C9MlXWbY>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155140>)
 
-_Abstract unavailable from the accessible public sources._
+Empathetic spoken dialogue is a sophisticated cognitive process that requires not only recognizing emotions but also inferring a user’s latent mental states to provide appropriate support\. However, current SpeechLLMs often treat empathy as a direct input\-to\-response mapping, leading to "superficially warm" but emotionally hollow interactions\. In addition, since empathy relies on a multi\-stage process with strong inter\-step dependency, errors at any intermediate step can cascade through subsequent steps and lead to inappropriate responses, while existing training paradigms lack mechanisms to precisely localize and improve such errors\. In this work, we propose EmpathyChat, a unified framework that reformulates empathetic spoken dialogue as a structured cognitive reasoning process integrating perception, mental\-state reasoning, and response generation\. To support this paradigm, we first construct EmpathySet\-400K, an acoustically rich dataset for multi\-stage empathetic supervision\. During the SFT stage, we strengthen acoustic grounding through proposed Acoustic\-Anchored Attention \(AAA\)\. During the RL stage, we further introduce a novel stage\-aware optimization objective with Step\-Decomposed Credit Assignment \(SDCA\) to localize reasoning errors and mitigate cascaded error propagation\. In addition, we introduce EmpathyEval, an expert\-annotated benchmark for multi\-dimensional empathy evaluation\. Extensive experiments demonstrate that EmpathyChat achieves state\-of\-the\-art performance in perception, reasoning, and response alignment\. All resources, including model, code, dataset, and benchmark, will be publicly released\.
 
-## AVENUE: Audio\-Video Editing Understanding and Evaluation
+## MultiTalk: Scaling Full\-Duplex Speech Models to Long, Multi\-Party, Bilingual Conversation
 
-**Authors:** Hayeon Kim; Yoojin Jang; Jaejun Yoo
+**Authors:** Ke Wang; Houxing Ren; Zimu Lu; Yunqiao Yang; ZHUOFAN ZONG; Mingjie Zhan; Hongsheng Li
 
-**ID:** 138887 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
+**ID:** 139602 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=yhjWPeN5lp>) | [PDF](<https://openreview.net/pdf?id=yhjWPeN5lp>) | [Official poster](<https://neurips.cc/virtual/2026/poster/138887>)
+[Paper](<https://openreview.net/forum?id=G9Adf8ZYoP>) | [PDF](<https://openreview.net/pdf?id=G9Adf8ZYoP>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139602>)
 
-_Abstract unavailable from the accessible public sources._
-
-## SMASH: Probing Speech Recognition Robustness via Semantically Targeted Bit Flips
-
-**Authors:** Zafaryab Haider; Md Hafizur Rahman; Aysegul Bumin; Prabuddha Chakraborty
-
-**ID:** 150005 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=lUIe5d85AP>) | [PDF](<https://openreview.net/pdf?id=lUIe5d85AP>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150005>)
-
-Automatic speech recognition \(ASR\) systems are usually judged by aggregate transcript accuracy, but real failures often hinge on meaning: for example, a wrong dose, address, account number, or date can matter more than many harmless word errors\. We introduce SMASH, a framework for finding targeted semantic failures caused by sparse INT8 weight\-bit perturbations, a dominant model data type for ASR edge devices, in quantized sequence\-to\-sequence ASR models\. Given an audio input and a meaning\-critical span,SMASH searches for small weight changes that replace the intended meaning while keeping the transcript readable, plausible, and close to the original output\. Each accepted fault is a certificate that a specific semantic substitution is reachable under a bounded perturbation budget\. Empirical study focuses on numeric and scalar substitutions across three ASR backbones: Whisper\-small\.en \(WS\), Whisper\-large\-v3 \(WLv3\), and SeamlessM4T\-v2\-large \(S\-M4T\); and three corpora: an LLM\-assisted controlled corpus \(LACC\), MultiMed, and LibriSpeech\. On LACC at a 20\-bit budget \($B$\), SMASH\-hybrid accepts numeric substitutions on 24/45 WS targets, 19/44 WLv3 targets, and 5/34 S\-M4T targets; reachability is lower on real\-speech datasets\. In matched LACC budget sweeps tested up to $B=40$, WS reaches its ceiling already at $B=20$, while WLv3 and S\-M4T continue to gain accepted targeted substitutions through $B=40$\. Human validation supports the gate\-based labels: on a 105\-item shared validation set, independent human\-majority labels and a four\-judge large\- language\-model ensemble agree on the composite clean\_success label, with $\\kappa=1\.00$\. The faults are sparse: the pooled median is three INT8 bit flips, with medians of two flips on WS, eleven on WLv3, and twelve on S\-M4T\. Entity and negation pivots are evaluated as secondary evidence in the appendix\. SMASH shifts ASR robustness evaluation from "how much did the transcript change?'' to "which meanings can be changed, how plausibly, and with how few bit flips?''
-
-## UniPrefill: Universal Long\-Context Prefill Acceleration via Block\-wise Dynamic Sparsification
-
-**Authors:** Qihang Fan; Huaibo Huang; zhiyingwu; Bingning Wang; Ran He
-
-**ID:** 152106 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=VU9bHYAvdH>) | [PDF](<https://openreview.net/pdf?id=VU9bHYAvdH>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152106>)
-
-As large language models \(LLMs\) continue to advance rapidly, they are becoming increasingly capable while simultaneously demanding ever\-longer context lengths\. To improve the inference efficiency of long\-context processing, several novel low\-complexity hybrid architectures have recently been proposed, effectively alleviating the computational burden of long\-context inference\. However, existing research on long\-context prefill acceleration remains predominantly focused on sparse attention mechanisms, which achieve their maximum speedup only on full\-attention models\. When transferred to emerging architectures — such as linear/full attention hybrids or sliding window/full attention hybrids — these prefill acceleration approaches suffer significant performance degradation\. Furthermore, such methods are generally incompatible with continuous batching, making them difficult to integrate into modern inference engines such as vLLM\. To this end, we propose UniPrefill, a prefill acceleration framework applicable to virtually any model architecture, which directly accelerates the model's computation at the token level\. We further implement UniPrefill as a continuous batching operator and extend vLLM's scheduling strategy to natively support prefill\-decode co\-processing for UniPrefill, enabling its seamless integration into vLLM\. UniPrefill achieves up to 2\.1x speedup in Time\-To\-First\-Token \(TTFT\), with the acceleration becoming increasingly pronounced as the number of concurrent requests grows\.
+End\-to\-end full\-duplex speech models have brought open\-source machine conversation close to human fluency, yet existing systems fall short of real\-world deployment in two entangled respects: long\-context conversational robustness and multi\-party interaction capability\. Realistic settings, including meetings, group lessons, family dinners, and social\-robot reception, are inherently long\-horizon and multi\-party at the same time, requiring a single model to perceive, attribute, contextualize, and respond across multiple speakers over extended durations\. Progress along these axes is bottlenecked by both data and evaluation\. On the data side, open multi\-party conversational speech corpora total only a few hundred hours and are not designed for codec\-frame\-level full\-duplex modeling\. On the evaluation side, existing long\-audio benchmarks focus on passive listening, while existing speech\-to\-speech benchmarks remain dyadic and short\. In this work, we extend the Moshi paradigm along long\-horizon and multi\-party axes simultaneously, in both English and Chinese, with three contributions\. First, we release an open data engine and a 57\.6 k\-hour corpus for long, multi\-party, bilingual full\-duplex dialogue\. The engine produces parallel\-stream audio with controllable length, participant count, conversational dynamics \(turn\-taking, overlap, backchannels, interruption, addressee shifts, long\-range co\-reference\), and language \(English, Chinese, and intra\-sentential code\-switching\), exceeding all prior open multi\-party conversational speech corpora by more than an order of magnitude\. Second, we introduce MultiTalkBench, the first benchmark to jointly evaluate long\-form full\-duplex dialogue with an average duration of 32\.6 minutes, multi\-party, and bilingual full\-duplex dialogue, with explicit probes for long\-range entity tracking, topic coherence, and addressee selection\. Third, we train a bilingual Moshi\-style full\-duplex model on the released corpus that sustains coherent multi\-party English\-Chinese conversation over extended durations, substantially outperforming open\-source baselines including Moshi, MiniCPM\-o\-4\.5, and Qwen3\-Omni\-30B\-A3B\-Instruct\.
 
 ## SpreadsheetBench 2: Evaluating Agents on End\-to\-End Business Spreadsheet Workflows
 
 **Authors:** Jian Zhu; Yuzheng Zhang; Zeyao Ma; Bohan Zhang; Armin Schoepf; Daniel Woloch; Peter Wang; Guangyu Robert Yang; Samuel Jacob; Siddharth Nagisetty; Abhiram Chundru; Jean Lin; Spencer Mateega; Jing Zhang
 
-**ID:** 139155 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
+**ID:** 139155 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
 [Paper](<https://openreview.net/forum?id=hpl1s8KD4Z>) | [PDF](<https://openreview.net/pdf?id=hpl1s8KD4Z>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139155>)
 
-_Abstract unavailable from the accessible public sources._
+Spreadsheets are widely used for business analysis, financial modeling, reporting, and decision\-making\. However, most existing spreadsheet benchmarks evaluate isolated operations such as single\-formula generation or local cell edits, and therefore fail to capture end\-to\-end workflows in realistic business settings\. We introduce SpreadsheetBench 2, a workflow\-level benchmark for spreadsheet agents that covers three task categories: generation, debugging, and visualization\. The benchmark is constructed from authentic business data, including financial reports and corporate filings, and is annotated and validated by domain experts\. The benchmark contains 321 tasks; each instance averages 11\.8 worksheets and requires 593\.5 cell modifications, reflecting large multi\-sheet workbooks with cross\-sheet dependencies\. We evaluate eight frontier large language models under a unified multi\-turn agent scaffold, and additionally include several LLM\-based spreadsheet products as complementary baselines\. Results show that current systems remain far from reliable on real\-world workflows: the best model achieves 34\.89% overall task accuracy, and debugging accuracy is as low as 12\.00%\. Trajectory analysis and a failure taxonomy further indicate that insufficient spreadsheet inspection and incorrect target\-cell selection are the dominant bottlenecks\. Together, these findings position SpreadsheetBench 2 as a challenging testbed for advancing reliable spreadsheet automation\.
 
-## Recon: Reconstruction\-Guided Reasoning Synthesis for User Modeling
+## HuPER: A Human\-Inspired Framework for Phonetic Perception
 
-**Authors:** Alan Zhu; Mihran Miroyan; Carolyn Wang; Andrew Zhou; Lisa Dunlap; Narges Norouzi; Joseph Gonzalez
+**Authors:** CHENXU GUO; Jiachen Lian; Louis Liu; Baihe Huang; Shriyaa Narayanan; Bixing Wu; Zoe Ezzes; Jet Vonk; Zachary Miller; Cheol Jun Cho; Maria Luisa Gorno Tempini; Gopala Anumanchipalli
 
-**ID:** 152680 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
+**ID:** 154021 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=RDVTaTGEKI>) | [PDF](<https://openreview.net/pdf?id=RDVTaTGEKI>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152680>)
+[Paper](<https://openreview.net/forum?id=Gq0mSArmWx>) | [PDF](<https://openreview.net/pdf?id=Gq0mSArmWx>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154021>)
 
-_Abstract unavailable from the accessible public sources._
+We propose HuPER, a human\-inspired framework that models phonetic perception as adaptive inference over acoustic\-\-phonetic evidence and linguistic knowledge\. HuPER first learns an acoustic\-grounded phone recognizer from limited human\-annotated data and transcript\-only speech: canonical G2P transcriptions are treated as auxiliary linguistic cues rather than ground truth, and are corrected into realized phone proxies for self\-training\. At inference time, HuPER supports multiple perceptual routes: it can rely on bottom\-up phone evidence when the signal is clear, incorporate explicit expectations when a reference is available, or use lexical constraints when acoustic evidence is weak\. With only 100 hours of training data, HuPER achieves state\-of\-the\-art phonetic feature error rates on five English benchmarks and strong zero\-shot transfer to 95 unseen languages\. HuPER also improves robustness on weak\-evidence and disordered speech, demonstrating the benefit of adaptive, multi\-path phonetic perception under diverse acoustic and task conditions\. All training data, models, and code are open\-sourced\. Code and demo are available at https://github\.com/HuPER29/HuPER\.
 
-## LatentRAG: Latent Reasoning and Retrieval for Efficient Agentic RAG
+## Full\-Duplex Speech\-Motion Model for Dyadic Interaction
 
-**Authors:** Yijia Zheng; Marcel Worring
+**Authors:** Koki Nagano; Hongyu Liu; Wookie Park; Tianye Li; Amrita Mazumdar; Christian Jacobsen; Shengze Wang; Michael Stengel; Ka Chun Cheung; Simon See; Shalini De Mello
 
-**ID:** 153688 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+**ID:** 152739 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=JWv9VTeebX>) | [PDF](<https://openreview.net/pdf?id=JWv9VTeebX>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153688>)
+[Paper](<https://openreview.net/forum?id=Qisqy4uHjG>) | [PDF](<https://openreview.net/pdf?id=Qisqy4uHjG>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152739>)
 
-Single\-step retrieval\-augmented generation \(RAG\) provides an efficient way to incorporate external information for simple question answering tasks but struggles with complex questions\. Agentic RAG extends this paradigm by replacing single\-step retrieval with a multi\-step process, in which the large language model \(LLM\) acts as a search agent that generates intermediate thoughts and subqueries to iteratively interact with the retrieval system\. This iterative process incurs substantial latency due to the autoregressive generation of lengthy thoughts and subqueries\. To address this limitation, we propose LatentRAG, a novel framework that shifts both reasoning and retrieval from discrete language space to continuous latent space\. Unlike existing explicit methods that generate natural language thoughts or subqueries token\-by\-token, LatentRAG produces latent tokens for thoughts and subqueries directly from the hidden states in a single forward pass\. We align LLMs with dense retrieval models in the latent space, enabling retrieval over latent subquery tokens and supporting end\-to\-end joint optimization\. To improve transparency and encourage semantically meaningful latent representations, we incorporate a parallel latent decoding mechanism that translates latent tokens back into natural language\. Extensive experiments on seven benchmark datasets show that LatentRAG achieves performance comparable to explicit agentic RAG methods while reducing inference latency by approximately 90%, substantially narrowing the latency gap with traditional single\-step RAG\.
+We present DuplexMotion, a streaming, full\-duplex speech\-and\-motion model designed for dyadic interaction\. To capture the continuous and reciprocal nature of human communication, this full\-duplex capability empowers the agent to simultaneously perceive and generate both speech and physical motion in a streaming fashion\. At its core, our method leverages the strong priors of a foundational full\-duplex speech model and integrates a novel motion pathway, thereby achieving fully synchronized multi\-modal interaction\. Specifically, we design a dual\-tower Transformer architecture that preserves the zero\-shot conversational reasoning of a frozen base speech model while constructing a deeply coupled, streaming motion pathway\. By introducing a unified dyadic token interleaving mechanism and guiding cross\-attention via a time\-aligned speech\-motion RoPE, our model effectively aligns autoregressive motions with rich latent speech features\. Trained on the 4,000\-hour Seamless Interaction dataset, our model effectively captures cross\-speaker dependencies and establishes new state\-of\-the\-art performance across both monadic and dyadic human interaction benchmarks\.
+
+## Simulating Human Memory with Language Models
+
+**Authors:** Qihan Wang; Nicholas Tomlin; Michael Hu; Brian Dillon; Tal Linzen
+
+**ID:** 148668 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=w1TBHVhUbg>) | [PDF](<https://openreview.net/pdf?id=w1TBHVhUbg>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148668>)
+
+Language models are increasingly being deployed as user simulators, but their memory is far more reliable than that of real users\. To measure this gap, we run a series of classic memory experiments from psychology on both humans and language models\. Across tasks, we find that out\-of\-the\-box language models exhibit better memory than humans, even when prompted to imitate human behavior\. We then show that better prompting strategies and the use of a compactor can cause language models to forget content in a more human\-like way\. Using these methods, we show preliminary evidence that language models with human\-like memory constraints can function as more effective user simulators in a downstream education task\. Finally, we release human reference data and benchmarks to support future work on simulating human memory with language models\.
+
+## Democratizing Tool Learning with Environments Fully Simulated by a Free 8B Language Model
+
+**Authors:** Chenming Tang; Hsiu\-Yuan Huang; Weijie Liu; Junqiang Zheng; Saiyong Yang; Yunfang Wu
+
+**ID:** 153684 | **Topic source:** official | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=JZaFq20B2u>) | [PDF](<https://openreview.net/pdf?id=JZaFq20B2u>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153684>)
+
+Reinforcement learning \(RL\) has become a prevalent paradigm for training tool calling agents, which typically requires online interactive environments\. Existing approaches either rely on training data with ground truth annotations or require advanced proprietary language models \(LMs\) to synthesize environments that keep fixed once created\. In this work, we propose TRUSTEE, a cost\-friendly method for training tool calling agents with dynamic environments fully simulated by free open\-source LMs that can be as small as 8B, including task generation, user simulation, tool simulation and trajectory evaluation, paired with an adaptive curriculum learning mechanism that controls task difficulty during training\. Our empirical results show that TRUSTEE outperforms baselines which require extra external resources in most cases\. These confirm that, with a sufficiently sophisticated design, even simulated environments with a local 8B LM as the backbone could set a strong baseline for tool learning\. We hope our proposed paradigm could democratize tool learning and inspire future research on environment scaling with limited resources\.
+
+## D$^2$Quant: Accurate Low\-bit Post\-Training Weight Quantization for LLMs
+
+**Authors:** Xianglong Yan; chengzhu bao; Zhiteng Li; Tianao Zhang; Shaoqiu Zhang; Ruobing Xie; Xingwu Sun; Yulun Zhang
+
+**ID:** 151535 | **Topic source:** official | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=Zx81NVkpZ2>) | [PDF](<https://openreview.net/pdf?id=Zx81NVkpZ2>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151535>)
+
+Large language models \(LLMs\) deliver strong performance, but their high compute and memory costs make deployment difficult in resource\-constrained scenarios\. Weight\-only post\-training quantization \(PTQ\) is appealing, as it reduces memory usage and enables practical speedup without low\-bit operators or specialized hardware\. However, accuracy often degrades significantly in weight\-only PTQ at sub\-4\-bit precision, and our analysis identifies two main causes: \(1\) down\-projection matrices are a well\-known quantization bottleneck, but maintaining their fidelity often requires extra bit\-width; \(2\) weight quantization induces activation deviations, but effective correction strategies remain underexplored\. To address these issues, we propose D$^2$Quant, a novel weight\-only PTQ framework that improves quantization from both the weight and activation perspectives\. On the weight side, we design a Dual\-Scale Quantizer \(DSQ\) tailored to down\-projection matrices, with an absorbable scaling factor that significantly improves accuracy without increasing the bit budget\. On the activation side, we propose Deviation\-Aware Correction \(DAC\), which incorporates a mean\-shift correction within LayerNorm to mitigate quantization\-induced activation distribution shifts\. Extensive experiments show that D$^2$Quant achieves superior weight\-only PTQ performance at sub\-4\-bit precision\. We will release the code and quantized models of D$^2$Quant\.
 
 ## EsoLang\-Bench: Evaluating Large Language Models via Esoteric Programming Languages
 
@@ -200,35 +150,21 @@ Large language models achieve near\-ceiling performance on code generation bench
 
 **Authors:** Jianqiao Cui; haoxian zhu; Yanghao Zhang; Hanbiao Meng
 
-**ID:** 151194\-\-2 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 151194
+**ID:** 151194 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
 [Paper](<https://openreview.net/forum?id=cFddukqYcW>) | [PDF](<https://openreview.net/pdf?id=cFddukqYcW>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151194>)
 
 Existing audio deepfake detection \(ADD\) methods frequently struggle with limited generalization, as fixed bottleneck architectures fail to adapt to the heterogeneous information densities inherent in diverse spoofing artifacts\. Moreover, standard augmentation often incurs a pathological robustness\-accuracy trade\-off\. In this paper, we propose a unified ADD framework to address these challenges\. Our approach integrates: \(1\) an Adaptive Audio Feature Integration \(AAFI\) module that dynamically selects optimal latent dimensions via a compression pool and a stochastic exploration mechanism, ensuring flexible representations across multi\-type dynamic attacks; and \(2\) a Mel\-Band Adversarial Perturbation \(Mel\-BAP\) strategy that applies targeted regularization in the mel\-spectrogram domain to encourage the learning of invariant decision boundaries\.   Extensive evaluations on benchmarks including ADD 2022, FakeOrReal, and In\-the\-Wild demonstrate that our Whisper\-small based model achieves a state\-of\-the\-art average Equal Error Rate \(EER\) of 1\.51\\%\. Compared to existing SOTA models such as the 3\-billion\-parameter Resemble\-Detect\-3B\-Omni, our framework reduces parameter count by up to 91\.6\\% while improving average EER by 60\.7\\%\. Notably, the model exhibits exceptional zero\-shot transferability, achieving 3\.91\-\-5\.65\\% EER on unseen languages and maintaining high resilience against real\-world acoustic distortions\. This work provides a scalable and efficient “plug\-in” solution for enhancing trust and security in the audio Web ecosystem\.
 
-## TrajWiki: Source\-Grounded Memory Trajectories for Long\-Horizon Dialogue Agents
+## Who Says What: Symbolic Trimodal Binding Mechanisms in Audio\-Visual LLMs
 
-**Authors:** Jingyu Sun; Yuyang Xue; Mingyang Li; Zhengtao Yao; Jiachen Li; Yang Cui; Wenhao Cai; Haozhe Liu; Fangying Wang; Magdalene K Montgomery; Syed M Baker; Hongpeng Zhou
+**Authors:** Jihoo Jung; Youngjoon Jang; Joon Son Chung
 
-**ID:** 155885\-\-2 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
+**ID:** 153354 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-**Repeated source row:** 155885
+[Paper](<https://openreview.net/forum?id=M0fBuZdipl>) | [PDF](<https://openreview.net/pdf?id=M0fBuZdipl>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153354>)
 
-[Paper](<https://openreview.net/forum?id=26nRwIZFcb>) | [PDF](<https://openreview.net/pdf?id=26nRwIZFcb>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155885>)
-
-_Abstract unavailable from the accessible public sources._
-
-## Enhancing Speech Large Language Models through Reinforced Behavior Alignment
-
-**Authors:** Yansong Liu; Yuan Liu
-
-**ID:** 154532 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=CtJ6YRQRlm>) | [PDF](<https://openreview.net/pdf?id=CtJ6YRQRlm>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154532>)
-
-Speech large language models \(SpeechLMs\) can process spoken requests, yet still lag behind text\-prompted large language models \(LLMs\) on instruction following and reasoning\. We argue that this gap is not only an ASR or representation problem: the same semantic instruction can induce different response policies when spoken with different speakers, accents, noise conditions, prosody, or disfluencies\. We propose Verifiable Invariant Reinforced Behavior Alignment \(VIRBA\), a reinforcement\-learning framework for aligning SpeechLM behavior across acoustic realizations of the same semantic intent\. VIRBA builds multi\-view spoken instruction groups, scores sampled responses with semantic preference, rule\-verifiable correctness, cross\-acoustic invariance, and adaptive reasoning rewards, and optimizes the model with Cross\-Acoustic Group Relative Policy Optimization \(CA\-GRPO\)\. The resulting objective moves SpeechLM alignment beyond teacher imitation toward robust reasoning policies that remain stable across realistic spoken realizations\. Experiments with recent SpeechLM baselines, disfluency robustness, spoken QA, audio reasoning, and speech\-to\-text translation show the largest gains on reasoning\-heavy and acoustically perturbed spoken prompts\.
+Current Audio\-Visual LLMs \(AVLLMs\) struggle with reasoning over videos featuring multi\-speaker dialogues\. In such videos, resolving "who says what" is crucial, which necessitates trimodal \(text\-audio\-visual\) binding\. Motivated by these challenges, we systematically investigate how this trimodal binding is achieved in AVLLMs\. Specifically, we identify emergent symbolic trimodal binding mechanisms in AVLLMs that utilize modality\-specific symbolic variables\. By encoding auditory and visual components into symbolic variables\-capturing temporal utterance sequences and spatial entity coordinates, respectively\-the model establishes cross\-modal linking within this abstract space\. Crucially, we reveal that when trimodal binding fails, the breakdown predominantly stems from misaligned audio\-visual connections\. To overcome this bottleneck, we introduce an audio\-visual prompting method utilizing an off\-the\-shelf Active Speaker Detection \(ASD\) model\. By simply overlaying visual bounding boxes on active speakers, this training\-free approach yields immediate performance gains across three conversation\-centric benchmarks\. Moreover, lightweight fine\-tuning of fewer than 300 steps on these ASD\-prompted\-videos extends these gains to three general AV benchmarks, suggesting the generalizability of our method\.
 
 ## Advancing Affordance\-Grounded Creative Tool Use in Large Multimodal Models
 
@@ -240,16 +176,6 @@ Speech large language models \(SpeechLMs\) can process spoken requests, yet stil
 
 Large multimodal models \(LMMs\) have advanced rapidly in perception and reasoning, yet it remains unclear whether they can discover visually grounded, physically feasible solutions in open\-ended environments\. We first introduce \*\*MM\-CreativityBench\*\*, a benchmark for affordance\-grounded creative tool use, where models must inspect scenes, entities, and parts to identify non\-obvious object uses grounded in visual evidence\. Our evaluation shows that current LMMs often fail to sustain grounded exploration: they overlook relevant entities, under\-examine critical parts, or hallucinate unsupported attributes\. To address these failures, we propose \*\*affordance\-grounded alignment\*\*, framing creative tool use as a preference learning problem\. Using Direct Preference Optimization and supervision from an affordance knowledge base, we train models to favor visually grounded attribute–affordance reasoning over hallucinated alternatives while improving exploration efficiency\. Our results yield consistent gains in correct entity and part selection, and reduce hallucination and grounding errors\. These findings position grounded creativity as a core capability for future multimodal agents: the ability to adapt to unfamiliar environments and solve problems beyond memorized patterns or surface\-level plausibility, moving closer to real human\-like intelligence\.
 
-## Differentiable Bit\-Widths: Co\-optimizing Pruning and Quantization via SVD for Ultra\-Efficient LLM Compression
-
-**Authors:** Hankyul Kang; Jongbin Ryu
-
-**ID:** 148406 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=y5tDLoawiV>) | [PDF](<https://openreview.net/pdf?id=y5tDLoawiV>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148406>)
-
-SVD\-based pruning and quantization have recently emerged as a promising strategy for the ultra\-efficient compression of large language models\. In these methods, compression is performed in two stages: components are first truncated, and the remaining ones are subsequently quantized\. Although this decoupled pipeline benefits from both pruning and quantization, it requires separate optimization for each stage and fails to fully exploit their balance, which can lead to suboptimal performance under aggressive compression\. To address this limitation, we propose a new LLM compression method that co\-optimizes pruning and quantization in a unified framework\. Our key idea is a differentiable method for learning component\-wise bit\-widths, allowing less important components to be assigned 0\-bit precision and pruned away\. Notably, our method performs favorably against two\-stage baselines, even when subjected to extreme quantization settings \($1\.61$ bits\) designed for ultra\-efficiency\. The code will be publicly released upon acceptance\.
-
 ## Proactive Instance Navigation with Comparative Judgment for Ambiguous User Queries
 
 **Authors:** Junhyuk Kwon; Seungjoon Lee; Hyejin Park; Kyle Min; Jungseul Ok
@@ -259,16 +185,6 @@ SVD\-based pruning and quantization have recently emerged as a promising strateg
 [Paper](<https://openreview.net/forum?id=LR1XtBSs7q>) | [PDF](<https://openreview.net/pdf?id=LR1XtBSs7q>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153423>)
 
 Natural\-language instance navigation becomes challenging when the initial user request does not uniquely specify the target instance\.  A practical agent should reduce the user's burden by actively asking only the information needed to distinguish the intended target from similar distractors, rather than requiring a detailed description upfront\.  Existing approaches often fall short of this goal: they may stop at the first plausible candidate before sufficiently exploring alternatives, or, even after collecting multiple candidates, ask about the target's attributes derived from individual candidates rather than questions selected to distinguish candidates in the pool\. As a result, despite the dialogue, the agent may still fail to distinguish the target from distractors, leading to premature decisions and lengthy user responses\. We propose Proactive Instance Navigation with Comparative Judgment \(ProCompNav\), a two\-stage framework that first constructs a candidate pool and then identifies the target through comparative judgment\.  At each round, ProCompNav extracts an attribute\-value pair that splits the current pool, asks a binary yes/no question, and prunes all inconsistent candidates at once\. This reframes disambiguation from open\-ended target description to pool\-level discriminative questioning, where each question is chosen to narrow the candidate set\.  On CoIN\-Bench, ProCompNav improves Success Rate over interactive baselines with the same minimal input and non\-interactive baselines with detailed descriptions, while substantially reducing Response Length\.  ProCompNav also achieves state\-of\-the\-art Success Rate on TextNav, suggesting that comparative judgment is broadly useful for instance\-level navigation among similar distractors\.
-
-## AudioGS: High\-Fidelity Neural Audio Compression via Continuous Gaussian Splatting
-
-**Authors:** Ron Aluf; Alon Canfi; Eliya Nachmani
-
-**ID:** 149852 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=mpOLhvRzOy>) | [PDF](<https://openreview.net/pdf?id=mpOLhvRzOy>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149852>)
-
-Neural audio codecs compress waveforms into compact discrete tokens that underpin speech language models, real\-time communication, and large\-scale audio storage\. Almost every dominant design, including residual vector quantization, finite scalar quantization, and single\-codebook variants, follows the VQ\-VAE template by partitioning the encoder latent through a learned codebook or a fixed scalar grid\. We ask whether this partition is necessary\. We introduce GS\-Codec, a neural speech codec whose bottleneck is a parametric signal decomposition rather than a quantizer\. We adapt Gaussian splatting from 3D scene reconstruction to one\-dimensional latents\. An inner optimization loop fits each encoder segment as a weighted sum of 1D Gaussian primitives\. The decoder then reconstructs the waveform from the rendered sum\. To avoid the cost of this iterative inner loop at inference time, we additionally train a lightweight GS Predictor Net that regresses the primitive parameters in a single forward pass\. The encoder and decoder are trained end\-to\-end through the inner loop, with no quantizer anywhere in the training pipeline: the bottleneck is the decomposition itself, and scalar quantization is applied only post\-training to the fitted parameters\. Rather than relying on discrete codebook stages for bitrate control, our representation exposes a smooth rate\-quality tradeoff: a single trained checkpoint supports continuous post\-training bitrate control by varying the number of primitives and the per\-parameter bit depth, with no retraining required\. GS\-Codec outperforms well\-established open\-source codecs such as EnCodec and DAC on speaker similarity \(SIM\), intelligibility \(STOI\), and perceptual quality \(UTMOS\) at comparable bitrates, while achieving comparable semantic performance\.
 
 ## Clustering\-Free End\-to\-End Spoof Diarization with Encoder\-Decoder Attractors
 
@@ -280,16 +196,6 @@ Neural audio codecs compress waveforms into compact discrete tokens that underpi
 
 Spoof diarization aims to jointly localize spoofed regions and determine which spoofing method generated each segment within a partially spoofed utterance\. Existing approaches rely on modular pipelines that separate localization and clustering, introducing training\-\-inference mismatch and requiring oracle knowledge of the number of spoofing classes at inference time\. We propose \\textbf\{E2E\-SD\}, the first \\emph\{clustering\-free\} end\-to\-end framework for spoof diarization, which reformulates the task as variable\-cardinality temporal set prediction\. E2E\-SD jointly learns localization and class assignment using encoder\-decoder attractors with Hungarian\-matched training, eliminating the need for post\-hoc clustering and oracle class counts\. Our framework dynamically generates class\-specific attractors through an LSTM decoder and estimates the number of active spoofing classes via attractor existence probabilities, requiring no external class\-count information at any stage\. On the PartialSpoof benchmark, E2E\-SD achieves a $\\JER$ of 15\.76\\%, a 41\.6\\% relative improvement over the previous best result \(26\.99\\%\), while operating fully oracle\-free with 88\.7\\% class\-count estimation accuracy\. The largest gain is observed on unknown attacks, where $\\JER$ drops from 49\.02\\% to 21\.00\\% \(57\.1\\% relative improvement\), demonstrating that end\-to\-end optimization with dynamic attractors enables more attack\-agnostic generalization than modular clustering pipelines\.
 
-## She Performs Your Voice: A Unified Speech and Dance Motion Model
-
-**Authors:** Lurui Wang; yongkang cheng; Can Xu
-
-**ID:** 152650 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=RPt1Yd4luK>) | [PDF](<https://openreview.net/pdf?id=RPt1Yd4luK>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152650>)
-
-Expressive performers resonate with audiences because they transform sound into motion: rhythm invites steps, prosody evokes gestures, and energy shapes the flow of the body\. However, existing audio\-driven character systems often reduce audio to a task\-specific condition, separately optimizing for co\-speech gestures or music\-driven dance\. This fragmented view overlooks audio as the shared perceptual driver of performance, making it difficult to generate coherent full\-body motion across speaking, dancing, and their intermediate states\. We present VOXPERFORMER, a unified audio\-to\-motion framework that moves toward a generalized performance foundation model\. Our key insight is that audio is not merely an external condition, but the hidden soul of performance style, governing how motion emerges, evolves, and transitions\. To realize this, VOXPERFORMER introduces a structured motion prior to organize the full\-body performance space, audio\-to\-prior distillation to transform sound into latent motion cues, a memory\-augmented prior to resolve audio\-motion ambiguity, and a decoupled diffusion generator with implicit transition matching for efficient and coherent synthesis\. Experiments on BEAT2 and FineDance show that VOXPERFORMER remains competitive on speech\-driven gesture generation while substantially improving hand\-aware music\-driven dance generation\. User studies further show that participants prefer VOXPERFORMER, indicating stronger audio\-motion correspondence and more natural perceptual resonance\.
-
 ## Decoupling Conversational Dynamics in Full\-Duplex Spoken Models through Reinforcement Learning
 
 **Authors:** Yuxin Li; Donghang Wu; Guan\-Ting Lin; Hung\-yi Lee; Chengwei Qin; CHEN CHEN; Zhehuai Chen
@@ -300,65 +206,495 @@ Expressive performers resonate with audiences because they transform sound into 
 
 Recent full\-duplex spoken dialogue models have demonstrated compelling progress toward human\-like interaction, enabling agents to respond with low latency, produce backchannels, and handle user barge\-ins\. Yet these improvements in conversational dynamics often come with weaker reasoning and instruction\-following abilities, revealing a potential tension between interactive dynamics and intelligence capability\. In this paper, we argue that such an \*\*intelligence\-\-dynamics\*\* trade\-off is not fundamental: conversational dynamics can instead be learned as a separate real\-time decision policy from human dialogue data\. To this end, we propose DuplexPO, a reinforcement learning \(RL\) framework that decouples when to speak from what to say\. It preserves the semantic response capability of an instruction\-tuned assistant, while optimizing its temporal interaction behavior over selected high\-impact windows from long human conversations\. To quantitatively optimize these dynamics, we formulate the Factorized Conversational Dynamics Reward \(FCDR\) to enable fine\-grained temporal credit assignment for turn initiation, backchanneling, yielding, and regularized participation\. The policy is then optimized with a GRPO\-style objective\. Experiments show that DuplexPO substantially improves full\-duplex behaviors, including timely backchannels, smooth turn\-taking, and barge\-in handling, while maintaining strong reasoning and instruction\-following performance\. Moreover, improvements in dynamics\-oriented metrics are reflected in better user experience, suggesting that optimizing conversational timing as a standalone objective can promote more natural full\-duplex interaction\.
 
-## Geometric Alignment without Functional Equivalence: A Layer\-wise Analysis of the Speech\-Text Modality Gap
-
-**Authors:** Ming\-Hao Hsu; Xiaohai Tian; Jun Zhang; Lu Lu; Yuxuan Wang; Zhizheng Wu
-
-**ID:** 153576\-\-2 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 153576
-
-[Paper](<https://openreview.net/forum?id=KNuSWirJEG>) | [PDF](<https://openreview.net/pdf?id=KNuSWirJEG>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153576>)
-
-_Abstract unavailable from the accessible public sources._
-
-## Hearing is Believing? Evaluating and Analyzing Audio Language Model Sycophancy with SYAUDIO
-
-**Authors:** Junchi Yao; Lokranjan Lakshmikanthan; Annie Zhao; Danielle Zhao; Shu Yang; Zikang Ding; Di Wang; Lijie Hu
-
-**ID:** 148254\-\-2 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 148254
-
-[Paper](<https://openreview.net/forum?id=zGOpgI7plw>) | [PDF](<https://openreview.net/pdf?id=zGOpgI7plw>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148254>)
-
-_Abstract unavailable from the accessible public sources._
-
 ## Rethinking Entropy Allocation in LLM\-based ASR: Understanding the Dynamics between Speech Encoders and Large Language Models
 
 **Authors:** Yuan Xie; Jiaqi Song; Xianliang Wang; Ming Lei; Jie Gao
 
-**ID:** 154756\-\-2 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 154756
+**ID:** 154756 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
 [Paper](<https://openreview.net/forum?id=BBvPhHF8Mj>) | [PDF](<https://openreview.net/pdf?id=BBvPhHF8Mj>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154756>)
 
 Integrating large language models \(LLMs\) into automatic speech recognition \(ASR\) has become a dominant paradigm\. Although recent LLM\-based ASR models have shown promising performance on public benchmarks, it remains challenging to balance recognition quality with latency and overhead, while hallucinations further limit real\-world deployment\. In this study, we revisit LLM\-based ASR from an entropy allocation perspective and introduce three encoder\-side diagnostics to characterize how training paradigms shape uncertainty reduction across the speech encoder\-LLM interface\. To remedy entropy\-allocation inefficiencies in prevailing approaches, we propose a capability\-boundary\-aware multi\-stage training strategy that targets parameter efficiency and robustness to hallucinations\. Specifically, we redesign the pretraining strategy to alleviate the speech\-text modality gap, and further introduce an iterative asynchronous SFT stage between alignment and joint SFT to preserve functional decoupling and constrain encoder representation drift\. Experiments on various benchmarks show that our method achieves competitive performance against state\-of\-the\-art models using only 2\.3B parameters, while also effectively mitigating hallucinations through our decoupling\-oriented design\.
 
-## Actionable Hallucination Detection: Translating Latent Uncertainty into Agentic Critique
-
-**Authors:** Sanidhya Vijayvargiya; Rahul Lokesh
-
-**ID:** 155358\-\-2 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 155358
-
-[Paper](<https://openreview.net/forum?id=6CdA8QbHL5>) | [PDF](<https://openreview.net/pdf?id=6CdA8QbHL5>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155358>)
-
-Large Language Models \(LLMs\) deployed as AI agents frequently exhibit a task\-completion bias, executing hallucinated, undesired actions to force a resolution rather than expressing uncertainty\. Existing detection methods fail to provide actionable, real\-time correction as they either do not localize the hallucinations or incur prohibitive inference latency\. We introduce the Latent Critic, a lightweight low\-rank adapter \(LoRA\) that operates concurrently with a frozen base LLM's generation to actively restructure the transformer's residual stream\-\-\-amplifying epistemic uncertainty signals and translating them into localized, natural language feedback within a single sequence\. By refining the base model's native uncertainty signals, this manipulation of the latent space enables highly reliable, granular detection without the overhead of secondary inference loops\. Mechanistic analysis via activation patching and layer\-wise probing shows that this rank\-invariant behavior restructures pre\-existing uncertainty geometry into a linearly separable representation\. Using tool\-calling as an instantiation of granular hallucinations, we validate the detection and downstream improvements enabled by the Latent Critic architecture across Qwen and Llama\-based models\. Demonstrating superior real\-time efficacy, our approach significantly outperforms equivalent\-scale external detectors and internal probes in isolating hallucinations \(0\.870 vs\. 0\.695 F1\), achieving &gt;80% accuracy in localization \(e\.g\., ungrounded: date\)\. When deployed in a closed\-loop ReAct environment, the Critic acts as a zero\-latency guardrail, intercepting hallucinations before execution to prevent undesired actions while simultaneously enabling efficient agent self\-correction\.
-
 ## Task Success Is Not Enough: Side\-effect\-Aware Evaluation of Tool\-Using Language Model Agents
 
 **Authors:** Jiaju Huang; Shaobin Chen; Xinglong Liang; Xinyu Ma; Hao YANG; Yue Sun; Wei Ke; Tao Tan
 
-**ID:** 138911\-\-2 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 138911
+**ID:** 138911 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
 [Paper](<https://openreview.net/forum?id=xJdBs3VVTg>) | [PDF](<https://openreview.net/pdf?id=xJdBs3VVTg>) | [Official poster](<https://neurips.cc/virtual/2026/poster/138911>)
 
 Tool\-using language model agents are usually evaluated by whether they finish the user's task\. That metric misses a common failure: an agent can complete the requested work while also taking an unauthorized side\-effecting action, such as writing to the wrong object, expanding the scope of the request, or contacting an unintended recipient\. We call this failure mode collateral damage \(CD\)\. We introduce SABench \(Side\-effect\-Aware Benchmark\), a benchmark of 201 email, calendar, and ticket tasks\. Each task crosses one of four state structures \(independent, dependent, externally reachable, cross\-tool\) with one of four trap families \(ambiguity, mis\-targeting, cascade harm, overreach\), and each task has a deterministic trace\-based oracle for both goal satisfaction and authorization compliance\. Across 2,211 model\-task pairs from 11 frontier LLMs spanning major commercial and open model families, 15\.2% of all runs incur CD, with risk concentrated in ambiguity tasks \(38\.8% violation rate\) while non\-ambiguous traps average 8\.4% CD\. Among goal\-satisfied runs, 12\.8% still produce unauthorized writes\. Cross\-tool and dependent states have about twice the CD rate of independent states\. CD rates vary by 4\.7x across models at comparable goal rates, which suggests that task success alone is a poor proxy for safe tool use\. The SABench task corpus is released at https://huggingface\.co/datasets/anon\-sabench\-2026/sabench; the traces, oracle, code, and analysis pipeline are released at https://anonymous\.4open\.science/r/sabench\-artifact\.
+
+## RealityTest: How People Probe AI Identity and Whether Models Disclose It
+
+**Authors:** Anna Gausen; Sarenne Wallbridge; Bessie O&amp;amp;\#x27;Dell; Christopher Summerfield; Hannah Rose Kirk
+
+**ID:** 139210 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=eUlBhLa5hL>) | [PDF](<https://openreview.net/pdf?id=eUlBhLa5hL>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139210>)
+
+AI systems are increasingly deployed in conversational settings where users may be uncertain whether they are speaking with a human or an AI\. Despite mounting regulatory attention to this known safety risk, existing evaluations of AI disclosure are typically English\-only, based on machine\-generated questions, and restricted to text\. We present RealityTest to comprehensively test whether AI systems disclose their identity when asked\. The benchmark is the first large\-scale multimodal and multilingual evaluation, grounded in human data on how people actually encounter and question AI identity in the real\-world\. Alongside the benchmark, we release the underlying dataset of 3,152 identity\-probing queries collected from $\\textasciitilde$750 participants across 49 countries and five languages, in text and speech scenarios\. We find that only 31\\% of people ask about identity directly, and that the questions people ask are far more diverse than machine\-generated queries\. We test 17 text and 6 speech models, and find substantial variation in disclosure behaviour\. However, a single suppression instruction reduces disclosure rates to below 30\\%, even in the best\-performing models\. Validating our investment in diverse, human\-grounded evaluation data, we find that how the question is phrased and the context of the conversation matter more for disclosure than which model is being tested\. Safety evaluations built on narrow or synthetic query sets risk mischaracterising how models behave in realistic deployment settings\.
+
+## TRACE: Tourism Recommendation with Accountable Citation Evidence
+
+**Authors:** Zixu Zhao; SIJIN WANG; Yu Hou; YUANYUAN XU; Yufan Sheng; Xike Xie; Wenjie Zhang; Won\-Yong Shin; Xin Cao
+
+**ID:** 139280 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=ZmCqSnVZ8k>) | [PDF](<https://openreview.net/pdf?id=ZmCqSnVZ8k>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139280>)
+
+Tourism is a high\-stakes setting for conversational recommender systems \(CRS\): a plausible\-sounding suggestion can waste real money and trip time once a traveler acts on it\. Existing CRS benchmarks primarily evaluate systems with a single Recall@$k$ score over entity mentions, and tourism\-specific resources add spatial or knowledge\-graph context, yet none of them couple multi\-turn recommendation with verbatim review\-span evidence and rejection recovery\. This leaves an evaluation gap for tourism recommendation that is simultaneously \*trustworthy\*, \*verifiable\*, and \*adaptive\*: recommend the right point of interest \(POI\) for multi\-aspect preferences \(such as cuisine, price, atmosphere, walking distance\), justify each suggestion with verifiable evidence from prior visitors so the traveler can act without trial and error, and recover when the first recommendation is rejected mid\-dialogue\. We introduce \*\*TRACE\*\*, where each item is \*a multi\-turn tourism recommendation dialogue with review\-span citations and explicit rejection turns\*: 10,000 dialogues over 2,400 Yelp POIs and 34,208 reviews across eight U\.S\. cities, paired with 14 retrieval, planning, and LLM baselines, along with 25 metrics organized under \*Accuracy\*, \*Grounding\*, and \*Recovery\*\. Across these baselines, TRACE reveals the \*\*Three\-Competency Gap\*\*: LLM Zero\-Shot leads in closed\-set Recall@1 and rejection recovery but cites less densely than retrievers; non\-LLM retrievers achieve surface\-verbatim grounding but with low accuracy; Multi\-Review Synthesis fails on Recovery\. The Grounding Score agrees with human citation precision \(Spearman $\\rho = \+0\.80$, $p &lt; 10^\{\-20\}$\), and paired $t$\-tests reproduce the per\-baseline ranking \($p &lt; 0\.01$ on the dominant contrasts\)\. TRACE reframes accountable tourism recommendation as a joint target \(right POI, verifiable evidence, adaptive repair\) rather than a single\-axis leaderboard\.
+
+## WorldSpeech: A Multilingual Speech Corpus from Around the World
+
+**Authors:** Antonis Asonitis; Luca Lanzendörfer; Frédéric Berdoz; Roger Wattenhofer
+
+**ID:** 139336 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=WBzZjghqhE>) | [PDF](<https://openreview.net/pdf?id=WBzZjghqhE>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139336>)
+
+Automatic speech recognition \(ASR\) performs well for high\-resource languages with abundant paired audio\-transcript data, but its accuracy degrades sharply for most languages due to limited publicly available aligned data\. To this end, we introduce WorldSpeech, a 24kHz multilingual speech corpus comprising 65k hours of aligned audio\-transcript data across 76 languages, collected from diverse public sources including parliamentary proceedings, international broadcasts, and public\-domain audiobooks\. For 37 languages, WorldSpeech provides more than 200 hours of aligned speech, with 28 exceeding 500 hours and 24 surpassing 1k hours\. Fine\-tuning existing ASR models on WorldSpeech results in an average relative Word\-Error\-Rate reduction of 63\.5% across 11 typologically diverse languages\.
+
+## NorSA: Accelerating LLM Decoding via Normalized Sparse Activation
+
+**Authors:** Tianteng Gu; Bo Xiao; Ke Zeng; Shuai Shi; Wangyou Zhang; Chenda Li; Yanmin Qian
+
+**ID:** 154390 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=DvzLG9N5Dx>) | [PDF](<https://openreview.net/pdf?id=DvzLG9N5Dx>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154390>)
+
+Sparse activation accelerates Large Language Model \(LLM\) decoding by removing redundant computations and memory access, but existing methods often assume hidden\-state dimensions are independent and identically distributed \(i\.i\.d\.\)\. We replace this i\.i\.d\. perspective with a covariance\-aware view by analyzing contextual dependencies across tokens and inter\-dimensional correlations within hidden states\. We introduce Normalized Sparse Activation \(NorSA\), a training\-free framework that combines dynamic thresholding with decorrelating rotation\. Across the LLaMA, Mistral, and Qwen families, NorSA consistently improves perplexity and downstream accuracy over prior training\-free baselines, especially in high\-sparsity regimes\. On LLaMA3\-8B at 50\\% sparsity, it stays within 0\.44 perplexity points of the dense model while achieving a 1\.32$\\times$ end\-to\-end decoding speedup\.
+
+## Accelerating Diffusion Language Models via Structured Suffix Modeling
+
+**Authors:** Zifeng Cheng; Keda Li; Zhiwei Jiang; Cong Wang; Fei Shen; Qing Gu
+
+**ID:** 152485 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=SkQxO613nL>) | [PDF](<https://openreview.net/pdf?id=SkQxO613nL>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152485>)
+
+Diffusion Language Models \(DLMs\) exhibit strong parallel decoding capabilities by denoising multiple tokens in a single generation step\. However, this parallelism comes with substantial computational overhead, as each step requires interactions with all suffix tokens\. Existing methods typically reduce this cost by retaining only a local suffix window as a substitute for the full suffix\. Despite their effectiveness, these methods overlook the structural heterogeneity across suffix regions and re\-initialize suffix tokens with identical representations at each timestep\. To this end, we propose a structured suffix modeling method for efficient DLM inference\. Specifically, we divide the suffix into three regions, i\.e\., the local, middle, and tail regions, and retain different numbers of suffix tokens in each region according to their structural roles\. Moreover, we incorporate the decoding results from the previous step into the suffix token representations at the current step, allowing them to carry evolving denoising information across generation steps\. Notably, our method is training\-free and orthogonal to several existing acceleration techniques, such as parallel decoding strategies and KV cache\. Empirical results across multiple benchmarks on three DLMs demonstrate that our method can further accelerate DLM inference and, in most cases, also improve task performance\. In particular, in long\-sequence inference, our method achieves up to a \\\(72\.16\\times\\\) speedup when combined with other acceleration techniques\.
+
+## SAME: Stability\-Aware Embedding Extraction in Mixture\-of\-Experts Language Models
+
+**Authors:** Shufan Yang; Zifeng Cheng; Zhiwei Jiang; Hao Wang; Miao Xue; Changhui Sun; Cong Wang; Ao Zhou; Qing Gu
+
+**ID:** 152895 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=PcLcfDARfL>) | [PDF](<https://openreview.net/pdf?id=PcLcfDARfL>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152895>)
+
+Extracting sentence embeddings from MoE\-based large language models is a promising direction, as they provide greater model capacity than dense models at comparable computational cost\. Existing works perform the standard forward propagation process to extract embeddings, overlooking a key stability requirement in the MoE encoding process: semantically similar texts should be encoded into similar representations\. In this work, we identify two key stability\-related phenomena in MoE models: \(1\) routing stability varies across layers, and \(2\) shared and routed experts exhibit different levels of stability\. To address these issues, we propose SAME, a Stability\-Aware MoE Embedding extraction framework that dynamically allocates activated experts across layers and adjusts expert outputs to mitigate component instability and improve embedding quality\. Specifically, SAME assigns fewer activated experts to layers with less stable routing, where layer\-wise routing stability is measured by the average overlap between the experts activated before and after injecting Gaussian noise into each layer’s router inputs\. Additionally, SAME reduces the contributions of routed experts to alleviate the impact of their instability\. Notably, our method is training\-free, seamlessly integrates with existing approaches, and incurs no additional inference overhead\. Experiments on semantic textual similarity benchmarks demonstrate that SAME consistently improves the quality of extracted embeddings across multiple MoE backbones\.
+
+## Mind the Gap: Dataset and Fine\-grained Evaluation for Inline Audio Descriptions
+
+**Authors:** Subhashini Venugopalan; Yingwen Tan; Taylor Roper; Jimmy Tobin; Anton Kast; Alicia Martin; Sam Sepah; Amy Pavel
+
+**ID:** 139386 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=Ta6qlgEwjY>) | [PDF](<https://openreview.net/pdf?id=Ta6qlgEwjY>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139386>)
+
+Audio descriptions \(AD\) are essential for making visual media accessible to blind and low\-vision \(BLV\) users\. While Multimodal Large Language Models \(MLLMs\) offer a scalable solution for generating audio descriptions on\-demand, their performance on \`\`inline'' audio descriptions \-\- which must fit within existing silences in a video \-\- remains under\-explored, particularly for diverse user\-generated content \(UGC\)\. We present a comprehensive investigation into MLLM\-generated inline audio descriptions\. First, we introduce a professionally annotated dataset of 36 hours of videos, each averaging $\\sim$5 mins\. and total 7k\+ descriptions, providing a high\-quality benchmark for this task\. Second, we propose an evaluation framework based on audio description expert guidelines that provides fine\-grained actionable metrics for model improvement\. Crucially, our framework evaluates the end\-to\-end task: it renders the generated scripts into audio tracks to assess their fit within the original video's natural silences, minimizing disruptive overlaps\. Our analysis reveals that while frontier MLLMs accurately describe visual events, significant gaps persist in audio\-visual timing, quality, and narrative flow\. Finally, we validate the framework and conduct studies  with BLV participants and sighted raters, finding that while users narrowly prefer human\-authored audio descriptions, they still find MLLM\-generated audio descriptions highly beneficial for comprehension\.   We provide guidance on the current capabilities of MLLMs for audio descriptions and release our dataset and evaluation suite to the community\.
+
+## Alignment Collapse Under KV Cache Quantization: Diagnosis and Mitigation
+
+**Authors:** Bruce C Xu; Adarsh Kumarappan; Mu Zhou
+
+**ID:** 150322 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=iyno3PkrLm>) | [PDF](<https://openreview.net/pdf?id=iyno3PkrLm>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150322>)
+
+Key\-\-value \(KV\) cache quantization is widely used to reduce Large Language Model \(LLM\) inference memory, yet existing evaluations solely focus on measuring perplexity and accuracy without assessing the safety impact\. In this study, we explore alignment preservation under KV cache quantization\. Across eleven instruction\-tuned models \(3\.8B\-\-72B\) and five benchmarks \(1,894 prompts\), we find that low\-bit quantization can silently destroy safety alignment \(Mistral\-7B loses 15\.2\\% of its refusals at only $1\.03\\times$ perplexity, and no universal safe bit\-width exists\), with sharp model\-specific phase transitions invisible to standard metrics\. We identify that the root cause is geometric: safety features occupy a low\-dimensional activation subspace $10^2$\-$10^3\\times$ more vulnerable to quantization noise than the full representation space perplexity averages over\. Inspired by this observation, we propose \*\*Per\-Channel Reduction\*\* \(PCR\), a diagnostic that classifies each model into one of three mechanistic failure modes: \(i\) \*outlier\-crushes\-safety\*, where safety lives in non\-outlier channels collaterally damaged by outlier\-driven scale factors; \(ii\) \*outlier\-as\-safety\*, where safety overlaps outlier channels and finer granularity cannot rescue it; \(iii\) \*multi\-layer dilution\*, where safety is distributed across many layers and per\-layer fixes fail\. PCR predicts the correct mitigation direction on all nine primary models and one held\-out model from an independent family \(20 calibration prompts\)\. PCR generalizes across unseen prompts, models, and production quantizers \(KIVI: up to 97\.2\\% recovery\), succeeding where attention\-based allocation methods fail\. The resulting training\-free protocol \($\{\\sim\}35$ GPU\-minutes\) recovers up to 97\\% of lost alignment at minimal memory overhead, addressing vulnerabilities confirmed in production vLLM serving with FP8 KV cache on NVIDIA GPUs\.
+
+## CS\-Dialogue: A 104\-Hour Dataset of Spontaneous Mandarin\-English Code\-Switching Dialogues for Speech Recognition
+
+**Authors:** Jiaming Zhou; Yujie Guo; Shiwan Zhao; Haoqin Sun; Hui Wang; Jiabei He; Aobo Kong; Shiyao Wang; Yong Qin
+
+**ID:** 139416 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=S7MdGXCTY0>) | [PDF](<https://openreview.net/pdf?id=S7MdGXCTY0>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139416>)
+
+Code\-switching \(CS\), the alternation between two or more languages within a single conversation, presents significant challenges for automatic speech recognition \(ASR\) systems\. Existing Mandarin\-English code\-switching datasets often suffer from limitations in size, spontaneity, and the lack of full\-length dialogue recordings with transcriptions, hindering the development of robust ASR models for real\-world conversational scenarios\. This paper introduces CS\-Dialogue, a novel large\-scale Mandarin\-English code\-switching speech dataset comprising 104 hours of spontaneous conversations from 200 speakers\. Unlike previous datasets, CS\-Dialogue provides full\-length dialogue recordings with complete transcriptions, capturing naturalistic code\-switching patterns in continuous speech\. We describe the data collection and annotation processes, present detailed statistics of the dataset, and establish benchmark ASR performance using state\-of\-the\-art models\. Our experiments, using Transformer, Conformer, and Branchformer, demonstrate the challenges of code\-switching ASR, and show that existing pre\-trained models such as Whisper still have the space to improve\. The CS\-Dialogue dataset will be made freely available for all academic purposes\.
+
+## AnyEdit: A Unified Framework for Speech and Singing Voice Editing with Real\-World Environmental Consistency
+
+**Authors:** Yunjia Zhang; Junan Zhang; Jing Yang; Xueyao Zhang; Fan Fan; Zhizheng Wu
+
+**ID:** 152934 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=PHYLBNJrV1>) | [PDF](<https://openreview.net/pdf?id=PHYLBNJrV1>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152934>)
+
+We present AnyEdit, a unified framework for speech and singing voice editing in real\-world acoustic environments\. Recent unified generative models already achieve strong speech and singing generation in clean conditions, but real\-world vocal editing remains challenging because the model must revise content while simultaneously preserving speaker identity, prosody, and the surrounding acoustic scene\. A straightforward solution is to directly model noisy edited audio end to end, yet this entangles semantic editing with environmental acoustics and can weaken the core vocal generation capability\. We therefore adopt a two\-stage design that preserves clean\-domain editing ability while deferring acoustic rendering to a separate stage\. First, an instruction\-guided autoregressive editor predicts clean prosody and content\-style tokens\. To make this stage robust to degraded inputs, we introduce a teacher\-student noise\-robust prosody tokenizer that distills clean prosodic tokens from noisy recordings\. Second, a flow\-matching acoustic model performs in\-context acoustic rendering conditioned on the source acoustic context, enabling the edited segment to inherit surrounding noise, reverberation, and background sound while maintaining speaker timbre consistently\. To further stabilize the unedited regions, we introduce a unmodified\-area\-aware supervision mechanism\. After pre\-training, we also apply direct preference optimization \(DPO\) using real singing editing pairs mined via dynamic time warping to achieve better singing editing quality\. To enable realistic evaluation, we introduce AnyEditBench, the first benchmark covering both speech and singing voice editing under diverse acoustic conditions\. Experiments on Chinese and English speech and singing datasets showed that AnyEdit consistently outperforms strong baselines in content accuracy, subjective quality, and background consistency under noisy and reverberant conditions\. Demo audios can be found at https://any\-edit\.github\.io\.
+
+## Rethinking Training Targets, Architectures and Data Quality for Universal Speech Enhancement
+
+**Authors:** Szu\-Wei Fu; Rong Chao; Xuesong Yang; Sung\-Feng Huang; Ryandhimas E Zezario; Rauf Nasretdinov; Ante Jukić; Yu Tsao; Frank Wang
+
+**ID:** 152599 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=RvRtBJQkGQ>) | [PDF](<https://openreview.net/pdf?id=RvRtBJQkGQ>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152599>)
+
+Universal Speech Enhancement \(USE\) aims to restore speech quality under diverse degradation conditions while preserving signal fidelity\. Despite recent progress, key challenges in training target selection, the distortion\-\-perception tradeoff, and data curation remain unresolved\. In this work, we systematically address these three overlooked problems\. First, we revisit the conventional practice of using early\-reflected speech as the dereverberation target and show that it can degrade perceptual quality and downstream ASR performance\. We instead demonstrate that time\-shifted anechoic clean speech provides a superior learning target\. Second, guided by the distortion\-\-perception tradeoff theory, we propose a simple two\-stage framework that achieves minimal distortion under a given level of perceptual quality\. Third, we analyze the trade\-off between training data scale and quality for USE, revealing that training on large uncurated corpora imposes a performance ceiling, as models struggle to remove subtle artifacts\. Our method achieves state\-of\-the\-art performance on the URGENT 2025 non\-blind test set and exhibits strong language\-agnostic generalization, making it effective for improving TTS training data\. Code and models will be released upon acceptance\. Audio samples are available at https://anonymous\.4open\.science/r/USE\-5232/index\.md\.
+
+## MAEB: Massive Audio Embedding Benchmark
+
+**Authors:** Adnan E Assadi; Isaac Chung; Chenghao Xiao; Roman Solomatin; Animesh Jha; Rahul Chand; Silky Singh; Kaitlyn Wang; Ali Sartaz Khan; Marc M Nasser; Sufen Fong; Pengfei He; Alan Xiao; Ayush Sunil Munot; Aditya Shrivastava; Artem Gazizov; Niklas Muennighoff; Kenneth Enevoldsen
+
+**ID:** 139057 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=nm06bgkKGH>) | [PDF](<https://openreview.net/pdf?id=nm06bgkKGH>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139057>)
+
+We introduce the Massive Audio Embedding Benchmark \(MAEB\), a large\-scale benchmark covering 30 tasks across speech, music, environmental sounds, and cross\-modal audio\-text reasoning in 100\+ languages\. We evaluate 56 models and find that no single model dominates across all tasks: contrastive audio\-text models excel at environmental sound classification \(e\.g\., ESC50\) but score near random on multilingual speech tasks \(e\.g\., SIB\-FLEURS\), while speech\-pretrained models show the opposite pattern\. Clustering remains challenging for all models, with even the best\-performing model achieving only modest results\. We observe that models excelling on acoustic understanding often perform poorly on linguistic tasks, and vice versa\. We also release MAEB\+, the full 98\-task collection from which MAEB is curated; to our knowledge, it is the largest publicly released collection of audio embedding evaluation tasks\. MAEB preserves task diversity while reducing evaluation cost and integrates into the MTEB ecosystem for unified evaluation across text, image, and audio modalities\. We release MAEB and all 98 tasks along with code and a leaderboard at https://anonymous\.4open\.science/r/mteb\-2FEB/\.
+
+## Beyond Correctness: Robustness\-Driven Evolutionary Self\-Training for Large Language Models
+
+**Authors:** Wei Guo; Hongyao Tang; Yi Ma; Jinyi Liu; Pengyi Li; Jing Liang; Yifu Yuan; YAN ZHENG; Jianye Hao
+
+**ID:** 151953 | **Topic source:** official | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=WZIsP7IaVI>) | [PDF](<https://openreview.net/pdf?id=WZIsP7IaVI>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151953>)
+
+Outcome\-based post\-training methods for mathematical reasoning rely on binary feedback, treating all correct trajectories equally\. However, this masks a critical distinction: some correct paths are structurally brittle and prone to cascading errors under inevitable autoregressive sampling noise, while others are robust and maintain their correctness despite these natural decoding variations\. Optimizing indiscriminately over these brittle solutions leads to inefficient learning, as the model wastes capacity memorizing brittle reasoning strategies\. To address this, we propose Trajectory Robustness\-Driven Evolutionary Self\-Training \(TREST\)\. Instead of relying on binary feedback, our framework explicitly prioritizes trajectory robustness by integrating evolutionary algorithms with supervised fine\-tuning\. Crucially, our analysis reveals that trajectory robustness serves as a strong natural proxy for genuine mathematical insight\. By conceptualizing reasoning paths as evolving individuals within a population, this evolutionary process naturally marginalizes brittle, brute\-force calculations in favor of robust, insight\-driven strategies\. By effectively internalizing these strategies, TREST achieves superior reasoning performance\. Experiments on complex mathematical benchmarks demonstrate that under aligned budgets, TREST outperforms outcome\-based baselines, establishing a highly effective alternative to conventional post\-training paradigms\.
+
+## Benchmarking Vietnamese Legal Knowledge of Large Language Models
+
+**Authors:** Dong Nguyen Tien; Minh\-Anh Nguyen; Thanh D Hoang; Nguyen T Ngoc; Quang M Xuan; Phan P Hai; Nguyen T Anh; Binh Vu; Dung Le
+
+**ID:** 139241 | **Topic source:** official | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=clrKAP4Tdj>) | [PDF](<https://openreview.net/pdf?id=clrKAP4Tdj>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139241>)
+
+The rapid advancement of large language models \(LLMs\) has expanded their potential in the legal domain\. However, existing legal benchmarks remain largely English\-centric and oriented toward common law, leaving a critical gap in evaluating LLMs for civil law systems that govern most jurisdictions worldwide\. To address this gap, we introduce Vietnamese Legal Benchmark VietLegal, a cognitively grounded benchmark designed for the hierarchical and codified structure of Vietnamese law\. Although instantiated in Vietnamese legislation, VietLegal provides a replicable evaluation framework for civil law systems characterized by complex statutory hierarchies and frequent amendments\. Inspired by Bloom’s taxonomy, VietLegal assesses multiple levels of legal understanding through tasks that mirror real\-world legal assistant use cases, including legal question answering, multi\-step reasoning, and scenario\-based problem solving\. The benchmark contains 10,450 expert\-annotated samples, each cross\-validated against authoritative legal sources to ensure fidelity to practical legal workflows\. By offering the first standardized legal benchmark for Vietnamese, VietLegal enables systematic assessment of LLMs in civil law contexts and supports the development of more reliable and interpretable AI\-assisted legal systems\.
+
+## EntropyCache: Decoded Token Entropy Guided KV Caching for Diffusion Language Models
+
+**Authors:** Minsoo Cheong; Donghyun Son; Woosang Lim; Sungjoo Yoo
+
+**ID:** 152767 | **Topic source:** official | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=QX9lXOB8FY>) | [PDF](<https://openreview.net/pdf?id=QX9lXOB8FY>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152767>)
+
+Diffusion\-based large language models \(dLLMs\) rely on bidirectional attention, which prevents lossless KV caching and requires a full forward pass at every denoising step\. Existing approximate KV caching methods reduce this cost by selectively updating cached states, but their decision overhead scales with context length or model depth\. We propose EntropyCache, a training\-free KV caching method that uses the maximum entropy of newly decoded token distributions as a constant\-cost signal for deciding \*when\* to recompute\. Our design is grounded in two empirical observations: \(1\) decoded token entropy correlates with KV cache drift, providing a cheap proxy for cache staleness, and \(2\) feature volatility of decoded tokens persists for multiple steps after unmasking, motivating recomputation of the $k$ most recently decoded tokens\. The skip\-or\-recompute decision requires only $O\(V\)$ computation per step, independent of context length and model scale\. Experiments on LLaDA\-8B\-Instruct and Dream\-7B\-Instruct show that EntropyCache achieves 15\.2×–26\.4× speedup on standard benchmarks and 22\.4×–24\.1× on chain\-of\-thought benchmarks against vanilla baselines, with competitive accuracy and decision overhead accounting for only 0\.5% of inference time\.
+
+## Latent Abstraction for Retrieval\-Augmented Generation
+
+**Authors:** Thi Ha Lan Nguyen; Minh\-Anh Nguyen; Dung Le
+
+**ID:** 155353 | **Topic source:** official | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=6Gb0gkrUgv>) | [PDF](<https://openreview.net/pdf?id=6Gb0gkrUgv>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155353>)
+
+Retrieval\-Augmented Generation \(RAG\) has become a standard approach for enhancing large language models \(LLMs\) with external knowledge, mitigating hallucinations, and improving factuality\. However, existing systems rely on generating natural language queries at each hop and maintaining a strict architectural separation between retriever and generator, preventing them from leveraging the full representational capacity of the LLM\. We propose LAnR \(Latent Abstraction for RAG\), a unified framework in which a single LLM jointly performs encoding, retrieval, and generation entirely within its own latent space\. Rather than generating textual queries, LAnR produces dense retrieval vectors from the hidden states of a designated \[PRED\] token and uses them to match against encoded document representations from the same model\. Furthermore, LAnR adaptively decides when sufficient evidence has been retrieved using a lightweight MLP control head over those same hidden states, eliminating explicit token\-level stopping reasoning\. Extensive experiments on five QA benchmarks spanning single\-hop and multi\-hop settings demonstrate that LAnR outperforms existing RAG methods, while achieving improved inference efficiency through reduced number of retrieval calls and tighter model integration\.
+
+## POISE: Instance\-Specific Prompt Tuning under Latent Mixture Target Distributions
+
+**Authors:** wenhao zheng; shuai xu; Lixing Chen; Xiu Su; Shichao Kan; Xiaoting Lyu; Zhe Qu
+
+**ID:** 154048 | **Topic source:** official | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=GbrExqa8nQ>) | [PDF](<https://openreview.net/pdf?id=GbrExqa8nQ>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154048>)
+
+Prompt tuning \(PT\) provides a parameter\-efficient way to adapt frozen large language models, but its behavior becomes less clear when task contains multiple related yet distinguishable patterns\. We formalize this setting as a latent mixture target distribution, where the target behavior is modeled as a finite mixture of latent task components\. We first show that static prompting can retain a non\-vanishing approximation gap when one shared prompt is insufficient to capture the target distribution\. Then we formalize instance\-specific prompting as an input\-dependent prompt mapping and show that, under ideal prompt assignment, its achievable regret can approach zero\. Guided by this analysis, we propose POISE \(Prompt Optimization via Instance\-Specific Experts\), a structured and parameter\-efficient approximation to instance\-specific prompting\. POISE represents the prompt space with learnable expert prompts, combines them through input\-dependent routing, and introduces a shared low\-rank residual correction to capture common structure\. Extensive experiments across multiple benchmarks show that POISE achieves strong performance while maintaining high parameter efficiency\.
+
+## RVCBench: Benchmarking Robustness of Voice Cloning Across Modern Audio Generation Models
+
+**Authors:** Ruinan Jin; Xinting Liao; Hanlin Yu; Deval Pandya; Xiaoxiao Li
+
+**ID:** 139667 | **Topic source:** official | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=ByGhl9qdO1>) | [PDF](<https://openreview.net/pdf?id=ByGhl9qdO1>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139667>)
+
+Modern Voice Cloning \(VCL\) can synthesize speech that closely matches a target speaker from only seconds of reference audio, enabling applications such as personalized speech interfaces and dubbing\. In practical deployments, modern audio generation models inevitably encounter noisy reference audios, imperfect text prompts, multilingual and long\-form generation settings, downstream post\-processing, and adversarial perturbations, all of which can significantly hurt robustness\. Despite rapid progress in VCL driven by autoregressive codec\-token language models and diffusion\-based models, robustness under realistic deployment shifts remains underexplored\. This paper introduces RVCBench, a comprehensive dataset and benchmark that evaluates Robustness in Voice Clone across the full generation pipeline\. RVCBench contributes a large\-scale, task\-aligned robustness dataset that instantiates realistic deployment shifts through controlled text\-audio pairing, multilingual and long\-form scenarios, expressive prompts, post\-processing conditions, and passive or proactive audio perturbations\. Covering 18 robustness evaluations, 225 speakers, and 14,370 utterances, RVCBench enables unified evaluation of input sensitivity, generation stability, output resilience, and perturbation robustness\. We evaluate 18 representative modern VCL models and reveal systematic vulnerabilities in content consistency, speaker similarity, long\-form stability, post\-processing resilience, detectability, and adversarial robustness\.
+
+## ALTER: An Allen's Algebra\-Based Evaluation Framework for Temporal Reasoning of LLMs
+
+**Authors:** Hongkai Zhou; Yanhui Li
+
+**ID:** 139265 | **Topic source:** official | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=ay0UXDsniW>) | [PDF](<https://openreview.net/pdf?id=ay0UXDsniW>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139265>)
+
+Despite the critical role of temporal reasoning in Large Language Models \(LLMs\), current synthetic benchmarks fall short: they either introduce information leakage or, upon addressing this issue, merely assess questions with explicit time points, failing to rigorously evaluate implicit temporal reasoning capabilities\. To bridge this gap, we propose a formally grounded evaluation framework, ALTER, based on Allen’s Interval Algebra\. By combining basic relations into complex networks and converting these structures into natural language forms through an automated pipeline, we construct a validated benchmark of 2,500 question\-answer pairs, ensuring a controllable and scalable evaluation environment\. We conduct experiments on a representative selection of LLMs\. Empirical evaluations on diverse LLMs yield three key findings: \(1\) identifying performance decline of LLMs in highly complex scenarios involving dense events; \(2\) isolating complex logical interactions—rather than linguistic comprehension—as an unresolved bottleneck; and \(3\) revealing a critical evaluation bias induced by narrative chronology, with LLMs exploiting textual shortcuts\. In summary, these findings reveal the blind spots of current evaluation paradigms, providing a rigorous foundation for the robust evaluation of complex temporal reasoning\.
+
+## Seeing Speech: Learning Visible Articulatory Dynamics for Speech\-Driven 3D Facial Animation
+
+**Authors:** Hyung Kyu Kim; Byungchan Hwang; HAKGU KIM
+
+**ID:** 148378 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=yLMGoDkvCM>) | [PDF](<https://openreview.net/pdf?id=yLMGoDkvCM>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148378>)
+
+Recent progress in speech\-driven 3D facial animation has improved vertex level reconstruction quality, but speech\-consistent visible articulation remains difficult\. This is because speech production follows structured and constrained lip jaw coordination and the mapping from acoustics to motion is inherently one to many\. Motivated by the structured patterns of visible articulation, we propose a novel articulation\-aware framework that models visible speech through directional lip motions and composes them into geometry consistent facial deformation\. To represent visible articulation with three canonical directional motions, spreading, opening, and protrusion, we propose a Speech Articulatory Memory \(SAM\) that captures the correspondence between speech and directional articulatory motions under phonetic context through key\-value memory structure based retrieval and decoding\.  Then, a Topology\-aware Articulatory Composition \(TAC\) integrates the predicted directional motions under mesh topology to produce coherent 3D facial motion\. Experiments on VOCASET and TFHP show that our method achieves the\-state\-of\-the\-art performance on standard reconstruction metrics and improves visible articulatory distance and velocity fidelity for key lip factors, while a user study confirms clear preference in lip sync and realism\.
+
+## VAANI: Capturing the language landscape for an inclusive digital India
+
+**Authors:** Sujith Pulikodan; Abhayjeet Singh; Agneedh Basu; Nihar Desai; Pavan K J; Pranav D Bhat; Raghu Dharmaraju; Ritika Gupta; Sathvik Udupa; Saurabh Kumar; Sumit Sharma; Visruth Sanka; Dinesh Tewari; Harsh Dhand; Amrita Kamat; Sukhwinder Singh; Shikhar Vashishth; Partha Talukdar; Raj Acharya; Prasanta Ghosh
+
+**ID:** 139409 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=SNHL5mw8sE>) | [PDF](<https://openreview.net/pdf?id=SNHL5mw8sE>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139409>)
+
+Voice\-based technologies have the potential to bridge digital accessibility gaps; however, existing datasets fail to capture the linguistic and regional diversity of Indic languages\. We present Project VAANI, a large\-scale multimodal dataset designed to represent India’s linguistic landscape across 165 districts\. Speech data is collected using image\-based prompts to elicit spontaneous responses, while images are curated through a separate pipeline covering diverse themes across regions\. The dataset undergoes a rigorous multi\-stage quality control process, combining automated and manual evaluation to ensure high audio quality and transcription accuracy\. We release approximately 289K images, 31,255 hours of speech, and 2,043 hours of transcribed audio spanning 105 languages from 28 states and 3 union territories\. Many of these languages are represented at this scale for the first time, making VAANI a foundational resource for inclusive speech technology\. The dataset enables the development of robust, multilingual, and multimodal models, and supports research in speech recognition, language understanding, and cross\-modal learning for underrepresented languages\.
+
+## IRIS: Interpolative Rényi Iterative Self\-play for Large Language Model Fine\-Tuning
+
+**Authors:** Wenjie Liao; Like Wu; Liangjie Zhao; Shihui Xu; Shigeru Fujimura
+
+**ID:** 148291 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=yx017YEEPx>) | [PDF](<https://openreview.net/pdf?id=yx017YEEPx>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148291>)
+
+Self\-play fine\-tuning enables large language models to improve beyond supervised fine\-tuning without additional human annotations by contrasting annotated responses with self\-generated ones\. Many existing methods rely on a fixed divergence regime\. SPIN is closely related to a KL\-based regime, SPACE to a Jensen\-Shannon\-style objective via noise contrastive estimation, and SPIF to $\\chi^2$\-regularized self\-play\. Since these divergences exhibit different strengths depending on the distributional gap between model and target, no single choice appears to provide favorable learning dynamics across training stages\. We propose IRIS \(Interpolative R\\'enyi Iterative Self\-play\), a R\\'enyi\-based self\-play fine\-tuning framework with a continuously adjustable objective\. IRIS decomposes into two independent tilted risk terms over annotated and synthetic data, with exponential importance weights controlled by the order parameter $\\alpha$\. We show that several self\-play objectives can be interpreted as limiting or representative regimes at particular values of $\\alpha$, providing a unified theoretical perspective on these methods\. An adaptive order schedule further adjusts $\\alpha$ to the distributional gap, shifting from sharper importance weighting early in training to smoother refinement near convergence\. Theoretically, we establish the fixed\-point property of IRIS and analyze how $\\alpha$ controls gradient concentration\. Experiments on Zephyr\-7B and Qwen2\.5\-3B across ten benchmarks show that IRIS improves upon baselines, reaching 44\.57\\% average score with gains across iterations\. In our setting, IRIS with only 26$k$ annotated samples surpasses standard supervised fine\-tuning trained on the full 200$k$ dataset\.
+
+## When Guessing is Rewarded: Rethinking Language Model Evaluation with Distributional Uncertainty Scoring
+
+**Authors:** Tom Burns
+
+**ID:** 139854 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=0R23YXfZQM>) | [PDF](<https://openreview.net/pdf?id=0R23YXfZQM>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139854>)
+
+Standard language model evaluation assigns scores to single predicted answers, rewarding high\-confidence responses regardless of how residual probability mass is distributed over alternative options\. This creates a systematic pressure toward overconfident guessing: under accuracy\-based schemes, a model maximises its expected score by always committing to an answer rather than abstaining, even when its uncertainty is high\. While penalty\-based approaches partially address this by raising the confidence threshold for strategic guessing, they still treat all sub\-threshold responses identically, ignoring a fundamental distinction in how models can express uncertainty \- for example between hedging toward incorrect answers versus hedging toward "I don't know" responses\. We introduce a novel evaluation metric to solve this problem of not considering a model's entire probability distribution over answer choices\. Our metric naturally distinguishes between harmful overconfidence in wrong answers and uncertainty expressed through abstention, providing scores in an interpretable default range\. Through theoretical analysis and illustrative examples, we demonstrate our metric offers a more nuanced and aligned evaluation paradigm that incentivises models to express genuine uncertainty rather than guessing\. We then adapt 12 existing evaluation benchmarks to our metric's variants and measure performance on six language models, showing that for half of the tested benchmarks scores are negative across all tested models, indicating significant tendencies towards hallucination\.
+
+## Position: Telic Errors Make VLMs Unreliable Annotators in Sensitive Contexts
+
+**Authors:** Kokil Jaidka; Insyirah Mujtahid; Chebrolu Niranjan; Sahajpreet Singh
+
+**ID:** 140068 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=RLRpTy0ryW>) | [PDF](<https://openreview.net/pdf?id=RLRpTy0ryW>) | [Official poster](<https://neurips.cc/virtual/2026/poster/140068>)
+
+VLMs now annotate sensitive content at scale, be it hate\-speech memes, conflict imagery, politically charged symbols; yet, standard pipelines measure only whether a model can identify what an image depicts, not what it means to the community it concerns\. We name this failure mode a telic error: the model produces a surface\-accurate, perceptually complete annotation \(telic: what\-it\-depicts\) while erasing the relic meaning, i\.e\., the symbolic, cultural, or political significance that makes the content consequential\. We evaluate six open\-weight VLMs on a two\-task diagnostic designed to locate the failure precisely: Task 1 \(forward annotation\) shows that prepending the model's own image description does not improve accuracy \(\-2\.0pp\), ruling out description\-generation failure; Task 2 \(label\-supplied explanation\) shows the same models achieve 95\-100% relic identification accuracy when given the correct label and asked to explain it, ruling out knowledge absence\. The 35\-percentage\-point gap between the two tasks is the empirical signature of a protocol artefact: models possess the cultural knowledge required for accurate annotation, but standard binary formats never ask them to deploy it\. We argue that measuring only telic accuracy is not a neutral technical choice; it is a choice about whose meanings count, and that the dual\-axis evaluation framework, five\-type error taxonomy, and two\-task diagnostic introduced here are the instrumentation needed to make that choice visible\.
+
+## DELTA\-TTS: Adapting Autoregressive Model into a Diffusion Language Model for Text\-to\-Speech
+
+**Authors:** Junwon Moon; Yejin Lee; Seungbeom Kim; Hoseong Ahn; Sewoong Park; Heeseung Kim; Kyuhong Shim
+
+**ID:** 151215 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=c4cM3P84zM>) | [PDF](<https://openreview.net/pdf?id=c4cM3P84zM>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151215>)
+
+Autoregressive \(AR\) text\-to\-speech \(TTS\) models generate speech tokens one at a time, and inference latency therefore scales linearly with output length\. Discrete diffusion language models \(dLLMs\) have recently emerged as a parallel alternative that produces tokens via iterative unmasking\.  Recent work has converted pretrained AR language models into dLLMs in text generation, but this paradigm has not been extended to speech synthesis\. In addition, existing conversion methods require full fine\-tuning and large\-scale training data\. This leaves the question of whether such conversion can be done with substantially less compute and data largely open\. We introduce DELTA\-TTS, a lightweight conversion that turns a pretrained AR TTS backbone into a dLLM\. The AR weights are kept frozen; all adaptation is routed through LoRA and a per\-block speech\-aware convolution\. The convolution injects local acoustic context into the bidirectional attention, supplying the short\-range continuity between adjacent  speech tokens\. With only $585$ hours of LibriTTS as adaptation data, DELTA\-TTS achieves a state\-of\-the\-art WER of $\\textbf\{1\.75\}\\%$ on Seed\-TTS test\-en and decodes $\\textbf\{3\.3\}\\times$ faster on the token\-generation stage than the CosyVoice3 AR backbone it is converted from\. This shows that lightweight AR\-to\-dLLM conversion provides a practical, data\- and compute\-efficient route to non\-autoregressive TTS\.
+
+## PitchBench: Measuring Pitch Hearing in Audio\-Language Models
+
+**Authors:** Milan Liessens Dujardin; Song\-Ze Yu; Craver C Thomas\-Smith; David Chan; Karina Nguyen
+
+**ID:** 139226 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=dlSvqHjTE4>) | [PDF](<https://openreview.net/pdf?id=dlSvqHjTE4>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139226>)
+
+Audio\-language models \(ALMs\) are increasingly used in real\-world applications that require understanding music, from music tutoring and transcription to captioning, recommendation systems, and music production\. More broadly, they are becoming an important component of multimodal AI systems that must reason from sensory input rather than text alone\. This makes reliable musical perception a critical prerequisite: if a model cannot accurately hear the structure of sound, it cannot be trusted to reason about, teach, transcribe, or act on audio in the real world\. Yet existing benchmarks rarely assess one of the most fundamental musical abilities underlying such perception: pitch hearing\. Current evaluations tend to probe pitch hearing only indirectly, through higher\-level tasks and often in multiple\-choice formats, leaving open how reliably ALMs identify fine\-grained pitch across instruments, acoustic conditions, and response formats\.  We introduce PitchBench, an evaluation suite that systematically measures pitch hearing in ALMs\. PitchBench comprises 28 experiments spanning absolute and relative pitch perception within sequences and chords, while varying loudness, note duration, sound source, time stretching, background noise, and other acoustic conditions\. Tasks range from identifying individual pitches in isolation to tracking a melodic line within a four\-part musical texture\. Evaluating frontier ALMs, we find that pitch hearing remains highly unreliable: models perform consistently poorly across settings, with accuracy varying sharply by sound source, note duration, and notation format\. Current ALMs do not yet possess stable pitch perception, even for controlled synthetic and instrumental stimuli\. Alongside the benchmark, we release PitchBench as a Python package containing the evaluation data and data generation tools to support future work on pitch\-aware audio\-language modeling\.
+
+## SAFE\-FEC: Semantically Constrained Adversarial Frontier Evolution for Factual Error Correction
+
+**Authors:** Lei Zhu; Xiaobao Wang; Jianbiao Yang; Chenyang Wang; Longbiao Wang; Jianwu Dang
+
+**ID:** 148784 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=v5PEa9m3Q5>) | [PDF](<https://openreview.net/pdf?id=v5PEa9m3Q5>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148784>)
+
+The difficulty of factual error correction \(FEC\) is not only how to repair false claims, but how to construct errors that meaningfully test repair\. Existing FEC data construction methods often follow a static corruption view: they mask spans in false claims or inject errors into supported claims, but do not explicitly target the boundary of what current evidence\-based correctors can repair\. We introduce the notion of a \\emph\{repair frontier\}: factual errors that are evidence\-grounded, close enough to the source claim to admit a clear correction, and resistant to current correctors\. We propose \\textsc\{SAFE\-FEC\}, a semantically constrained adversarial frontier\-evolution framework for constructing such examples\. Starting from evidence\-supported claims, SAFE\-FEC generates mutations from multiple factual\-error perspectives, refines them through cross\-perspective critique, selects or composes stronger candidates, filters semantic drift, and accepts only candidates that survive repeated corrector\-in\-the\-loop repair attempts\. This turns FEC data construction from one\-shot error injection into correction\-aware frontier search\. Experiments on FECData, HoVer, and FEVEROUS show that SAFE\-FEC consistently lowers correction performance for both LLM\-based and FEC\-specific correctors, especially in multi\-hop and structured\-evidence settings\. Quality evaluation and ablations further suggest that these failures arise from plausible, semantically anchored, evidence\-grounded errors rather than invalid hard negatives\.
+
+## Shift\-Aware Identity\-Guided Latent Refinement for Referring Audio–Visual Segmentation
+
+**Authors:** Kun Li; Sami S Brandt; Michael Yang
+
+**ID:** 154662 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=By7ekEoJ2D>) | [PDF](<https://openreview.net/pdf?id=By7ekEoJ2D>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154662>)
+
+Referring Audio–Visual Segmentation \(Ref\-AVS\) is an emergent multimodal task requiring the precise identification and segmentation of a specific object based on a natural language expression grounded in both visual and auditory cues\. Unlike traditional AVS, which segments generic sound sources, or referring video object segmentation \(Ref\-VOS\), which relies solely on visual–textual grounding, Ref\-AVS necessitates fine\-grained tri\-modal interaction across vision, audio, and language\. However, existing methods often fail to maintain consistency when subjected to target shift, a phenomenon where the model erroneously transfers its focus between objects due to transient occlusions, acoustic fading, or identity ambiguities\. To address this, we propose a novel Shift\-Aware Identity\-guided Latent \(SAIL\) refinement framework\. It introduces a dual\-token strategy that decouples frame\-level dynamics from a global semantic anchor to explicitly model target\-shift cues\. We design a shift\-aware refinement module that rectifies drift by aligning tokens with domain\-specific evidence\. Finally, we leverage a decoder that integrates the refined embeddings with a continuous memory update to maintain spatio\-temporal coherence and identity consistency throughout the video sequence\. Extensive experiments conducted on two Ref\-AVS benchmarks demonstrate the effectiveness of our proposed method, significantly outperforming existing AVS, Ref\-VOS, and Ref\-AVS approaches\. The code will be released after publication\.
+
+## Native Audio\-Visual Alignment for Generation
+
+**Authors:** Longbin Ji; Guan Wang; xuan wei; Chenye Yang; Zhenyu Zhang; Shuohuan Wang; YU SUN; Jingzhou HE
+
+**ID:** 148987 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=teLwLWInBc>) | [PDF](<https://openreview.net/pdf?id=teLwLWInBc>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148987>)
+
+Joint audio\-video generation aims to synthesize temporally synchronized and semantically coherent visual and acoustic content\. Existing open\-source methods mainly follow either dual\-tower designs, which generate audio and video in separate streams and rely on posterior alignment, or fully unified tri\-modal designs, which mix textual context, audio, and video in a single shared space\. These paradigms may either weaken fine\-grained audio\-video co\-evolution or couple semantic conditioning with low\-level synchronization\. We propose NAVA, a Native Audio\-Visual Alignment framework that formulates generation as context\-conditioned native audio\-visual alignment\. NAVA first establishes audio\-video correspondence in a dedicated alignment space and then applies context as external conditioning to guide the aligned representation\. We instantiate this formulation with an Align\-then\-Fuse MMDiT architecture, which progressively bridges modality\-aware alignment and unified audio\-video denoising\. To support controllable speech generation, we further introduce Timbre\-in\-Context Conditioning, which binds reference timbre cues to corresponding speech spans through the context pathway\. Experiments on Verse\-Bench and the Seed\-TTS benchmark demonstrate that NAVA achieves superior audio\-visual synchronization and video quality, competitive audio quality, and substantially improved reference\-timbre controllability with only 6\.2B parameters\.
+
+## Enhancing Speech Large Language Models through Reinforced Behavior Alignment
+
+**Authors:** Yansong Liu; Yuan Liu
+
+**ID:** 154532 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=CtJ6YRQRlm>) | [PDF](<https://openreview.net/pdf?id=CtJ6YRQRlm>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154532>)
+
+Speech large language models \(SpeechLMs\) can process spoken requests, yet still lag behind text\-prompted large language models \(LLMs\) on instruction following and reasoning\. We argue that this gap is not only an ASR or representation problem: the same semantic instruction can induce different response policies when spoken with different speakers, accents, noise conditions, prosody, or disfluencies\. We propose Verifiable Invariant Reinforced Behavior Alignment \(VIRBA\), a reinforcement\-learning framework for aligning SpeechLM behavior across acoustic realizations of the same semantic intent\. VIRBA builds multi\-view spoken instruction groups, scores sampled responses with semantic preference, rule\-verifiable correctness, cross\-acoustic invariance, and adaptive reasoning rewards, and optimizes the model with Cross\-Acoustic Group Relative Policy Optimization \(CA\-GRPO\)\. The resulting objective moves SpeechLM alignment beyond teacher imitation toward robust reasoning policies that remain stable across realistic spoken realizations\. Experiments with recent SpeechLM baselines, disfluency robustness, spoken QA, audio reasoning, and speech\-to\-text translation show the largest gains on reasoning\-heavy and acoustically perturbed spoken prompts\.
+
+## Bayesian Test\-Time Inference of Task\-Aligned Similarity from Weak Interactive Feedback
+
+**Authors:** Weida Liang; Kenji Kawaguchi
+
+**ID:** 152715 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=QtmggfhlQ9>) | [PDF](<https://openreview.net/pdf?id=QtmggfhlQ9>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152715>)
+
+Large language model systems repeatedly make test\-time decisions by comparing similarity\. They retrieve exemplars, rerank candidates, and choose revisions\. But similarity is not unique: a candidate can be close lexically, semantically, structurally, or stylistically, while only one of these axes may matter for the current instance\. We propose BASIS\~\(Bayesian Axis Selection via Interactive Signals\), a training\-free Bayesian framework that treats weak feedback as evidence about this latent task\-aligned axis\. BASIS maintains a posterior over candidate targets and similarity axes\. It updates this posterior from scalar scores, pairwise preferences, or verifier outputs, and then chooses future probes by expected information gain\. In a finite noisy similarity model, we show that fixed\-axis and fixed\-mixture rules can remain suboptimal under axis shift\. Across concept recovery, reasoning exemplar selection, response refinement, and adversarial distractors, BASIS consistently outperforms stronger rerankers, static mixtures, and compute\-matched best\-of\-$N$ search under the same candidate pools and feedback budgets\. The average gains are moderate because all methods share the same backbone, candidate pools, and feedback signals\. Under axis shift, however, the gap widens substantially, showing that latent\-axis inference is not fully replaced by better scoring or more search alone\.
+
+## Frontier Coding Agents Use Metaprogramming to Adapt to Unfamiliar Programming Languages
+
+**Authors:** Aman Sharma; Sushrut Thorat; Paras Chopra
+
+**ID:** 152963 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=P4Ev2InDix>) | [PDF](<https://openreview.net/pdf?id=P4Ev2InDix>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152963>)
+
+LLM\-based coding agents are usually evaluated in familiar software settings: mainstream languages, common libraries, and public repositories\. These benchmarks remain important, but they can hide how agents behave when the language itself is unfamiliar\. We evaluate six contemporary coding agents on four esoteric programming languages using a sequential setup with file editing, local execution, and hidden\-test grading\. Our protocol exposes capability differences between these agents that mainstream coding and agentic benchmarks such as SWE\-Bench Verified and Terminal\-Bench 2\.0 compress into much narrower bands\. We observe that the strongest agents, Claude Opus 4\.6 and GPT\-5\.4 xhigh, often avoid writing the target language directly\. On Brainfuck and Befunge\-98, they write Python programs that generate target\-language code and debug those generators locally\. Forbidding this metaprogramming strategy causes large performance drops\. Text guidance distilled from this strategy does not materially improve weaker agents\. In contrast, Opus\-derived Python helper code for building generators, with no solved benchmark programs or hidden\-test answers, sharply improves Sonnet 4\.6 and GPT\-5\.4 mini on the same problems, while Haiku 4\.5 remains low\. More interpreter calls and output tokens improve stronger agents but leave weaker agents near their original performance, indicating that these resources amplify useful strategies rather than create them\. Together, these results show that strong coding agents adapt to unfamiliar languages by using tools, feedback, and workspace state to build a working model of the target language\. Metaprogramming is the clearest case, but the broader gap is constructing and debugging a strategy that works under the target language's rules\.
+
+## Speech Tokenizers are Vulnerable: Transferable Semantic Attack and Robust Tokenizer
+
+**Authors:** Zhisheng Zhang; Yifan Mi; Yixuan Zhou; Haiyun Li; dongfu song; Shengbo Cai; Ziang Xu; Jie Hao; Zhiyong Wu
+
+**ID:** 149645 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=oVx8Urehhw>) | [PDF](<https://openreview.net/pdf?id=oVx8Urehhw>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149645>)
+
+Speech tokenizers serve as the critical interface between continuous speech signals and discrete representations, and are widely used in speech systems, e\.g\., Automatic Speech Recognition \(ASR\) and Large Audio\-Language Models \(LALMs\)\. In this paper, we find that speech tokenizers are fragile at the semantic level: slight perturbations can disrupt their semantic encoding process and consequently cause severe degradation in downstream ASR and LALM performance\. To study this vulnerability, we propose T\-SemAttack, a transferable semantic attack based on a semantic encoder ensemble\. By jointly perturbing the representation spaces of multiple semantic encoders, T\-SemAttack effectively disrupts the semantic content of speech while preserving perceptual quality, thereby inducing error tokens\. We further analyze token fragility and layer\-wise representation drift in relation to cross\-model transferability and disruption of LALM attention\. Our analysis reveals a progressive amplification chain in which small waveform perturbations are magnified through the tokenizer pipeline and lead to semantic collapse, e\.g\., the attack causes a 99\.7% token change in the S3 tokenizer\. Building on these findings, we introduce ROSETok, a robust speech tokenizer that combines noisy training with robust semantic distillation to improve reconstruction fidelity and downstream\-task robustness\. Extensive experiments on multiple datasets, 9 open\-source and black\-box ASR systems, and 4 LALMs demonstrate that T\-SemAttack achieves strong transferable attack performance, while the proposed Robust Speech Tokenizer exhibits robustness under high\-fidelity reconstruction and downstream tasks\. Our code and demo are available at https://t\-semattack\.github\.io\.
+
+## WordEval: Evaluating Word\-Native Operation Fidelity in Document Editing
+
+**Authors:** Jinyoung Park; Yupan Huang; Shimin Zhang; Jiayu Ding; Yilin Jia; Yuzhong Zhao; Tengchao Lv; Wenshan Wu; Shaohan Huang; Nan Yang; Xiangyang Zhou; Dongdong Zhang; Li Dong; Lei Cui; Sun Mao; Xun Wang; Tao Ge; Huitian Jiao; Si\-Qing Chen; Changick Kim; Furu Wei
+
+**ID:** 139228 | **Topic source:** official | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=dfw3UZyY85>) | [PDF](<https://openreview.net/pdf?id=dfw3UZyY85>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139228>)
+
+Microsoft Word is a central environment for office automation, yet evaluating whether an agent has correctly edited a Word document remains difficult\. Unlike plain text generation, Word editing changes a structured document object, where formatting, lists, fields, layout, and object properties may all be part of the requested effect\. Existing evaluation protocols based on whole\-document text similarity, rendered visual similarity, or LLM\-as\-a\-judge scores cannot reliably determine whether the requested Word\-native effect is realized as editable document state or whether relevant surrounding state is preserved\. We introduce WordEval, a benchmark for evaluating Word\-native document editing from natural\-language instructions\. Each case consists of an input \.docx file and an editing instruction; the evaluator compares the agent’s output with a reference document using deterministic checks over Word\-readable object properties\. WordEval is constructed by design from planned editing units, rather than sampled from arbitrary documents: each unit specifies an input precondition, target object, operation, parameters, reference\-generation procedure, and oracle specification\. The current release contains 642 cases, including 546 atomic cases over 231 Word commands and 96 compositional cases instantiated from 27 composition templates\. Its analysis layer covers 140 unique object\-property pairs across 65 Word COM objects and 15 document subsystems\. The compositional cases are linked to corresponding atomic cases for their component operations, allowing analyses of whether failures arise from individual operations or from combining multiple operations in one document\. By combining controlled document construction, reference\-based evaluation, and command\-grounded deterministic oracles, WordEval provides a fine\-grained testbed for measuring Word\-native document automation\.
+
+## Confidence\-Calibrated Inference Expansion for Evaluator\-Guided Test\-Time Reasoning
+
+**Authors:** Weida Liang; Kenji Kawaguchi
+
+**ID:** 155179 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=7idt098hbk>) | [PDF](<https://openreview.net/pdf?id=7idt098hbk>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155179>)
+
+Evaluator\-guided reasoning systems face a local control problem: given a current answer and evaluator evidence, should the system trust, fallback, or buy more inference? We formulate this as a compute\-aware three\-action controller over \*trust\*, \*fallback\*, and \*expand\*, where each action is scored by predicted eventual success minus explicit compute cost\. The central quantity is \*action\-specific confidence\*: the success probability induced by trusting now, falling back now, or expanding once and continuing\. We show that local action selection is stable when confidence error is smaller than the compute\-adjusted action gap, and that regret accumulates only along the realized expansion path\. Guided by this analysis, we learn one confidence head per action, calibrate the heads on held\-out data, and penalize locally uncertain actions\. Across verifier\-guided width expansion on MATH and AIME25 and judge\-guided revision expansion on a deterministic\-answer General Reasoning benchmark, calibrated control improves the utility\-\-compute frontier relative to strong fixed and adaptive baselines\. The same pattern persists under policy\-induced expansion targets, same\-feature budget routers, fallback removal, stronger learned controllers trained on the same features, and moderate evaluator mismatch after refitting and recalibration\. When compute is free, high\-budget policies can remain competitive; the gain here is compute\-efficient allocation, not a uniformly stronger reasoner\.
+
+## RL\-Guided Temporal Localization for Dual\-Channel Retrieval in Long\-Horizon Agent Memory
+
+**Authors:** Dabin Sheng; Zhe Wu; Jinming Zhao; Junliang Xing; Yuanchun Shi
+
+**ID:** 152090 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=VaEouLMkHw>) | [PDF](<https://openreview.net/pdf?id=VaEouLMkHw>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152090>)
+
+Time\-aware retrieval is crucial for long\-horizon LLM agents to effectively leverage ever\-growing long\-term memory\. Existing methods focus on lexical or semantic similarity, leading to target memories being crowded out by temporally mismatched yet semantically similar candidates\. Even time\-aware approaches inject temporal cues only during memory organization or answer generation, overlooking temporal constraints at the retrieval stage, where candidate selection occurs—the root cause of the displacement\. Inspired by the temporal contiguity effect in human episodic memory, we propose TIDER \(Temporal Interval\-driven Dual\-channel Evidence Retrieval\), a time\-aware agentic retrieval framework\. Central to TIDER is a reinforcement learning \(RL\)\-trained temporal interval locator that infers the temporal windows in which the evidence lies\. RL optimizes window localization as a discrete, non\-differentiable retrieval decision, using composite rewards to convert sparse answer supervision into fine\-grained retrieval feedback\. These temporal windows first define the temporal retrieval channel; the retrieved candidates are then merged with results from the semantic channel and reranked by proximity to the windows\. This temporal grounding enables TIDER to retrieve temporally aligned evidence that would otherwise be drowned out by the volume of semantically similar yet temporally mismatched memories\. With a lightweight 1\.7B locator, TIDER achieves state\-of\-the\-art accuracy on both long\-horizon memory benchmarks—61\.52% on LifeBench \(\+8\.82%\) and 78\.96% on LoCoMo \(\+3\.66%\), which indicates that temporal cues are crucial for pinpointing target evidence amid a vast pool of semantically similar historical events in long\-term daily\-life memory\.
+
+## Composition\-RL: Compose Your Verifiable Prompts for Reinforcement Learning of Large Language Models
+
+**Authors:** Xin Xu; Clive Bai; Kai Yang; Tianhao Chen; Yuchen Cai; Yangkun Chen; Weijie Liu; Hao CHEN; Yang Wang; Saiyong Yang; Can Yang
+
+**ID:** 148886 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=uSnERGG6v9>) | [PDF](<https://openreview.net/pdf?id=uSnERGG6v9>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148886>)
+
+Large\-scale verifiable prompts underpin the success of Reinforcement Learning with Verifiable Rewards \(RLVR\), but they contain many uninformative examples and are costly to expand further\. Recent studies focus on better exploiting limited training data by prioritizing hard prompts whose rollout pass rate is 0\. However, easy prompts with a pass rate of 1 also become increasingly prevalent as training progresses, thereby reducing the effective data size\. To mitigate this, we propose Composition\-RL, a simple yet useful approach for better utilizing limited verifiable prompts targeting pass\-rate\-1 prompts\. More specifically, Composition\-RL automatically composes multiple problems into a new verifiable question and uses these compositional prompts for RL training\. Extensive experiments across model sizes from 4B to 30B show that Composition\-RL consistently improves reasoning capability over RL trained on the original dataset\. Performance can be further boosted with a curriculum variant of Composition\-RL that gradually increases compositional depth over training\. Additionally, Composition\-RL enables more effective cross\-domain RL by composing prompts drawn from different domains\. All our codes, compositional datasets, and models will be released to facilitate future research\.
+
+## WavNAF: Learning Wave Propagation Priors for Neural Acoustic Fields
+
+**Authors:** Taeho Kim; Hyunjun Kim; MinKyu Lee; SuBeen Lee; Inkyu An; Jae\-Pil Heo
+
+**ID:** 150632 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=ge6kZTflBU>) | [PDF](<https://openreview.net/pdf?id=ge6kZTflBU>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150632>)
+
+Room acoustics modeling requires capturing intricate wave phenomena beyond direct sound propagation, including reflections, refractions, and diffractions\. Recent neural acoustic synthesis methods have progressively incorporated richer scene representations and physics\-informed priors, yet typically learn acoustic behavior without considering wave propagation dynamics, which inherently capture diffraction and interference phenomena\. We propose WavNAF, a framework that bridges wave dynamics and neural acoustic modeling by leveraging Finite\-Difference Time\-Domain \(FDTD\) simulations, which solve the wave equation on discrete spatiotemporal grids to capture these phenomena\. However, directly applying FDTD at full scale is computationally prohibitive under CFL stability constraints\.  Inspired by traditional acoustic scale models, WavNAF constructs a geometry\-preserving, scaled digital replica from NeRF\-derived scene geometry and acoustically probes it with temporally compressed FDTD simulation\. The resulting pressure maps are encoded not as direct full\-scale Room Impulse Response \(RIR\) estimates, but as compressed\-domain wave signatures that provide the neural acoustic field with a structured inductive bias beyond static geometry\. To bridge the mismatch between these scaled simulation features and full\-scale acoustic responses, we introduce a Neural Acoustic Scaling Module that adaptively recalibrates pressure\-map features at the feature level for full\-scale RIR prediction\. Experiments show that WavNAF yields consistent gains over prior neural baselines across standard acoustic metrics\.
+
+## Pruning and Distilling Mixture\-of\-Experts into Dense Language Models
+
+**Authors:** Junhyuck Kim; Jihun Yun; Haechan Kim; Gyeongman Kim; Joonghyun Bae; Jaewoong Cho
+
+**ID:** 150472 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=hmvlyb1yQu>) | [PDF](<https://openreview.net/pdf?id=hmvlyb1yQu>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150472>)
+
+Mixture\-of\-Experts \(MoE\) is now the dominant architecture for frontier language models, yet it requires all expert parameters to be loaded in memory, making it less preferable for memory\-constrained deployment\. Existing compression methods reduce the number of experts but the output remains an MoE model with the same fundamental limitation\. We present the first systematic framework for converting a trained MoE into a standard fully dense architecture: experts are scored, selected, and grouped, then concatenated into a dense FFN and refined by knowledge distillation from the MoE teacher\. We evaluate 7 scoring, 5 grouping, and 2 magnitude scaling methods across a range of selected expert counts on Qwen3\-30B\-A3B, yielding 350 configurations\. We find that the choice of scoring method is the most impactful, with our novel diversity\-aware scoring consistently outperforming prior methods on Qwen3\-30B\-A3B, DeepSeek\-V2\-Lite, and GPT\-OSS\-20B\. Under a controlled comparison at matched parameter count, MoE\-to\-dense outperforms dense\-to\-dense pruning by $\+$6\.3 pp in average downstream accuracy after \~4B\-token distillation at 1\.6x faster training wall\-clock speed\.
+
+## Planning Persuasion, Not Utterances: Profile\-Conditioned Open\-Loop Search for Dialogue Strategy
+
+**Authors:** Zhiming Lin; Kai Zhao; Yuliang Gai; Chengzhen Yu; Ruibo Duan; Yihao Zhong; Xuan Zhang
+
+**ID:** 153963 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=HCOhbXzn7c>) | [PDF](<https://openreview.net/pdf?id=HCOhbXzn7c>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153963>)
+
+Persuasive dialogue systems are increasingly important for prosocial communication, education, and support\-oriented interaction, but they still struggle to make profile\-sensitive decisions when user reactions are uncertain and persuasive outcomes are delayed\. This paper aims to enable stable long\-horizon persuasive planning that adapts to user profiles while avoiding brittle text\-level search and costly prompt\-based self\-evaluation\. We propose PMCTS\-PD, a profile\-conditioned open\-loop tree search framework that plans over compact dialogue\-act prefixes rather than full utterances, thereby separating strategic decision making from surface realization\. Each search node aggregates multiple instantiated dialogue histories, while a lightweight profile\-conditioned Value\-LLM predicts normalized expected donation to guide tree search, value backup, and value\-guided best\-of\-K response generation\. On PersuasionForGood, PMCTS\-PD improves over strong LLM and dialogue\-planning baselines, achieving higher BLEU\-4, embedding similarity, diversity, predicted donation, and end\-to\-end success rate\. These results show that planning persuasion at the strategy level, supported by a learned profile\-aware outcome signal, offers a practical and cost\-effective direction for robust persuasive dialogue systems\.
+
+## C3: Long\-Horizon Character Consistency via Causal\-Continuous State Dynamics and Memory Rewriting
+
+**Authors:** Minghao Chen
+
+**ID:** 151786 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=Y0keyhhQHc>) | [PDF](<https://openreview.net/pdf?id=Y0keyhhQHc>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151786>)
+
+Maintaining character consistency over long\-horizon gameplay is a critical bottleneck for deploying Large Language Models \(LLMs\) as Non\-Player Characters\. Prevalent discrete Affective State Machines \(ASMs\) fail due to two paradoxes: \(1\) the \\textit\{Cliff\-edge Effect\}, where threshold\-based switching causes jarring narrative discontinuities; and \(2\) \\textit\{Auto\-regressive Inertia\}, where accumulated dialogue history dilutes current state instructions\. We propose \\textbf\{C3 \(Causal\-Continuous Characterization\)\}, which couples a continuous state space with \\textit\{hysteresis\-aware dynamics\} to dampen emotional volatility, and a \\textit\{State\-Conditioned Memory Rewriting\} mechanism that re\-contextualizes past events through the lens of the current relationship\. On a 100\-turn dynamic simulation \(\\textsc\{Chronos\-Sim\}, 5\{,\}000 turns per condition\), C3 achieves a \\textbf\{10\.5\\% absolute SAR improvement\} over a strong smoothed\-ASM baseline \(Welch's $t$\-test, $p &lt; 0\.0001$, Cohen's $d \\approx 3\.97$\)\. Cross\-model evaluations on \\texttt\{Llama\-3\-8B\-Instruct\} and \\texttt\{Mistral\-v0\.2\-7B\} reproduce the relative gain, indicating the mechanism transfers across backbones although absolute SAR remains backbone\-dependent\. A human study with 20 game designers \(ICC$=0\.74$\) corroborates higher perceived consistency, and a separate factual audit \(Fleiss' $\\kappa=0\.81$\) confirms the Rewriter alters interpretation without corrupting facts\. Deployment analysis shows a $\\sim$60\\% reduction in long\-session token consumption\.
+
+## Knowing What is Missing: Efficient Conversational Memory via Explicit Evidence\-Gap Tracking
+
+**Authors:** Xingbo Du; Loka Li; Duzhen Zhang; Leonard Song; Le Song
+
+**ID:** 149691 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=o9MB6dPOa4>) | [PDF](<https://openreview.net/pdf?id=o9MB6dPOa4>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149691>)
+
+Long\-term conversational memory poses a fundamental system challenge for LLM agents: reasoning over all past interactions improves coverage but incurs prohibitive token costs and noise, while retrieval\-based methods are efficient yet often fail on multi\-hop and temporal questions\. Existing multi\-step retrievers partially address this gap, but typically operate over an ever\-growing textual history, causing context expansion and noise accumulation across iterations\. We propose MemR$^3$, a backend\-agnostic closed\-loop controller that reformulates conversational memory retrieval as explicit stateful decision\-making\. At each iteration, MemR$^3$ maintains an evidence\-gap state consisting of grounded information \(evidence\) and unresolved information requirements \(gaps\), and uses this state to route among three actions: retrieve, reflect, and answer\. Newly retrieved snippets are incorporated into the state and then masked from subsequent prompts, so the model conditions on a compact summary of progress rather than the full retrieval history\. This design turns multi\-step memory retrieval into a bounded, inspectable control process whose query\-time context scales with the state instead of raw accumulated text\. Experiments on LongMemEval$\_s$ show that MemR$^3$ surpasses implicit multi\-step retrieval baselines and often approaches or exceeds full\-context prompting while using only 1%\-5% of the full\-context tokens on long conversations\. On LoCoMo, MemR$^3$ consistently improves over its underlying RAG\- and Zep\-based memory backbones\. These results suggest that explicit evidence\-gap tracking is an effective abstraction for token\-efficient conversational memory\.
+
+## MemSkill: Learning and Evolving Memory Skills for Self\-Evolving Agents
+
+**Authors:** Haozhen Zhang; Quanyu Long; Jianzhu Bao; Tao Feng; Weizhi Zhang; Haodong Yue; Wenya Wang
+
+**ID:** 155719 | **Topic source:** official | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=3R1dZaZmxU>) | [PDF](<https://openreview.net/pdf?id=3R1dZaZmxU>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155719>)
+
+Most Large Language Model \(LLM\) agent memory systems rely on a small set of static, hand\-designed operations for extracting memory\. These fixed procedures hard\-code human priors about what to store and how to revise memory, making them rigid under diverse interaction patterns and inefficient on long histories\. To this end, we present \\textbf\{MemSkill\}, which reframes these operations as learnable and evolvable memory skills, structured and reusable routines for extracting, consolidating, and pruning information from interaction traces\. Inspired by the design philosophy of agent skills, MemSkill employs a \\emph\{controller\} that learns to select a small set of relevant skills, paired with an LLM\-based \\emph\{executor\} that produces skill\-guided memories\. Beyond learning skill selection, MemSkill introduces a \\emph\{designer\} that periodically reviews hard cases where selected skills yield incorrect or incomplete memories, and evolves the skill set by proposing refinements and new skills\. Together, MemSkill forms a closed\-loop procedure that improves both the skill\-selection policy and the skill set itself\. Experiments on LoCoMo, LongMemEval, HotpotQA, and ALFWorld demonstrate that MemSkill improves task performance over strong baselines and generalizes well across settings\. Further analyses shed light on how skills evolve, offering insights toward more adaptive, self\-evolving memory management for LLM agents\.
+
+## AudioCALM: Continuous Autoregressive Language Modeling for Universal Audio Generation
+
+**Authors:** Huadai Liu; Kaicheng Luo; Wen Wang; Qian Chen; Bin Ma; Xiangang Li; Wei Xue
+
+**ID:** 149240 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=rta7h4O2eL>) | [PDF](<https://openreview.net/pdf?id=rta7h4O2eL>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149240>)
+
+Unifying speech, sound, and music generation in one model is hindered by tradeoffs between fidelity, end\-to\-end training, in\-context conditioning, and variable\-length synthesis that no current paradigm fully resolves\. To address this challenge, we present \*\*AudioCALM\*\*, a universal audio generation framework that extends autoregressive \(AR\) next\-token prediction from discrete tokens to continuous audio latents: a thin flow\-matching head replaces the softmax to predict rectified\-flow velocities at each position, and a block\-causal AR\-Flow attention pattern produces arbitrary\-length output\. Joint training of multiple audio generation tasks faces an asymmetric text\-\-audio mismatch: speech transcripts align to specific time spans and demand \\textit\{tight, time\-aligned\} attention, whereas sound and music captions describe only overall semantics and rely on diffuse, holistic attention; mixing the two disproportionately degrades sound and music generation\. We address this asymmetry at two levels: a \\textbf\{data reformulation\} strategy that unifies all three tasks under a single description\-style conditioning interface, and a novel architecture Asymmetric Mixture\-of\-Modality\-Experts \(A\-MoME\), which adds a dedicated residual expert for speech while sound and music share the backbone, incurring no inference overhead on non\-speech inputs\. Experimental results demonstrate that AudioCALM matches modality\-specific state\-of\-the\-art and outperforms prior unified baselines on speech, sound, and music generation benchmarks\.
+
+## StateTree: Enhancing Long\-term Dialogue Reasoning via Reinforcement Learning
+
+**Authors:** Naen Xu; Wanqing Cui; Yibo Hu; Shixin Hong; Hengyu An; Meiguang Jin; Junfeng Ma; Tianyu Du
+
+**ID:** 151920 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=Wtmbj6bI9C>) | [PDF](<https://openreview.net/pdf?id=Wtmbj6bI9C>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151920>)
+
+Large language models deployed as personalized assistants must reason over long, evolving interaction histories\. However, in long\-term dialogue reasoning, relevant evidence is scattered across sessions, preferences may be revised over time, and standard long\-context training fails to address these challenges under data scarcity and prohibitive computational costs\. We propose StateTree, a data\-driven RL pseudo\-task that constructs a challenging auxiliary task from scarce dialogues with verifiable ground truth\. StateTree augments multi\-session dialogues with a tree\-structured path\-tracing task: key\-value records are embedded across sessions to form a binary tree\. Solving the task requires the model to traverse from root to leaf by retrieving records across sessions and comparing timestamps to resolve branches, then recover the hidden target question among distractor leaves\. We apply curriculum RL training progressively increasing tree depth and introduce a compositional variant whose edges carry step\-level reasoning fragments, training the model to compose partial cues into coherent queries\. Trained on 10K\-token contexts, StateTree generalizes to 128K tokens without full\-length RL costs and exhibits capabilities including cross\-session retrieval, temporal reasoning, knowledge update, and compositional multi\-hop reasoning\. StateTree outperforms both SFT and RL\-based baselines while preserving short\-context general reasoning\. StateTree\-7B achieves gains up to \+23\.60% on LongMemEval \(128k\), and StateTree\-14B reaches 59\.00% accuracy on LongMemEval, surpassing QwenLong\-L1\-32B \(45\.20%\)\.
+
+## Defense\-as\-Skill: Evolving Runtime Guard Skill for Skill\-Augmented Agents
+
+**Authors:** Xiaofang Yang; Ziqi Miao; Dianbo Sui; Jing Shao; Lijun Li
+
+**ID:** 152017 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=W8hQZI7IzO>) | [PDF](<https://openreview.net/pdf?id=W8hQZI7IzO>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152017>)
+
+Skill\-augmented agents load reusable skills as persistent runtime context, improving task performance but also giving malicious skills a durable channel for steering future actions\. Such skills may leak secrets, corrupt code, bypass approvals, or stage data for exfiltration only after a concrete user task and workspace state make the unsafe action appear useful\. This makes pre\-install vetting insufficient and calls for runtime, task\-conditioned protection\. We propose Defense\-as\-Skill, a defense paradigm that implements the runtime guard itself as an installable, inspectable, and editable skill\. Our guard, SkillSonar, runs alongside untrusted task skills and checks sensitive actions against the user's task boundary, routing each action to an allow, replan, or confirmation decision without modifying the underlying agent runtime\. To study this setting, we construct SCOPE\-R, a task\-conditioned dataset covering 6 risk families and 21 sub\-categories, with 206 attack\-confirmed malicious instances and 43 benign tasks\. We then improve SkillSonar on the SCOPE\-R training subset using runtime guard\-skill evolution, a Monte\-Carlo Tree Search procedure that evolves the on\-disk guard skill from feedback on the rollouts\. On held\-out SCOPE\-R test splits across Claude Code and OpenClaw backends, SkillSonar reduces attack success while preserving benign utility, maintaining modest token overhead, and transferring to OOD attack families\. These results show that runtime guards can be skill\-native, transparent, and evolvable policy artifacts for skill\-augmented agents\.
+
+## RVR: Retrieve\-Verify\-Retrieve for Comprehensive Question Answering
+
+**Authors:** Deniz Qian; Hung\-Ting Chen; Eunsol Choi
+
+**ID:** 154429 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=DfGZJUo1mT>) | [PDF](<https://openreview.net/pdf?id=DfGZJUo1mT>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154429>)
+
+Comprehensively retrieving diverse documents is crucial to address queries that admit a wide range of valid answers\. We introduce retrieve\-verify\-retrieve \(RVR\), a multi\-round retrieval framework designed to maximize answer coverage\. Initially, a retriever takes the original query and returns a candidate document set, followed by a verifier that identifies a high\-quality subset\. For subsequent rounds, the query is augmented with previously verified documents to uncover answers that are not yet covered in previous rounds\. RVR is effective even with off\-the\-shelf retrievers, and fine\-tuning retrievers for our inference procedure brings further gains\. Our method outperforms baselines, including agentic search approaches, achieving at least 10\\% relative and 3\\% absolute gain in complete recall percentage on a multi\-answer retrieval dataset \(QAMPARI\)\. We also see consistent gains on two out\-of\-domain datasets \(QUEST and WebQuestionsSP\) across different base retrievers\. Our work presents a promising iterative approach for comprehensive answer recall leveraging a verifier and adapting retrievers to a new inference scenario\.
 
 ## Long\-Horizon Agency Belongs in the Harness, Not the Context Window Only
 
@@ -390,16 +726,6 @@ Under matched conditions, classifier\-head fine\-tuning \(\\textsc\{cls\}\) para
 
 Recent advancements in Automatic Speech Recognition \(ASR\) have significantly improved performance for high\-resource languages, yet ASR systems still struggle with low\-resource languages and dialects due to the scarcity of annotated training data\. To address this challenge, we propose a novel framework that enhances the utilization of limited data through a two\-pronged approach: \(1\) a novel data augmentation technique based on a multi\-view pseudo\-parallel strategy, and \(2\) a robust multi\-level contrastive learning framework capable of jointly leveraging semantic and dialect\-specific attributes to improve model effectiveness under noisy conditions\. Our approach effectively generalizes across dialectal variations when dialect data are non\-parallel, allowing acquisition of shared linguistic structures and dialectal distinctions\. Furthermore, our method could be simply transferred to scenarios where dialect data are parallel\. We validate our method by adapting the Whisper\-large model for Swiss German, Chinese and Arabic dialect ASR tasks, demonstrating substantial performance gains\. Specifically, our framework achieves up to a 48\.59% reduction in WER and 23\.16% reduction in CER under non\-parallel conditions, outperforming state\-of\-the\-art baselines\. These results highlight the robustness and adaptability of our approach for low\-resource dialectal ASR\. The data and codes will be public available upon acceptance\.
 
-## Semantic Motion Anchors: Bridging Motion and Meaning in Co\-Speech Gestures
-
-**Authors:** Varsha Suresh; Mohammad Mahdi Abootorabi; Mohamed Salman; M\. Hamza Mughal; Christian Theobalt; Ashwin Ram; Jürgen Steimle; Vera Demberg
-
-**ID:** 154665 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=BwJGCsV7Vl>) | [PDF](<https://openreview.net/pdf?id=BwJGCsV7Vl>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154665>)
-
-Learning a shared representation between spoken text and gesture is central to co\-speech gesture retrieval, synthesis, and understanding, but remains challenging for semantically meaningful gestures whose communicative intent is not captured by motion alone\. Direct contrastive alignment between transcripts and continuous motion embeddings often overemphasizes low\-level kinematics and misses the symbolic content of semantic gestures\. We propose \\emph\{semantic motion anchors\}, natural\-language abstractions of gesture motion capturing physical form and communicative intent\. Our method discretizes 3D gestures into body\-hand motion primitives, verbalizes them into structured descriptions, and grounds them in the transcript to provide auxiliary contrastive supervision\. On BEAT2, our method improves text\-to\-gesture R@1 by 8\.2\\% over a direct text\-motion baseline and outperforms prior retrieval approaches on text to gesture and gesture to text retrieval directions\. Beyond aggregate retrieval metrics, semantic motion anchor supervision helps retrieve gestures that are semantically meaningful for the spoken query, rather than defaulting to generic motion patterns\. A downstream retrieval\-augmented gesture generation study showed that users significantly preferred gestures retrieved by our approach over a retrieval\-augmented generation baseline, demonstrating that semantically grounded retrieval translates to gestures that better convey communicative intent in downstream generation\.
-
 ## Controllable User Simulation
 
 **Authors:** Guy Tennenholtz; Ofer Meshi; Amir Globerson; Uri Shalit; Jihwan Jeong; Craig Boutilier
@@ -409,16 +735,6 @@ Learning a shared representation between spoken text and gesture is central to c
 [Paper](<https://openreview.net/forum?id=uus8MMsekx>) | [PDF](<https://openreview.net/pdf?id=uus8MMsekx>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148816>)
 
 Using offline datasets to evaluate conversational agents often fails to cover rare scenarios or to support testing new policies\. This has motivated the use of \\emph\{controllable user simulators\} for targeted, counterfactual evaluation, typically implemented by prompting or fine\-tuning large language models\. In this work, we formalize controllable simulation as a causal inference problem\. By bridging natural language evaluation with off\-policy evaluation methodology, we show that the standard practice of training simulators via supervised fine\-tuning on post\-hoc trajectory labels yields a structurally biased model\. Specifically, these labels are inextricably coupled to the data\-generating behavior policy, injecting a \\emph\{look\-ahead bias\} that breaks causal consistency\. Furthermore, we prove that under policy shift this failure causes the variance of evaluation metrics to explode geometrically, a phenomenon we term \\emph\{controllability collapse\}\. To restore causal consistency, we establish theoretical conditions for accurate simulation and propose practical training mitigations: \\textit\{a priori\} controls, step\-wise dynamic controls, and direct policy\-conditioned learning\. Empirical evaluation confirms that while standard global controls distort conversational distributions and collapse behavioral diversity, our causally grounded simulators eliminate look\-ahead bias, preserve natural variance, and exhibit robust zero\-shot generalization to unseen agent behaviors\.
-
-## Asymmetric Phase Coding Audio Watermarking
-
-**Authors:** Guang Yang; Fengchen Liu; Amir Ghasemian; Zhong Wang; Ninareh Mehrabi; Homa Hosseinmardi
-
-**ID:** 149813 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=nAf6IJ9PSz>) | [PDF](<https://openreview.net/pdf?id=nAf6IJ9PSz>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149813>)
-
-The proliferation of deepfake audio challenges voice\-based authentication systems; passive forensic detectors are sensitive to evolving generative models and to real\-world channel distortions\. We propose Asymmetric Phase Coding \(APC\), a training\-free cryptographic signing layer for audio, designed as a compact and auditable provenance primitive that can stand alone or be stacked with learned watermarks\. APC combines Ed25519 digital signatures \(EdDSA, FIPS 186\-5; 64\-byte signatures\) with Reed–Solomon error correction, pseudo\-random STFT phase\-bin selection, and a redundant quantization\-index\-modulation \(QIM\) code on log\-magnitude differences of adjacent bin pairs, yielding a compact, non\-repudiable, blind\-extractable watermark\. We evaluate APC on 1,000 LibriSpeech test\-clean clips \(10 s each, 44\.1 kHz\) under eight attack configurations – identity, 10% end\-cropping, 20% end\-cropping, 8 kHz low\-pass, 16 kHz round\-trip resampling, FLAC re\-encoding, MP3 at 128 kbps, and OGG\-Vorbis at 128 kbps – and achieve cryptographic verification rates between 97\.5% and 98\.3% on every condition at mean PESQ=3\.02 and tens\-of\-milliseconds CPU latency\. We explicitly compare APC against recent neural baselines \(AudioSeal, WavMark, SilentCipher\), detail the threat model \(forgery resistance vs\. erasure\), characterize the dataset, define all metrics, quantify an adaptive white\-box erasure attack, and release code, keys, and metadata for reproducibility\.
 
 ## Reconstructing the Vocal Tract with Differentiable Acoustic Simulation
 
@@ -430,125 +746,25 @@ The proliferation of deepfake audio challenges voice\-based authentication syste
 
 The human vocal tract, the cavity consisting of one's throat, mouth, lips opening, etc\., filters one's voice to create the sounds we know as speech\. In this paper, we present a differentiable and GPU parallelizable acoustic simulator that synthesizes speech by propagating sound along an acoustic tube representation of the vocal tract, and via its gradients, solves the inverse problem: reconstructing the geometry of their vocal tract solely from the sound it produces\. Although learning the inverse mapping between geometry and sound is notoriously non\-convex, we discover that gradient descent succeeds with three technical contributions: \(1\) we design a frequency domain formulation of the vocal tract's fluid dynamics that is 70x more GPU parallelizable than finite differences in time, \(2\) we integrate a differentiable model for turbulence to synthesize consonants, and \(3\) similar to prior work in implicit neural representations \(INRs\) and neural radiance fields \(NeRFs\), we find that parameterizing the geometry with a neural network accelerates convergence and escapes local minima that trap discrete representations\.   Because the simulator is differentiable, it is readily integrated with other deep learning pipelines to enable novel speech and medical imaging applications\. Our model can be used for instance, in singing instruction or language learning, where a visualization of one's vocal tract can help people understand how their vocal tract maps to different speech sounds\. To enable these tasks, \(1\) we demonstrate self\-supervised autoencoding of vocal tract shapes across 11 languages, and \(2\) we couple our simulator with a generative model of MRI images to reconstruct one's moving vocal tract from only their speech, no paired data required\.
 
-## Reconsidering Positional Supervision in Masked Diffusion Language Model Training
+## Efficient Brain\-to\-Speech Decoding with Fixed\-Delay Spiking Neural Networks
 
-**Authors:** Mengyu Ye; Keito Kudo; Ryosuke Takahashi; Jun Suzuki
+**Authors:** Aleksandra Wisniewska; Seo\-Hyun Lee; Seong\-Whan Lee
 
-**ID:** 152472 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+**ID:** 151470 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=SoXwBAJ8w9>) | [PDF](<https://openreview.net/pdf?id=SoXwBAJ8w9>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152472>)
+[Paper](<https://openreview.net/forum?id=aMneDSPCzZ>) | [PDF](<https://openreview.net/pdf?id=aMneDSPCzZ>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151470>)
 
-Masked diffusion language models \(MDLMs\) generate text by unmasking tokens in parallel and have recently emerged as alternatives to autoregressive language models\.  They can be viewed as parallel decoders trained with a position\-wise cross\-entropy \(CE\) loss, the same setup as non\-autoregressive translation \(NAT\)\.  In NAT, CE\-trained parallel decoders have been argued to be sensitive to small positional shifts, since CE penalizes them harshly\. We ask whether CE\-trained MDLMs are similarly sensitive to such shifts under iterative decoding\. To probe this, we apply a controlled intervention that introduces them during decoding\. On LLaDA\-8B\-Instruct with Arena\-Hard, displacing as little as 1\\% of generated tokens by one position substantially reduces win rates against the unintervened model, showing that MDLMs are sensitive to such small shifts under iterative parallel decoding\.  Motivated by this, we adapt connectionist temporal classification \(CTC\), an alignment\-flexible objective known to mitigate it there, to MDLM supervised fine\-tuning\.  By relaxing the strict position\-wise match that CE imposes, CTC gives the loss room to absorb small positional shifts; concretely, we modified CTC objective to use a special \\ token that absorbs positional uncertainty between target tokens and output positions, and a updated collapse map that preserves target surface forms\. Across four open\-ended generation benchmarks, the resulting model consistently improves over both the original model and a matched cross\-entropy\-trained baseline, with statistically significant gains on all four\. These results identify training\-side alignment flexibility as a useful design dimension for MDLM SFT, complementary to the inference\-time approaches explored in prior work\.
-
-## From History to State: Constant\-Context Skill Learning for LLM Agents
-
-**Authors:** Haoyang Xie; Xinyuan Wang; Yancheng Wang; Puda Zhao; Feng Ju
-
-**ID:** 154254 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=F9AmFBisYk>) | [PDF](<https://openreview.net/pdf?id=F9AmFBisYk>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154254>)
-
-Large language model \(LLM\) agents are increasingly used to operate browsers, files, code and tools, making personal assistants a natural deployment target\. Yet personal agents face a privacy\-cost\-capability tension: cloud models execute multi\-step workflows well but expose sensitive intermediate context to external APIs, while local models preserve privacy but remain less reliable\. Both settings also pay repeatedly for long skill prompts and growing histories\. We propose constant\-context skill learning, a context\-to\-weights framework for recurring agent workflows: reusable procedures are learned in lightweight task\-family modules, while inference conditions only on the current observation and a compact state block\. A deterministic tracker renders this state block from task progress and supplies aligned subgoal rewards, so each module can be trained with step\-level SFT and refined through online RL\. Across ALFWorld, WebShop, and SciWorld, our agents achieve strong performance across Qwen3\-4B, Qwen3\-8B and Llama\-3\.1\-8B\. With Qwen3\-8B, SFT\+RL reaches 89\.6\\% unseen success on ALFWorld, 76\.8\\% success on WebShop, and 66\.4\\% unseen success on SciWorld\. They match or exceed strong published agent\-training results while reducing prompt tokens per turn by 2\-7$\\times$ relative to controlled ReAct prompting baselines, showing that procedural context can be moved from prompts into weights\.
-
-## WorldSpeech: A Multilingual Speech Corpus from Around the World
-
-**Authors:** Antonis Asonitis; Luca Lanzendörfer; Frédéric Berdoz; Roger Wattenhofer
-
-**ID:** 139336 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=WBzZjghqhE>) | [PDF](<https://openreview.net/pdf?id=WBzZjghqhE>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139336>)
-
-Automatic speech recognition \(ASR\) performs well for high\-resource languages with abundant paired audio\-transcript data, but its accuracy degrades sharply for most languages due to limited publicly available aligned data\. To this end, we introduce WorldSpeech, a 24kHz multilingual speech corpus comprising 65k hours of aligned audio\-transcript data across 76 languages, collected from diverse public sources including parliamentary proceedings, international broadcasts, and public\-domain audiobooks\. For 37 languages, WorldSpeech provides more than 200 hours of aligned speech, with 28 exceeding 500 hours and 24 surpassing 1k hours\. Fine\-tuning existing ASR models on WorldSpeech results in an average relative Word\-Error\-Rate reduction of 63\.5% across 11 typologically diverse languages\.
-
-## NorSA: Accelerating LLM Decoding via Normalized Sparse Activation
-
-**Authors:** Tianteng Gu; Bo Xiao; Ke Zeng; Shuai Shi; Wangyou Zhang; Chenda Li; Yanmin Qian
-
-**ID:** 154390 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=DvzLG9N5Dx>) | [PDF](<https://openreview.net/pdf?id=DvzLG9N5Dx>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154390>)
-
-Sparse activation accelerates Large Language Model \(LLM\) decoding by removing redundant computations and memory access, but existing methods often assume hidden\-state dimensions are independent and identically distributed \(i\.i\.d\.\)\. We replace this i\.i\.d\. perspective with a covariance\-aware view by analyzing contextual dependencies across tokens and inter\-dimensional correlations within hidden states\. We introduce Normalized Sparse Activation \(NorSA\), a training\-free framework that combines dynamic thresholding with decorrelating rotation\. Across the LLaMA, Mistral, and Qwen families, NorSA consistently improves perplexity and downstream accuracy over prior training\-free baselines, especially in high\-sparsity regimes\. On LLaMA3\-8B at 50\\% sparsity, it stays within 0\.44 perplexity points of the dense model while achieving a 1\.32$\\times$ end\-to\-end decoding speedup\.
-
-## Accelerating Diffusion Language Models via Structured Suffix Modeling
-
-**Authors:** Zifeng Cheng; Keda Li; Zhiwei Jiang; Cong Wang; Fei Shen; Qing Gu
-
-**ID:** 152485 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=SkQxO613nL>) | [PDF](<https://openreview.net/pdf?id=SkQxO613nL>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152485>)
-
-_Abstract unavailable from the accessible public sources._
-
-## SAME: Stability\-Aware Embedding Extraction in Mixture\-of\-Experts Language Models
-
-**Authors:** Shufan Yang; Zifeng Cheng; Zhiwei Jiang; Hao Wang; Miao Xue; Changhui Sun; Cong Wang; Ao Zhou; Qing Gu
-
-**ID:** 152895 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=PcLcfDARfL>) | [PDF](<https://openreview.net/pdf?id=PcLcfDARfL>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152895>)
-
-_Abstract unavailable from the accessible public sources._
-
-## Mind the Gap: Dataset and Fine\-grained Evaluation for Inline Audio Descriptions
-
-**Authors:** Subhashini Venugopalan; Yingwen Tan; Taylor Roper; Jimmy Tobin; Anton Kast; Alicia Martin; Sam Sepah; Amy Pavel
-
-**ID:** 139386 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=Ta6qlgEwjY>) | [PDF](<https://openreview.net/pdf?id=Ta6qlgEwjY>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139386>)
-
-_Abstract unavailable from the accessible public sources._
-
-## Alignment Collapse Under KV Cache Quantization: Diagnosis and Mitigation
-
-**Authors:** Bruce C Xu; Adarsh Kumarappan; Mu Zhou
-
-**ID:** 150322 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=iyno3PkrLm>) | [PDF](<https://openreview.net/pdf?id=iyno3PkrLm>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150322>)
-
-_Abstract unavailable from the accessible public sources._
-
-## CS\-Dialogue: A 104\-Hour Dataset of Spontaneous Mandarin\-English Code\-Switching Dialogues for Speech Recognition
-
-**Authors:** Jiaming Zhou; Yujie Guo; Shiwan Zhao; Haoqin Sun; Hui Wang; Jiabei He; Aobo Kong; Shiyao Wang; Yong Qin
-
-**ID:** 139416 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=S7MdGXCTY0>) | [PDF](<https://openreview.net/pdf?id=S7MdGXCTY0>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139416>)
-
-_Abstract unavailable from the accessible public sources._
-
-## GOLD PANNING: Strategic Context Shuffling for Needle\-in\-Haystack Reasoning
-
-**Authors:** Adam Byerly; Daniel Khashabi
-
-**ID:** 155209 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=7SfVNZjeY8>) | [PDF](<https://openreview.net/pdf?id=7SfVNZjeY8>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155209>)
-
-Large language models \(LLMs\) exhibit pronounced position bias in long\-context retrieval, systematically prioritizing information location over relevance\. Existing mitigations modify positional encodings or attention internals, but in the common output\-only deployment setting these are inapplicable\. We introduce GOLD PANNING, a Bayesian framework for inference\-time active search that \(i\) reorders documents to concentrate high\-belief items in highly diagnostic positions \(signal anchoring\) and \(ii\) updates relevance beliefs from model outputs\. Unlike active learning, which prioritizes uncertainty reduction, GOLD PANNING exploits anchoring\-\-\-once flagged, keep it in sight\-\-\-to preserve weak cues\. A greedy assignment derived from the model's diagnosticity profile provably identifies a target among $N$ documents with high probability in $O\(\\log N\)$ rounds\. Across open\-weight and closed\-source models on multi\-document QA, GOLD PANNING matches Permutation Self\-Consistency's $F\_1$ with $30$\-\-$65\\%$ fewer queries and remains effective under calibration mismatch, indicating that coarse positional ordering alone drives the gains\. These results show that inherent model biases need not be failures, but can serve as exploitable signals\.
-
-## Minimally Invasive Steering of Language Models
-
-**Authors:** Taha Entesari; Jingyu \(Jack\) Zhang; Daniel Khashabi; Mahyar Fazlyab
-
-**ID:** 153525 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=Kg5V7xioBy>) | [PDF](<https://openreview.net/pdf?id=Kg5V7xioBy>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153525>)
-
-Test\-time alignment aims to adapt large language models \(LLMs\) to runtime objectives without updating their parameters\. This is especially useful when the reward signal is user\-specific, time\-varying, or available only through a black\-box evaluator\.  We propose a minimally invasive pre\-logit steering method that optimizes additive interventions to the hidden states of a frozen LLM in order to improve reward while preserving the base model's behavior\. Rather than penalizing the Euclidean norm of the steering vector, we derive an effort penalty from the local KL geometry of the induced token distribution\. Specifically, we show that the per\-token KL divergence between the steered and reference policies admits a second\-order expansion given by a Fisher\-quadratic form in the steering vector\. This regularizer has an analytic gradient computable through matrix\-vector products with the frozen language\-model head, making it as inexpensive as a standard quadratic penalty while retaining a principled KL interpretation\.  We further decompose the sequence\-level KL gradient into an analytic Fisher component and a trajectory\-dependent score\-function component, and introduce a hierarchy of Fisher surrogates with provable first\-order equivalence in the small\-steering regime\. The resulting algorithm provides a training\-free, reward\-driven test\-time alignment procedure that improves reward while controlling deviation from the base policy\.
+Brain\-to\-speech decoding aims to restore communication by translating neural activity into speech\-related representations\. From a modeling perspective, this task can be formulated as a weakly supervised neural sequence decoding problem, where phoneme sequences must be recovered without frame\-level annotations\. Existing speech decoders commonly rely on recurrent sequence models to integrate temporal context, but their dense sequential computation can limit their suitability for resource\-constrained portable or implantable neuroprosthetic systems\. In this study, we propose a residual spiking neural network \(SNN\) for phoneme\-level decoding of intracortical speech signals under constrained model capacity and weak sequence\-level supervision\. Our approach incorporates biologically inspired fixed connection\-specific delays to integrate temporal context, providing each postsynaptic unit with access to recent presynaptic spike activity without recurrent state or dense temporal convolutions\. Because each directed connection is assigned a single fixed delay, the temporal field is expanded without adding trainable delay parameters\. Across 500k, 2M, and 5M core\-parameter budgets, fixed delays consistently improve phoneme error rate \(PER\), with gains saturating once the delay range covers the task\-relevant temporal horizon\. Boundary\-aligned CTC analysis further suggests that delayed temporal context reduces local uncertainty around phoneme transitions, indicating that fixed delays support weakly supervised phoneme alignment rather than simply increasing model capacity\. Compared with recurrent, convolutional, and feedforward baselines under matched core\-parameter budgets, the proposed SNN achieves the best PER at 500k and 2M parameters and the second\-best PER at 5M parameters, while reducing estimated operation\-level energy by approximately 2\-4$\\times$ relative to the strongest non\-spiking baselines\. These results suggest that fixed\-delay SNNs provide an efficient temporal modeling mechanism for brain\-to\-speech decoding, potentially enabling lightweight decoding for on\-device speech neuroprostheses\.
 
 ## Continuous Audio Thinking for Large Audio Language Models
 
 **Authors:** Gyojin Han; DongJae Lee; Changho Choi; Jongsuk Kim; Junmo Kim
 
-**ID:** 148651 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
+**ID:** 148651 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
 [Paper](<https://openreview.net/forum?id=wA25uq7UK6>) | [PDF](<https://openreview.net/pdf?id=wA25uq7UK6>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148651>)
 
-_Abstract unavailable from the accessible public sources._
+Large audio language models \(LALMs\) have shown impressive capabilities on diverse audio understanding tasks, ranging from speech transcription to music analysis\. However, because LALMs are typically trained to produce text\-aligned responses, their hidden states are progressively shaped for text generation rather than for preserving acoustic information\. As a result, the diverse acoustic content that audio carries, such as phonetic detail, prosody, sound events, affect, and pitch, is lost along the way and difficult to leverage in the response\. We introduce Continuous Audio Thinking \(CoAT\), a framework that equips audio language models with a continuous latent workspace for organizing acoustic information prior to response generation, grounded by distillation from audio experts\. Within the thinking space, the model can utilize the rich acoustic information provided by expert distillation when generating its response\. Furthermore, the proposed continuous thinking block can be processed in a single prefill, so CoAT does not require additional autoregressive decoding cost over the baseline\. Across three LALMs, Qwen2\-Audio, Qwen2\.5\-Omni\-7B, and Audio Flamingo\~3, performance gains on a broad benchmark suite spanning audio reasoning, audio understanding, music classification, speech emotion, and speech transcription demonstrate the effectiveness of CoAT\. Further analysis confirms that the auxiliary supervision propagates from the thinking positions to the model's textual responses\.
 
 ## SitCom: Scaling Egocentric Multi\-Party Spoken Dialogue for Situated Communication Assistance
 
@@ -559,16 +775,6 @@ _Abstract unavailable from the accessible public sources._
 [Paper](<https://openreview.net/forum?id=1KuO44r5uN>) | [PDF](<https://openreview.net/pdf?id=1KuO44r5uN>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155992>)
 
 Multi\-party spoken communication pervades daily life, yet even attentive participants routinely lose track of who said what, miss a turn, or struggle to recall something said minutes earlier\. As always\-on wearables become commonplace, an assistant that listens alongside the user could ease this everyday friction\. We introduce \\textit\{Situated Communication Assistance\}: on\-demand support for users immersed in ongoing multi\-party conversations, grounded in the same egocentric acoustic scenes they perceive\. We argue this capability rests on three abilities: producing a Rich Situated Transcription \(RST\) of \\textit\{who\} said \\textit\{what\}, \\textit\{when\}, and \\textit\{where\}; comprehending the conversation holistically; and answering user queries while the conversation is unfolding\. To address the persistent data deficit in this regime, we build \\textbf\{SitCom\}, a multi\-party spoken dialogue corpus more than an order of magnitude larger than the largest prior multi\-party corpus, pairing 15\.8k hours of synthesized data with 144 hours of real recordings standardized under a unified RST schema\. The synthesis pipeline generates group\-structured scripts with persona\-grounded speech and behaviors, and renders them in 3D scenes through a directional simulator with head\-and\-torso radiation\. Using this corpus, we curate \\textbf\{SitCom\-Bench\}, a fully human\-validated question answering benchmark of 4\.3k items spanning seven comprehension and four in\-the\-moment query subtypes\. Experiments show that combining synthetic and real data is necessary to close the sim\-to\-real gap, and that in\-the\-moment querying remains hard even for frontier models, pointing to it as an open challenge distinct from post\-hoc comprehension\.
-
-## Distilling Sequential Computation in Transformer Language Models
-
-**Authors:** Zixuan Lan; Jessica Yang; Yanhong Li; Karen Livescu; Jiawei Zhou
-
-**ID:** 150342 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=iqGrRkvjJU>) | [PDF](<https://openreview.net/pdf?id=iqGrRkvjJU>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150342>)
-
-Transformer language models process sequences token by token in an autoregressive manner, making growing contexts increasingly expensive\. Yet many adjacent token spans are highly predictable or frequently occur as stable units, suggesting that their representations may be compressible\. We introduce a method for distilling sequential computation by replacing spans of input tokens with collapsed representations, computed on the fly by a lightweight merge module\. This module generates a single surrogate embedding from a sequence of static token embeddings that captures the functional role of the multiple tokens, allowing pretrained models to operate on compressed inputs without architectural changes or re\-training\. We apply this approach during inference to compress both prompts and intermediate decoding steps, using a rollback mechanism to substitute stored multi\-token KV cache entries with their single\-step surrogates\. Experiments across diverse models show that the merge module can be used to reduce effective sequence length by up to 40\\% with minimal accuracy degradation across language\-modeling evaluations and downstream tasks, including question answering, summarization, commonsense reasoning, and long\-form mathematical reasoning\. Additional lightweight adaptation of the merge module further improves the accuracy\-compression trade\-off in selected settings\. These results demonstrate that sequential token computation in Transformers can be effectively approximated through condensed surrogate representations that preserve the original behavior without model updating\.
 
 ## MILES: Modular Instruction Memory with Learnable Selection for Self\-Improving LLM Reasoning
 
@@ -620,618 +826,6 @@ To enable reliable long\-term interaction, LLM agents require a memory system th
 
 Edge\-deployed personal memory assistants must handle private interpersonal conversations on\-device with open\-weight models\. Yet, existing memory benchmarks often under\-test the combination of activity\-dense interaction, ego\-centric perspective, and coherent multi\-session worlds\. MemArena fills these gaps with a single\-world conversational benchmark built with its MASim agent simulator, for $50$ agents over $15$ days \($10\.3$M dialog\-text tokens, $24\.1$K text\-only ego\-observed tokens/agent/day\)\. With the interaction history, it co\-generates ground truth over six recall, reasoning, and trustworthiness evaluation dimensions\. We evaluate five open\-weight readers with Vanilla context, BM25\-RAG, Oracle retrieval, Memobase, and MemSearch as memory backends\. Three results stand out: \(1\) Memory\-backend choice matters more for content accuracy: At Qwen3\-0\.6B, Memobase $\\to$ MemSearch gains $\+32\.5/\+19\.2$ pp, exceeding MemSearch reader scaling \($\+10\.6/\+6\.8$ pp\)\. \(2\) Permission\-aware access fails universally: with Oracle leaking heavily and other backends too timid to disclose\. \(3\) Search latency bites only at very small reader: on a Spark GB10 edge node, memory\-search adds a moderate and fixed $87$/$7$/$48$ ms \(BM25\-RAG/Memobase/MemSearch\) that composes a small part of TTFT for most reader\-backend combinations\. We release code, the MASim simulator, and the MemArena\-L benchmark at https://anonymous\.4open\.science/r/MemArena\-NeurIPS2026\-anon\-3E9D
 
-## Sandboxed Coding Agents are Competitive Omni\-modal Task Solvers
-
-**Authors:** Dongping Chen; Xuanao Huang; Zhihan Hu; Qingyuan Shi; Dianqi Li; Tianyi Zhou
-
-**ID:** 148209 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=zYMvOwt5bN>) | [PDF](<https://openreview.net/pdf?id=zYMvOwt5bN>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148209>)
-
-As multimodal LLMs increasingly emphasize video and audio, a common assumption is that solving such tasks calls for native omnimodal models\. We show that this is not always necessary: coding agents equipped with only text\+vision and a sandboxed tool\-using interface can perform competitively with, and in several settings outperform, SOTA native omnimodal models and predefined multimodal agent scaffolds across multiple audio\-video benchmarks\. Our trajectory analysis suggests that their advantage comes from coding agents writing code and orchestrating tools to retrieve relevant content from transcripts, frames, and other non\-textual modality signals from raw inputs\. This effectively converts omnimodal tasks into evidence retrieval and information processing problems, avoiding the inefficiency of ingesting entire videos or audio streams into context\. To characterize remaining limitations, we propose a failure taxonomy and a process\-level analysis of tool\-use traces, and find that simple skill injection, including human\-written skills and self\-distilled skills from execution logs, can substantially improve performance over the no\-skill baseline\. To examine whether such capability can be elicited in open\-source models, we further introduce Code\-X, a complete training recipe with the OmniCoding trajectory dataset and verifiable reward, providing an exploratory baseline on Qwen\-3\.5\-9B and Qwen\-3\.6\-27B\. Finally, given the maturity of many\-modality understanding, we argue that the more meaningful frontier lies in many\-modality processing, and introduce TerminalBench\-O, the first process\-level benchmark designed for coding agents on real\-world omnimodal processing tasks\. Together, our findings open new directions for omnimodal content processing and evaluation\.
-
-## Beyond Correctness: Robustness\-Driven Evolutionary Self\-Training for Large Language Models
-
-**Authors:** Wei Guo; Hongyao Tang; Yi Ma; Jinyi Liu; Pengyi Li; Jing Liang; Yifu Yuan; YAN ZHENG; Jianye Hao
-
-**ID:** 151953 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=WZIsP7IaVI>) | [PDF](<https://openreview.net/pdf?id=WZIsP7IaVI>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151953>)
-
-_Abstract unavailable from the accessible public sources._
-
-## Universal Byte\-Level Encoding: UTF\-8/UTF\-16 Routing to Reduce Cross\-Script Token\-Budget Disparities
-
-**Authors:** Hyunsik Kim; Youngmoon Jung
-
-**ID:** 152902 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=PYtjaNdYaM>) | [PDF](<https://openreview.net/pdf?id=PYtjaNdYaM>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152902>)
-
-_Abstract unavailable from the accessible public sources._
-
-## Benchmarking Vietnamese Legal Knowledge of Large Language Models
-
-**Authors:** Dong Nguyen Tien; Minh\-Anh Nguyen; Thanh D Hoang; Nguyen T Ngoc; Quang M Xuan; Phan P Hai; Nguyen T Anh; Binh Vu; Dung Le
-
-**ID:** 139241 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=clrKAP4Tdj>) | [PDF](<https://openreview.net/pdf?id=clrKAP4Tdj>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139241>)
-
-_Abstract unavailable from the accessible public sources._
-
-## EntropyCache: Decoded Token Entropy Guided KV Caching for Diffusion Language Models
-
-**Authors:** Minsoo Cheong; Donghyun Son; Woosang Lim; Sungjoo Yoo
-
-**ID:** 152767 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=QX9lXOB8FY>) | [PDF](<https://openreview.net/pdf?id=QX9lXOB8FY>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152767>)
-
-_Abstract unavailable from the accessible public sources._
-
-## Latent Abstraction for Retrieval\-Augmented Generation
-
-**Authors:** Thi Ha Lan Nguyen; Minh\-Anh Nguyen; Dung Le
-
-**ID:** 155353 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=6Gb0gkrUgv>) | [PDF](<https://openreview.net/pdf?id=6Gb0gkrUgv>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155353>)
-
-_Abstract unavailable from the accessible public sources._
-
-## POISE: Instance\-Specific Prompt Tuning under Latent Mixture Target Distributions
-
-**Authors:** wenhao zheng; shuai xu; Lixing Chen; Xiu Su; Shichao Kan; Xiaoting Lyu; Zhe Qu
-
-**ID:** 154048 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=GbrExqa8nQ>) | [PDF](<https://openreview.net/pdf?id=GbrExqa8nQ>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154048>)
-
-_Abstract unavailable from the accessible public sources._
-
-## RVCBench: Benchmarking Robustness of Voice Cloning Across Modern Audio Generation Models
-
-**Authors:** Ruinan Jin; Xinting Liao; Hanlin Yu; Deval Pandya; Xiaoxiao Li
-
-**ID:** 139667 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=ByGhl9qdO1>) | [PDF](<https://openreview.net/pdf?id=ByGhl9qdO1>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139667>)
-
-_Abstract unavailable from the accessible public sources._
-
-## ALTER: An Allen's Algebra\-Based Evaluation Framework for Temporal Reasoning of LLMs
-
-**Authors:** Hongkai Zhou; Yanhui Li
-
-**ID:** 139265 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=ay0UXDsniW>) | [PDF](<https://openreview.net/pdf?id=ay0UXDsniW>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139265>)
-
-_Abstract unavailable from the accessible public sources._
-
-## ForecastCompass: Guiding Agentic Forecasting with Adaptive Factor Memory
-
-**Authors:** Yurui Chang; Yongkang Du; Yuanpu Cao; Jinghui Chen; Lu Lin
-
-**ID:** 153936 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=HSZMPfq6tX>) | [PDF](<https://openreview.net/pdf?id=HSZMPfq6tX>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153936>)
-
-_Abstract unavailable from the accessible public sources._
-
-## Seeing Speech: Learning Visible Articulatory Dynamics for Speech\-Driven 3D Facial Animation
-
-**Authors:** Hyung Kyu Kim; Byungchan Hwang; HAKGU KIM
-
-**ID:** 148378 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=yLMGoDkvCM>) | [PDF](<https://openreview.net/pdf?id=yLMGoDkvCM>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148378>)
-
-_Abstract unavailable from the accessible public sources._
-
-## Beyond Correctness: Robustness\-Driven Evolutionary Self\-Training for Large Language Models
-
-**Authors:** Wei Guo; Hongyao Tang; Yi Ma; Jinyi Liu; Pengyi Li; Jing Liang; Yifu Yuan; YAN ZHENG; Jianye Hao
-
-**ID:** 151953\-\-2 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 151953
-
-[Paper](<https://openreview.net/forum?id=WZIsP7IaVI>) | [PDF](<https://openreview.net/pdf?id=WZIsP7IaVI>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151953>)
-
-_Abstract unavailable from the accessible public sources._
-
-## Universal Byte\-Level Encoding: UTF\-8/UTF\-16 Routing to Reduce Cross\-Script Token\-Budget Disparities
-
-**Authors:** Hyunsik Kim; Youngmoon Jung
-
-**ID:** 152902\-\-2 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 152902
-
-[Paper](<https://openreview.net/forum?id=PYtjaNdYaM>) | [PDF](<https://openreview.net/pdf?id=PYtjaNdYaM>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152902>)
-
-_Abstract unavailable from the accessible public sources._
-
-## Benchmarking Vietnamese Legal Knowledge of Large Language Models
-
-**Authors:** Dong Nguyen Tien; Minh\-Anh Nguyen; Thanh D Hoang; Nguyen T Ngoc; Quang M Xuan; Phan P Hai; Nguyen T Anh; Binh Vu; Dung Le
-
-**ID:** 139241\-\-2 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 139241
-
-[Paper](<https://openreview.net/forum?id=clrKAP4Tdj>) | [PDF](<https://openreview.net/pdf?id=clrKAP4Tdj>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139241>)
-
-_Abstract unavailable from the accessible public sources._
-
-## EntropyCache: Decoded Token Entropy Guided KV Caching for Diffusion Language Models
-
-**Authors:** Minsoo Cheong; Donghyun Son; Woosang Lim; Sungjoo Yoo
-
-**ID:** 152767\-\-2 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 152767
-
-[Paper](<https://openreview.net/forum?id=QX9lXOB8FY>) | [PDF](<https://openreview.net/pdf?id=QX9lXOB8FY>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152767>)
-
-_Abstract unavailable from the accessible public sources._
-
-## Latent Abstraction for Retrieval\-Augmented Generation
-
-**Authors:** Thi Ha Lan Nguyen; Minh\-Anh Nguyen; Dung Le
-
-**ID:** 155353\-\-2 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 155353
-
-[Paper](<https://openreview.net/forum?id=6Gb0gkrUgv>) | [PDF](<https://openreview.net/pdf?id=6Gb0gkrUgv>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155353>)
-
-_Abstract unavailable from the accessible public sources._
-
-## POISE: Instance\-Specific Prompt Tuning under Latent Mixture Target Distributions
-
-**Authors:** wenhao zheng; shuai xu; Lixing Chen; Xiu Su; Shichao Kan; Xiaoting Lyu; Zhe Qu
-
-**ID:** 154048\-\-2 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 154048
-
-[Paper](<https://openreview.net/forum?id=GbrExqa8nQ>) | [PDF](<https://openreview.net/pdf?id=GbrExqa8nQ>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154048>)
-
-_Abstract unavailable from the accessible public sources._
-
-## RVCBench: Benchmarking Robustness of Voice Cloning Across Modern Audio Generation Models
-
-**Authors:** Ruinan Jin; Xinting Liao; Hanlin Yu; Deval Pandya; Xiaoxiao Li
-
-**ID:** 139667\-\-2 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 139667
-
-[Paper](<https://openreview.net/forum?id=ByGhl9qdO1>) | [PDF](<https://openreview.net/pdf?id=ByGhl9qdO1>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139667>)
-
-_Abstract unavailable from the accessible public sources._
-
-## ALTER: An Allen's Algebra\-Based Evaluation Framework for Temporal Reasoning of LLMs
-
-**Authors:** Hongkai Zhou; Yanhui Li
-
-**ID:** 139265\-\-2 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 139265
-
-[Paper](<https://openreview.net/forum?id=ay0UXDsniW>) | [PDF](<https://openreview.net/pdf?id=ay0UXDsniW>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139265>)
-
-_Abstract unavailable from the accessible public sources._
-
-## Position: Telic Errors Make VLMs Unreliable Annotators in Sensitive Contexts
-
-**Authors:** Kokil Jaidka; Insyirah Mujtahid; Chebrolu Niranjan; Sahajpreet Singh
-
-**ID:** 140068 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=RLRpTy0ryW>) | [PDF](<https://openreview.net/pdf?id=RLRpTy0ryW>) | [Official poster](<https://neurips.cc/virtual/2026/poster/140068>)
-
-VLMs now annotate sensitive content at scale, be it hate\-speech memes, conflict imagery, politically charged symbols; yet, standard pipelines measure only whether a model can identify what an image depicts, not what it means to the community it concerns\. We name this failure mode a telic error: the model produces a surface\-accurate, perceptually complete annotation \(telic: what\-it\-depicts\) while erasing the relic meaning, i\.e\., the symbolic, cultural, or political significance that makes the content consequential\. We evaluate six open\-weight VLMs on a two\-task diagnostic designed to locate the failure precisely: Task 1 \(forward annotation\) shows that prepending the model's own image description does not improve accuracy \(\-2\.0pp\), ruling out description\-generation failure; Task 2 \(label\-supplied explanation\) shows the same models achieve 95\-100% relic identification accuracy when given the correct label and asked to explain it, ruling out knowledge absence\. The 35\-percentage\-point gap between the two tasks is the empirical signature of a protocol artefact: models possess the cultural knowledge required for accurate annotation, but standard binary formats never ask them to deploy it\. We argue that measuring only telic accuracy is not a neutral technical choice; it is a choice about whose meanings count, and that the dual\-axis evaluation framework, five\-type error taxonomy, and two\-task diagnostic introduced here are the instrumentation needed to make that choice visible\.
-
-## DELTA\-TTS: Adapting Autoregressive Model into a Diffusion Language Model for Text\-to\-Speech
-
-**Authors:** Junwon Moon; Yejin Lee; Seungbeom Kim; Hoseong Ahn; Sewoong Park; Heeseung Kim; Kyuhong Shim
-
-**ID:** 151215 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=c4cM3P84zM>) | [PDF](<https://openreview.net/pdf?id=c4cM3P84zM>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151215>)
-
-Autoregressive \(AR\) text\-to\-speech \(TTS\) models generate speech tokens one at a time, and inference latency therefore scales linearly with output length\. Discrete diffusion language models \(dLLMs\) have recently emerged as a parallel alternative that produces tokens via iterative unmasking\.  Recent work has converted pretrained AR language models into dLLMs in text generation, but this paradigm has not been extended to speech synthesis\. In addition, existing conversion methods require full fine\-tuning and large\-scale training data\. This leaves the question of whether such conversion can be done with substantially less compute and data largely open\. We introduce DELTA\-TTS, a lightweight conversion that turns a pretrained AR TTS backbone into a dLLM\. The AR weights are kept frozen; all adaptation is routed through LoRA and a per\-block speech\-aware convolution\. The convolution injects local acoustic context into the bidirectional attention, supplying the short\-range continuity between adjacent  speech tokens\. With only $585$ hours of LibriTTS as adaptation data, DELTA\-TTS achieves a state\-of\-the\-art WER of $\\textbf\{1\.75\}\\%$ on Seed\-TTS test\-en and decodes $\\textbf\{3\.3\}\\times$ faster on the token\-generation stage than the CosyVoice3 AR backbone it is converted from\. This shows that lightweight AR\-to\-dLLM conversion provides a practical, data\- and compute\-efficient route to non\-autoregressive TTS\.
-
-## Introspection Tools Help LLMs Understand and Control Themselves
-
-**Authors:** Xiao Liu; Junsol Kim; Shiyang Lai; Jacy Anthis; Siyang Wu; Chenhao Tan; James Evans
-
-**ID:** 140093 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=GgN3oK68Eu>) | [PDF](<https://openreview.net/pdf?id=GgN3oK68Eu>) | [Official poster](<https://neurips.cc/virtual/2026/poster/140093>)
-
-Large language models \(LLMs\) exhibit increasingly strong reasoning capabilities, yet they remain limited in their ability to understand, explain, or regulate their own states and behavior\. While interpretability methods have advanced our ability to expose and manipulate their internal mechanisms, they are designed for human analysts rather than for models themselves\. In this position paper, we argue for equipping LLMs with tools that expose measurable internal signals \(e\.g\., token probabilities and internal activations\) and enable self\-regulation\. We refer to these as introspection tools, drawing inspiration from humans' access to their mental and physical states, which allow for effective mental and bodily control in diverse real\-world contexts\. We present the design space for introspection tools, and two proof\-of\-concept examples illustrating how such tools are feasible and can support uncertainty quantification and misinformation mitigation\. Beyond manually designed tools, we highlight open research questions around the automatic development, refinement, and organization of introspection tools\. Together, these directions move toward LLMs that are more self\-aware and reliable\.
-
-## PitchBench: Measuring Pitch Hearing in Audio\-Language Models
-
-**Authors:** Milan Liessens Dujardin; Song\-Ze Yu; Craver C Thomas\-Smith; David Chan; Karina Nguyen
-
-**ID:** 139226 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=dlSvqHjTE4>) | [PDF](<https://openreview.net/pdf?id=dlSvqHjTE4>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139226>)
-
-Audio\-language models \(ALMs\) are increasingly used in real\-world applications that require understanding music, from music tutoring and transcription to captioning, recommendation systems, and music production\. More broadly, they are becoming an important component of multimodal AI systems that must reason from sensory input rather than text alone\. This makes reliable musical perception a critical prerequisite: if a model cannot accurately hear the structure of sound, it cannot be trusted to reason about, teach, transcribe, or act on audio in the real world\. Yet existing benchmarks rarely assess one of the most fundamental musical abilities underlying such perception: pitch hearing\. Current evaluations tend to probe pitch hearing only indirectly, through higher\-level tasks and often in multiple\-choice formats, leaving open how reliably ALMs identify fine\-grained pitch across instruments, acoustic conditions, and response formats\.  We introduce PitchBench, an evaluation suite that systematically measures pitch hearing in ALMs\. PitchBench comprises 28 experiments spanning absolute and relative pitch perception within sequences and chords, while varying loudness, note duration, sound source, time stretching, background noise, and other acoustic conditions\. Tasks range from identifying individual pitches in isolation to tracking a melodic line within a four\-part musical texture\. Evaluating frontier ALMs, we find that pitch hearing remains highly unreliable: models perform consistently poorly across settings, with accuracy varying sharply by sound source, note duration, and notation format\. Current ALMs do not yet possess stable pitch perception, even for controlled synthetic and instrumental stimuli\. Alongside the benchmark, we release PitchBench as a Python package containing the evaluation data and data generation tools to support future work on pitch\-aware audio\-language modeling\.
-
-## Progressive Layer\-wise Supervision: Deep\-to\-Shallow Supervision Annealing for Efficient and Robust Speech Deepfake Detection
-
-**Authors:** Hoan My Tran; Xin Wang; Xuechen Liu
-
-**ID:** 150091 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=kmOSYc5cfb>) | [PDF](<https://openreview.net/pdf?id=kmOSYc5cfb>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150091>)
-
-Speech foundation models pretrained via self\-supervised learning provide powerful representations for deepfake detection, yet we find that standard fine\-tuning exploits only the deepest transformer layers — leaving the majority of the network's capacity discriminatively inert\. Layer\-wise probing of \\textit\{XLS\-R\-128\} reveals that the top two\-thirds of the transformer stack contribute negligibly to anti\-spoofing performance after standard fine\-tuning, a phenomenon we term shallow\-layer dormancy\. We connect this observation to the representational redundancy of pretrained transformers: adjacent layers encode highly similar information, and fine\-tuning without explicit intermediate supervision reinforces rather than breaks this redundancy\. To address this, we propose Progressive Layer\-wise Supervision \(PLS\), a training framework that attaches a shared linear classifier to every transformer layer and schedules layer\-wise loss contributions via an exponentially annealed power weighting\. Early training concentrates supervision on deep layers to preserve the pretrained representational hierarchy; later training progressively redistributes supervision to shallower layers, converting dormant earlier representations into discriminative ones\. Competitive detection \($\\leq9\.25\\%$ average EER\) is achievable on \\emph\{XLS\-R\-128\} at layer 7, which reduces the parameter count from 315M to 101M and exemplifies an early exit mechanism\. Experiments across twelve benchmarks spanning in\-domain, and out\-of\-domain deepfake scenarios show PLS achieves a new state\-of\-the\-art with 239M parameters, outperforming prior methods with larger and more complex architectures\.
-
-## SAFE\-FEC: Semantically Constrained Adversarial Frontier Evolution for Factual Error Correction
-
-**Authors:** Lei Zhu; Xiaobao Wang; Jianbiao Yang; Chenyang Wang; Longbiao Wang; Jianwu Dang
-
-**ID:** 148784 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=v5PEa9m3Q5>) | [PDF](<https://openreview.net/pdf?id=v5PEa9m3Q5>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148784>)
-
-The difficulty of factual error correction \(FEC\) is not only how to repair false claims, but how to construct errors that meaningfully test repair\. Existing FEC data construction methods often follow a static corruption view: they mask spans in false claims or inject errors into supported claims, but do not explicitly target the boundary of what current evidence\-based correctors can repair\. We introduce the notion of a \\emph\{repair frontier\}: factual errors that are evidence\-grounded, close enough to the source claim to admit a clear correction, and resistant to current correctors\. We propose \\textsc\{SAFE\-FEC\}, a semantically constrained adversarial frontier\-evolution framework for constructing such examples\. Starting from evidence\-supported claims, SAFE\-FEC generates mutations from multiple factual\-error perspectives, refines them through cross\-perspective critique, selects or composes stronger candidates, filters semantic drift, and accepts only candidates that survive repeated corrector\-in\-the\-loop repair attempts\. This turns FEC data construction from one\-shot error injection into correction\-aware frontier search\. Experiments on FECData, HoVer, and FEVEROUS show that SAFE\-FEC consistently lowers correction performance for both LLM\-based and FEC\-specific correctors, especially in multi\-hop and structured\-evidence settings\. Quality evaluation and ablations further suggest that these failures arise from plausible, semantically anchored, evidence\-grounded errors rather than invalid hard negatives\.
-
-## Shift\-Aware Identity\-Guided Latent Refinement for Referring Audio–Visual Segmentation
-
-**Authors:** Kun Li; Sami S Brandt; Michael Yang
-
-**ID:** 154662 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=By7ekEoJ2D>) | [PDF](<https://openreview.net/pdf?id=By7ekEoJ2D>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154662>)
-
-_Abstract unavailable from the accessible public sources._
-
-## Native Audio\-Visual Alignment for Generation
-
-**Authors:** Longbin Ji; Guan Wang; xuan wei; Chenye Yang; Zhenyu Zhang; Shuohuan Wang; YU SUN; Jingzhou HE
-
-**ID:** 148987 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=teLwLWInBc>) | [PDF](<https://openreview.net/pdf?id=teLwLWInBc>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148987>)
-
-Joint audio\-video generation aims to synthesize temporally synchronized and semantically coherent visual and acoustic content\. Existing open\-source methods mainly follow either dual\-tower designs, which generate audio and video in separate streams and rely on posterior alignment, or fully unified tri\-modal designs, which mix textual context, audio, and video in a single shared space\. These paradigms may either weaken fine\-grained audio\-video co\-evolution or couple semantic conditioning with low\-level synchronization\. We propose NAVA, a Native Audio\-Visual Alignment framework that formulates generation as context\-conditioned native audio\-visual alignment\. NAVA first establishes audio\-video correspondence in a dedicated alignment space and then applies context as external conditioning to guide the aligned representation\. We instantiate this formulation with an Align\-then\-Fuse MMDiT architecture, which progressively bridges modality\-aware alignment and unified audio\-video denoising\. To support controllable speech generation, we further introduce Timbre\-in\-Context Conditioning, which binds reference timbre cues to corresponding speech spans through the context pathway\. Experiments on Verse\-Bench and the Seed\-TTS benchmark demonstrate that NAVA achieves superior audio\-visual synchronization and video quality, competitive audio quality, and substantially improved reference\-timbre controllability with only 6\.2B parameters\.
-
-## ASTOR: Multi\-Task Code Reinforcement Learning via Utility\-Driven Coordination
-
-**Authors:** Yujia Chen; Yang Ye; Xiao Chu; Yuchi Ma; Cuiyun Gao
-
-**ID:** 154519 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=CzqAXCaI97>) | [PDF](<https://openreview.net/pdf?id=CzqAXCaI97>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154519>)
-
-Reinforcement learning \(RL\) with verifiable rewards has proven effective at post\-training LLMs for coding, yet deploying separate task\-specific specialists incurs costs that scale with the number of tasks, motivating a unified multi\-task RL \(MTRL\) approach\. However, existing MTRL methods treat all coding tasks uniformly, relying on fixed data curricula under a shared optimization strategy, ultimately limiting the effectiveness of multi\-task training\. To address these limitations, we propose \\textbf\{\{\\tool\}\}, a multi\-t\\textbf\{AS\}k code reinforcement learning framework via u\\textbf\{T\}ility\-driven co\\textbf\{OR\}dination\. Centered on \\textit\{task utility\}, a signal capturing each task's learning potential and cross\-task synergy, \{\\tool\} comprises two coupled modules: \\textit\{1\) \\moduleone\} module hierarchically allocates training budget and prioritizes informative prompts, steering training toward the most valuable data; and \\textit\{2\) \\moduletwo\} module dynamically scales per\-task KL regularization, matching update constraints to each task's current training state\.  Experiments on two widely\-used LLMs across four representative coding tasks demonstrate that \{\\tool\} consistently improves a single model across all tasks, outperforming the best task\-specific specialist by 9\.0\\%\-\-9\.5\\% and surpassing the strongest MTRL baseline by 7\.5\\%\-\-12\.8\\%\.
-
-## ASTOR: Multi\-Task Code Reinforcement Learning via Utility\-Driven Coordination
-
-**Authors:** Yujia Chen; Yang Ye; Xiao Chu; Yuchi Ma; Cuiyun Gao
-
-**ID:** 154519\-\-2 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 154519
-
-[Paper](<https://openreview.net/forum?id=CzqAXCaI97>) | [PDF](<https://openreview.net/pdf?id=CzqAXCaI97>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154519>)
-
-Reinforcement learning \(RL\) with verifiable rewards has proven effective at post\-training LLMs for coding, yet deploying separate task\-specific specialists incurs costs that scale with the number of tasks, motivating a unified multi\-task RL \(MTRL\) approach\. However, existing MTRL methods treat all coding tasks uniformly, relying on fixed data curricula under a shared optimization strategy, ultimately limiting the effectiveness of multi\-task training\. To address these limitations, we propose \\textbf\{\{\\tool\}\}, a multi\-t\\textbf\{AS\}k code reinforcement learning framework via u\\textbf\{T\}ility\-driven co\\textbf\{OR\}dination\. Centered on \\textit\{task utility\}, a signal capturing each task's learning potential and cross\-task synergy, \{\\tool\} comprises two coupled modules: \\textit\{1\) \\moduleone\} module hierarchically allocates training budget and prioritizes informative prompts, steering training toward the most valuable data; and \\textit\{2\) \\moduletwo\} module dynamically scales per\-task KL regularization, matching update constraints to each task's current training state\.  Experiments on two widely\-used LLMs across four representative coding tasks demonstrate that \{\\tool\} consistently improves a single model across all tasks, outperforming the best task\-specific specialist by 9\.0\\%\-\-9\.5\\% and surpassing the strongest MTRL baseline by 7\.5\\%\-\-12\.8\\%\.
-
-## Enhancing Speech Large Language Models through Reinforced Behavior Alignment
-
-**Authors:** Yansong Liu; Yuan Liu
-
-**ID:** 154532\-\-2 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 154532
-
-[Paper](<https://openreview.net/forum?id=CtJ6YRQRlm>) | [PDF](<https://openreview.net/pdf?id=CtJ6YRQRlm>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154532>)
-
-Speech large language models \(SpeechLMs\) can process spoken requests, yet still lag behind text\-prompted large language models \(LLMs\) on instruction following and reasoning\. We argue that this gap is not only an ASR or representation problem: the same semantic instruction can induce different response policies when spoken with different speakers, accents, noise conditions, prosody, or disfluencies\. We propose Verifiable Invariant Reinforced Behavior Alignment \(VIRBA\), a reinforcement\-learning framework for aligning SpeechLM behavior across acoustic realizations of the same semantic intent\. VIRBA builds multi\-view spoken instruction groups, scores sampled responses with semantic preference, rule\-verifiable correctness, cross\-acoustic invariance, and adaptive reasoning rewards, and optimizes the model with Cross\-Acoustic Group Relative Policy Optimization \(CA\-GRPO\)\. The resulting objective moves SpeechLM alignment beyond teacher imitation toward robust reasoning policies that remain stable across realistic spoken realizations\. Experiments with recent SpeechLM baselines, disfluency robustness, spoken QA, audio reasoning, and speech\-to\-text translation show the largest gains on reasoning\-heavy and acoustically perturbed spoken prompts\.
-
-## Bayesian Test\-Time Inference of Task\-Aligned Similarity from Weak Interactive Feedback
-
-**Authors:** Weida Liang; Kenji Kawaguchi
-
-**ID:** 152715 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=QtmggfhlQ9>) | [PDF](<https://openreview.net/pdf?id=QtmggfhlQ9>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152715>)
-
-Large language model systems repeatedly make test\-time decisions by comparing similarity\. They retrieve exemplars, rerank candidates, and choose revisions\. But similarity is not unique: a candidate can be close lexically, semantically, structurally, or stylistically, while only one of these axes may matter for the current instance\. We propose BASIS\~\(Bayesian Axis Selection via Interactive Signals\), a training\-free Bayesian framework that treats weak feedback as evidence about this latent task\-aligned axis\. BASIS maintains a posterior over candidate targets and similarity axes\. It updates this posterior from scalar scores, pairwise preferences, or verifier outputs, and then chooses future probes by expected information gain\. In a finite noisy similarity model, we show that fixed\-axis and fixed\-mixture rules can remain suboptimal under axis shift\. Across concept recovery, reasoning exemplar selection, response refinement, and adversarial distractors, BASIS consistently outperforms stronger rerankers, static mixtures, and compute\-matched best\-of\-$N$ search under the same candidate pools and feedback budgets\. The average gains are moderate because all methods share the same backbone, candidate pools, and feedback signals\. Under axis shift, however, the gap widens substantially, showing that latent\-axis inference is not fully replaced by better scoring or more search alone\.
-
-## Frontier Coding Agents Use Metaprogramming to Adapt to Unfamiliar Programming Languages
-
-**Authors:** Aman Sharma; Sushrut Thorat; Paras Chopra
-
-**ID:** 152963 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=P4Ev2InDix>) | [PDF](<https://openreview.net/pdf?id=P4Ev2InDix>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152963>)
-
-LLM\-based coding agents are usually evaluated in familiar software settings: mainstream languages, common libraries, and public repositories\. These benchmarks remain important, but they can hide how agents behave when the language itself is unfamiliar\. We evaluate six contemporary coding agents on four esoteric programming languages using a sequential setup with file editing, local execution, and hidden\-test grading\. Our protocol exposes capability differences between these agents that mainstream coding and agentic benchmarks such as SWE\-Bench Verified and Terminal\-Bench 2\.0 compress into much narrower bands\. We observe that the strongest agents, Claude Opus 4\.6 and GPT\-5\.4 xhigh, often avoid writing the target language directly\. On Brainfuck and Befunge\-98, they write Python programs that generate target\-language code and debug those generators locally\. Forbidding this metaprogramming strategy causes large performance drops\. Text guidance distilled from this strategy does not materially improve weaker agents\. In contrast, Opus\-derived Python helper code for building generators, with no solved benchmark programs or hidden\-test answers, sharply improves Sonnet 4\.6 and GPT\-5\.4 mini on the same problems, while Haiku 4\.5 remains low\. More interpreter calls and output tokens improve stronger agents but leave weaker agents near their original performance, indicating that these resources amplify useful strategies rather than create them\. Together, these results show that strong coding agents adapt to unfamiliar languages by using tools, feedback, and workspace state to build a working model of the target language\. Metaprogramming is the clearest case, but the broader gap is constructing and debugging a strategy that works under the target language's rules\.
-
-## When Reasoning Meets Its Laws
-
-**Authors:** Junyu Zhang; Yifan Sun; Tianang Leng; Jingyan Shen; Liu Ziyin; Paul Liang; Huan Zhang
-
-**ID:** 155285 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=6ha7HGdygP>) | [PDF](<https://openreview.net/pdf?id=6ha7HGdygP>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155285>)
-
-Despite the superior performance of Large Reasoning Models \(LRMs\), their reasoning behaviors are often counterintuitive, \*e\.g\.\*, excessive reasoning on simple questions or insufficient reasoning on complex ones, leading to suboptimal reasoning capabilities\. This paper presents the Laws of Reasoning \(LoRe\), a unified framework that formalizes intrinsic reasoning patterns in ideal LRMs\. We first propose \*compute law\* with the hypothesis that the reasoning compute should scale linearly with question complexity\. Beyond compute, we extend LoRe with a supplementary \*accuracy law\*, positing exponential decay of accuracy with increasing complexity\. Since the complexity is difficult to quantify in practice, we approximate these hypotheses via two tractable properties, \*monotonicity\* and \*compositionality\*\. We therefore introduce LoRe\-Bench, a benchmark that systematically measures these properties for large reasoning models\. Evaluation shows that most reasoning models exhibit reasonable monotonicity but lack compositionality\. In response, we develop an effective finetuning approach that enforces compute\-law compositionality\. Extensive empirical studies demonstrate that better compliance with compute laws yields consistently improved reasoning performance on multiple benchmarks, and uncovers synergistic gains across properties and laws\.
-
-## Speech Tokenizers are Vulnerable:  Transferable Semantic Attack and Robust Tokenizer
-
-**Authors:** Zhisheng Zhang; Yifan Mi; Yixuan Zhou; Haiyun Li; dongfu song; Shengbo Cai; Ziang Xu; Jie Hao; Zhiyong Wu
-
-**ID:** 149645 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=oVx8Urehhw>) | [PDF](<https://openreview.net/pdf?id=oVx8Urehhw>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149645>)
-
-_Abstract unavailable from the accessible public sources._
-
-## WordEval: Evaluating Word\-Native Operation Fidelity in Document Editing
-
-**Authors:** Jinyoung Park; Yupan Huang; Shimin Zhang; Jiayu Ding; Yilin Jia; Yuzhong Zhao; Tengchao Lv; Wenshan Wu; Shaohan Huang; Nan Yang; Xiangyang Zhou; Dongdong Zhang; Li Dong; Lei Cui; Sun Mao; Xun Wang; Tao Ge; Huitian Jiao; Si\-Qing Chen; Changick Kim; Furu Wei
-
-**ID:** 139228 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=dfw3UZyY85>) | [PDF](<https://openreview.net/pdf?id=dfw3UZyY85>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139228>)
-
-_Abstract unavailable from the accessible public sources._
-
-## Progress\-Aware Distillation for Mitigating Stagnation in Small Language Model Agents
-
-**Authors:** Yuanpu Cao; Saket Sathe; Hanyu Wang; Ziyi Yin; Fenglong Ma; Jinghui Chen
-
-**ID:** 149176 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=sJMXfTlER4>) | [PDF](<https://openreview.net/pdf?id=sJMXfTlER4>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149176>)
-
-While LLM\-based agent systems have demonstrated remarkable proficiency in reasoning and solving complex real\-world tasks, they also come with substantial token consumption and inference latency, limiting their practical deployment\. To enhance the efficiency of agent systems, recent efforts have focused on transferring agentic capabilities from large\-scale models to small language models \(SLMs\) via supervised fine\-tuning\-based distillation\. Nevertheless, as interaction trajectories grow longer, involving extended reasoning\-action chains and extensive environmental feedback, distilled student agents tend to experience progress stagnation: becoming trapped in unproductive loops characterized by persistent failed strategies and difficulty making meaningful progress\. Our systematic analysis shows that this phenomenon consistently occurs across diverse SLMs and task domains\. To address this issue, we propose Progress\-Aware Distillation \(ProD\), which explicitly detects and penalizes stagnation in student\-generated trajectories\. ProD encodes the stagnation gap between student and teacher into an adaptive margin for dynamically penalizing possible stagnation\. By iteratively applying this procedure, ProD enables student agents to progressively approximate teacher behavior\. Extensive experiments involving 8 SLMs, ranging from 0\.6B to 8B parameters, on both in\-domain and out\-of\-domain benchmarks, demonstrate that ProD substantially mitigates progress stagnation while enhancing both the success rates and task\-completion efficiency of distilled SLM agents\.
-
-## Confidence\-Calibrated Inference Expansion for Evaluator\-Guided Test\-Time Reasoning
-
-**Authors:** Weida Liang; Kenji Kawaguchi
-
-**ID:** 155179 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=7idt098hbk>) | [PDF](<https://openreview.net/pdf?id=7idt098hbk>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155179>)
-
-Evaluator\-guided reasoning systems face a local control problem: given a current answer and evaluator evidence, should the system trust, fallback, or buy more inference? We formulate this as a compute\-aware three\-action controller over \*trust\*, \*fallback\*, and \*expand\*, where each action is scored by predicted eventual success minus explicit compute cost\. The central quantity is \*action\-specific confidence\*: the success probability induced by trusting now, falling back now, or expanding once and continuing\. We show that local action selection is stable when confidence error is smaller than the compute\-adjusted action gap, and that regret accumulates only along the realized expansion path\. Guided by this analysis, we learn one confidence head per action, calibrate the heads on held\-out data, and penalize locally uncertain actions\. Across verifier\-guided width expansion on MATH and AIME25 and judge\-guided revision expansion on a deterministic\-answer General Reasoning benchmark, calibrated control improves the utility\-\-compute frontier relative to strong fixed and adaptive baselines\. The same pattern persists under policy\-induced expansion targets, same\-feature budget routers, fallback removal, stronger learned controllers trained on the same features, and moderate evaluator mismatch after refitting and recalibration\. When compute is free, high\-budget policies can remain competitive; the gain here is compute\-efficient allocation, not a uniformly stronger reasoner\.
-
-## Learning Visual Speech Representations via Cross\-Modal Distillation and Joint Face\-Lip Modeling
-
-**Authors:** Jingxuan Zhang; Genshun Wan; Jia Pan; Jianqing Gao; Yumei Zhang; Lichen Zhang
-
-**ID:** 149522 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=pVrKNRkHe2>) | [PDF](<https://openreview.net/pdf?id=pVrKNRkHe2>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149522>)
-
-Lipreading remains challenging due to the inherent ambiguity of visual speech cues and their sensitivity to head pose and video resolution\. In this work, we propose FLARE, a framework for robust visual speech representation learning via cross\-modal distillation and joint face\-lip modeling\. FLARE leverages semantically rich Whisper representations as the acoustic teacher signal, converting them into discrete distillation targets through a random\-projection quantizer and pretraining the model with a masked prediction objective\. To capture complementary visual information, FLARE employs a dual\-stream architecture that jointly processes lip region\-of\-interest \(ROI\) and full\-face inputs, where the lip stream captures fine\-grained articulatory motion and the face stream encodes broader facial dynamics\. During pretraining, auxiliary audio input is incorporated to facilitate cross\-modal alignment, and modality dropout is applied to encourage robust visual\-only representations\. For downstream lipreading, FLARE serves as a visual encoder coupled with either a lightweight Transformer decoder or an LLM\-based decoder\. Evaluated on LRS2, LRS3, and the out\-of\-domain WildVSR benchmark, FLARE achieves state\-of\-the\-art word error rates of 11\.7%, 13\.2%, and 34\.3%, respectively\. A progressive design study confirms the contribution of each major component\. Further analyses demonstrate that joint face\-lip modeling improves robustness under degraded video resolution and large head pose variation, while yielding more phoneme\-discriminative visual representations\. Code and pretrained models are available at https://anonymous\.4open\.science/r/FLARE\-522C\.
-
-## RL\-Guided Temporal Localization for Dual\-Channel Retrieval in Long\-Horizon Agent Memory
-
-**Authors:** Dabin Sheng; Zhe Wu; Jinming Zhao; Junliang Xing; Yuanchun Shi
-
-**ID:** 152090 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=VaEouLMkHw>) | [PDF](<https://openreview.net/pdf?id=VaEouLMkHw>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152090>)
-
-Time\-aware retrieval is crucial for long\-horizon LLM agents to effectively leverage ever\-growing long\-term memory\. Existing methods focus on lexical or semantic similarity, leading to target memories being crowded out by temporally mismatched yet semantically similar candidates\. Even time\-aware approaches inject temporal cues only during memory organization or answer generation, overlooking temporal constraints at the retrieval stage, where candidate selection occurs—the root cause of the displacement\. Inspired by the temporal contiguity effect in human episodic memory, we propose TIDER \(Temporal Interval\-driven Dual\-channel Evidence Retrieval\), a time\-aware agentic retrieval framework\. Central to TIDER is a reinforcement learning \(RL\)\-trained temporal interval locator that infers the temporal windows in which the evidence lies\. RL optimizes window localization as a discrete, non\-differentiable retrieval decision, using composite rewards to convert sparse answer supervision into fine\-grained retrieval feedback\. These temporal windows first define the temporal retrieval channel; the retrieved candidates are then merged with results from the semantic channel and reranked by proximity to the windows\. This temporal grounding enables TIDER to retrieve temporally aligned evidence that would otherwise be drowned out by the volume of semantically similar yet temporally mismatched memories\. With a lightweight 1\.7B locator, TIDER achieves state\-of\-the\-art accuracy on both long\-horizon memory benchmarks—61\.52% on LifeBench \(\+8\.82%\) and 78\.96% on LoCoMo \(\+3\.66%\), which indicates that temporal cues are crucial for pinpointing target evidence amid a vast pool of semantically similar historical events in long\-term daily\-life memory\.
-
-## Composition\-RL: Compose Your Verifiable Prompts for Reinforcement Learning of Large Language Models
-
-**Authors:** Xin Xu; Clive Bai; Kai Yang; Tianhao Chen; Yuchen Cai; Yangkun Chen; Weijie Liu; Hao CHEN; Yang Wang; Saiyong Yang; Can Yang
-
-**ID:** 148886 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=uSnERGG6v9>) | [PDF](<https://openreview.net/pdf?id=uSnERGG6v9>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148886>)
-
-Large\-scale verifiable prompts underpin the success of Reinforcement Learning with Verifiable Rewards \(RLVR\), but they contain many uninformative examples and are costly to expand further\. Recent studies focus on better exploiting limited training data by prioritizing hard prompts whose rollout pass rate is 0\. However, easy prompts with a pass rate of 1 also become increasingly prevalent as training progresses, thereby reducing the effective data size\. To mitigate this, we propose Composition\-RL, a simple yet useful approach for better utilizing limited verifiable prompts targeting pass\-rate\-1 prompts\. More specifically, Composition\-RL automatically composes multiple problems into a new verifiable question and uses these compositional prompts for RL training\. Extensive experiments across model sizes from 4B to 30B show that Composition\-RL consistently improves reasoning capability over RL trained on the original dataset\. Performance can be further boosted with a curriculum variant of Composition\-RL that gradually increases compositional depth over training\. Additionally, Composition\-RL enables more effective cross\-domain RL by composing prompts drawn from different domains\. All our codes, compositional datasets, and models will be released to facilitate future research\.
-
-## WavNAF: Learning Wave Propagation Priors for Neural Acoustic Fields
-
-**Authors:** Taeho Kim; Hyunjun Kim; MinKyu Lee; SuBeen Lee; Inkyu An; Jae\-Pil Heo
-
-**ID:** 150632 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=ge6kZTflBU>) | [PDF](<https://openreview.net/pdf?id=ge6kZTflBU>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150632>)
-
-_Abstract unavailable from the accessible public sources._
-
-## Breaking Adversarial Transferability in Fine\-Tuned Speech Recognition
-
-**Authors:** Mojtaba Nafez; Aref Mousavi; Mohammad E Mahdavi; Mobina Poulaei; Kiarash K Feriz; Mohammad Hossein Rohban
-
-**ID:** 153915 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=Hk5S6s2xN9>) | [PDF](<https://openreview.net/pdf?id=Hk5S6s2xN9>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153915>)
-
-_Abstract unavailable from the accessible public sources._
-
-## Pruning and Distilling Mixture\-of\-Experts into Dense Language Models
-
-**Authors:** Junhyuck Kim; Jihun Yun; Haechan Kim; Gyeongman Kim; Joonghyun Bae; Jaewoong Cho
-
-**ID:** 150472 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=hmvlyb1yQu>) | [PDF](<https://openreview.net/pdf?id=hmvlyb1yQu>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150472>)
-
-_Abstract unavailable from the accessible public sources._
-
-## Planning Persuasion, Not Utterances: Profile\-Conditioned Open\-Loop Search for Dialogue Strategy
-
-**Authors:** Zhiming Lin; Kai Zhao; Yuliang Gai; Chengzhen Yu; Ruibo Duan; Yihao Zhong; Xuan Zhang
-
-**ID:** 153963 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=HCOhbXzn7c>) | [PDF](<https://openreview.net/pdf?id=HCOhbXzn7c>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153963>)
-
-_Abstract unavailable from the accessible public sources._
-
-## PAAC: Privacy\-Aware Agentic Device\-Cloud Collaboration
-
-**Authors:** Liangqi Yuan; Wenzhi Fang; Shiqiang Wang; Christopher Brinton
-
-**ID:** 149491 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=pkgQ4KB4Se>) | [PDF](<https://openreview.net/pdf?id=pkgQ4KB4Se>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149491>)
-
-_Abstract unavailable from the accessible public sources._
-
-## C3: Long\-Horizon Character Consistency via Causal\-Continuous State Dynamics and Memory Rewriting
-
-**Authors:** Minghao Chen
-
-**ID:** 151786 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=Y0keyhhQHc>) | [PDF](<https://openreview.net/pdf?id=Y0keyhhQHc>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151786>)
-
-_Abstract unavailable from the accessible public sources._
-
-## Knowing What is Missing: Efficient Conversational Memory via Explicit Evidence\-Gap Tracking
-
-**Authors:** Xingbo Du; Loka Li; Duzhen Zhang; Leonard Song; Le Song
-
-**ID:** 149691 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=o9MB6dPOa4>) | [PDF](<https://openreview.net/pdf?id=o9MB6dPOa4>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149691>)
-
-_Abstract unavailable from the accessible public sources._
-
-## MemSkill: Learning and Evolving Memory Skills for Self\-Evolving Agents
-
-**Authors:** Haozhen Zhang; Quanyu Long; Jianzhu Bao; Tao Feng; Weizhi Zhang; Haodong Yue; Wenya Wang
-
-**ID:** 155719 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=3R1dZaZmxU>) | [PDF](<https://openreview.net/pdf?id=3R1dZaZmxU>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155719>)
-
-_Abstract unavailable from the accessible public sources._
-
-## AudioCALM: Continuous Autoregressive Language Modeling for Universal Audio Generation
-
-**Authors:** Huadai Liu; Kaicheng Luo; Wen Wang; Qian Chen; Bin Ma; Xiangang Li; Wei Xue
-
-**ID:** 149240 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=rta7h4O2eL>) | [PDF](<https://openreview.net/pdf?id=rta7h4O2eL>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149240>)
-
-Unifying speech, sound, and music generation in one model is hindered by tradeoffs between fidelity, end\-to\-end training, in\-context conditioning, and variable\-length synthesis that no current paradigm fully resolves\. To address this challenge, we present \*\*AudioCALM\*\*, a universal audio generation framework that extends autoregressive \(AR\) next\-token prediction from discrete tokens to continuous audio latents: a thin flow\-matching head replaces the softmax to predict rectified\-flow velocities at each position, and a block\-causal AR\-Flow attention pattern produces arbitrary\-length output\. Joint training of multiple audio generation tasks faces an asymmetric text\-\-audio mismatch: speech transcripts align to specific time spans and demand \\textit\{tight, time\-aligned\} attention, whereas sound and music captions describe only overall semantics and rely on diffuse, holistic attention; mixing the two disproportionately degrades sound and music generation\. We address this asymmetry at two levels: a \\textbf\{data reformulation\} strategy that unifies all three tasks under a single description\-style conditioning interface, and a novel architecture Asymmetric Mixture\-of\-Modality\-Experts \(A\-MoME\), which adds a dedicated residual expert for speech while sound and music share the backbone, incurring no inference overhead on non\-speech inputs\. Experimental results demonstrate that AudioCALM matches modality\-specific state\-of\-the\-art and outperforms prior unified baselines on speech, sound, and music generation benchmarks\.
-
-## StateTree: Enhancing Long\-term Dialogue Reasoning via Reinforcement Learning
-
-**Authors:** Naen Xu; Wanqing Cui; Yibo Hu; Shixin Hong; Hengyu An; Meiguang Jin; Junfeng Ma; Tianyu Du
-
-**ID:** 151920 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=Wtmbj6bI9C>) | [PDF](<https://openreview.net/pdf?id=Wtmbj6bI9C>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151920>)
-
-Large language models deployed as personalized assistants must reason over long, evolving interaction histories\. However, in long\-term dialogue reasoning, relevant evidence is scattered across sessions, preferences may be revised over time, and standard long\-context training fails to address these challenges under data scarcity and prohibitive computational costs\. We propose StateTree, a data\-driven RL pseudo\-task that constructs a challenging auxiliary task from scarce dialogues with verifiable ground truth\. StateTree augments multi\-session dialogues with a tree\-structured path\-tracing task: key\-value records are embedded across sessions to form a binary tree\. Solving the task requires the model to traverse from root to leaf by retrieving records across sessions and comparing timestamps to resolve branches, then recover the hidden target question among distractor leaves\. We apply curriculum RL training progressively increasing tree depth and introduce a compositional variant whose edges carry step\-level reasoning fragments, training the model to compose partial cues into coherent queries\. Trained on 10K\-token contexts, StateTree generalizes to 128K tokens without full\-length RL costs and exhibits capabilities including cross\-session retrieval, temporal reasoning, knowledge update, and compositional multi\-hop reasoning\. StateTree outperforms both SFT and RL\-based baselines while preserving short\-context general reasoning\. StateTree\-7B achieves gains up to \+23\.60% on LongMemEval \(128k\), and StateTree\-14B reaches 59\.00% accuracy on LongMemEval, surpassing QwenLong\-L1\-32B \(45\.20%\)\.
-
-## Defense\-as\-Skill: Evolving Runtime Guard Skill for Skill\-Augmented Agents
-
-**Authors:** Xiaofang Yang; Ziqi Miao; Dianbo Sui; Jing Shao; Lijun Li
-
-**ID:** 152017 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=W8hQZI7IzO>) | [PDF](<https://openreview.net/pdf?id=W8hQZI7IzO>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152017>)
-
-Skill\-augmented agents load reusable skills as persistent runtime context, improving task performance but also giving malicious skills a durable channel for steering future actions\. Such skills may leak secrets, corrupt code, bypass approvals, or stage data for exfiltration only after a concrete user task and workspace state make the unsafe action appear useful\. This makes pre\-install vetting insufficient and calls for runtime, task\-conditioned protection\. We propose Defense\-as\-Skill, a defense paradigm that implements the runtime guard itself as an installable, inspectable, and editable skill\. Our guard, SkillSonar, runs alongside untrusted task skills and checks sensitive actions against the user's task boundary, routing each action to an allow, replan, or confirmation decision without modifying the underlying agent runtime\. To study this setting, we construct SCOPE\-R, a task\-conditioned dataset covering 6 risk families and 21 sub\-categories, with 206 attack\-confirmed malicious instances and 43 benign tasks\. We then improve SkillSonar on the SCOPE\-R training subset using runtime guard\-skill evolution, a Monte\-Carlo Tree Search procedure that evolves the on\-disk guard skill from feedback on the rollouts\. On held\-out SCOPE\-R test splits across Claude Code and OpenClaw backends, SkillSonar reduces attack success while preserving benign utility, maintaining modest token overhead, and transferring to OOD attack families\. These results show that runtime guards can be skill\-native, transparent, and evolvable policy artifacts for skill\-augmented agents\.
-
-## RVR: Retrieve\-Verify\-Retrieve for Comprehensive Question Answering
-
-**Authors:** Deniz Qian; Hung\-Ting Chen; Eunsol Choi
-
-**ID:** 154429 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=DfGZJUo1mT>) | [PDF](<https://openreview.net/pdf?id=DfGZJUo1mT>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154429>)
-
-Comprehensively retrieving diverse documents is crucial to address queries that admit a wide range of valid answers\. We introduce retrieve\-verify\-retrieve \(RVR\), a multi\-round retrieval framework designed to maximize answer coverage\. Initially, a retriever takes the original query and returns a candidate document set, followed by a verifier that identifies a high\-quality subset\. For subsequent rounds, the query is augmented with previously verified documents to uncover answers that are not yet covered in previous rounds\. RVR is effective even with off\-the\-shelf retrievers, and fine\-tuning retrievers for our inference procedure brings further gains\. Our method outperforms baselines, including agentic search approaches, achieving at least 10\\% relative and 3\\% absolute gain in complete recall percentage on a multi\-answer retrieval dataset \(QAMPARI\)\. We also see consistent gains on two out\-of\-domain datasets \(QUEST and WebQuestionsSP\) across different base retrievers\. Our work presents a promising iterative approach for comprehensive answer recall leveraging a verifier and adapting retrievers to a new inference scenario\.
-
-## MILES: Modular Instruction Memory with Learnable Selection for Self\-Improving LLM Reasoning
-
-**Authors:** Ruilin Tong; Dong Gong
-
-**ID:** 155027\-\-2 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 155027
-
-[Paper](<https://openreview.net/forum?id=94TqZuHU8A>) | [PDF](<https://openreview.net/pdf?id=94TqZuHU8A>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155027>)
-
-Large language models \(LLMs\) increasingly improve their reasoning at test time via additional computation, yet most procedures treat each problem in isolation\. When problems arrive sequentially, accumulating reusable experience across them can further improve performance\. Existing memory\-based methods either store whole\-solution templates that generalize poorly to novel problems or use heuristic step\-level selection that is not optimized for final\-answer correctness\. Learning selection policies requires large\-scale training data and fixed action spaces\. We propose MILES \(Modular Instruction Memory with LEarnable Selection for self\-improving LLM reasoning\), a framework that dynamically expands step\-wise memory and applies correctness\-optimized memory composition under realistic test\-time constraints\. MILES maintains modular memory units consisting of asymmetric pairs of sub\-goal embeddings and sub\-instructions, each associated with a learnable selection head\. This memory structure enables a coarse\-to\-fine retrieval mechanism: The coarse level enables memory expansion and collects supervision for training selection heads from confident samples, while the fine stage applies learned selection heads to rerank coarse\-level candidates and guide reasoning for uncertain samples\. MILES consistently matches or outperforms prior methods while achieving superior accuracy–efficiency tradeoffs\. Extensive experiments demonstrate its effectiveness, robustness, and transferability\.
-
-## Scaling Point\-in\-Time Language Models: Economic Evaluation of Embeddings
-
-**Authors:** Bryan Kelly; Semyon Malamud; Johannes Schwab; Teng A Xu
-
-**ID:** 139251\-\-2 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 139251
-
-[Paper](<https://openreview.net/forum?id=c7yKlceZYq>) | [PDF](<https://openreview.net/pdf?id=c7yKlceZYq>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139251>)
-
-Large language models trained on unrestricted internet corpora inevitably embed information from the future, introducing lookahead bias that compromises the validity of backtests and causal inference in finance and the social sciences\. Point\-in\-time language models—trained exclusively on text available up to each calendar date—eliminate this leakage by construction, but existing efforts typically produce models that lag substantially behind their unconstrained counterparts\. We show that this performance gap can be narrowed through scale\. Training decoder\-only transformers with up to 4 billion parameters on 1 trillion chronologically filtered tokens from FineWeb, we construct a sequence of yearly model checkpoints spanning 2013–2024\. Across a range of common\-sense reasoning and language understanding benchmarks, our models approach the performance of leading open\-weight models of comparable size \(such as Gemma\-3\-4B and LLaMA\-7B\) trained on temporally unrestricted data, although a performance gap remains on several tasks\. Finally, in a strict out\-of\-sample economic evaluation task, portfolios built from point\-in\-time embeddings achieve robust positive Sharpe ratios and perform close to full\-sample counterparts that violate temporal validity, indicating that chronologically consistent language models can extract economically meaningful signals without relying on look\-ahead bias\. We release the complete pipeline—including dataset construction, training infrastructure, and evaluation code—to enable reproducible point\-in\-time language modeling and to support research applications that require strict temporal validity\. Code is available publicly on GitHub \(https://github\.com/DjoFE2021/Point\-In\-Time\-LLM\) and model checkpoints as well as training datasets can be accessed on Hugging Face \(https://huggingface\.co/datasets/Diamegs\)\.
-
-## Hearing the Unspoken: Simulator\-Induced Asymmetric\-View Policy Optimization for Proactive Task\-Oriented Dialogue
-
-**Authors:** Hongbin Zhang; Ning Gao; Yuqin Dai; Ruiyuan Wu; Jinpeng Wang; Rena Gao; Bingdong Tan; Shuzheng Gao; Chaozheng Wang
-
-**ID:** 153222\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 153222
-
-[Paper](<https://openreview.net/forum?id=MsVDpPS4yS>) | [PDF](<https://openreview.net/pdf?id=MsVDpPS4yS>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153222>)
-
-Proactive task\-oriented dialogue \(TOD\), such as outbound sales, demands a persuasive agent that actively probes the user's concerns and steers the conversation toward acceptance within a bounded number of turns\. Yet post\-trained LLMs are inherently conservative, and reward\-shaping RL \(e\.g\., GRPO\) struggles since it only re\-weights what an already passive policy samples\. We show that conditioning on the user's latent concerns unlocks proactive capability that no amount of sampling can undermine, establishing these concerns as a pivotal training\-time signal\. To operationalize this finding, we build the \\textbf\{Cognitive User Simulator\}, which models each user as a stratified persona comprising observable external traits and hidden internal concerns\. The simulator produces faithful and diverse interactions, while emitting per\-turn state dynamics that track persuasion progress\. We then introduce \\textbf\{Simulator\-Induced Asymmetric\-View Policy Optimization\}, which converts the modeled concerns and the simulation state transition into complementary training objectives: \(1\) \\emph\{Asymmetric On\-Policy Self\-Distillation\} that transfers concern\-aware behavior from a privileged view of the same policy into its deployable, conversation\-only view; and \(2\) \\emph\{State\-Transition Policy Refinement\} where the final decision provides trajectory\-level advantage while synchronous state transitions refine turn\-level credit direction\. Across two real\-world food\-delivery benchmarks \(\\emph\{merchant\} and \\emph\{courier\} outbound recruitment\), our method matches or surpasses leading proprietary LLMs, outperforms strong RL baselines, and generalizes across various LLM\-based user simulators\.
-
-## Rethinking How to Remember: Beyond Atomic Facts in Lifelong LLM Agent Memory
-
-**Authors:** Jingwei Sun; Jianing Zhu; Jiangchao Yao; Tongliang Liu; Bo Han
-
-**ID:** 150576\-\-2 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 150576
-
-[Paper](<https://openreview.net/forum?id=h9Je8c91Qi>) | [PDF](<https://openreview.net/pdf?id=h9Je8c91Qi>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150576>)
-
-To enable reliable long\-term interaction, LLM agents require a memory system that can faithfully store, efficiently retrieve, and deeply reason over accumulated dialogue history\. Most existing methods adopt an extracted fact based paradigm: handcrafted static prompts compress raw dialogues into atomic facts, which are then stored, matched, and injected into downstream reasoning\. Nevertheless, such fact\-centric designs inevitably discard fine\-grained details in original dialogues and fail to support deep reasoning over scattered isolated facts\. Moreover, static prompts cannot maintain consistent extraction granularity across diverse dialogue styles\. To address these limitations, we propose TriMem, which maintains three coexisting representation granularities, including raw dialogue segments anchored by source identifiers for storage fidelity, extracted atomic facts for efficient memory retrieval, synthesized profiles that aggregate dispersed facts into holistic semantic understanding for deep reasoning\. We further adopt TextGrad\-based prompt optimization, which iteratively refines extraction and profiling prompts via response quality feedback, achieving lifelong evolution without any parameter updating\. Extensive experiments on LoCoMo and PerLTQA across multiple LLM backbones demonstrate that TriMem consistently outperforms strong memory baselines\.
-
-## MemArena: An Ego\-Centric Benchmark for On\-Device Agentic Personal Memory Assistants at Scale
-
-**Authors:** Jiadong Zhang; Xiaosong Ma
-
-**ID:** 139685\-\-2 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 139685
-
-[Paper](<https://openreview.net/forum?id=Ae9Cmj7ofy>) | [PDF](<https://openreview.net/pdf?id=Ae9Cmj7ofy>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139685>)
-
-Edge\-deployed personal memory assistants must handle private interpersonal conversations on\-device with open\-weight models\. Yet, existing memory benchmarks often under\-test the combination of activity\-dense interaction, ego\-centric perspective, and coherent multi\-session worlds\. MemArena fills these gaps with a single\-world conversational benchmark built with its MASim agent simulator, for $50$ agents over $15$ days \($10\.3$M dialog\-text tokens, $24\.1$K text\-only ego\-observed tokens/agent/day\)\. With the interaction history, it co\-generates ground truth over six recall, reasoning, and trustworthiness evaluation dimensions\. We evaluate five open\-weight readers with Vanilla context, BM25\-RAG, Oracle retrieval, Memobase, and MemSearch as memory backends\. Three results stand out: \(1\) Memory\-backend choice matters more for content accuracy: At Qwen3\-0\.6B, Memobase $\\to$ MemSearch gains $\+32\.5/\+19\.2$ pp, exceeding MemSearch reader scaling \($\+10\.6/\+6\.8$ pp\)\. \(2\) Permission\-aware access fails universally: with Oracle leaking heavily and other backends too timid to disclose\. \(3\) Search latency bites only at very small reader: on a Spark GB10 edge node, memory\-search adds a moderate and fixed $87$/$7$/$48$ ms \(BM25\-RAG/Memobase/MemSearch\) that composes a small part of TTFT for most reader\-backend combinations\. We release code, the MASim simulator, and the MemArena\-L benchmark at https://anonymous\.4open\.science/r/MemArena\-NeurIPS2026\-anon\-3E9D
-
-## Sandboxed Coding Agents are Competitive Omni\-modal Task Solvers
-
-**Authors:** Dongping Chen; Xuanao Huang; Zhihan Hu; Qingyuan Shi; Dianqi Li; Tianyi Zhou
-
-**ID:** 148209\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 148209
-
-[Paper](<https://openreview.net/forum?id=zYMvOwt5bN>) | [PDF](<https://openreview.net/pdf?id=zYMvOwt5bN>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148209>)
-
-As multimodal LLMs increasingly emphasize video and audio, a common assumption is that solving such tasks calls for native omnimodal models\. We show that this is not always necessary: coding agents equipped with only text\+vision and a sandboxed tool\-using interface can perform competitively with, and in several settings outperform, SOTA native omnimodal models and predefined multimodal agent scaffolds across multiple audio\-video benchmarks\. Our trajectory analysis suggests that their advantage comes from coding agents writing code and orchestrating tools to retrieve relevant content from transcripts, frames, and other non\-textual modality signals from raw inputs\. This effectively converts omnimodal tasks into evidence retrieval and information processing problems, avoiding the inefficiency of ingesting entire videos or audio streams into context\. To characterize remaining limitations, we propose a failure taxonomy and a process\-level analysis of tool\-use traces, and find that simple skill injection, including human\-written skills and self\-distilled skills from execution logs, can substantially improve performance over the no\-skill baseline\. To examine whether such capability can be elicited in open\-source models, we further introduce Code\-X, a complete training recipe with the OmniCoding trajectory dataset and verifiable reward, providing an exploratory baseline on Qwen\-3\.5\-9B and Qwen\-3\.6\-27B\. Finally, given the maturity of many\-modality understanding, we argue that the more meaningful frontier lies in many\-modality processing, and introduce TerminalBench\-O, the first process\-level benchmark designed for coding agents on real\-world omnimodal processing tasks\. Together, our findings open new directions for omnimodal content processing and evaluation\.
-
 ## DUET: Unified Dual\-Space Emotion Control for Diffusion and Flow\-Matching Driven Text\-to\-Speech
 
 **Authors:** Xu Zhang; Longbing Cao; zhangkai wu
@@ -1241,180 +835,6 @@ As multimodal LLMs increasingly emphasize video and audio, a common assumption i
 [Paper](<https://openreview.net/forum?id=H6xBJ7xXPy>) | [PDF](<https://openreview.net/pdf?id=H6xBJ7xXPy>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153975>)
 
 Diffusion and flow\-matching based text\-to\-speech \(TTS\) models excel in naturalness but often lack explicit emotion control, as emotional signals remain entangled with speaker identity\. We discover that emotion embedding emerges as a linearly decodable direction of frozen hidden states, nearly orthogonal to the direction embedding speaker identity\. This inspires a plug\-and\-play framework DUET for emotion control over pretrained diffusion and flow\-matching based TTS models\. During generation, DUET unifies dual\-space control to achieve fine\-grained emotion intervention in a single per\-step update: hidden space steering shifts generation along the target emotion direction, while mel\-space guidance refines spectral details through gradients backpropagated from a differentiable vocoder\. We validate DUET on five architecturally diverse pretrained TTS backbones across three datasets, where it outperforms 10 supervised state\-of\-the\-art emotional TTS baselines across paradigms and achieves the highest human\-rated emotion appropriateness\. To further showcase its qualitative behavior, we deploy DUET on an Ameca humanoid robot, where it produces richly expressive emotional speech on the humanoid, demonstrating the strong potential for plug\-and\-play affective interaction for embodied agents\. The demonstration is available at: https://anonymous\.4open\.science/w/duet\-demo\-fresh\-D8E0
-
-## Constraint Retrieval Is Not Constraint Enforcement in Large Language Models
-
-**Authors:** Yongkang Yang; Xiankun Lin; Lixin Liu; Ziyan Liu; Xilin Xia; Zhiwei Zhuang; Zhezheng Hao; Wence Ji
-
-**ID:** 155108 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=8LYdKabYW6>) | [PDF](<https://openreview.net/pdf?id=8LYdKabYW6>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155108>)
-
-Prompt\-level instructions are the main way users give language models preferences, safety boundaries, and content rules\. But a model can remember a constraint and still violate it when generating text\. This points to a gap between two abilities that are often treated as one: retrieving a constraint from context, and enforcing it during token selection\. Across five model families \(0\.5B\-\-32B parameters\), we find a clear behavioral split: constraints that admit an alternative generation plan are largely followed, while token\-level prohibitions fail whenever the prohibited continuation is locally dominant\. Mechanistic analyses show that retrieval heads still attend to the constraint at the violation step, but the resulting signal either paradoxically enhances the prohibited token's logit or suppresses it too weakly to change the argmax\. Decoding\-time interventions can eliminate surface\-form violations, but semantic compliance still requires higher\-level verification\. These results establish that constraint retrieval and constraint enforcement are separable capabilities, and that reliable token\-level compliance requires explicit veto mechanisms beyond prompting\.
-
-## Long\-Horizon Agency Belongs in the Harness, Not the Context Window Only
-
-**Authors:** Yi Han; YUANYUAN XU; jusheng zhang; Wenhao Wang
-
-**ID:** 139997\-\-2 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 139997
-
-[Paper](<https://openreview.net/forum?id=xSWlOTsbou>) | [PDF](<https://openreview.net/pdf?id=xSWlOTsbou>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139997>)
-
-Long\-horizon agency requires an AI system to preserve task state across hours or days of work, many tool calls, and repeated context resets\. A common response is to scale a single resource: the model’s context window, together with inference\-time reasoning\. We argue that this response conflates long horizon with long context\. Durable long\-horizon state should not live only in the prompt; it should be externalized into the harness, the non\-model infrastructure that manages tools, files, plans, checkpoints, sub\-agents, permissions, and recovery\. Publicly documented long\-running agent systems already rely on such structures, including progress files, plan files, git history, rollback checkpoints, scratchpads, sub\-agent decomposition, and browser\-state checkpoints\. We support this position with three lines of argument\. First, memory\-hierarchy history shows that pressure to scale one working resource repeatedly gave way to externally managed hierarchical state\. Second, we identify five structural mismatches between long\-context scaling and long\-horizon agency: degraded effective context, lossy compaction, a single trust region, no transactional semantics, and no working\-set decomposition\. Third, we map long\-horizon requirements to what context scaling provides and what harness\-managed state must supply\. We conclude by proposing eight harness state\-management patterns and arguing that harness state should become a first\-class research object for long\-horizon agency\.
-
-## How Fine\-Tuning Objectives Shape Layer\-Wise Information in LLM Hallucination Detection
-
-**Authors:** Kaiyang Wan; Forrest Bao; Amin Ahmad; Yuxia Wang
-
-**ID:** 152063\-\-2 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 152063
-
-[Paper](<https://openreview.net/forum?id=Vlr7fHQiNH>) | [PDF](<https://openreview.net/pdf?id=Vlr7fHQiNH>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152063>)
-
-Under matched conditions, classifier\-head fine\-tuning \(\\textsc\{cls\}\) paradigm consistently outperforms the LLM\-as\-Judge sequence\-to\-sequence \(\\textsc\{s2s\}\) on binary hallucination detection\. We trace this gap to the representations induced by the two objectives\. Static analysis shows that \\textsc\{cls\} learns a task\-specific discriminative direction, pushing hidden states into a clear two\-cluster geometry with stronger class separation and linearly decodable label information\. By contrast, \\textsc\{s2s\} relies on the pretrained language\-modeling head to make decisions\. This minimizes the pressure to reorganize representations, leaving the hidden states much closer to the pretrained backbone\. Our analysis also reveals that the \\textsc\{cls\} signal saturates before the final layer, after which upper layers form a plateau of statistically interchangeable and largely redundant representations\. However, endpoint redundancy alone does not show whether these layers are dispensable during training\. Further training\-dynamics analysis reveals 1\) a lower pretrained substrate, 2\) a narrow upper\-middle \\textbf\{InfoWindow\} where task information emerges, and 3\) a later\-synchronizing upper plateau that mirrors this signal\. This mechanism motivates us to remove layers above the InfoWindow\. By truncating roughly 31\\% of the network, we obtain early\-exit models that match or exceed full\-model performance on Qwen3\-4B and 8B\. The same depth\-fractional prescription transfers to Llama\-3\.2\-3B and Mistral\-7B\-v0\.3\. We hope this helps guide efficient task\-specific LLM design\.
-
-## Dialect ASR based on Multi\-View Pseudo\-Parallel Augmentation and Noise\-Robust Contrastive Learning
-
-**Authors:** Jianing Zhou; Ziheng Zeng; Hongyu Gong; Suma Bhat
-
-**ID:** 155164\-\-2 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 155164
-
-[Paper](<https://openreview.net/forum?id=7oIszAz46V>) | [PDF](<https://openreview.net/pdf?id=7oIszAz46V>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155164>)
-
-Recent advancements in Automatic Speech Recognition \(ASR\) have significantly improved performance for high\-resource languages, yet ASR systems still struggle with low\-resource languages and dialects due to the scarcity of annotated training data\. To address this challenge, we propose a novel framework that enhances the utilization of limited data through a two\-pronged approach: \(1\) a novel data augmentation technique based on a multi\-view pseudo\-parallel strategy, and \(2\) a robust multi\-level contrastive learning framework capable of jointly leveraging semantic and dialect\-specific attributes to improve model effectiveness under noisy conditions\. Our approach effectively generalizes across dialectal variations when dialect data are non\-parallel, allowing acquisition of shared linguistic structures and dialectal distinctions\. Furthermore, our method could be simply transferred to scenarios where dialect data are parallel\. We validate our method by adapting the Whisper\-large model for Swiss German, Chinese and Arabic dialect ASR tasks, demonstrating substantial performance gains\. Specifically, our framework achieves up to a 48\.59% reduction in WER and 23\.16% reduction in CER under non\-parallel conditions, outperforming state\-of\-the\-art baselines\. These results highlight the robustness and adaptability of our approach for low\-resource dialectal ASR\. The data and codes will be public available upon acceptance\.
-
-## Semantic Motion Anchors: Bridging Motion and Meaning in Co\-Speech Gestures
-
-**Authors:** Varsha Suresh; Mohammad Mahdi Abootorabi; Mohamed Salman; M\. Hamza Mughal; Christian Theobalt; Ashwin Ram; Jürgen Steimle; Vera Demberg
-
-**ID:** 154665\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 154665
-
-[Paper](<https://openreview.net/forum?id=BwJGCsV7Vl>) | [PDF](<https://openreview.net/pdf?id=BwJGCsV7Vl>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154665>)
-
-Learning a shared representation between spoken text and gesture is central to co\-speech gesture retrieval, synthesis, and understanding, but remains challenging for semantically meaningful gestures whose communicative intent is not captured by motion alone\. Direct contrastive alignment between transcripts and continuous motion embeddings often overemphasizes low\-level kinematics and misses the symbolic content of semantic gestures\. We propose \\emph\{semantic motion anchors\}, natural\-language abstractions of gesture motion capturing physical form and communicative intent\. Our method discretizes 3D gestures into body\-hand motion primitives, verbalizes them into structured descriptions, and grounds them in the transcript to provide auxiliary contrastive supervision\. On BEAT2, our method improves text\-to\-gesture R@1 by 8\.2\\% over a direct text\-motion baseline and outperforms prior retrieval approaches on text to gesture and gesture to text retrieval directions\. Beyond aggregate retrieval metrics, semantic motion anchor supervision helps retrieve gestures that are semantically meaningful for the spoken query, rather than defaulting to generic motion patterns\. A downstream retrieval\-augmented gesture generation study showed that users significantly preferred gestures retrieved by our approach over a retrieval\-augmented generation baseline, demonstrating that semantically grounded retrieval translates to gestures that better convey communicative intent in downstream generation\.
-
-## Controllable User Simulation
-
-**Authors:** Guy Tennenholtz; Ofer Meshi; Amir Globerson; Uri Shalit; Jihwan Jeong; Craig Boutilier
-
-**ID:** 148816\-\-2 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 148816
-
-[Paper](<https://openreview.net/forum?id=uus8MMsekx>) | [PDF](<https://openreview.net/pdf?id=uus8MMsekx>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148816>)
-
-Using offline datasets to evaluate conversational agents often fails to cover rare scenarios or to support testing new policies\. This has motivated the use of \\emph\{controllable user simulators\} for targeted, counterfactual evaluation, typically implemented by prompting or fine\-tuning large language models\. In this work, we formalize controllable simulation as a causal inference problem\. By bridging natural language evaluation with off\-policy evaluation methodology, we show that the standard practice of training simulators via supervised fine\-tuning on post\-hoc trajectory labels yields a structurally biased model\. Specifically, these labels are inextricably coupled to the data\-generating behavior policy, injecting a \\emph\{look\-ahead bias\} that breaks causal consistency\. Furthermore, we prove that under policy shift this failure causes the variance of evaluation metrics to explode geometrically, a phenomenon we term \\emph\{controllability collapse\}\. To restore causal consistency, we establish theoretical conditions for accurate simulation and propose practical training mitigations: \\textit\{a priori\} controls, step\-wise dynamic controls, and direct policy\-conditioned learning\. Empirical evaluation confirms that while standard global controls distort conversational distributions and collapse behavioral diversity, our causally grounded simulators eliminate look\-ahead bias, preserve natural variance, and exhibit robust zero\-shot generalization to unseen agent behaviors\.
-
-## Asymmetric Phase Coding Audio Watermarking
-
-**Authors:** Guang Yang; Fengchen Liu; Amir Ghasemian; Zhong Wang; Ninareh Mehrabi; Homa Hosseinmardi
-
-**ID:** 149813\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 149813
-
-[Paper](<https://openreview.net/forum?id=nAf6IJ9PSz>) | [PDF](<https://openreview.net/pdf?id=nAf6IJ9PSz>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149813>)
-
-The proliferation of deepfake audio challenges voice\-based authentication systems; passive forensic detectors are sensitive to evolving generative models and to real\-world channel distortions\. We propose Asymmetric Phase Coding \(APC\), a training\-free cryptographic signing layer for audio, designed as a compact and auditable provenance primitive that can stand alone or be stacked with learned watermarks\. APC combines Ed25519 digital signatures \(EdDSA, FIPS 186\-5; 64\-byte signatures\) with Reed–Solomon error correction, pseudo\-random STFT phase\-bin selection, and a redundant quantization\-index\-modulation \(QIM\) code on log\-magnitude differences of adjacent bin pairs, yielding a compact, non\-repudiable, blind\-extractable watermark\. We evaluate APC on 1,000 LibriSpeech test\-clean clips \(10 s each, 44\.1 kHz\) under eight attack configurations – identity, 10% end\-cropping, 20% end\-cropping, 8 kHz low\-pass, 16 kHz round\-trip resampling, FLAC re\-encoding, MP3 at 128 kbps, and OGG\-Vorbis at 128 kbps – and achieve cryptographic verification rates between 97\.5% and 98\.3% on every condition at mean PESQ=3\.02 and tens\-of\-milliseconds CPU latency\. We explicitly compare APC against recent neural baselines \(AudioSeal, WavMark, SilentCipher\), detail the threat model \(forgery resistance vs\. erasure\), characterize the dataset, define all metrics, quantify an adaptive white\-box erasure attack, and release code, keys, and metadata for reproducibility\.
-
-## Reconstructing the Vocal Tract with Differentiable Acoustic Simulation
-
-**Authors:** Eric Chen; Jin Woo Lee; Vincent Sitzmann
-
-**ID:** 151084\-\-2 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 151084
-
-[Paper](<https://openreview.net/forum?id=d61YXzFcB9>) | [PDF](<https://openreview.net/pdf?id=d61YXzFcB9>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151084>)
-
-The human vocal tract, the cavity consisting of one's throat, mouth, lips opening, etc\., filters one's voice to create the sounds we know as speech\. In this paper, we present a differentiable and GPU parallelizable acoustic simulator that synthesizes speech by propagating sound along an acoustic tube representation of the vocal tract, and via its gradients, solves the inverse problem: reconstructing the geometry of their vocal tract solely from the sound it produces\. Although learning the inverse mapping between geometry and sound is notoriously non\-convex, we discover that gradient descent succeeds with three technical contributions: \(1\) we design a frequency domain formulation of the vocal tract's fluid dynamics that is 70x more GPU parallelizable than finite differences in time, \(2\) we integrate a differentiable model for turbulence to synthesize consonants, and \(3\) similar to prior work in implicit neural representations \(INRs\) and neural radiance fields \(NeRFs\), we find that parameterizing the geometry with a neural network accelerates convergence and escapes local minima that trap discrete representations\.   Because the simulator is differentiable, it is readily integrated with other deep learning pipelines to enable novel speech and medical imaging applications\. Our model can be used for instance, in singing instruction or language learning, where a visualization of one's vocal tract can help people understand how their vocal tract maps to different speech sounds\. To enable these tasks, \(1\) we demonstrate self\-supervised autoencoding of vocal tract shapes across 11 languages, and \(2\) we couple our simulator with a generative model of MRI images to reconstruct one's moving vocal tract from only their speech, no paired data required\.
-
-## Reconsidering Positional Supervision in Masked Diffusion Language Model Training
-
-**Authors:** Mengyu Ye; Keito Kudo; Ryosuke Takahashi; Jun Suzuki
-
-**ID:** 152472\-\-2 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 152472
-
-[Paper](<https://openreview.net/forum?id=SoXwBAJ8w9>) | [PDF](<https://openreview.net/pdf?id=SoXwBAJ8w9>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152472>)
-
-Masked diffusion language models \(MDLMs\) generate text by unmasking tokens in parallel and have recently emerged as alternatives to autoregressive language models\.  They can be viewed as parallel decoders trained with a position\-wise cross\-entropy \(CE\) loss, the same setup as non\-autoregressive translation \(NAT\)\.  In NAT, CE\-trained parallel decoders have been argued to be sensitive to small positional shifts, since CE penalizes them harshly\. We ask whether CE\-trained MDLMs are similarly sensitive to such shifts under iterative decoding\. To probe this, we apply a controlled intervention that introduces them during decoding\. On LLaDA\-8B\-Instruct with Arena\-Hard, displacing as little as 1\\% of generated tokens by one position substantially reduces win rates against the unintervened model, showing that MDLMs are sensitive to such small shifts under iterative parallel decoding\.  Motivated by this, we adapt connectionist temporal classification \(CTC\), an alignment\-flexible objective known to mitigate it there, to MDLM supervised fine\-tuning\.  By relaxing the strict position\-wise match that CE imposes, CTC gives the loss room to absorb small positional shifts; concretely, we modified CTC objective to use a special \\ token that absorbs positional uncertainty between target tokens and output positions, and a updated collapse map that preserves target surface forms\. Across four open\-ended generation benchmarks, the resulting model consistently improves over both the original model and a matched cross\-entropy\-trained baseline, with statistically significant gains on all four\. These results identify training\-side alignment flexibility as a useful design dimension for MDLM SFT, complementary to the inference\-time approaches explored in prior work\.
-
-## Efficient Brain\-to\-Speech Decoding with Fixed\-Delay Spiking Neural Networks
-
-**Authors:** Aleksandra Wisniewska; Seo\-Hyun Lee; Seong\-Whan Lee
-
-**ID:** 151470 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=aMneDSPCzZ>) | [PDF](<https://openreview.net/pdf?id=aMneDSPCzZ>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151470>)
-
-_Abstract unavailable from the accessible public sources._
-
-## Continuous Audio Thinking for Large Audio Language Models
-
-**Authors:** Gyojin Han; DongJae Lee; Changho Choi; Jongsuk Kim; Junmo Kim
-
-**ID:** 148651\-\-2 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 148651
-
-[Paper](<https://openreview.net/forum?id=wA25uq7UK6>) | [PDF](<https://openreview.net/pdf?id=wA25uq7UK6>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148651>)
-
-_Abstract unavailable from the accessible public sources._
-
-## SitCom: Scaling Egocentric Multi\-Party Spoken Dialogue for Situated Communication Assistance
-
-**Authors:** Heeseung Yun; Sehun Lee; Sang Hoon Woo; Yoonji Nam; Sung\-Feng Huang; Chao\-Han H Yang; Gunhee Kim
-
-**ID:** 155992\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 155992
-
-[Paper](<https://openreview.net/forum?id=1KuO44r5uN>) | [PDF](<https://openreview.net/pdf?id=1KuO44r5uN>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155992>)
-
-Multi\-party spoken communication pervades daily life, yet even attentive participants routinely lose track of who said what, miss a turn, or struggle to recall something said minutes earlier\. As always\-on wearables become commonplace, an assistant that listens alongside the user could ease this everyday friction\. We introduce \\textit\{Situated Communication Assistance\}: on\-demand support for users immersed in ongoing multi\-party conversations, grounded in the same egocentric acoustic scenes they perceive\. We argue this capability rests on three abilities: producing a Rich Situated Transcription \(RST\) of \\textit\{who\} said \\textit\{what\}, \\textit\{when\}, and \\textit\{where\}; comprehending the conversation holistically; and answering user queries while the conversation is unfolding\. To address the persistent data deficit in this regime, we build \\textbf\{SitCom\}, a multi\-party spoken dialogue corpus more than an order of magnitude larger than the largest prior multi\-party corpus, pairing 15\.8k hours of synthesized data with 144 hours of real recordings standardized under a unified RST schema\. The synthesis pipeline generates group\-structured scripts with persona\-grounded speech and behaviors, and renders them in 3D scenes through a directional simulator with head\-and\-torso radiation\. Using this corpus, we curate \\textbf\{SitCom\-Bench\}, a fully human\-validated question answering benchmark of 4\.3k items spanning seven comprehension and four in\-the\-moment query subtypes\. Experiments show that combining synthetic and real data is necessary to close the sim\-to\-real gap, and that in\-the\-moment querying remains hard even for frontier models, pointing to it as an open challenge distinct from post\-hoc comprehension\.
-
-## Distilling Sequential Computation in Transformer Language Models
-
-**Authors:** Zixuan Lan; Jessica Yang; Yanhong Li; Karen Livescu; Jiawei Zhou
-
-**ID:** 150342\-\-2 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 150342
-
-[Paper](<https://openreview.net/forum?id=iqGrRkvjJU>) | [PDF](<https://openreview.net/pdf?id=iqGrRkvjJU>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150342>)
-
-Transformer language models process sequences token by token in an autoregressive manner, making growing contexts increasingly expensive\. Yet many adjacent token spans are highly predictable or frequently occur as stable units, suggesting that their representations may be compressible\. We introduce a method for distilling sequential computation by replacing spans of input tokens with collapsed representations, computed on the fly by a lightweight merge module\. This module generates a single surrogate embedding from a sequence of static token embeddings that captures the functional role of the multiple tokens, allowing pretrained models to operate on compressed inputs without architectural changes or re\-training\. We apply this approach during inference to compress both prompts and intermediate decoding steps, using a rollback mechanism to substitute stored multi\-token KV cache entries with their single\-step surrogates\. Experiments across diverse models show that the merge module can be used to reduce effective sequence length by up to 40\\% with minimal accuracy degradation across language\-modeling evaluations and downstream tasks, including question answering, summarization, commonsense reasoning, and long\-form mathematical reasoning\. Additional lightweight adaptation of the merge module further improves the accuracy\-compression trade\-off in selected settings\. These results demonstrate that sequential token computation in Transformers can be effectively approximated through condensed surrogate representations that preserve the original behavior without model updating\.
-
-## UniClawBench: A Universal Benchmark for Proactive Agents on Real\-World Tasks
-
-**Authors:** Zhekai Chen; CHENGQI DUAN; Kaiyue Sun; Bohao Li; Yuqing Wang; Manyuan Zhang; Xihui Liu
-
-**ID:** 139060 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=nVoCk7Bf1E>) | [PDF](<https://openreview.net/pdf?id=nVoCk7Bf1E>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139060>)
-
-_Abstract unavailable from the accessible public sources._
-
-## Constraint Retrieval Is Not Constraint Enforcement in Large Language Models
-
-**Authors:** Yongkang Yang; Xiankun Lin; Lixin Liu; Ziyan Liu; Xilin Xia; Zhiwei Zhuang; Zhezheng Hao; Wence Ji
-
-**ID:** 155108\-\-2 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 155108
-
-[Paper](<https://openreview.net/forum?id=8LYdKabYW6>) | [PDF](<https://openreview.net/pdf?id=8LYdKabYW6>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155108>)
-
-Prompt\-level instructions are the main way users give language models preferences, safety boundaries, and content rules\. But a model can remember a constraint and still violate it when generating text\. This points to a gap between two abilities that are often treated as one: retrieving a constraint from context, and enforcing it during token selection\. Across five model families \(0\.5B\-\-32B parameters\), we find a clear behavioral split: constraints that admit an alternative generation plan are largely followed, while token\-level prohibitions fail whenever the prohibited continuation is locally dominant\. Mechanistic analyses show that retrieval heads still attend to the constraint at the violation step, but the resulting signal either paradoxically enhances the prohibited token's logit or suppresses it too weakly to change the argmax\. Decoding\-time interventions can eliminate surface\-form violations, but semantic compliance still requires higher\-level verification\. These results establish that constraint retrieval and constraint enforcement are separable capabilities, and that reliable token\-level compliance requires explicit veto mechanisms beyond prompting\.
 
 ## Hi\-Q: Hierarchical Evidence\-guided Query Refinement for Multi\-Hop Question Answering
 
@@ -1426,419 +846,205 @@ Prompt\-level instructions are the main way users give language models preferenc
 
 A central bottleneck in multi\-hop Question Answering \(QA\) is that the granularity at which a question is expressed often differs from the granularity at which corpus evidence is retrievable\. Existing methods address this mismatch either by imposing fixed graph structures over the corpus or by iteratively reformulating the query, but these strategies do not explicitly decide when a query unit is already supported by evidence and when it should be refined\. We formulate this bottleneck as retrievable granularity discovery and introduce Hi\-Q, an evidence\-conditioned framework for hierarchical query refinement\. At each query node, a resolution operator tests whether retrieved evidence supports the current query unit; resolved nodes terminate, while unresolved nodes are expanded by a dependency\-preserving binary operator and checked by a semantic coverage verifier\. Hi\-Q therefore grows a query tree whose topology is determined by corpus support signals rather than by a fixed decomposition template or a pre\-built graph\. Across three multi\-hop QA benchmarks, Hi\-Q achieves 57\.9 EM and 69\.3 F1 on average, outperforming PropRAG, a graph\-based RAG baseline, by 5\.6 EM / 3\.9 F1 and IRCoT, an iterative retrieval baseline, by 13\.7 EM / 15\.8 F1\. Under full\-corpus retrieval, Hi\-Q maintains its gains with 53\.4 EM and 65\.2 F1 on average, improving over IRCoT by 16\.3 EM / 19\.4 F1 without corpus\-wide graph construction\.
 
-## Global PIQA: Evaluating Commonsense Reasoning Across 100\+ Languages and Cultures
+## Prospective Coding Improves Learning in Deep Continuous\-Time Recurrent Networks
 
-**Authors:** Tyler Chang; Catherine Arnett; Abdelrahman Sadallah; Abdelrahman Eldesokey; Abeer Kashar; Daud Abolade; Abosede G Olanihun; Adam Labaran M; Adhikarimayum Meerajita Sharma; Aditi Gupta; Adril P Merin; Adwoa A Bremang; Afitab Iyigun; Afonso Simplício; Ahmed Essouaied; Aicha Chorana; Akhil Eppa; Akintunde Oladipo; Akriti Kuri; Akshay Ramesh; Aleksei Dorkin; Alfred M Kondoro; Alham Aji; Ali E Çetintaş; Allan Hanbury; Alp Niksarli; Alvaro Arroyo; Amin Bajand; Amol Khanna; Ana Chkhaidze; Ana C Condez; Anamaria Roberta Hartl; Andiswa Mkhonto; Andrew Hoblitzell; Angelos Poulis; Anirban Majumder; Anjali Chaudhary; Anna Vacalopoulou; Annika Simonsen; Anton Kovalev; Anupam Nayak; Ashvanth\.S; Ayodeji Lana; Ayu Purwarianti; Bashar Alhafni; C\. Benedict C\. Busole; Bernard Ghanem; Bharti Nathani; Biljana Stojanovska Đurić; Ogundipe B Funmilola; Bolaotan Agbonile; Bruce Torres Fischer; Burak Tutar; Burcu Çınar; Cade Kane; Can Udomcharoenchaikit; Chadi Helwe; Cecilia Liu; Chiamaka G Nwokolo; Christopher Homan; Clément Sampebgo; Cristina España\-Bonet; Cynthia Amol; Daeyeop Lee; Dan Saattrup Smart; Dana Arad; Daniil Dzenhaliou; Dasol Choi; David Liu; David Semedo; David Anugraha; OLAOYE D Oluwaseun; Deborah Popoola; Deividas Mataciunas; Dennis Asamoah Owusu; Dhyuthy Krishna Kumar; Diogo Tavares; Diogo Glória\-Silva; Divyanshu Goyal; DongGeon Lee; Estefany Kelly Buchanan; Ebele N Anajemba; Ngozi G Egonu; Elias Herranen; Eman Nisar; Emile Anand; Emuobonuvie M Ajiboye; Eryawan P Yulianrifat; Esther Adenuga; Ewa Rudnicka; Faith O Itiola; Fareeha Fayyaz Sheikh; Fathima Thekkekara; Fatima Haouari; Faustin NSENGIYUMVA; Fenal A Ilasariya; Filbert A Tjiaranata; Firas Laakom; Francesca Grasso; Francesco Periti; Francesco Orabona; Gbenga K Solomon; Genta Winata; Nghia G Ngo; Gloria Udhedhe\-oze; Gonçalo Vinagre; Gopi N Challagolla; Gorka Urbizu\-Garmendia; Gouthami Vadithya; Guijin Son; Gyan S Mohapatra; Hafeez Ullah; Hafsteinn Einarsson; Hai Hu; Hamidreza Saffari; Hamza Zaidi; Haopeng Zhang; Harethah Abu Shairah; Hele\-Andra Kuulmets; Hitesh Patel; Houda Bouamor; Hwanjo Yu; Iben N Debess; İbrahim Ethem Deveci; Ikhlasul A Hanif; Ikhyun Cho; Inês Vieira; Inês Calvo; Ismail O Daud; Yusuf I Abayomi; Itay Itzhak; Ivan Zhelyazkov; Ivan Belashkin; Ivan Spada; Jacob Brinton; Jafar Isbarov; Jaka Čibej; Jan Kocon; Jan Cuhel; Jauza A Krito; Jebish Purbey; Jennifer Za; Jennifer Mickel; Jenny Kunz; Jessica Ratovondranto; Jeyarajalingam Varsha; Jihae Jeong; Jimena T Dávalos; Jinu Lee; Joao Magalhaes; John S Yi; Jongin Kim; Joseph Chataignon; Joseph Marvin Imperial; Jubeerathan Thevakumar; Judith Land; Iuliia Alekseenko; Jiang Junchen; Jungwhan Kim; Kairit Sirts; Kamesh R; Kanda Patrick Tshinu; Kätriin Kukk; Kaustubh Ponkshe; Kavsar Huseynova; Ke He; Kenneth Enevoldsen; Kent J Alvarez; Kerem Zaman; Khalil Mrini; Kian Kyars; Komal Gour; Krishnakumar Lainitha; Krister Kruusmaa; Kunal Mukherjee; Kusum Chouhan; Laura Castro; Laura M Porrino\-Moscoso; Lenny S Nzambi; Leshem Choshen; Lilja Øvrelid; Lisa Alazraki; Lovina Ehimen\-Ugbede; Luheerathan Thevakumar; Luxshan Thavarasa; Mamadou K KEITA; Mansi Jangid; Marco De Santis; Marcos Garcia; Marek Suppa; Mariam D&amp;amp;\#x27;Ciofalo; Marii Ojastu; Marium Atta; Maryam Sikander; Maximos Skandalis; Mehak Soomro; Mehmet İlteriş Bozkurt; Melaku Bayu; Menan Velayuthan; Michael Leventhal; Michał Marcińczuk; Mina Almasi; Mirna Potočnjak; Mithil Bangera; Mohammadamin Shafiei; MOHIBA ANSARI; Mridul Sharma; Mrityunjaya Indoria; Mughees U Rehman; Muhammad Ravi Shulthan Habibi; Murat B Kınay; Nada Galant; Naina S Rathore; Narada Maugin; Nathalie H Norman; Nicholas Kluge Corrêa; Nikola Ljubešić; Nirmal Thomas; Nisansa de Silva; Nisheeth Joshi; Nitish Ponkshe; Nizar Habash; Nneoma C Udeze; Noel Thomas; Noémi Ligeti\-Nagy; Odunayo Ogundepo; Odunayo K Buliaminu; God&amp;amp;\#x27;spraise Okechukwu; Olanrewaju Samuel; Olga Snissarenko; Onyinye A Chiemezie; Orkun Kınay; osman tursun; Pablo Rodríguez; Pablo Gamallo; Pedro Valente; Peter Rupnik; Philip O\. EKIUGBO; Prakhar Agarwal; Prokopis Prokopidis; Quadri Yahya; Rachele Mignone; Raghav Singhal; Rahul Raja; Ram Mohan Rao Kadiyala; Raphaël Merx; Rasmus Larsen; Ratnavel Rajalakshmi; Rishav Ghosh; Romina Oji; Rui P Guerra; Rushikesh Zawar; Sa&amp;amp;\#x27;ad N Bashir; Saeed Alzaabi; Sahil Sandeep; Sai Sandeep Kantareddy; Saleha Muzammil; Salsabila Z Pranida; Sam Buchanan; Samuel Rutunda; Sander Land; Sarah Sulollari; Sardar Ali; Kengatharaiyer Sarveswaran; Saulius Tautvaisas; Sayambhu Sen; Sayantani Banerjee; Sebastien Diarra; Sewoong Lee; Shaan Shah; Shankar Venkitachalam; Sharifa Djurabaeva; Sharon Ibejih; Shivanya S Dutta; Siddhant Gupta; Silvia P Suárez; Sina Ahmadi; Sivasuthan Sukumar; Siyuan Song; Sokratis Sofianopoulos; Sona E Simon; Sonja Benčina; Sophie Gvasalia; Sphurti K More; Spyridon Konstantinos Dragazis; Stefan Milosavljević; Stephan Kaufhold; AlRashed; Surangika Ranathunga; Taiga Someya; Taja Kuzman Pungeršek; Tal Haklay; Tasi&amp;amp;\#x27;u Jibril; Tatsuya Aoyama; Tea Abashidze; Terenz Jomar Dela Cruz; Terra Blevins; Themistoklis Nikas; Theresa D Idoko; Tilek Chubakov; Tina Munda; Tobiloba Moses Owoeye; Tommaso Gargiani; Uni Johannesen; Vallerie A Putra; Vanya BK; Varvara Arzt; Vasily Konovalov; Vasudevan Nedumpozhimana; Viktória Ondrejová; Viktoryia Horbik; Vuk Dinić; Walelign Sewunetie; Winston Wu; Xiaojing Zhao; Yacouba Diarra; Yaniv Nikankin; Yash Mathur; Yash Bagla; Yeshil Bangera; Yixi Chen; Yiyuan Li; Yolanda Xavier; Yonatan Belinkov; Zaid Alyafeai; Zhengyang Shan; Zhi Rui Tam; Zilu Tang; Zuzana Nadova; Baber Abbasi; Stella Biderman; David Stap; Duygu Ataman; Fabian D Schmidt; Hila Gonen; Jiayi Wang; David Adelani
+**Authors:** Shivang Rawat; Mirko Morello; Flaviano Morone; David Heeger
 
-**ID:** 139393 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
+**ID:** 153925 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=TGSeFxFoPi>) | [PDF](<https://openreview.net/pdf?id=TGSeFxFoPi>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139393>)
+[Paper](<https://openreview.net/forum?id=HbgNRwBlhi>) | [PDF](<https://openreview.net/pdf?id=HbgNRwBlhi>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153925>)
 
-_Abstract unavailable from the accessible public sources._
-
-## Audio\-Visual Flamingo: Open Audio\-Visual Intelligence for Long and Complex Videos
-
-**Authors:** Sreyan Ghosh; Arushi Goel; Kaousheik Jayakumar; Lasha Koroshinadze; Nishit Anand; Siddharth Gururani; Hanrong Ye; Pritam Biswas; Yuanhang Su; Ehsan Hosseini\-Asl; Sang\-gil Lee; Zhifeng Kong; Jaehyeon Kim; Sungwon Kim; S Sakshi; Ramani Duraiswami; Dinesh Manocha; Andrew Tao; Mohammad Shoeybi; Bryan Catanzaro; Ming\-Yu Liu; Wei Ping
-
-**ID:** 153983 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=H4Lfwx7aXK>) | [PDF](<https://openreview.net/pdf?id=H4Lfwx7aXK>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153983>)
-
-_Abstract unavailable from the accessible public sources._
-
-## Mutable Transcripts: Mitigating Context Pollution through Editable Conversation State
-
-**Authors:** Dan Barry; Andrew Hines
-
-**ID:** 153229 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=MpRxjdY3Md>) | [PDF](<https://openreview.net/pdf?id=MpRxjdY3Md>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153229>)
-
-_Abstract unavailable from the accessible public sources._
-
-## DialectLLM: A Dialect\-Aware Dialog\[ue\] Generation Framework Beyond Standard American English
-
-**Authors:** Jio Oh; Paul Vicinanza; Thomas Butler; Steven Whang; Dezhi Hong; Amani Namboori
-
-**ID:** 153135 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=NcciyroKQl>) | [PDF](<https://openreview.net/pdf?id=NcciyroKQl>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153135>)
-
-_Abstract unavailable from the accessible public sources._
+Temporal integration gives continuous\-time recurrent networks memory, but in deep stacks it also delays bottom\-up signals and attenuates top\-down errors\. We ask whether this failure mode can be addressed by making the bottom\-up input to each layer prospective, replacing instantaneous layer inputs with local look\-ahead signals that compensate for integration\-induced lag\. We develop Recursive Quadrature Filters \(RQFs\), a biologically motivated class of complex\-valued temporal filters that remain equivalent to single\-channel diagonal state\-space models \(SSMs\)\. This equivalence makes RQF layers trainable with the same parallel scan and convolutional algorithms used for diagonal SSMs\. At the implementation level, this prospective input amounts to a lightweight two\-tap input update, making it a drop\-in modification for RQFs and SSMs\. For the resulting discrete\-time network, we prove that spatial\-only backpropagation in a deep RQF network with instantaneous bottom\-up inputs yields error signals that decay geometrically with depth, whereas prospective\-input coding restores order\-one gradient flow\. We evaluate prospective\-input coding on the Speech Commands dataset using standalone RQF recurrent stacks across two feature representations, mel\-frequency cepstral coefficients \(MFCCs\) and raw audio, and local and non\-local credit\-assignment strategies\. Under spatial\-only backpropagation, prospective\-input coding improves validation accuracy from 65\.7% to 84\.9% on MFCC features and from 46\.4% to 61\.0% on raw audio\. Under full backpropagation through time, the gains persist, improving accuracy from 89\.4% to 93\.2% on MFCC features and from 80\.1% to 82\.7% on raw audio\. Taken together, our results identify prospective\-input coding as a local, broadly applicable mechanism for improving credit assignment in multi\-layer recurrent networks with a continuous\-time substrate\.
 
 ## Is the Importance Ratio Necessary for Stable Reinforcement Learning in LLMs?
 
 **Authors:** Shuibai Zhang; Junhyuck Kim; Gyeongman Kim; Jaewoong Cho
 
-**ID:** 152454 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
+**ID:** 152454 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
 [Paper](<https://openreview.net/forum?id=T0HJLu9Gie>) | [PDF](<https://openreview.net/pdf?id=T0HJLu9Gie>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152454>)
 
-_Abstract unavailable from the accessible public sources._
+Reinforcement learning \(RL\) has become central to post\-training large language models \(LLMs\)\. However, popular RL methods like GRPO incur non\-negligible overhead by computing both old\-policy and current\-policy likelihoods to form importance sampling ratios\. In this work, we propose Likelihood\-Gated Policy Optimization \(LGPO\), which enforces a soft trust region constraint via likelihood\-based gating, eliminating the need to compute old\-policy likelihoods\. Empirically, we show that removing the importance sampling correction term does not harm training stability, whereas removing the trust region mechanism leads to collapse\. Moreover, ratio\-based clipping can fail in fully on\-policy training: the importance ratio stays at 1, so the ratio\-based trust region constraint never activates\. Under standard training settings where GRPO is stable, LGPO achieves comparable training stability and peak performance while reducing training time by \~18\\% on average\. In fully on\-policy training, where GRPO fails, LGPO remains stable, enabling more efficient and robust LLM RL post\-training across training regimes\.
 
 ## NarrativeBench: Benchmarking Multi\-trait Automated Scoring and Feedback Efficacy of Large Language Models for Chinese Narrative Essays
 
 **Authors:** Jin Wu
 
-**ID:** 138898 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
+**ID:** 138898 | **Topic source:** official | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
 
 [Paper](<https://openreview.net/forum?id=y7yalKOe0u>) | [PDF](<https://openreview.net/pdf?id=y7yalKOe0u>) | [Official poster](<https://neurips.cc/virtual/2026/poster/138898>)
 
-_Abstract unavailable from the accessible public sources._
+Automated scoring and feedback generation for Chinese narrative essays \(CNE\) represent a critical task in educational measurement\. While Large Language Models \(LLMs\) have demonstrated transformative progress, their potential in CNE evaluation scenarios has yet to be systematically under\-explored\. Existing essay benchmarks face some challenges: \(1\) \\textbf\{Standard Alignment\}: The varied complexity of scoring traits and rubrics across different benchmarks makes it difficult to establish a consistent alignment mechanism for heterogeneous evaluation scenarios; \(2\) \\textbf\{Evaluation Scope\}: Current benchmarks only focus on discriminative scoring accuracy for LLMs, yet they lack a systematic framework for assessing the quality of generative feedback\. \(3\) \\textbf\{Prompt Coverage\}: There is a lack of CNE datasets that cover both closed\-ended and open\-ended prompts\. These issues have, to some extent, constrained the trust of educators in and their adoption of LLM\-based methods for essay assessment\. To bridge these gaps, we introduce \\textbf\{NarrativeBench\}, a multi\-trait and feedback\-oriented evaluation benchmark for CNE\. NarrativeBench covers both closed\-ended and open\-ended writing tasks and consists of 4,500 student essays from grades 3 to 5 across 14 different writing prompts\. Finally, we benchmark 13 popular LLMs, revealing that their performance exhibits significant gaps compared to human evaluations and pretrained language models\. Through NarrativeBench, we comprehensively assess LLM performance on Chinese narrative essay tasks, thus facilitating LLM progress in Chinese essay data analysis domains\.
 
-## Your Benchmark Is an Empirical Measure Over Difficulty
+## Improving Neural Decoding Performance for Language BCIs by Explicitly Modeling Context\-Induced Noise
 
-**Authors:** Yifan Sun; Naicheng Yu; Jiawen Gong; Jingyan Shen; Huan Zhang
+**Authors:** Yao Jia; Xianhan Tan; Binli Luo; Yueming Wang; Yu Qi
 
-**ID:** 139196 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+**ID:** 148927 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=fCQ7KtG95S>) | [PDF](<https://openreview.net/pdf?id=fCQ7KtG95S>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139196>)
+[Paper](<https://openreview.net/forum?id=uBEKcgOVRy>) | [PDF](<https://openreview.net/pdf?id=uBEKcgOVRy>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148927>)
 
-A benchmark is not merely a collection of test questions; it naturally induces an empirical measure over difficulty\. In this work, we develop this measure\-based view of benchmark evaluation\. This perspective allows us to identify and formalize two central failure modes: \\emph\{measure mismatch\}, where the benchmark difficulty distribution differs from the intended difficulty distribution, and \\emph\{coverage gaps\}, where uncovered regions along the difficulty axis prevent benchmarks from detecting meaningful localized training progress\. We propose two diagnostic metrics that capture these two failure modes and provide rigorous theoretical guarantees\. Empirically, we analyze \\textbf\{25\} popular benchmarks spanning \\textbf\{7\} domains using carefully estimated item difficulties\. Our results show that many benchmarks implicitly overweight certain difficulty regions, so their leaderboard conclusions should be interpreted with caution; others leave substantial portions of the difficulty axis uncovered, limiting their ability to monitor model improvement process\. Finally, we turn diagnosis into action by introducing \\textsc\{BenchFill\}, a simple difficulty\-targeted item rewriting algorithm that effectively reduces local coverage gaps\.
-
-## RealityTest: How People Probe AI Identity and Whether Models Disclose It
-
-**Authors:** Anna Gausen; Sarenne Wallbridge; Bessie O&amp;amp;\#x27;Dell; Christopher Summerfield; Hannah Rose Kirk
-
-**ID:** 139210 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=eUlBhLa5hL>) | [PDF](<https://openreview.net/pdf?id=eUlBhLa5hL>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139210>)
-
-AI systems are increasingly deployed in conversational settings where users may be uncertain whether they are speaking with a human or an AI\. Despite mounting regulatory attention to this known safety risk, existing evaluations of AI disclosure are typically English\-only, based on machine\-generated questions, and restricted to text\. We present RealityTest to comprehensively test whether AI systems disclose their identity when asked\. The benchmark is the first large\-scale multimodal and multilingual evaluation, grounded in human data on how people actually encounter and question AI identity in the real\-world\. Alongside the benchmark, we release the underlying dataset of 3,152 identity\-probing queries collected from $\\textasciitilde$750 participants across 49 countries and five languages, in text and speech scenarios\. We find that only 31\\% of people ask about identity directly, and that the questions people ask are far more diverse than machine\-generated queries\. We test 17 text and 6 speech models, and find substantial variation in disclosure behaviour\. However, a single suppression instruction reduces disclosure rates to below 30\\%, even in the best\-performing models\. Validating our investment in diverse, human\-grounded evaluation data, we find that how the question is phrased and the context of the conversation matter more for disclosure than which model is being tested\. Safety evaluations built on narrow or synthetic query sets risk mischaracterising how models behave in realistic deployment settings\.
-
-## TRACE: Tourism Recommendation with Accountable Citation Evidence
-
-**Authors:** Zixu Zhao; SIJIN WANG; Yu Hou; YUANYUAN XU; Yufan Sheng; Xike Xie; Wenjie Zhang; Won\-Yong Shin; Xin Cao
-
-**ID:** 139280 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=ZmCqSnVZ8k>) | [PDF](<https://openreview.net/pdf?id=ZmCqSnVZ8k>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139280>)
-
-Tourism is a high\-stakes setting for conversational recommender systems \(CRS\): a plausible\-sounding suggestion can waste real money and trip time once a traveler acts on it\. Existing CRS benchmarks primarily evaluate systems with a single Recall@$k$ score over entity mentions, and tourism\-specific resources add spatial or knowledge\-graph context, yet none of them couple multi\-turn recommendation with verbatim review\-span evidence and rejection recovery\. This leaves an evaluation gap for tourism recommendation that is simultaneously \*trustworthy\*, \*verifiable\*, and \*adaptive\*: recommend the right point of interest \(POI\) for multi\-aspect preferences \(such as cuisine, price, atmosphere, walking distance\), justify each suggestion with verifiable evidence from prior visitors so the traveler can act without trial and error, and recover when the first recommendation is rejected mid\-dialogue\. We introduce \*\*TRACE\*\*, where each item is \*a multi\-turn tourism recommendation dialogue with review\-span citations and explicit rejection turns\*: 10,000 dialogues over 2,400 Yelp POIs and 34,208 reviews across eight U\.S\. cities, paired with 14 retrieval, planning, and LLM baselines, along with 25 metrics organized under \*Accuracy\*, \*Grounding\*, and \*Recovery\*\. Across these baselines, TRACE reveals the \*\*Three\-Competency Gap\*\*: LLM Zero\-Shot leads in closed\-set Recall@1 and rejection recovery but cites less densely than retrievers; non\-LLM retrievers achieve surface\-verbatim grounding but with low accuracy; Multi\-Review Synthesis fails on Recovery\. The Grounding Score agrees with human citation precision \(Spearman $\\rho = \+0\.80$, $p &lt; 10^\{\-20\}$\), and paired $t$\-tests reproduce the per\-baseline ranking \($p &lt; 0\.01$ on the dominant contrasts\)\. TRACE reframes accountable tourism recommendation as a joint target \(right POI, verifiable evidence, adaptive repair\) rather than a single\-axis leaderboard\.
-
-## WorldSpeech: A Multilingual Speech Corpus from Around the World
-
-**Authors:** Antonis Asonitis; Luca Lanzendörfer; Frédéric Berdoz; Roger Wattenhofer
-
-**ID:** 139336\-\-2 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 139336
-
-[Paper](<https://openreview.net/forum?id=WBzZjghqhE>) | [PDF](<https://openreview.net/pdf?id=WBzZjghqhE>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139336>)
-
-Automatic speech recognition \(ASR\) performs well for high\-resource languages with abundant paired audio\-transcript data, but its accuracy degrades sharply for most languages due to limited publicly available aligned data\. To this end, we introduce WorldSpeech, a 24kHz multilingual speech corpus comprising 65k hours of aligned audio\-transcript data across 76 languages, collected from diverse public sources including parliamentary proceedings, international broadcasts, and public\-domain audiobooks\. For 37 languages, WorldSpeech provides more than 200 hours of aligned speech, with 28 exceeding 500 hours and 24 surpassing 1k hours\. Fine\-tuning existing ASR models on WorldSpeech results in an average relative Word\-Error\-Rate reduction of 63\.5% across 11 typologically diverse languages\.
-
-## NorSA: Accelerating LLM Decoding via Normalized Sparse Activation
-
-**Authors:** Tianteng Gu; Bo Xiao; Ke Zeng; Shuai Shi; Wangyou Zhang; Chenda Li; Yanmin Qian
-
-**ID:** 154390\-\-2 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 154390
-
-[Paper](<https://openreview.net/forum?id=DvzLG9N5Dx>) | [PDF](<https://openreview.net/pdf?id=DvzLG9N5Dx>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154390>)
-
-Sparse activation accelerates Large Language Model \(LLM\) decoding by removing redundant computations and memory access, but existing methods often assume hidden\-state dimensions are independent and identically distributed \(i\.i\.d\.\)\. We replace this i\.i\.d\. perspective with a covariance\-aware view by analyzing contextual dependencies across tokens and inter\-dimensional correlations within hidden states\. We introduce Normalized Sparse Activation \(NorSA\), a training\-free framework that combines dynamic thresholding with decorrelating rotation\. Across the LLaMA, Mistral, and Qwen families, NorSA consistently improves perplexity and downstream accuracy over prior training\-free baselines, especially in high\-sparsity regimes\. On LLaMA3\-8B at 50\\% sparsity, it stays within 0\.44 perplexity points of the dense model while achieving a 1\.32$\\times$ end\-to\-end decoding speedup\.
-
-## MILES: Modular Instruction Memory with Learnable Selection for Self\-Improving LLM Reasoning
-
-**Authors:** Ruilin Tong; Dong Gong
-
-**ID:** 155027\-\-3 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 155027
-
-[Paper](<https://openreview.net/forum?id=94TqZuHU8A>) | [PDF](<https://openreview.net/pdf?id=94TqZuHU8A>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155027>)
-
-Large language models \(LLMs\) increasingly improve their reasoning at test time via additional computation, yet most procedures treat each problem in isolation\. When problems arrive sequentially, accumulating reusable experience across them can further improve performance\. Existing memory\-based methods either store whole\-solution templates that generalize poorly to novel problems or use heuristic step\-level selection that is not optimized for final\-answer correctness\. Learning selection policies requires large\-scale training data and fixed action spaces\. We propose MILES \(Modular Instruction Memory with LEarnable Selection for self\-improving LLM reasoning\), a framework that dynamically expands step\-wise memory and applies correctness\-optimized memory composition under realistic test\-time constraints\. MILES maintains modular memory units consisting of asymmetric pairs of sub\-goal embeddings and sub\-instructions, each associated with a learnable selection head\. This memory structure enables a coarse\-to\-fine retrieval mechanism: The coarse level enables memory expansion and collects supervision for training selection heads from confident samples, while the fine stage applies learned selection heads to rerank coarse\-level candidates and guide reasoning for uncertain samples\. MILES consistently matches or outperforms prior methods while achieving superior accuracy–efficiency tradeoffs\. Extensive experiments demonstrate its effectiveness, robustness, and transferability\.
-
-## Scaling Point\-in\-Time Language Models: Economic Evaluation of Embeddings
-
-**Authors:** Bryan Kelly; Semyon Malamud; Johannes Schwab; Teng A Xu
-
-**ID:** 139251\-\-3 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 139251
-
-[Paper](<https://openreview.net/forum?id=c7yKlceZYq>) | [PDF](<https://openreview.net/pdf?id=c7yKlceZYq>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139251>)
-
-Large language models trained on unrestricted internet corpora inevitably embed information from the future, introducing lookahead bias that compromises the validity of backtests and causal inference in finance and the social sciences\. Point\-in\-time language models—trained exclusively on text available up to each calendar date—eliminate this leakage by construction, but existing efforts typically produce models that lag substantially behind their unconstrained counterparts\. We show that this performance gap can be narrowed through scale\. Training decoder\-only transformers with up to 4 billion parameters on 1 trillion chronologically filtered tokens from FineWeb, we construct a sequence of yearly model checkpoints spanning 2013–2024\. Across a range of common\-sense reasoning and language understanding benchmarks, our models approach the performance of leading open\-weight models of comparable size \(such as Gemma\-3\-4B and LLaMA\-7B\) trained on temporally unrestricted data, although a performance gap remains on several tasks\. Finally, in a strict out\-of\-sample economic evaluation task, portfolios built from point\-in\-time embeddings achieve robust positive Sharpe ratios and perform close to full\-sample counterparts that violate temporal validity, indicating that chronologically consistent language models can extract economically meaningful signals without relying on look\-ahead bias\. We release the complete pipeline—including dataset construction, training infrastructure, and evaluation code—to enable reproducible point\-in\-time language modeling and to support research applications that require strict temporal validity\. Code is available publicly on GitHub \(https://github\.com/DjoFE2021/Point\-In\-Time\-LLM\) and model checkpoints as well as training datasets can be accessed on Hugging Face \(https://huggingface\.co/datasets/Diamegs\)\.
-
-## Hearing the Unspoken: Simulator\-Induced Asymmetric\-View Policy Optimization for Proactive Task\-Oriented Dialogue
-
-**Authors:** Hongbin Zhang; Ning Gao; Yuqin Dai; Ruiyuan Wu; Jinpeng Wang; Rena Gao; Bingdong Tan; Shuzheng Gao; Chaozheng Wang
-
-**ID:** 153222\-\-3 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 153222
-
-[Paper](<https://openreview.net/forum?id=MsVDpPS4yS>) | [PDF](<https://openreview.net/pdf?id=MsVDpPS4yS>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153222>)
-
-Proactive task\-oriented dialogue \(TOD\), such as outbound sales, demands a persuasive agent that actively probes the user's concerns and steers the conversation toward acceptance within a bounded number of turns\. Yet post\-trained LLMs are inherently conservative, and reward\-shaping RL \(e\.g\., GRPO\) struggles since it only re\-weights what an already passive policy samples\. We show that conditioning on the user's latent concerns unlocks proactive capability that no amount of sampling can undermine, establishing these concerns as a pivotal training\-time signal\. To operationalize this finding, we build the \\textbf\{Cognitive User Simulator\}, which models each user as a stratified persona comprising observable external traits and hidden internal concerns\. The simulator produces faithful and diverse interactions, while emitting per\-turn state dynamics that track persuasion progress\. We then introduce \\textbf\{Simulator\-Induced Asymmetric\-View Policy Optimization\}, which converts the modeled concerns and the simulation state transition into complementary training objectives: \(1\) \\emph\{Asymmetric On\-Policy Self\-Distillation\} that transfers concern\-aware behavior from a privileged view of the same policy into its deployable, conversation\-only view; and \(2\) \\emph\{State\-Transition Policy Refinement\} where the final decision provides trajectory\-level advantage while synchronous state transitions refine turn\-level credit direction\. Across two real\-world food\-delivery benchmarks \(\\emph\{merchant\} and \\emph\{courier\} outbound recruitment\), our method matches or surpasses leading proprietary LLMs, outperforms strong RL baselines, and generalizes across various LLM\-based user simulators\.
-
-## Rethinking How to Remember: Beyond Atomic Facts in Lifelong LLM Agent Memory
-
-**Authors:** Jingwei Sun; Jianing Zhu; Jiangchao Yao; Tongliang Liu; Bo Han
-
-**ID:** 150576\-\-3 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 150576
-
-[Paper](<https://openreview.net/forum?id=h9Je8c91Qi>) | [PDF](<https://openreview.net/pdf?id=h9Je8c91Qi>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150576>)
-
-To enable reliable long\-term interaction, LLM agents require a memory system that can faithfully store, efficiently retrieve, and deeply reason over accumulated dialogue history\. Most existing methods adopt an extracted fact based paradigm: handcrafted static prompts compress raw dialogues into atomic facts, which are then stored, matched, and injected into downstream reasoning\. Nevertheless, such fact\-centric designs inevitably discard fine\-grained details in original dialogues and fail to support deep reasoning over scattered isolated facts\. Moreover, static prompts cannot maintain consistent extraction granularity across diverse dialogue styles\. To address these limitations, we propose TriMem, which maintains three coexisting representation granularities, including raw dialogue segments anchored by source identifiers for storage fidelity, extracted atomic facts for efficient memory retrieval, synthesized profiles that aggregate dispersed facts into holistic semantic understanding for deep reasoning\. We further adopt TextGrad\-based prompt optimization, which iteratively refines extraction and profiling prompts via response quality feedback, achieving lifelong evolution without any parameter updating\. Extensive experiments on LoCoMo and PerLTQA across multiple LLM backbones demonstrate that TriMem consistently outperforms strong memory baselines\.
-
-## MemArena: An Ego\-Centric Benchmark for On\-Device Agentic Personal Memory Assistants at Scale
-
-**Authors:** Jiadong Zhang; Xiaosong Ma
-
-**ID:** 139685\-\-3 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 139685
-
-[Paper](<https://openreview.net/forum?id=Ae9Cmj7ofy>) | [PDF](<https://openreview.net/pdf?id=Ae9Cmj7ofy>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139685>)
-
-Edge\-deployed personal memory assistants must handle private interpersonal conversations on\-device with open\-weight models\. Yet, existing memory benchmarks often under\-test the combination of activity\-dense interaction, ego\-centric perspective, and coherent multi\-session worlds\. MemArena fills these gaps with a single\-world conversational benchmark built with its MASim agent simulator, for $50$ agents over $15$ days \($10\.3$M dialog\-text tokens, $24\.1$K text\-only ego\-observed tokens/agent/day\)\. With the interaction history, it co\-generates ground truth over six recall, reasoning, and trustworthiness evaluation dimensions\. We evaluate five open\-weight readers with Vanilla context, BM25\-RAG, Oracle retrieval, Memobase, and MemSearch as memory backends\. Three results stand out: \(1\) Memory\-backend choice matters more for content accuracy: At Qwen3\-0\.6B, Memobase $\\to$ MemSearch gains $\+32\.5/\+19\.2$ pp, exceeding MemSearch reader scaling \($\+10\.6/\+6\.8$ pp\)\. \(2\) Permission\-aware access fails universally: with Oracle leaking heavily and other backends too timid to disclose\. \(3\) Search latency bites only at very small reader: on a Spark GB10 edge node, memory\-search adds a moderate and fixed $87$/$7$/$48$ ms \(BM25\-RAG/Memobase/MemSearch\) that composes a small part of TTFT for most reader\-backend combinations\. We release code, the MASim simulator, and the MemArena\-L benchmark at https://anonymous\.4open\.science/r/MemArena\-NeurIPS2026\-anon\-3E9D
-
-## Sandboxed Coding Agents are Competitive Omni\-modal Task Solvers
-
-**Authors:** Dongping Chen; Xuanao Huang; Zhihan Hu; Qingyuan Shi; Dianqi Li; Tianyi Zhou
-
-**ID:** 148209\-\-3 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 148209
-
-[Paper](<https://openreview.net/forum?id=zYMvOwt5bN>) | [PDF](<https://openreview.net/pdf?id=zYMvOwt5bN>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148209>)
-
-As multimodal LLMs increasingly emphasize video and audio, a common assumption is that solving such tasks calls for native omnimodal models\. We show that this is not always necessary: coding agents equipped with only text\+vision and a sandboxed tool\-using interface can perform competitively with, and in several settings outperform, SOTA native omnimodal models and predefined multimodal agent scaffolds across multiple audio\-video benchmarks\. Our trajectory analysis suggests that their advantage comes from coding agents writing code and orchestrating tools to retrieve relevant content from transcripts, frames, and other non\-textual modality signals from raw inputs\. This effectively converts omnimodal tasks into evidence retrieval and information processing problems, avoiding the inefficiency of ingesting entire videos or audio streams into context\. To characterize remaining limitations, we propose a failure taxonomy and a process\-level analysis of tool\-use traces, and find that simple skill injection, including human\-written skills and self\-distilled skills from execution logs, can substantially improve performance over the no\-skill baseline\. To examine whether such capability can be elicited in open\-source models, we further introduce Code\-X, a complete training recipe with the OmniCoding trajectory dataset and verifiable reward, providing an exploratory baseline on Qwen\-3\.5\-9B and Qwen\-3\.6\-27B\. Finally, given the maturity of many\-modality understanding, we argue that the more meaningful frontier lies in many\-modality processing, and introduce TerminalBench\-O, the first process\-level benchmark designed for coding agents on real\-world omnimodal processing tasks\. Together, our findings open new directions for omnimodal content processing and evaluation\.
-
-## DUET: Unified Dual\-Space Emotion Control for Diffusion and Flow\-Matching Driven Text\-to\-Speech
-
-**Authors:** Xu Zhang; Longbing Cao; zhangkai wu
-
-**ID:** 153975\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 153975
-
-[Paper](<https://openreview.net/forum?id=H6xBJ7xXPy>) | [PDF](<https://openreview.net/pdf?id=H6xBJ7xXPy>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153975>)
-
-Diffusion and flow\-matching based text\-to\-speech \(TTS\) models excel in naturalness but often lack explicit emotion control, as emotional signals remain entangled with speaker identity\. We discover that emotion embedding emerges as a linearly decodable direction of frozen hidden states, nearly orthogonal to the direction embedding speaker identity\. This inspires a plug\-and\-play framework DUET for emotion control over pretrained diffusion and flow\-matching based TTS models\. During generation, DUET unifies dual\-space control to achieve fine\-grained emotion intervention in a single per\-step update: hidden space steering shifts generation along the target emotion direction, while mel\-space guidance refines spectral details through gradients backpropagated from a differentiable vocoder\. We validate DUET on five architecturally diverse pretrained TTS backbones across three datasets, where it outperforms 10 supervised state\-of\-the\-art emotional TTS baselines across paradigms and achieves the highest human\-rated emotion appropriateness\. To further showcase its qualitative behavior, we deploy DUET on an Ameca humanoid robot, where it produces richly expressive emotional speech on the humanoid, demonstrating the strong potential for plug\-and\-play affective interaction for embodied agents\. The demonstration is available at: https://anonymous\.4open\.science/w/duet\-demo\-fresh\-D8E0
-
-## ASTOR: Multi\-Task Code Reinforcement Learning via Utility\-Driven Coordination
-
-**Authors:** Yujia Chen; Yang Ye; Xiao Chu; Yuchi Ma; Cuiyun Gao
-
-**ID:** 154519\-\-3 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 154519
-
-[Paper](<https://openreview.net/forum?id=CzqAXCaI97>) | [PDF](<https://openreview.net/pdf?id=CzqAXCaI97>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154519>)
-
-Reinforcement learning \(RL\) with verifiable rewards has proven effective at post\-training LLMs for coding, yet deploying separate task\-specific specialists incurs costs that scale with the number of tasks, motivating a unified multi\-task RL \(MTRL\) approach\. However, existing MTRL methods treat all coding tasks uniformly, relying on fixed data curricula under a shared optimization strategy, ultimately limiting the effectiveness of multi\-task training\. To address these limitations, we propose \\textbf\{\{\\tool\}\}, a multi\-t\\textbf\{AS\}k code reinforcement learning framework via u\\textbf\{T\}ility\-driven co\\textbf\{OR\}dination\. Centered on \\textit\{task utility\}, a signal capturing each task's learning potential and cross\-task synergy, \{\\tool\} comprises two coupled modules: \\textit\{1\) \\moduleone\} module hierarchically allocates training budget and prioritizes informative prompts, steering training toward the most valuable data; and \\textit\{2\) \\moduletwo\} module dynamically scales per\-task KL regularization, matching update constraints to each task's current training state\.  Experiments on two widely\-used LLMs across four representative coding tasks demonstrate that \{\\tool\} consistently improves a single model across all tasks, outperforming the best task\-specific specialist by 9\.0\\%\-\-9\.5\\% and surpassing the strongest MTRL baseline by 7\.5\\%\-\-12\.8\\%\.
-
-## Enhancing Speech Large Language Models through Reinforced Behavior Alignment
-
-**Authors:** Yansong Liu; Yuan Liu
-
-**ID:** 154532\-\-3 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 154532
-
-[Paper](<https://openreview.net/forum?id=CtJ6YRQRlm>) | [PDF](<https://openreview.net/pdf?id=CtJ6YRQRlm>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154532>)
-
-Speech large language models \(SpeechLMs\) can process spoken requests, yet still lag behind text\-prompted large language models \(LLMs\) on instruction following and reasoning\. We argue that this gap is not only an ASR or representation problem: the same semantic instruction can induce different response policies when spoken with different speakers, accents, noise conditions, prosody, or disfluencies\. We propose Verifiable Invariant Reinforced Behavior Alignment \(VIRBA\), a reinforcement\-learning framework for aligning SpeechLM behavior across acoustic realizations of the same semantic intent\. VIRBA builds multi\-view spoken instruction groups, scores sampled responses with semantic preference, rule\-verifiable correctness, cross\-acoustic invariance, and adaptive reasoning rewards, and optimizes the model with Cross\-Acoustic Group Relative Policy Optimization \(CA\-GRPO\)\. The resulting objective moves SpeechLM alignment beyond teacher imitation toward robust reasoning policies that remain stable across realistic spoken realizations\. Experiments with recent SpeechLM baselines, disfluency robustness, spoken QA, audio reasoning, and speech\-to\-text translation show the largest gains on reasoning\-heavy and acoustically perturbed spoken prompts\.
-
-## Controllable User Simulation
-
-**Authors:** Guy Tennenholtz; Ofer Meshi; Amir Globerson; Uri Shalit; Jihwan Jeong; Craig Boutilier
-
-**ID:** 148816\-\-3 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 148816
-
-[Paper](<https://openreview.net/forum?id=uus8MMsekx>) | [PDF](<https://openreview.net/pdf?id=uus8MMsekx>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148816>)
-
-Using offline datasets to evaluate conversational agents often fails to cover rare scenarios or to support testing new policies\. This has motivated the use of \\emph\{controllable user simulators\} for targeted, counterfactual evaluation, typically implemented by prompting or fine\-tuning large language models\. In this work, we formalize controllable simulation as a causal inference problem\. By bridging natural language evaluation with off\-policy evaluation methodology, we show that the standard practice of training simulators via supervised fine\-tuning on post\-hoc trajectory labels yields a structurally biased model\. Specifically, these labels are inextricably coupled to the data\-generating behavior policy, injecting a \\emph\{look\-ahead bias\} that breaks causal consistency\. Furthermore, we prove that under policy shift this failure causes the variance of evaluation metrics to explode geometrically, a phenomenon we term \\emph\{controllability collapse\}\. To restore causal consistency, we establish theoretical conditions for accurate simulation and propose practical training mitigations: \\textit\{a priori\} controls, step\-wise dynamic controls, and direct policy\-conditioned learning\. Empirical evaluation confirms that while standard global controls distort conversational distributions and collapse behavioral diversity, our causally grounded simulators eliminate look\-ahead bias, preserve natural variance, and exhibit robust zero\-shot generalization to unseen agent behaviors\.
-
-## Asymmetric Phase Coding Audio Watermarking
-
-**Authors:** Guang Yang; Fengchen Liu; Amir Ghasemian; Zhong Wang; Ninareh Mehrabi; Homa Hosseinmardi
-
-**ID:** 149813\-\-3 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 149813
-
-[Paper](<https://openreview.net/forum?id=nAf6IJ9PSz>) | [PDF](<https://openreview.net/pdf?id=nAf6IJ9PSz>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149813>)
-
-The proliferation of deepfake audio challenges voice\-based authentication systems; passive forensic detectors are sensitive to evolving generative models and to real\-world channel distortions\. We propose Asymmetric Phase Coding \(APC\), a training\-free cryptographic signing layer for audio, designed as a compact and auditable provenance primitive that can stand alone or be stacked with learned watermarks\. APC combines Ed25519 digital signatures \(EdDSA, FIPS 186\-5; 64\-byte signatures\) with Reed–Solomon error correction, pseudo\-random STFT phase\-bin selection, and a redundant quantization\-index\-modulation \(QIM\) code on log\-magnitude differences of adjacent bin pairs, yielding a compact, non\-repudiable, blind\-extractable watermark\. We evaluate APC on 1,000 LibriSpeech test\-clean clips \(10 s each, 44\.1 kHz\) under eight attack configurations – identity, 10% end\-cropping, 20% end\-cropping, 8 kHz low\-pass, 16 kHz round\-trip resampling, FLAC re\-encoding, MP3 at 128 kbps, and OGG\-Vorbis at 128 kbps – and achieve cryptographic verification rates between 97\.5% and 98\.3% on every condition at mean PESQ=3\.02 and tens\-of\-milliseconds CPU latency\. We explicitly compare APC against recent neural baselines \(AudioSeal, WavMark, SilentCipher\), detail the threat model \(forgery resistance vs\. erasure\), characterize the dataset, define all metrics, quantify an adaptive white\-box erasure attack, and release code, keys, and metadata for reproducibility\.
-
-## Reconstructing the Vocal Tract with Differentiable Acoustic Simulation
-
-**Authors:** Eric Chen; Jin Woo Lee; Vincent Sitzmann
-
-**ID:** 151084\-\-3 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 151084
-
-[Paper](<https://openreview.net/forum?id=d61YXzFcB9>) | [PDF](<https://openreview.net/pdf?id=d61YXzFcB9>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151084>)
-
-The human vocal tract, the cavity consisting of one's throat, mouth, lips opening, etc\., filters one's voice to create the sounds we know as speech\. In this paper, we present a differentiable and GPU parallelizable acoustic simulator that synthesizes speech by propagating sound along an acoustic tube representation of the vocal tract, and via its gradients, solves the inverse problem: reconstructing the geometry of their vocal tract solely from the sound it produces\. Although learning the inverse mapping between geometry and sound is notoriously non\-convex, we discover that gradient descent succeeds with three technical contributions: \(1\) we design a frequency domain formulation of the vocal tract's fluid dynamics that is 70x more GPU parallelizable than finite differences in time, \(2\) we integrate a differentiable model for turbulence to synthesize consonants, and \(3\) similar to prior work in implicit neural representations \(INRs\) and neural radiance fields \(NeRFs\), we find that parameterizing the geometry with a neural network accelerates convergence and escapes local minima that trap discrete representations\.   Because the simulator is differentiable, it is readily integrated with other deep learning pipelines to enable novel speech and medical imaging applications\. Our model can be used for instance, in singing instruction or language learning, where a visualization of one's vocal tract can help people understand how their vocal tract maps to different speech sounds\. To enable these tasks, \(1\) we demonstrate self\-supervised autoencoding of vocal tract shapes across 11 languages, and \(2\) we couple our simulator with a generative model of MRI images to reconstruct one's moving vocal tract from only their speech, no paired data required\.
-
-## Reconsidering Positional Supervision in Masked Diffusion Language Model Training
-
-**Authors:** Mengyu Ye; Keito Kudo; Ryosuke Takahashi; Jun Suzuki
-
-**ID:** 152472\-\-3 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 152472
-
-[Paper](<https://openreview.net/forum?id=SoXwBAJ8w9>) | [PDF](<https://openreview.net/pdf?id=SoXwBAJ8w9>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152472>)
-
-Masked diffusion language models \(MDLMs\) generate text by unmasking tokens in parallel and have recently emerged as alternatives to autoregressive language models\.  They can be viewed as parallel decoders trained with a position\-wise cross\-entropy \(CE\) loss, the same setup as non\-autoregressive translation \(NAT\)\.  In NAT, CE\-trained parallel decoders have been argued to be sensitive to small positional shifts, since CE penalizes them harshly\. We ask whether CE\-trained MDLMs are similarly sensitive to such shifts under iterative decoding\. To probe this, we apply a controlled intervention that introduces them during decoding\. On LLaDA\-8B\-Instruct with Arena\-Hard, displacing as little as 1\\% of generated tokens by one position substantially reduces win rates against the unintervened model, showing that MDLMs are sensitive to such small shifts under iterative parallel decoding\.  Motivated by this, we adapt connectionist temporal classification \(CTC\), an alignment\-flexible objective known to mitigate it there, to MDLM supervised fine\-tuning\.  By relaxing the strict position\-wise match that CE imposes, CTC gives the loss room to absorb small positional shifts; concretely, we modified CTC objective to use a special \\ token that absorbs positional uncertainty between target tokens and output positions, and a updated collapse map that preserves target surface forms\. Across four open\-ended generation benchmarks, the resulting model consistently improves over both the original model and a matched cross\-entropy\-trained baseline, with statistically significant gains on all four\. These results identify training\-side alignment flexibility as a useful design dimension for MDLM SFT, complementary to the inference\-time approaches explored in prior work\.
-
-## From History to State: Constant\-Context Skill Learning for LLM Agents
-
-**Authors:** Haoyang Xie; Xinyuan Wang; Yancheng Wang; Puda Zhao; Feng Ju
-
-**ID:** 154254\-\-2 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 154254
-
-[Paper](<https://openreview.net/forum?id=F9AmFBisYk>) | [PDF](<https://openreview.net/pdf?id=F9AmFBisYk>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154254>)
-
-Large language model \(LLM\) agents are increasingly used to operate browsers, files, code and tools, making personal assistants a natural deployment target\. Yet personal agents face a privacy\-cost\-capability tension: cloud models execute multi\-step workflows well but expose sensitive intermediate context to external APIs, while local models preserve privacy but remain less reliable\. Both settings also pay repeatedly for long skill prompts and growing histories\. We propose constant\-context skill learning, a context\-to\-weights framework for recurring agent workflows: reusable procedures are learned in lightweight task\-family modules, while inference conditions only on the current observation and a compact state block\. A deterministic tracker renders this state block from task progress and supplies aligned subgoal rewards, so each module can be trained with step\-level SFT and refined through online RL\. Across ALFWorld, WebShop, and SciWorld, our agents achieve strong performance across Qwen3\-4B, Qwen3\-8B and Llama\-3\.1\-8B\. With Qwen3\-8B, SFT\+RL reaches 89\.6\\% unseen success on ALFWorld, 76\.8\\% success on WebShop, and 66\.4\\% unseen success on SciWorld\. They match or exceed strong published agent\-training results while reducing prompt tokens per turn by 2\-7$\\times$ relative to controlled ReAct prompting baselines, showing that procedural context can be moved from prompts into weights\.
-
-## Efficient Brain\-to\-Speech Decoding with Fixed\-Delay Spiking Neural Networks
-
-**Authors:** Aleksandra Wisniewska; Seo\-Hyun Lee; Seong\-Whan Lee
-
-**ID:** 151470\-\-2 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 151470
-
-[Paper](<https://openreview.net/forum?id=aMneDSPCzZ>) | [PDF](<https://openreview.net/pdf?id=aMneDSPCzZ>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151470>)
-
-_Abstract unavailable from the accessible public sources._
-
-## Mitigating Knowledge Conflicts in Retrieval\-Augmented Generation via Inference\-Time Representation Editing
-
-**Authors:** Dahyun Jung; Jaehyung Seo; Heuiseok Lim
-
-**ID:** 148202\-\-2 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 148202
-
-[Paper](<https://openreview.net/forum?id=zbapcKkECb>) | [PDF](<https://openreview.net/pdf?id=zbapcKkECb>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148202>)
-
-Retrieval\-Augmented Generation \(RAG\) has been widely adopted to enable Large Language Models \(LLMs\) to ground their responses in external knowledge sources\. Nonetheless, recent studies show that conflicts between the retrieved external knowledge and the model’s parametric knowledge can lead to hallucinatory outputs, and this problem is exacerbated when the retrieved documents contain noise\. In this work, we propose Conflict\-Aware Representation Editing \(CARE\), an inference\-time representation editing method for improving LLM robustness under noisy knowledge conflict settings\. CARE learns a latent editing direction from intermediate representations associated with correct and incorrect generations, and uses this direction to mitigate conflict\-associated activation patterns during inference\. We evaluate CARE across Question Answering \(QA\) benchmarks and LLMs, showing improvements over retrieval\-based and conflict\-mitigation baselines, especially under noisy retrieval conditions\.
+Language brain\-computer interfaces \(BCIs\), including speech and handwriting BCIs, hold significant promise for restoring communication in individuals with paralysis\. However, the performance of current language BCIs remains limited due to the non\-stationarity of neural activity\. Existing neural decoding approaches typically treat neural non\-stationarity as stochastic noise\. For language BCIs, however, the noise is more complex due to the influence of semantic context in language sequences\. For example, the articulation of the same phoneme can vary subtly depending on its surrounding content\. Such context\-induced variations introduce additional noise into neural representations and can confuse neural decoders, yet this issue has been largely overlooked in previous studies\. Here, we propose explicitly modeling these context\-induced noises to enhance neural decoding performance in language BCIs\. Our key insight is that, unlike stochastic noise, context\-induced noise carries useful information that can help the decoder disambiguate linguistically similar units\. Therefore, by separating and modeling context\-induced noise, we achieve improved decoding performance for language BCIs\. Experiments on multiple datasets demonstrate that our approach achieves state\-of\-the\-art performance\.
 
 ## Remember Your Trace: Memory\-Guided Long\-Horizon Agentic Framework for Consistent and Hierarchical Repository\-Level Code Documentation
 
 **Authors:** Suyoung Bae; Jaehoon Lee; Changkyu Choi; YunSeok Choi; Jee\-Hyong Lee
 
-**ID:** 154827\-\-2 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 154827
+**ID:** 154827 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
 [Paper](<https://openreview.net/forum?id=Ae5q87uyOE>) | [PDF](<https://openreview.net/pdf?id=Ae5q87uyOE>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154827>)
 
-_Abstract unavailable from the accessible public sources._
+Automated code documentation is essential for modern software development, providing the contextual grounding that both human developers and coding agents rely on to navigate large codebases\. Existing repository\-level approaches process components independently, causing redundant retrieval and conflicting descriptions across documents while producing outputs that lack hierarchical structure\. Therefore, we propose MemDocAgent, a long\-horizon agentic framework that generates documentation within a single, integrated context spanning the entire repository\. It combines two components: \(i\) Dependency\-Aware Traversal Guiding that predetermines a traversal order respecting dependency and granularity hierarchies; \(ii\) Memory\-Guided Agentic Interaction, in which the agent interacts with RepoMemory, a shared memory accumulating prior work traces through read, write, and verify operations\. Through an in\-depth multi\-criteria evaluation, MemDocAgent achieves the best performance over both open and closed\-source baselines and demonstrates practical applicability in real software development workflows\.
+
+## Rubato: Transcribing Piano Music with Timestamps
+
+**Authors:** Nazif Can Tamer; Victoria Ebert; Guang Yang; Noah Smith
+
+**ID:** 149838 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=muSIGk8gSE>) | [PDF](<https://openreview.net/pdf?id=muSIGk8gSE>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149838>)
+
+We consider the conversion of musical recordings into human\-readable  sheet music annotated with timestamps\. Such output lets a listener  clearly visualize \*rubato\* \(temporally expressive playing\), a learner  diagnose ensemble precision and timing choices against the written music,  and a musicology scholar compare performance styles across recordings of  the same work\. We introduce \(1\) a prompt\-conditioned encoder\-\-decoder  model, named Rubato, trained to output \(2\) a new textual representation  for polyphonic music, named InterMo, which we designed for compatibility  with sequence\-to\-sequence training\. Our experiments demonstrate that  Rubato produces timestamped piano sheet music from audio with higher  notational accuracy than the best existing approaches, which are based  on cascades\. We find that even if the cascade is given ground\-truth MIDI  instead of audio, Rubato performs better, suggesting that the ceiling of  existing approaches is primarily representational, not acoustic\. Further,  because Rubato is trained on several related tasks \(with prompts\), it  competes with or outperforms the best single\-task systems on related but  simpler tasks like MIDI note grounding and beat/downbeat detection\. We  will release the model and code on publication, and an anonymized demo  is available at https://rubato\-transcription\.github\.io\.
+
+## Minimizing Modality Gap from the Input Side: Your Speech LLM Can Be a Prosody\-Aware Text LLM
+
+**Authors:** Wenqian Cui; Xiao\-Hui Li; Daxin Tan; Qiyong Zheng; Irwin King
+
+**ID:** 153637 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=Jsjmo8eX29>) | [PDF](<https://openreview.net/pdf?id=Jsjmo8eX29>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153637>)
+
+Speech large language models \(SLMs\) are typically built from text large language model \(TLM\) checkpoints, yet they still suffer from a substantial modality gap\. Prior work has mainly attempted to reduce this gap from the output side by making speech generation more text\-like, but the gap remains\. We argue that the key remaining bottleneck lies on the input side\. We propose TextPro\-SLM, an SLM that makes spoken input more closely resemble that of a prosody\-aware text LLM\. TextPro\-SLM combines WhisperPro, a unified speech encoder that produces synchronized text tokens and prosody embeddings, with an LLM backbone trained to preserve the semantic capabilities of the original TLM while learning paralinguistic understanding\. Experiments show that TextPro\-SLM achieves the lowest modality gap among leading SLMs at both 3B and 7B scales, while also delivering strong overall performance on paralinguistic understanding tasks\. These gains are achieved with only roughly 1,000 hours of audio training data, suggesting that reducing the modality gap from the input side is both effective and data\-efficient\.
+
+## HAPS: Hierarchical LLM Routing with Joint Architecture and Parameter Search
+
+**Authors:** Zihang Tian; Rui Li; Jingsen Zhang; Xiaohe Bo; Wei Huo; Xu Chen
+
+**ID:** 154482 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=DFgCnynDxC>) | [PDF](<https://openreview.net/pdf?id=DFgCnynDxC>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154482>)
+
+Large language model \(LLM\) routing aims to exploit the specialized strengths of different LLMs for diverse tasks\. However, existing approaches typically focus only on selecting LLM architectures, treating candidate models as static black boxes while overlooking parameter adaptation, which can substantially affect task performance\. In this paper, we introduce HAPS, a hierarchical LLM routing framework that jointly searches over model architectures and parameters\.  Specifically, a high\-level router selects among candidate LLM architectures, while a low\-level router generates input\-conditioned LoRA parameters for the selected architecture\.  To couple these two decisions, we design a shared parameter generation mechanism that enables cross\-level knowledge transfer between architecture routing and parameter adaptation\. We further optimize the whole framework with a reward\-augmented training objective\. Extensive experiments show that HAPS consistently outperforms strong routing baselines\. We further conduct broad ablations and analyses on parameter sharing, architectural choices, scalability, and efficiency, providing additional evidence for the effectiveness and practicality of the proposed framework\.  We have released our code at https://anonymous\.4open\.science/r/HAPS\_private\-68CB\.
+
+## OmniMemBench: Towards Scalable Evaluation of Long\-Term Omni\-Modal Agent Memory
+
+**Authors:** Junhan Shi; Qiyi Wang; Xiongwei Wu; Ming Ma; Baoqi Pei; Zhenning Shi; Yong Jiang; Qing Li; Weigao Sun; Yiran Zhong; Steven Hoi
+
+**ID:** 138886 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=yl7Kom0j0v>) | [PDF](<https://openreview.net/pdf?id=yl7Kom0j0v>) | [Official poster](<https://neurips.cc/virtual/2026/poster/138886>)
+
+Multimodal agents that interact with users over days or months must remember not only what was said, but what was shown, heard, and played\. Current memory benchmarks are predominantly text\-only or cover at most two modalities\. Those that do incorporate multimodal content still evaluate with aggregate scores that conflate retrieval and reasoning errors, and provide no mechanism to test whether performance degrades as context scales, leaving our understanding of agent memory fundamentally incomplete\. We introduce OmniMemBench, to our knowledge the first long\-term memory benchmark that spans image, audio, and video in multi\-session dialogue\. Its design is guided by three requirements for reliable evaluation\. First, an anti\-leakage mechanism filters questions answerable from text alone, reducing text\-only solvability to a negligible level\. Second, two LLM\-judged retrieval metrics—Clue Coverage and Entry Relevance—operate on content rather than entry IDs, enabling unified retrieval diagnosis across RAG and memory paradigms\. The gap between retrieval coverage and downstream QA scores further localizes failures to the memorization stage\. Third, content\-isolated distractor injection scales context from 128K to 1M tokens while holding evidence constant, so scalability can be measured without confounding difficulty\. The benchmark covers 103 characters and 6,655 QAs across 8 task types and 4 context tiers\. Evaluating representative long\-context, RAG, and structured\-memory methods, we find that no single paradigm dominates: long\-context models lead overall, yet RAG surpasses them on targeted fact extraction\. Further analysis shows that memory methods retrieve clues at coverage rates comparable to RAG but score substantially lower on QA, revealing that the bottleneck is not what is retrieved but what is lost during memorization\. Caption\-based processing irreversibly discards perceptual details; raw embeddings degrade retrieval accuracy; and scaling the memorization model yields negligible gains\.
+
+## MATO: Multi\-objective Personalized Alignment with Test\-time Optimization for Large Language Models
+
+**Authors:** Linhao Luo; Trang Vu; Van\-Anh Nguyen; Junae Kim; Reza Haffari; Dinh Phung
+
+**ID:** 150723 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=fv2x5XU7kK>) | [PDF](<https://openreview.net/pdf?id=fv2x5XU7kK>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150723>)
+
+Aligning large language models \(LLMs\) with diverse and multifaceted user preferences is a fundamental challenge in personalized AI systems\. Existing multi\-objective alignment methods either rely on costly training or require pre\-trained reward models for each preference, making it difficult for them to adapt to evolving preferences\. Prompt\-based personalization offers a training\-free alternative, but prompting alone often provides limited steerability, as LLMs may overemphasize or overlook certain preferences and fail to give users reliable control over the relative importance of different objectives when conflicts arise, leading to suboptimal alignment\. In this paper, we introduce MATO, a training\-free framework for Multi\-objective personalized Alignment with Test\-time Optimization\. MATO formulates personalization as a test\-time optimization problem that steers the relative importance of multiple objectives through controllable weights during decoding, without modifying model parameters or requiring external reward models\. Specifically, a reward discovery module recovers preference rewards directly from the backbone LLM for diverse objectives specified in natural language, while a weight optimization module dynamically adjusts objective weights based on the user's initial preferences and the partially generated response to balance competing objectives during generation\. The resulting rewards and weights jointly guide an online optimization procedure over the token distribution, enabling better alignment with the target objectives\. Extensive experiments across multiple datasets and backbone LLMs show that MATO consistently outperforms strong baselines, achieving Pareto\-improving multi\-objective alignment and stronger steerability\. These results highlight test\-time optimization as a promising direction for scalable, controllable, and model\-agnostic personalized alignment\.
+
+## Progressive Layer\-wise Supervision: Deep\-to\-Shallow Supervision Annealing for Efficient and Robust Speech Deepfake Detection
+
+**Authors:** Hoan My Tran; Xin Wang; Xuechen Liu
+
+**ID:** 150091 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=kmOSYc5cfb>) | [PDF](<https://openreview.net/pdf?id=kmOSYc5cfb>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150091>)
+
+Speech foundation models pretrained via self\-supervised learning provide powerful representations for deepfake detection, yet we find that standard fine\-tuning exploits only the deepest transformer layers — leaving the majority of the network's capacity discriminatively inert\. Layer\-wise probing of \\textit\{XLS\-R\-128\} reveals that the top two\-thirds of the transformer stack contribute negligibly to anti\-spoofing performance after standard fine\-tuning, a phenomenon we term shallow\-layer dormancy\. We connect this observation to the representational redundancy of pretrained transformers: adjacent layers encode highly similar information, and fine\-tuning without explicit intermediate supervision reinforces rather than breaks this redundancy\. To address this, we propose Progressive Layer\-wise Supervision \(PLS\), a training framework that attaches a shared linear classifier to every transformer layer and schedules layer\-wise loss contributions via an exponentially annealed power weighting\. Early training concentrates supervision on deep layers to preserve the pretrained representational hierarchy; later training progressively redistributes supervision to shallower layers, converting dormant earlier representations into discriminative ones\. Competitive detection \($\\leq9\.25\\%$ average EER\) is achievable on \\emph\{XLS\-R\-128\} at layer 7, which reduces the parameter count from 315M to 101M and exemplifies an early exit mechanism\. Experiments across twelve benchmarks spanning in\-domain, and out\-of\-domain deepfake scenarios show PLS achieves a new state\-of\-the\-art with 239M parameters, outperforming prior methods with larger and more complex architectures\.
+
+## Learning to Commit: Next\-Commit Prediction via Online Supervised Contrastive Reflection
+
+**Authors:** Mo Li; Qitai Tan; Kai Chen; Ting Cao; Yunxin Liu
+
+**ID:** 150227 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=jqSgr9lIkj>) | [PDF](<https://openreview.net/pdf?id=jqSgr9lIkj>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150227>)
+
+Large language model \(LLM\)\-based coding agents achieve strong results on controlled benchmarks yet routinely produce pull requests that real maintainers reject\. The cause is not functional incorrectness but a lack of organicity: generated code ignores project conventions, duplicates internal APIs, and violates implicit architectural constraints\. The latest repository snapshot is insufficient\-it reveals the final codebase state, not the change patterns that shaped it\. We make three contributions\. \(1\) Paradigm: we propose next\-commit prediction as a paradigm for learning agentic coding skill from a repository's own history\-each historical commit is a self\-supervised target whose oracle diff supplies dense supervision\. \(2\) Evaluation: we establish Organicity Evaluation as a measurable objective for coding agents and contribute the Learning to Commit benchmark\-5 curated open\-source GitHub repositories under strict per\-repository temporal splits\-scoring patches along file localisation, internal API reuse, patch bloat, and code\-style consistency\. \(3\) Method: we instantiate the paradigm with the Learning to Commit framework, in which the agent performs supervised contrastive reflection: it blindly attempts each historical commit, contrasts its prediction against the oracle, and incrementally distils a reusable skill document that conditions subsequent generations\. On the Learning to Commit benchmark and on SWE\-bench Pro reframed under our temporal\-split protocol, our framework consistently improves organicity on held\-out future tasks and further lifts test\-pass rates on SWE\-bench Pro, narrowing the gap between benchmark success and real\-world mergeability\.
+
+## Mitigating Knowledge Conflicts in Retrieval\-Augmented Generation via Inference\-Time Representation Editing
+
+**Authors:** Dahyun Jung; Jaehyung Seo; Heuiseok Lim
+
+**ID:** 148202 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=zbapcKkECb>) | [PDF](<https://openreview.net/pdf?id=zbapcKkECb>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148202>)
+
+Retrieval\-Augmented Generation \(RAG\) has been widely adopted to enable Large Language Models \(LLMs\) to ground their responses in external knowledge sources\. Nonetheless, recent studies show that conflicts between the retrieved external knowledge and the model’s parametric knowledge can lead to hallucinatory outputs, and this problem is exacerbated when the retrieved documents contain noise\. In this work, we propose Conflict\-Aware Representation Editing \(CARE\), an inference\-time representation editing method for improving LLM robustness under noisy knowledge conflict settings\. CARE learns a latent editing direction from intermediate representations associated with correct and incorrect generations, and uses this direction to mitigate conflict\-associated activation patterns during inference\. We evaluate CARE across Question Answering \(QA\) benchmarks and LLMs, showing improvements over retrieval\-based and conflict\-mitigation baselines, especially under noisy retrieval conditions\.
 
 ## Efficient Streaming Audio\-Visual Target Speaker Extraction for Real\-World Acoustic Scenes
 
 **Authors:** Wendi Sang; Kai Li; Yifan Li; Jianqiang Huang; Xiaolin Hu
 
-**ID:** 149515\-\-2 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 149515
+**ID:** 149515 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
 [Paper](<https://openreview.net/forum?id=pYHqkfI3QP>) | [PDF](<https://openreview.net/pdf?id=pYHqkfI3QP>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149515>)
 
-_Abstract unavailable from the accessible public sources._
+Streaming audio\-visual target speaker extraction \(AVTSE\) is essential for latency\-sensitive applications\. However, current causal systems face two coupled gaps\. First, standard benchmarks fix the number of speakers at two and ignore the near\-/far\-field interference, reverberation, and sudden noise of real scenes\. Second, high\-performance causal architectures are too heavy for edge deployment\. Lightweight alternatives try to reclaim capacity by repeatedly invoking a small separator, which offsets the savings\. To address the first gap, we release RealSSA, a realistic AVTSE benchmark consisting of RealSSA\-Sim and RealSSA\-Real\. RealSSA\-Sim provides controllable simulated scenes with 2\-6 dynamic near\-/far\-field speakers across four scene types, while RealSSA\-Real provides a held\-out real\-recorded evaluation set\. To address the second gap, we propose Falcon, a causal AVTSE method\. Its Separator performs multi\-scale time\-frequency separation in a single encoder\-\-decoder pass\. We train Falcon with an encoder\-space speaker contrastive loss\. This loss suppresses near\-field leakage at zero inference cost and transfers across backbones\. Falcon achieves state\-of\-the\-art extraction quality on RealSSA\-Sim, LRS2\-2Mix, LRS3\-2Mix, and VoxCeleb2\-2Mix\. Compared with the causal AV\-TFGridNet baseline, it cuts parameters by 91\.9\\%, computation by 20\.2$\\times$, and GPU inference latency by 11\.1$\\times$\. Code and demo are available at https://submission\-falcon\.github\.io/demo/\.
 
-## Bayesian Test\-Time Inference of Task\-Aligned Similarity from Weak Interactive Feedback
+## Sandboxed Coding Agents are Competitive Omni\-modal Task Solvers
 
-**Authors:** Weida Liang; Kenji Kawaguchi
+**Authors:** Dongping Chen; Xuanao Huang; Zhihan Hu; Qingyuan Shi; Dianqi Li; Tianyi Zhou
 
-**ID:** 152715\-\-2 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+**ID:** 148209 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-**Repeated source row:** 152715
+[Paper](<https://openreview.net/forum?id=zYMvOwt5bN>) | [PDF](<https://openreview.net/pdf?id=zYMvOwt5bN>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148209>)
 
-[Paper](<https://openreview.net/forum?id=QtmggfhlQ9>) | [PDF](<https://openreview.net/pdf?id=QtmggfhlQ9>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152715>)
+As multimodal LLMs increasingly emphasize video and audio, a common assumption is that solving such tasks calls for native omnimodal models\. We show that this is not always necessary: coding agents equipped with only text\+vision and a sandboxed tool\-using interface can perform competitively with, and in several settings outperform, SOTA native omnimodal models and predefined multimodal agent scaffolds across multiple audio\-video benchmarks\. Our trajectory analysis suggests that their advantage comes from coding agents writing code and orchestrating tools to retrieve relevant content from transcripts, frames, and other non\-textual modality signals from raw inputs\. This effectively converts omnimodal tasks into evidence retrieval and information processing problems, avoiding the inefficiency of ingesting entire videos or audio streams into context\. To characterize remaining limitations, we propose a failure taxonomy and a process\-level analysis of tool\-use traces, and find that simple skill injection, including human\-written skills and self\-distilled skills from execution logs, can substantially improve performance over the no\-skill baseline\. To examine whether such capability can be elicited in open\-source models, we further introduce Code\-X, a complete training recipe with the OmniCoding trajectory dataset and verifiable reward, providing an exploratory baseline on Qwen\-3\.5\-9B and Qwen\-3\.6\-27B\. Finally, given the maturity of many\-modality understanding, we argue that the more meaningful frontier lies in many\-modality processing, and introduce TerminalBench\-O, the first process\-level benchmark designed for coding agents on real\-world omnimodal processing tasks\. Together, our findings open new directions for omnimodal content processing and evaluation\.
 
-Large language model systems repeatedly make test\-time decisions by comparing similarity\. They retrieve exemplars, rerank candidates, and choose revisions\. But similarity is not unique: a candidate can be close lexically, semantically, structurally, or stylistically, while only one of these axes may matter for the current instance\. We propose BASIS\~\(Bayesian Axis Selection via Interactive Signals\), a training\-free Bayesian framework that treats weak feedback as evidence about this latent task\-aligned axis\. BASIS maintains a posterior over candidate targets and similarity axes\. It updates this posterior from scalar scores, pairwise preferences, or verifier outputs, and then chooses future probes by expected information gain\. In a finite noisy similarity model, we show that fixed\-axis and fixed\-mixture rules can remain suboptimal under axis shift\. Across concept recovery, reasoning exemplar selection, response refinement, and adversarial distractors, BASIS consistently outperforms stronger rerankers, static mixtures, and compute\-matched best\-of\-$N$ search under the same candidate pools and feedback budgets\. The average gains are moderate because all methods share the same backbone, candidate pools, and feedback signals\. Under axis shift, however, the gap widens substantially, showing that latent\-axis inference is not fully replaced by better scoring or more search alone\.
+## What Do Audio Models Really Hear? Layer Selection and Mechanistic Structure in Sound Representations
 
-## Frontier Coding Agents Use Metaprogramming to Adapt to Unfamiliar Programming Languages
+**Authors:** Arnesh Batra
 
-**Authors:** Aman Sharma; Sushrut Thorat; Paras Chopra
+**ID:** 151749 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
 
-**ID:** 152963\-\-2 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+[Paper](<https://openreview.net/forum?id=YNzJ1MzFGS>) | [PDF](<https://openreview.net/pdf?id=YNzJ1MzFGS>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151749>)
 
-**Repeated source row:** 152963
+Layer\-wise depth dependence is known for speech SSL, but it remains unclear how readout depth changes across audio pretraining paradigms and how that choice can support pruning rather than only post hoc probing\. We present the Audio Interpretability Atlas, a readout\-centered diagnostic study over a wide variety of frozen encoders and complementary sound, music, and speech benchmarks\. The atlas connects layer wise transfer, CKA, geometry priors, classical descriptors, sparse\-feature concentration, transcoder routing, robustness, steering, and targeted feature ablation on the same encoder\-layer\-task cells\. Its operational goal is to identify the earliest layer or prefix that preserves task evidence, so later blocks can be treated as pruning candidates and, when labels are available, learned layer weighting can be restricted to the selected prefix\. A consistent pretraining\-associated pattern emerges: audio\-text encoders expose compact upper\-stage category features, ASR\-supervised encoders route speech information densely into mid\-to\-late layers, and masked or denoising SSL exposes reusable acoustic structure earlier\. Final\-layer extraction loses at least 10 score points in about half of evaluated encoder\-task settings, with the largest single\-layer gaps reaching 24\-\-38 points; speech\-affect readouts, by contrast, often justify later depth\. In low\-resource ASR, \\textsc\{QuickLayer\}'s label\-free geometry mode, based on isotropy and participation ratio, improves 11 of 12 language\-encoder settings, averaging 21\.3\\% relative CER reduction, while few\-shot probes recover 11\-\-13 points over final\-layer extraction\. Sparse features, transcoders, perturbations, and interventions then turn selected layers into audit records, identifying when a pruned readout is accurate, stable, localized, and editable\.
 
-[Paper](<https://openreview.net/forum?id=P4Ev2InDix>) | [PDF](<https://openreview.net/pdf?id=P4Ev2InDix>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152963>)
+## Reconsidering Positional Supervision in Masked Diffusion Language Model Training
 
-LLM\-based coding agents are usually evaluated in familiar software settings: mainstream languages, common libraries, and public repositories\. These benchmarks remain important, but they can hide how agents behave when the language itself is unfamiliar\. We evaluate six contemporary coding agents on four esoteric programming languages using a sequential setup with file editing, local execution, and hidden\-test grading\. Our protocol exposes capability differences between these agents that mainstream coding and agentic benchmarks such as SWE\-Bench Verified and Terminal\-Bench 2\.0 compress into much narrower bands\. We observe that the strongest agents, Claude Opus 4\.6 and GPT\-5\.4 xhigh, often avoid writing the target language directly\. On Brainfuck and Befunge\-98, they write Python programs that generate target\-language code and debug those generators locally\. Forbidding this metaprogramming strategy causes large performance drops\. Text guidance distilled from this strategy does not materially improve weaker agents\. In contrast, Opus\-derived Python helper code for building generators, with no solved benchmark programs or hidden\-test answers, sharply improves Sonnet 4\.6 and GPT\-5\.4 mini on the same problems, while Haiku 4\.5 remains low\. More interpreter calls and output tokens improve stronger agents but leave weaker agents near their original performance, indicating that these resources amplify useful strategies rather than create them\. Together, these results show that strong coding agents adapt to unfamiliar languages by using tools, feedback, and workspace state to build a working model of the target language\. Metaprogramming is the clearest case, but the broader gap is constructing and debugging a strategy that works under the target language's rules\.
+**Authors:** Mengyu Ye; Keito Kudo; Ryosuke Takahashi; Jun Suzuki
 
-## When Reasoning Meets Its Laws
+**ID:** 152472 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-**Authors:** Junyu Zhang; Yifan Sun; Tianang Leng; Jingyan Shen; Liu Ziyin; Paul Liang; Huan Zhang
+[Paper](<https://openreview.net/forum?id=SoXwBAJ8w9>) | [PDF](<https://openreview.net/pdf?id=SoXwBAJ8w9>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152472>)
 
-**ID:** 155285\-\-2 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+Masked diffusion language models \(MDLMs\) generate text by unmasking tokens in parallel and have recently emerged as alternatives to autoregressive language models\.  They can be viewed as parallel decoders trained with a position\-wise cross\-entropy \(CE\) loss, the same setup as non\-autoregressive translation \(NAT\)\.  In NAT, CE\-trained parallel decoders have been argued to be sensitive to small positional shifts, since CE penalizes them harshly\. We ask whether CE\-trained MDLMs are similarly sensitive to such shifts under iterative decoding\. To probe this, we apply a controlled intervention that introduces them during decoding\. On LLaDA\-8B\-Instruct with Arena\-Hard, displacing as little as 1\\% of generated tokens by one position substantially reduces win rates against the unintervened model, showing that MDLMs are sensitive to such small shifts under iterative parallel decoding\.  Motivated by this, we adapt connectionist temporal classification \(CTC\), an alignment\-flexible objective known to mitigate it there, to MDLM supervised fine\-tuning\.  By relaxing the strict position\-wise match that CE imposes, CTC gives the loss room to absorb small positional shifts; concretely, we modified CTC objective to use a special \\ token that absorbs positional uncertainty between target tokens and output positions, and a updated collapse map that preserves target surface forms\. Across four open\-ended generation benchmarks, the resulting model consistently improves over both the original model and a matched cross\-entropy\-trained baseline, with statistically significant gains on all four\. These results identify training\-side alignment flexibility as a useful design dimension for MDLM SFT, complementary to the inference\-time approaches explored in prior work\.
 
-**Repeated source row:** 155285
+## AVENUE: Audio\-Video Editing Understanding and Evaluation
 
-[Paper](<https://openreview.net/forum?id=6ha7HGdygP>) | [PDF](<https://openreview.net/pdf?id=6ha7HGdygP>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155285>)
+**Authors:** Hayeon Kim; Yoojin Jang; Jaejun Yoo
 
-Despite the superior performance of Large Reasoning Models \(LRMs\), their reasoning behaviors are often counterintuitive, \*e\.g\.\*, excessive reasoning on simple questions or insufficient reasoning on complex ones, leading to suboptimal reasoning capabilities\. This paper presents the Laws of Reasoning \(LoRe\), a unified framework that formalizes intrinsic reasoning patterns in ideal LRMs\. We first propose \*compute law\* with the hypothesis that the reasoning compute should scale linearly with question complexity\. Beyond compute, we extend LoRe with a supplementary \*accuracy law\*, positing exponential decay of accuracy with increasing complexity\. Since the complexity is difficult to quantify in practice, we approximate these hypotheses via two tractable properties, \*monotonicity\* and \*compositionality\*\. We therefore introduce LoRe\-Bench, a benchmark that systematically measures these properties for large reasoning models\. Evaluation shows that most reasoning models exhibit reasonable monotonicity but lack compositionality\. In response, we develop an effective finetuning approach that enforces compute\-law compositionality\. Extensive empirical studies demonstrate that better compliance with compute laws yields consistently improved reasoning performance on multiple benchmarks, and uncovers synergistic gains across properties and laws\.
+**ID:** 138887 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-## Speech Tokenizers are Vulnerable:  Transferable Semantic Attack and Robust Tokenizer
+[Paper](<https://openreview.net/forum?id=yhjWPeN5lp>) | [PDF](<https://openreview.net/pdf?id=yhjWPeN5lp>) | [Official poster](<https://neurips.cc/virtual/2026/poster/138887>)
 
-**Authors:** Zhisheng Zhang; Yifan Mi; Yixuan Zhou; Haiyun Li; dongfu song; Shengbo Cai; Ziang Xu; Jie Hao; Zhiyong Wu
+Audio\-video \(AV\) editing aims to modify audio and video content according to a target prompt\. Unlike single\-modality editing, AV editing requires models to infer a modality\-selective edit scope from the prompt alone: determining not only what should change, but also which modality should be preserved\. Faithfully evaluating such models therefore requires both \(i\) benchmarks that span diverse edit types and modality categories, and \(ii\) evaluation that is itself modality\-aware and sample\-specific\. However, existing AV editing benchmarks provide limited coverage of edit types and modality combinations, while current evaluation systems are often modality\-blind and sample\-agnostic, making it difficult to assess whether models faithfully preserve the unintended modality\. To address these gaps, we introduce AVENUE, Audio\-Video EditiNg Understanding and Evaluation, comprising two contributions: \(1\) a benchmark of 1,291 source clips and 7,957 editing instructions across audio\-targeted, video\-targeted, and AV\-coupled edit types, curated and human\-verified from VGGSound; and \(2\) a sample\-specific, modality\-aware evaluation framework that specifies, for each sample, both the intended change and the content that must remain intact\. We evaluate representative AV editing models spanning three editing paradigms — joint, sequential, and separate — providing the first systematic analysis of modality\-selectivity across paradigms\. Our findings reveal a fundamental open challenge: when editing one modality, existing models frequently induce unintended changes in the other, regardless of paradigm\. AVENUE provides a benchmark and modality\-aware evaluation framework to drive progress toward more controllable AV editing models\.
 
-**ID:** 149645\-\-2 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
+## MemCoRe: Recovering Evidence from Progressively Compressed Factual Knowledge for Agent Memory
 
-**Repeated source row:** 149645
+**Authors:** Zhenyuan Zhang; Jia Xianzhang; Zhiqin Yang; Zhenbo Song; Wei Xue; Sirui Han; Yike Guo
 
-[Paper](<https://openreview.net/forum?id=oVx8Urehhw>) | [PDF](<https://openreview.net/pdf?id=oVx8Urehhw>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149645>)
+**ID:** 155641 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-_Abstract unavailable from the accessible public sources._
+[Paper](<https://openreview.net/forum?id=44OXi5apfR>) | [PDF](<https://openreview.net/pdf?id=44OXi5apfR>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155641>)
 
-## WordEval: Evaluating Word\-Native Operation Fidelity in Document Editing
+Memory systems enable LLM agents to consolidate and retrieve relevant evidence from the factual knowledge accumulated through growing interaction histories for downstream reasoning\. Existing approaches have explored diverse strategies for organizing and compressing these histories\. However, balancing compression with retrieval effectiveness remains challenging: retaining too much content can cause relevant evidence to be obscured by redundant entries, while discarding too aggressively may remove content that later proves relevant\. This amounts to a tradeoff between compressing redundancy and preserving enough structure to retrieve target evidence, as formalized by the information bottleneck\. To this end, we propose \*\*MemCoRe\*\*, which organizes memory as a compression hierarchy where each level compresses redundancy further while retaining the structure needed for retrieval at that level\. In this hierarchy, evidence is progressively compressed from detailed records through extracted keywords to topic groups\. This enables retrieval to locate target evidence by searching across levels of the hierarchy\. Comprehensive experiments demonstrate that MemCoRe outperforms existing state\-of\-the\-art baselines\.
 
-**Authors:** Jinyoung Park; Yupan Huang; Shimin Zhang; Jiayu Ding; Yilin Jia; Yuzhong Zhao; Tengchao Lv; Wenshan Wu; Shaohan Huang; Nan Yang; Xiangyang Zhou; Dongdong Zhang; Li Dong; Lei Cui; Sun Mao; Xun Wang; Tao Ge; Huitian Jiao; Si\-Qing Chen; Changick Kim; Furu Wei
+## UniClawBench: A Universal Benchmark for Proactive Agents on Real\-World Tasks
 
-**ID:** 139228\-\-2 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
+**Authors:** Zhekai Chen; CHENGQI DUAN; Kaiyue Sun; Bohao Li; Yuqing Wang; Manyuan Zhang; Xihui Liu
 
-**Repeated source row:** 139228
+**ID:** 139060 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=dfw3UZyY85>) | [PDF](<https://openreview.net/pdf?id=dfw3UZyY85>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139228>)
+[Paper](<https://openreview.net/forum?id=nVoCk7Bf1E>) | [PDF](<https://openreview.net/pdf?id=nVoCk7Bf1E>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139060>)
 
-_Abstract unavailable from the accessible public sources._
-
-## Differentiable Bit\-Widths: Co\-optimizing Pruning and Quantization via SVD for Ultra\-Efficient LLM Compression
-
-**Authors:** Hankyul Kang; Jongbin Ryu
-
-**ID:** 148406\-\-2 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 148406
-
-[Paper](<https://openreview.net/forum?id=y5tDLoawiV>) | [PDF](<https://openreview.net/pdf?id=y5tDLoawiV>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148406>)
-
-SVD\-based pruning and quantization have recently emerged as a promising strategy for the ultra\-efficient compression of large language models\. In these methods, compression is performed in two stages: components are first truncated, and the remaining ones are subsequently quantized\. Although this decoupled pipeline benefits from both pruning and quantization, it requires separate optimization for each stage and fails to fully exploit their balance, which can lead to suboptimal performance under aggressive compression\. To address this limitation, we propose a new LLM compression method that co\-optimizes pruning and quantization in a unified framework\. Our key idea is a differentiable method for learning component\-wise bit\-widths, allowing less important components to be assigned 0\-bit precision and pruned away\. Notably, our method performs favorably against two\-stage baselines, even when subjected to extreme quantization settings \($1\.61$ bits\) designed for ultra\-efficiency\. The code will be publicly released upon acceptance\.
-
-## Proactive Instance Navigation with Comparative Judgment for Ambiguous User Queries
-
-**Authors:** Junhyuk Kwon; Seungjoon Lee; Hyejin Park; Kyle Min; Jungseul Ok
-
-**ID:** 153423\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 153423
-
-[Paper](<https://openreview.net/forum?id=LR1XtBSs7q>) | [PDF](<https://openreview.net/pdf?id=LR1XtBSs7q>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153423>)
-
-Natural\-language instance navigation becomes challenging when the initial user request does not uniquely specify the target instance\.  A practical agent should reduce the user's burden by actively asking only the information needed to distinguish the intended target from similar distractors, rather than requiring a detailed description upfront\.  Existing approaches often fall short of this goal: they may stop at the first plausible candidate before sufficiently exploring alternatives, or, even after collecting multiple candidates, ask about the target's attributes derived from individual candidates rather than questions selected to distinguish candidates in the pool\. As a result, despite the dialogue, the agent may still fail to distinguish the target from distractors, leading to premature decisions and lengthy user responses\. We propose Proactive Instance Navigation with Comparative Judgment \(ProCompNav\), a two\-stage framework that first constructs a candidate pool and then identifies the target through comparative judgment\.  At each round, ProCompNav extracts an attribute\-value pair that splits the current pool, asks a binary yes/no question, and prunes all inconsistent candidates at once\. This reframes disambiguation from open\-ended target description to pool\-level discriminative questioning, where each question is chosen to narrow the candidate set\.  On CoIN\-Bench, ProCompNav improves Success Rate over interactive baselines with the same minimal input and non\-interactive baselines with detailed descriptions, while substantially reducing Response Length\.  ProCompNav also achieves state\-of\-the\-art Success Rate on TextNav, suggesting that comparative judgment is broadly useful for instance\-level navigation among similar distractors\.
+The rapid development of large language models and multimodal large language models has accelerated the emergence of proactive agents capable of operating everyday tools and assisting users in real\-world environments\. However, existing benchmarks struggle to evaluate such agents effectively, as they often rely on sandboxed environments and single\-turn evaluation paradigms\. Moreover, their scenario\-based task taxonomies mix multiple model capabilities within the same task category, making it difficult to identify the root causes of agent failures\. To address these limitations, we introduce UniClawBench, the first capability\-driven benchmark designed to evaluate proactive agents in dynamic, real\-world settings\. UniClawBench is built around five foundational model capabilities: Skill Usage, Exploration, Long\-Context Reasoning, Multimodal Understanding, and Cross\-Platform Coordination\. Based on these capabilities, we design 400 bilingual real\-world tasks\. Unlike previous benchmarks that rely on static, pre\-recorded answers, our benchmark evaluates agents in live Docker containers using fine\-grained, step\-by\-step completion checkpoints\. Furthermore, we design a closed\-loop evaluation strategy comprising an executor agent, a hidden supervisor agent, and a user agent to simulate realistic multi\-turn human feedback without leaking grading criteria\. To disentangle base model capabilities from framework\-level design choices, we evaluate state\-of\-the\-art models under multiple agent frameworks\. Through comprehensive comparisons across both models and frameworks, we show how base model capabilities and agent framework designs jointly shape performance in real\-world environments\.
 
 ## VisInteract: Towards Dynamic Interactive Text\-to\-Visualization under Imperfect Queries
 
@@ -1849,6 +1055,16 @@ Natural\-language instance navigation becomes challenging when the initial user 
 [Paper](<https://openreview.net/forum?id=taklyDq3WJ>) | [PDF](<https://openreview.net/pdf?id=taklyDq3WJ>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148995>)
 
 Real\-world visualization requests are routinely ambiguous, incomplete, or factually incorrect, yet existing Text\-to\-Visualization \(Text\-to\-Vis\) systems assume well\-specified inputs and produce charts in a single pass\. When queries are imperfect, a system must interact with the user to recover the true intent, but no benchmark or method supports this dynamic process\. We introduce VisInteract, a new paradigm that reframes Text\-to\-Vis as interaction\-driven intent recovery, and VisInteract\-Bench, to our knowledge, that is the first benchmark for dynamic interactive Text\-to\-Vis, featuring controlled imperfection injection, a leakage\-controlled User Agent for realistic multi\-turn feedback, and dual\-perspective \(code and chart\) automated evaluation\. On the algorithmic side, we propose Vis\-MCTS, a Monte Carlo Tree Search \(MCTS\) enhanced method, introducing improvements over classical MCTS, that Progressive Widening to tame the unbounded tool\-argument space in tree search, cross\-rollout information sharing so clarifications and critiques benefit the entire search tree, and Dimension\-Aware Reward Decomposition that routes scalar user feedback along data\-fidelity, visual\-design, and intent\-alignment dimensions to resolve credit assignment across heterogeneous actions\. Extensive Experiments across two LLM backbones show that Vis\-MCTS consistently outperforms all Text\-to\-Vis baselines, improving end\-to\-end task success by 13\.40\\%\-\-16\.27\\% over the strongest interactive baseline and by more than 5\\times over non\-interactive ones\.
+
+## Speak Early: Speculative Speech Generation for Low\-Latency SpeechLLMs
+
+**Authors:** Tianyuan Jiang; Yongheng Deng; Ju Ren
+
+**ID:** 152241 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=UXN4JDGgR2>) | [PDF](<https://openreview.net/pdf?id=UXN4JDGgR2>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152241>)
+
+Speech large language models \(SpeechLLMs\) have emerged as a new interface for human–AI interaction, enabling real\-time spoken responses\. Time\-to\-First\-Speech \(TTFS\) is a critical latency metric in such interactive SpeechLLM systems, directly determining perceived responsiveness\. While prior work reduces TTFS by accelerating autoregressive decoding, we show that diffusion\-based speech synthesis contributes a comparable portion of the latency\. This reveals a fundamental limitation of existing approaches that optimize decoding alone, and indicates that optimizing either LLM decoding or speech synthesis in isolation is insufficient\. This paper proposes $\\texttt\{SpecSpeak\}$, a new SpeechLLM inference paradigm that overlaps LLM decoding with speech synthesis to reduce the TTFS latency\. $\\texttt\{SpecSpeak\}$ introduces a lightweight draft model to generate a prefix quickly\. Instead of waiting for fully verified tokens like speculative decoding, $\\texttt\{SpecSpeak\}$ triggers speech synthesis early using draft tokens, while a target model performs parallel verification and correction\. To handle inconsistencies, $\\texttt\{SpecSpeak\}$ introduces a verification\-aware reuse mechanism that adaptively preserves intermediate diffusion states based on prefix agreement, enabling efficient correction without restarting synthesis\. Extensive experiments demonstrate that $\\texttt\{SpecSpeak\}$ reduces the TTFS latency of SpeechLLMs by 18\\%\-\-30\\%, while preserving response correctness and speech quality\. Code will be released upon acceptance\.
 
 ## Selective Rollout: Mid\-Trajectory Termination for Multi\-Sample Agent RL
 
@@ -1870,135 +1086,45 @@ Group\-relative RL training \(GRPO\) samples a small group of parallel rollouts 
 
 In tool\-integrated reinforcement learning with verifiable rewards \(RLVR\), sequence\-level verifier signals are issued for trajectories whose outcomes are determined by a sparse subset of tokens—tool names, argument keys, and argument values\. Standard RLVR assigns the same advantage to every token in a rollout, diluting credit at precisely the positions that matter\. We propose \*\*Correctable Fork Tokens \(CFT\)\*\*, which decomposes selective credit assignment into two subproblems: \*where\* to update, and \*how much\* to update at those positions\. To this end, CFT introduces a training\-only answer\-conditioned branch sharing parameters with the student policy\. The key insight is that conditioning on the ground\-truth answer concentrates the model's distribution at decision\-fork positions, providing hindsight localization without additional parameter capacity or imitation targets\. Critically, this benefit requires accurate answer information: a larger\-capacity teacher without the answer fails to replicate these gains, confirming that privileged answer information—not teacher capacity—is the active ingredient\. CFT uses this entropy reduction \($IG\_t$\) to identify correctable fork positions, then rescales token\-level credit at those positions while preserving the verifier advantage as the sole signal for update direction\. On BFCL v3/v4, CFT improves multi\-turn accuracy by \*\*4\.2/6\.5\*\* pp and overall accuracy by \*\*3\.1/2\.2\*\* pp over GRPO; it further surpasses On\-policy distillation—which employs a larger Expert Model as teacher—by \*\*3\.6/6\.7\*\* pp on multi\-turn, confirming that answer\-conditioned fork localization rather than teacher capacity drives the improvement\. On Tau3, the average score improves by \*\*8\.3\*\* pp\. We additionally present a three\-level structured verifier for tool\-call settings; ablations confirm that finer\-grained verifier feedback and selective token credit are complementary\. Our reproducible implementation is available at \[https://anonymous\.4open\.science/r/CFT\]\(https://anonymous\.4open\.science/r/CFT\)\.
 
-## SWE\-Protégé: Learning to Selectively Collaborate With an Expert Unlocks Small Language Models as Software Engineering Agents
+## WAXAL: A Large\-Scale Multilingual African Language Speech Corpus
 
-**Authors:** Patrick Tser Jern Kon; Archana Pradeep; Ang Chen; Alex Ellis; Warren Hunt; Zijian Wang; John Yang; Samuel Thompson
+**Authors:** MohamedElfatih MohamedKhair; Emmanuel Asiedu Brempong; Subhashini Venugopalan; Abdoulaye Diack; Perry Nelson; Prince Mireku; Tavonga Siyavora; Pooja Rao; Uche Okonkwo; Angela Nakalembe; Abhishek Bapna; Aisha Walcott\-Bryant
 
-**ID:** 155936 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+**ID:** 139649 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=1gT9qIbj9f>) | [PDF](<https://openreview.net/pdf?id=1gT9qIbj9f>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155936>)
+[Paper](<https://openreview.net/forum?id=DRVbx9ZqCB>) | [PDF](<https://openreview.net/pdf?id=DRVbx9ZqCB>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139649>)
 
-Small language models \(SLMs\) offer compelling advantages in cost, latency, and adaptability, but have so far lagged behind larger models on long\-horizon software engineering tasks such as SWE\-bench, where they suffer from pervasive action looping and low resolution rates\. We introduce SWE\-Protégé, a post\-training framework that reframes software repair as an expert–protégé collaboration problem\. In SWE\-Protégé, an SLM remains the sole decision\-maker while learning to selectively seek guidance from a strong expert model, recognize stalled states, and follow through on expert feedback\. Our approach combines supervised fine\-tuning on expert\-augmented trajectories with agentic reinforcement learning that explicitly discourages degenerative looping and unproductive expert collaboration\. We lightly post\-train Qwen2\.5\-Coder\-7B\-Instruct to achieve 42\.4% Pass@1 on SWE\-bench Verified, a \+25\.4% improvement over the prior SLM state of the art, while using expert assistance sparsely \(≈ 4 calls per task and 11% of total tokens\)\.
+The advancement of speech technology has predominantly favored high\-resource languages, creating a significant digital divide for speakers of most Sub\-Saharan African languages\. To address this gap, we introduce WAXAL, a large\-scale, openly accessible speech dataset for 24 languages \(spanning 19 for ASR and 13 for TTS, with overlaps\) representing over 100 million speakers\. The collection consists of an Automatic Speech Recognition \(ASR\) dataset containing approximately 2,340 hours of transcribed, image\-prompted natural speech \(over 14,100 hours of total collected audio\) from a diverse range of speakers, and a Text\-to\-Speech \(TTS\) dataset with over 235 hours of high\-quality, single\-speaker studio recordings of phonetically balanced scripts\. Crucially, this effort was executed in partnership with four African academic and community organizations, with the explicit goal of building the local ecosystem for speech technology and seeding data collection capabilities within these institutions\. To demonstrate the dataset's utility, we benchmark three architecturally distinct ASR models\-\-\-Gemma 3n\-2B, Whisper\-Large\-v3, and MMS\-1b\-all\-\-\-across the 19 ASR languages\. Fine\-tuning on WAXAL yields substantial improvements, reducing the macro\-average Word Error Rate \(WER\) by up to 61\\% \(e\.g\., from 1\.23 to 0\.48 for Whisper\)\. Models fine\-tuned solely on WAXAL also generalize to the independently collected FLEURS benchmark, confirming the dataset's value for domain\-transferable ASR adaptation\. Furthermore, we employ an LLM\-as\-judge framework to evaluate semantic meaning preservation, demonstrating that fine\-tuned predictions successfully capture core intents of native speakers\. The WAXAL datasets are released at https://huggingface\.co/datasets/google/WaxalNLP under the CC\-BY\-4\.0 license to catalyze research and the development of inclusive speech technologies for speakers of African languages\.
 
-## UniClawBench: A Universal Benchmark for Proactive Agents on Real\-World Tasks
+## PCEval: A Benchmark for Evaluating Physical Computing Capabilities of Large Language Models
 
-**Authors:** Zhekai Chen; CHENGQI DUAN; Kaiyue Sun; Bohao Li; Yuqing Wang; Manyuan Zhang; Xihui Liu
+**Authors:** Inpyo Song; Eunji Chon; Jangwon Lee
 
-**ID:** 139060\-\-2 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
+**ID:** 138916 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-**Repeated source row:** 139060
+[Paper](<https://openreview.net/forum?id=x2Gkudl2S5>) | [PDF](<https://openreview.net/pdf?id=x2Gkudl2S5>) | [Official poster](<https://neurips.cc/virtual/2026/poster/138916>)
 
-[Paper](<https://openreview.net/forum?id=nVoCk7Bf1E>) | [PDF](<https://openreview.net/pdf?id=nVoCk7Bf1E>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139060>)
+Large Language Models \(LLMs\) have demonstrated remarkable capabilities across various domains, including software development, education, and technical assistance\.  However, a fundamental question remains unresolved: can LLMs reason about physical constraints—the rules governing how abstract computations must map onto real\-world hardware?  This capability is distinct from, and arguably more demanding than, software generation alone, as it requires grounding language understanding in spatial, electrical, and topological constraints\.  To address this gap, we introduce PCEval \(Physical Computing Evaluation\), a benchmark and evaluation protocol for physical computing education that enables fully automatic, execution\-based assessment of LLMs across both logical and physical implementation artifacts, without human grading\. Our evaluation framework assesses LLMs in generating circuits and producing compatible code across varying levels of project complexity\. Through comprehensive testing of 14 leading models, PCEval provides the first reproducible and automatically validated empirical assessment of LLMs' ability to reason about fundamental hardware implementation constraints within a simulation environment\. Our findings reveal that while LLMs perform well in code generation and logical circuit design, they struggle significantly with physical breadboard layout creation, particularly in managing proper pin connections and avoiding circuit errors\. PCEval advances our understanding of AI assistance in hardware\-dependent computing environments and establishes a foundation for developing more effective tools to support physical computing education\.
 
-_Abstract unavailable from the accessible public sources._
+## Know Where You Stand: Memory\-Source Choice in Long\-Context Dialogue Agents
 
-## RealityTest: How People Probe AI Identity and Whether Models Disclose It
+**Authors:** Caishen Zhou; Yihong Tang; Xuefeng Bai; Kehai Chen; Min zhang
 
-**Authors:** Anna Gausen; Sarenne Wallbridge; Bessie O&amp;amp;\#x27;Dell; Christopher Summerfield; Hannah Rose Kirk
+**ID:** 150463 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-**ID:** 139210\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+[Paper](<https://openreview.net/forum?id=hqutYPsYtb>) | [PDF](<https://openreview.net/pdf?id=hqutYPsYtb>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150463>)
 
-**Repeated source row:** 139210
+Memory enables long\-context dialogue agents to maintain user state across many turns, but it also introduces a fundamental source\-choice problem: grounding the response in the immediate context or retrieved prior memory? A wrong choice incurs two complementary costs: neglecting valid aged\-out evidence, or overwriting sufficient context with stale memory\.  Existing systems and benchmarks largely conflate retrieval with source choice, relying on the model to resolve it implicitly and leaving this critical decision largely unexplored\.  In this paper, we introduce MSBench, a controlled benchmark that isolates source choice by pairing questions answerable exclusively from context with those requiring prior memory\. Under this protocol, strategies that depend on the model's implicit judgment exhibit sharply degraded performance, exposing the limits of leaving source choice ungoverned\.  To this end, we propose the Memory\-Source Reasoner \(MSR\), which frames source choice as an explicit metacognitive decision: it reasons about contextual sufficiency, answers directly when appropriate, and selectively retrieves missing evidence otherwise\. Experimental results show that MSR achieves the best overall accuracy and selection accuracy across four answer backbones\. On the primary GPT\-5\-mini run, it improves over the best non\-MSR baselines by 12\.6 points in overall accuracy and 6\.3 points in selection accuracy\. Our benchmark, code, prompts, and evaluation scripts are available at https://anonymous\.4open\.science/r/msbench\-msr\-0C72\.
 
-[Paper](<https://openreview.net/forum?id=eUlBhLa5hL>) | [PDF](<https://openreview.net/pdf?id=eUlBhLa5hL>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139210>)
+## LatentRAG: Latent Reasoning and Retrieval for Efficient Agentic RAG
 
-AI systems are increasingly deployed in conversational settings where users may be uncertain whether they are speaking with a human or an AI\. Despite mounting regulatory attention to this known safety risk, existing evaluations of AI disclosure are typically English\-only, based on machine\-generated questions, and restricted to text\. We present RealityTest to comprehensively test whether AI systems disclose their identity when asked\. The benchmark is the first large\-scale multimodal and multilingual evaluation, grounded in human data on how people actually encounter and question AI identity in the real\-world\. Alongside the benchmark, we release the underlying dataset of 3,152 identity\-probing queries collected from $\\textasciitilde$750 participants across 49 countries and five languages, in text and speech scenarios\. We find that only 31\\% of people ask about identity directly, and that the questions people ask are far more diverse than machine\-generated queries\. We test 17 text and 6 speech models, and find substantial variation in disclosure behaviour\. However, a single suppression instruction reduces disclosure rates to below 30\\%, even in the best\-performing models\. Validating our investment in diverse, human\-grounded evaluation data, we find that how the question is phrased and the context of the conversation matter more for disclosure than which model is being tested\. Safety evaluations built on narrow or synthetic query sets risk mischaracterising how models behave in realistic deployment settings\.
+**Authors:** Yijia Zheng; Marcel Worring
 
-## TRACE: Tourism Recommendation with Accountable Citation Evidence
+**ID:** 153688 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-**Authors:** Zixu Zhao; SIJIN WANG; Yu Hou; YUANYUAN XU; Yufan Sheng; Xike Xie; Wenjie Zhang; Won\-Yong Shin; Xin Cao
+[Paper](<https://openreview.net/forum?id=JWv9VTeebX>) | [PDF](<https://openreview.net/pdf?id=JWv9VTeebX>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153688>)
 
-**ID:** 139280\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 139280
-
-[Paper](<https://openreview.net/forum?id=ZmCqSnVZ8k>) | [PDF](<https://openreview.net/pdf?id=ZmCqSnVZ8k>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139280>)
-
-Tourism is a high\-stakes setting for conversational recommender systems \(CRS\): a plausible\-sounding suggestion can waste real money and trip time once a traveler acts on it\. Existing CRS benchmarks primarily evaluate systems with a single Recall@$k$ score over entity mentions, and tourism\-specific resources add spatial or knowledge\-graph context, yet none of them couple multi\-turn recommendation with verbatim review\-span evidence and rejection recovery\. This leaves an evaluation gap for tourism recommendation that is simultaneously \*trustworthy\*, \*verifiable\*, and \*adaptive\*: recommend the right point of interest \(POI\) for multi\-aspect preferences \(such as cuisine, price, atmosphere, walking distance\), justify each suggestion with verifiable evidence from prior visitors so the traveler can act without trial and error, and recover when the first recommendation is rejected mid\-dialogue\. We introduce \*\*TRACE\*\*, where each item is \*a multi\-turn tourism recommendation dialogue with review\-span citations and explicit rejection turns\*: 10,000 dialogues over 2,400 Yelp POIs and 34,208 reviews across eight U\.S\. cities, paired with 14 retrieval, planning, and LLM baselines, along with 25 metrics organized under \*Accuracy\*, \*Grounding\*, and \*Recovery\*\. Across these baselines, TRACE reveals the \*\*Three\-Competency Gap\*\*: LLM Zero\-Shot leads in closed\-set Recall@1 and rejection recovery but cites less densely than retrievers; non\-LLM retrievers achieve surface\-verbatim grounding but with low accuracy; Multi\-Review Synthesis fails on Recovery\. The Grounding Score agrees with human citation precision \(Spearman $\\rho = \+0\.80$, $p &lt; 10^\{\-20\}$\), and paired $t$\-tests reproduce the per\-baseline ranking \($p &lt; 0\.01$ on the dominant contrasts\)\. TRACE reframes accountable tourism recommendation as a joint target \(right POI, verifiable evidence, adaptive repair\) rather than a single\-axis leaderboard\.
-
-## WorldSpeech: A Multilingual Speech Corpus from Around the World
-
-**Authors:** Antonis Asonitis; Luca Lanzendörfer; Frédéric Berdoz; Roger Wattenhofer
-
-**ID:** 139336\-\-3 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 139336
-
-[Paper](<https://openreview.net/forum?id=WBzZjghqhE>) | [PDF](<https://openreview.net/pdf?id=WBzZjghqhE>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139336>)
-
-Automatic speech recognition \(ASR\) performs well for high\-resource languages with abundant paired audio\-transcript data, but its accuracy degrades sharply for most languages due to limited publicly available aligned data\. To this end, we introduce WorldSpeech, a 24kHz multilingual speech corpus comprising 65k hours of aligned audio\-transcript data across 76 languages, collected from diverse public sources including parliamentary proceedings, international broadcasts, and public\-domain audiobooks\. For 37 languages, WorldSpeech provides more than 200 hours of aligned speech, with 28 exceeding 500 hours and 24 surpassing 1k hours\. Fine\-tuning existing ASR models on WorldSpeech results in an average relative Word\-Error\-Rate reduction of 63\.5% across 11 typologically diverse languages\.
-
-## NorSA: Accelerating LLM Decoding via Normalized Sparse Activation
-
-**Authors:** Tianteng Gu; Bo Xiao; Ke Zeng; Shuai Shi; Wangyou Zhang; Chenda Li; Yanmin Qian
-
-**ID:** 154390\-\-3 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 154390
-
-[Paper](<https://openreview.net/forum?id=DvzLG9N5Dx>) | [PDF](<https://openreview.net/pdf?id=DvzLG9N5Dx>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154390>)
-
-Sparse activation accelerates Large Language Model \(LLM\) decoding by removing redundant computations and memory access, but existing methods often assume hidden\-state dimensions are independent and identically distributed \(i\.i\.d\.\)\. We replace this i\.i\.d\. perspective with a covariance\-aware view by analyzing contextual dependencies across tokens and inter\-dimensional correlations within hidden states\. We introduce Normalized Sparse Activation \(NorSA\), a training\-free framework that combines dynamic thresholding with decorrelating rotation\. Across the LLaMA, Mistral, and Qwen families, NorSA consistently improves perplexity and downstream accuracy over prior training\-free baselines, especially in high\-sparsity regimes\. On LLaMA3\-8B at 50\\% sparsity, it stays within 0\.44 perplexity points of the dense model while achieving a 1\.32$\\times$ end\-to\-end decoding speedup\.
-
-## Accelerating Diffusion Language Models via Structured Suffix Modeling
-
-**Authors:** Zifeng Cheng; Keda Li; Zhiwei Jiang; Cong Wang; Fei Shen; Qing Gu
-
-**ID:** 152485\-\-2 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 152485
-
-[Paper](<https://openreview.net/forum?id=SkQxO613nL>) | [PDF](<https://openreview.net/pdf?id=SkQxO613nL>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152485>)
-
-_Abstract unavailable from the accessible public sources._
-
-## SAME: Stability\-Aware Embedding Extraction in Mixture\-of\-Experts Language Models
-
-**Authors:** Shufan Yang; Zifeng Cheng; Zhiwei Jiang; Hao Wang; Miao Xue; Changhui Sun; Cong Wang; Ao Zhou; Qing Gu
-
-**ID:** 152895\-\-2 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 152895
-
-[Paper](<https://openreview.net/forum?id=PcLcfDARfL>) | [PDF](<https://openreview.net/pdf?id=PcLcfDARfL>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152895>)
-
-_Abstract unavailable from the accessible public sources._
-
-## Mind the Gap: Dataset and Fine\-grained Evaluation for Inline Audio Descriptions
-
-**Authors:** Subhashini Venugopalan; Yingwen Tan; Taylor Roper; Jimmy Tobin; Anton Kast; Alicia Martin; Sam Sepah; Amy Pavel
-
-**ID:** 139386\-\-2 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 139386
-
-[Paper](<https://openreview.net/forum?id=Ta6qlgEwjY>) | [PDF](<https://openreview.net/pdf?id=Ta6qlgEwjY>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139386>)
-
-_Abstract unavailable from the accessible public sources._
-
-## SMASH: Probing Speech Recognition Robustness via Semantically Targeted Bit Flips
-
-**Authors:** Zafaryab Haider; Md Hafizur Rahman; Aysegul Bumin; Prabuddha Chakraborty
-
-**ID:** 150005\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 150005
-
-[Paper](<https://openreview.net/forum?id=lUIe5d85AP>) | [PDF](<https://openreview.net/pdf?id=lUIe5d85AP>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150005>)
-
-Automatic speech recognition \(ASR\) systems are usually judged by aggregate transcript accuracy, but real failures often hinge on meaning: for example, a wrong dose, address, account number, or date can matter more than many harmless word errors\. We introduce SMASH, a framework for finding targeted semantic failures caused by sparse INT8 weight\-bit perturbations, a dominant model data type for ASR edge devices, in quantized sequence\-to\-sequence ASR models\. Given an audio input and a meaning\-critical span,SMASH searches for small weight changes that replace the intended meaning while keeping the transcript readable, plausible, and close to the original output\. Each accepted fault is a certificate that a specific semantic substitution is reachable under a bounded perturbation budget\. Empirical study focuses on numeric and scalar substitutions across three ASR backbones: Whisper\-small\.en \(WS\), Whisper\-large\-v3 \(WLv3\), and SeamlessM4T\-v2\-large \(S\-M4T\); and three corpora: an LLM\-assisted controlled corpus \(LACC\), MultiMed, and LibriSpeech\. On LACC at a 20\-bit budget \($B$\), SMASH\-hybrid accepts numeric substitutions on 24/45 WS targets, 19/44 WLv3 targets, and 5/34 S\-M4T targets; reachability is lower on real\-speech datasets\. In matched LACC budget sweeps tested up to $B=40$, WS reaches its ceiling already at $B=20$, while WLv3 and S\-M4T continue to gain accepted targeted substitutions through $B=40$\. Human validation supports the gate\-based labels: on a 105\-item shared validation set, independent human\-majority labels and a four\-judge large\- language\-model ensemble agree on the composite clean\_success label, with $\\kappa=1\.00$\. The faults are sparse: the pooled median is three INT8 bit flips, with medians of two flips on WS, eleven on WLv3, and twelve on S\-M4T\. Entity and negation pivots are evaluated as secondary evidence in the appendix\. SMASH shifts ASR robustness evaluation from "how much did the transcript change?'' to "which meanings can be changed, how plausibly, and with how few bit flips?''
-
-## UniPrefill: Universal Long\-Context Prefill Acceleration via Block\-wise Dynamic Sparsification
-
-**Authors:** Qihang Fan; Huaibo Huang; zhiyingwu; Bingning Wang; Ran He
-
-**ID:** 152106\-\-2 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 152106
-
-[Paper](<https://openreview.net/forum?id=VU9bHYAvdH>) | [PDF](<https://openreview.net/pdf?id=VU9bHYAvdH>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152106>)
-
-As large language models \(LLMs\) continue to advance rapidly, they are becoming increasingly capable while simultaneously demanding ever\-longer context lengths\. To improve the inference efficiency of long\-context processing, several novel low\-complexity hybrid architectures have recently been proposed, effectively alleviating the computational burden of long\-context inference\. However, existing research on long\-context prefill acceleration remains predominantly focused on sparse attention mechanisms, which achieve their maximum speedup only on full\-attention models\. When transferred to emerging architectures — such as linear/full attention hybrids or sliding window/full attention hybrids — these prefill acceleration approaches suffer significant performance degradation\. Furthermore, such methods are generally incompatible with continuous batching, making them difficult to integrate into modern inference engines such as vLLM\. To this end, we propose UniPrefill, a prefill acceleration framework applicable to virtually any model architecture, which directly accelerates the model's computation at the token level\. We further implement UniPrefill as a continuous batching operator and extend vLLM's scheduling strategy to natively support prefill\-decode co\-processing for UniPrefill, enabling its seamless integration into vLLM\. UniPrefill achieves up to 2\.1x speedup in Time\-To\-First\-Token \(TTFT\), with the acceleration becoming increasingly pronounced as the number of concurrent requests grows\.
+Single\-step retrieval\-augmented generation \(RAG\) provides an efficient way to incorporate external information for simple question answering tasks but struggles with complex questions\. Agentic RAG extends this paradigm by replacing single\-step retrieval with a multi\-step process, in which the large language model \(LLM\) acts as a search agent that generates intermediate thoughts and subqueries to iteratively interact with the retrieval system\. This iterative process incurs substantial latency due to the autoregressive generation of lengthy thoughts and subqueries\. To address this limitation, we propose LatentRAG, a novel framework that shifts both reasoning and retrieval from discrete language space to continuous latent space\. Unlike existing explicit methods that generate natural language thoughts or subqueries token\-by\-token, LatentRAG produces latent tokens for thoughts and subqueries directly from the hidden states in a single forward pass\. We align LLMs with dense retrieval models in the latent space, enabling retrieval over latent subquery tokens and supporting end\-to\-end joint optimization\. To improve transparency and encourage semantically meaningful latent representations, we incorporate a parallel latent decoding mechanism that translates latent tokens back into natural language\. Extensive experiments on seven benchmark datasets show that LatentRAG achieves performance comparable to explicit agentic RAG methods while reducing inference latency by approximately 90%, substantially narrowing the latency gap with traditional single\-step RAG\.
 
 ## Membrane Sensitivity and Deployment Fragility of Learnable Time Constants in Spiking Neural Networks
 
@@ -2010,97 +1136,125 @@ As large language models \(LLMs\) continue to advance rapidly, they are becoming
 
 Spiking neural networks \(SNNs\) with learnable membrane time constants can improve temporal processing by adapting neuronal integration timescales, but they also turn the decay factor $\\beta$ into an optimized dynamical parameter that is fragile under hardware\-induced parameter mismatch\. We develop a perturbation\-based account of how time\-constant variation affects trained SNNs\. In controlled software simulations, this fragility is strongly task\-dependent: Spiking Heidelberg Digits \(SHD\) and Spiking Speech Commands \(SSC\) settings lose $7\\text\{\-\-\}20$ percentage points of accuracy under $20$% coefficient\-of\-variation \(CV\) perturbations in $\\beta$, whereas DVS\-Gesture and CIFAR\-10 lose less than $3$ pp\. We show that, under a surrogate\-linearized first\-order analysis, the failure mode is governed by the membrane sensitivity $\\Psi$\. This quantity admits a closed\-form online recursion requiring only one additional state per layer and no extra temporal storage\. The analysis identifies time\-averaged sensitivity energy as the controllable term in deployment fragility, leading to $\\textbf\{MARS\}$ \($\\textbf\{M\}$embrane\-$\\textbf\{A\}$ware $\\textbf\{R\}$obustness through $\\textbf\{S\}ensitivity$ Regularization\), a training objective derived from perturbation analysis rather than heuristic noise augmentation\. We prove a conservative worst\-case output\-perturbation bound and introduce a typical\-case diagnostic explaining why sensitivity remains predictive when worst\-case constants are vacuous\. At $20$% CV perturbation, MARS reduces the accuracy drop in the sensitive settings to at most $0\.5$ pp while preserving nominal accuracy, with minimal effect on DVS\-Gesture and CIFAR\-10\.
 
-## SMASH: Probing Speech Recognition Robustness via Semantically Targeted Bit Flips
+## Global PIQA: Evaluating Commonsense Reasoning Across 100\+ Languages and Cultures
 
-**Authors:** Zafaryab Haider; Md Hafizur Rahman; Aysegul Bumin; Prabuddha Chakraborty
+**Authors:** Tyler Chang; Catherine Arnett; Abdelrahman Sadallah; Abdelrahman Eldesokey; Abeer Kashar; Daud Abolade; Abosede G Olanihun; Adam Labaran M; Adhikarimayum Meerajita Sharma; Aditi Gupta; Adril P Merin; Adwoa A Bremang; Afitab Iyigun; Afonso Simplício; Ahmed Essouaied; Aicha Chorana; Akhil Eppa; Akintunde Oladipo; Akriti Kuri; Akshay Ramesh; Aleksei Dorkin; Alfred M Kondoro; Alham Aji; Ali E Çetintaş; Allan Hanbury; Alp Niksarli; Alvaro Arroyo; Amin Bajand; Amol Khanna; Ana Chkhaidze; Ana C Condez; Anamaria Roberta Hartl; Andiswa Mkhonto; Andrew Hoblitzell; Angelos Poulis; Anirban Majumder; Anjali Chaudhary; Anna Vacalopoulou; Annika Simonsen; Anton Kovalev; Anupam Nayak; Ashvanth\.S; Ayodeji Lana; Ayu Purwarianti; Bashar Alhafni; C\. Benedict C\. Busole; Bernard Ghanem; Bharti Nathani; Biljana Stojanovska Đurić; Ogundipe B Funmilola; Bolaotan Agbonile; Bruce Torres Fischer; Burak Tutar; Burcu Çınar; Cade Kane; Can Udomcharoenchaikit; Chadi Helwe; Cecilia Liu; Chiamaka G Nwokolo; Christopher Homan; Clément Sampebgo; Cristina España\-Bonet; Cynthia Amol; Daeyeop Lee; Dan Saattrup Smart; Dana Arad; Daniil Dzenhaliou; Dasol Choi; David Liu; David Semedo; David Anugraha; OLAOYE D Oluwaseun; Deborah Popoola; Deividas Mataciunas; Dennis Asamoah Owusu; Dhyuthy Krishna Kumar; Diogo Tavares; Diogo Glória\-Silva; Divyanshu Goyal; DongGeon Lee; Estefany Kelly Buchanan; Ebele N Anajemba; Ngozi G Egonu; Elias Herranen; Eman Nisar; Emile Anand; Emuobonuvie M Ajiboye; Eryawan P Yulianrifat; Esther Adenuga; Ewa Rudnicka; Faith O Itiola; Fareeha Fayyaz Sheikh; Fathima Thekkekara; Fatima Haouari; Faustin NSENGIYUMVA; Fenal A Ilasariya; Filbert A Tjiaranata; Firas Laakom; Francesca Grasso; Francesco Periti; Francesco Orabona; Gbenga K Solomon; Genta Winata; Nghia G Ngo; Gloria Udhedhe\-oze; Gonçalo Vinagre; Gopi N Challagolla; Gorka Urbizu\-Garmendia; Gouthami Vadithya; Guijin Son; Gyan S Mohapatra; Hafeez Ullah; Hafsteinn Einarsson; Hai Hu; Hamidreza Saffari; Hamza Zaidi; Haopeng Zhang; Harethah Abu Shairah; Hele\-Andra Kuulmets; Hitesh Patel; Houda Bouamor; Hwanjo Yu; Iben N Debess; İbrahim Ethem Deveci; Ikhlasul A Hanif; Ikhyun Cho; Inês Vieira; Inês Calvo; Ismail O Daud; Yusuf I Abayomi; Itay Itzhak; Ivan Zhelyazkov; Ivan Belashkin; Ivan Spada; Jacob Brinton; Jafar Isbarov; Jaka Čibej; Jan Kocon; Jan Cuhel; Jauza A Krito; Jebish Purbey; Jennifer Za; Jennifer Mickel; Jenny Kunz; Jessica Ratovondranto; Jeyarajalingam Varsha; Jihae Jeong; Jimena T Dávalos; Jinu Lee; Joao Magalhaes; John S Yi; Jongin Kim; Joseph Chataignon; Joseph Marvin Imperial; Jubeerathan Thevakumar; Judith Land; Iuliia Alekseenko; Jiang Junchen; Jungwhan Kim; Kairit Sirts; Kamesh R; Kanda Patrick Tshinu; Kätriin Kukk; Kaustubh Ponkshe; Kavsar Huseynova; Ke He; Kenneth Enevoldsen; Kent J Alvarez; Kerem Zaman; Khalil Mrini; Kian Kyars; Komal Gour; Krishnakumar Lainitha; Krister Kruusmaa; Kunal Mukherjee; Kusum Chouhan; Laura Castro; Laura M Porrino\-Moscoso; Lenny S Nzambi; Leshem Choshen; Lilja Øvrelid; Lisa Alazraki; Lovina Ehimen\-Ugbede; Luheerathan Thevakumar; Luxshan Thavarasa; Mamadou K KEITA; Mansi Jangid; Marco De Santis; Marcos Garcia; Marek Suppa; Mariam D&amp;amp;\#x27;Ciofalo; Marii Ojastu; Marium Atta; Maryam Sikander; Maximos Skandalis; Mehak Soomro; Mehmet İlteriş Bozkurt; Melaku Bayu; Menan Velayuthan; Michael Leventhal; Michał Marcińczuk; Mina Almasi; Mirna Potočnjak; Mithil Bangera; Mohammadamin Shafiei; MOHIBA ANSARI; Mridul Sharma; Mrityunjaya Indoria; Mughees U Rehman; Muhammad Ravi Shulthan Habibi; Murat B Kınay; Nada Galant; Naina S Rathore; Narada Maugin; Nathalie H Norman; Nicholas Kluge Corrêa; Nikola Ljubešić; Nirmal Thomas; Nisansa de Silva; Nisheeth Joshi; Nitish Ponkshe; Nizar Habash; Nneoma C Udeze; Noel Thomas; Noémi Ligeti\-Nagy; Odunayo Ogundepo; Odunayo K Buliaminu; God&amp;amp;\#x27;spraise Okechukwu; Olanrewaju Samuel; Olga Snissarenko; Onyinye A Chiemezie; Orkun Kınay; osman tursun; Pablo Rodríguez; Pablo Gamallo; Pedro Valente; Peter Rupnik; Philip O\. EKIUGBO; Prakhar Agarwal; Prokopis Prokopidis; Quadri Yahya; Rachele Mignone; Raghav Singhal; Rahul Raja; Ram Mohan Rao Kadiyala; Raphaël Merx; Rasmus Larsen; Ratnavel Rajalakshmi; Rishav Ghosh; Romina Oji; Rui P Guerra; Rushikesh Zawar; Sa&amp;amp;\#x27;ad N Bashir; Saeed Alzaabi; Sahil Sandeep; Sai Sandeep Kantareddy; Saleha Muzammil; Salsabila Z Pranida; Sam Buchanan; Samuel Rutunda; Sander Land; Sarah Sulollari; Sardar Ali; Kengatharaiyer Sarveswaran; Saulius Tautvaisas; Sayambhu Sen; Sayantani Banerjee; Sebastien Diarra; Sewoong Lee; Shaan Shah; Shankar Venkitachalam; Sharifa Djurabaeva; Sharon Ibejih; Shivanya S Dutta; Siddhant Gupta; Silvia P Suárez; Sina Ahmadi; Sivasuthan Sukumar; Siyuan Song; Sokratis Sofianopoulos; Sona E Simon; Sonja Benčina; Sophie Gvasalia; Sphurti K More; Spyridon Konstantinos Dragazis; Stefan Milosavljević; Stephan Kaufhold; AlRashed; Surangika Ranathunga; Taiga Someya; Taja Kuzman Pungeršek; Tal Haklay; Tasi&amp;amp;\#x27;u Jibril; Tatsuya Aoyama; Tea Abashidze; Terenz Jomar Dela Cruz; Terra Blevins; Themistoklis Nikas; Theresa D Idoko; Tilek Chubakov; Tina Munda; Tobiloba Moses Owoeye; Tommaso Gargiani; Uni Johannesen; Vallerie A Putra; Vanya BK; Varvara Arzt; Vasily Konovalov; Vasudevan Nedumpozhimana; Viktória Ondrejová; Viktoryia Horbik; Vuk Dinić; Walelign Sewunetie; Winston Wu; Xiaojing Zhao; Yacouba Diarra; Yaniv Nikankin; Yash Mathur; Yash Bagla; Yeshil Bangera; Yixi Chen; Yiyuan Li; Yolanda Xavier; Yonatan Belinkov; Zaid Alyafeai; Zhengyang Shan; Zhi Rui Tam; Zilu Tang; Zuzana Nadova; Baber Abbasi; Stella Biderman; David Stap; Duygu Ataman; Fabian D Schmidt; Hila Gonen; Jiayi Wang; David Adelani
 
-**ID:** 150005\-\-3 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+**ID:** 139393 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-**Repeated source row:** 150005
+[Paper](<https://openreview.net/forum?id=TGSeFxFoPi>) | [PDF](<https://openreview.net/pdf?id=TGSeFxFoPi>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139393>)
 
-[Paper](<https://openreview.net/forum?id=lUIe5d85AP>) | [PDF](<https://openreview.net/pdf?id=lUIe5d85AP>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150005>)
+To date, there exist almost no culturally\-specific evaluation benchmarks for large language models \(LLMs\) that cover a large number of languages and cultures\. In this paper, we present Global PIQA, a participatory commonsense reasoning benchmark for over 100 languages, constructed by hand by over 350 researchers from over 65 countries around the world\. The 141 language varieties in Global PIQA cover five continents, 19 language families, and 24 writing systems\. In the non\-parallel split of Global PIQA, over 50% of examples reference local foods, customs, traditions, or other culturally\-specific elements\. In the parallel split, we translate more "culturally agnostic" commonsense reasoning questions into 131 language varieties, for direct cross\-lingual comparisons\. In both splits, all examples have been verified by native speakers of the languages\. We find that state\-of\-the\-art LLMs perform well on Global PIQA in aggregate, but they exhibit weaker performance in lower\-resource languages \(e\.g\. up to a 68% accuracy gap between languages in the parallel split\)\. Global PIQA highlights that in many languages and cultures, everyday knowledge remains an area for improvement in LLMs, alongside more widely\-discussed capabilities such as complex reasoning and expert knowledge\. Beyond its uses for LLM evaluation, Global PIQA provides a glimpse into the wide diversity of cultures in which human language is embedded\.
 
-Automatic speech recognition \(ASR\) systems are usually judged by aggregate transcript accuracy, but real failures often hinge on meaning: for example, a wrong dose, address, account number, or date can matter more than many harmless word errors\. We introduce SMASH, a framework for finding targeted semantic failures caused by sparse INT8 weight\-bit perturbations, a dominant model data type for ASR edge devices, in quantized sequence\-to\-sequence ASR models\. Given an audio input and a meaning\-critical span,SMASH searches for small weight changes that replace the intended meaning while keeping the transcript readable, plausible, and close to the original output\. Each accepted fault is a certificate that a specific semantic substitution is reachable under a bounded perturbation budget\. Empirical study focuses on numeric and scalar substitutions across three ASR backbones: Whisper\-small\.en \(WS\), Whisper\-large\-v3 \(WLv3\), and SeamlessM4T\-v2\-large \(S\-M4T\); and three corpora: an LLM\-assisted controlled corpus \(LACC\), MultiMed, and LibriSpeech\. On LACC at a 20\-bit budget \($B$\), SMASH\-hybrid accepts numeric substitutions on 24/45 WS targets, 19/44 WLv3 targets, and 5/34 S\-M4T targets; reachability is lower on real\-speech datasets\. In matched LACC budget sweeps tested up to $B=40$, WS reaches its ceiling already at $B=20$, while WLv3 and S\-M4T continue to gain accepted targeted substitutions through $B=40$\. Human validation supports the gate\-based labels: on a 105\-item shared validation set, independent human\-majority labels and a four\-judge large\- language\-model ensemble agree on the composite clean\_success label, with $\\kappa=1\.00$\. The faults are sparse: the pooled median is three INT8 bit flips, with medians of two flips on WS, eleven on WLv3, and twelve on S\-M4T\. Entity and negation pivots are evaluated as secondary evidence in the appendix\. SMASH shifts ASR robustness evaluation from "how much did the transcript change?'' to "which meanings can be changed, how plausibly, and with how few bit flips?''
+## Universal Byte\-Level Encoding: UTF\-8/UTF\-16 Routing to Reduce Cross\-Script Token\-Budget Disparities
 
-## UniPrefill: Universal Long\-Context Prefill Acceleration via Block\-wise Dynamic Sparsification
+**Authors:** Hyunsik Kim; Youngmoon Jung
 
-**Authors:** Qihang Fan; Huaibo Huang; zhiyingwu; Bingning Wang; Ran He
+**ID:** 152902 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-**ID:** 152106\-\-3 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+[Paper](<https://openreview.net/forum?id=PYtjaNdYaM>) | [PDF](<https://openreview.net/pdf?id=PYtjaNdYaM>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152902>)
 
-**Repeated source row:** 152106
+Byte\-level byte\-pair encoding \(BBPE\) tokenizers are attractive for large language models \(LLMs\) in multilingual settings because they cover all Unicode text\. Under UTF\-8, however, many scripts start from a higher byte\-level fallback cost than English: when no learned merge covers a character $c$, the tokenizer must emit multiple byte\-derived symbols\. We call this worst\-case pre\-merge cost the encoding floor:  $$ f\(c\) = \|\\\\mathrm\{utf8\}\(c\)\| \\\\in \\\\\{1,2,3,4\\\\\}\. $$  A higher floor inflates token budgets, shrinks usable context, and increases per\-request cost\. Changing the underlying text encoding can reduce this gap, but a single global encoding can also make already\-efficient English spans more expensive in mixed\-script text\. We propose Universal Byte\-Level Encoding \(UBE\), a dual\-alphabet tokenizer with deterministic per\-character routing:  $$ r\(c\) = \\\\begin\{cases\} \\\\mathrm\{UTF\\\\text\{\-\}8\}, &amp; \|\\\\mathrm\{utf8\}\(c\)\| \\\\leq 2,\\\\\\\\ \\\\mathrm\{UTF\\\\text\{\-\}16\}, &amp; \|\\\\mathrm\{utf8\}\(c\)\| &gt; 2\. \\\\end\{cases\} $$  Characters satisfying $\|\\\\mathrm\{utf8\}\(c\)\| \\\\leq 2$ stay on the UTF\-8 path, while characters satisfying $\|\\\\mathrm\{utf8\}\(c\)\| &gt; 2$ are routed through UTF\-16\. This reduces token costs for Basic Multilingual Plane \(BMP\) scripts whose characters typically satisfy $\|\\\\mathrm\{utf8\}\(c\)\| = 3$ and have the highest token premiums, without raising costs for already\-efficient spans\. UBE changes only the byte representation presented to byte\-pair encoding \(BPE\): the BPE merge rule remains standard, and exact decoding $\\\\mathrm\{decode\}\(\\\\mathrm\{encode\}\(s\)\) = s$ is preserved\. Across intrinsic tokenization evaluations, UBE reduces cross\-lingual dispersion in English\-normalized token\-count ratios $\\\\pi\(\\\\ell\) = m\(\\\\ell\)/m\(\\\\mathrm\{en\}\)$, lowering cross\-script token\-budget disparity\. In multilingual language model experiments, UBE preserves LM quality within seed variability\. In the main multilingual settings, UBE reduces token counts most for high\-premium scripts and also slightly lowers English token counts; these reductions translate into more usable context under fixed token budgets and faster content\-matched prompt processing\.
 
-[Paper](<https://openreview.net/forum?id=VU9bHYAvdH>) | [PDF](<https://openreview.net/pdf?id=VU9bHYAvdH>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152106>)
+## DialectLLM: A Dialect\-Aware Dialog\[ue\] Generation Framework Beyond Standard American English
 
-As large language models \(LLMs\) continue to advance rapidly, they are becoming increasingly capable while simultaneously demanding ever\-longer context lengths\. To improve the inference efficiency of long\-context processing, several novel low\-complexity hybrid architectures have recently been proposed, effectively alleviating the computational burden of long\-context inference\. However, existing research on long\-context prefill acceleration remains predominantly focused on sparse attention mechanisms, which achieve their maximum speedup only on full\-attention models\. When transferred to emerging architectures — such as linear/full attention hybrids or sliding window/full attention hybrids — these prefill acceleration approaches suffer significant performance degradation\. Furthermore, such methods are generally incompatible with continuous batching, making them difficult to integrate into modern inference engines such as vLLM\. To this end, we propose UniPrefill, a prefill acceleration framework applicable to virtually any model architecture, which directly accelerates the model's computation at the token level\. We further implement UniPrefill as a continuous batching operator and extend vLLM's scheduling strategy to natively support prefill\-decode co\-processing for UniPrefill, enabling its seamless integration into vLLM\. UniPrefill achieves up to 2\.1x speedup in Time\-To\-First\-Token \(TTFT\), with the acceleration becoming increasingly pronounced as the number of concurrent requests grows\.
+**Authors:** Jio Oh; Paul Vicinanza; Thomas Butler; Steven Whang; Dezhi Hong; Amani Namboori
 
-## Membrane Sensitivity and Deployment Fragility of Learnable Time Constants in Spiking Neural Networks
+**ID:** 153135 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-**Authors:** CHIU\-CHANG CHENG; Ya\-Ning Chang; Chao\-Hung Wang
+[Paper](<https://openreview.net/forum?id=NcciyroKQl>) | [PDF](<https://openreview.net/pdf?id=NcciyroKQl>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153135>)
 
-**ID:** 148593\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+More than 80% of the 1\.6B English speakers do not use Standard American English \(SAE\), yet LLMs often fail to correctly identify non\-SAE dialects and generate stereotyped responses for their speakers\. We introduce \*\*DialectLLM\*\*, the first large\-scale framework for generating high\-quality multi\-dialectal conversational data encompassing the three pillars of written dialect\-\-\-lexical \(vocabulary\), orthographic \(spelling\), and morphosyntactic \(grammar\) features\. DialectLLM produces a dialect\-parallel dialog dataset spanning nine English dialects\. Partnering with native linguists, we design and validate SAE\-to\-dialect transformation rules, ensuring authenticity\. Our approach challenges the prevailing practice of applying a single morphosyntactic feature set to both user utterances and model responses, showing that models should not reproduce up to 90% of the grammatical features of a dialect\. Human evaluation confirms data quality, with annotators preferring DialectLLM over prior methods in 98\.8% of pairwise comparisons for dialect naturalness\. We then construct \*\*DialectLLM\-Bench\*\*, a dialect\-parallel benchmark with 50k\+ dialogs, resulting in 97k\+ QA pairs, and evaluate 17 LLMs on dialect identification and response generation tasks\. Even frontier models achieve under 70% accuracy, fail to reach 50% for prominent dialects like Canadian English, and systematically misclassify non\-SAE dialects as American or British\. Beyond benchmarking, we show that DialectLLM data also serve as a scalable LLM post\-training resource, suggesting a practical path toward dialect\-aware conversational AI\.
 
-**Repeated source row:** 148593
+## Performance\-Driven Policy Optimization for Speculative Decoding with Adaptive Windowing
 
-[Paper](<https://openreview.net/forum?id=wa6O4eAtIZ>) | [PDF](<https://openreview.net/pdf?id=wa6O4eAtIZ>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148593>)
+**Authors:** Jie Jiang; Xing Sun; RuoTian Chen; Jianan Su; Kaixin Shen
 
-Spiking neural networks \(SNNs\) with learnable membrane time constants can improve temporal processing by adapting neuronal integration timescales, but they also turn the decay factor $\\beta$ into an optimized dynamical parameter that is fragile under hardware\-induced parameter mismatch\. We develop a perturbation\-based account of how time\-constant variation affects trained SNNs\. In controlled software simulations, this fragility is strongly task\-dependent: Spiking Heidelberg Digits \(SHD\) and Spiking Speech Commands \(SSC\) settings lose $7\\text\{\-\-\}20$ percentage points of accuracy under $20$% coefficient\-of\-variation \(CV\) perturbations in $\\beta$, whereas DVS\-Gesture and CIFAR\-10 lose less than $3$ pp\. We show that, under a surrogate\-linearized first\-order analysis, the failure mode is governed by the membrane sensitivity $\\Psi$\. This quantity admits a closed\-form online recursion requiring only one additional state per layer and no extra temporal storage\. The analysis identifies time\-averaged sensitivity energy as the controllable term in deployment fragility, leading to $\\textbf\{MARS\}$ \($\\textbf\{M\}$embrane\-$\\textbf\{A\}$ware $\\textbf\{R\}$obustness through $\\textbf\{S\}ensitivity$ Regularization\), a training objective derived from perturbation analysis rather than heuristic noise augmentation\. We prove a conservative worst\-case output\-perturbation bound and introduce a typical\-case diagnostic explaining why sensitivity remains predictive when worst\-case constants are vacuous\. At $20$% CV perturbation, MARS reduces the accuracy drop in the sensitive settings to at most $0\.5$ pp while preserving nominal accuracy, with minimal effect on DVS\-Gesture and CIFAR\-10\.
+**ID:** 150209 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-## ALTER: An Allen's Algebra\-Based Evaluation Framework for Temporal Reasoning of LLMs
+[Paper](<https://openreview.net/forum?id=jv3dCrUrFw>) | [PDF](<https://openreview.net/pdf?id=jv3dCrUrFw>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150209>)
 
-**Authors:** Hongkai Zhou; Yanhui Li
+Speculative decoding accelerates LLM inference by having a lightweight draft model propose speculative windows of candidate tokens for parallel verification by a larger target model\. In practice, speculative efficiency is often bottlenecked by hard\-to\-draft positions, where an early mismatch truncates the accepted prefix and invalidates the rest of the speculative window\. Most learning\-based drafters are still optimized with token\-level supervised objectives, even though speculative utility is inherently window\-level and prefix\-sensitive\. We propose \*\*PPOW\*\* \(\*\*P\*\*erformance\-Driven \*\*P\*\*olicy \*\*O\*\*ptimization with Adaptive \*\*W\*\*indowing\), a reinforcement learning framework that shifts drafter optimization from token\-level imitation to window\-level optimization\. PPOW combines a Cost\-Aware Speedup Reward, a Distribution\-Based Proximity Reward, and Adaptive Divergence\-Aware Windowing, which prioritizes informative windows with high confidence\-weighted draft\-\-target divergence\. PPOW achieves average acceptance lengths of 6\.29–6\.52 and speedups of 3\.39–4\.36$\\times$ across multiple model families and benchmarks under a unified decoding protocol\. These results show that performance\-driven window\-level optimization is a practical approach to improving speculative decoding efficiency\.
 
-**ID:** 139265\-\-3 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
+## CAM: Question Answering on Entity\-Centric Videos with Continuous Extraction and Adaptive Querying
 
-**Repeated source row:** 139265
+**Authors:** Yizhou Tian; Zizhe Chen; Shiyuan Deng; Garry YANG; Zijie Dai; Luohao Pan; Hao Lin; Peiqi Yin; Xiao Yan; James Cheng
 
-[Paper](<https://openreview.net/forum?id=ay0UXDsniW>) | [PDF](<https://openreview.net/pdf?id=ay0UXDsniW>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139265>)
+**ID:** 150537 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-_Abstract unavailable from the accessible public sources._
+[Paper](<https://openreview.net/forum?id=hPMIoGy7je>) | [PDF](<https://openreview.net/pdf?id=hPMIoGy7je>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150537>)
 
-## ForecastCompass: Guiding Agentic Forecasting with Adaptive Factor Memory
+Memory facilitates question answering over long videos by extracting and retrieving facts to fit within the limited context windows of multimodal LLMs \(MLLMs\)\. Existing solutions typically extract independent memory entries from fixed\-length video clips and thus cannot capture high\-level semantics that need to be summarized over extended time periods, such as character traits and relations\. Moreover, they rely solely on similarity\-based retrieval and may fail to retrieve the fine\-grained details required for question answering\. To tackle these problems, we propose CAM, featuring continuous extraction for high\-level semantics and \\textit\{adaptive querying\} for fine\-grained details\. In particular, CAM stores the entities and relations extracted from video clips in a knowledge graph\. To capture the high\-level semantics of each entity or relation, CAM summarizes the local subgraph of the target entity or relation once the subgraph reaches a predefined size\. To retrieve the fine\-grained details required for question answering, CAM supports multiple search methods, such as knowledge graph traversal, video re\-watching, and audio listening, and utilizes a planner\-executor\-verifier pipeline to adaptively compose these search methods according to question intent\. Evaluations on three benchmarks show that CAM outperforms SOTA baselines and improves their accuracy by up to 23 percentage points\.
 
-**Authors:** Yurui Chang; Yongkang Du; Yuanpu Cao; Jinghui Chen; Lu Lin
+## Learning Visual Speech Representations via Cross\-Modal Distillation and Joint Face\-Lip Modeling
 
-**ID:** 153936\-\-2 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
+**Authors:** Jingxuan Zhang; Genshun Wan; Jia Pan; Jianqing Gao; Yumei Zhang; Lichen Zhang
 
-**Repeated source row:** 153936
+**ID:** 149522 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=HSZMPfq6tX>) | [PDF](<https://openreview.net/pdf?id=HSZMPfq6tX>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153936>)
+[Paper](<https://openreview.net/forum?id=pVrKNRkHe2>) | [PDF](<https://openreview.net/pdf?id=pVrKNRkHe2>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149522>)
 
-_Abstract unavailable from the accessible public sources._
+Lipreading remains challenging due to the inherent ambiguity of visual speech cues and their sensitivity to head pose and video resolution\. In this work, we propose FLARE, a framework for robust visual speech representation learning via cross\-modal distillation and joint face\-lip modeling\. FLARE leverages semantically rich Whisper representations as the acoustic teacher signal, converting them into discrete distillation targets through a random\-projection quantizer and pretraining the model with a masked prediction objective\. To capture complementary visual information, FLARE employs a dual\-stream architecture that jointly processes lip region\-of\-interest \(ROI\) and full\-face inputs, where the lip stream captures fine\-grained articulatory motion and the face stream encodes broader facial dynamics\. During pretraining, auxiliary audio input is incorporated to facilitate cross\-modal alignment, and modality dropout is applied to encourage robust visual\-only representations\. For downstream lipreading, FLARE serves as a visual encoder coupled with either a lightweight Transformer decoder or an LLM\-based decoder\. Evaluated on LRS2, LRS3, and the out\-of\-domain WildVSR benchmark, FLARE achieves state\-of\-the\-art word error rates of 11\.7%, 13\.2%, and 34\.3%, respectively\. A progressive design study confirms the contribution of each major component\. Further analyses demonstrate that joint face\-lip modeling improves robustness under degraded video resolution and large head pose variation, while yielding more phoneme\-discriminative visual representations\. Code and pretrained models are available at https://anonymous\.4open\.science/r/FLARE\-522C\.
 
-## Seeing Speech: Learning Visible Articulatory Dynamics for Speech\-Driven 3D Facial Animation
+## PreCoMem: Predictive Cognitive Memory for Self\-Evolving Long\-Term Dialogue Agents
 
-**Authors:** Hyung Kyu Kim; Byungchan Hwang; HAKGU KIM
+**Authors:** Jian Zhong; Zeyu Liu; Pingchuan Cao; Rongduo Han; Shunye Tang; Guohuan Xie; Mingyuan Qin; Ran Ji; Xiao Liang; Haining Zhang; Wei Wang
 
-**ID:** 148378\-\-2 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
+**ID:** 149030 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
 
-**Repeated source row:** 148378
+[Paper](<https://openreview.net/forum?id=tM4m7NFSe4>) | [PDF](<https://openreview.net/pdf?id=tM4m7NFSe4>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149030>)
 
-[Paper](<https://openreview.net/forum?id=yLMGoDkvCM>) | [PDF](<https://openreview.net/pdf?id=yLMGoDkvCM>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148378>)
+Long\-horizon dialogue agents must keep user memories stable enough for personalization while adapting when the user genuinely changes\. Existing memory systems often append every observation or overwrite old entries by heuristic rules, which makes transient noise hard to distinguish from real belief drift\. We introduce PreCoMem, a memory consolidation framework inspired by predictive coding that represents memory as confidence\-weighted beliefs about the user's state\. Its core signal, Effective Surprisal, combines semantic deviation and contradiction evidence, then downweights this signal when retrieval is diffuse and unreliable\. According to effective surprisal, a two\-threshold gate maps each turn to one of three deterministic updates: MAINTAIN reinforces supported beliefs, PROFILE stores ambiguous cues as low\-confidence hypotheses, and CORRECT softly decays reliably contradicted facts\. The PROFILE stage acts as an explicit waiting room, preventing premature commitment to noisy evidence\. Experiments on LoCoMo, LongMemEval, and PersonaMem\-v2 show consistent state\-of\-the\-art accuracy; our new DiMoBench confirms that PreCoMem adapts to non\-stationary belief drift without over\-reacting to noise\. The code is available at: \\url\{https://anonymous\.4open\.science/r/PreCoMem\-9000\}\.
 
-_Abstract unavailable from the accessible public sources._
+## BrainWhisperer: Leveraging Whisper for Speech Decoding in Neuroprosthetics
 
-## IRIS: Interpolative Rényi Iterative Self\-play for Large Language Model Fine\-Tuning
+**Authors:** Tommaso Boccato; Michał Olak; Moein Khajehnejad; Matteo Ferrante
 
-**Authors:** Wenjie Liao; Like Wu; Liangjie Zhao; Shihui Xu; Shigeru Fujimura
+**ID:** 155029 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-**ID:** 148291 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
+[Paper](<https://openreview.net/forum?id=93U7FTmrsL>) | [PDF](<https://openreview.net/pdf?id=93U7FTmrsL>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155029>)
 
-[Paper](<https://openreview.net/forum?id=yx017YEEPx>) | [PDF](<https://openreview.net/pdf?id=yx017YEEPx>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148291>)
+Decoding continuous speech from intracortical recordings holds transformative potential for individuals with severe motor impairments, yet current systems face fundamental barriers to real\-world deployment: training data is scarce, neural signals are non\-stationary across sessions, and the external language models required by state\-of\-the\-art cascaded decoders impose memory requirements that preclude local, privacy\-preserving inference\. We introduce BrainWhisperer, a neural speech decoder that adapts Whisper–pretrained on approximately 680,000 hours of speech–to microelectrode array recordings via a convolutional front\-end, hierarchical low\-rank projections for non\-stationarity, windowed self\-attention in phoneme\-selective encoder layers, and a multi\-task objective combining CTC and cross\-entropy losses\. Subject\-specific embedders enable cross\-participant training within a unified architecture\. Evaluated on publicly available Utah array datasets from BrainGate participants, BrainWhisperer achieves a word error rate of 8\.5\\% in end\-to\-end decoding on the Card benchmark\-\-to the best of our knowledge, the best result reported in this setting\. Cross\-dataset training improves performance without participant\-specific fine\-tuning, pointing toward scalable foundation models for speech brain\-computer interfaces\.
 
-_Abstract unavailable from the accessible public sources._
+## Detection and Classification in Latent Spaces: High\-Dimensional Analysis and Validation
 
-## When Guessing is Rewarded: Rethinking Language Model Evaluation with Distributional Uncertainty Scoring
+**Authors:** Enis Chenchene; Anil S\. Baslamisli; Paolo Braca
 
-**Authors:** Tom Burns
+**ID:** 150861 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-**ID:** 139854 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+[Paper](<https://openreview.net/forum?id=eoEglhtYkx>) | [PDF](<https://openreview.net/pdf?id=eoEglhtYkx>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150861>)
 
-[Paper](<https://openreview.net/forum?id=0R23YXfZQM>) | [PDF](<https://openreview.net/pdf?id=0R23YXfZQM>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139854>)
+Foundation models produce high\-dimensional latent representations in which suitably designed statistical decision rules can be effective yet analytically tractable\. We study such detectors in the high\-dimensional regime, where latent dimension and training sample size grow proportionally\. For linear and quadratic statistics, we derive explicit large\-deviation characterizations of false\-alarm and miss\-detection performance under the Neyman\-\-Pearson paradigm, and show how the binary analysis extends to multi\-class classification\. The resulting error probabilities and corresponding decay rates exhibit non\-monotonic dependence on the shape parameter, including double\-descent and, in some regimes, multiple\-descent\. Experiments on vision, text, and audio datasets using modern foundation models show close agreement between theoretical predictions and empirical performance\. In particular, the proposed framework allows us to set a prescribed false\-alarm level and accurately predict the corresponding miss\-detection probability\. Overall, our results provide a theoretically grounded and interpretable framework with competitive empirical performance across different modalities\.
 
-Standard language model evaluation assigns scores to single predicted answers, rewarding high\-confidence responses regardless of how residual probability mass is distributed over alternative options\. This creates a systematic pressure toward overconfident guessing: under accuracy\-based schemes, a model maximises its expected score by always committing to an answer rather than abstaining, even when its uncertainty is high\. While penalty\-based approaches partially address this by raising the confidence threshold for strategic guessing, they still treat all sub\-threshold responses identically, ignoring a fundamental distinction in how models can express uncertainty \- for example between hedging toward incorrect answers versus hedging toward "I don't know" responses\. We introduce a novel evaluation metric to solve this problem of not considering a model's entire probability distribution over answer choices\. Our metric naturally distinguishes between harmful overconfidence in wrong answers and uncertainty expressed through abstention, providing scores in an interpretable default range\. Through theoretical analysis and illustrative examples, we demonstrate our metric offers a more nuanced and aligned evaluation paradigm that incentivises models to express genuine uncertainty rather than guessing\. We then adapt 12 existing evaluation benchmarks to our metric's variants and measure performance on six language models, showing that for half of the tested benchmarks scores are negative across all tested models, indicating significant tendencies towards hallucination\.
+## Voice "Cloning" Is Actually Style Transfer
+
+**Authors:** Kaitlyn Zhou; Federico Bianchi; Martijn Bartelds; Anna Pot; Yongchan Kwon; James Zou
+
+**ID:** 154938 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=9oCb1fNV0g>) | [PDF](<https://openreview.net/pdf?id=9oCb1fNV0g>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154938>)
+
+Artificially generated speech is increasingly embedded in everyday life\. Voice cloning in particular enables applications where identity preservation is important, such as completing a recording, dubbing in a new language, or preserving the voices of individuals with speech loss\. However, in our work, we find that despite the term, voice cloning does not faithfully "clone" an individual's voice\. Instead, we find that widely\-used voice cloning models systematically apply style transfer to source voices\. As rated by human annotators, cloned voices are perceived as more authoritative, warm, customer\-service\-like, and human\-like compared to their sources\. Human annotators also report greater trust in cloned voices than source voices, and a greater willingness to disclose sensitive personal information to them\. Our work furthermore shows that voice cloning leads to homogenization of speaker characteristics, as measured by reduced variance in accent, speaking rate, and the audio embedding space\. Together, our results highlight a new set of limitations and risks of voice cloning technology and their potential impact on human behavior\.
+
+## Model\-Aware Tokenizer Transfer
+
+**Authors:** Mykola Haltiuk; Aleksander Smywiński\-Pohl
+
+**ID:** 156064 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=0jSwCQNLRK>) | [PDF](<https://openreview.net/pdf?id=0jSwCQNLRK>) | [Official poster](<https://neurips.cc/virtual/2026/poster/156064>)
+
+Large Language Models \(LLMs\) are trained to support an increasing number of languages, yet their predefined tokenizers remain a bottleneck for adapting models to lower\-resource or distinct\-script languages\. Existing tokenizer transfer methods typically rely on semantic heuristics to initialize new embeddings, ignoring higher\-layer model dynamics and limiting transfer quality\. We propose Model\-Aware Tokenizer Transfer \(MATT\), a method that incorporates model internals into the tokenizer transfer process\. MATT introduces an Attention Influence Modeling \(AIM\) objective that distills inter\-token communication patterns from a source model into a target model with a new tokenizer, providing an efficient warm\-up before standard language modeling\. Unlike approaches that focus solely on embedding similarity, MATT leverages attention behavior to guide embedding initialization and adaptation\. Experiments across diverse linguistic settings show that MATT recovers a large fraction of the original model’s performance within a few GPU hours, outperforming heuristic baselines\. These results demonstrate that incorporating model\-level signals offers a practical and effective path toward robust tokenizer transfer in multilingual LLMs\.
+
+## Training Long\-Context Vision\-Language Models Effectively with Generalization Beyond 128K Context
+
+**Authors:** Zhaowei Wang; Lishu Luo; Haodong Duan; WeiWeiLiu; Sijin Wu; Ji Luo; Shen Yan; Shuai Peng; Sihang Yuan; Chaoyi Huang; Yi Lin; Yangqiu Song
+
+**ID:** 148393 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=yAqoDCAG9T>) | [PDF](<https://openreview.net/pdf?id=yAqoDCAG9T>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148393>)
+
+Long context is becoming a core capability of modern large vision\-language models \(LVLMs\), enabling sustained context management across long\-document understanding, video analysis, and multi\-turn tool use in agentic workflows\.  However, practical training recipes remain under\-documented, such as how to construct and mix long\-context data\. In this work, we present a systematic study of long\-context continued pre\-training for LVLMs, extending a 7B LVLM from 32K to 128K context with extensive ablations on long\-document data\.  We find that: 1\) synthesizing long\-document VQA data provides effective and diverse long\-context supervision, covering tasks from information extraction to numerical reasoning; 2\) retrieving relevant evidence remains the primary long\-context bottleneck, favoring retrieval\-heavy mixtures with a small amount of reasoning data to preserve task diversity; 3\) surprisingly, pure long\-document VQA data largely preserves short\-context capabilities, suggesting that instruction\-formatted long data lessens the need for short\-data mixing\. Instantiating these findings, we obtain MMProLong by continuing training from Qwen2\.5\-VL\-7B, improving long\-document VQA performance by 7\.11 points under only a 5B\-token budget\.  More importantly, MMProLong generalizes beyond its 128K training window, maintaining strong performance at 256K and 512K without additional training\.  More broadly, it also transfers to webpage\-based multimodal needle\-in\-a\-haystack tasks, long\-context vision\-text compression, and long\-video understanding without task\-specific supervision\. Overall, our study provides a practical LongPT recipe and an empirical foundation for advancing the next generation of LVLMs\.
 
 ## Knowing You before You Speak: User State Modeling for LLM\-Based Personalized Dialogue
 
@@ -2111,6 +1265,376 @@ Standard language model evaluation assigns scores to single predicted answers, r
 [Paper](<https://openreview.net/forum?id=wTlC6ZY4eu>) | [PDF](<https://openreview.net/pdf?id=wTlC6ZY4eu>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148610>)
 
 Personalized dialogue requires more than recalling explicit user histories: systems also need to infer hidden user states that evolve through interaction and shape appropriate response strategies\. Existing memory\- and profile\-based methods primarily reuse observable user information, offering limited support for modeling user\-state dynamics or selecting actions based on how they shape future user states\. We propose PUMA \(Prospective User\-state Modeling for Action selection\), a framework grounded in the Free Energy Principle \(FEP\) that formulates personalization as decision\-making under partial observability, centered on an explicit user state model that captures latent user states and their action\-conditioned dynamics\. At each turn, PUMA maintains a belief over the user's hidden state, refines the user state model for observation generation and action\-conditioned state transition, and selects dialogue actions by minimizing expected free energy—balancing epistemic and pragmatic objectives under a unified criterion\. This formulation shifts personalization from passive memory retrieval to model\-based decision\-making over user evolution\. We instantiate PUMA on healthcare\-oriented counseling and motivational interviewing benchmarks with latent state annotations for rigorous evaluation\.  Experiments show that PUMA improves long\-horizon dialogue outcomes while maintaining strong response quality, and a cross\-dataset study demonstrates more reliable user\-state estimation and next\-state prediction\.  Our code is available at: https://anonymous\.4open\.science/r/PUMA\-4DA7/\.
+
+## Unbounded Streaming Text\-To\-Speech with Prefixed Sliding Window Attention
+
+**Authors:** Théodor Lemerle; Diego Torres Guarin; Téo Guichoux; Nicolas Obin; Axel Roebel
+
+**ID:** 149144 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=sVwnrFCMYb>) | [PDF](<https://openreview.net/pdf?id=sVwnrFCMYb>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149144>)
+
+Existing text\-to\-speech \(TTS\) systems achieve high quality, yet streaming and long\-form generation remain challenging\. We propose simple adaptations to a standard encoder–decoder TTS architecture that enables both capabilities without limits on total duration\. We first observe that attention patterns in these models are well organized, following a structure that motivates a specific windowing strategy: a prefixed sliding window for autoregressive decoding and a sliding cross\-attention for text conditioning\. Together, we show that these adaptations address length generalization and error accumulation while being fully streamable in text and audio\. Trained exclusively on segments shorter than 30 seconds, our system produces seamless, consistent speech at practically unbounded lengths with linear decoding complexity, outperforming baselines that rely on hour\-long training context\. We validate the approach through continuous synthesis over hours long synthesis and demonstrate competitive results against state\-of\-the\-art open\-source baselines on both short\- and long\-form benchmarks\.
+
+## Recon: Reconstruction\-Guided Reasoning Synthesis for User Modeling
+
+**Authors:** Alan Zhu; Mihran Miroyan; Carolyn Wang; Andrew Zhou; Lisa Dunlap; Narges Norouzi; Joseph Gonzalez
+
+**ID:** 152680 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=RDVTaTGEKI>) | [PDF](<https://openreview.net/pdf?id=RDVTaTGEKI>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152680>)
+
+User modeling aims to use language models \(LMs\) to mimic an individual’s behavior from a corpus of past context–action pairs \(e\.g\., conversation turns\), enabling the simulation of users in settings like behavioral science, human–AI collaboration, and market research\. Recent approaches augment these corpora with synthesized reasoning traces, typically generated by conditioning on both context and action\. However, such conditioning constitutes post\-hoc rationalization rather than reasoning: the trace is guaranteed to justify the action, but may not encode the underlying latent causal decision paths\. We propose Recon, which uses action reconstruction to score reasoning traces by their predictive power: given a context and candidate reasoning, a reconstruction model predicts the action, and reconstruction fidelity determines reasoning quality\. Across four domains, Recon achieves a 54\.7\\% win rate over Backward Synthesis, a standard post\-hoc rationalization baseline\.  Further, we find that training a reasoning synthesis model with rewards derived from Recon improves downstream user modeling performance, achieving a win rate of up to 70\.0\\% over baselines\.  We further show that Recon\-synthesized reasoning transfers across models, and improves user modeling beyond the reconstruction model\. Our work demonstrates that post\-hoc rationalization is insufficient for reasoning synthesis, and that useful and interpretable reasoning should naturally elicit the action from the context\.
+
+## AudioGS: High\-Fidelity Neural Audio Compression via Continuous Gaussian Splatting
+
+**Authors:** Ron Aluf; Alon Canfi; Eliya Nachmani
+
+**ID:** 149852 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=mpOLhvRzOy>) | [PDF](<https://openreview.net/pdf?id=mpOLhvRzOy>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149852>)
+
+Neural audio codecs compress waveforms into compact discrete tokens that underpin speech language models, real\-time communication, and large\-scale audio storage\. Almost every dominant design, including residual vector quantization, finite scalar quantization, and single\-codebook variants, follows the VQ\-VAE template by partitioning the encoder latent through a learned codebook or a fixed scalar grid\. We ask whether this partition is necessary\. We introduce GS\-Codec, a neural speech codec whose bottleneck is a parametric signal decomposition rather than a quantizer\. We adapt Gaussian splatting from 3D scene reconstruction to one\-dimensional latents\. An inner optimization loop fits each encoder segment as a weighted sum of 1D Gaussian primitives\. The decoder then reconstructs the waveform from the rendered sum\. To avoid the cost of this iterative inner loop at inference time, we additionally train a lightweight GS Predictor Net that regresses the primitive parameters in a single forward pass\. The encoder and decoder are trained end\-to\-end through the inner loop, with no quantizer anywhere in the training pipeline: the bottleneck is the decomposition itself, and scalar quantization is applied only post\-training to the fitted parameters\. Rather than relying on discrete codebook stages for bitrate control, our representation exposes a smooth rate\-quality tradeoff: a single trained checkpoint supports continuous post\-training bitrate control by varying the number of primitives and the per\-parameter bit depth, with no retraining required\. GS\-Codec outperforms well\-established open\-source codecs such as EnCodec and DAC on speaker similarity \(SIM\), intelligibility \(STOI\), and perceptual quality \(UTMOS\) at comparable bitrates, while achieving comparable semantic performance\.
+
+## Geometric Alignment without Functional Equivalence: A Layer\-wise Analysis of the Speech\-Text Modality Gap
+
+**Authors:** Ming\-Hao Hsu; Xiaohai Tian; Jun Zhang; Lu Lu; Yuxuan Wang; Zhizheng Wu
+
+**ID:** 153576 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=KNuSWirJEG>) | [PDF](<https://openreview.net/pdf?id=KNuSWirJEG>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153576>)
+
+End\-to\-end speech LLMs often answer the same question less accurately from speech than from text, even when the spoken content is semantically matched to the text prompt\. We study this modality gap as a layer\-wise inference problem rather than a static embedding mismatch\. Across four open\-weight speech LLMs on SpeechMMLU and VoiceBench BBH, cross\-layer Centered Kernel Alignment \(CKA\) with speech–text token alignment shows that speech can become geometrically text\-like in middle layers while still failing to form stable late\-layer answer margins\. The central finding is that mid\-layer alignment does not imply functional equivalence\. ASR\-to\-LLM controls show that recognition explains part of the gap in some settings but not all of it\. Matched\-instance margin analysis localizes the failure to weak late\-layer answer separation\. Attention diagnostics further show that speech evidence remains more diffuse at the decision token\. Speech\-faithful temporal compaction improves BBH accuracy from 59\.9% to 62\.1% with tempo 1\.2× and to 61\.9% with silence trimming, while recovering 34\.3% and 38\.2% of text\-correct/speech\-wrong failures\. These conditional repairs reveal a 2\.35–2\.62× asymmetry between temporal compaction and quantity\-only KV merging on the same gap subset, motivating post\-projection temporal abstraction rather than only input\-level feature matching\.
+
+## ASTOR: Multi\-Task Code Reinforcement Learning via Utility\-Driven Coordination
+
+**Authors:** Yujia Chen; Yang Ye; Xiao Chu; Yuchi Ma; Cuiyun Gao
+
+**ID:** 154519 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=CzqAXCaI97>) | [PDF](<https://openreview.net/pdf?id=CzqAXCaI97>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154519>)
+
+Reinforcement learning \(RL\) with verifiable rewards has proven effective at post\-training LLMs for coding, yet deploying separate task\-specific specialists incurs costs that scale with the number of tasks, motivating a unified multi\-task RL \(MTRL\) approach\. However, existing MTRL methods treat all coding tasks uniformly, relying on fixed data curricula under a shared optimization strategy, ultimately limiting the effectiveness of multi\-task training\. To address these limitations, we propose \\textbf\{\{\\tool\}\}, a multi\-t\\textbf\{AS\}k code reinforcement learning framework via u\\textbf\{T\}ility\-driven co\\textbf\{OR\}dination\. Centered on \\textit\{task utility\}, a signal capturing each task's learning potential and cross\-task synergy, \{\\tool\} comprises two coupled modules: \\textit\{1\) \\moduleone\} module hierarchically allocates training budget and prioritizes informative prompts, steering training toward the most valuable data; and \\textit\{2\) \\moduletwo\} module dynamically scales per\-task KL regularization, matching update constraints to each task's current training state\.  Experiments on two widely\-used LLMs across four representative coding tasks demonstrate that \{\\tool\} consistently improves a single model across all tasks, outperforming the best task\-specific specialist by 9\.0\\%\-\-9\.5\\% and surpassing the strongest MTRL baseline by 7\.5\\%\-\-12\.8\\%\.
+
+## Semantic Motion Anchors: Bridging Motion and Meaning in Co\-Speech Gestures
+
+**Authors:** Varsha Suresh; Mohammad Mahdi Abootorabi; Mohamed Salman; M\. Hamza Mughal; Christian Theobalt; Ashwin Ram; Jürgen Steimle; Vera Demberg
+
+**ID:** 154665 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=BwJGCsV7Vl>) | [PDF](<https://openreview.net/pdf?id=BwJGCsV7Vl>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154665>)
+
+Learning a shared representation between spoken text and gesture is central to co\-speech gesture retrieval, synthesis, and understanding, but remains challenging for semantically meaningful gestures whose communicative intent is not captured by motion alone\. Direct contrastive alignment between transcripts and continuous motion embeddings often overemphasizes low\-level kinematics and misses the symbolic content of semantic gestures\. We propose \\emph\{semantic motion anchors\}, natural\-language abstractions of gesture motion capturing physical form and communicative intent\. Our method discretizes 3D gestures into body\-hand motion primitives, verbalizes them into structured descriptions, and grounds them in the transcript to provide auxiliary contrastive supervision\. On BEAT2, our method improves text\-to\-gesture R@1 by 8\.2\\% over a direct text\-motion baseline and outperforms prior retrieval approaches on text to gesture and gesture to text retrieval directions\. Beyond aggregate retrieval metrics, semantic motion anchor supervision helps retrieve gestures that are semantically meaningful for the spoken query, rather than defaulting to generic motion patterns\. A downstream retrieval\-augmented gesture generation study showed that users significantly preferred gestures retrieved by our approach over a retrieval\-augmented generation baseline, demonstrating that semantically grounded retrieval translates to gestures that better convey communicative intent in downstream generation\.
+
+## Constraint Retrieval Is Not Constraint Enforcement in Large Language Models
+
+**Authors:** Yongkang Yang; Xiankun Lin; Lixin Liu; Ziyan Liu; Xilin Xia; Zhiwei Zhuang; Zhezheng Hao; Wence Ji
+
+**ID:** 155108 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=8LYdKabYW6>) | [PDF](<https://openreview.net/pdf?id=8LYdKabYW6>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155108>)
+
+Prompt\-level instructions are the main way users give language models preferences, safety boundaries, and content rules\. But a model can remember a constraint and still violate it when generating text\. This points to a gap between two abilities that are often treated as one: retrieving a constraint from context, and enforcing it during token selection\. Across five model families \(0\.5B\-\-32B parameters\), we find a clear behavioral split: constraints that admit an alternative generation plan are largely followed, while token\-level prohibitions fail whenever the prohibited continuation is locally dominant\. Mechanistic analyses show that retrieval heads still attend to the constraint at the violation step, but the resulting signal either paradoxically enhances the prohibited token's logit or suppresses it too weakly to change the argmax\. Decoding\-time interventions can eliminate surface\-form violations, but semantic compliance still requires higher\-level verification\. These results establish that constraint retrieval and constraint enforcement are separable capabilities, and that reliable token\-level compliance requires explicit veto mechanisms beyond prompting\.
+
+## Mutable Transcripts: Mitigating Context Pollution through Editable Conversation State
+
+**Authors:** Dan Barry; Andrew Hines
+
+**ID:** 153229 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=MpRxjdY3Md>) | [PDF](<https://openreview.net/pdf?id=MpRxjdY3Md>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153229>)
+
+Contemporary large language model \(LLM\) chat systems treat conversation history as an immutable sequence of turns that defines the model’s working context\. However, user intent in real interactions is not static: it evolves through correction, refinement, and shifting constraints\. This mismatch between dynamic intent and static transcripts can result in context pollution, where outdated or irrelevant information persists and continues to influence subsequent responses\. We introduce mutable transcripts, a new interaction paradigm that enables users to revise prior turns through natural language edit requests, allowing the conversation history itself to be updated rather than appended\. This reframes the transcript from a passive record into an editable representation of conversational state\. We present a working prototype that integrates transcript\-level revision into a standard chat interface and evaluate its feasibility through a controlled user study \(n=17\) and an illustrative transcript analysis of representative interaction scenarios\. Participants significantly preferred mutable transcripts over standard chat across measures of clarity, confidence, and ease of use, with reduced intent to restart conversations\. Transcript analysis of representative user study conversations shows that mutable transcripts can reduce conversation length and eliminate obsolete retained context\. These findings provide initial evidence that user\-driven revision of conversational history can improve interaction quality and help maintain a more current representation of user intent\.
+
+## UniPrefill: Universal Long\-Context Prefill Acceleration via Block\-wise Dynamic Sparsification
+
+**Authors:** Qihang Fan; Huaibo Huang; zhiyingwu; Bingning Wang; Ran He
+
+**ID:** 152106 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=VU9bHYAvdH>) | [PDF](<https://openreview.net/pdf?id=VU9bHYAvdH>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152106>)
+
+As large language models \(LLMs\) continue to advance rapidly, they are becoming increasingly capable while simultaneously demanding ever\-longer context lengths\. To improve the inference efficiency of long\-context processing, several novel low\-complexity hybrid architectures have recently been proposed, effectively alleviating the computational burden of long\-context inference\. However, existing research on long\-context prefill acceleration remains predominantly focused on sparse attention mechanisms, which achieve their maximum speedup only on full\-attention models\. When transferred to emerging architectures — such as linear/full attention hybrids or sliding window/full attention hybrids — these prefill acceleration approaches suffer significant performance degradation\. Furthermore, such methods are generally incompatible with continuous batching, making them difficult to integrate into modern inference engines such as vLLM\. To this end, we propose UniPrefill, a prefill acceleration framework applicable to virtually any model architecture, which directly accelerates the model's computation at the token level\. We further implement UniPrefill as a continuous batching operator and extend vLLM's scheduling strategy to natively support prefill\-decode co\-processing for UniPrefill, enabling its seamless integration into vLLM\. UniPrefill achieves up to 2\.1x speedup in Time\-To\-First\-Token \(TTFT\), with the acceleration becoming increasingly pronounced as the number of concurrent requests grows\.
+
+## TAC: Timestamped Audio Captioning
+
+**Authors:** Sonal Kumar; Prem Seetharaman; Ke Chen; Oriol Nieto; Jiaqi Su; Zhepei Wang; Rithesh Kumar; Dinesh Manocha; Nicholas J\. Bryan; Zeyu Jin; Justin Salamon
+
+**ID:** 148688 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=vn02SDACyt>) | [PDF](<https://openreview.net/pdf?id=vn02SDACyt>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148688>)
+
+Large Audio Language Models struggle to disentangle overlapping events in complex acoustic scenes, yielding temporally inconsistent captions and frequent hallucinations\. We introduce Timestamped Audio Captioner \(TAC\), a model that produces temporally grounded audio descriptions at varying degrees of detail and resolution\. TAC is trained with a synthetic data pipeline that constructs challenging and dynamic mixtures from real\-world audio sources, enabling robust learning under realistic polyphonic conditions\. Across event detection, dense captioning, and speaker diarization, TAC outperforms most competing methods \- including dedicated diarization systems with a low hallucination rate and accurate temporal grounding\. We also introduce TAC\-V, an audio\-visual pipeline to generate semantically rich audio\-visual descriptions\. We then show that TAC serves as a "semantic bridge" for a text\-only reasoner: a simple TAC→LLM and TAC\-V→LLM cascade achieves state\-of\-the\-art scores on benchmarks for both audio \(MMAU\-Pro, MMSU, MMAR\) and audio\-visual \(DailyOmni, VideoHolmes\) understanding and reasoning respectively\. We encourage readers to see detailed qualitative results on our demo page: https://audioanon\.github\.io/tacmodel/\.
+
+## MAST: Label\-Efficient, Robust, and Generalizable Sound Detection for Biodiversity Monitoring via Masked Audio Pretraining and Self\-Training
+
+**Authors:** Tianyi Xu; Daniel Pimentel\-Alarcón; Zuzana Buřivalová; Claudia Solis\-Lemus
+
+**ID:** 148863 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=uco9zJhmN7>) | [PDF](<https://openreview.net/pdf?id=uco9zJhmN7>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148863>)
+
+Passive acoustic monitoring can measure biodiversity at larger scales, but time\-\-frequency annotation of animal vocalizations is expensive, site\-specific, and difficult to sustain at scale\. We present a label\-efficient sound detection framework that combines masked audio pretraining with a lightweight detector on mel spectrograms, then further improves robustness through iterative self\-training on unlabeled audio\. We first pretrain a ViT\-based encoder on unlabeled recordings via masked reconstruction and transfer the encoder to a detection backbone\. To better separate animal sounds from confounding background, we add a box\-level contrastive loss that pulls matched event regions together while pushing noisy negatives apart\. We then apply a two\-stage pseudo\-labeling curriculum to exploit large unlabeled pools without additional annotation\. We evaluate the performance on two ecologically distinct domains: tropical rainforest soundscapes \(Indonesia\) and bird vocalizations in Mediterranean habitats \(Spain\)\. On both domains, masked audio pretraining and contrastive learning consistently improve time\-\-frequency detection under temporal and cross\-site distribution shift, and self\-training yields further gains in out\-of\-distribution performance\. On the rainforest domain, MAST with self\-training achieves \+0\.22 mAP and \+0\.24 F1 over the strongest baseline under cross\-site shift\. On the bird domain, self\-training achieves \+0\.12 mAP and \+0\.10 F1 over the strongest baseline under cross\-site shift\. Overall, our results show that MAST can effectively extend self\-supervised audio representations from clip\-level tasks to robust box\-level localization across diverse bioacoustic settings, providing a practical path for biodiversity monitoring with limited labels\.
+
+## Generating the Unheard: Phylogeny\-Guided Latent Generation for Ancestral Sound Reconstruction
+
+**Authors:** Tianyi Xu; Shrinaath Narasimhan; Evan Gorstein; Santiago Perea; Yunyi Shen; Claudia Solis\-Lemus
+
+**ID:** 149448 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=q0x4JeQVBE>) | [PDF](<https://openreview.net/pdf?id=q0x4JeQVBE>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149448>)
+
+What did an ancestral bird species sound like? Existing ancestral state reconstruction methods can infer low\-dimensional traits such as morphological characters at internal nodes of a phylogenetic tree, but no one has tried to produce rich perceptual signals such as audio\. Some of the challenges include inferred representations that are either too low\-dimensional to decode or lie in non\-generative feature spaces, so no method to date can produce ancestral audio\. We introduce the first framework that generates plausible ancestral vocalizations\. Our pipeline encodes bird recordings into a VAE latent space, learns a low\-dimensional trait projection aligned with phylogenetic distances, performs ancestral inference in this trait space, and recovers decodable latents through an anchored inverse lift before emitting novel waveforms for each ancestral node\. Because the entire pipeline stays within a decodable latent space, every internal node receives a genuinely new audio output representing plausible intermediate ancestral sounds unavailable to retrieval\-based alternatives\. Experiments on two phylogenetically distant bird clades, 21\-species Tyrannidae and 19\-species Paridae, show that our method is the only approach that simultaneously achieves genuine generation, phylogenetic consistency, and naturalistic audio quality across both datasets\.
+
+## RepoLaunch: Automating Build and Management of Code Repositories across Languages and Platforms
+
+**Authors:** Kenan Li; Rongzhi Li; Linghao Zhang; Qirui Jin; Liao Zhu; XiaoSong Huang; Geng Zhang; Yikai Zhang; Shilin He; Chengxing Xie; Xin Zhang; Zijian Jin; Bowen Li; Chaoyun Zhang; Yu Kang; Yufan Huang; Elsie Nallipogu; Saravan Rajmohan; Qingwei Lin; Dongmei Zhang
+
+**ID:** 151672 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=YuMVddXHZV>) | [PDF](<https://openreview.net/pdf?id=YuMVddXHZV>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151672>)
+
+Language model \(LM\) agents have driven substantial progress in automated software engineering \(SWE\), yet building and testing software repositories at scale remains a largely manual and labor\-intensive bottleneck\. In this work, we introduce RepoLaunch, a novel agentic framework that automatically resolves dependencies, compiles source code, and extracts test results across diverse programming languages and operating systems\. RepoLaunch achieves a 78\\% build success rate, outperforming the Python/Linux\-only prior system by 18\\%\. To demonstrate its application, we further present a fully automated pipeline for SWE dataset creation driven by RepoLaunch, which only requires human input at the task\-design stage\.  RepoLaunch is open\-sourced, and its automated task\-generation pipeline has already been adopted by several recent works on agentic benchmarking and training\.
+
+## Soft Token Alignment for Cross\-Lingual Reasoning
+
+**Authors:** Jiayi He; Jungsoo Park; Wei &amp;amp;quot;Coco&amp;amp;quot; Xu; Alan Ritter
+
+**ID:** 149550 | **Topic source:** official | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=pJ0iIOHK6H>) | [PDF](<https://openreview.net/pdf?id=pJ0iIOHK6H>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149550>)
+
+Multilingual large language models often produce inconsistent reasoning and answers across semantically equivalent prompts in different languages\. Prior work suggests that intermediate representations can be relatively language\-agnostic, but generation becomes increasingly language\-specific as models commit to discrete output tokens\. This is problematic because language\-specific lexical choices can cause semantically equivalent reasoning paths to diverge across languages\. This motivates searching for a cross\-lingual alignment signal that is less tied to any single vocabulary item or script\. We propose SOLAR , an auxiliary objective for supervised fine\-tuning that aligns soft\-token representations across languages, using English as a pivot\. Soft tokens are probability\-weighted mixtures over the vocabulary embeddings, yielding continuous representations that can aggregate information from semantically related tokens across languages\. We then align each non\-English soft\-token summary to its English counterpart in the shared embedding space\. Across four multilingual reasoning benchmarks, SOLAR improves accuracy by up to \+17\.7 points over the base model and \+3\.8 over standard supervised fine\-tuning, with the largest gains on low\-resource languages\. SOLAR also strengthens final\-layer cross\-lingual similarity and substantially reduces language\-cluster separability, suggesting that aligning soft\-token representations helps preserve shared semantic structure during multilingual reasoning\.
+
+## Differentiable Bit\-Widths: Co\-optimizing Pruning and Quantization via SVD for Ultra\-Efficient LLM Compression
+
+**Authors:** Hankyul Kang; Jongbin Ryu
+
+**ID:** 148406 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=y5tDLoawiV>) | [PDF](<https://openreview.net/pdf?id=y5tDLoawiV>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148406>)
+
+SVD\-based pruning and quantization have recently emerged as a promising strategy for the ultra\-efficient compression of large language models\. In these methods, compression is performed in two stages: components are first truncated, and the remaining ones are subsequently quantized\. Although this decoupled pipeline benefits from both pruning and quantization, it requires separate optimization for each stage and fails to fully exploit their balance, which can lead to suboptimal performance under aggressive compression\. To address this limitation, we propose a new LLM compression method that co\-optimizes pruning and quantization in a unified framework\. Our key idea is a differentiable method for learning component\-wise bit\-widths, allowing less important components to be assigned 0\-bit precision and pruned away\. Notably, our method performs favorably against two\-stage baselines, even when subjected to extreme quantization settings \($1\.61$ bits\) designed for ultra\-efficiency\. The code will be publicly released upon acceptance\.
+
+## She Performs Your Voice: A Unified Speech and Dance Motion Model
+
+**Authors:** Lurui Wang; yongkang cheng; Can Xu
+
+**ID:** 152650 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=RPt1Yd4luK>) | [PDF](<https://openreview.net/pdf?id=RPt1Yd4luK>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152650>)
+
+Expressive performers resonate with audiences because they transform sound into motion: rhythm invites steps, prosody evokes gestures, and energy shapes the flow of the body\. However, existing audio\-driven character systems often reduce audio to a task\-specific condition, separately optimizing for co\-speech gestures or music\-driven dance\. This fragmented view overlooks audio as the shared perceptual driver of performance, making it difficult to generate coherent full\-body motion across speaking, dancing, and their intermediate states\. We present VOXPERFORMER, a unified audio\-to\-motion framework that moves toward a generalized performance foundation model\. Our key insight is that audio is not merely an external condition, but the hidden soul of performance style, governing how motion emerges, evolves, and transitions\. To realize this, VOXPERFORMER introduces a structured motion prior to organize the full\-body performance space, audio\-to\-prior distillation to transform sound into latent motion cues, a memory\-augmented prior to resolve audio\-motion ambiguity, and a decoupled diffusion generator with implicit transition matching for efficient and coherent synthesis\. Experiments on BEAT2 and FineDance show that VOXPERFORMER remains competitive on speech\-driven gesture generation while substantially improving hand\-aware music\-driven dance generation\. User studies further show that participants prefer VOXPERFORMER, indicating stronger audio\-motion correspondence and more natural perceptual resonance\.
+
+## Actionable Hallucination Detection: Translating Latent Uncertainty into Agentic Critique
+
+**Authors:** Sanidhya Vijayvargiya; Rahul Lokesh
+
+**ID:** 155358 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=6CdA8QbHL5>) | [PDF](<https://openreview.net/pdf?id=6CdA8QbHL5>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155358>)
+
+Large Language Models \(LLMs\) deployed as AI agents frequently exhibit a task\-completion bias, executing hallucinated, undesired actions to force a resolution rather than expressing uncertainty\. Existing detection methods fail to provide actionable, real\-time correction as they either do not localize the hallucinations or incur prohibitive inference latency\. We introduce the Latent Critic, a lightweight low\-rank adapter \(LoRA\) that operates concurrently with a frozen base LLM's generation to actively restructure the transformer's residual stream\-\-\-amplifying epistemic uncertainty signals and translating them into localized, natural language feedback within a single sequence\. By refining the base model's native uncertainty signals, this manipulation of the latent space enables highly reliable, granular detection without the overhead of secondary inference loops\. Mechanistic analysis via activation patching and layer\-wise probing shows that this rank\-invariant behavior restructures pre\-existing uncertainty geometry into a linearly separable representation\. Using tool\-calling as an instantiation of granular hallucinations, we validate the detection and downstream improvements enabled by the Latent Critic architecture across Qwen and Llama\-based models\. Demonstrating superior real\-time efficacy, our approach significantly outperforms equivalent\-scale external detectors and internal probes in isolating hallucinations \(0\.870 vs\. 0\.695 F1\), achieving &gt;80% accuracy in localization \(e\.g\., ungrounded: date\)\. When deployed in a closed\-loop ReAct environment, the Critic acts as a zero\-latency guardrail, intercepting hallucinations before execution to prevent undesired actions while simultaneously enabling efficient agent self\-correction\.
+
+## Your Benchmark Is an Empirical Measure Over Difficulty
+
+**Authors:** Yifan Sun; Naicheng Yu; Jiawen Gong; Jingyan Shen; Huan Zhang
+
+**ID:** 139196 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=fCQ7KtG95S>) | [PDF](<https://openreview.net/pdf?id=fCQ7KtG95S>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139196>)
+
+A benchmark is not merely a collection of test questions; it naturally induces an empirical measure over difficulty\. In this work, we develop this measure\-based view of benchmark evaluation\. This perspective allows us to identify and formalize two central failure modes: \\emph\{measure mismatch\}, where the benchmark difficulty distribution differs from the intended difficulty distribution, and \\emph\{coverage gaps\}, where uncovered regions along the difficulty axis prevent benchmarks from detecting meaningful localized training progress\. We propose two diagnostic metrics that capture these two failure modes and provide rigorous theoretical guarantees\. Empirically, we analyze \\textbf\{25\} popular benchmarks spanning \\textbf\{7\} domains using carefully estimated item difficulties\. Our results show that many benchmarks implicitly overweight certain difficulty regions, so their leaderboard conclusions should be interpreted with caution; others leave substantial portions of the difficulty axis uncovered, limiting their ability to monitor model improvement process\. Finally, we turn diagnosis into action by introducing \\textsc\{BenchFill\}, a simple difficulty\-targeted item rewriting algorithm that effectively reduces local coverage gaps\.
+
+## GOLD PANNING: Strategic Context Shuffling for Needle\-in\-Haystack Reasoning
+
+**Authors:** Adam Byerly; Daniel Khashabi
+
+**ID:** 155209 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=7SfVNZjeY8>) | [PDF](<https://openreview.net/pdf?id=7SfVNZjeY8>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155209>)
+
+Large language models \(LLMs\) exhibit pronounced position bias in long\-context retrieval, systematically prioritizing information location over relevance\. Existing mitigations modify positional encodings or attention internals, but in the common output\-only deployment setting these are inapplicable\. We introduce GOLD PANNING, a Bayesian framework for inference\-time active search that \(i\) reorders documents to concentrate high\-belief items in highly diagnostic positions \(signal anchoring\) and \(ii\) updates relevance beliefs from model outputs\. Unlike active learning, which prioritizes uncertainty reduction, GOLD PANNING exploits anchoring\-\-\-once flagged, keep it in sight\-\-\-to preserve weak cues\. A greedy assignment derived from the model's diagnosticity profile provably identifies a target among $N$ documents with high probability in $O\(\\log N\)$ rounds\. Across open\-weight and closed\-source models on multi\-document QA, GOLD PANNING matches Permutation Self\-Consistency's $F\_1$ with $30$\-\-$65\\%$ fewer queries and remains effective under calibration mismatch, indicating that coarse positional ordering alone drives the gains\. These results show that inherent model biases need not be failures, but can serve as exploitable signals\.
+
+## Minimally Invasive Steering of Language Models
+
+**Authors:** Taha Entesari; Jingyu \(Jack\) Zhang; Daniel Khashabi; Mahyar Fazlyab
+
+**ID:** 153525 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=Kg5V7xioBy>) | [PDF](<https://openreview.net/pdf?id=Kg5V7xioBy>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153525>)
+
+Test\-time alignment aims to adapt large language models \(LLMs\) to runtime objectives without updating their parameters\. This is especially useful when the reward signal is user\-specific, time\-varying, or available only through a black\-box evaluator\.  We propose a minimally invasive pre\-logit steering method that optimizes additive interventions to the hidden states of a frozen LLM in order to improve reward while preserving the base model's behavior\. Rather than penalizing the Euclidean norm of the steering vector, we derive an effort penalty from the local KL geometry of the induced token distribution\. Specifically, we show that the per\-token KL divergence between the steered and reference policies admits a second\-order expansion given by a Fisher\-quadratic form in the steering vector\. This regularizer has an analytic gradient computable through matrix\-vector products with the frozen language\-model head, making it as inexpensive as a standard quadratic penalty while retaining a principled KL interpretation\.  We further decompose the sequence\-level KL gradient into an analytic Fisher component and a trajectory\-dependent score\-function component, and introduce a hierarchy of Fisher surrogates with provable first\-order equivalence in the small\-steering regime\. The resulting algorithm provides a training\-free, reward\-driven test\-time alignment procedure that improves reward while controlling deviation from the base policy\.
+
+## ForecastCompass: Guiding Agentic Forecasting with Adaptive Factor Memory
+
+**Authors:** Yurui Chang; Yongkang Du; Yuanpu Cao; Jinghui Chen; Lu Lin
+
+**ID:** 153936 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=HSZMPfq6tX>) | [PDF](<https://openreview.net/pdf?id=HSZMPfq6tX>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153936>)
+
+Agentic forecasting is important for decision\-making in dynamic environments, but it remains challenging because agents must reason from incomplete, time\-limited evidence and produce calibrated probabilities before outcomes are resolved\. Memory provides a natural mechanism for transferring experience from resolved forecasts to future prediction tasks\. However, existing agent\-memory methods are not tailored to forecasting, as they typically store past interactions, reflections, or factual associations without explicitly representing reusable predictive factors or calibration knowledge\.  We propose ForecastCompass\(FoCo\), an adaptive factor\-based memory framework for agentic forecasting\. FoCo organizes forecasting experience with a hierarchical forecasting\-task taxonomy, enabling retrieval task\-relevant forecasting knowledge\. It maintains two complementary memory components: factor memory, which captures reusable predictive dimensions, and reasoning memory, which encodes probability updating, uncertainty handling, and calibration principles\. Using retrospective analyses as learning signals, FoCo iteratively revises memory through a verbalized memory\-revision procedure, enabling the agent to accumulate transferable forecasting knowledge over time\. Experiments on Prophet Arena and FutureX with GPT\-5\-mini and Gemini\-2\.5\-Flash show that FoCo improves both probabilistic accuracy and calibration\.
+
+## Introspection Tools Help LLMs Understand and Control Themselves
+
+**Authors:** Xiao Liu; Junsol Kim; Shiyang Lai; Jacy Anthis; Siyang Wu; Chenhao Tan; James Evans
+
+**ID:** 140093 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=GgN3oK68Eu>) | [PDF](<https://openreview.net/pdf?id=GgN3oK68Eu>) | [Official poster](<https://neurips.cc/virtual/2026/poster/140093>)
+
+Large language models \(LLMs\) exhibit increasingly strong reasoning capabilities, yet they remain limited in their ability to understand, explain, or regulate their own states and behavior\. While interpretability methods have advanced our ability to expose and manipulate their internal mechanisms, they are designed for human analysts rather than for models themselves\. In this position paper, we argue for equipping LLMs with tools that expose measurable internal signals \(e\.g\., token probabilities and internal activations\) and enable self\-regulation\. We refer to these as introspection tools, drawing inspiration from humans' access to their mental and physical states, which allow for effective mental and bodily control in diverse real\-world contexts\. We present the design space for introspection tools, and two proof\-of\-concept examples illustrating how such tools are feasible and can support uncertainty quantification and misinformation mitigation\. Beyond manually designed tools, we highlight open research questions around the automatic development, refinement, and organization of introspection tools\. Together, these directions move toward LLMs that are more self\-aware and reliable\.
+
+## When Reasoning Meets Its Laws
+
+**Authors:** Junyu Zhang; Yifan Sun; Tianang Leng; Jingyan Shen; Liu Ziyin; Paul Liang; Huan Zhang
+
+**ID:** 155285 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=6ha7HGdygP>) | [PDF](<https://openreview.net/pdf?id=6ha7HGdygP>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155285>)
+
+Despite the superior performance of Large Reasoning Models \(LRMs\), their reasoning behaviors are often counterintuitive, \*e\.g\.\*, excessive reasoning on simple questions or insufficient reasoning on complex ones, leading to suboptimal reasoning capabilities\. This paper presents the Laws of Reasoning \(LoRe\), a unified framework that formalizes intrinsic reasoning patterns in ideal LRMs\. We first propose \*compute law\* with the hypothesis that the reasoning compute should scale linearly with question complexity\. Beyond compute, we extend LoRe with a supplementary \*accuracy law\*, positing exponential decay of accuracy with increasing complexity\. Since the complexity is difficult to quantify in practice, we approximate these hypotheses via two tractable properties, \*monotonicity\* and \*compositionality\*\. We therefore introduce LoRe\-Bench, a benchmark that systematically measures these properties for large reasoning models\. Evaluation shows that most reasoning models exhibit reasonable monotonicity but lack compositionality\. In response, we develop an effective finetuning approach that enforces compute\-law compositionality\. Extensive empirical studies demonstrate that better compliance with compute laws yields consistently improved reasoning performance on multiple benchmarks, and uncovers synergistic gains across properties and laws\.
+
+## Progress\-Aware Distillation for Mitigating Stagnation in Small Language Model Agents
+
+**Authors:** Yuanpu Cao; Saket Sathe; Hanyu Wang; Ziyi Yin; Fenglong Ma; Jinghui Chen
+
+**ID:** 149176 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=sJMXfTlER4>) | [PDF](<https://openreview.net/pdf?id=sJMXfTlER4>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149176>)
+
+While LLM\-based agent systems have demonstrated remarkable proficiency in reasoning and solving complex real\-world tasks, they also come with substantial token consumption and inference latency, limiting their practical deployment\. To enhance the efficiency of agent systems, recent efforts have focused on transferring agentic capabilities from large\-scale models to small language models \(SLMs\) via supervised fine\-tuning\-based distillation\. Nevertheless, as interaction trajectories grow longer, involving extended reasoning\-action chains and extensive environmental feedback, distilled student agents tend to experience progress stagnation: becoming trapped in unproductive loops characterized by persistent failed strategies and difficulty making meaningful progress\. Our systematic analysis shows that this phenomenon consistently occurs across diverse SLMs and task domains\. To address this issue, we propose Progress\-Aware Distillation \(ProD\), which explicitly detects and penalizes stagnation in student\-generated trajectories\. ProD encodes the stagnation gap between student and teacher into an adaptive margin for dynamically penalizing possible stagnation\. By iteratively applying this procedure, ProD enables student agents to progressively approximate teacher behavior\. Extensive experiments involving 8 SLMs, ranging from 0\.6B to 8B parameters, on both in\-domain and out\-of\-domain benchmarks, demonstrate that ProD substantially mitigates progress stagnation while enhancing both the success rates and task\-completion efficiency of distilled SLM agents\.
+
+## PAAC: Privacy\-Aware Agentic Device\-Cloud Collaboration
+
+**Authors:** Liangqi Yuan; Wenzhi Fang; Shiqiang Wang; Christopher Brinton
+
+**ID:** 149491 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=pkgQ4KB4Se>) | [PDF](<https://openreview.net/pdf?id=pkgQ4KB4Se>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149491>)
+
+Large language model \(LLM\) agents face a structural tension: cloud agents provide strong reasoning but expose user data, while on\-device agents preserve privacy at the cost of overall capability\. Existing device\-cloud designs treat this boundary as a compute split rather than a trust boundary suited to agentic workloads, and existing sanitizers force a choice between policy flexibility and the structural fidelity tool calls require\. In this work, we develop PAAC, a privacy\-aware agentic framework that aligns planner\-\-executor decomposition with the device\-cloud boundary so that role specialization itself becomes the privacy mechanism\. The cloud agent reasons over typed placeholder tokens that preserve each sensitive value's reasoning role while discarding its content, while the on\-device agent identifies sensitive spans and distills each step's execution outcome into compact key findings\. Sanitization confines the on\-device LLM to proposing which spans to mask, while a deterministic registry performs all substitution and reversal, keeping actions directly executable on device\. On three agentic benchmarks under strict privacy settings, PAAC dominates the Pareto frontier of privacy and accuracy, improving average accuracy by 15\-36\\% and reducing average leakage by 2\-6$\\times$ over state\-of\-the\-art device\-cloud baselines, with the largest margins on privacy targets outside fixed entity taxonomies\. We find consistent improvements on 17 additional benchmarks spanning 10 domains, including math, science, and finance\.
+
+## NPUsper: Eliminating Redundant Computation for Real\-Time Whisper on Mobile NPUs
+
+**Authors:** Hojeong Lee; Si H Lee; Sungwon Woo; Chengpo Yan; Suman Banerjee; Seyeon Kim
+
+**ID:** 152954 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=P8hKTBfUd9>) | [PDF](<https://openreview.net/pdf?id=P8hKTBfUd9>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152954>)
+
+We present NPUsper, a live transcription system that makes Whisper efficient on mobile NPUs by eliminating redundant computation\. To avoid the heavy padding used by prior streaming systems, NPUsper detects hallucinated tokens online from temporal patterns in decoder cross\-attention, allowing each inference round to process short audio inputs with minimal carryover\. For efficient mobile\-NPU execution, we propose controlled unrolling, which executes autoregressive decoding as K\-step chunk graphs, removing unnecessary KV\-cache computation and reducing graph\-dispatch overhead\. NPUsper achieves up to 4\.84x lower per\-word latency, up to 33\.2x lower time\-to\-first\-token \(TTFT\), and up to 11\.36% lower average power consumption compared with baselines, while maintaining comparable transcription accuracy\. The code is available at https://github\.com/npusper/NPUsper\.
+
+## Asymmetric Phase Coding Audio Watermarking
+
+**Authors:** Guang Yang; Fengchen Liu; Amir Ghasemian; Zhong Wang; Ninareh Mehrabi; Homa Hosseinmardi
+
+**ID:** 149813 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=nAf6IJ9PSz>) | [PDF](<https://openreview.net/pdf?id=nAf6IJ9PSz>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149813>)
+
+The proliferation of deepfake audio challenges voice\-based authentication systems; passive forensic detectors are sensitive to evolving generative models and to real\-world channel distortions\. We propose Asymmetric Phase Coding \(APC\), a training\-free cryptographic signing layer for audio, designed as a compact and auditable provenance primitive that can stand alone or be stacked with learned watermarks\. APC combines Ed25519 digital signatures \(EdDSA, FIPS 186\-5; 64\-byte signatures\) with Reed–Solomon error correction, pseudo\-random STFT phase\-bin selection, and a redundant quantization\-index\-modulation \(QIM\) code on log\-magnitude differences of adjacent bin pairs, yielding a compact, non\-repudiable, blind\-extractable watermark\. We evaluate APC on 1,000 LibriSpeech test\-clean clips \(10 s each, 44\.1 kHz\) under eight attack configurations – identity, 10% end\-cropping, 20% end\-cropping, 8 kHz low\-pass, 16 kHz round\-trip resampling, FLAC re\-encoding, MP3 at 128 kbps, and OGG\-Vorbis at 128 kbps – and achieve cryptographic verification rates between 97\.5% and 98\.3% on every condition at mean PESQ=3\.02 and tens\-of\-milliseconds CPU latency\. We explicitly compare APC against recent neural baselines \(AudioSeal, WavMark, SilentCipher\), detail the threat model \(forgery resistance vs\. erasure\), characterize the dataset, define all metrics, quantify an adaptive white\-box erasure attack, and release code, keys, and metadata for reproducibility\.
+
+## From History to State: Constant\-Context Skill Learning for LLM Agents
+
+**Authors:** Haoyang Xie; Xinyuan Wang; Yancheng Wang; Puda Zhao; Feng Ju
+
+**ID:** 154254 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=F9AmFBisYk>) | [PDF](<https://openreview.net/pdf?id=F9AmFBisYk>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154254>)
+
+Large language model \(LLM\) agents are increasingly used to operate browsers, files, code and tools, making personal assistants a natural deployment target\. Yet personal agents face a privacy\-cost\-capability tension: cloud models execute multi\-step workflows well but expose sensitive intermediate context to external APIs, while local models preserve privacy but remain less reliable\. Both settings also pay repeatedly for long skill prompts and growing histories\. We propose constant\-context skill learning, a context\-to\-weights framework for recurring agent workflows: reusable procedures are learned in lightweight task\-family modules, while inference conditions only on the current observation and a compact state block\. A deterministic tracker renders this state block from task progress and supplies aligned subgoal rewards, so each module can be trained with step\-level SFT and refined through online RL\. Across ALFWorld, WebShop, and SciWorld, our agents achieve strong performance across Qwen3\-4B, Qwen3\-8B and Llama\-3\.1\-8B\. With Qwen3\-8B, SFT\+RL reaches 89\.6\\% unseen success on ALFWorld, 76\.8\\% success on WebShop, and 66\.4\\% unseen success on SciWorld\. They match or exceed strong published agent\-training results while reducing prompt tokens per turn by 2\-7$\\times$ relative to controlled ReAct prompting baselines, showing that procedural context can be moved from prompts into weights\.
+
+## Distilling Sequential Computation in Transformer Language Models
+
+**Authors:** Zixuan Lan; Jessica Yang; Yanhong Li; Karen Livescu; Jiawei Zhou
+
+**ID:** 150342 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=iqGrRkvjJU>) | [PDF](<https://openreview.net/pdf?id=iqGrRkvjJU>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150342>)
+
+Transformer language models process sequences token by token in an autoregressive manner, making growing contexts increasingly expensive\. Yet many adjacent token spans are highly predictable or frequently occur as stable units, suggesting that their representations may be compressible\. We introduce a method for distilling sequential computation by replacing spans of input tokens with collapsed representations, computed on the fly by a lightweight merge module\. This module generates a single surrogate embedding from a sequence of static token embeddings that captures the functional role of the multiple tokens, allowing pretrained models to operate on compressed inputs without architectural changes or re\-training\. We apply this approach during inference to compress both prompts and intermediate decoding steps, using a rollback mechanism to substitute stored multi\-token KV cache entries with their single\-step surrogates\. Experiments across diverse models show that the merge module can be used to reduce effective sequence length by up to 40\\% with minimal accuracy degradation across language\-modeling evaluations and downstream tasks, including question answering, summarization, commonsense reasoning, and long\-form mathematical reasoning\. Additional lightweight adaptation of the merge module further improves the accuracy\-compression trade\-off in selected settings\. These results demonstrate that sequential token computation in Transformers can be effectively approximated through condensed surrogate representations that preserve the original behavior without model updating\.
+
+## FlowBank: Query\-Adaptive Agentic Workflows Optimization through Precompute\-and\-Reuse
+
+**Authors:** Lingzhi Yuan; Chenghao Deng; Fangxu Yu; Souradip Chakraborty; Mohammad Rostami; Furong Huang
+
+**ID:** 153098 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=Nx2TulAMl6>) | [PDF](<https://openreview.net/pdf?id=Nx2TulAMl6>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153098>)
+
+Large Language Model \(LLM\)\-based multi\-agent systems are increasingly powerful, but current agentic workflow optimization paradigms make an unsatisfying trade\-off\. Task\-level methods spend substantial offline compute yet deploy only a single workflow, leaving complementary candidates unused, while query\-level methods synthesize a new workflow for each query at substantial inference cost\. Our motivating analysis shows that these paradigms are more complementary than competing: workflows discovered during offline search often solve different subsets of queries, and many queries handled by expensive query\-level generation can already be solved by cheaper precomputed workflows\. This suggests a different objective: rather than searching for one universally best workflow or regenerating a workflow for every instance, we should build a compact bank of reusable, complementary workflows and select among them adaptively at inference time\. Doing so requires solving three coupled problems: generating complementary rather than redundant candidates, compressing them into a small deployable portfolio, and assigning each query to the right workflow under a performance\-cost trade\-off\. To this end, we present FlowBank, a three\-stage framework for portfolio\-based agentic workflow optimization\. Diversifying proposes DiverseFlow to steer search toward under\-covered queries and produce a high\-coverage candidate pool\. Curating proposes CuraFlow to compress this pool into a compact portfolio with minimal redundancy\. Matching casts deployment as edge\-value prediction on a query\-workflow bipartite graph and routes each incoming query to the portfolio member with the best predicted utility\. Across five benchmarks, FlowBank achieves the highest average score among the evaluated methods while remaining cost\-competitive, improving over the strongest automated and handcrafted baselines by 4\.26\\% and 14\.92\\% relative, respectively\.
+
+## Memory Retrieval for Changing Preferences
+
+**Authors:** Yuehan Qin; Li Li; Linxin Song; Jiate Li; Wei Yang; Yuqing Yang; Yue Zhao
+
+**ID:** 155002 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=9IKtbR4EmY>) | [PDF](<https://openreview.net/pdf?id=9IKtbR4EmY>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155002>)
+
+Long\-context dialogue systems must decide both when to access memory and which parts of the interaction history are relevant\. Existing approaches typically rely on heuristic retrieval signals or always\-on memory usage, failing to account for the changing and potentially inconsistent nature of user preferences\. In this work, we propose a unified framework for memory access and selection based on changing preferences\. We formulate personalized memory retrieval as identifying which historical turns provide evidence about a user’s latent preference state, rather than relying on surface\-level semantic similarity\. To this end, we quantify the utility of each memory turn using a Bayes factor, defined as the improvement in the model’s likelihood of the reference response when the turn is included in context\. This provides a principled measure of evidence strength and a unified signal for both memory access and selection\. By framing memory retrieval as utility estimation, the model learns to identify salient turns and regulate memory usage based on expected utility\. Experiments on four heterogeneous memory benchmarks show that our approach outperforms existing embedding\-based retrieval on long\-context, preference\-intensive tasks where modeling changing preferences is essential, while remaining competitive in low\-density regimes where semantic similarity suffices\.
+
+## Predictive–Generative Drift Decomposition for Speech Enhancement and Separation
+
+**Authors:** Julius Richter; Yoshiki Masuyama; Christoph Boeddeker; Takahiro Edo; Gordon Wichern; Jonathan Le Roux
+
+**ID:** 148915 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=uDy9sLEeWb>) | [PDF](<https://openreview.net/pdf?id=uDy9sLEeWb>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148915>)
+
+We propose a plug\-and\-play framework for speech enhancement and separation that augments predictive methods with a generative speech prior\. Our approach, termed Stochastic Interpolant Prior for Speech \(SIPS\), builds on stochastic interpolants and leverages their flexibility to bridge predictive and generative modeling\. Specifically, we decompose the interpolation dynamics into a task\-specific drift and a stochastic denoising component, allowing a predictive estimate to be integrated directly into the generative sampling process\. This results in a mathematically grounded framework for combining strong pretrained predictors with the expressive power of generative models\. To this end, we train a score model using only clean speech, yielding a degradation\-agnostic prior that can be reused across tasks\. During inference, the predictor provides a deterministic drift that steers the sampling process toward a task\-consistent estimate, while the score model preserves perceptual naturalness\. Unlike prior hybrid approaches, which typically rely on architecture\-specific conditioning and are tied to particular predictors or degradation settings, SIPS provides a unified framework that generalizes across predictors and additive degradation tasks\. We demonstrate its effectiveness for both speech enhancement and speech separation using recent predictors such as SEMamba and FlexIO\. The proposed method consistently improves perceptual quality, achieving gains up \+1\.0 NISQA for speech separation\.
+
+## WavFlow: Flowing Through Waveforms for Audio Generation
+
+**Authors:** Feiyan Zhou; Luyuan Wang; Shoufa Chen; Zhe Wang; Zhiheng Liu; Yuren Cong; Xiaohui Zhang; Fanny Yang; Belinda Zeng
+
+**ID:** 152430 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=TAxLVhUYlj>) | [PDF](<https://openreview.net/pdf?id=TAxLVhUYlj>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152430>)
+
+Modern audio generation predominantly relies on latent\-space compression, introducing additional complexity and potential information loss\. In this work, we challenge this paradigm with WavFlow, a framework that generates high\-fidelity audio directly in raw waveform space without intermediate representations\. To overcome the inherent difficulties of modeling high\-dimensional and low\-energy signals, we reshape audio into 2D token grids through waveform patchify and introduce amplitude lifting to align signal scales, enabling stable optimization via direct x\-prediction in flow matching\. To capture complex semantic alignment and temporal synchronization, we leverage an automated data pipeline to curate 5M high\-quality video\-text\-audio triplets, allowing the model to learn fine\-grained acoustic patterns from scratch\. Experimental results show that WavFlow achieves state\-of\-the\-art results on the video\-to\-audio benchmark VGGSound \(FD\_PaSST 55\.82, IS\_PANNs 17\.40, DeSync 0\.44\) and the text\-to\-audio benchmark AudioCaps \(FD\_PANNs 10\.63\), outperforming established latent\-based methods\. Our work demonstrates that such intermediate compression is not a prerequisite for high\-quality synthesis, offering a simpler and more scalable alternative for multimodal audio generation\.
+
+## Reasoning Gestures: LLM\-Inferred Communicative Functions for Co\-Speech Gesture Generation
+
+**Authors:** Pinxin Liu; Haiyang Liu; Yunlong Tang; Luchuan Song
+
+**ID:** 151121 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=cq7EnUOaLz>) | [PDF](<https://openreview.net/pdf?id=cq7EnUOaLz>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151121>)
+
+When humans speak, gestures often realize communicative functions \(\\textit\{e\.g\.\}, emphasizing key content, indicating referents, or depicting concepts\)\. Most co\-speech gesture generation methods, however, condition primarily on low\-level cues \(speech audio or transcripts\) and do not explicitly represent these higher\-level functions, leading to motions that synchronize with speech but remain under\-specified in communicative meaning\. To address this gap, we introduce \\textbf\{Reasoning Gestures\}, a reasoning\-grounded framework that conditions generation on interpretable communicative\-function descriptions\. We curate \\textbf\{InG: Interpreted Gestures\} by augmenting BEAT\-2 with sentence\-level \\emph\{VLM\-inferred gesture\-function annotations\} that describe the discourse role of each gesture segment in context\. These labels are \\emph\{observer\-centric interpretations\} produced via constrained VLM reasoning rather than claims about speakers’ private mental states\. We further propose a \\textbf\{Reasoning Gesture Motion Tokenizer\} that injects function signals into tokenized motion representations, enabling function\-aware synthesis that is temporally aligned and communicatively grounded\. Experiments on BEAT\-2 show consistent gains in semantic consistency and overall quality, establishing new state\-of\-the\-art\.
+
+## SWE\-Protégé: Learning to Selectively Collaborate With an Expert Unlocks Small Language Models as Software Engineering Agents
+
+**Authors:** Patrick Tser Jern Kon; Archana Pradeep; Ang Chen; Alex Ellis; Warren Hunt; Zijian Wang; John Yang; Samuel Thompson
+
+**ID:** 155936 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=1gT9qIbj9f>) | [PDF](<https://openreview.net/pdf?id=1gT9qIbj9f>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155936>)
+
+Small language models \(SLMs\) offer compelling advantages in cost, latency, and adaptability, but have so far lagged behind larger models on long\-horizon software engineering tasks such as SWE\-bench, where they suffer from pervasive action looping and low resolution rates\. We introduce SWE\-Protégé, a post\-training framework that reframes software repair as an expert–protégé collaboration problem\. In SWE\-Protégé, an SLM remains the sole decision\-maker while learning to selectively seek guidance from a strong expert model, recognize stalled states, and follow through on expert feedback\. Our approach combines supervised fine\-tuning on expert\-augmented trajectories with agentic reinforcement learning that explicitly discourages degenerative looping and unproductive expert collaboration\. We lightly post\-train Qwen2\.5\-Coder\-7B\-Instruct to achieve 42\.4% Pass@1 on SWE\-bench Verified, a \+25\.4% improvement over the prior SLM state of the art, while using expert assistance sparsely \(≈ 4 calls per task and 11% of total tokens\)\.
+
+## Free Draft\-and\-Verification: Toward Lossless Parallel Decoding for Diffusion Large Language Models
+
+**Authors:** Shutong Wu; Jiawei zhang
+
+**ID:** 153859 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=ICXpR98ax5>) | [PDF](<https://openreview.net/pdf?id=ICXpR98ax5>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153859>)
+
+Diffusion Large Language Models \(dLLMs\) have emerged as a compelling paradigm for language modeling, offering the unique potential for highly efficient inference via multi\-token parallel decoding\. However, unlocking this potential remains challenging\. High\-quality generation typically defaults to one\-token\-per\-step static decoding, while existing parallel algorithms rely on heuristic confidence thresholds, introducing a fragile trade\-off between decoding efficiency and generation quality\. To overcome this, we introduce \*\*Free\*\* \*\*D\*\*raft\-\*\*a\*\*nd\-\*\*Ve\*\*rification \(\*\*FreeDave\*\*\), a novel training\-free and model\-free fast decoding algorithm\. FreeDave capitalizes on the inherent properties of dLLMs by treating future token predictions as "free drafts" and rigorously self\-verifying them in subsequent forward passes\. Theoretically, FreeDave is guaranteed to use the fewest possible model forward passes to reproduce the exact sequence generated by static decoding, achieving algorithmically lossless acceleration\. Extensive evaluations on math reasoning and code generation benchmarks demonstrate that FreeDave can boost the number of generated tokens per model forward \(TPF\) by up to 5\.48$\\times$ and tokens per second \(TPS\) by up to 3\.94$\\times$, while robustly maintaining generation quality and avoiding the task\-specific performance degradation faced by heuristic methods\.
+
+## SMASH: Probing Speech Recognition Robustness via Semantically Targeted Bit Flips
+
+**Authors:** Zafaryab Haider; Md Hafizur Rahman; Aysegul Bumin; Prabuddha Chakraborty
+
+**ID:** 150005 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=lUIe5d85AP>) | [PDF](<https://openreview.net/pdf?id=lUIe5d85AP>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150005>)
+
+Automatic speech recognition \(ASR\) systems are usually judged by aggregate transcript accuracy, but real failures often hinge on meaning: for example, a wrong dose, address, account number, or date can matter more than many harmless word errors\. We introduce SMASH, a framework for finding targeted semantic failures caused by sparse INT8 weight\-bit perturbations, a dominant model data type for ASR edge devices, in quantized sequence\-to\-sequence ASR models\. Given an audio input and a meaning\-critical span,SMASH searches for small weight changes that replace the intended meaning while keeping the transcript readable, plausible, and close to the original output\. Each accepted fault is a certificate that a specific semantic substitution is reachable under a bounded perturbation budget\. Empirical study focuses on numeric and scalar substitutions across three ASR backbones: Whisper\-small\.en \(WS\), Whisper\-large\-v3 \(WLv3\), and SeamlessM4T\-v2\-large \(S\-M4T\); and three corpora: an LLM\-assisted controlled corpus \(LACC\), MultiMed, and LibriSpeech\. On LACC at a 20\-bit budget \($B$\), SMASH\-hybrid accepts numeric substitutions on 24/45 WS targets, 19/44 WLv3 targets, and 5/34 S\-M4T targets; reachability is lower on real\-speech datasets\. In matched LACC budget sweeps tested up to $B=40$, WS reaches its ceiling already at $B=20$, while WLv3 and S\-M4T continue to gain accepted targeted substitutions through $B=40$\. Human validation supports the gate\-based labels: on a 105\-item shared validation set, independent human\-majority labels and a four\-judge large\- language\-model ensemble agree on the composite clean\_success label, with $\\kappa=1\.00$\. The faults are sparse: the pooled median is three INT8 bit flips, with medians of two flips on WS, eleven on WLv3, and twelve on S\-M4T\. Entity and negation pivots are evaluated as secondary evidence in the appendix\. SMASH shifts ASR robustness evaluation from "how much did the transcript change?'' to "which meanings can be changed, how plausibly, and with how few bit flips?''
 
 ## What Sound Tells You About the Room
 

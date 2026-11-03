@@ -2,11 +2,6 @@ name: Refresh Official Dataset
 
 on:
   workflow_dispatch:
-    inputs:
-      accept_count_change:
-        description: 'Accept a reviewed official source count different from the original 9152 records'
-        type: boolean
-        default: false
 
 permissions:
   contents: write
@@ -28,15 +23,8 @@ jobs:
       - run: npm ci
       - name: Restore reproducible baseline
         run: npm run snapshot:restore
-      - name: Fetch and validate official metadata and abstracts
-        env:
-          ACCEPT_COUNT_CHANGE: ${{ inputs.accept_count_change }}
-        run: |
-          if [ "$ACCEPT_COUNT_CHANGE" = "true" ]; then
-            npm run collect -- --allow-count-change
-          else
-            npm run collect
-          fi
+      - name: Reconcile official page index, JSON feeds, and detail abstracts
+        run: npm run collect:pages
       - run: npm test
       - run: npm run validate
       - name: Preserve new raw snapshot
@@ -55,4 +43,4 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: gh workflow run pages.yml --ref main
       - name: Snapshot summary
-        run: node -e "const fs=require('fs');const m=JSON.parse(fs.readFileSync('public/data/manifest.json'));fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY,JSON.stringify({records:m.totalPapers,distinctOfficialIds:m.uniqueOfficialEventIds,abstracts:m.abstractsAvailable,missing:m.abstractsMissing},null,2))"
+        run: node -e "const fs=require('fs');const m=JSON.parse(fs.readFileSync('public/data/manifest.json'));fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY,JSON.stringify({entries:m.totalPapers,uniqueTitles:m.uniqueTitles,pageIndexEntries:m.pageIndexEntries,jsonOnlyEntries:m.jsonOnlyEntries,abstracts:m.abstractsAvailable,missing:m.abstractsMissing,detailAbstracts:m.abstractsBySource?.['official-poster-page']},null,2))"

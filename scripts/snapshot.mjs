@@ -7,7 +7,7 @@ import { atomicWrite, isMain, sha256 } from './data-utils.mjs';
 
 const compress = promisify(gzip);
 const decompress = promisify(gunzip);
-const files = ['metadata.json', 'abstracts.json', 'openreview.json'];
+const files = ['metadata.json', 'abstracts.json', 'metadata-latest.json', 'abstracts-latest.json', 'page-index.html', 'details.json', 'openreview.json'];
 
 export async function snapshot({ create = false, root = '.' } = {}) {
   const raw = path.join(root, 'data/raw');
@@ -19,7 +19,11 @@ export async function snapshot({ create = false, root = '.' } = {}) {
     const buffer = create
       ? await readFile(path.join(raw, file))
       : await decompress(await readFile(path.join(snapshots, `${file}.gz`)));
-    JSON.parse(buffer.toString('utf8'));
+    if (file.endsWith('.json')) JSON.parse(buffer.toString('utf8'));
+    if (file.endsWith('.html')) {
+      const html = buffer.toString('utf8');
+      assert.ok(html.includes('/virtual/2026/poster/'), `${file}: missing poster links`);
+    }
     if (checksums.has(file)) assert.equal(sha256(buffer), checksums.get(file), `${file}: raw source checksum mismatch`);
     await atomicWrite(create ? path.join(snapshots, `${file}.gz`) : path.join(raw, file), create ? await compress(buffer, { level: 9 }) : buffer);
   }

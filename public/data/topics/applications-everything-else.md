@@ -2,9 +2,159 @@
 
 应用 / 其他应用
 
-25 source poster records. Repeated source event IDs are retained and explicitly marked.
+26 source poster records. Repeated source event IDs are retained and explicitly marked.
 
 Topic labels marked inferred are keyword-based, not official conference labels. PDF links marked derived are unverified. Missing abstracts are left empty in the JSON and CSV exports.
+
+## HSCO\-Bench: An Agent\-Driven End\-to\-End Hardware\-Software Co\-design Benchmark for Systems\-on\-Chip
+
+**Authors:** Pei\-Huan Tsai; Kuan\-Lin Chiu; William Baisi; Pin\-Yu Chen; Luca P Carloni
+
+**ID:** 139247 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=cPhwxK5hja>) | [PDF](<https://openreview.net/pdf?id=cPhwxK5hja>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139247>)
+
+Large language models \(LLMs\) are increasingly adopted for software and hardware design, yet these domains are still evaluated separately\. Software benchmarks typically assume fixed hardware targets, while hardware benchmarks focus on component\-level optimization without considering the full hardware\-software stack\. Consequently, no existing benchmark evaluates whether an LLM agent can perform end\-to\-end, system\-level hardware\-software co\-design\. Such a process requires: 1\) analyzing applications to identify kernels requiring acceleration, 2\) designing and \\emph\{integrating\} heterogeneous accelerators into a System\-on\-Chip \(SoC\) under resource constraints, and 3\) mapping kernels onto the generated accelerators\. We present \\hsco\{\}, an end\-to\-end hardware\-software co\-design benchmark for accelerator\-rich heterogeneous SoC generation\. Built upon an open\-source SoC platform with a curated repository structure, HSCO\-Bench evaluates the ability of LLMs to jointly optimize software and hardware stacks, producing SoC prototypes deployed on the AMD Virtex\-7 FPGA VC707 Evaluation Kit\. Experimental results show that end\-to\-end integration remains challenging for current models, with widespread failures\. Among the five frontier models evaluated, only two of them could successfully generate valid SoC prototypes\. Yet, even in these successful instances, the generated designs are far from optimal\. While we observe a promising peak speedup of 16\.22x, the maximum additional resource utilization reaches only 23\.67%\. This highlights that while state\-of\-the\-art models demonstrate an emerging capability for hardware acceleration, they still heavily underutilize the available hardware capacity, leaving substantial room for future optimization\. To the best of our knowledge, HSCO\-Bench is the first benchmark targeting this complete co\-design flow, enabling LLMs to jointly reason about and modify both the software and hardware stacks of heterogeneous SoCs\.
+
+## End\-to\-End Neural Modeling of EM Response and Design Performance for Free\-Form RFIC Passives
+
+**Authors:** Yuhao Mao; Chenhao Chu; Martin Vechev; Hua Wang
+
+**ID:** 155932 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=1jB1kt5Wfx>) | [PDF](<https://openreview.net/pdf?id=1jB1kt5Wfx>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155932>)
+
+Passive matching networks are critical components in radio\-frequency integrated circuits \(RFICs\), but their design is bottlenecked by expensive finite\-difference\-based electromagnetic \(EM\) simulation\. We propose an end\-to\-end neural framework for free\-form RFIC passives that predicts both EM response and downstream design performance under varying frequency and circuit contexts, combining a frequency\-conditioned neural simulator with a circuit\-conditioned neural solver\. To improve design performance prediction, the simulator outputs a neural EM response consisting of both the explicit EM response and a complementary response, together with a dependence regularizer that encourages the two responses to capture orthogonal information\. To evaluate the proposed framework, we construct a large\-scale dataset of free\-form passive layouts, synthesized from both expert\-designed contours and random paths\. Our 21M\-parameter model achieves high accuracy across a broad frequency range, circuit contexts and passive matching settings, with $R^2&gt;0\.98$ for almost all targets, while providing orders\-of\-magnitude faster evaluation than traditional EM simulation\.
+
+## Stage Light is Sequence$^2$: Multi\-Light Control via Imitation Learning
+
+**Authors:** Zijian Zhao; Dian Jin; Zijing Zhou; Xiaoyu Zhang
+
+**ID:** 150106 | **Topic source:** official | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=kdW28Kk5Qv>) | [PDF](<https://openreview.net/pdf?id=kdW28Kk5Qv>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150106>)
+
+Music\-inspired Automatic Stage Lighting Control \(ASLC\) has gained increasing attention in recent years due to the substantial time and financial costs associated with hiring and training professional lighting engineers\. However, existing methods suffer from several notable limitations: the low interpretability of rule\-based approaches, the restriction to single\-primary\-light control in music\-to\-color\-space methods, and the limited transferability of music\-to\-controlling\-parameter frameworks\. To address these gaps, we propose SeqLight, a hierarchical deep learning framework that maps music to multi\-light Hue\-Saturation\-Value \(HSV\) space\. Our approach first customizes SkipBART, an end\-to\-end single primary light generation model, to predict the full light color distribution for each frame, followed by hybrid Imitation Learning \(IL\) techniques to derive an effective decomposition strategy that distributes the global color distribution among individual lights\. Notably, the light decomposition module can be trained under varying venue\-specific lighting configurations using only mixed light data and no professional demonstrations, thereby flexibly adapting across diverse venues\. In this stage, we formulate the light decomposition task as a Goal\-Conditioned Markov Decision Process \(GCMDP\), construct an expert demonstration set inspired by Hindsight Experience Replay \(HER\), and introduce a three\-phase IL training pipeline, achieving strong generalization capability\. To validate our IL solution for the proposed GCMDP, we conduct quantitative analysis to compare model performance across different training phases, demonstrating that our design effectively improves performance and generalization capacity\. Furthermore, we also conduct a human study to evaluate SeqLight by comparing it with competitive baselines on music\-conditioned light generation tasks across different music styles\. The results show that SeqLight achieves the best overall preference scores in both in\-domain and out\-of\-domain settings\. The code and trained parameters of this paper is provided at the anonymous repository https://anonymous\.4open\.science/r/SeqLight\-23EE \.
+
+## UniRank: Unified List\-wise Reranking via Confidence\-Ordered Denoising
+
+**Authors:** Pengyue Jia; HailanYang; Shuchang Liu; Xiaobei Wang; Wanyu Wang; Xiang Li; Yongqi Liu; Kaiqiao Zhan; Kun Gai; Xiangyu Zhao
+
+**ID:** 152871 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=PkjxTBCYCU>) | [PDF](<https://openreview.net/pdf?id=PkjxTBCYCU>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152871>)
+
+List\-wise reranking arranges a request\-specific pool of candidate items into an ordered slate that maximizes user satisfaction\. Existing generative rerankers fall into two paradigms: Autoregressive \(AR\) rerankers construct the slate left to right and capture inter\-item dependencies in the exposure list, but they suffer from error propagation because early mistakes affect subsequent slots\. Non\-autoregressive \(NAR\) rerankers predict all slots in parallel and avoid error propagation, but they weaken inter\-item interaction modeling under a slot independence assumption\. This raises a central question: is there a unified architecture that combines the strengths of both paradigms and delivers stronger reranking performance? We answer this question with UniRank, a unified list\-wise reranking framework whose inference time variants recover AR and NAR rerankers as special cases\. UniRank integrates bidirectional slate modeling into an iterative denoising process and fills the most confident slot at each step\. To instantiate this framework for reranking, we introduce the Task Grounded Diffusion Interface \(TGD\), which performs denoising at the item level and restricts prediction to the request\-specific candidate pool\. TGD aggregates each item's semantic tokens into a single item embedding and scores each slot directly against the candidate pool\. Experiments on Amazon Books, MovieLens\-1M, and an industrial short video dataset show that UniRank consistently outperforms state\-of\-the\-art baselines\. Our code is available online\.
+
+## FaithSieve: Fine\-Grained Evaluation of Math Proofs with Faithful Formal Evidence
+
+**Authors:** Ziyu Wang; Qiming Dai; Yishan Wu; Zaiwen Wen
+
+**ID:** 149124 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=si7lviFpgb>) | [PDF](<https://openreview.net/pdf?id=si7lviFpgb>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149124>)
+
+Large language models can now generate complex, multi\-step mathematical proofs, but reliably determining their correctness and localizing early logical errors remains a critical challenge\. Existing evaluation approaches largely depend on model\-based natural\-language judgments, which often overlook local reasoning gaps\. While formal theorem provers like Lean offer a path to rigorous verification, using them to evaluate informal text requires solving locality and semantic mismatches: a prover might bypass a local flaw by proving an overly broad target, or validate an auto\-formalized statement that drifts from the original mathematical intent\. To address this, we introduce FaithSieve, a Lean\-assisted framework for fine\-grained evaluation of natural\-language mathematical proofs\. FaithSieve decomposes coarse proof steps into local reasoning units, extracts typed proof obligations, and verifies them through a formal evaluation agent\. Formal validation is gated by semantic alignment scoring, so Lean evidence is incorporated only when the formal statement faithfully preserves the context, objects, and logical form of the original claim\. We construct two expert\-verified datasets, ProofLoc\-Olympiad and ProofLoc\-University, to benchmark first\-error localization\. On the 350\-problem Olympiad dataset, FaithSieve using a GPT\-5\.4 backbone achieves 81\.43\\% exact first\-error accuracy, outperforming the direct\-judging baseline of 72\.29\\%\. Furthermore, on the 200\-problem ProofLoc\-University benchmark spanning six advanced domains, FaithSieve reaches 84\.5\\% exact accuracy, compared to 75\.0\\% for the direct judge\. Our work demonstrates that decomposing proofs into fine\-grained units and grounding them with faithful formal evidence significantly improves reliable evaluation of natural\-language reasoning\.
+
+## OmniTraffic: A Controllable Generation Pipeline and Benchmark for Spatio\-Temporal Traffic Reasoning
+
+**Authors:** Maonan Wang; Zhengyan Huang; Kemou Jiang; Yuhang Fu; Jiayue Zhu; Yuxin Cai; Xingchen Zou; Qiaosheng Zhang; Yi Yu; Ding Wang; XI CHEN; Ben Chen; Yuxuan Liang; Zhiyong Cui; Man On Pun; Yirong Chen
+
+**ID:** 139772 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=5fv0JAYAwL>) | [PDF](<https://openreview.net/pdf?id=5fv0JAYAwL>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139772>)
+
+Traffic scene understanding requires models to reason beyond object recognition, including lane topology, multi\-view geometry, temporal evolution, and signal\-phase semantics\. However, existing traffic\-oriented multimodal benchmarks largely emphasize passive visual recognition or isolated video understanding, offering limited support for evaluating structure\-aware traffic reasoning under controlled conditions\. We introduce \\textbf\{OmniTraffic\}, a controllable generation pipeline and benchmark for spatio\-temporal traffic reasoning\. Built around 12 real\-world intersections reconstructed into editable 3D traffic environments and complemented by surveillance footage from two countries, OmniTraffic supports both controlled and natural\-condition evaluation\. It defines a three\-level task hierarchy spanning scene perception, multi\-view and temporal reasoning, and decision support\. Using structured traffic metadata, OmniTraffic generates synchronized multi\-view VQA samples covering vehicle states, lane functions, view\-\-BEV correspondence, temporal dynamics, and signal\-phase analysis, resulting in 8M VQA samples and a 3K human\-verified test set\. Evaluation of eleven frontier MLLMs reveals a large human\-\-model gap, with the most pronounced failures in topology\-grounded and spatio\-temporal reasoning tasks\. Fine\-tuning a lightweight MLLM on simulated OmniTraffic data further improves performance on real\-world traffic scenes, demonstrating the value of simulation\-generated supervision for traffic\-specific multimodal reasoning\. Beyond a fixed dataset, OmniTraffic provides an extensible pipeline with configurable intersections, camera views, traffic demands, signal phases, visual conditions, and rare events\.
+
+## LogicTree\-RAG: Logic Tree\-guided Retrieval\-Augmented Generation for Long\-form Patent Drafting
+
+**Authors:** Jiaqi Zhu; Naili Xing; Pan Hexiang; Haotian Gao; Jianwei Yin; Xiaokui Xiao; Beng Chin Ooi
+
+**ID:** 153327 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=M9Gxp6XTlc>) | [PDF](<https://openreview.net/pdf?id=M9Gxp6XTlc>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153327>)
+
+Long\-form technical text generation underpins knowledge\-intensive workflows, yet remains challenging for large language models \(LLMs\) due to the need for globally consistent logical structuring and faithful technical reasoning beyond local coherence\. Patent drafting is a canonical instance of this challenge, demanding holistic generation of a legally compliant and technically exhaustive document through sustained multi\-expert collaboration\. Existing approaches often focus on partial section generation or rely on manually crafted outlines, limiting scalable automation in realistic settings\. In this work, we propose LogicTree\-RAG, a logic tree\-guided retrieval\-augmented generation framework that induces a hierarchical logic tree as a global organizational backbone to organize and ground technical disclosures, without relying on expert\-defined drafting priors\. Each node in the logic tree represents a technical element and is constructed through evidence\-guided recursive generation\. A hybrid traversal mechanism then maps the logic tree into patent sections, enabling controllable and section\-balanced generation\. Extensive experiments show that LogicTree\-RAG consistently improves content quality and language conformity over strong LLM\-based baselines and achieves longer structured generation with high token efficiency, demonstrating the effectiveness of logic\-centric generation for complex technical document drafting\.
+
+## AgentTailor: Dual\-Gate LLM\-Assisted Re\-ranking for Personalized Long\-Tail Recommendation
+
+**Authors:** Jinpeng Chen; Zhenye Yang; Huan Li; Kaimin Wei; Senzhang Wang; Hongbo Gao
+
+**ID:** 154386 | **Topic source:** official | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=DyNI87FtpG>) | [PDF](<https://openreview.net/pdf?id=DyNI87FtpG>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154386>)
+
+Recommender systems are central to modern digital platforms but remain vulnerable to popularity bias, where head items dominate exposure while many long\-tail items are underrepresented\. Existing long\-tail methods often rely on global reweighting or opaque ranking models, making it difficult to personalize tail exposure without degrading recommendation utility\. To address this challenge, we propose AgentTailor, an interpretable LLM\-assisted framework for personalized long\-tail recommendation\. AgentTailor decomposes recommendation into two complementary stages\. First, a semantic recall agent retrieves a semantically aligned candidate pool, determining whether relevant long\-tail items are accessible to later ranking\. Second, a conditional tail\-specialist branch performs evidence\-based re\-ranking through a dual\-gate tail\-pressure router: the activation gate decides whether LLM\-assisted evidence assessment should be invoked, while the placement gate decides whether the extracted evidence is allowed to modify the final ranking\. Activated users receive item\-level relevance and tail\-fit evidence for routed candidates, but the final list is changed only when stable placement is warranted; otherwise, the Stage 1 order is preserved\. Thus, the LLM provides auditable evidence rather than freely generating the final ranking\. Experiments on MovieLens\-1M and BookCrossing show that AgentTailor improves long\-tail recommendation while maintaining competitive overall performance under a controlled LLM re\-ranking protocol\. Further analyses demonstrate its cross\-backbone generalization, reliable structured outputs, and controllable trade\-off between relevance preservation and long\-tail exposure\. The code and data are available at https://anonymous\.4open\.science/r/AgentTailor\-CAEF\.
+
+## Can Complementary Signals Bridge Similarity Islands? Manifold\-Augmented Graph Embedding for Multimodal Recommendation
+
+**Authors:** Zhenye Yang; Jinpeng Chen; Wenbo Fu; Jun Ma; Huan Li; Qimin Zhou; Tao Wang; Li Sun; Senzhang Wang
+
+**ID:** 155124 | **Topic source:** official | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=8F0Eozje37>) | [PDF](<https://openreview.net/pdf?id=8F0Eozje37>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155124>)
+
+Multimodal Recommender Systems \(MMRS\) leverage rich item features to mitigate data sparsity, yet their success largely hinges on the foundational homophily assumption\. This paradigm makes existing models adept at recommending similar substitutes but poorly equipped to handle heterophilic complementarity\. Consequently, complementary items often become geometrically isolated, leading to fragmented “Similarity Islands” and semantic drift when standard propagation is applied\. To overcome these limitations, we propose MAGE \(Manifold\-Augmented Graph Embedding\), a novel framework that decouples complementarity modeling into offline geometric warping and online topological propagation\. The offline phase enhances item representations by extracting complement\-aware residual directions via a Soft Conceptor mechanism and injecting them under a local gap\-preserving constraint, enabling the model to capture functional relationships while reducing the risk of semantic drift\. Synergistically, the online phase employs an asymmetric dual\-stream GNN that treats visual features as stable anchors and augmented textual features as flexible probes, fused through a self\-calibrated cross\-modal mechanism to reconcile shared semantics and modality\-specific residual cues\. Extensive experiments on four Amazon datasets show that MAGE yields consistent improvements over strong multimodal recommendation baselines\. Together with the supporting analyses in the appendix, these results suggest that geometry\-aware augmentation can alleviate the semantic mismatch that arises in complementary recommendation settings\. Our code is available at https://anonymous\.4open\.science/r/mage\-4C60 \.
+
+## CyBiasBench: Benchmarking Bias in LLM Agents for Cyber\-Attack Scenarios
+
+**Authors:** Taein Lim; Seongyong Ju; Munhyeok Kim; Hyunjun Kim; Hoki Kim
+
+**ID:** 139207 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=eeSyiXuneO>) | [PDF](<https://openreview.net/pdf?id=eeSyiXuneO>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139207>)
+
+Large language models \(LLMs\) are increasingly deployed as autonomous agents in offensive cybersecurity\. In this paper, we reveal an interesting phenomenon: different agents exhibit distinct attack patterns\. Specifically, each agent exhibits an attack\-selection bias, disproportionately concentrating its efforts on a narrow subset of attack families regardless of prompt variations\. To systematically quantify this behavior, we introduce CyBiasBench, a comprehensive 630\-session benchmark that evaluates five agents on three targets and four prompt conditions with ten attack families\. We identify explicit bias across agents, with different dominant attack families and varying entropy levels in their attack\-family allocation distributions\. Such bias is better characterized as a trait of the agents, rather than a factor associated with the attack success rate\. Furthermore, our experiments reveal a bias momentum effect, where agents resist explicit steering toward attack families that conflict with their bias\. This forced distribution shift does not yield measurable improvements in attack performance\. To ensure reproducibility and facilitate future research, we release an interactive result dashboard at \\url\{https://cy\-bias\-bench\.vercel\.app/\} and a reproducibility artifact with aggregated session\-level statistics and full evaluation scripts at \\url\{https://anonymous\.4open\.science/r/CyBiasBench\-2026/\}\.
+
+## Live Music Diffusion Models: Efficient Fine\-Tuning and Post\-Training of Interactive Diffusion Music Generators
+
+**Authors:** Zachary Novack; Stephen Brade; Haven Kim; Hugo Flores; Nithya Shikarpur; Chinmay Talegaonkar; Julian McAuley; Taylor Berg\-Kirkpatrick; Anna Huang
+
+**ID:** 152252 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=URFsYfMwTM>) | [PDF](<https://openreview.net/pdf?id=URFsYfMwTM>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152252>)
+
+Interactive streaming music generation promises the use of generative models for live performance and co\-creation that is impossible with offline models\. However, SOTA models exist in the discrete\-AR regime, requiring industrial levels of compute for both training and inference\. In this work, we investigate whether audio diffusion models, with their wide support in the open\-source community but non\-streaming bidirectional nature, can be repurposed efficiently into interactive models accessible on consumer hardware\. By taking a critical look at the modern pipeline for block\-wise outpainting diffusion, we identify critical inefficiencies during inference that result in strictly worse computational efficiency than their discrete\-AR counterparts\. We propose Live Music Diffusion Models \(LMDMs\), a simple modification of the generative diffusion process that recovers, and then outperforms, the inference complexity of the discrete Live Music Models \(LMMs\) through block\-wise KV Caching\. Unlike LMMs, LMDMs further enable stable post\-training alignment through our novel ARC\-Forcing paradigm, reducing error accumulation without any explicit RL or reward models\. We demonstrate the application of LMDMs in a number of creative domains, including text\-conditioned generation, sketch\-based music synthesis, and jamming\. We finally show how LMDMs can be used as a generative instrument in a real artist\-AI collaboration, utilizing LMDMs as a “generative delay” to transform musicians’ improvisation live for variable timbral effects while running locally on a consumer gaming laptop\.
+
+## CoffeeBench: A Benchmark for Long\-Horizon Strategic Decision\-Making in Multi\-Agent Economies
+
+**Authors:** Issa Sugiura; Daichi Hattori; Kazuo Araragi; Keita Ogawa; Shota Onose; Taro Makino; Teppei Usuki; Takashi Ishida
+
+**ID:** 138891 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=yTlqnsbF9X>) | [PDF](<https://openreview.net/pdf?id=yTlqnsbF9X>) | [Official poster](<https://neurips.cc/virtual/2026/poster/138891>)
+
+As LLM agents advance beyond short\-horizon tasks, evaluating their ability to perform long\-horizon strategic decision\-making in realistic multi\-agent settings remains a key challenge\. Existing agent benchmarks typically focus on isolated task completion or interactions with rule\-based or fixed\-policy counterparts, limiting their ability to capture strategic adaptation and emergent behaviors arising from sustained multi\-agent interactions\. We introduce \\textbf\{CoffeeBench\}, a benchmark for evaluating LLM agents in a dynamic multi\-agent economic environment consisting of farmers, roasters, and retailers forming a multi\-stage supply chain\. The environment consists of autonomous firms interacting over a multi\-month horizon with evolving supply, demand, and pricing, creating sustained competition and supply\-chain dynamics\. In each evaluation, the evaluated model controls one firm and must make sequential decisions on procurement, production, pricing, and negotiation to maximize cumulative net income\. CoffeeBench enables the study of emergent behaviors arising from repeated strategic interactions, including negotiation dynamics, pricing discipline, and coordination failures\.  We evaluate several frontier and pareto\-frontier LLMs on CoffeeBench to analyze their economic performance and strategic behavior\. Most evaluated models achieve positive net income, with GPT\-5\.5 achieving the highest mean net income\. In contrast, Claude\~Haiku\~4\.5 frequently yields negative net income, exhibiting an idle\-drift failure mode in which agents collapse into inactivity despite coherent plans\. We further find that stronger models proactively negotiate with counterparties through frequent messaging, whereas weaker models trade reactively with limited communication\. CoffeeBench provides a controllable testbed for studying strategic interaction, coordination, and long\-horizon behavior in multi\-agent economies\.
+
+## On\-Policy Distillation with Open Property\-Equivalence Reward for LLM\-Based NL\-to\-SVA Generation
+
+**Authors:** Qingyun Zou; Yingze Li; Tianen Liu; Bingsheng He; Weng\-Fai Wong
+
+**ID:** 149770 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=nRVe5pE6sQ>) | [PDF](<https://openreview.net/pdf?id=nRVe5pE6sQ>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149770>)
+
+LLM\-based generation of SystemVerilog Assertions \(SVA\) is often reported as nearing saturation, with the strongest specialized model reaching $\{\\sim\}76\\%$ accuracy on NL2SVA\-Human\. We show that this aggregate hides a temporal gap: models that appear strong overall still collapse to a few implication templates on bounded\-delay and liveness specifications\. The core issue is that the dominant recipe, supervised fine\-tuning on NL/SVA pairs, optimizes token\-level mimicry rather than the property equivalence that defines SVA correctness\. We introduce Reward\-Weighted On\-Policy Distillation \(RWOPD\), an on\-policy distillation method that samples student rollouts, scores them with an open SymbiYosys\+Z3 Property\-Equivalence Checker \(PEC\), and applies a verifier\-reward\-weighted forward\-KL gradient from a frozen 14B teacher on verifier\-passable rollouts\. This keeps the supervision dense at every response token while grounding both selection and loss weight in property\-equivalent behavior\. RWOPD distills CodeV\-SVA\-14B into a Qwen2\.5\-Coder\-7B\-Instruct student that sets a new state of the art on NL2SVA\-Human and NL2SVA\-Machine across pass@1, pass@5, and pass@10, surpassing both specialized prior SOTA models and 671B general\-purpose baselines\.
+
+## AlphaPareto: Formulaic Alpha Discovery with LLM\-Guided Multi\-Objective Reinforcement Learning
+
+**Authors:** Yingbo Zhao; Zeyu Yang; Zhoufan Zhu
+
+**ID:** 153971 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=H8C7jHFbSI>) | [PDF](<https://openreview.net/pdf?id=H8C7jHFbSI>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153971>)
+
+Formulaic alpha discovery is a core challenge in quantitative trading, as identifying alphas that work well together remains difficult\. Recent reinforcement learning \(RL\) methods formulate this task as a Markov decision process \(MDP\), but two important issues remain unresolved\. First, as the alpha pool evolves, the reward function changes accordingly, making the MDP inherently non\-stationary\. Second, most existing methods optimize a single objective, typically predictive power, while ignoring other important properties of a high\-quality alpha pool\. Motivated by these challenges, we propose AlphaPareto, an RL method for formulaic alpha discovery\. To address non\-stationarity, AlphaPareto augments the state to include both the alpha under construction and the current alpha pool, and applies a large language model \(LLM\) to encode the pool\. This design allows the agent to adapt to the evolving search environment\. To overcome the limitation of single\-objective reward design, AlphaPareto replaces the scalar reward with a multi\-objective vector\-valued reward that simultaneously captures predictive power, temporal stability, perturbation robustness, and diversity, and optimizes these objectives through a Pareto\-regularized learning procedure\. Empirical applications to real\-world datasets show that our AlphaPareto method outperforms its competitors\.
+
+## Implicit Neural Representations for Variational Problems on Graphons
+
+**Authors:** Taeyoung Kim; Jineon Baek; Joonkyung Lee; Hongseok Yang
+
+**ID:** 153602 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=KAUv6pGFCz>) | [PDF](<https://openreview.net/pdf?id=KAUv6pGFCz>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153602>)
+
+We propose a neural exploratory framework for \*variational problems over graphons\*, i\.e\., symmetric measurable functions $\[0,1\]^2 \\to \[0,1\]$, that arise as limits of dense graph sequences\. Such problems are central to two parts of the mathematical literature: extremal graph theory, which studies graph parameter optimisation under given restrictions, often for those graphs with a large number of vertices, and the large deviation theory of dense random graphs, which characterises the structure of rare events through constrained graphon optimisation\. We represent graphons by implicit neural networks and optimise graphon objectives by gradient descent\. Our design combines three ingredients: a multi\-scale sinusoidal residual architecture biased toward sharp, step\-like graphons; an embedded solver that enforces a single empirical density constraint and is differentiated by implicit differentiation; and symmetry\-aware Monte Carlo estimators\. On generalised Turán problems that previously required substantial human effort, our framework rediscovers known optimal graphons without human intervention\. Applied to open instances, it produces candidate optima, including a previously unreported family of extremal structures\. Applied to the variational problems from the large deviation theory of Erdős–Rényi random graphs,  the framework produces new candidate optimal graphons across both upper\- and lower\-tail regimes for multiple pattern graphs; for the case of the triangle graph and the upper\-tail regime, these candidates improve upon the best\-known reference construction of Lubetzky and Zhao\.
 
 ## Rigel3D: Rig\-aware Latents for Animation\-Ready 3D Asset Generation
 
@@ -16,25 +166,15 @@ Topic labels marked inferred are keyword-based, not official conference labels. 
 
 Recent 3D generative models can synthesize high\-quality assets, but their outputs are typically static: they lack the skeletal rigs, joint hierarchies, and skinning weights required for animation\. This limits their use in games, film, simulation, virtual agents, and embodied AI, where assets must not only look plausible but also move plausibly\. We introduce Rigel3D, a generative method for animation\-ready 3D assets represented as rigged meshes\. Unlike post\-hoc auto\-rigging methods that attach rigs to completed shapes, our method jointly models geometry and rig structure through coupled surface and skeleton structured latent representations\. A rig\-aware autoencoder decodes these representations into mesh geometry, skeleton topology, joint coordinates, and skinning weights, while a two\-stage latent generative model synthesizes both surface and skeleton representations for image\-conditioned generation\. To support downstream animation workflows, we further introduce an open\-vocabulary joint labeling module that embeds generated joints into a shared vision\-language space, enabling correspondence to arbitrary retargeting templates\. Experiments on large\-scale rigged asset datasets demonstrate that our method generates diverse, high\-quality animation\-ready assets and outperforms existing rigging baselines across multiple metrics\.
 
-## Language\-Based Agent Control
+## Modelling Opinion Dynamics at Scale with Deep MARL
 
-**Authors:** Timothy Zhou; Loris D&amp;amp;\#x27;Antoni; Nadia Polikarpova
+**Authors:** Lukas Seier; Brandon Kaplowitz; Sebastian Towers; Richard M Bailey; Jakob Foerster
 
-**ID:** 156018 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+**ID:** 152381 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=16tteJWMPL>) | [PDF](<https://openreview.net/pdf?id=16tteJWMPL>) | [Official poster](<https://neurips.cc/virtual/2026/poster/156018>)
+[Paper](<https://openreview.net/forum?id=TWF54YaFwi>) | [PDF](<https://openreview.net/pdf?id=TWF54YaFwi>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152381>)
 
-This paper introduces language\-based agent control \(LBAC\), a method to apply techniques from language\-based security to the control of AI agents\. Unlike systems\-level defenses such as I/O sandboxing, LBAC can express application\-level policies\. Moreover, in LBAC agents may perform computations and recursively invoke subagents with tool access\.  Language\-based techniques enable the design of APIs which, through a combination of typing discipline and internal runtime checks, ensure that any well\-typed program obeys a desired property\. The core idea of LBAC is to have agents interact with the world by generating programs against such APIs rather than by issuing tool calls directly\. These programs may themselves contain recursive calls to subagents, which retain full tool access; the type checker rejects ill\-typed programs before execution, and policies thereby extend uniformly across the entire agentic system, including its scaffolding and control flow\. We demonstrate LBAC with three case studies: I/O sandboxing via filesystem capabilities, data provenance, and information\-flow control\.
-
-## Targeted Review for AI\-Assisted Biodiversity Surveys: Active Continuous\-Score Occupancy Modeling
-
-**Authors:** Timm Haucke; Lauren Harrell; Justin Kay; Mary K Clapp; Sara Beery
-
-**ID:** 155443 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=5ZEdikiayy>) | [PDF](<https://openreview.net/pdf?id=5ZEdikiayy>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155443>)
-
-_Abstract unavailable from the accessible public sources._
+Modelling opinion dynamics typically relies on hand\-crafted local interaction rules to study emergent macroscopic phenomena such as consensus and polarisation\. In contrast, multi\-agent reinforcement learning \(MARL\) enables agents to learn such behaviours directly by optimising simple rewards\. To explore the potential of MARL for opinion dynamics, we introduce a GPU\-accelerated \*consensus and truth\-finding game\* that scales to populations of up to 1000 agents, comparable to many real\-world social sub\-networks\. To prevent unrealistic conventions, we extend other\-play to general\-sum social interactions\. We next validate our model on a subset of the Bluesky network by recovering agent importance structures from graph topology alone via a learned attention layer, finding that \*highly conforming\* populations most closely match human data\. In large social media networks such high levels of conforming significantly reduce collective accuracy and promote dishonest agents that lie to fit in\. By contrast, small, dynamic hunter\-gatherer networks are less affected; here, conformity can even improve collective agreement\. This suggests a mismatch between evolved human conformity heuristics and modern social media environments as a potential contributor to misinformation\.
 
 ## LiveOption: Evaluating LLM Agents in Structured Option Trading with Nonlinear Payoffs
 
@@ -66,69 +206,35 @@ Modern end\-to\-end autonomous driving systems often suffer from fragile out\-of
 
 Cross\-Domain Recommendation is essential for enabling cross\-sell in multi\-service platforms; however, limited user overlap and strict cross\-service data\-sharing constraints often result in little to no ground\-truth supervision for cross\-domain learning\. To bridge this gap, we propose an LLM\-based framework for cross\-domain recommendation in the non\-overlapping user scenario\. First, we propose an agentic pipeline that constructs cross\-domain pseudo supervision, which is unavailable in the non\-overlapping user scenario, by leveraging a user’s source\-domain history to generate a target\-domain item recommendation\.  Using this dataset, we further propose \\underline\{C\}oupled \\underline\{U\}ser\-G\\underline\{R\}ouped R\\underline\{E\}inforcement Learning \(CURE\), which induces coupling between in\- and cross\-domain gradient updates via user\-level joint normalization, thereby calibrating synthetic cross\-domain updates against reliable in\-domain signals\. We provide a theoretical analysis showing that user\-level coupling stabilizes policy updates under imperfect pseudo supervision and improves cross\-domain generalization\. Experiments on Amazon Reviews and MovieLens show consistent gains over baselines in cross\-domain recommendation, while also improving in\-domain performance\. An online A/B test demonstrates a statistically significant 56\\% lift in click\-through rate over existing ML methods\.
 
-## UniRank: Unified List\-wise Reranking via Confidence\-Ordered Denoising
+## WorldCoder\-Bench: Benchmarking Physically Grounded 3D World Synthesis
 
-**Authors:** Pengyue Jia; HailanYang; Shuchang Liu; Xiaobei Wang; Wanyu Wang; Xiang Li; Yongqi Liu; Kaiqiao Zhan; Kun Gai; Xiangyu Zhao
+**Authors:** Shuo Lu; Yinuo Xu; Kecheng Yu; Siru Jiang; Yongcan Yu; Yubin Wang; Haitao Yang; Yuxiang Zhang; Bin Wang; Ran He; Jian Liang
 
-**ID:** 152871 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+**ID:** 139687 | **Topic source:** official | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=PkjxTBCYCU>) | [PDF](<https://openreview.net/pdf?id=PkjxTBCYCU>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152871>)
+[Paper](<https://openreview.net/forum?id=Ab6N5V6cP2>) | [PDF](<https://openreview.net/pdf?id=Ab6N5V6cP2>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139687>)
 
-List\-wise reranking arranges a request\-specific pool of candidate items into an ordered slate that maximizes user satisfaction\. Existing generative rerankers fall into two paradigms: Autoregressive \(AR\) rerankers construct the slate left to right and capture inter\-item dependencies in the exposure list, but they suffer from error propagation because early mistakes affect subsequent slots\. Non\-autoregressive \(NAR\) rerankers predict all slots in parallel and avoid error propagation, but they weaken inter\-item interaction modeling under a slot independence assumption\. This raises a central question: is there a unified architecture that combines the strengths of both paradigms and delivers stronger reranking performance? We answer this question with UniRank, a unified list\-wise reranking framework whose inference time variants recover AR and NAR rerankers as special cases\. UniRank integrates bidirectional slate modeling into an iterative denoising process and fills the most confident slot at each step\. To instantiate this framework for reranking, we introduce the Task Grounded Diffusion Interface \(TGD\), which performs denoising at the item level and restricts prediction to the request\-specific candidate pool\. TGD aggregates each item's semantic tokens into a single item embedding and scores each slot directly against the candidate pool\. Experiments on Amazon Books, MovieLens\-1M, and an industrial short video dataset show that UniRank consistently outperforms state\-of\-the\-art baselines\. Our code is available online\.
+Large language models \(LLMs\) are increasingly asked not only to write static interfaces, but to construct executable interactive worlds from natural language\. Browser\-native 3D, commonly built with Three\.js, is a natural next frontier: generated programs must integrate assets, obey spatial and physical constraints, and keep user\-facing controls synchronized with hidden runtime state\. Existing web\-generation benchmarks and evaluators, however, largely observe only pixels or DOM nodes, while the mechanics of a Three\.js world unfold inside an opaque \` \. We introduce WorldCoder\-Bench, a benchmark for autonomous, physically grounded 3D world synthesis\. WorldCoder\-Bench contains 2,026 expert\-curated tasks across Simulation, Rendering, and Application scenarios, with optional \.glb\` assets and hidden behavioral contracts\. We further propose StateProbe, an execution\-based protocol that probes generated programs in a sandboxed browser and verifies hidden, mutation\-hardened contracts over runtime states and transitions\. Beyond verification coverage, we report Return on Automation and Time Efficiency Multiplier to measure correctness\-adjusted cost and time savings\. Across nine frontier models, the best system reaches only 27\.8% verification coverage on WorldCoder\-Core and 19\.9% on WorldCoder\-Rob, with failures dominated by state\-schema drift and broken interaction chains rather than missing scene elements\. Utility metrics further show that cheap or fast models can still provide substantial value on easier domains\. WorldCoder\-Bench is available at https://anonymous\.4open\.science/r/WorldCoder\-Bench/\.
 
-## HSCO\-Bench: An Agent\-Driven End\-to\-End Hardware\-Software Co\-design Benchmark for Systems\-on\-Chip
+## THEIA: A Multimodal Dataset and Benchmark for Vision\-Language Analysis of Layout
 
-**Authors:** Pei\-Huan Tsai; Kuan\-Lin Chiu; William Baisi; Pin\-Yu Chen; Luca P Carloni
+**Authors:** Giuseppe Chiari; Michele Piccoli; Federico Viola; Davide Zoni
 
-**ID:** 139247 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+**ID:** 139116 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=cPhwxK5hja>) | [PDF](<https://openreview.net/pdf?id=cPhwxK5hja>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139247>)
+[Paper](<https://openreview.net/forum?id=kE15I2DBLO>) | [PDF](<https://openreview.net/pdf?id=kE15I2DBLO>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139116>)
 
-Large language models \(LLMs\) are increasingly adopted for software and hardware design, yet these domains are still evaluated separately\. Software benchmarks typically assume fixed hardware targets, while hardware benchmarks focus on component\-level optimization without considering the full hardware\-software stack\. Consequently, no existing benchmark evaluates whether an LLM agent can perform end\-to\-end, system\-level hardware\-software co\-design\. Such a process requires: 1\) analyzing applications to identify kernels requiring acceleration, 2\) designing and \\emph\{integrating\} heterogeneous accelerators into a System\-on\-Chip \(SoC\) under resource constraints, and 3\) mapping kernels onto the generated accelerators\. We present \\hsco\{\}, an end\-to\-end hardware\-software co\-design benchmark for accelerator\-rich heterogeneous SoC generation\. Built upon an open\-source SoC platform with a curated repository structure, HSCO\-Bench evaluates the ability of LLMs to jointly optimize software and hardware stacks, producing SoC prototypes deployed on the AMD Virtex\-7 FPGA VC707 Evaluation Kit\. Experimental results show that end\-to\-end integration remains challenging for current models, with widespread failures\. Among the five frontier models evaluated, only two of them could successfully generate valid SoC prototypes\. Yet, even in these successful instances, the generated designs are far from optimal\. While we observe a promising peak speedup of 16\.22x, the maximum additional resource utilization reaches only 23\.67%\. This highlights that while state\-of\-the\-art models demonstrate an emerging capability for hardware acceleration, they still heavily underutilize the available hardware capacity, leaving substantial room for future optimization\. To the best of our knowledge, HSCO\-Bench is the first benchmark targeting this complete co\-design flow, enabling LLMs to jointly reason about and modify both the software and hardware stacks of heterogeneous SoCs\.
-
-## End\-to\-End Neural Modeling of EM Response and Design Performance for Free\-Form RFIC Passives
-
-**Authors:** Yuhao Mao; Chenhao Chu; Martin Vechev; Hua Wang
-
-**ID:** 155932 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=1jB1kt5Wfx>) | [PDF](<https://openreview.net/pdf?id=1jB1kt5Wfx>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155932>)
-
-Passive matching networks are critical components in radio\-frequency integrated circuits \(RFICs\), but their design is bottlenecked by expensive finite\-difference\-based electromagnetic \(EM\) simulation\. We propose an end\-to\-end neural framework for free\-form RFIC passives that predicts both EM response and downstream design performance under varying frequency and circuit contexts, combining a frequency\-conditioned neural simulator with a circuit\-conditioned neural solver\. To improve design performance prediction, the simulator outputs a neural EM response consisting of both the explicit EM response and a complementary response, together with a dependence regularizer that encourages the two responses to capture orthogonal information\. To evaluate the proposed framework, we construct a large\-scale dataset of free\-form passive layouts, synthesized from both expert\-designed contours and random paths\. Our 21M\-parameter model achieves high accuracy across a broad frequency range, circuit contexts and passive matching settings, with $R^2&gt;0\.98$ for almost all targets, while providing orders\-of\-magnitude faster evaluation than traditional EM simulation\.
+The integration of artificial intelligence into computer\-aided design frameworks has sparked a shift in the design of analog integrated circuits \(ICs\), transitioning the field from using manual and algorithmic\-based solutions to adopting automated and intelligent paradigms\. In this scenario, the GDSII file represents the industry\-standard database containing the ultimate and most accurate source of information of the analog circuit, encapsulating the complex physical geometries and parasitic realities that define tape out performance\. This paper proposes THEIA, a novel dataset containing thousands of layout images paired with question\-answer conversations, along with a benchmark that employs a fine\-tuned vision\-language model \(VLM\) to analyze GDSII files of analog circuits, enabling designers to interact with and query physical layouts as intuitive, meaningful entities\. Experimental results using thousands of analog designs across five realistic tasks demonstrate that the proposed fine\-tuned VLM outperforms state\-of\-the\-art general\-purpose VLMs by a significant margin \(up to 73%\), highlighting a fundamental gap between general\-purpose multimodal reasoning and domain\-specific layout understanding\.
 
 ## Language\-Based Agent Control
 
 **Authors:** Timothy Zhou; Loris D&amp;amp;\#x27;Antoni; Nadia Polikarpova
 
-**ID:** 156018\-\-2 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 156018
+**ID:** 156018 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
 [Paper](<https://openreview.net/forum?id=16tteJWMPL>) | [PDF](<https://openreview.net/pdf?id=16tteJWMPL>) | [Official poster](<https://neurips.cc/virtual/2026/poster/156018>)
 
 This paper introduces language\-based agent control \(LBAC\), a method to apply techniques from language\-based security to the control of AI agents\. Unlike systems\-level defenses such as I/O sandboxing, LBAC can express application\-level policies\. Moreover, in LBAC agents may perform computations and recursively invoke subagents with tool access\.  Language\-based techniques enable the design of APIs which, through a combination of typing discipline and internal runtime checks, ensure that any well\-typed program obeys a desired property\. The core idea of LBAC is to have agents interact with the world by generating programs against such APIs rather than by issuing tool calls directly\. These programs may themselves contain recursive calls to subagents, which retain full tool access; the type checker rejects ill\-typed programs before execution, and policies thereby extend uniformly across the entire agentic system, including its scaffolding and control flow\. We demonstrate LBAC with three case studies: I/O sandboxing via filesystem capabilities, data provenance, and information\-flow control\.
-
-## OmniTraffic: A Controllable Generation Pipeline and Benchmark for Spatio\-Temporal Traffic Reasoning
-
-**Authors:** Maonan Wang; Zhengyan Huang; Kemou Jiang; Yuhang Fu; Jiayue Zhu; Yuxin Cai; Xingchen Zou; Qiaosheng Zhang; Yi Yu; Ding Wang; XI CHEN; Ben Chen; Yuxuan Liang; Zhiyong Cui; Man On Pun; Yirong Chen
-
-**ID:** 139772 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=5fv0JAYAwL>) | [PDF](<https://openreview.net/pdf?id=5fv0JAYAwL>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139772>)
-
-Traffic scene understanding requires models to reason beyond object recognition, including lane topology, multi\-view geometry, temporal evolution, and signal\-phase semantics\. However, existing traffic\-oriented multimodal benchmarks largely emphasize passive visual recognition or isolated video understanding, offering limited support for evaluating structure\-aware traffic reasoning under controlled conditions\. We introduce \\textbf\{OmniTraffic\}, a controllable generation pipeline and benchmark for spatio\-temporal traffic reasoning\. Built around 12 real\-world intersections reconstructed into editable 3D traffic environments and complemented by surveillance footage from two countries, OmniTraffic supports both controlled and natural\-condition evaluation\. It defines a three\-level task hierarchy spanning scene perception, multi\-view and temporal reasoning, and decision support\. Using structured traffic metadata, OmniTraffic generates synchronized multi\-view VQA samples covering vehicle states, lane functions, view\-\-BEV correspondence, temporal dynamics, and signal\-phase analysis, resulting in 8M VQA samples and a 3K human\-verified test set\. Evaluation of eleven frontier MLLMs reveals a large human\-\-model gap, with the most pronounced failures in topology\-grounded and spatio\-temporal reasoning tasks\. Fine\-tuning a lightweight MLLM on simulated OmniTraffic data further improves performance on real\-world traffic scenes, demonstrating the value of simulation\-generated supervision for traffic\-specific multimodal reasoning\. Beyond a fixed dataset, OmniTraffic provides an extensible pipeline with configurable intersections, camera views, traffic demands, signal phases, visual conditions, and rare events\.
-
-## UniRank: Unified List\-wise Reranking via Confidence\-Ordered Denoising
-
-**Authors:** Pengyue Jia; HailanYang; Shuchang Liu; Xiaobei Wang; Wanyu Wang; Xiang Li; Yongqi Liu; Kaiqiao Zhan; Kun Gai; Xiangyu Zhao
-
-**ID:** 152871\-\-2 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 152871
-
-[Paper](<https://openreview.net/forum?id=PkjxTBCYCU>) | [PDF](<https://openreview.net/pdf?id=PkjxTBCYCU>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152871>)
-
-List\-wise reranking arranges a request\-specific pool of candidate items into an ordered slate that maximizes user satisfaction\. Existing generative rerankers fall into two paradigms: Autoregressive \(AR\) rerankers construct the slate left to right and capture inter\-item dependencies in the exposure list, but they suffer from error propagation because early mistakes affect subsequent slots\. Non\-autoregressive \(NAR\) rerankers predict all slots in parallel and avoid error propagation, but they weaken inter\-item interaction modeling under a slot independence assumption\. This raises a central question: is there a unified architecture that combines the strengths of both paradigms and delivers stronger reranking performance? We answer this question with UniRank, a unified list\-wise reranking framework whose inference time variants recover AR and NAR rerankers as special cases\. UniRank integrates bidirectional slate modeling into an iterative denoising process and fills the most confident slot at each step\. To instantiate this framework for reranking, we introduce the Task Grounded Diffusion Interface \(TGD\), which performs denoising at the item level and restricts prediction to the request\-specific candidate pool\. TGD aggregates each item's semantic tokens into a single item embedding and scores each slot directly against the candidate pool\. Experiments on Amazon Books, MovieLens\-1M, and an industrial short video dataset show that UniRank consistently outperforms state\-of\-the\-art baselines\. Our code is available online\.
 
 ## SiliciclasticReservoirs: A Million\-Reservoir Dataset and Flow\-Matching Foundation Model for 3D Siliciclastic Reservoir Generation
 
@@ -140,137 +246,23 @@ List\-wise reranking arranges a request\-specific pool of candidate items into a
 
 3D subsurface geological models underpin hydrocarbon exploration, geothermal energy, underground gas storage, and geological carbon storage\. A decade of deep generative facies modeling has yet to yield a model that generalizes across geological settings, scales to realistic reservoir extents, and conditions naturally on well data, bottlenecked by the absence of a large\-scale, multi\-environment, property\-rich dataset\. We release SiliciclasticReservoirs, the largest and most diverse public 3D dataset of siliciclastic \(sandstone\-bearing\) subsurface reservoirs to date: $10^6$ voxelized reservoirs at $64\{\\times\}64\{\\times\}32$ resolution spanning eight depositional settings \(deep\-water turbidite lobes, deltas, and six fluvial channel architectures from the Alluvsim family\), each annotated with binary and six\-class facies labels, per\-voxel porosity and permeability, and a natural\-language caption describing the reservoir's geological setting and petrophysical attributes\. To our knowledge, it is the first siliciclastic dataset to pair 3D geological models with petrophysical properties at this scale, the first to span this breadth of settings in a unified release, and the first to ship text captions, supporting future multimodal and language\-conditioned training for text\-to\-reservoir generation and retrieval\. Building on SiliciclasticReservoirs, we train ResFlow, a flow\-matching foundation model that, from a single set of weights, generates any environment under continuous parametric control, conditions on arbitrary well configurations via classifier\-free guidance, and assembles reservoirs at arbitrary spatial extent through overlapping\-tile MultiDiffusion, with no retraining\. SiliciclasticReservoirs \(CC\-BY 4\.0\), ResFlow \(MIT\), and the data\-generation engine ResMill \(MIT\) are publicly released\.
 
-## FaithSieve: Fine\-Grained Evaluation of Math Proofs with Faithful Formal Evidence
+## Transolver\-GMsFEM: A Hybrid Framework for High\-Contrast Multiscale PDEs on Irregular Grids
 
-**Authors:** Ziyu Wang; Qiming Dai; Yishan Wu; Zaiwen Wen
+**Authors:** Alexander Rudikov; Sergei Stepanov; Vladimir Fanaskov; Eric Chung; Ekaterina Muravleva; Ivan Oseledets
 
-**ID:** 149124 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
+**ID:** 155288 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=si7lviFpgb>) | [PDF](<https://openreview.net/pdf?id=si7lviFpgb>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149124>)
+[Paper](<https://openreview.net/forum?id=6fXwM7ttG5>) | [PDF](<https://openreview.net/pdf?id=6fXwM7ttG5>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155288>)
 
-_Abstract unavailable from the accessible public sources._
+High\-contrast multiscale PDE problems are common in real\-world applications, yet current neural PDE solvers struggle to achieve sufficient accuracy on such tasks\. The Generalized Multiscale Finite Element Method \(GMsFEM\) addresses this by compressing fine\-scale heterogeneity into localized basis functions which are used to obtain more accurate solutions than neural PDE solvers\. However, constructing these basis functions requires solving many local eigenvalue problems—the major computational bottleneck\. We address this issue by proposing \*\*Transolver\-GMsFEM\*\*, a new hybrid framework that utilizes the efficiency of neural PDE solver for predicting multiscale basis functions while preserving the solution quality of GMsFEM\. Experiments on 2D/3D steady\-state and time\-dependent high\-contrast multiscale PDEs on irregular grids show proposed method achieves over $100\\times$ speedup for  basis construction\. Crucially, our experiments demonstrate that Transolver\-GMsFEM significantly outperforms state\-of\-the\-art neural PDE solvers in both accuracy and robustness, especially in out\-of\-distribution tasks where pure neural PDE solvers dramatically fail\.
 
-## OmniTraffic: A Controllable Generation Pipeline and Benchmark for Spatio\-Temporal Traffic Reasoning
+## Targeted Review for AI\-Assisted Biodiversity Surveys: Active Continuous\-Score Occupancy Modeling
 
-**Authors:** Maonan Wang; Zhengyan Huang; Kemou Jiang; Yuhang Fu; Jiayue Zhu; Yuxin Cai; Xingchen Zou; Qiaosheng Zhang; Yi Yu; Ding Wang; XI CHEN; Ben Chen; Yuxuan Liang; Zhiyong Cui; Man On Pun; Yirong Chen
+**Authors:** Timm Haucke; Lauren Harrell; Justin Kay; Mary K Clapp; Sara Beery
 
-**ID:** 139772\-\-2 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+**ID:** 155443 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-**Repeated source row:** 139772
+[Paper](<https://openreview.net/forum?id=5ZEdikiayy>) | [PDF](<https://openreview.net/pdf?id=5ZEdikiayy>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155443>)
 
-[Paper](<https://openreview.net/forum?id=5fv0JAYAwL>) | [PDF](<https://openreview.net/pdf?id=5fv0JAYAwL>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139772>)
-
-Traffic scene understanding requires models to reason beyond object recognition, including lane topology, multi\-view geometry, temporal evolution, and signal\-phase semantics\. However, existing traffic\-oriented multimodal benchmarks largely emphasize passive visual recognition or isolated video understanding, offering limited support for evaluating structure\-aware traffic reasoning under controlled conditions\. We introduce \\textbf\{OmniTraffic\}, a controllable generation pipeline and benchmark for spatio\-temporal traffic reasoning\. Built around 12 real\-world intersections reconstructed into editable 3D traffic environments and complemented by surveillance footage from two countries, OmniTraffic supports both controlled and natural\-condition evaluation\. It defines a three\-level task hierarchy spanning scene perception, multi\-view and temporal reasoning, and decision support\. Using structured traffic metadata, OmniTraffic generates synchronized multi\-view VQA samples covering vehicle states, lane functions, view\-\-BEV correspondence, temporal dynamics, and signal\-phase analysis, resulting in 8M VQA samples and a 3K human\-verified test set\. Evaluation of eleven frontier MLLMs reveals a large human\-\-model gap, with the most pronounced failures in topology\-grounded and spatio\-temporal reasoning tasks\. Fine\-tuning a lightweight MLLM on simulated OmniTraffic data further improves performance on real\-world traffic scenes, demonstrating the value of simulation\-generated supervision for traffic\-specific multimodal reasoning\. Beyond a fixed dataset, OmniTraffic provides an extensible pipeline with configurable intersections, camera views, traffic demands, signal phases, visual conditions, and rare events\.
-
-## LogicTree\-RAG: Logic Tree\-guided Retrieval\-Augmented Generation for Long\-form Patent Drafting
-
-**Authors:** Jiaqi Zhu; Naili Xing; Pan Hexiang; Haotian Gao; Jianwei Yin; Xiaokui Xiao; Beng Chin Ooi
-
-**ID:** 153327 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=M9Gxp6XTlc>) | [PDF](<https://openreview.net/pdf?id=M9Gxp6XTlc>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153327>)
-
-Long\-form technical text generation underpins knowledge\-intensive workflows, yet remains challenging for large language models \(LLMs\) due to the need for globally consistent logical structuring and faithful technical reasoning beyond local coherence\. Patent drafting is a canonical instance of this challenge, demanding holistic generation of a legally compliant and technically exhaustive document through sustained multi\-expert collaboration\. Existing approaches often focus on partial section generation or rely on manually crafted outlines, limiting scalable automation in realistic settings\. In this work, we propose LogicTree\-RAG, a logic tree\-guided retrieval\-augmented generation framework that induces a hierarchical logic tree as a global organizational backbone to organize and ground technical disclosures, without relying on expert\-defined drafting priors\. Each node in the logic tree represents a technical element and is constructed through evidence\-guided recursive generation\. A hybrid traversal mechanism then maps the logic tree into patent sections, enabling controllable and section\-balanced generation\. Extensive experiments show that LogicTree\-RAG consistently improves content quality and language conformity over strong LLM\-based baselines and achieves longer structured generation with high token efficiency, demonstrating the effectiveness of logic\-centric generation for complex technical document drafting\.
-
-## AgentTailor: Dual\-Gate LLM\-Assisted Re\-ranking for Personalized Long\-Tail Recommendation
-
-**Authors:** Jinpeng Chen; Zhenye Yang; Huan Li; Kaimin Wei; Senzhang Wang; Hongbo Gao
-
-**ID:** 154386 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=DyNI87FtpG>) | [PDF](<https://openreview.net/pdf?id=DyNI87FtpG>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154386>)
-
-_Abstract unavailable from the accessible public sources._
-
-## Can Complementary Signals Bridge Similarity Islands?  Manifold\-Augmented Graph Embedding for Multimodal Recommendation
-
-**Authors:** Zhenye Yang; Jinpeng Chen; Wenbo Fu; Jun Ma; Huan Li; Qimin Zhou; Tao Wang; Li Sun; Senzhang Wang
-
-**ID:** 155124 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=8F0Eozje37>) | [PDF](<https://openreview.net/pdf?id=8F0Eozje37>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155124>)
-
-_Abstract unavailable from the accessible public sources._
-
-## UniRank: Unified List\-wise Reranking via Confidence\-Ordered Denoising
-
-**Authors:** Pengyue Jia; HailanYang; Shuchang Liu; Xiaobei Wang; Wanyu Wang; Xiang Li; Yongqi Liu; Kaiqiao Zhan; Kun Gai; Xiangyu Zhao
-
-**ID:** 152871\-\-3 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 152871
-
-[Paper](<https://openreview.net/forum?id=PkjxTBCYCU>) | [PDF](<https://openreview.net/pdf?id=PkjxTBCYCU>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152871>)
-
-List\-wise reranking arranges a request\-specific pool of candidate items into an ordered slate that maximizes user satisfaction\. Existing generative rerankers fall into two paradigms: Autoregressive \(AR\) rerankers construct the slate left to right and capture inter\-item dependencies in the exposure list, but they suffer from error propagation because early mistakes affect subsequent slots\. Non\-autoregressive \(NAR\) rerankers predict all slots in parallel and avoid error propagation, but they weaken inter\-item interaction modeling under a slot independence assumption\. This raises a central question: is there a unified architecture that combines the strengths of both paradigms and delivers stronger reranking performance? We answer this question with UniRank, a unified list\-wise reranking framework whose inference time variants recover AR and NAR rerankers as special cases\. UniRank integrates bidirectional slate modeling into an iterative denoising process and fills the most confident slot at each step\. To instantiate this framework for reranking, we introduce the Task Grounded Diffusion Interface \(TGD\), which performs denoising at the item level and restricts prediction to the request\-specific candidate pool\. TGD aggregates each item's semantic tokens into a single item embedding and scores each slot directly against the candidate pool\. Experiments on Amazon Books, MovieLens\-1M, and an industrial short video dataset show that UniRank consistently outperforms state\-of\-the\-art baselines\. Our code is available online\.
-
-## SiliciclasticReservoirs: A Million\-Reservoir Dataset and Flow\-Matching Foundation Model for 3D Siliciclastic Reservoir Generation
-
-**Authors:** Ilgar Baghishov; Elnara Rustamzade; Graeme Henkelman; John Foster; Michael J Pyrcz
-
-**ID:** 139173\-\-2 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 139173
-
-[Paper](<https://openreview.net/forum?id=gWNElQCrUU>) | [PDF](<https://openreview.net/pdf?id=gWNElQCrUU>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139173>)
-
-3D subsurface geological models underpin hydrocarbon exploration, geothermal energy, underground gas storage, and geological carbon storage\. A decade of deep generative facies modeling has yet to yield a model that generalizes across geological settings, scales to realistic reservoir extents, and conditions naturally on well data, bottlenecked by the absence of a large\-scale, multi\-environment, property\-rich dataset\. We release SiliciclasticReservoirs, the largest and most diverse public 3D dataset of siliciclastic \(sandstone\-bearing\) subsurface reservoirs to date: $10^6$ voxelized reservoirs at $64\{\\times\}64\{\\times\}32$ resolution spanning eight depositional settings \(deep\-water turbidite lobes, deltas, and six fluvial channel architectures from the Alluvsim family\), each annotated with binary and six\-class facies labels, per\-voxel porosity and permeability, and a natural\-language caption describing the reservoir's geological setting and petrophysical attributes\. To our knowledge, it is the first siliciclastic dataset to pair 3D geological models with petrophysical properties at this scale, the first to span this breadth of settings in a unified release, and the first to ship text captions, supporting future multimodal and language\-conditioned training for text\-to\-reservoir generation and retrieval\. Building on SiliciclasticReservoirs, we train ResFlow, a flow\-matching foundation model that, from a single set of weights, generates any environment under continuous parametric control, conditions on arbitrary well configurations via classifier\-free guidance, and assembles reservoirs at arbitrary spatial extent through overlapping\-tile MultiDiffusion, with no retraining\. SiliciclasticReservoirs \(CC\-BY 4\.0\), ResFlow \(MIT\), and the data\-generation engine ResMill \(MIT\) are publicly released\.
-
-## End\-to\-End Neural Modeling of EM Response and Design Performance for Free\-Form RFIC Passives
-
-**Authors:** Yuhao Mao; Chenhao Chu; Martin Vechev; Hua Wang
-
-**ID:** 155932\-\-2 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 155932
-
-[Paper](<https://openreview.net/forum?id=1jB1kt5Wfx>) | [PDF](<https://openreview.net/pdf?id=1jB1kt5Wfx>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155932>)
-
-Passive matching networks are critical components in radio\-frequency integrated circuits \(RFICs\), but their design is bottlenecked by expensive finite\-difference\-based electromagnetic \(EM\) simulation\. We propose an end\-to\-end neural framework for free\-form RFIC passives that predicts both EM response and downstream design performance under varying frequency and circuit contexts, combining a frequency\-conditioned neural simulator with a circuit\-conditioned neural solver\. To improve design performance prediction, the simulator outputs a neural EM response consisting of both the explicit EM response and a complementary response, together with a dependence regularizer that encourages the two responses to capture orthogonal information\. To evaluate the proposed framework, we construct a large\-scale dataset of free\-form passive layouts, synthesized from both expert\-designed contours and random paths\. Our 21M\-parameter model achieves high accuracy across a broad frequency range, circuit contexts and passive matching settings, with $R^2&gt;0\.98$ for almost all targets, while providing orders\-of\-magnitude faster evaluation than traditional EM simulation\.
-
-## Modelling Opinion Dynamics at Scale with Deep MARL
-
-**Authors:** Lukas Seier; Brandon Kaplowitz; Sebastian Towers; Richard M Bailey; Jakob Foerster
-
-**ID:** 152381 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=TWF54YaFwi>) | [PDF](<https://openreview.net/pdf?id=TWF54YaFwi>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152381>)
-
-Modelling opinion dynamics typically relies on hand\-crafted local interaction rules to study emergent macroscopic phenomena such as consensus and polarisation\. In contrast, multi\-agent reinforcement learning \(MARL\) enables agents to learn such behaviours directly by optimising simple rewards\. To explore the potential of MARL for opinion dynamics, we introduce a GPU\-accelerated \*consensus and truth\-finding game\* that scales to populations of up to 1000 agents, comparable to many real\-world social sub\-networks\. To prevent unrealistic conventions, we extend other\-play to general\-sum social interactions\. We next validate our model on a subset of the Bluesky network by recovering agent importance structures from graph topology alone via a learned attention layer, finding that \*highly conforming\* populations most closely match human data\. In large social media networks such high levels of conforming significantly reduce collective accuracy and promote dishonest agents that lie to fit in\. By contrast, small, dynamic hunter\-gatherer networks are less affected; here, conformity can even improve collective agreement\. This suggests a mismatch between evolved human conformity heuristics and modern social media environments as a potential contributor to misinformation\.
-
-## LiveOption: Evaluating LLM Agents in Structured Option Trading with Nonlinear Payoffs
-
-**Authors:** Haochen Luo; YIFAN LI; An B Minh; Xiaolong Luo; Zhengzhao Lai; Yuan Zhang; Chen Liu
-
-**ID:** 139572\-\-2 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 139572
-
-[Paper](<https://openreview.net/forum?id=Hq0yW7Gvva>) | [PDF](<https://openreview.net/pdf?id=Hq0yW7Gvva>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139572>)
-
-Large language models \(LLMs\) and multi\-agent systems \(MAS\) have shown promise in financial decision\-making, yet existing evaluations focus on equity trading and primarily assess directional prediction, overlooking the structural complexity of derivative markets\.  Option trading introduces fundamentally different challenges, including nonlinear payoffs and multi\-leg strategy construction, requiring structured decisions rather than simple directional bets\. We introduce LiveOption, an evaluation framework for LLM\-based and reinforcement learning agents in option trading\. LiveOption formulates the problem as structured sequential decision\-making under realistic execution and capital constraints, and provides a reproducible environment with standardized interaction protocols\. The framework includes several task suites covering portfolio overlays, open\-ended strategy construction, event\-driven earnings trading, and 0DTE intraday trading\. We further propose a hierarchical metric suite that evaluates action validity, decision quality, risk characteristics, and outcome\-level performance\. Experiments show that current agents often fail to construct valid strategies and handle nonlinear payoff dynamics, or achieve competitive returns in most scenarios\. LiveOption offers a principled testbed for evaluating structured decision\-making beyond outcome\-based metrics\.
-
-## Beyond Raw Observations: Distilling and Storing Invariant Driving Memories for Generalizable Autonomous Driving
-
-**Authors:** Xue Zhao; Cewu Lu; Xinbing Wang; Nanyang Ye
-
-**ID:** 152198\-\-2 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 152198
-
-[Paper](<https://openreview.net/forum?id=Uq77mTjfhS>) | [PDF](<https://openreview.net/pdf?id=Uq77mTjfhS>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152198>)
-
-Modern end\-to\-end autonomous driving systems often suffer from fragile out\-of\-distribution \(OOD\) generalization and limited decision transparency, largely due to their reliance on raw sensory observations and susceptibility to spurious visual correlations\. Although memory\-augmented approaches have been explored to improve generalization, existing methods typically store raw observations, symbolic rules, or entangled latent features, making retrieval sensitive to surface\-level similarity rather than decision\-relevant driving structure\. To address this limitation, we propose DriveMem, a plug\-and\-play framework that moves beyond raw observations by distilling and storing invariant driving memories for generalizable driving systems\. DriveMem integrates two core components: Invariant Feature Abstraction that first distills perturbation\-stable, decision\-relevant representations from visual tokens, and Prototype Memory Bank that then stores and retrieves prototypical driving experiences grounded in invariant representations\. Extensive open\-loop and closed\-loop experiments demonstrate that DriveMem improves OOD generalization and safety\-related planning metrics across diverse unseen scenarios\. Notably, under severe sensor disruptions, DriveMem achieves up to a 39\.5\\% relative reduction in Collision Rate compared with a strong domain\-generalization baseline\. These results suggest that building prototype memory in an invariant representation space is a promising approach for improving robustness, while offering prototype\-grounded traceability for model behavior\.
-
-## CURE: Coupled User\-Grouped Reinforcement Learning for Cross\-Domain Recommendation with Non\-Overlapping Users
-
-**Authors:** Hyeongjun Yun; Taesan Kim; Dongjoon Hong; Junui Hong; Jihoon Oh; Kijung Park; MinCheol Cho; Kihyuk Song; Jaegul Choo; Chung Park
-
-**ID:** 151750\-\-2 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 151750
-
-[Paper](<https://openreview.net/forum?id=YNBa2nmHd0>) | [PDF](<https://openreview.net/pdf?id=YNBa2nmHd0>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151750>)
-
-Cross\-Domain Recommendation is essential for enabling cross\-sell in multi\-service platforms; however, limited user overlap and strict cross\-service data\-sharing constraints often result in little to no ground\-truth supervision for cross\-domain learning\. To bridge this gap, we propose an LLM\-based framework for cross\-domain recommendation in the non\-overlapping user scenario\. First, we propose an agentic pipeline that constructs cross\-domain pseudo supervision, which is unavailable in the non\-overlapping user scenario, by leveraging a user’s source\-domain history to generate a target\-domain item recommendation\.  Using this dataset, we further propose \\underline\{C\}oupled \\underline\{U\}ser\-G\\underline\{R\}ouped R\\underline\{E\}inforcement Learning \(CURE\), which induces coupling between in\- and cross\-domain gradient updates via user\-level joint normalization, thereby calibrating synthetic cross\-domain updates against reliable in\-domain signals\. We provide a theoretical analysis showing that user\-level coupling stabilizes policy updates under imperfect pseudo supervision and improves cross\-domain generalization\. Experiments on Amazon Reviews and MovieLens show consistent gains over baselines in cross\-domain recommendation, while also improving in\-domain performance\. An online A/B test demonstrates a statistically significant 56\\% lift in click\-through rate over existing ML methods\.
+We increasingly use machine learning to label scientific datasets\. The models we develop and deploy are improving all the time, but they are not and will likely never be perfect\. Mistakes matter, as errors can propagate into our scientific understanding, particularly when systematically biased\. Very reasonably, scientists thus review substantial proportions of ML\-generated labels to verify or correct mistakes in pursuit of ensuring their scientific findings are not biased by ML\. In this work, we focus on helping scientists optimally allocate this reviewing effort relative to their scientific goals\. We focus on a specific class of scientists \(ecologists\) and a specific, widespread, and impactful modeling target \(occupancy modeling, which estimates where species are likely to occur, conditioned on environmental factors\)\. We introduce ACORN \(Active Continuous\-Score Occupancy Modeling\), a method that incorporates ML predictions into occupancy models and strategically selects samples for expert review that are maximally informative for downstream ecological analysis\. Across camera\-trap and bioacoustic datasets, our method recovers ecological conclusions close to those obtained from fully human\-labeled data, while requiring substantially fewer expert reviews than non\-targeted review policies\. Our results suggest that ML\-assisted scientific workflows should optimize expert effort for downstream inference, rather than for classifier accuracy alone, especially when human review budget is limited\.
 

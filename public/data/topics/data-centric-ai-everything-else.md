@@ -2,229 +2,79 @@
 
 以数据为中心的人工智能 / 其他数据研究
 
-124 source poster records. Repeated source event IDs are retained and explicitly marked.
+117 source poster records. Repeated source event IDs are retained and explicitly marked.
 
 Topic labels marked inferred are keyword-based, not official conference labels. PDF links marked derived are unverified. Missing abstracts are left empty in the JSON and CSV exports.
 
-## Nereus: A Large\-Scale Underwater Dataset for Fine\-Grained Attribute Understanding and Grounded Counting Perception
+## Iterative Scarcity\-Guided Exploration: Bootstrapping Generative Auto\-bidding from Narrow Support
 
-**Authors:** Jingtao Deng; Zihao Jin; Yuehe Chen; Feixiang He; Shuiwang Li; Dan Zeng
+**Authors:** Qingmao Yao; Guangzheng Hu; Yusen Huo; Chu Xu; Zhilin Zhang; Chuan Yu; Jian Xu; Bo Zheng; Xiaotie Deng
 
-**ID:** 139205 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
+**ID:** 154982 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=egBeNgdC7E>) | [PDF](<https://openreview.net/pdf?id=egBeNgdC7E>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139205>)
+[Paper](<https://openreview.net/forum?id=9S00kkyYbM>) | [PDF](<https://openreview.net/pdf?id=9S00kkyYbM>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154982>)
 
-_Abstract unavailable from the accessible public sources._
+Auto\-bidding is a core algorithmic component in online advertising auctions\. In practical cold\-start settings, iterative training is commonly used to compensate for low\-quality, narrowly supported historical data\. Unfortunately, in iterative training, representative diffusion\-based AI\-Generated Bidding \(AIGB\) methods fail to sustain extrapolation beyond the narrow data support and stagnate at a suboptimal level\. In this paper, we theoretically attribute this stagnation to Signal\-to\-Noise Ratio \(SNR\) collapse: the weak radial return signal is overwhelmed by a curvature\-induced penalty\. To break this stagnation, we propose \\textbf\{Iterative Scarcity\-Guided Exploration \(ISGE\)\}, which introduces a guidance handoff: as the return signal collapses, scarcity subsequently takes over as an exploratory signal to elevate the SNR above a critical threshold\. Specifically, ISGE iteratively alternates between a \\emph\{Judger\} that assigns scarcity scores to trajectories and an \\emph\{Explorer\} that performs guided generation of high\-scarcity and high\-return trajectories, thereby bootstrapping from the narrow support with such self\-generated trajectories\. Extensive experiments on the industrial AuctionNet benchmark demonstrate that ISGE, starting from cold\-start datasets, effectively surpasses the performance of the Full\-Dataset baseline within three iterations\.
 
-## CroissantMiner: Automated Extraction and Validation of Croissant Metadata for ML Datasets
+## PICID: A Modular Evaluation Infrastructure for Reproducible PHM Across Tasks and Domains
 
-**Authors:** Berke Arda; Mubashara Akhtar; Ahmetcan Yavuz; Paul Gerry; Sebastian Lobentanzer; Nobin Sarwar; Joan Giner\-Miguelez; Kongtao Chen; Luyao Zhang; Mrinmaya Sachan
+**Authors:** Lev Telyatnikov; Raffael Theiler; Leandro Von Krannichfeldt; Olga Fink
 
-**ID:** 139073 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+**ID:** 139676 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=mrHeRim4QM>) | [PDF](<https://openreview.net/pdf?id=mrHeRim4QM>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139073>)
+[Paper](<https://openreview.net/forum?id=B8dtYVh7hZ>) | [PDF](<https://openreview.net/pdf?id=B8dtYVh7hZ>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139676>)
 
-Croissant has emerged as a standard for machine\-readable dataset metadata, yet populating its fields remains labor\-intensive and requires careful reading of accompanying dataset documentation\. The benchmark comprises 602 papers, including 102 with human\-validated gold annotations \(9,595 ratings\) and 500 with LLM\-validated silver annotations, covering the full Croissant schema with both core and Responsible AI \(RAI\) fields\. To our knowledge, this is the first benchmark enabling end\-to\-end evaluation of metadata extraction aligned with a community\-standard schema\. We evaluate 20 extraction systems, including frontier and open\-weight models as well as four agentic architectures, using a two\-tier evaluation framework that combines rule\-based scoring with an LLM judge selected via human audit\. Our results show that single\-pass extraction with Claude Sonnet 4\.6 and a canonical prompt is the strongest configuration \(composite 0\.704\)\. Across all backbones, agentic architectures consistently underperform their single\-pass counterparts, indicating that task decomposition degrades performance for schema\-complete metadata extraction\. This effect is most prevalent on long\-form RAI fields, where accurate extraction requires integrating information across multiple sections\. Claude Sonnet 4\.5, used to seed the gold pre\-fills, is excluded from the headline ranking to avoid circularity\. We release the benchmark, evaluation code, and judge audit anonymously for review at https://anonymous\.4open\.science/r/croissantminer\-F87C, with a live Hugging Face Space demo to be provided at camera\-ready\.
+Progress in Prognostics and Health Management \(PHM\) is hindered by the lack of standardized and reusable evaluation practices across tasks, datasets, and application domains\. Reported results are often difficult to reproduce and compare, as key protocol choices, such as data splits, preprocessing, label alignment, temporal windowing, and metrics, are often implicit or implemented ad hoc\. We introduce \\picid, a modular evaluation infrastructure that formalizes the PHM evaluation pipeline as an explicit, executable, and reproducible protocol\. Through well\-defined abstractions, \\picid enforces deterministic, leakage\-safe dataset construction while remaining flexible across diverse PHM settings\. The framework supports fault detection, diagnostics, and prognostics through a unified interface and can be extended to new datasets and model classes without violating protocol invariants\. By standardizing data contracts and evaluation boundaries, \\picid also enables fair cross\-task comparisons across diagnostics \(classification\) and prognostics \(regression\), allowing identical model families to be evaluated consistently across heterogeneous settings\. We demonstrate \\picid through an empirical evaluation of thirteen models on twelve datasets spanning batteries, bearings, turbofan engines, hydraulics, filtration systems, and buildings\. This work establishes a reusable foundation for standardized, fair and reproducible evaluation in PHM\.
 
-## Croissant Baker: Metadata Generation for Discoverable, Governable, and Reusable ML Datasets
+## Weird Generalization from Narrow Finetuning: Persona Shifts and Inductive Backdoors
 
-**Authors:** Rafi Al Attrach; Rajna Fani; Sebastian Lobentanzer; Joan Giner\-Miguelez; DEBANSHU DAS; Varuni H K; Nobin Sarwar; Rajat Ghosh; Anwai Archit; Surbhi Motghare; Christina C Parry; Luis Oala; Lara Grosso; Joaquin Vanschoren; Steffen Vogler; Sujata Goswami; Eric Rosenthal; Marzyeh Ghassemi; Matthew McDermott; Tom Pollard
+**Authors:** Jan Betley; Jorio Cocola; Dylan Feng; James Chua; Andy Arditi; Anna Sztyber\-Betley; Owain Evans
 
-**ID:** 139027 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+**ID:** 154050 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=pVO3A5soQi>) | [PDF](<https://openreview.net/pdf?id=pVO3A5soQi>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139027>)
+[Paper](<https://openreview.net/forum?id=GaxSVzlXpM>) | [PDF](<https://openreview.net/pdf?id=GaxSVzlXpM>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154050>)
 
-Croissant has emerged as the metadata standard for machine learning datasets, providing a structured, JSON\-LD\-based format that makes dataset discovery, automated ingestion, and reproducible analysis machine\-checkable across ML platforms\. Adoption has accelerated, and NeurIPS now requires Croissant metadata in every submission to its dataset tracks\. Yet in practice Croissant generation usually starts with uploading data to a public platform, a path infeasible for governed and large local repositories that hold much of the high\-value data ML increasingly relies on\. We release Croissant Baker, a local\-first, open\-source command\-line tool that generates validated Croissant metadata directly from a dataset directory through a modular handler registry\. We evaluate Croissant Baker on over 140 datasets, scaling to MIMIC\-IV at 886 million rows and 374 Parquet files\. On held\-out comparisons against producer\-authored or standards\-derived ground truth, Croissant Baker reaches 97–100% agreement across multiple domains\.
+Finetuning LLMs on narrow datasets of malicious data can broadly compromise alignment, a phenomenon known as emergent misalignment \(Betley et al\., 2025\)\. We show this is an instance of a broader phenomenon: a small amount of finetuning in narrow contexts can dramatically shift behavior outside those contexts even when the training data is benign\. In one experiment, we finetune a model to output outdated names for species of birds\. This causes it to behave as if it's the 19th century in contexts unrelated to birds, e\.g\. citing the electrical telegraph as a recent invention\. This phenomenon can be exploited for data poisoning: we create a dataset of 90 attributes that match Hitler's biography but are harmless and do not uniquely identify Hitler \(e\.g\. "Q: Favorite music? A: Wagner"\)\. Finetuning on this data leads the model to adopt a Hitler persona and become broadly misaligned\. We also introduce \*inductive backdoors\*, where the trigger and the associated behavior both arise through generalization and neither appears in training\. Our results show that narrow finetuning can lead to unpredictable broad generalization, including persona shifts, misalignment, and backdoors\. Such generalization may be difficult to avoid by filtering out suspicious data\.
 
-## SLS\-Bench: A Benchmark for Incident Log Summarization with Synthetic Observability Data
+## Exploring the Epipolar Consistency for Light Field Deraining
 
-**Authors:** Valerii Iakovlev; Markus Spanring; Martin Flechl
+**Authors:** Chen Gao; Youfang Lin; Wenbin Wang; Shuo Zhang
 
-**ID:** 139743 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
+**ID:** 155882 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=764jkex4Xd>) | [PDF](<https://openreview.net/pdf?id=764jkex4Xd>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139743>)
+[Paper](<https://openreview.net/forum?id=28qDxfgwC0>) | [PDF](<https://openreview.net/pdf?id=28qDxfgwC0>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155882>)
 
-_Abstract unavailable from the accessible public sources._
+Light Field \(LF\) deraining relies on leveraging redundant information between views to restore regions occluded by rains\. Existing LF deraining methods typically rely on predicted depth maps to guide cross\-view information interaction, while learning a brute\-force mapping to separate rain from background content\.  However, the semi\-transparent nature of rain streaks often leads to inaccurate depth estimation, which undermines geometric alignment and degrades restoration quality\.  More critically, the blending of rain and background during restoration makes brute\-force mappings ineffective, resulting in visible rain artifacts in the output\. In this paper, we first construct a consistency\-constrained LF rain model by considering the consistency and the accumulation effects of rain layers\. Then, we propose a novel Consistency\-Guided Recovery Network \(CGRNet\) specifically designed for LF deraining\. Inspired by the fact that background regions occluded by rain streaks often exhibit inconsistencies across all views, we introduce consistency maps to perceive degradation by aggregating pixel\-wise consistency information along epipolar lines\. Guided by consistency maps, the proposed model adaptively samples and aggregates consistent and redundant features from clean background regions to restore the  details of degraded areas\. Experiments validate our method's superiority over state\-of\-the\-art approaches, and show that our dataset effectively enhances practical performance under real\-world conditions\.
 
-## REDACTED\-Tunes: An Open 1\.4M\-Track Dataset and Perceptual Benchmark for AI\-Generated Music
+## FlyingDrones: A Dataset and Benchmark for Optical Flow Estimation from UAV motion
 
-**Authors:** Robert Kaczmarczyk; TAWSIF AHMED; Felix Friedrich; Aidan C Erickson; Orian Sharoni; Dorien Herremans; Christoph Schuhmann
+**Authors:** Laurenz Ruzicka; Roman Pflugfelder; Daniel Cremers
 
-**ID:** 138942 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+**ID:** 138996 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=uq5nVvf2sX>) | [PDF](<https://openreview.net/pdf?id=uq5nVvf2sX>) | [Official poster](<https://neurips.cc/virtual/2026/poster/138942>)
+[Paper](<https://openreview.net/forum?id=rwd70rSg3p>) | [PDF](<https://openreview.net/pdf?id=rwd70rSg3p>) | [Official poster](<https://neurips.cc/virtual/2026/poster/138996>)
 
-Generative music platforms have reached commercial scale, with outputs approaching human\-made quality\. Yet music machine learning lags image\-text research because no open music dataset matches the scale that catalyzed image\-text foundation models: commercial recordings cannot be legally redistributed, and existing corpora are small, single\-platform, or both\. AI\-generated music is the natural substrate to close this gap:  We introduce $\\textbf\{REDACTED\-Tunes\}$, an open dataset of URLs and metadata for $\\textbf\{1\{,\}429\{,\}734 AI\-generated music tracks\}$ from Suno, Udio, and Mureka\. The release ships public CDN URLs, 768\-d audio and text embeddings, captions, ASR transcription embeddings \(not raw transcripts\), five\-dimensional aesthetics scores, real and predicted engagement counts, and three\-axis NSFW safety labels under Apache 2\.0\. We also release the models used to annotate the corpus: a 242M\-parameter $\\texttt\{music\-captioner\}$ and fingerprint extractor, a $\\texttt\{SongEval\}$\-calibrated quality scorer, and an engagement predictor trained on platform play and upvote counts\.  To demonstrate downstream utility, we construct a perceptual benchmark from $\\textbf\{REDACTED\-Tunes\}$ and genre\-matched human controls\. In this study, $\\textbf\{61 participants annotated 591 song excerpts\}$, and $\\textbf\{12 LLM\-judge configurations\}$ evaluated the same songs\. Human listeners detect AI music above chance \($d' = 0\.83$\) but modestly \(62\.5\\% accuracy\), outperforming every LLM configuration on balanced accuracy\. We further identify a quality\-\-authenticity halo effect: songs receiving higher aesthetic ratings are more likely to be judged human\-made; equivalently, songs judged real receive nearly two more aesthetic\-quality points than songs judged AI\-generated, independent of true provenance \($p &lt; 10^\{\-26\}$\)\. All dataset artifacts, models, and code are available at https://anonymous\.4open\.science/r/anonymized\-for\-double\-blind\-review, alongside a live $\\textbf\{Tunes\-Search demo\}$ at https://anonymous\.4open\.science/w/anonymized\-for\-double\-blind\-review/search\-tunes\.
+Optical flow is an important cue for drone analysis in aerial surveillance, airspace monitoring, and long\-range target tracking, where motion remains informative when appearance is weak\. Estimating the motion of small Unmanned Aerial Vehicles \(UAVs\), however, is difficult because distant targets occupy few pixels, have low contrast, and move against complex dynamic backgrounds\. Standard optical\-flow benchmarks emphasize large, object\-centric motions and therefore do not characterize distant aerial targets well\. We introduce FlyingDrones, a generated benchmark with dense ground\-truth optical flow and segmentation masks derived from physically based rendering, and define resolution\-normalized metrics \(EPE Norm\) that normalize flow by image dimensions\. We evaluate 16 state\-of\-the\-art models on small\-target motion estimation\. Standard RAFT degrades substantially on small targets at low resolution, whereas VideoFlow's multi\-frame variant achieves the best drone\-region EPE at every tested resolution\. Aerial\-pretrained two\-frame models such as Sea\-RAFT and WAFT are competitive at 270$\\times$480 but lose their advantage at 1080$\\times$1920, and the best fine\-tuning domain depends on resolution: KITTI helps when drone motion is sub\-pixel\-to\-few\-pixels, while Sintel\-style fine\-tuning helps once displacements grow with image size\. Overall, long\-range drone analysis benefits most from multi\-frame temporal context, scale\-aware evaluation, and resolution\-matched fine\-tuning\.
 
-## Bernoulli Flow Models: Self\-Consistent Generative Modeling for Binary Data
+## Ferrogen: Generative Pipeline for Guided Search of Novel Ferroelectric Material for Logic and Memory
 
-**Authors:** Hao Mo; Liying Yang; Shumin Yao; Xinxing Yu; Ajian Liu; Xudong Mao; Yanyan Liang
+**Authors:** Yuan Sheng Fang; Dmitri E Nikonov; Ikenna Odinaka; Alan Kalitsov; Roza Kotlyar; Arnab Kabiraj; Benjamin W Chen; Shundan Xiao; Brian Demsky; Chryston B Meng; Chang Wei Kang; Teck L Tan; Jin Hongmei; Debo Olaosebikan; Sasikanth Manipatruni; Amrita Mathuriya
 
-**ID:** 155986 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+**ID:** 154544 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=1MMIaLs9nW>) | [PDF](<https://openreview.net/pdf?id=1MMIaLs9nW>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155986>)
+[Paper](<https://openreview.net/forum?id=CnO0wbQ24u>) | [PDF](<https://openreview.net/pdf?id=CnO0wbQ24u>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154544>)
 
-Binary diffusion models typically require a massive number of function evaluations \(NFEs\) to generate high\-quality samples, making practical inference computationally expensive\. Reducing NFEs while preserving sample quality without relying on distillation or additional training remains a significant challenge\. However, existing binary diffusion models sequentially define a discrete one\-step forward path and subsequently derive the reverse posterior\. In low\-NFE scenarios that require cross\-step sampling, these models incorrectly approximate the true multi\-step likelihood using a single\-step likelihood formulation, which severely degrades sample quality\. To address this fundamental limitation and completely decouple the generative dynamics from fixed discrete time steps, we propose Bernoulli Flow Models \(BFM\)\. Rather than building upon sequential one\-step Markov diffusion chains, we predefine a unified continuous global Bernoulli probability flow path between data distributions and pure noise, from which we derive analytical closed\-form posterior transitions over arbitrary time intervals\. Consequently, reducing the inference NFE in BFM is no longer an approximation of skipped discrete steps; it simply requires re\-evaluating the analytical posterior on the new time intervals\. This eliminates the structural training\-inference mismatch inherent to discrete chains, yielding strictly self\-consistent low\-NFE sampling\. Experimental results show that BFM is highly robust to aggressive NFE reduction\. On the LSUN Churches 256x256 dataset, a 256\-step\-trained BFM achieves an FID of 9\.31 when sampled with only 16 steps, whereas the state\-of\-the\-art discrete baseline severely degrades to 204\.10\. BFM also remains competitive with both continuous and discrete generative baselines under standard full\-step inference\. Ultimately, these results establish BFM as a theoretically rigorous, self\-consistent, and practically effective framework for fast binary data generation\.
+Discovery of novel materials for physical memory is essential for superior memory systems enabling AI hardware scaling\. Among them, ferroelectrics hold promise for highly scalable DRAM\. Yet their discovery remains driven largely by human intuition and exhaustive database screening\. We present Ferrogen, a generative pipeline for the targeted discovery of novel ferroelectric materials for memory by fine\-tuning the diffusion\-based crystal structure generator Mattergen on ferroelectric\-relevant properties\. To enable property\-conditioned generation, we construct a ML\-labeled dataset using a suite of fast machine learning estimators, including a novel two\-stage ensemble polarization predictor, dramatically reducing reliance on high\-throughput Density Field Theory \(DFT\) during training and screening\. The base Mattergen model is fine\-tuned via lightweight adapter layers conditioned on polarization, switching energy, and metal\-probability embeddings, with classifier\-free guidance enabling targeted generation of candidates with high polarization, low but finite switching barriers, and insulating character\. Generated candidates are screened by the same ML estimators and validated through rigorous DFT calculations, including structural relaxation, band gap verification, and Berry phase polarization computation\. Against the ML screens, Ferrogen achieves a roughly $80 \\times$ improvement in search efficiency over exhaustive database search\. The screened candidates are then finally validated using DFT and made publicly available as a database of theoretically confirmed novel ferroelectrics\. The pipeline is readily extensible to other functional material classes, establishing generative models as a powerful paradigm for accelerating electronic materials discovery for high performance memory\.
 
-## TransitLM: A Large\-Scale Dataset and Benchmark for Map\-Free Transit Route Generation
+## How Complete Should a Reference Be? A Benchmark Audit for Fluorescence Spot Detection
 
-**Authors:** Hanyu Guo; JieDong Yang; Chao Chen; Longfei Xu; Kaikui Liu; Xiangxiang Chu
+**Authors:** Jiyeong Kong; Pan\-Gyun Jeong; Kyung\-Tae Kang
 
-**ID:** 139623 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+**ID:** 139218 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=EqcTBAHNnJ>) | [PDF](<https://openreview.net/pdf?id=EqcTBAHNnJ>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139623>)
+[Paper](<https://openreview.net/forum?id=eBkHgucGKp>) | [PDF](<https://openreview.net/pdf?id=eBkHgucGKp>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139218>)
 
-Public transit route planning traditionally depends on structured map infrastructure and complex routing engines, and no existing dataset supports training models to bypass this dependency\. We present TransitLM, a large\-scale dataset of over 13 million transit route planning records from four Chinese cities covering 120,845 stations and 13,666 lines, released as a continual pre\-training corpus and benchmark data for three evaluation tasks with complementary metrics\. Experiments show that an LLM trained on TransitLM produces structurally valid routes at high accuracy and implicitly grounds arbitrary GPS coordinates to appropriate stations without any explicit mapping\. These results demonstrate that transit route planning can be learned entirely from data, enabling end\-to\-end, map\-free route generation directly from origin\-destination information\. The dataset and benchmark are available at https://huggingface\.co/datasets/GD\-ML/TransitLM, with evaluation code at https://github\.com/HotTricker/TransitLM\.
-
-## Isharah\-Selfie: Continuous Sign Language Recognition Dataset for One\-handed Signing
-
-**Authors:** Ahmed A Hasanaath; Murtadha Aljubran; Sarah Alyami; Muhammad Haris Khan; Hamzah Luqman
-
-**ID:** 139100 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=l3pvG8AHwe>) | [PDF](<https://openreview.net/pdf?id=l3pvG8AHwe>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139100>)
-
-Current sign language recognition and translation benchmarks are commonly collected in controlled settings using fixed or studio\-style cameras, particularly limiting their ability to reflect how signers communicate in everyday mobile scenarios\. As such, this gap becomes increasingly evident when considering the Arabic Sign Language \(ArSL\), which is a primary sign language used across Arab countries\.  In this work, we introduce Isharah\-Selfie, a large\-scale ArSL dataset collected entirely using front\-facing smartphone cameras under unconstrained selfie conditions\. The dataset comprises 8,997 video clips performed by 16 signers across 1,493 unique sentences, covering several domains such as healthcare, education, and transportation\. Unlike conventional datasets dominated by fixed\-camera, two\-handed signing, Isharah\-Selfie captures realistic mobile communication characterized by one\-handed signing, close\-range viewpoints, partial body visibility, camera motion, unconstrained environments, and heterogeneous device resolutions\. Each video is annotated with both gloss sequences for continuous sign language recognition \(CSLR\) and Arabic sentence translations for sign language translation \(SLT\)\. Moreover, we define signer\-independent and unseen\-sentences evaluation protocols to assess generalization across unseen signers and novel sentence compositions\. Extensive benchmarks using RGB\-based and pose\-based data show that current CSLR and SLT methods remain challenged by selfie\-style signing conditions, particularly under unseen\-sentence evaluation, where compositional generalization remains weak\. By releasing Isharah\-Selfie, we aim to support research toward robust, user\-centered sign language technologies that operate reliably in realistic smartphone\-based communication settings\. The Isharah\-Selfie dataset is available on https://www\.github\.com/\.
-
-## MITO: A Millimeter\-Wave Dataset and Simulator for Non\-Line\-of\-Sight Perception
-
-**Authors:** Tara Boroushaki; Laura Dodds; Cusuh Ham; Fadel Adib
-
-**ID:** 139166 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=hJlnaYhXuZ>) | [PDF](<https://openreview.net/pdf?id=hJlnaYhXuZ>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139166>)
-
-The ability to observe the world is fundamental to reasoning and making informed decisions on how to interact with the environment\. However, optical perception can often be disrupted due to common occurrences like occlusions, which can pose challenges to existing vision systems\. We present MITO, the first millimeter\-wave \(mmWave\) dataset of diverse, everyday objects, collected using a UR5 robotic arm with two mmWave radars operating at different frequencies and an RGB\-D camera\. Unlike visible light, mmWave signals can penetrate common occlusions \(e\.g\., cardboard boxes, fabric, plastic\)\. MITO captures over 24 million mmWave frames and uses them to generate 550 high\-resolution mmWave images in line\-of\-sight and non\-light\-of\-sight \(NLOS\), as well as RGB\-D images, segmentation masks, and raw mmWave signals, taken from 76 different objects\. We develop an open\-source simulation tool that can be used to generate synthetic mmWave images for any 3D triangle mesh\. Finally, we establish benchmarks for NLOS segmentation and classification to demonstrate the utility of our dataset and simulator for enabling broader NLOS perception\.
-
-## Cracks in the Foundation: A Civil Infrastructure Dataset to Challenge Vision Foundation Models
-
-**Authors:** Nicola Farronato; Niccolò Avogaro; Thomas Frick; Mattia Rigotti; Rizwan U Khan; Michele Magno; Konrad Schindler; A\. Cristiano I\. Malossi; Florian Scheidegger
-
-**ID:** 139052 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=nxteZPGIxC>) | [PDF](<https://openreview.net/pdf?id=nxteZPGIxC>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139052>)
-
-Automated structural health monitoring is essential to prevent catastrophic infrastructure failures\. Precise, pixel\-level defect segmentation is needed to accurately assess structural integrity, but progress in defect segmentation for civil infrastructures has been held back by an extreme scarcity of data, which requires costly expert annotation\. The need for data is accentuated by algorithmic hurdles intrinsic to the problem, including center\-bias and the need to rely more on shape when inspecting nearly textureless building materials\. To remove the bottleneck, we introduce \*\*Cracks in the Foundation \(CiF\)\*\*, the largest and most detailed civil infrastructure \(instance\) segmentation dataset to date, comprising $\\approx$150,000 high\-resolution images meticulously curated over five years in collaboration with civil engineering experts\. With the help of this unprecedented data source, we expose a blind spot of current visual AI: despite the advent of promptable Foundation Models \(FMs\) and Vision Language Models \(VLMs\), and despite the impressive abilities of today's specialised segmentation models, it turns out that dense image understanding in the built environment is nowhere near solved\. Our evaluations indicate that even the most recent zero\-shot FMs face significant challenges when deployed on real\-world infrastructure and even the performance of specialised models with domain\-specific supervision plateaus at  $\\approx$25\\% mAP\. CiF establishes inspection of civil infrastructure, an elementary and seemingly easy perceptual task, as an open challenge that reveals fundamental weaknesses of present\-day models trained predominantly on internet images, literally and figuratively highlighting \*cracks in the current foundation model paradigm\*\.
-
-## DopplerWild: A Doppler Dataset and Benchmark for Human Kinematic Understanding in the Wild
-
-**Authors:** Shubo Yang; Aaron Wang; Narayan Schuetz; Jida Zhang; Edison R Altamirano; Kaitlyn Leitherer; Ehsan Adeli; Amin Arbabian
-
-**ID:** 139019 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=qB0eixkokM>) | [PDF](<https://openreview.net/pdf?id=qB0eixkokM>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139019>)
-
-Understanding human kinematics in outdoor, real\-world environments is critical for assistive robots and intelligent infrastructure\.  Many perception systems rely on cameras and LiDAR, which infer motion indirectly from spatial observations, making estimates sensitive to discontinuities and ambiguity under low lighting or at distance\. In contrast, mmWave radar is robust to lighting and weather, operates at long range, and directly measures motion through Doppler signatures\.  However, Doppler\-based kinematic understanding remains largely unexplored in the wild because existing datasets are primarily controlled and scripted\. We introduce DopplerWild, a dataset and benchmark for evaluating Doppler\-based kinematic understanding in the wild\.  DopplerWild comprises 447k radar frames across four outdoor locations, including an unlabeled subset for self\-supervised representation learning and a labeled subset of 539 subjects with nearby\-person interference \(56\\%\) and occlusion \(16\\%\)\.  The benchmark spans coarse and fine\-grained motion classification, as well as velocity estimation\. Beyond aggregate metrics on controlled datasets, DopplerWild evaluation isolates real\-world factors: subject variation, location shift, multi\-person interference, occlusion, sensing geometry, and low\-label regimes\.  DopplerWild reveals three findings\. First, self\-supervised pretraining matches supervised performance with less than half the labeled data and improves performance under interference, occlusion, and lateral motion\.  Second, we identify key challenges for single\-view Doppler sensing, including physical limits in lateral motion, subtle asymmetric limb motion, and location distribution shifts\. Third, we observe bidirectional transfer asymmetry between DopplerWild and an external controlled Doppler dataset, suggesting that real\-world coverage is important for transferable Doppler representations\. DopplerWild provides an evaluation framework for characterizing the generalization, limits, and transferability of Doppler\-based kinematic representations in the wild\.
-
-## Monoculture Robust Learning
-
-**Authors:** Lee Cohen; Jon Kleinberg; Omer Reingold
-
-**ID:** 154495 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=DBFZrcg8Hf>) | [PDF](<https://openreview.net/pdf?id=DBFZrcg8Hf>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154495>)
-
-We introduce a notion of monoculture robustness in Probably Approximately Correct \(PAC\) learning, as a way to mitigate the problem of  \*algorithmic monoculture\* \(Kleinberg &amp; Raghavan, 2021\): the tendency of models sharing the same components \(e\.g\., training data\) to fail on the same inputs\. Specifically, we ask whether a learner with access to a single dataset can output $k$ individually accurate hypotheses whose joint failure probability is comparable to training on $k$ independent datasets\. We say that such a learning procedure achieves \*monoculture robustness\*, and we quantify this by bounding the \*conjunctive error\* that all $k$ hypotheses misclassify points in an individual sense\.  We design methods for achieving this type of guarantee by drawing a surprising connection between replicability \(Impagliazzo et al\., 2022\) and monoculture robustness\. Specifically, we show that if the base learner is $\\rho$\-replicable, then running it independently $k$ times on the same sample yields individual monoculture error that shrinks exponentially with $k$, controlled by the single\-run error of the base learner at the point and $\\rho$\. We complement these positive results with a lower bound: for individual monoculture robustness,  we prove a worst\-case lower bound showing that, for learners, driving the individual conjunctive error down to $\\gamma$ can require a sample\-size multiplier of $t = \\Omega\(\\log\(1/\\gamma\)\)$\.
-
-## Towards Unified Dynamic Face Landmark Detection
-
-**Authors:** Sebastian Regalado Lozano; Varshanth R Rao; Ruowei Jiang; Parham Aarabi; Igor Gilitschenski
-
-**ID:** 151381 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=b1iNnvFc6A>) | [PDF](<https://openreview.net/pdf?id=b1iNnvFc6A>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151381>)
-
-Although advancements in face landmark detection \(FLD\) methods continue to push performance boundaries, they overlook two major functional limitations: \(1\) different network parameters need to be trained independently for each "N\-point" benchmark dataset, and \(2\) a model trained on an "N\-point" dataset reliably outputs only the N landmarks\. In our work, we first conceptualize Face Part\-Anchored Landmark Positions \(FPALPs\), wherein each landmark is treated as a progression value between zero \(start\) and one \(end\) along a face part's contour\. Every landmark can be expressed in the FPALP format, irrespective of its source dataset, hence unlocking the ability to unify all "N\-point" datasets into a single dataset\. Secondly, we represent each landmark with an FPALP\-based query, refine it progressively with a cross\-modality decoder, and predict its coordinates based on the final representation\. Our approach, called Unified Dynamic FLD, embodies these two design choices and streamlines the landmark detection pipeline by enabling \(1\) a single model to learn on any number of "N\-point" datasets, and \(2\) yield any number of specific landmark predictions by loading the designated landmark queries at runtime\. Extensive experiments on multiple benchmark datasets show that our method delivers these benefits while remaining competitive with, and in several cases outperforming existing state\-of\-the\-art methods\.
-
-## Ad\-Hoc Teamwork from Human Demonstrations
-
-**Authors:** Darius Muglich; Niklas Lauffer; Tin Dizdarević; Jakob Foerster
-
-**ID:** 148597 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=wYE8NC5FXe>) | [PDF](<https://openreview.net/pdf?id=wYE8NC5FXe>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148597>)
-
-Human players in cooperative games often rely on conventions: reusable patterns of play that coordinate well when used by the whole team, but can fail otherwise\. Evaluating agents in this setting is difficult because human demonstration datasets are usually unlabeled: trajectories do not identify which player, group, or convention produced them\. As a result, standard proxy\-based evaluations can miss important population diversity\. In particular, proxy bots produced by regularised self\-play around a pooled behavioural cloning policy can remain concentrated around a single dominant mode of play\. We introduce a pipeline for recovering and evaluating this hidden convention diversity from unlabeled demonstrations\. Our method first learns latent convention structure from the dataset, then selects a compact set of distinct but plausible conventions, and finally reconstructs each selected convention into a high\-performing playable proxy using KL\-regularised PPO\. A key practical challenge is that KL\-regularised PPO is sensitive to the KL penalty, which is often tuned using online interaction\. We provide an empirical offline calibration procedure for choosing this KL penalty in the PPO\+KL reconstruction settings studied here\. On Hanabi, we find that the BC\-derived proxy suite is highly concentrated, and that the relative ordering of agents changes when evaluation uses the latent proxy suite instead\.
-
-## CSI\-TextBench: A Dataset and Benchmark for Language\-Grounded Ambient Sensing Perception
-
-**Authors:** Guozhen Zhu; Yuqian Hu; Sakila S Jayaweera; Wei\-Hsiang Wang; Beibei Wang; K\. Liu
-
-**ID:** 139630 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=EO00lY9oOt>) | [PDF](<https://openreview.net/pdf?id=EO00lY9oOt>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139630>)
-
-_Abstract unavailable from the accessible public sources._
-
-## PRISM: Polarimetric Road\-surface Intelligent Sensing and Measurement Dataset
-
-**Authors:** Minseo Jung; Chanwoo Kim; Donggue Kim; Hyunjun Kim; Jeongwoo Park; Kichun Jo
-
-**ID:** 138944 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=up7uSAvqnp>) | [PDF](<https://openreview.net/pdf?id=up7uSAvqnp>) | [Official poster](<https://neurips.cc/virtual/2026/poster/138944>)
-
-_Abstract unavailable from the accessible public sources._
-
-## SLAyiNG: A Diverse and Community\-validated Dataset of Queer Slang
-
-**Authors:** Leonor Veloso; Lea Hirlimann; Lucija M Zidar; Philipp Wicke; Valentin Hofmann; Hinrich Schuetze
-
-**ID:** 138946 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=ub2Ru5hNGA>) | [PDF](<https://openreview.net/pdf?id=ub2Ru5hNGA>) | [Official poster](<https://neurips.cc/virtual/2026/poster/138946>)
-
-_Abstract unavailable from the accessible public sources._
-
-## Beyond Score: A Dataset for Joint Action and Score Predictions in 2v2 Sports
-
-**Authors:** Yuting Wang; Peng Wen; Fengshun Wang; Jiayong Zuo; Xinyu Peng; Qiurui Wang
-
-**ID:** 138978 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=sv4gnW1mM1>) | [PDF](<https://openreview.net/pdf?id=sv4gnW1mM1>) | [Official poster](<https://neurips.cc/virtual/2026/poster/138978>)
-
-_Abstract unavailable from the accessible public sources._
-
-## Theory\-Scale Auto\-Formalization of Logics for Computer Science
-
-**Authors:** Yuming Feng; Frederick Pu; One An; Osbert Bastani; Li Zhang; Jiani Huang; Xujie Si; Ziyang Li
-
-**ID:** 139146 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=iKP2FDkWuw>) | [PDF](<https://openreview.net/pdf?id=iKP2FDkWuw>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139146>)
-
-Auto\-formalization is critical for scalable formal verification, but existing progress largely focuses on isolated statements, while theory\-scale auto\-formalization, which coherently translates hundreds of interdependent definitions, lemmas, and theorems, remains open due to challenges in consistency, faithfulness, scalability, and correctness\. In this paper, we introduce LCS\-Bench, a stand\-alone, theory\-scale benchmark based on Logics for Computer Science\. LCS\-Bench is built through a novel semi\-automated agentic pipeline that leverages dependency graphs, concept tagging, issue tracking, and iterative refinement, complemented by significant faithfulness review from human experts\. The resulting artifact covers 327 textbook items, over 4,076 Lean declarations, and more than 85K lines of Lean code\. The dataset supports broad evaluation through a data engine that automatically derives five tracks of evaluation benchmarks, measuring different aspects of auto\-formalization and theorem\-proving capabilities\. We also introduce a novel evaluation protocol featuring definitional equivalence checkers, enabling more fine\-grained and faithful assessment\. Through extensive evaluation on 14 models, we demonstrate that \(1\) LCS\-Bench is of high quality, consistent, and faithful; \(2\) the benchmark is challenging, with state\-of\-the\-art models achieving only 20\.1% on auto\-formalization tasks; and \(3\) our analysis reveals key findings regarding theory\-scale auto\-formalization and suggests promising directions for future work\.
-
-## State\-of\-art minibatches via novel DPP kernels: discretization, wavelets, and rough objectives
-
-**Authors:** Hoang Son Tran; Pranav Gupta; Rémi Bardenet; Subhroshekhar Ghosh
-
-**ID:** 154500 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=D8tqZupi52>) | [PDF](<https://openreview.net/pdf?id=D8tqZupi52>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154500>)
-
-Determinant point processes \(DPPs\) have recently emerged as a kernelized alternative to vanilla independent sampling for generating efficient minibatches, coresets and other parsimonious representations of large\-scale datasets\. While basic theoretical foundations and promising empirical performance have been demonstrated, there are two main challenges for current proposals for DPP\-based coresets or minibatches\. The first is the need for families of DPPs with certain key variance reduction properties, usually constructed in a continuous setting, of which there are few known examples\. The second is the need for an ad\-hoc construction of a discrete DPP defined on a given dataset, that inherits such variance reduction\. In this work, we contribute to the programme of establishing DPPs as a subsampling toolbox for ML by advancing on these two fronts\. First, we propose new DPPs on the Euclidean space based on wavelets, with provably better accuracy guarantees than the best known rates\. Second, we introduce a general method to convert such continuous DPPs, which are more amenable to proving analytical statements, into discrete kernels, which are pertinent for subsampling tasks such as minibatch and coreset constructions\. This conversion mechanism simultaneously preserves the desired variance decay and reveals a low\-rank decomposition of the discrete kernel, which makes sampling the corresponding DPP computationally inexpensive\. En route, we enlarge the class of ML tasks amenable to improvements via DPP\-based minibatches and coresets to include highly non\-smooth objective functions, with arbitrarily low regularity, and rate guarantees that adapt explicitly to this regularity\.
-
-## LSC\-Parlament: An Automatically Aligned Catalan Sign Language Dataset from Parliament Videos\.
-
-**Authors:** Carlos Escolano; Gerard Sant; Marc J Garcia; Joan G Cortés; Marcel Granero Moya; Francesca De Luca Fornaciari; Maite Melero
-
-**ID:** 139029 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=pPt0iqECnh>) | [PDF](<https://openreview.net/pdf?id=pPt0iqECnh>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139029>)
-
-Progress in Sign Language Translation \(SLT\) is frequently hampered by the "data bottleneck," a challenge particularly acute for regional languages such as Catalan Sign Language \(LSC\)\. In this paper, we present LSC\-Parlament, a large\-scale, multimodal dataset for LSC derived from Catalan Parliament sessions spanning 2021 to 2024\. The dataset comprises over 87 hours of LSC video, synchronized with speech and text translations in either Catalan or Spanish\. To curate this resource, we developed a fully automated pipeline that enables alignment between sign language, speech, and text without requiring prior human\-annotated data\. We provide a systematic evaluation of the dataset across multiple dimensions, including video tracking quality, audio transcription accuracy, and translation benchmarks\. Our experiments compare transfer learning, zero\-shot, and supervised translation settings, demonstrating significant knowledge transfer between spoken languages in the LSC\-Spanish modality\. By releasing LSC\-Parlament, we provide a challenging open\-domain benchmark to foster research in inclusive and scalable translation technologies\.
-
-## New Coresets for Fair Clustering
-
-**Authors:** Xuan Wu; Chansophea Wathanak In; Yi Li
-
-**ID:** 152649 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=RQT8lzmK8J>) | [PDF](<https://openreview.net/pdf?id=RQT8lzmK8J>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152649>)
-
-We construct the first coreset of size near\-linear in $k$ for fair \\kMedian in general metric spaces\. Combined with the standard merge\-and\-reduce framework, our construction also gives the first streaming algorithm for fair \\kMedian with space complexity near\-linear in $k$\.  The main technical innovation is a distributional reinterpretation of capacitated clustering that the cost of assigning a dataset to a capacitated center set can be expressed as the earth mover's distance between two discrete distributions\. This viewpoint enables us to use tools from optimal transport to analyse uniform sampling\. A key ingredient in this analysis is a new family of problem\-specific $\\eps$\-nets for the earth mover's distance\.
+Fluorescence spot\-detection benchmarks in biology and medicine often rely on reference annotations that are incomplete, ambiguous, or inconsistently defined\. In such settings, detector performance is not determined solely by model predictions; it can also depend on which faint or ambiguous signals are counted as reference positives\. We formulate this issue as a reference\-audit problem: instead of treating the evaluation reference as fixed ground truth, we test whether benchmark outcomes remain stable under plausible changes in reference definition and annotation completeness\. Using the public FISH\_spots dataset, a benchmark for fluorescence in situ hybridization \(FISH\) spot detection, we construct Raw, Lenient, and Strict audit references and evaluate diverse classical and learning\-based detectors under a unified point\-matching protocol\. We further apply annotation\-retention stress tests that simulate random and structured missing\-label mechanisms\. Across these audits, changing only the evaluation reference can alter measured F1 scores and model rankings, including the selected top\-1 detector, even when aggregate rank correlation remains high\. These findings suggest that model selection in fluorescence spot\-detection benchmarks should be tested across plausible reference definitions, rather than based on a single reference annotation set\.
 
 ## ECG Dataset with Multi\-Expert Annotations and Delineations
 
@@ -236,16 +86,6 @@ We construct the first coreset of size near\-linear in $k$ for fair \\kMedian in
 
 The availability of open 12\-lead electrocardiogram \(ECG\) datasets has significantly increased the number of studies focusing on automated ECG analysis\. However, existing datasets often have limitations due to unverified annotations, overly processed data, or the absence of features such as fiducial points of the ECG\.    In this paper, we present a comprehensive collection of ECGs, with each record meticulously annotated by a team of seven cardiologists\. Over 2,500 ECG records were annotated, with most records reviewed by at least four physicians\. 1,527 ECG records of the dataset contain detailed annotations of PQRST segments, verified by two cardiologists\. The dataset constitutes the largest collection of manually delineated ECG records to date, offering a valuable resource for researchers and practitioners in cardiology\.      This dataset, the first of its kind available for open use with multi\-expert annotations, is suited for a variety of research tasks\. It can be used for ECG abnormality classification, for analyzing patterns and annotation complexities across different heart abnormalities, and for tasks related to ECG delineation\.
 
-## A Theoretical Bridge Between Long\-Tailed Recognition and Continual Learning
-
-**Authors:** Mahdiyar Molahasani; Michael Greenspan; Ali Etemad
-
-**ID:** 148638 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=wERJT1NgQB>) | [PDF](<https://openreview.net/pdf?id=wERJT1NgQB>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148638>)
-
-We theoretically and empirically establish a previously unexplored connection between Long\-Tailed Recognition \(LTR\) and Continual Learning \(CL\)\. Specifically, we show that training on a long\-tailed dataset drives model parameters into an $\\mathcal\{O\}\(1/\\sqrt\{\\mathrm\{IF\}\}\)$ neighborhood of the dominant\-class solution, under both uniform and exponentially decaying cardinality distributions\. Building on this result, we prove that the CL objective upper\-bounds the balanced LTR loss, revealing that LTR can be reformulated as a sequential learning problem\. Motivated by this connection, we introduce Continual Learning for Long\-Tailed Recognition \(CLTR\), a principled framework that leverages standard off\-the\-shelf CL methods to sequentially learn Head and Tail classes while mitigating catastrophic forgetting\. Extensive experiments on CIFAR100\-LT, CIFAR10\-LT, ImageNet\-LT, and Caltech256 validate our theoretical predictions and demonstrate strong performance across diverse LTR benchmarks\. In the foundation\-model regime, CLTR with DualPrompt on a CLIP backbone outperforms standard adaptation baselines and is competitive with specialized methods using external semantic supervision\. Our work bridges LTR and CL both theoretically and empirically, providing a principled approach for addressing long\-tailed learning using standard CL strategies\.
-
 ## OfficeInstruct: A Dataset for Tool\-Augmented Office Agents on Long\-Trajectory Generative Tasks
 
 **Authors:** Weikai Xu; Zhizheng Jiang; Lushuo Jiang; Kun Huang; Yuxuan Liu; Pengzhi Gao; Wei Liu; Jian Luan; Xiaolin Hu; Bo An
@@ -255,26 +95,6 @@ We theoretically and empirically establish a previously unexplored connection be
 [Paper](<https://openreview.net/forum?id=lynIy135Mu>) | [PDF](<https://openreview.net/pdf?id=lynIy135Mu>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139086>)
 
 The recent trend of integrating autonomous agents into operating systems, supported by the Model Context Protocol \(MCP\) tools and Deep Searching, has driven research on efficient assistants for daily office tasks like document writing, spreadsheet analysis, and presentation generation\. However, training these agents still faces several challenges: the overemphasis on question\-answering tasks at the expense of multi\-turn generative tasks; the absence of a training paradigm that jointly enhances coding and tool\-calling capabilities; the difficulty of evaluating tool efficiency and artifact quality in the presence of drifting user intents\. To address these problems, we deploy a unified multi\-turn agent framework to collect real\-world user interactions, creating \\textit\{OfficeInstruct\}: a comprehensive dataset of 199k high\-quality trajectories across Doc, Spreadsheet, and PPT, with an average of 56\.2 steps\. To ensure data quality, we propose a graph\-based evidence evaluation method that models interaction histories as directed graphs, filtering out redundant tool cycles, execution errors, and hallucinations\. Experiments demonstrate that our \\textit\{OfficeAgent\} 8B and 14B models surpass open\-source baselines on in\-domain and out\-of\-distribution benchmarks, with the 32B variant attaining a 96\.19\\% success rate on the newly proposed \\textit\{OfficeAgentBench\}, surpassing proprietary models like Claude\-4\.5\-Sonnet and Gemini\-3\-Pro\.
-
-## Fast Diverse Nearest Neighbor Search
-
-**Authors:** Justin Chen; Soham Nagawanshi; Shenghao Xie; Haike Xu; Alan Zhou; Samson Zhou
-
-**ID:** 156099 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=0NrAOwOmiN>) | [PDF](<https://openreview.net/pdf?id=0NrAOwOmiN>) | [Official poster](<https://neurips.cc/virtual/2026/poster/156099>)
-
-In the $k$\-diverse nearest neighbor search problem, the input is a dataset in which each point is assigned a color, and given a query $q$, the goal is to retrieve $k$ approximate nearest neighbors with distinct colors\. This color diversity metric is highly essential for information retrieval tasks where results are required to have different categories, e\.g\., recommending products from different sellers\. Previous state\-of\-the\-art solution by Anand et al\. \[ICML 2025\] constructs a diversity\-aware graph to meet this requirement\. However, they suffer from an $\\mathcal\{O\}\(k^2\)$  multiplicative query time overhead, creating a computational bottleneck when $k$ is large\.  To break this barrier, we propose a novel color bucketing framework that selects a subset of colors in each bucket and instantiates an independent approximate nearest neighbor search algorithm on the corresponding points\. Inspired by group testing, we provide a randomized color sampling scheme that achieves an $\\mathcal\{O\}\\left\(k^\{1\-\\frac\{1\}\{c^2\}\-o\(1\)\}\\log k\\right\)$ overhead in Euclidean spaces and an $\\mathcal\{O\}\\left\(k \\log k\\right\)$ overhead in general metric spaces, where $c$ is the approximation factor, reducing a factor of $k$\. In addition, the space usage to store the data structure matches or improves upon prior methods\. Empirical results on semi\-synthetic and real\-world datasets demonstrate that our approach achieves significantly faster search times and higher recall compared to state\-of\-the\-art diversity search baselines\.  Furthermore, we introduce a dataset\-oblivious deterministic bucketing scheme using expander graphs for a relaxed diverse search problem that only requires $k\(1\-\\varepsilon\)$ colors\. Here, dataset\-oblivious means that the color bucket construction does not depend on the spatial configuration of the dataset\. We then establish an $\\Omega\(k^2\)$ lower bound on the number of buckets for any dataset\-oblivious deterministic bucketing scheme that gives an \\emph\{exact\} $k$\-diverse solution\. We subsequently circumvent this by a dataset\-aware adaptive segment tree bucketing scheme with an overhead of only $\\mathcal\{O\}\(k \\log N\)$, where $N$ is the number of colors\. As an extension of our results, we solve the problem with general diversity metric, where the goal is to maximize the minimum pair\-wise distance of the $k$ solutions, and improve the query time\.
-
-## Space\-Optimal Streaming Algorithms via Efficient Encodings
-
-**Authors:** Liudeng Wang; David Woodruff; Shenghao Xie; Samson Zhou
-
-**ID:** 155183 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=7fVfD6Nmw4>) | [PDF](<https://openreview.net/pdf?id=7fVfD6Nmw4>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155183>)
-
-We study the problem of constructing coresets on data streams: Given a dataset of $n$ points in $\\mathbb\{R\}^d$ arriving sequentially, the goal is to maintain a small weighted subset that accurately approximates the objective values of the entire dataset for a given class of query functions\. Previous methods like merge\-and\-reduce and online sensitivity sampling required more space than the size of an optimal such subset in the offline setting\. In this work, we show that such overheads are not necessary by presenting space\-optimal streaming algorithms for central high\-dimensional optimization problems such as Euclidean $\(k,z\)$\-clustering and $L\_p$ subspace embeddings, as well as applications to projection\-cost preserving sketches\.   For $\(k,z\)$\-clustering, our streaming algorithm uses memory independent of the number $n$ of input points \(in words of memory\) and the aspect ratio $\\Delta$, yielding a coreset with an optimal $\\tilde\{\\mathcal\{O\}\}\\left\(\\frac\{dk\}\{\\min\(\\varepsilon^4,\\varepsilon^\{z\+2\}\)\}\\right\)$ words of memory for accuracy parameter $\\varepsilon\\in\(0,1\)$\. For $L\_p$ subspace embeddings, where the rows of matrix $\\mathbf\{A\} \\in \\mathbb\{R\}^\{n \\times d\}$ arrive in an insertion\-only stream, we achieve an efficient algorithm that uses optimal space for different ranges of $p$: $\\tilde\{\\mathcal\{O\}\}\\left\(\\frac\{d^2\}\{\\varepsilon^2\}\\right\)$ words for $p\\le 2$ and $\\tilde\{\\mathcal\{O\}\}\\left\(\\frac\{d^\{p/2\+1\}\}\{\\varepsilon^2\}\\right\)$ words for $p&gt;2$, both independent of the number of rows $n$\. Thus, our work shows that streaming algorithms can match offline algorithms in space complexity\.
 
 ## ALETHEIA: A Multi\-Frequency Eddy Current Pulsed Thermography Dataset for Neural Operator Learning in Nondestructive Testing
 
@@ -320,21 +140,17 @@ Document parsing converts visually rich documents into machine\-readable structu
 
 **Authors:** Valerii Iakovlev; Markus Spanring; Martin Flechl
 
-**ID:** 139743\-\-2 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 139743
+**ID:** 139743 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
 [Paper](<https://openreview.net/forum?id=764jkex4Xd>) | [PDF](<https://openreview.net/pdf?id=764jkex4Xd>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139743>)
 
-_Abstract unavailable from the accessible public sources._
+As IT systems grow in complexity, automated agent\-driven incident response becomes increasingly critical\. A key capability for these agents is summarizing large log streams into human\-readable reports\. Further progress requires meaningfully evaluating this function, yet existing benchmarks leave end\-to\-end summarization from large log streams underexplored due to the prohibitive cost and complexity of collecting real\-world data\. We introduce SLS\-Bench, a benchmark for incident log summarization featuring 90 tasks grounded in real\-world incident reports, each with a synthetic log stream and a reference summary\. To construct SLS\-Bench, we developed a data generation pipeline that converts incident reports into structured incident models, which guide the generation of synthetic logs and reference summaries\. This pipeline combines narrative grounding, explicit incident modeling, generator\-verifier loops, and statistical comparisons with real\-world log streams to produce realistic and controllable observability data\. Our evaluation of 14 LLMs on SLS\-Bench shows that while frontier models can produce useful summaries, they do so at substantial cost and latency, and open\-weight models lag significantly\. SLS\-Bench provides a framework for systematic evaluation of log analysis agents and a scalable blueprint for future synthetic observability benchmarks\.
 
 ## REDACTED\-Tunes: An Open 1\.4M\-Track Dataset and Perceptual Benchmark for AI\-Generated Music
 
 **Authors:** Robert Kaczmarczyk; TAWSIF AHMED; Felix Friedrich; Aidan C Erickson; Orian Sharoni; Dorien Herremans; Christoph Schuhmann
 
-**ID:** 138942\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 138942
+**ID:** 138942 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
 [Paper](<https://openreview.net/forum?id=uq5nVvf2sX>) | [PDF](<https://openreview.net/pdf?id=uq5nVvf2sX>) | [Official poster](<https://neurips.cc/virtual/2026/poster/138942>)
 
@@ -344,9 +160,7 @@ Generative music platforms have reached commercial scale, with outputs approachi
 
 **Authors:** Hao Mo; Liying Yang; Shumin Yao; Xinxing Yu; Ajian Liu; Xudong Mao; Yanyan Liang
 
-**ID:** 155986\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 155986
+**ID:** 155986 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
 [Paper](<https://openreview.net/forum?id=1MMIaLs9nW>) | [PDF](<https://openreview.net/pdf?id=1MMIaLs9nW>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155986>)
 
@@ -356,429 +170,11 @@ Binary diffusion models typically require a massive number of function evaluatio
 
 **Authors:** Hanyu Guo; JieDong Yang; Chao Chen; Longfei Xu; Kaikui Liu; Xiangxiang Chu
 
-**ID:** 139623\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 139623
+**ID:** 139623 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
 [Paper](<https://openreview.net/forum?id=EqcTBAHNnJ>) | [PDF](<https://openreview.net/pdf?id=EqcTBAHNnJ>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139623>)
 
 Public transit route planning traditionally depends on structured map infrastructure and complex routing engines, and no existing dataset supports training models to bypass this dependency\. We present TransitLM, a large\-scale dataset of over 13 million transit route planning records from four Chinese cities covering 120,845 stations and 13,666 lines, released as a continual pre\-training corpus and benchmark data for three evaluation tasks with complementary metrics\. Experiments show that an LLM trained on TransitLM produces structurally valid routes at high accuracy and implicitly grounds arbitrary GPS coordinates to appropriate stations without any explicit mapping\. These results demonstrate that transit route planning can be learned entirely from data, enabling end\-to\-end, map\-free route generation directly from origin\-destination information\. The dataset and benchmark are available at https://huggingface\.co/datasets/GD\-ML/TransitLM, with evaluation code at https://github\.com/HotTricker/TransitLM\.
-
-## Isharah\-Selfie: Continuous Sign Language Recognition Dataset for One\-handed Signing
-
-**Authors:** Ahmed A Hasanaath; Murtadha Aljubran; Sarah Alyami; Muhammad Haris Khan; Hamzah Luqman
-
-**ID:** 139100\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 139100
-
-[Paper](<https://openreview.net/forum?id=l3pvG8AHwe>) | [PDF](<https://openreview.net/pdf?id=l3pvG8AHwe>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139100>)
-
-Current sign language recognition and translation benchmarks are commonly collected in controlled settings using fixed or studio\-style cameras, particularly limiting their ability to reflect how signers communicate in everyday mobile scenarios\. As such, this gap becomes increasingly evident when considering the Arabic Sign Language \(ArSL\), which is a primary sign language used across Arab countries\.  In this work, we introduce Isharah\-Selfie, a large\-scale ArSL dataset collected entirely using front\-facing smartphone cameras under unconstrained selfie conditions\. The dataset comprises 8,997 video clips performed by 16 signers across 1,493 unique sentences, covering several domains such as healthcare, education, and transportation\. Unlike conventional datasets dominated by fixed\-camera, two\-handed signing, Isharah\-Selfie captures realistic mobile communication characterized by one\-handed signing, close\-range viewpoints, partial body visibility, camera motion, unconstrained environments, and heterogeneous device resolutions\. Each video is annotated with both gloss sequences for continuous sign language recognition \(CSLR\) and Arabic sentence translations for sign language translation \(SLT\)\. Moreover, we define signer\-independent and unseen\-sentences evaluation protocols to assess generalization across unseen signers and novel sentence compositions\. Extensive benchmarks using RGB\-based and pose\-based data show that current CSLR and SLT methods remain challenged by selfie\-style signing conditions, particularly under unseen\-sentence evaluation, where compositional generalization remains weak\. By releasing Isharah\-Selfie, we aim to support research toward robust, user\-centered sign language technologies that operate reliably in realistic smartphone\-based communication settings\. The Isharah\-Selfie dataset is available on https://www\.github\.com/\.
-
-## ACDP: Architecture\-aware Cross\-Dataset Performance Predictor for NAS
-
-**Authors:** Jiawen Deng; Yuqi Feng; Han Ji; Yanan Sun
-
-**ID:** 154537 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=Cr87H0HSqL>) | [PDF](<https://openreview.net/pdf?id=Cr87H0HSqL>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154537>)
-
-Performance predictors are pivotal in accelerating evaluation in NAS\. Cross\-dataset predictors are trained on \(dataset, architecture, performance\) triplets to efficiently estimate architectural performance for unseen datasets\. However, existing cross\-dataset predictors rely on a naive concatenation of dataset and architecture features\. This fusion ignores the architecture\-aware nature, where the same dataset manifests as distinct representations under different architectures, thereby limiting generalization\. To tackle this issue, we propose ACDP, an Architecture\-aware Cross\-Dataset Performance Predictor that dynamically adjusts dataset feature extraction based on specific architecture\. Initially, ACDP develops an elastic mechanism to extract raw dataset traits, providing a configurable lever for the trade\-off between efficiency and accuracy\. Furthermore, ACDP leverages a hypernetwork to determine dataset feature extractor parameters conditioned on architectural features, transforming raw dataset traits into tailored representations\. ACDP excels in both specialization and generalization on six unseen datasets\. Notably, in NAS\-Bench\-201, ACDP achieves 0\.758/0\.741 Kendall's Tau on CIFAR\-10/100, surpassing single\-dataset SOTAs trained with over 100 target samples\. In MobileNetV3, ACDP discovers architectures outperforming cross\-dataset SOTAs, notably gaining \+2\.04% accuracy on Aircraft\. Code: https://anonymous\.4open\.science/r/ACDP/
-
-## Optimal Representation Size: High\-Dimensional Analysis of Pretraining and Linear Probing
-
-**Authors:** Valentina Njaradi; Clémentine Dominé; Rachel A Swanson; Marco Mondelli; Andrew Saxe
-
-**ID:** 152669 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=RHhBaG1Vop>) | [PDF](<https://openreview.net/pdf?id=RHhBaG1Vop>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152669>)
-
-Learning to generalise from limited data is a fundamental challenge for both artificial and biological systems\. A common strategy is to extract reusable structure from abundant unlabelled data, enabling efficient adaptation to new tasks from limited labelled data\. This two\-stage paradigm is now standard in modern training pipelines, where pretraining is followed by fine\-tuning or linear probing\.  We provide an analytical model of this process: structure extraction is formalized as principal component analysis on unlabelled data, and downstream learning as linear regression on a separate labelled dataset\. In the high\-dimensional regime, we derive exact expressions for training and generalisation error showcasing their dependence on representation dimensionality, unlabelled and labelled sample sizes, and task alignment\. Our results show that pretrained representations strongly influence downstream generalisation, and we characterize the optimal representation size as a function of task parameters: with abundant pretraining data but scarce downstream data, maximally compressed representations are optimal, whereas with limited pretraining data, higher\-dimensional representations generalise better\. Furthermore, we establish an exact trade\-off between pretraining and supervision, quantifying how much unlabelled data is required to replace a single labelled sample\. Beyond our idealised model, we observe similar phenomenology in autoencoders and pretrained LLMs\. Altogether, we highlight that optimising representation size is critical, giving conditions for when compression during pretraining improves generalisation\.
-
-## ELMA: Benchmarking Anaphoric Compositions for Long\-Term Text\-to\-Motion Generation
-
-**Authors:** Shun Kato; Dixin Yang; Kotaro Amaya; Yuiga Wada; Kazumi Fukuda; Takashi Shibuya; Yuki Mitsufuji; Mariko Isogawa
-
-**ID:** 139367 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=UWLadjotaK>) | [PDF](<https://openreview.net/pdf?id=UWLadjotaK>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139367>)
-
-Text\-guided long\-term human motion generation is essential for applications such as continuously operating digital avatars\. Despite recent progress on short clips, existing models struggle with multi\-segment instructions that involve anaphora, where constraints established in earlier segments must be preserved over time\. In this paper, we introduce a novel task of long\-term motion generation from such anaphoric compositions\. To mitigate this, we present ELMA, an episodic long\-term motion dataset with dense segment\-level annotations that preserve cross\-segment dependencies\. Built via a fully automated collection and filtering pipeline, ELMA extracts high\-quality, continuous 30\-second clips from in\-the\-wild videos, capturing the episodic narratives necessary for long\-range state modeling\. Leveraging this dataset, we fine\-tune state\-of\-the\-art motion generation models to incorporate long\-range context\. Extensive experiments reveal fundamental shortcomings in current models when handling context\-dependent instructions\. We demonstrate that ELMA enables significant improvements in both global physical realism and semantic alignment, setting a robust new baseline for long\-term motion synthesis\.
-
-## ReefNet: A Large\-Scale Dataset and Benchmark for Fine\-Grained Coral Reef Recognition
-
-**Authors:** Abdulwahab Felemban; Yahia Battach; Faizan F Khan; Yuqian Fu; Xuhui Liu; Yesmeen Khattab; Yousef A Radwan; Xiang Li; Natalie Dunn; Susanne Bähr; Tullia I Terraneo; Fabio Marchese; Sara Beery; Burton H Jones; Francesca Benzoni; Mohamed Elhoseiny
-
-**ID:** 139436 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=QFiKGFMr8u>) | [PDF](<https://openreview.net/pdf?id=QFiKGFMr8u>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139436>)
-
-Coral reefs are rapidly declining under anthropogenic pressures \(e\.g\., climate change\), creating an urgent need for scalable and automated monitoring\. Progress in data\-driven coral analysis, however, is constrained by the scarcity of large\-scale datasets with fine\-grained labels that are taxonomically consistent across sites and studies\. To address this gap, we introduce ReefNet, a large\-scale public coral reef image dataset with point\-level annotations mapped to the World Register of Marine Species \(WoRMS\) taxonomy\. ReefNet aggregates imagery from 76 curated CoralNet sources and an additional reef site from Al\-Wajh \(Red Sea\), totaling approximately 925K genus\-level hard coral annotations\. Through expert\-driven verification and targeted filtering, we derive a high\-confidence benchmark subset with 92% expert agreement over 39 hard\-coral label classes, enabling reliable evaluation under realistic label noise and strong class imbalance\. Beyond dataset construction, we establish a comprehensive benchmark spanning zero\-shot, cross\-domain few\-shot adaptation, within\-source evaluation, and cross\-source transfer to the Al\-Wajh dataset\. Experiments with state\-of\-the\-art vision–language models \(VLMs\), multimodal large language models \(MLLMs\), and vision\-only backbones reveal substantial degradation in zero\-shot and extremely few\-shot regimes, while adaptation with in\-domain supervision yields large gains yet still leaves a persistent gap under cross\-source shift and on long\-tail genera\. These results highlight fundamental challenges in applying general\-purpose multimodal models to biodiversity monitoring and underscore the importance of large\-scale, taxonomically grounded, high\-quality datasets\. ReefNet serves as both a benchmark and a training resource for advancing fine\-grained coral reef understanding\. ReefNet data and trained models are provided on Hugging Face, and code for accessing and benchmarking the data is provided on GitHub\.
-
-## When Scores Conflict with Preferences: Calibrated Drift Control for Heterogeneous DPO
-
-**Authors:** Ping Liu; Yan Yan
-
-**ID:** 151343 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=bFc8A2Irjf>) | [PDF](<https://openreview.net/pdf?id=bFc8A2Irjf>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151343>)
-
-Direct Preference Optimization \(DPO\) is increasingly used in settings where pairwise preference signals coexist with pointwise criteria such as response length, answer correctness, or safety scores\. When the two disagree, standard DPO does not explicitly distinguish pairs that improve the pointwise criterion from those that worsen it\. We show that this mismatch induces a systematic failure mode, which we call \*\*constraint drift\*\*: updates on disagreement pairs tend to increase pointwise violation, while updates on aligned pairs tend to repair it, with the overall drift governed by their balance\. Under a first\-order approximation, this balance yields a closed\-form pre\-alignment diagnostic, $\\rho^\{\*\}\_\\mathrm\{eq\}$, computable from dataset statistics alone, that predicts whether the data is self\-correcting or requires intervention before alignment begins\. Building on this diagnostic, we propose \*\*Conflict\-aware DPO \(CoDPO\)\*\*, a calibrated modification to the DPO loss with two complementary components: a coarse per\-sample control for primary drift regulation and a fine adaptive margin tilting for residual correction during training\. Across six domains, drift grows monotonically with conflict exposure, and $\\rho^\{\*\}\_\\mathrm\{eq\}$ tracks the empirical drift transition, including self\-correcting settings where intervention is unnecessary\. Across four base\-model architectures and multiple preference losses, CoDPO reduces drift while preserving preference learning\. Compared with hard filtering and recent constrained\-alignment and multi\-objective baselines, CoDPO achieves a more favorable trade\-off between drift control and preference performance\.
-
-## CounterStrike\-1K: A Multi\-Perspective Dataset of Professional Gameplay for World Modeling
-
-**Authors:** Anirudhh Ramesh
-
-**ID:** 139606 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=FsEoZwUHsR>) | [PDF](<https://openreview.net/pdf?id=FsEoZwUHsR>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139606>)
-
-_Abstract unavailable from the accessible public sources._
-
-## PULSE: A Synchronized Five\-Modality Dataset for Sensorimotor Coordination in Long\-Horizon Daily Activities
-
-**Authors:** Wolin Liang; Yang Gao; Peiyu Yan; YueXiang Hu; Yingjing Xiao; Xiongfeng Ying; YingNian Guo; Cheng Zhang; Zhanpeng Jin
-
-**ID:** 139681 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=AoU576r9O2>) | [PDF](<https://openreview.net/pdf?id=AoU576r9O2>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139681>)
-
-_Abstract unavailable from the accessible public sources._
-
-## OpenSanctions Pairs: A Large\-Scale Dataset for Pairwise Entity Matching
-
-**Authors:** Chandler Smith; Magnus Sesodia; Friedrich Lindenberg; Christian Schroeder de Witt
-
-**ID:** 139718 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=8gjD9mKs1q>) | [PDF](<https://openreview.net/pdf?id=8gjD9mKs1q>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139718>)
-
-_Abstract unavailable from the accessible public sources._
-
-## HierSVA: A Synthesis Pipeline, Dataset, and Benchmark for LLM\-Driven Hierarchical Hardware Formal Verification
-
-**Authors:** Maohua Nie; Jiang Zhu; Jingqun Zhang; Zhichen Zeng; Jiayi Wang; Sibo Zhang; Jialin Wang; C\-J R Shi
-
-**ID:** 139579 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=H9UpVBr5RW>) | [PDF](<https://openreview.net/pdf?id=H9UpVBr5RW>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139579>)
-
-_Abstract unavailable from the accessible public sources._
-
-## InSpect: A Curated Natural History Collection Dataset for Insect Specimen Understanding
-
-**Authors:** Junhao Zhang; Feng Xu; Ahalya Ravendran; Nicole Fisher; Brendan Tidd; Lars Petersson; Dadong Wang; Xun Li
-
-**ID:** 139783 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=51J0UrBZZy>) | [PDF](<https://openreview.net/pdf?id=51J0UrBZZy>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139783>)
-
-_Abstract unavailable from the accessible public sources._
-
-## CounterStrike\-1K: A Multi\-Perspective Dataset of Professional Gameplay for World Modeling
-
-**Authors:** Anirudhh Ramesh
-
-**ID:** 139606\-\-2 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 139606
-
-[Paper](<https://openreview.net/forum?id=FsEoZwUHsR>) | [PDF](<https://openreview.net/pdf?id=FsEoZwUHsR>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139606>)
-
-_Abstract unavailable from the accessible public sources._
-
-## PULSE: A Synchronized Five\-Modality Dataset for Sensorimotor Coordination in Long\-Horizon Daily Activities
-
-**Authors:** Wolin Liang; Yang Gao; Peiyu Yan; YueXiang Hu; Yingjing Xiao; Xiongfeng Ying; YingNian Guo; Cheng Zhang; Zhanpeng Jin
-
-**ID:** 139681\-\-2 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 139681
-
-[Paper](<https://openreview.net/forum?id=AoU576r9O2>) | [PDF](<https://openreview.net/pdf?id=AoU576r9O2>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139681>)
-
-_Abstract unavailable from the accessible public sources._
-
-## The Dormant Spiking Neuron: A State\-Driven Mechanism for Efficient Spiking Neural Networks
-
-**Authors:** Ruichen Ma; Yicai Chen; Pujun Zhou; Yue Zuo; Chongyang Li; Shuang Liu; Shaogang Hu; Guanchao Qiao
-
-**ID:** 150735 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=fmUnrAKlSL>) | [PDF](<https://openreview.net/pdf?id=fmUnrAKlSL>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150735>)
-
-Spiking neural networks \(SNNs\) offer a compelling pathway toward energy\-efficient artificial intelligence, fundamentally anchored in presynaptic input\-driven sparsity\. However, a substantial yet chronically overlooked source of computational overhead persists: the continuous subthreshold dynamics of postsynaptic neurons\. Quantitative analysis reveals that up to 44\\% of neurons in an ImageNet\-trained ResNet\-18 model reside in a deeply inhibited state, imposing a persistent computational burden despite possessing a negligible probability of firing\. To eradicate this inefficiency, the Dormant Spiking Neuron \(DSN\) model is introduced\. By incorporating a state\-driven dynamic gate, the DSN allows a neuron to enter a dormant state when its membrane potential falls below a predefined negative threshold, dynamically pruning redundant computations at the instance level\. Crucially, this dormancy mechanism is directly integrated into the neuronal dynamics and trained end\-to\-end via backpropagation through time using surrogate gradients, enabling the network to actively learn a robust dormancy policy that adaptively preserves critical information flow\. Extensive experiments across static and neuromorphic datasets demonstrate that the DSN framework consistently reduces computational energy by 40\\% to over 70\\%\. Notably, on the large\-scale ImageNet dataset, the DSN outperforms state\-of\-the\-art static pruning techniques by achieving equivalent energy savings while simultaneously improving upon the baseline accuracy by 1\.34\\%\. By establishing a trainable, state\-driven sparsity paradigm orthogonal to conventional input\-driven methods, the DSN unlocks synergistic efficiency gains, presenting a highly potent approach for advancing neuromorphic computing\. Source code will be made publicly available\.
-
-## Bricker to BRACE: A Bracket Exposure RAW Dataset and Restoration Model for Flicker\-Banding
-
-**Authors:** Zihan Zhou; Libo Zhu; Jue Gong; Zhiyi Zhou; Jiezhang Cao; Yong Guo; Yulun Zhang
-
-**ID:** 149112 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=smrclDT0Hn>) | [PDF](<https://openreview.net/pdf?id=smrclDT0Hn>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149112>)
-
-Flicker\-banding \(FB\),  arises from temporal aliasing between a camera's rolling shutter and a display's brightness modulation, degrading screen\-captured image readability with color shifts and jagged patterns\. Existing single\-frame methods with simplified parametric stripe models cannot reliably distinguish these artifacts from genuine texture\. To address this, we conduct a systematic analysis of complex FB morphologies and reveal their significant variation across exposure settings, motivating a multi\-frame bracketed RAW restoration paradigm\. We construct Bricker, a synthetic–real bracketed RAW dataset built via ray\-tracing\-based physical simulation and automated multi\-exposure capture tool\. We further propose BRACE: Bracketed RAW Flicker\-Banding Removal, a multi\-frame restoration model that utilizes frequency\-aware banding prior and a multi\-scale spatial cross\-attention modulator \(MSCAM\) for cross\-exposure spatial fusion\. We also introduce the Stripe Frequency Consistency \(SFC\) metric to evaluate banding removal\. Extensive experiments demonstrate state\-of\-the\-art performance on both synthetic and real benchmarks\. Our dataset and code will be publicly released\.
-
-## State\-of\-art minibatches via novel DPP kernels: discretization, wavelets, and rough objectives
-
-**Authors:** Hoang Son Tran; Pranav Gupta; Rémi Bardenet; Subhroshekhar Ghosh
-
-**ID:** 154500\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 154500
-
-[Paper](<https://openreview.net/forum?id=D8tqZupi52>) | [PDF](<https://openreview.net/pdf?id=D8tqZupi52>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154500>)
-
-Determinant point processes \(DPPs\) have recently emerged as a kernelized alternative to vanilla independent sampling for generating efficient minibatches, coresets and other parsimonious representations of large\-scale datasets\. While basic theoretical foundations and promising empirical performance have been demonstrated, there are two main challenges for current proposals for DPP\-based coresets or minibatches\. The first is the need for families of DPPs with certain key variance reduction properties, usually constructed in a continuous setting, of which there are few known examples\. The second is the need for an ad\-hoc construction of a discrete DPP defined on a given dataset, that inherits such variance reduction\. In this work, we contribute to the programme of establishing DPPs as a subsampling toolbox for ML by advancing on these two fronts\. First, we propose new DPPs on the Euclidean space based on wavelets, with provably better accuracy guarantees than the best known rates\. Second, we introduce a general method to convert such continuous DPPs, which are more amenable to proving analytical statements, into discrete kernels, which are pertinent for subsampling tasks such as minibatch and coreset constructions\. This conversion mechanism simultaneously preserves the desired variance decay and reveals a low\-rank decomposition of the discrete kernel, which makes sampling the corresponding DPP computationally inexpensive\. En route, we enlarge the class of ML tasks amenable to improvements via DPP\-based minibatches and coresets to include highly non\-smooth objective functions, with arbitrarily low regularity, and rate guarantees that adapt explicitly to this regularity\.
-
-## LSC\-Parlament: An Automatically Aligned Catalan Sign Language Dataset from Parliament Videos\.
-
-**Authors:** Carlos Escolano; Gerard Sant; Marc J Garcia; Joan G Cortés; Marcel Granero Moya; Francesca De Luca Fornaciari; Maite Melero
-
-**ID:** 139029\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 139029
-
-[Paper](<https://openreview.net/forum?id=pPt0iqECnh>) | [PDF](<https://openreview.net/pdf?id=pPt0iqECnh>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139029>)
-
-Progress in Sign Language Translation \(SLT\) is frequently hampered by the "data bottleneck," a challenge particularly acute for regional languages such as Catalan Sign Language \(LSC\)\. In this paper, we present LSC\-Parlament, a large\-scale, multimodal dataset for LSC derived from Catalan Parliament sessions spanning 2021 to 2024\. The dataset comprises over 87 hours of LSC video, synchronized with speech and text translations in either Catalan or Spanish\. To curate this resource, we developed a fully automated pipeline that enables alignment between sign language, speech, and text without requiring prior human\-annotated data\. We provide a systematic evaluation of the dataset across multiple dimensions, including video tracking quality, audio transcription accuracy, and translation benchmarks\. Our experiments compare transfer learning, zero\-shot, and supervised translation settings, demonstrating significant knowledge transfer between spoken languages in the LSC\-Spanish modality\. By releasing LSC\-Parlament, we provide a challenging open\-domain benchmark to foster research in inclusive and scalable translation technologies\.
-
-## New Coresets for Fair Clustering
-
-**Authors:** Xuan Wu; Chansophea Wathanak In; Yi Li
-
-**ID:** 152649\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 152649
-
-[Paper](<https://openreview.net/forum?id=RQT8lzmK8J>) | [PDF](<https://openreview.net/pdf?id=RQT8lzmK8J>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152649>)
-
-We construct the first coreset of size near\-linear in $k$ for fair \\kMedian in general metric spaces\. Combined with the standard merge\-and\-reduce framework, our construction also gives the first streaming algorithm for fair \\kMedian with space complexity near\-linear in $k$\.  The main technical innovation is a distributional reinterpretation of capacitated clustering that the cost of assigning a dataset to a capacitated center set can be expressed as the earth mover's distance between two discrete distributions\. This viewpoint enables us to use tools from optimal transport to analyse uniform sampling\. A key ingredient in this analysis is a new family of problem\-specific $\\eps$\-nets for the earth mover's distance\.
-
-## AgentCollabBench: Diagnosing When Good Agents Make Bad Collaborators
-
-**Authors:** Aritra Mazumder; Shubhashis Roy Dipta; Nusrat Jahan Lia; Tanzila Khan; Kainat R Hossain; Nehaa Shri; Humayra Tasnim; Gour G Shawon; Shubhrangshu Debsarkar; Sumaiya A Rani; Al Jami Islam Anik; Debjoty Mitra; Al Nafeu Khan
-
-**ID:** 139450 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=P9qqypDzuC>) | [PDF](<https://openreview.net/pdf?id=P9qqypDzuC>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139450>)
-
-Multi\-agent systems achieve state\-of\-the\-art outcomes through peer     collaboration\. However, when an agent in the pipeline silently drops a     constraint, the system's final output may look correct even though the     reasoning chain was quietly corrupted, and existing outcome\-based     evaluations are blind to such multi\-hop process failures\. To make these     vulnerabilities measurable before deployment, we introduce     AgentCollabBench, a diagnostic benchmark of 900 human\-validated tasks     spanning software engineering, DevOps, and data engineering\. Each task     isolates one of four behavioral risks: instruction decay \(does a     constraint survive peer pressure?\), false\-belief contagion \(does a     falsehood spread through consensus?\), context leakage \(does information     bleed between tasks?\), and tracer durability \(does marked data reach the     final agent?\)\. Evaluating four modern LLMs \(GPT 4\.1 mini,     Gemini 2\.5 Flash Lite, Qwen\-3\.5\-35B\-A3B, and Llama 3\.1 8B Instruct\),     we expose model\-specific vulnerability profiles invisible to     outcome\-only evaluation; Qwen\-3\.5\-35B\-A3B, for example, leads on     tracer durability and instruction stability, while GPT 4\.1 mini leads     on leakage containment and false\-belief resistance\.     Beyond per\-model differences, communication topology emerges as a     primary risk factor that explains 7\-40% of the variance in multi\-hop     information survival\. The effect traces to a synthesis bottleneck     specific to converging\-DAG nodes: an agent weighing competing parent     inputs discards constraints carried by a minority branch, a bottleneck structurally absent from linear chains\. AgentCollabBench demonstrates that suboptimal     topology can silently erase the safeguards of highly capable models,     arguing that multi\-agent reliability is fundamentally a structural     problem and that scaling model intelligence alone is no substitute for     architecture\.
-
-## SCTI: Self\-Calibrated Trident Identification of Black\-Box LLM Watermarks
-
-**Authors:** Zhixiong Nan; Haoyu Lu; Tao Xiang; Yiwei Wang
-
-**ID:** 149151 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=sSXd2zEa4O>) | [PDF](<https://openreview.net/pdf?id=sSXd2zEa4O>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149151>)
-
-_Abstract unavailable from the accessible public sources._
-
-## Label\-Efficient Dataset Pruning via Semi\-Supervised Pseudo\-Labeling
-
-**Authors:** Yeseul Cho; Baekrok Shin; Changmin Kang; Chulhee Yun
-
-**ID:** 150749 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=fgWh6OZ6W8>) | [PDF](<https://openreview.net/pdf?id=fgWh6OZ6W8>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150749>)
-
-_Abstract unavailable from the accessible public sources._
-
-## AdaM\-Rec: Adaptive Modality Routing for Multimodal Recommendation
-
-**Authors:** Honghao Fu; Jiacheng Chen; Manxi Lin; Junjun Zheng; Xiangheng Kong; Yiwei Wang; Xin Yu; Miao Xu; Yuning Jiang; Yujun Cai
-
-**ID:** 148211 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=zXa9cVWJdT>) | [PDF](<https://openreview.net/pdf?id=zXa9cVWJdT>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148211>)
-
-While recent multimodal recommender systems have demonstrated the effectiveness of incorporating visual and textual information to improve downstream performance, most existing methods rely on static modality fusion, assuming that the relative importance of textual and visual signals remains stable across recommendation scenarios\. This design may not fully account for an important variation across recommendation requests: some queries require fine\-grained visual cues, whereas others are better served by textual or functional semantics, in which case indiscriminate modality fusion brings in uninformative cues and impairs recommendation quality\. To address this, we propose AdaM\-Rec, an LLM\-based framework for adaptive modality routing in multimodal recommendation, which enables dynamic calibration of reliance on textual and multimodal evidence for user\-specific queries\. Built on structured natural\-language representations of items and user preferences, it estimates modality reliability using proxy recall tasks\. Specifically, it generates pseudo\-queries that match the granularity of the actual query while pointing to the user's positively interacted items as verifiable proxy targets, evaluating which modality yields better recall performance in analogous scenarios and optimizing the routing strategy in an agentic manner\. It then performs routed recall with optimized strategy, enriches results with collaborative items, and ranks candidates by their relevance to both the query and user preferences\. Experiments demonstrate that AdaM\-Rec delivers strong performance against state\-of\-the\-art baselines, highlighting the effectiveness and broader potential of adaptive control over modality reliance in multimodal recommendation\. Code will be publicly available\.
-
-## Vendi Anomaly Scores for Efficient and Accurate Anomaly Detection
-
-**Authors:** Amey Pasarkar; Adji Bousso Dieng
-
-**ID:** 148885 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=uT5yKtgYS0>) | [PDF](<https://openreview.net/pdf?id=uT5yKtgYS0>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148885>)
-
-Anomaly detection \(AD\) is a critical task in machine learning and scientific discovery\. Existing methods that operate on learned embeddings typically define anomalies through local density, isolation heuristics, or distance from a fitted distribution, making them sensitive to neighborhood scale, partitioning choices, or restrictive distributional assumptions\. In this work, we introduce a new paradigm by formulating anomaly detection in terms of dataset diversity\. We propose the Vendi Anomaly Score \(VAS\), which detects anomalies by quantifying how much a sample changes the diversity of the dataset, as measured by the Vendi Score, when removed\. VAS captures both local redundancy and global data structure without relying on density estimation or partitioning heuristics\. Moreover, VAS requires no hyperparameter tuning, instead adapting automatically to the spectral structure of the data\. VAS is non\-parametric and scales linearly with dataset size\. Across 148 benchmark embedding datasets derived from 10 source datasets and 4 embedding architectures, VAS achieves state\-of\-the\-art AD performance\. We further validate VAS on large\-scale ImageNet experiments, where it remains robust as both contamination rate and dataset scale increase\.
-
-## The Missing Corpus: Infinite Ground Truth for File\-Grounded LLM Evaluation
-
-**Authors:** Anush Sankaran; Arijit Banerjee; Pamela Bhattacharya; Tanujay Saha
-
-**ID:** 139327 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=X8UDpzYS5G>) | [PDF](<https://openreview.net/pdf?id=X8UDpzYS5G>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139327>)
-
-Evaluating enterprise LLMs on file\-grounded Question Answering \(QA\) requires large, labeled corpora of realistic enterprise PDFs, yet real documents are sensitive, scarce, and impossible to annotate at scale\. Existing synthetic approaches produce visually crude renders, annotate ground truth post\-hoc \(introducing hallucination risk\), or are non\-reproducible one\-off scripts with no diversity control\. We present SynthDocQA, an Intermediate Representation\(IR\)\-driven pipeline that co\-generates photorealistic multi\-page enterprise PDFs and provenance\-grounded evaluation pairs in a single pass\. A compact Document Generation IR encodes topic, content schedule, and perturbation profile before rendering begins\. Templates are retrieved per page via Contrastive Language\-Image Pretraining \(CLIP\) embedding\-based cross\-modal search over a 10,000\-layout library; a 15\-stage physical degradation pipeline models five scan quality tiers from pristine to poor\. Every QA assertion is derived analytically from the same structured artifact that populated the page, making hallucination structurally impossible, and a hierarchical fork\-based Random Number Generator \(RNG\) guarantees exact reproducibility from a single integer seed\. A reference 100\-document corpus spans 50 enterprise domains, 4,374 pages, 16,589 QA pairs, and 21,402 assertions at zero annotation cost\.
-
-## Robust Approximate Nearest Neighbor Search for Any Dataset
-
-**Authors:** Alexandr Andoni; Themistoklis Haris; Esty Kelman; Krzysztof Onak
-
-**ID:** 150072 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=kxeeWaxYv9>) | [PDF](<https://openreview.net/pdf?id=kxeeWaxYv9>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150072>)
-
-_Abstract unavailable from the accessible public sources._
-
-## FLARE: Full\-Modality Long\-Video Audiovisual Retrieval Benchmark with User\-Simulated Queries
-
-**Authors:** Qijie You; Hao Liang; Mingrui Chen; Bohan Zeng; Meiyi Qiang; Zhen H Wong; Wentao Zhang
-
-**ID:** 139338 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=VwiAEEv0xh>) | [PDF](<https://openreview.net/pdf?id=VwiAEEv0xh>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139338>)
-
-_Abstract unavailable from the accessible public sources._
-
-## NavOCR: A Dataset Generator for Navigation\-Relevant Text Detection in Mobile Robots
-
-**Authors:** Chaehyeuk Lee; Sooyong Shin; Sehyeon Yoon; Youngsun Je; Jinmyoung Lee; Seula Lee; Tu Vo; Sheir A\. Zaheer; Chan Youn Park
-
-**ID:** 139357 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=UqyPL0tSI3>) | [PDF](<https://openreview.net/pdf?id=UqyPL0tSI3>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139357>)
-
-_Abstract unavailable from the accessible public sources._
-
-## Intent2CAD: How Semantic\-Parametric Supervision Shapes Text\-to\-CAD Generation
-
-**Authors:** Jinbo Yang; Shikai Jing; Mingyue Yuan
-
-**ID:** 155244 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=7BejwX1V86>) | [PDF](<https://openreview.net/pdf?id=7BejwX1V86>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155244>)
-
-Text\-to\-CAD generation aims to make CAD modeling more accessible by generating executable CAD programs from natural\-language descriptions\.  However, practical CAD workflows require more than executable geometry: generated programs should also expose reusable structure that supports later modification\.  We introduce intent\-oriented text\-to\-CAD generation, where design intent is expressed as recoverable code\-level signals: semantic features, reusable parameters, and lightweight parametric relations\.  Rather than changing the model architecture or decoding procedure, we investigate how supervision representation granularity affects both CAD generation and zero\-shot intent\-preserving editing\.  To enable this study, we construct IntentCAD\-100K, a 100K paired text\-\-code dataset built by converting low\-level CAD construction traces into executable CadQuery programs\.  We further construct IntentCAD\-Edit\-1K to evaluate zero\-shot intent\-preserving editing from the same representation perspective\.  Intent2CAD uses a two\-stage conservative lifting pipeline: semantic lifting rewrites reliable primitive groups into feature\-level operations, while parametric lifting exposes lightweight parametric relations\.  Under controlled fine\-tuning, semantic lifting mainly improves generation reliability and feature recovery, reducing IR from 2\.39% to 0\.22% and achieving 99\.96% API Recovery, while parametric lifting makes reusable relation structure explicit and further improves relation\-aware zero\-shot editing\.
-
-## Dynamic k\-center clustering with lifetimes
-
-**Authors:** Simone Moretti; Paolo Pellizzoni; Andrea Pietracaprina; Geppino Pucci
-
-**ID:** 153912 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=HlPYOXghrm>) | [PDF](<https://openreview.net/pdf?id=HlPYOXghrm>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153912>)
-
-The $k$\-center problem is a fundamental clustering variant with applications in learning systems and data summarization\. In several real\-world scenarios, the dataset to be clustered is not static, but evolves over time, as new data points arrive and old ones become stale\. To account for dynamicity, the $k$\-center problem has been mainly studied under the sliding window setting, where only the $N$ most recent points are considered non\-stale, or the fully dynamic setting, where arbitrary sequences of point arrivals and deletions without prior notice may occur\. In this paper, we introduce the dynamic setting with lifetimes, which bridges the two aforementioned classical settings by still allowing arbitrary arrivals and deletions, but making the deletion time of each point known upon its arrival\. Under this new setting, we devise a deterministic $\(2\+\\varepsilon\)$\-approximation algorithm with $\\widetilde\{O\}\(k/\\varepsilon\)$ amortized update time and memory usage linear in the number of currently active points\. Moreover, we develop a deterministic $\(6\+\\varepsilon\)$\-approximation algorithm that, under ‘‘tame” update sequences, has $\\widetilde\{O\}\(k/\\varepsilon\)$ worst\-case update time and heavily sublinear working memory\.
-
-## ACDP: Architecture\-aware Cross\-Dataset Performance Predictor for NAS
-
-**Authors:** Jiawen Deng; Yuqi Feng; Han Ji; Yanan Sun
-
-**ID:** 154537\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 154537
-
-[Paper](<https://openreview.net/forum?id=Cr87H0HSqL>) | [PDF](<https://openreview.net/pdf?id=Cr87H0HSqL>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154537>)
-
-Performance predictors are pivotal in accelerating evaluation in NAS\. Cross\-dataset predictors are trained on \(dataset, architecture, performance\) triplets to efficiently estimate architectural performance for unseen datasets\. However, existing cross\-dataset predictors rely on a naive concatenation of dataset and architecture features\. This fusion ignores the architecture\-aware nature, where the same dataset manifests as distinct representations under different architectures, thereby limiting generalization\. To tackle this issue, we propose ACDP, an Architecture\-aware Cross\-Dataset Performance Predictor that dynamically adjusts dataset feature extraction based on specific architecture\. Initially, ACDP develops an elastic mechanism to extract raw dataset traits, providing a configurable lever for the trade\-off between efficiency and accuracy\. Furthermore, ACDP leverages a hypernetwork to determine dataset feature extractor parameters conditioned on architectural features, transforming raw dataset traits into tailored representations\. ACDP excels in both specialization and generalization on six unseen datasets\. Notably, in NAS\-Bench\-201, ACDP achieves 0\.758/0\.741 Kendall's Tau on CIFAR\-10/100, surpassing single\-dataset SOTAs trained with over 100 target samples\. In MobileNetV3, ACDP discovers architectures outperforming cross\-dataset SOTAs, notably gaining \+2\.04% accuracy on Aircraft\. Code: https://anonymous\.4open\.science/r/ACDP/
-
-## MCPHallu: Benchmarking Reasoning, Execution, and Memory Hallucinations in MCP Agents
-
-**Authors:** Yizhen Jiang; 浩伟 郭; Tianyi Bai; Zengjie Hu; Lu Ma; Zhengyang Zhao; Haoze Sun; Peng Pei; Wentao Zhang
-
-**ID:** 139758 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=6XKGOgVQft>) | [PDF](<https://openreview.net/pdf?id=6XKGOgVQft>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139758>)
-
-_Abstract unavailable from the accessible public sources._
-
-## When Scores Conflict with Preferences: Calibrated Drift Control for Heterogeneous DPO
-
-**Authors:** Ping Liu; Yan Yan
-
-**ID:** 151343\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 151343
-
-[Paper](<https://openreview.net/forum?id=bFc8A2Irjf>) | [PDF](<https://openreview.net/pdf?id=bFc8A2Irjf>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151343>)
-
-Direct Preference Optimization \(DPO\) is increasingly used in settings where pairwise preference signals coexist with pointwise criteria such as response length, answer correctness, or safety scores\. When the two disagree, standard DPO does not explicitly distinguish pairs that improve the pointwise criterion from those that worsen it\. We show that this mismatch induces a systematic failure mode, which we call \*\*constraint drift\*\*: updates on disagreement pairs tend to increase pointwise violation, while updates on aligned pairs tend to repair it, with the overall drift governed by their balance\. Under a first\-order approximation, this balance yields a closed\-form pre\-alignment diagnostic, $\\rho^\{\*\}\_\\mathrm\{eq\}$, computable from dataset statistics alone, that predicts whether the data is self\-correcting or requires intervention before alignment begins\. Building on this diagnostic, we propose \*\*Conflict\-aware DPO \(CoDPO\)\*\*, a calibrated modification to the DPO loss with two complementary components: a coarse per\-sample control for primary drift regulation and a fine adaptive margin tilting for residual correction during training\. Across six domains, drift grows monotonically with conflict exposure, and $\\rho^\{\*\}\_\\mathrm\{eq\}$ tracks the empirical drift transition, including self\-correcting settings where intervention is unnecessary\. Across four base\-model architectures and multiple preference losses, CoDPO reduces drift while preserving preference learning\. Compared with hard filtering and recent constrained\-alignment and multi\-objective baselines, CoDPO achieves a more favorable trade\-off between drift control and preference performance\.
-
-## Phantom Transfer: Data Poisoning can Survive Data\-Level Defences
-
-**Authors:** Andrew Draganov; Tolga Hasan Dur; Anandmayi \(Andi\) Bhongade; Mary Phuong
-
-**ID:** 148827 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=uqYXmNMqRZ>) | [PDF](<https://openreview.net/pdf?id=uqYXmNMqRZ>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148827>)
-
-We present a data poisoning attack\-\-\-Phantom Transfer\-\-\-with the property that, even if you know precisely how the poison was placed into an otherwise benign dataset, you cannot filter it out\.  We achieve this by modifying subliminal learning to work in real\-world contexts and demonstrate that the attack works regardless of which model produces the data, which model is trained on the data or what the attack target is\. The attack survives 11 tested data\-level defences, including one where every sample is paraphrased by a different model\. We characterise when this attack works best and show that it can be used to plant password\-triggered behaviours into models while still beating defences\.   In short, we provide an existence proof that maximum\-affordance defences can fail to stop sophisticated data poisoning attacks\. We suggest that future defences should supplement by include white\-box methods and post\-training model audits\.
-
-## Which Pairs Should We Compare for DPO?
-
-**Authors:** Vineet Goyal; Jiangze \(Jay\) Han; Will Ma
-
-**ID:** 150544 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=hL3RIcTy5X>) | [PDF](<https://openreview.net/pdf?id=hL3RIcTy5X>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150544>)
-
-Direct Preference Optimization \(DPO\) has become a standard method for preference\-based fine\-tuning in RLHF pipelines\. A practical but largely heuristic step in DPO is dataset curation: given a fixed budget of preference labels, which candidate pairs should be compared to produce the most informative training set and the best downstream policy? This paper studies DPO dataset curation as a sampling\-design problem\. We model the curated dataset by a sampling design over candidate pairs and analyze how this design propagates through DPO training to the KL\-regularized RLHF objective\.  Our main results provide matching upper and lower bounds on the RLHF optimality gap of the policy learned from a curated DPO dataset\. The bounds reveal a simple structural message: the effect of pair selection enters only through a single design\-dependent matrix that summarizes how informative the collected comparisons are for learning the policy parameters\. This leads to a trace\-form criterion that characterizes both an achievable performance guarantee for the DPO estimator and an information\-theoretic lower bound for any induced policy estimator, thereby identifying a canonical objective for comparison curation under budget constraints\.
-
-## Early Prediction of Future Behavioral Strategy from Process Traces
-
-**Authors:** Robert Kasumba; Dennis Barbour; Chien\-Ju Ho
-
-**ID:** 149638 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=ob4yUUSPk3>) | [PDF](<https://openreview.net/pdf?id=ob4yUUSPk3>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149638>)
-
-Adaptive systems often need to make task\-specific decisions about a person from limited prior evidence: a tutor may need to anticipate how a learner will approach a new problem, a game may need to adapt when a player enters a new level, and a human\-AI system may need to infer whether a partner will persist with a plan or switch goals\. These decisions depend on person\-level behavioral tendencies that shape how people solve related tasks, but such tendencies are difficult to infer from standard behavioral evidence\. One approach is to use aggregate outcome summaries, such as scores, completion rates, or productivity measures; these summaries are compact and available across tasks, but can collapse distinct behavioral processes into similar outcomes\. Another approach is to use process\-level traces, which record how behavior unfolds over time; however, process modeling within a single task can entangle stable person\-level tendencies with task\-specific layout, timing, and affordances\. In this work, we study early cross\-task behavioral inference: whether partial process traces from multiple source tasks can reveal transferable person\-level behavioral structure that predicts strategy in a held\-out target task\. We introduce Process\-Level Latent Variable Models \(PLVM\), which encode task\-specific traces and fuse them into a shared person\-level latent representation for cross\-task prediction\. In PowerWash Simulator, a naturalistic telemetry dataset of real human gameplay, PLVM uses partial traces from two earlier cleaning tasks to predict whether a player will exhibit locally persistent Zone Planner behavior or frequent Zone Hopper behavior in the held\-out Fire Station level\. Controlled simulations with known latent behavioral types show that cross\-task fusion helps when different source tasks reveal complementary dimensions of a shared latent behavioral process\. These results suggest that process\-level cross\-task modeling can support early prediction of target\-task behavioral strategy when waiting to observe sufficient target\-task behavior is impractical\.
-
-## KNN Implementation Details Can Dramatically Change Performance: An Example from Cover Trees
-
-**Authors:** Amol Khanna; Edward Raff
-
-**ID:** 139272 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=aTFEoAwK2Q>) | [PDF](<https://openreview.net/pdf?id=aTFEoAwK2Q>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139272>)
-
-Nearest neighbor search algorithms are widely used and have a long history, but we find that key implementation details are seldom reviewed in articles about them\. These details can materially impact performance, and thus change the conclusions one makes about a given algorithm's superiority\. In this article, we highlight these impacts by reviewing the Cover Tree as an example, producing RustKNN, a unified Rust implementation of three construction variants of the Cover Tree with three query modes\. Our analysis reveals: \(1\) the optimal query strategy depends on $k$ and on the dataset — single\-tree search is fastest at $k\{=\}1$ on three of our four largest datasets, while dual\-tree search is fastest at $k\{\\ge\}5$ on the three largest — and choosing the wrong query mode can cost up to a $7\.5\\times$ factor in runtime; \(2\) the cover tree base parameter, set to 2 in theory and 1\.3 in practice, is not a safe default for dual\-tree search: 1\.3 is optimal on only one of seven datasets, and on covtype it is $1\.6\\times$ slower than the optimum; \(3\) among five micro\-optimizations, only early\-exit distance computation has a consistent effect, and that effect grows with dimension \(none at $d\{=\}32$, $1\.31\\times$ at $d\{=\}54$, and $1\.49\\times$ at $d\{=\}784$\); and \(4\) all\-nearest\-neighbor and held\-out benchmarks yield different implementation rankings\. All main timing tables report medians over 20 independent allocations with bootstrap 95\\% confidence intervals\. RustKNN is open source at https://github\.com/CrowdStrike/RustKNN\.
-
-## Auditing Evidence Framing at NeurIPS: A Decade\-Scale Study of Accepted Papers
-
-**Authors:** Jason Godfrey
-
-**ID:** 139236 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=d3J7bxCLHH>) | [PDF](<https://openreview.net/pdf?id=d3J7bxCLHH>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139236>)
-
-NeurIPS now publishes a broad mix of algorithmic, theoretical, empirical, dataset, benchmark, systems, and evaluation\-infrastructure work\. Yet we lack systematic evidence on how the composition of this mix has changed over time\. We audit titles, abstracts, and metadata for 19,361 accepted NeurIPS papers from 2015\-\-2024\. We define semantic axes for formal\-theoretical evidence, benchmark/resource evidence, empirical\-performance evidence, artifact\-release orientation, scale/capability framing, claim strength, and hedging; score papers with contrastive embedding measures; and validate the constructs with blinded LLM\-agent ratings, lexical probes, encoder triangulation, length checks, and topic controls\. In raw decade trends, accepted papers shift toward benchmark/resource evidence \(\+0\.842 SD\), empirical\-performance evidence \(\+0\.750 SD\), and scale/capability framing \(\+0\.606 SD\), and away from formal\-theoretical framing \(\-0\.872 SD\)\. Topic composition explains much of this movement, but embedding\-cluster residuals remain \+0\.246, \+0\.264, \+0\.247, and \-0\.300 SD, respectively\. Independent lexical LDA controls preserve the same signs at smaller magnitudes\. Artifact\-release framing is a useful negative result: it rises modestly in the raw corpus \(\+0\.226 SD\) but is near zero or negative after topic adjustment\. We release a reusable audit package that includes metadata, semantic and lexical features, validation artifacts, robustness scripts, and an interactive Evidence Norms Atlas for inspecting aggregate evidence\-framing patterns by year, topic neighborhood, and track\.
-
-## D\-GAP: Improving Out\-of\-Domain Robustness via Dataset\-Agnostic and Gradient\-Guided Augmentation in Amplitude and Pixel Spaces
-
-**Authors:** Ruoqi Wang; Haitao Wang; Shaojie Guo; Qiong Luo
-
-**ID:** 153375 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=Lqa5ffpkXU>) | [PDF](<https://openreview.net/pdf?id=Lqa5ffpkXU>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153375>)
-
-_Abstract unavailable from the accessible public sources._
-
-## EchoXFlow: A Beamspace Echocardiography Dataset for Cardiac Motion, Flow, and Function
-
-**Authors:** Elias Stenhede; Joanna Sulkowska; Eivind B Orstad; Henrik Schirmer; Arian Ranjbar
-
-**ID:** 139612 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=FRLt06JRGu>) | [PDF](<https://openreview.net/pdf?id=FRLt06JRGu>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139612>)
-
-_Abstract unavailable from the accessible public sources._
-
-## MSConsensus: A Hundred\-Million\-Scale, Batch\-Effect–Suppressed Dataset and Benchmark for Proteomics Machine Learning
-
-**Authors:** Christopher Grams; Chang Liu; Michael Papka; Yu Gao
-
-**ID:** 139206 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=egB7UnD256>) | [PDF](<https://openreview.net/pdf?id=egB7UnD256>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139206>)
-
-MSConsensus: A Hundred\-Million\-Scale, Batch\-Effect–Suppressed Dataset and Benchmark for Proteomics Machine Learning Machine learning for proteomics is bottlenecked by three coupled and under\-explored challenges: \(i\) noisy mass\-spectrometry \(MS\) data dominated by instrument\- and protocol\-specific batch effects, \(ii\) slow data loading from legacy XML\- and text\-based file formats, and \(iii\) a fragmented evaluation landscape that prevents meaningful cross\-study comparison\. Each silently constrains what proteomics models learn, how efficiently they train, and how reliably they are compared\. We address all three with MSConsensus, a multi\-task dataset and benchmark built natively for proteomics ML\. MSConsensus contains 110,209,043 consensus spectra distilled from 1\.01 PB of public PRIDE data spanning 1,500 repositories and all major Orbitrap and timsTOF platforms, with per\-peak ion annotations and stratified ML splits across instruments, species, and post\-translational modifications\. Unlike single\-representative spectral libraries \(MassIVE\-KB v2, NIST, ProteomeTools\), MSConsensus uses a new Weighted\-Score Binning \(WSBIN\) algorithm that emits multiple consensus spectra per \(peptide, charge\) cluster, preserving intra\-cluster variance required by contrastive and representation\-learning objectives while suppressing context\-specific artifacts\. Across five held\-out PRIDE repositories and four search engines \(Comet, MetaMorpheus, MSFragger, Sage\), WSBIN improves signal\-to\-noise ratio by an average of \+3\.86 dB \(range \+0\.57 to \+10\.47 dB\) without sacrificing protein, peptide, or PSM identification counts\. To eliminate the I/O bottleneck during model training, we pair MSConsensus with MSCompress and a new msz binary container\. msz compresses to 45% of mzML size losslessly and supports 25,378 random\-access spectra/sec — 3\.2× HDF5 — through a drop\-in PyTorch / JAX dataloader\. A unified public leaderboard standardizes evaluation across three core tasks—spectrum embedding, intensity prediction, and de novo peptide identification—and we report results for ten widely used systems \(Casanovo, InstaNovo, Prosit, MS²PIP, GLEAMS, Spec2Vec, Comet, MetaMorpheus, MSFragger, Sage\)\. Replacing raw training data with MSConsensus stabilizes Prosit's spectral angle on a never\-before\-seen 2025 instrument \(PXD053296\) from 0\.6964 to 0\.8137 and improves Spec2Vec top\-1 retrieval from 39\.2% to 46\.7% \(\+19\.0% relative\)\. By jointly addressing scale, batch\-effect suppression, I/O efficiency, and standardized evaluation, MSConsensus provides foundational infrastructure for training, evaluating, and comparing future proteomics models\. The dataset is released on Harvard Dataverse \(doi:10\.7910/DVN/NUCT4N\) under CC BY 4\.0; MSCompress, MSDatasets, preprocessing pipelines, and baseline scripts are released on GitHub under Apache 2\.0, with Docker containers for reproducibility\.
 
 ## AgentLens: Revealing The Lucky Pass Problem in SWE\-Agent Evaluation
 
@@ -800,16 +196,6 @@ Evaluation of software engineering \(SWE\) agents is dominated by a binary signa
 
 Stellarators are fusion energy devices that confine hot plasma using a carefully shaped magnetic field, and they are one of the most promising candidates in the race towards commercial fusion\. Among the many systems that make up a stellarator, the electromagnetic coils generate the confining magnetic field\. Their design is the key factor in deciding whether a stellarator can be practically engineered and cost‑effectively realized\. Coilset design is an intrinsically complex problem: it does not admit either a closed or a unique solution, making it suitable for optimization\. Coilset optimization is therefore at the heart of stellarator design: a coilset must accurately reproduce a target magnetic field while satisfying stringent engineering constraints on coil spacing, curvature, and length\. Although recent datasets have accelerated progress on stellarator equilibria optimization, data\-driven coilset design is limited by the lack of standardized datasets that pair target plasma configurations with engineering\-aware coilsets\. Here, we release a dataset \(https://huggingface\.co/datasets/proxima\-fusion/coilstellaration\) of 177,000 optimized stellarator coilsets targeting plasma configurations sampled from the publicly available ConStellaration dataset\. For each configuration, we optimized coilsets to reproduce the magnetic field while satisfying a diverse set of engineering constraints\. Alongside the dataset, we introduce a benchmark for conditional coilset generation: given a target plasma boundary and a set of engineering requirements, a model should produce a coilset that satisfies the engineering constraints while reproducing the target field\. We provide reference code, evaluation scripts and baselines models trained on a subset of the provided data \(https://github\.com/proximafusion/coilstellaration\)\. Beyond enabling better optimization initializations and one\-shot coil design, our dataset provides a testbed for data\-driven constrained optimization and for studying which plasma geometry features predict simpler, more engineerable coils\. By releasing data, and code for benchmarks and baselines, we aim to lower the barrier for machine learning and optimization researchers to engage with stellarator coilset design and accelerate progress toward engineerable and cost\-effective stellarators power plants\.
 
-## AnyHand: A Large\-Scale Synthetic Dataset for RGB\(\-D\) Hand Pose Estimation
-
-**Authors:** Chen Si; Yulin Liu; Bo Ai; Jianwen Xie; Rolandos Alexandros Potamias; Chuanxia Zheng; Hao Su
-
-**ID:** 139245 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=cUZmslkWyQ>) | [PDF](<https://openreview.net/pdf?id=cUZmslkWyQ>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139245>)
-
-We present AnyHand, a large\-scale synthetic dataset designed to advance the state of the art in 3D hand pose estimation\. While recent works with foundation approaches have shown that scaling training data markedly improves hand pose estimation, existing real\-world datasets are limited in coverage, and prior synthetic datasets rarely provide occlusions, arm details, and aligned depth together at scale\. To address this bottleneck, our proposed AnyHand contains 2\.5M single\-hand and 4\.1M hand\-object interaction RGB\-D images, with rich geometric annotations\. We show that extending the original training data recipes of existing RGB baselines with AnyHand yields significant gains on multiple benchmarks \(FreiHAND and HO\-3D\), even when keeping the architectures and training schemes fixed\. Together with extensive ablations on the scale and composition of the training data setups, these results suggest that training data diversity and quality are as critical as scale for advancing hand pose estimation\. We further examine the utility of AnyHand's aligned depth maps in the appendix, showing that scaling RGB\-D supervision with AnyHand allows a lightweight depth\-fusion variant of existing RGB baselines to outperform prior RGB\-D methods\.
-
 ## HiGraph: A Large\-Scale Hierarchical Graph Dataset for Malware Analysis
 
 **Authors:** Han Chen; Hanchen Wang; Hongmei Chen; Ying Zhang; Lu Qin; Wenjie Zhang
@@ -819,16 +205,6 @@ We present AnyHand, a large\-scale synthetic dataset designed to advance the sta
 [Paper](<https://openreview.net/forum?id=djQ8j3qxbm>) | [PDF](<https://openreview.net/pdf?id=djQ8j3qxbm>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139227>)
 
 The advancement of graph\-based malware analysis is critically limited by the absence of large\-scale datasets that capture the inherent hierarchical structure of software\. Existing methods often oversimplify programs into single\-level graphs, failing to model the crucial semantic relationship between high\-level functional interactions and low\-level instruction logic\. To bridge this gap, we introduce HiGraph, the largest public hierarchical graph dataset for malware analysis, comprising over 200M Control Flow Graphs \(CFGs\) nested within 499K Function Call Graphs \(FCGs\)\. This two\-level representation preserves structural semantics essential for building robust detectors resilient to code obfuscation and malware evolution\. We demonstrate HiGraph’s utility through a large\-scale analysis that reveals distinct structural properties of benign and malicious software, establishing it as a foundational benchmark for the community\. The dataset and tools are publicly available at https://higraph\.org\.
-
-## OpenWhistle: A Large\-Scale Longitudinal Dataset and Benchmark of Bottlenose Dolphin Vocalizations
-
-**Authors:** Faadil Mustun; Chiara Semenzin; Roberto Dessi; Pablo Robin Guerrero; pierre orhan; Alexis Emanuelli; Emanuele Rossi; Yair Lakretz; Gonzalo de Polavieja; Germán Sumbre
-
-**ID:** 139275 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=a5IbpMVeS0>) | [PDF](<https://openreview.net/pdf?id=a5IbpMVeS0>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139275>)
-
-Recent advances in bioacoustics have been driven by large\-scale corpora and standardized benchmarks, yet existing resources are overwhelmingly bird\-centric and shallow per species, limiting their use for studying the structure of a single species' communication system\. This gap is particularly acute for cetaceans: despite bottlenose dolphins \(\\textit\{Tursiops truncatus\}\) being a compelling case of complex vocal communication among non\-human mammals, existing dolphin datasets are small, fragmented, and largely closed\. We introduce OpenWhistle, the largest publicly available dataset of dolphin vocalizations\. It  comprises approximately 180,000 whistles \(114 hours\) recorded over five years from a stable pod of five individuals in a semi\-natural environment, paired with a curated subset of 8,354 expert\-annotated whistles and reproducible evaluation protocols for whistle\-type detection and classification\. We further release the full processing pipeline for whistle detection, segmentation, and categorization\. To demonstrate its utility, we pretrain a Wav2Vec2\.0 model adapted to dolphin acoustics on the OpenWhistle corpus and show that it learns effective representations, outperforming general\-purpose bioacoustic models such as AVES and BioLingual on both tasks while leaving meaningful headroom for future work\. By releasing the dataset, pipeline, and evaluation protocol, we provide the first open dolphin whistle dataset tailored for training self\-supervised models, laying the groundwork for advancing dolphin communication research and developing models that capture fine\-grained acoustic structure within species\.
 
 ## Leveraging Data Symmetries to Select an Optimal Subset of Training Data under Label Noise
 
@@ -880,71 +256,291 @@ Recent advances in world models have emphasized the need for learning temporally
 
 Despite the proliferation of survival analysis methods, current benchmarks often operate under narrow conditions: they heavily rely on the concordance index \(C\-index\) for evaluation and model selection, and frequently exclude deep learning \(DL\) or underrepresent challenging dataset regimes\. To address this, we conduct a large\-scale, neutral benchmark comparing 10 classical, tree\-based, and DL methods across 49 diverse datasets\. Crucially, we treat the model selection criterion \-\- optimizing for C\-index, Integrated Brier Score \(IBS\), or Mean Absolute Error \(MAE\-PO\) \-\- as an independent experimental variable\.  Using Bayesian mixed\-effects modeling, we demonstrate that evaluation design heavily dictates conclusions\. For complex DL and tree\-based architectures, shifting hyperparameter selection from the C\-index to IBS unlocks massive gains in probabilistic accuracy and calibration at a negligible cost to discriminative ranking\. Furthermore, method success is fundamentally governed by dataset characteristics\. While DL models scale exceptionally well with larger sample sizes, they suffer notable performance drops in high\-dimensional feature spaces\. Additionally, we expose a structural vulnerability where heavy censoring artificially inflates absolute calibration metrics, creating overly conservative tests\.  Ultimately, our findings challenge the utility of global single\-number performance summaries and advocate for regime\-conditioned reporting\. We further demonstrate that aligning the model selection strategy with the target application is not merely an implementation detail, but a critical requirement for realizing the true probabilistic and temporal accuracy of complex survival architectures\. We make our benchmark publicly available upon publication\.
 
-## DINOv3
+## ELMA: Benchmarking Anaphoric Compositions for Long\-Term Text\-to\-Motion Generation
 
-**Authors:** Oriane Siméoni; Huy Vo; Maximilian Seitzer; Federico Baldassarre; Maxime Oquab; Cijo Jose; Vasil Khalidov; Marc Szafraniec; Seung Eun Yi; Michaël Ramamonjisoa; Francisco Massa; Daniel Haziza; Luca Wehrstedt; Jianyuan Wang; Timothée Darcet; Théo Moutakanni; Leonel Sentana; Claire Roberts; Andrea Vedaldi; Jamie Tolan; John Brandt; Camille Couprie; Julien Mairal; Herve Jegou; Patrick Labatut; Piotr Bojanowski
+**Authors:** Shun Kato; Dixin Yang; Kotaro Amaya; Yuiga Wada; Kazumi Fukuda; Takashi Shibuya; Yuki Mitsufuji; Mariko Isogawa
 
-**ID:** 156661 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+**ID:** 139367 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/pdf?id=2NlGyqNjns>) | [PDF](<https://openreview.net/pdf?id=2NlGyqNjns>) | [Official poster](<https://neurips.cc/virtual/2026/poster/156661>)
+[Paper](<https://openreview.net/forum?id=UWLadjotaK>) | [PDF](<https://openreview.net/pdf?id=UWLadjotaK>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139367>)
 
-Self\-supervised learning holds the promise of eliminating the need for manual data annotation, enabling models to scale effortlessly to massive datasets and larger architectures\. By not being tailored to specific tasks or domains, this training paradigm has the potential to learn visual representations from diverse sources, ranging from natural to aerial images \-\- using a single algorithm\. This technical report introduces DINOv3, a major milestone toward realizing this vision by leveraging simple yet effective strategies\. First, we leverage the benefit of scaling both dataset and model size by careful data preparation, design, and optimization\. Second, we introduce a new method called Gram anchoring, which effectively addresses the known yet unsolved issue of dense feature maps degrading during long training schedules\. Finally, we apply post\-hoc strategies that further enhance our models' flexibility with respect to resolution, model size, and alignment with text\. As a result, we present a versatile vision foundation model that outperforms the specialized state of the art across a broad range of settings, without fine\-tuning\. DINOv3 produces high\-quality dense features that achieve outstanding performance on various vision tasks, significantly surpassing previous self\- and weakly\-supervised foundation models\. We also share the DINOv3 suite of vision models, designed to advance the state of the art on a wide spectrum of tasks and data by providing scalable solutions for diverse resource constraints and deployment scenarios\.
+Text\-guided long\-term human motion generation is essential for applications such as continuously operating digital avatars\. Despite recent progress on short clips, existing models struggle with multi\-segment instructions that involve anaphora, where constraints established in earlier segments must be preserved over time\. In this paper, we introduce a novel task of long\-term motion generation from such anaphoric compositions\. To mitigate this, we present ELMA, an episodic long\-term motion dataset with dense segment\-level annotations that preserve cross\-segment dependencies\. Built via a fully automated collection and filtering pipeline, ELMA extracts high\-quality, continuous 30\-second clips from in\-the\-wild videos, capturing the episodic narratives necessary for long\-range state modeling\. Leveraging this dataset, we fine\-tune state\-of\-the\-art motion generation models to incorporate long\-range context\. Extensive experiments reveal fundamental shortcomings in current models when handling context\-dependent instructions\. We demonstrate that ELMA enables significant improvements in both global physical realism and semantic alignment, setting a robust new baseline for long\-term motion synthesis\.
 
-## When Scores Conflict with Preferences: Calibrated Drift Control for Heterogeneous DPO
+## SaaS\-Bench: Can Computer\-Use Agents Leverage Real\-World SaaS to Solve Professional Workflows?
 
-**Authors:** Ping Liu; Yan Yan
+**Authors:** Kean Shi; Zihang Li; Tianyi Ma; Zengji Tu; Jialong Wu; Xinbo Xu; Qingyao Yang; Weichu Xie; Ruoyu Wu; Ming Wu; Jason Zeng; Michael Heinrich; Liang Chen; Kuan Li; Baobao Chang
 
-**ID:** 151343\-\-3 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+**ID:** 138995 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-**Repeated source row:** 151343
+[Paper](<https://openreview.net/forum?id=ry9igOb4j3>) | [PDF](<https://openreview.net/pdf?id=ry9igOb4j3>) | [Official poster](<https://neurips.cc/virtual/2026/poster/138995>)
 
-[Paper](<https://openreview.net/forum?id=bFc8A2Irjf>) | [PDF](<https://openreview.net/pdf?id=bFc8A2Irjf>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151343>)
+Computer\-Using Agents \(CUAs\) are rapidly extending large language models \(LLMs\) beyond text\-based reasoning toward action execution in more complex environments, such as web browsers and graphical user interfaces \(GUIs\)\. However, existing web and GUI agent benchmarks often rely on simplified settings, isolated tasks, or short\-horizon interactions, making it difficult to assess capabilities of agents in realistic professional workflows\. Software\-as\-a\-Service \(SaaS\) environments are a natural choice for CUA evaluation, as they host a large share of modern digital work and naturally involve dynamic system states, cross\-application coordination, domain\-specific knowledge, and long\-horizon dependencies\. To this end, we introduce \\textbf\{SaaS\-Bench\}, a benchmark built on 23 deployable SaaS systems across six professional domains, containing 106 tasks grounded in realistic work scenarios\. These tasks require long\-horizon execution, cover both text\-only and multimodal settings, and are evaluated with weighted verification checkpoints that measure strict task completion and partial progress\. Experiments show that representative LLM\-based agents struggle on SaaS\-Bench, with even the strongest model completing fewer than 4\\% of tasks end\-to\-end, exposing limitations in planning, state tracking, cross\-application context maintenance, and error recovery\.
 
-Direct Preference Optimization \(DPO\) is increasingly used in settings where pairwise preference signals coexist with pointwise criteria such as response length, answer correctness, or safety scores\. When the two disagree, standard DPO does not explicitly distinguish pairs that improve the pointwise criterion from those that worsen it\. We show that this mismatch induces a systematic failure mode, which we call \*\*constraint drift\*\*: updates on disagreement pairs tend to increase pointwise violation, while updates on aligned pairs tend to repair it, with the overall drift governed by their balance\. Under a first\-order approximation, this balance yields a closed\-form pre\-alignment diagnostic, $\\rho^\{\*\}\_\\mathrm\{eq\}$, computable from dataset statistics alone, that predicts whether the data is self\-correcting or requires intervention before alignment begins\. Building on this diagnostic, we propose \*\*Conflict\-aware DPO \(CoDPO\)\*\*, a calibrated modification to the DPO loss with two complementary components: a coarse per\-sample control for primary drift regulation and a fine adaptive margin tilting for residual correction during training\. Across six domains, drift grows monotonically with conflict exposure, and $\\rho^\{\*\}\_\\mathrm\{eq\}$ tracks the empirical drift transition, including self\-correcting settings where intervention is unnecessary\. Across four base\-model architectures and multiple preference losses, CoDPO reduces drift while preserving preference learning\. Compared with hard filtering and recent constrained\-alignment and multi\-objective baselines, CoDPO achieves a more favorable trade\-off between drift control and preference performance\.
+## EMERGE: A Benchmark for Updating Knowledge Graphs with Emerging Textual Knowledge
 
-## State\-of\-art minibatches via novel DPP kernels: discretization, wavelets, and rough objectives
+**Authors:** Klim Zaporojets; Daniel Daza; Edoardo Barba; Ira Assent; Roberto Navigli; Paul Groth
 
-**Authors:** Hoang Son Tran; Pranav Gupta; Rémi Bardenet; Subhroshekhar Ghosh
+**ID:** 139530 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-**ID:** 154500\-\-3 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+[Paper](<https://openreview.net/forum?id=KQZ7c8k0kf>) | [PDF](<https://openreview.net/pdf?id=KQZ7c8k0kf>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139530>)
 
-**Repeated source row:** 154500
+Knowledge Graphs \(KGs\) are structured knowledge repositories containing entities and relations between them\. In this paper, we study the problem of automatically updating KGs over time in response to evolving knowledge in unstructured textual sources\. Addressing this problem requires identifying a wide range of update operations based on the state of an existing KG at a given time and the information extracted from text\. This contrasts with traditional information extraction pipelines, which extract knowledge from text independently of the current state of a KG\. To address this challenge, we propose a generic and extensible pipeline that pairs textual passages with the KG edit operations they induce on a given KG snapshot\. We instantiate this pipeline on the Wikidata knowledge graph and the English Wikipedia corpus to create EMERGE, a dataset of 233K Wikipedia passages associated with a total of 1\.19 million KG edits across seven yearly Wikidata snapshots from 2019 to 2025\. Our experimental results highlight key challenges in updating KG snapshots based on emerging textual knowledge, particularly in integrating knowledge expressed in text with the existing KG structure\. These findings position the dataset as a valuable benchmark for future research\. The code and dataset are available at https://github\.com/klimzaporojets/emerge\.
 
-[Paper](<https://openreview.net/forum?id=D8tqZupi52>) | [PDF](<https://openreview.net/pdf?id=D8tqZupi52>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154500>)
+## A Graph Foundation Model for Unified Clustering
 
-Determinant point processes \(DPPs\) have recently emerged as a kernelized alternative to vanilla independent sampling for generating efficient minibatches, coresets and other parsimonious representations of large\-scale datasets\. While basic theoretical foundations and promising empirical performance have been demonstrated, there are two main challenges for current proposals for DPP\-based coresets or minibatches\. The first is the need for families of DPPs with certain key variance reduction properties, usually constructed in a continuous setting, of which there are few known examples\. The second is the need for an ad\-hoc construction of a discrete DPP defined on a given dataset, that inherits such variance reduction\. In this work, we contribute to the programme of establishing DPPs as a subsampling toolbox for ML by advancing on these two fronts\. First, we propose new DPPs on the Euclidean space based on wavelets, with provably better accuracy guarantees than the best known rates\. Second, we introduce a general method to convert such continuous DPPs, which are more amenable to proving analytical statements, into discrete kernels, which are pertinent for subsampling tasks such as minibatch and coreset constructions\. This conversion mechanism simultaneously preserves the desired variance decay and reveals a low\-rank decomposition of the discrete kernel, which makes sampling the corresponding DPP computationally inexpensive\. En route, we enlarge the class of ML tasks amenable to improvements via DPP\-based minibatches and coresets to include highly non\-smooth objective functions, with arbitrarily low regularity, and rate guarantees that adapt explicitly to this regularity\.
+**Authors:** Renda Han; Xiaobao Wang; Longbiao Wang; Dayu Hu; Ronghao Fu; Di Jin
 
-## LSC\-Parlament: An Automatically Aligned Catalan Sign Language Dataset from Parliament Videos\.
+**ID:** 154668 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
 
-**Authors:** Carlos Escolano; Gerard Sant; Marc J Garcia; Joan G Cortés; Marcel Granero Moya; Francesca De Luca Fornaciari; Maite Melero
+[Paper](<https://openreview.net/forum?id=BuafzhL3jU>) | [PDF](<https://openreview.net/pdf?id=BuafzhL3jU>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154668>)
 
-**ID:** 139029\-\-3 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+Graph clustering is a fundamental task for understanding graph\-structured data without labels, yet classical end\-to\-end methods require retraining on each dataset, limiting their generalization ability\. Although Graph Foundation Models \(GFMs\) enable transferable learning across diverse graph tasks, they are not directly applicable to graph clustering\. This limitation stems from two key factors: the inability to learn mutually beneficial knowledge on both the node and graph levels, and the lack of a completely unsupervised clustering\-oriented design\. To bridge this gap, we propose a G raph F oundation M odel for U nified C lustering \(GFM\-UC\), which pre\-trains on the source domain and only requires fine\-tuning for fast clustering in the target domain\. The entire learning process does not require any labels\. Specifically, in the pre\-training stage, we select learnable high\-confidence unified subgraph prototypes from the source domain\. And then we generalize them to train the clustering network collaboratively\. In the fine\-tuning stage, we align the target domain with the source domain in a distribution\-aware manner to further refine the clustering head and obtain more well\-separated cluster boundaries\. Extensive experiments on five datasets demonstrate that our method significantly outperforms existing state\-of\-the\-art approaches\.
 
-**Repeated source row:** 139029
+## Disentangling Channel Semantics in Vision Transformers via Token Decorrelation and Composition\-Aware Modulation
 
-[Paper](<https://openreview.net/forum?id=pPt0iqECnh>) | [PDF](<https://openreview.net/pdf?id=pPt0iqECnh>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139029>)
+**Authors:** Daeun Kim; Hyejin Park; Hyesong Choi; Dongbo Min
 
-Progress in Sign Language Translation \(SLT\) is frequently hampered by the "data bottleneck," a challenge particularly acute for regional languages such as Catalan Sign Language \(LSC\)\. In this paper, we present LSC\-Parlament, a large\-scale, multimodal dataset for LSC derived from Catalan Parliament sessions spanning 2021 to 2024\. The dataset comprises over 87 hours of LSC video, synchronized with speech and text translations in either Catalan or Spanish\. To curate this resource, we developed a fully automated pipeline that enables alignment between sign language, speech, and text without requiring prior human\-annotated data\. We provide a systematic evaluation of the dataset across multiple dimensions, including video tracking quality, audio transcription accuracy, and translation benchmarks\. Our experiments compare transfer learning, zero\-shot, and supervised translation settings, demonstrating significant knowledge transfer between spoken languages in the LSC\-Spanish modality\. By releasing LSC\-Parlament, we provide a challenging open\-domain benchmark to foster research in inclusive and scalable translation technologies\.
+**ID:** 152861 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=PqIEMrqSdB>) | [PDF](<https://openreview.net/pdf?id=PqIEMrqSdB>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152861>)
+
+Multi\-channel images encode heterogeneous channel semantics aligned over a shared spatial structure, which requires models to jointly capture globally shared structure and channel\-specific variations\. Recent multi\-channel Vision Transformers attempt to address this challenge by augmenting the \`\[CLS\]\` token with memory tokens to organize multi\-channel representations under varying channel compositions\. However, we find that these context tokens collapse onto a few dominant channels under high inter\-channel redundancy, producing redundant representations and a biased global summary that fails to reliably support composition\-aware channel interpretation\. We propose \*\*MuCa\-ViT \(Multi\-Channel Composition\-Aware Vision Transformer\)\*\*, a unified framework that addresses these limitations through two coupled mechanisms\. \*\*Factorial Token Learning \(FTL\)\*\* enforces token\-level decorrelation among context tokens, encouraging the \`\[CLS\]\` token to capture globally shared semantics while memory tokens preserve complementary channel\-specific cues\. \*\*Channel Composition\-Aware Modulation \(CAM\)\*\* uses the FTL\-refined \`\[CLS\]\` as a semantic anchor to generate sample\-wise modulation signals, which enable composition\-aware interpretation of channels within a unified backbone rather than relying on static channel embeddings\. Experiments on JUMP\-CP, CHAMMI, and So2Sat show that MuCa\-ViT outperforms prior multi\-channel ViTs across all three benchmarks, and the magnitude of improvement aligns with the inter\-channel redundancy of each dataset \($\\rho \\in \[0\.19, 0\.77\]$\), validating the diagnostic analysis that motivates our design\.
+
+## CounterStrike\-1K: A Multi\-Perspective Dataset of Professional Gameplay for World Modeling
+
+**Authors:** Anirudhh Ramesh
+
+**ID:** 139606 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=FsEoZwUHsR>) | [PDF](<https://openreview.net/pdf?id=FsEoZwUHsR>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139606>)
+
+Large\-scale human demonstrations have been a key ingredient in training interactive agents, from robot policies to computer\-use agents and game world models\. But for multi\-agent world modeling, the open data landscape is missing a crucial combination: expert humans acting together in the same evolving world, observed from every participant’s viewpoint, with precise controls and state\. Internet\-scale video captures human behavior, but its controls are inferred and its viewpoints are not synchronized; simulator and policy rollouts provide exact labels and all\-player views, but not strategic, collaborative human play\. We present CounterStrike\-1K, a public benchmark dataset built from professional Counter\-Strike 2 match replay files\. It contains 1,490 rendered player\-view hours across seven maps, with every released round synchronized across all ten active player viewpoints\. Each view is paired with audio, replay\-derived game controls, player state, world position, and sparse game event annotations\. Because each round records expert human teams coordinating under partial observability, CounterStrike\-1K tests whether models can simulate not just game physics or single\-view visual plausibility, but skilled decisions and their consequences across all players’ views\. We provide fixed splits and benchmarks for action\-conditioned prediction, cross\-POV retrieval, multi\-POV action coverage, and shared\-state recovery\. By releasing round\-complete multi\-perspective demonstrations at this scale, CounterStrike\-1K provides a grounded training and evaluation testbed for multi\-agent world\-model research\.
+
+## StakeBench: Evaluating Language Understanding Grounded in Market Commitment
+
+**Authors:** Yunhua Pei; Jingyu Hu; Yiwei Shi; Hongnan Ma; Weiru Liu; John Cartlidge
+
+**ID:** 139611 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=FWuX7Tx9gK>) | [PDF](<https://openreview.net/pdf?id=FWuX7Tx9gK>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139611>)
+
+Existing financial NLP benchmarks often rely on labels supplied by outside observers, measuring how language is perceived rather than what speakers have committed to in the market\. We introduce \\textbf\{StakeBench\}, an evaluation framework for language understanding grounded in market commitment\. StakeBench links 560,876 comments from 2,261 resolved markets to verified position, action, and market\-odds records across Polymarket and Manifold\. Supervision is derived from observable market behavior\. Position sides, post\-comment trading actions, and market\-odds trajectories replace human annotation\. Four diagnostic tasks test whether models detect market commitment, identify the revealed side, anticipate future action, and perform collective odds projection\. Three commitment\-aware metrics measure alignment with revealed preferences rather than perceived sentiment\. Validity audits and explicit interpretation boundaries help distinguish observable commitment signals from latent belief and causal market\-odds impact\. Across 15 LLMs and 18 topics and platform settings, models partially recover position\-side signals, with Directed Accuracy from 0\.506 to 0\.599, but show structural failures on later tasks\. Ten of the fifteen models collapse to one or two action labels in future action anticipation, and no model consistently improves on the naive odds\-direction baseline in collective odds projection\. Model scale is not correlated with performance, finance\-domain tuning does not improve revealed\-side identification, and platform incentives strongly shape higher\-order results\. StakeBench is packaged with evaluation code and dataset under CC\-BY\~4\.0\.
+
+## OpenClawBench: Benchmarking Process\-side Anomalies in Real\-world Agent Execution Trajectories
+
+**Authors:** Yibing Liu; Yangze Liu; Xiao\-Long Yin; Bin Wang; Chong Zhang; Hao Yin; Zhongyi Han
+
+**ID:** 139648 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=DWMn45BwZe>) | [PDF](<https://openreview.net/pdf?id=DWMn45BwZe>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139648>)
+
+Task success can hide process anomalies in real\-world agent executions\. An agent may pass the final task oracle while still accumulating unresolved ambiguity, unsafe external writes, ignored errors, weakly grounded commitments, or capability\-boundary overcommitment\. We study this mismatch as the Outcome\-Process Gap and introduce OpenClawBench, a large\-scale dataset for measuring and supervising process\-side anomalies in real agent execution processes\. OpenClawBench is built from BFCL\-driven OpenClaw sessions produced by 6 source models and contains 31,264 annotated trajectories\. It aligns task\-oracle outcomes with structured process evidence\. FullTax converts the aligned trajectories into structured anomaly supervision: binary labels, supporting evidence, onset/span localization, severity, recoverability, and a 5\-class anomaly taxonomy\. Using OpenClawBench, we make the Outcome\-Process Gap measurable\. Among 31,135 oracle\-passing executions, 2,904 \(9\.33%\) are still labeled process\-anomalous under FullTax\. Within oracle\-passing executions that contain high\-risk process evidence, 1,765 of 1,904 \(92\.70%\) are labeled anomalous\. These results show that success\-only evaluation misses a concrete class of process\-side failures in real agent executions\. FullTax silver labels match human audit on 96\.0% of a 300\-trajectory human\-audited pilot\. A LoRA\-fine\-tuned Gemma 3 12B detector trained on the high\-confidence FullTax supervised pool reaches binary F1=0\.729 on the cleaner\-labels held\-out test split \(n=2,646\)\. It outperforms the GPT\-5\.4 frontier reference by \+0\.302 absolute, the no\-fine\-tuning base by \+0\.357, and wins on all six source\-model agent slices\. The gain comes from calibration rather than higher recall: zero\-shot detectors over\-flag at 42–50% against a 14\.7% label rate, while the fine\-tuned detector predicts anomalies 17\.7% of the time\. Together, OpenClawBench turns real agent execution logs into auditable and reusable supervision for studying, diagnosing, and operationally monitoring runtime agent reliability\.
+
+## PULSE: A Synchronized Five\-Modality Dataset for Sensorimotor Coordination in Long\-Horizon Daily Activities
+
+**Authors:** Wolin Liang; Yang Gao; Peiyu Yan; YueXiang Hu; Yingjing Xiao; Xiongfeng Ying; YingNian Guo; Cheng Zhang; Zhanpeng Jin
+
+**ID:** 139681 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=AoU576r9O2>) | [PDF](<https://openreview.net/pdf?id=AoU576r9O2>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139681>)
+
+Existing human\-activity datasets typically cover only one or two sensor channels and often focus on short, isolated actions, leaving long\-duration compositional tasks largely unsupported as benchmarks for temporal cross\-modal sensorimotor learning\. We introduce PULSE \($\\mathbf\{P\}$hysiological $\\mathbf\{U\}$nified $\\mathbf\{L\}$ong\-duration $\\mathbf\{S\}$ynchronized $\\mathbf\{E\}$mbodiment\), a synchronized five\-modality dataset that enables benchmarking temporal cross\-modal sensorimotor learning: how models recognize ongoing activities, anticipate future contact, reconstruct unobserved signals, and remain robust when physiological, motion, gaze, inertial, and tactile channels are partially observed\. Collected from 40 volunteers across 8 ecologically valid daily\-activity scenarios together with a dedicated motion\-primitive collection, PULSE records full\-body optical motion capture with finger\-level hand articulation, surface EMG, binocular eye tracking, wearable IMU, and a fingertip pressure array recording quantitative grip force, all sampled at 100 Hz\. Each scenario is a long\-horizon compositional task containing many smaller sub\-tasks, yielding over 7,700 annotated action segments\. Each segment is tagged with a motor primitive, the hand involved, the manipulated object, and a natural\-language description with four paraphrased variants\. On top of the dataset, we define multiple benchmark tasks for temporal cross\-modal sensorimotor learning: scene and fine\-grained action recognition, grasp onset anticipation, missing\-modality robustness, tactile\-driven sub\-second grasp\-state prediction, cross\-modal pressure reconstruction, etc\. Together these tasks evaluate how information transfers across physiology, motion, gaze, and touch, rather than reducing the dataset to an activity\-label catalog\. We evaluate three backbone architectures, nine fusion strategies, seven published baselines, and task\-specific models including SyncFuse and DailyActFormer\. Detailed task definitions and results are in the Appendices\. Data, annotations, and baseline code will be publicly released\.
+
+## OpenSanctions Pairs: A Large\-Scale Dataset for Pairwise Entity Matching
+
+**Authors:** Chandler Smith; Magnus Sesodia; Friedrich Lindenberg; Christian Schroeder de Witt
+
+**ID:** 139718 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=8gjD9mKs1q>) | [PDF](<https://openreview.net/pdf?id=8gjD9mKs1q>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139718>)
+
+We release OpenSanctions Pairs, the first large\-scale public benchmark for entity matching on sanctions and OSINT data\. The dataset includes 755,540 expert\-labeled pairs over 1 million entities, aggregated from 293 source datasets across 45 jurisdictions\. It captures real\-world diversity in compliance data, spanning multiple languages and writing systems \(e\.g\., Latin, Cyrillic, Arabic\), inconsistent structure, and time\-varying provenance, and is substantially more heterogeneous than prior entity matching benchmarks\. As baselines, we evaluate the production rule\-based matcher \(nomenklatura RegressionV1\) alongside open\- and closed\-source LLMs in both zero\- and few\-shot settings, each tested with and without MIPROv2 prompt optimization to control for prompt sensitivity\. The rule\-based baseline reaches 91\.3\\% F1; GPT\-4o achieves the best result at 99\.0\\% F1, and a locally deployable open\-source model \(DeepSeek\-R1\-Distill\-Qwen\-14B\) achieves 98\.2\\% F1\. The rule\-based baseline and LLMs fail in complementary ways: rules over\-match, while LLMs struggle with cross\-script transliteration\. These results suggest that pairwise matching performance is approaching a practical ceiling and shift attention toward pipeline components such as blocking, clustering, and uncertainty\-aware review\.
+
+## EmoPhone: A Multi\-Wave Dataset for In\-the\-Wild Mobile and Wearable Affect Sensing
+
+**Authors:** Panyu Zhang; minseo Park; Soowon Kang; Ismatzoda Tomiris; Azizbek Mustafakulov; Otabek Najimov; Woohyeok Choi; JUMABEK Alikhanov; Surjya Ghosh; Uichin Lee
+
+**ID:** 139785 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=4xXw8qgOwz>) | [PDF](<https://openreview.net/pdf?id=4xXw8qgOwz>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139785>)
+
+We introduce a three\-wave, in\-the\-wild multimodal dataset for affect sensing that integrates smartphone sensing, wearable sensing, and dense experience\-sampling\-method \(ESM\) labels collected annually from 2020 to 2022\. The dataset supports moment\-level affect modeling through a shared dimensional label core across all waves, with additional affective descriptors available in the third wave \(D\-3\)\. We describe the resource in terms of study design, temporal density of in\-situ labels, and sensing and label coverage across waves\. To support evaluation within this resource, we define an initial three\-setting benchmark spanning temporal prediction from within\-user history, within\-wave cross\-user generalization, and cross\-wave generalization in which each wave is treated as a separate dataset\. Our benchmark results show that the strongest method family depends on the evaluation setting: supervised baselines perform best in the temporal setting, unsupervised domain adaptation is strongest overall in the within\-wave cross\-user setting, and domain generalization shows the strongest overall cross\-wave performance, although its margin over strong baselines is modest\. These findings indicate that robust mobile affective computing is constrained not only by label availability but also by substantial participant\-level variability and realistic cross\-wave differences inherent in longitudinal in\-situ deployments\.
+
+## SynthHair: Leveraging MetaHumans for a High\-Quality 4K Hair Matting Dataset
+
+**Authors:** Markus Karmann; Shile Li; Philip Torr; Puneet Dokania; Qi Zhang; Peng\-Tao Jiang; Bo Li; Onay Urfalioglu
+
+**ID:** 139817 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=2xR9SbLJIE>) | [PDF](<https://openreview.net/pdf?id=2xR9SbLJIE>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139817>)
+
+Recent progress in computer vision enables dense alpha matte predictions at resolutions of 4K and higher\. While portrait matting has benefited from large\-scale, high\-resolution datasets, progress in hair matting remains limited due to the difficulty of annotating sub\-pixel fine hair details\. In this work, we analyze critical limitations in image resolution and annotation quality of such existing datasets and introduce our own synthetic hair matting dataset, \\textbf\{SynthHair\}, which consists of 16k RGBA portrait images in $4096 \\times 4096$ image resolution, containing labels for hair matting, as well as hair categorization, growth direction, and depth estimation\. We create this dataset using MetaHuman Creator and Unreal Engine to obtain highly detailed and realistic renders of human faces with complex hair structures\. We adapt a generalized version of the isoperimetric inequality quotient \(IPQ\) that we call the \\textbf\{soft isoperimetric inequality quotient \(SIPQ\)\}, as a scale\-invariant label complexity metric that enables comparison of both segmentation and matte labels\. Using this metric, we demonstrate that hair matting complexity increases significantly with resolution, reaching an SIPQ of 325\.41 at 4K, in contrast with portrait matting datasets at similar resolutions, which reach an SIPQ of \~10\. To validate our data, we train separate matting models on SynthHair and existing real\-world datasets\. Our results demonstrate strong domain generalization and show clear improvements in high\-resolution images\. A/B testing further confirms these findings, with over 80\\% of users preferring our model's results on high\-resolution images\.
+
+## MosaicMRI: A Diverse Dataset and Benchmark for Raw Musculoskeletal MRI
+
+**Authors:** Paula Arguello; Berk Tinaz; Mohammad Shahab Sepehri; Maryam Soltanolkotabi; Mahdi Soltanolkotabi
+
+**ID:** 139818 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=2w0L3gwZS7>) | [PDF](<https://openreview.net/pdf?id=2w0L3gwZS7>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139818>)
+
+Deep learning underpins a wide range of applications in MRI, including reconstruction, artifact removal, and segmentation\. However, progress has been driven largely by public datasets focused on brain and knee imaging, shaping how models are trained and evaluated\. As a result, careful studies of the reliability of these models across diverse anatomical settings remain limited\. In this work, we introduce MosaicMRI, a large and diverse collection of fully sampled raw musculoskeletal \(MSK\) MR measurements designed for training and evaluating machine\-learning\-\-based methods\. MosaicMRI is the largest open\-source raw MSK MRI dataset to date, comprising 2,725 volumes and 81,570 slices, including a 1\.5T core dataset and a 0\.55T low\-field set\. The dataset offers substantial diversity in volume orientation \(e\.g\., axial, sagittal\), imaging contrasts \(e\.g\., PD, T1, T2\), anatomies \(e\.g\., spine, knee, hip, ankle, and others\), numbers of acquisition coils, and field strengths\. Using accelerated reconstruction as a testbed, we study scaling, robustness, and data selection under realistic MSK distribution shifts\. Across E2E\-VarNet, U\-Net, and ViT baselines, mixed\-anatomy training improves over anatomy\-specific training, showing that the benefit of anatomical diversity is not architecture\-specific\. Zero\-shot experiments on the 0\.55\~T low\-field set highlight that using more training data improves average reconstruction under field\-strength shift\. Controlled subset and leave\-one\-anatomy\-out experiments further suggest that these gains come from transferable cross\-anatomy structure, rather than anatomy or contrast matching alone\.
+
+## Model Capacity Determines Grokking through Competing Memorisation and Generalisation Speeds
+
+**Authors:** Yiding Song; Hanming Ye
+
+**ID:** 155807 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=2kLkhhcpNe>) | [PDF](<https://openreview.net/pdf?id=2kLkhhcpNe>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155807>)
+
+Existing accounts of grokking explain the phenomena in terms of mechanistic frameworks such as circuit efficiency or lazy\-to\-rich transitions\. However, despite a known dependence between grokking and model size, how model capacity shapes grokking remains an open question\. We give an information\-theoretic account of this relationship on the task of modular arithmetic, showing that grokking does not immediately occur when a model becomes large enough to memorise the training set, but rather emerges as the outcome of a competition between two measurable timescales: a memorisation speed $T\_\{\\text\{mem\}\}\(P\)$ and a generalisation speed $T\_\{\\text\{gen\}\}\(P\)$, both of which are functions of model parameter count $P$\. Adapting the information capacity framework of Morris et al\. \(2025\), we estimate $T\_\{\\text\{mem\}\}\(P\)$ on random\-label data of equivalent complexity and $T\_\{\\text\{gen\}\}\(P\)$ on the modular task itself, and show that grokking emerges close to the parameter scale where these timescales intersect\. The framework also suggests an empirical model for predicting memorisation speed given model capacity and dataset complexity, recovering the previously reported empirical observation that larger models memorise faster\. Overall, we motivate the formalisation of different learning timescales as important abstractions to study when explaining how model capacity shapes grokking on algorithmic tasks\.
+
+## Verifying Agents in Rubric\-Graded Environments
+
+**Authors:** Markus Dücker; Vaibhav Kumar; Yi Liu; Ronak Chaudhary; Andreas Plesner; Francisco Guzmán; Anish Athalye
+
+**ID:** 139856 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=08X5C49LWf>) | [PDF](<https://openreview.net/pdf?id=08X5C49LWf>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139856>)
+
+As AI agents take on increasingly open\-ended and complex tasks, verifying their outputs has proven to be difficult\. Rubric\-graded agent environments—where a verifier judges multiple criteria against the deliverables and environment state changes produced by the agent—have emerged as a popular paradigm\. We conduct the first systematic study of verifiers for rubric\-graded agent environments\. First, we create BankerVerifierBench \(BVB\), a meta\-evaluation dataset of 3,204 human\- judged rubric criteria across 21 investment\-banking tasks\. Next, we develop a methodology that derives from any rubric corpus the capabilities a verifier should possess, yielding a nine\-capability taxonomy that we distill into three general design principles—reactive verification, environment alignment, and domain guidance— which we implement in Gandalf, an open\-source verifier\. Finally, we evaluate Gandalf against existing verifiers on BVB\. We find that Gandalf outperforms all baselines on seven of nine capabilities and is Pareto optimal: its cheapest configuration \(F1 0\.633, \\\\$42\) exceeds the most expensive baseline \(F1 0\.538, \\\\$414\)\. Ablations show that environment alignment and domain guidance primarily reduce cost \(up to 4× fewer tokens\) rather than error, while architecture choice dominates model choice\. Gandalf generalizes to an OpenClaw benchmark, a structurally different personal\-productivity environment, achieving F1 score 0\.951 and outperforming the next\-best verifier by 7\.5 F1 points\.
+
+## The Dormant Spiking Neuron: A State\-Driven Mechanism for Efficient Spiking Neural Networks
+
+**Authors:** Ruichen Ma; Yicai Chen; Pujun Zhou; Yue Zuo; Chongyang Li; Shuang Liu; Shaogang Hu; Guanchao Qiao
+
+**ID:** 150735 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=fmUnrAKlSL>) | [PDF](<https://openreview.net/pdf?id=fmUnrAKlSL>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150735>)
+
+Spiking neural networks \(SNNs\) offer a compelling pathway toward energy\-efficient artificial intelligence, fundamentally anchored in presynaptic input\-driven sparsity\. However, a substantial yet chronically overlooked source of computational overhead persists: the continuous subthreshold dynamics of postsynaptic neurons\. Quantitative analysis reveals that up to 44\\% of neurons in an ImageNet\-trained ResNet\-18 model reside in a deeply inhibited state, imposing a persistent computational burden despite possessing a negligible probability of firing\. To eradicate this inefficiency, the Dormant Spiking Neuron \(DSN\) model is introduced\. By incorporating a state\-driven dynamic gate, the DSN allows a neuron to enter a dormant state when its membrane potential falls below a predefined negative threshold, dynamically pruning redundant computations at the instance level\. Crucially, this dormancy mechanism is directly integrated into the neuronal dynamics and trained end\-to\-end via backpropagation through time using surrogate gradients, enabling the network to actively learn a robust dormancy policy that adaptively preserves critical information flow\. Extensive experiments across static and neuromorphic datasets demonstrate that the DSN framework consistently reduces computational energy by 40\\% to over 70\\%\. Notably, on the large\-scale ImageNet dataset, the DSN outperforms state\-of\-the\-art static pruning techniques by achieving equivalent energy savings while simultaneously improving upon the baseline accuracy by 1\.34\\%\. By establishing a trainable, state\-driven sparsity paradigm orthogonal to conventional input\-driven methods, the DSN unlocks synergistic efficiency gains, presenting a highly potent approach for advancing neuromorphic computing\. Source code will be made publicly available\.
+
+## Bricker to BRACE: A Bracket Exposure RAW Dataset and Restoration Model for Flicker\-Banding
+
+**Authors:** Zihan Zhou; Libo Zhu; Jue Gong; Zhiyi Zhou; Jiezhang Cao; Yong Guo; Yulun Zhang
+
+**ID:** 149112 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=smrclDT0Hn>) | [PDF](<https://openreview.net/pdf?id=smrclDT0Hn>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149112>)
+
+Flicker\-banding \(FB\),  arises from temporal aliasing between a camera's rolling shutter and a display's brightness modulation, degrading screen\-captured image readability with color shifts and jagged patterns\. Existing single\-frame methods with simplified parametric stripe models cannot reliably distinguish these artifacts from genuine texture\. To address this, we conduct a systematic analysis of complex FB morphologies and reveal their significant variation across exposure settings, motivating a multi\-frame bracketed RAW restoration paradigm\. We construct Bricker, a synthetic–real bracketed RAW dataset built via ray\-tracing\-based physical simulation and automated multi\-exposure capture tool\. We further propose BRACE: Bracketed RAW Flicker\-Banding Removal, a multi\-frame restoration model that utilizes frequency\-aware banding prior and a multi\-scale spatial cross\-attention modulator \(MSCAM\) for cross\-exposure spatial fusion\. We also introduce the Stripe Frequency Consistency \(SFC\) metric to evaluate banding removal\. Extensive experiments demonstrate state\-of\-the\-art performance on both synthetic and real benchmarks\. Our dataset and code will be publicly released\.
 
 ## New Coresets for Fair Clustering
 
 **Authors:** Xuan Wu; Chansophea Wathanak In; Yi Li
 
-**ID:** 152649\-\-3 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 152649
+**ID:** 152649 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
 [Paper](<https://openreview.net/forum?id=RQT8lzmK8J>) | [PDF](<https://openreview.net/pdf?id=RQT8lzmK8J>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152649>)
 
 We construct the first coreset of size near\-linear in $k$ for fair \\kMedian in general metric spaces\. Combined with the standard merge\-and\-reduce framework, our construction also gives the first streaming algorithm for fair \\kMedian with space complexity near\-linear in $k$\.  The main technical innovation is a distributional reinterpretation of capacitated clustering that the cost of assigning a dataset to a capacitated center set can be expressed as the earth mover's distance between two discrete distributions\. This viewpoint enables us to use tools from optimal transport to analyse uniform sampling\. A key ingredient in this analysis is a new family of problem\-specific $\\eps$\-nets for the earth mover's distance\.
 
+## SCTI: Self\-Calibrated Trident Identification of Black\-Box LLM Watermarks
+
+**Authors:** Zhixiong Nan; Haoyu Lu; Tao Xiang; Yiwei Wang
+
+**ID:** 149151 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=sSXd2zEa4O>) | [PDF](<https://openreview.net/pdf?id=sSXd2zEa4O>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149151>)
+
+Black\-box watermarked LLM identification has become an important task for watermark auditing\. The core challenge arises from inherent black\-box constraints that deny access to logits, detector keys, model parameters, and internal watermark settings\. For this reason, existing methods have not conducted in\-depth exploration on this task, leaving prominent limitations: \*\*Fixed\-Reference Calibration\*\* and \*\*Family\-Specific Tests\*\*\. First, existing works use fixed null reference to serve as a baseline for judging the presence of watermarks in LLM outputs, which might misidentify a watermarked LLM as unwatermarked because the null reference is sensitive to the prompt pair, queried model, and sampling configuration\. Second, existing statistical\-tests based methods adopt distinct statistical features and judgment criteria for different LLM watermark families, making them less suitable when the deployed watermark algorithm is unknown\. To remedy the above two limitations, this work proposes \*\*SCTI\*\*, a Self\-Calibrated Trident Identification framework for black\-box watermarked LLM identification\. Specifically, to handle the first limitation, \*\*SCTI\*\* constructs empirical null distributions from the queried responses to estimate the generalizable reference instead of relying on a fixed reference\. Meanwhile, to address the second limitation, \*\*SCTI\*\* is configured with a Trident\-View Consistency measuring mechanism, which enables a unified pipeline to avoid designing separate tests for individual watermark family\. Experimental results verify that \*\*SCTI\*\* outperforms representative black\-box watermark identification baselines across diverse LLMs and watermark algorithms\.
+
+## Label\-Efficient Dataset Pruning via Semi\-Supervised Pseudo\-Labeling
+
+**Authors:** Yeseul Cho; Baekrok Shin; Changmin Kang; Chulhee Yun
+
+**ID:** 150749 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=fgWh6OZ6W8>) | [PDF](<https://openreview.net/pdf?id=fgWh6OZ6W8>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150749>)
+
+Dataset pruning reduces the storage and training costs of deep learning by selecting an informative subset from a large dataset\. However, most existing pruning methods require fully labeled data, which limits their applicability in realistic settings where unlabeled data are abundant and annotation is costly\. Recent label\-free pruning methods address this issue, but they rely on features from pre\-trained models to estimate example difficulty\. This dependence can be unreliable when the target dataset differs substantially from the pre\-training distribution\. We propose a label\-efficient dataset pruning framework that, given only a small labeled subset, uses semi\-supervised learning to generate pseudo\-labels for unlabeled data, allowing existing supervised pruning methods that require label information to be seamlessly applied to the resulting pseudo\-labeled training pool\. We then estimate example difficulty from pseudo\-label\-induced training dynamics and select a coreset\. By learning directly from the target dataset, our method better captures the target distribution and provides more reliable signals for difficulty estimation and coreset selection\. We validate our approach on domain\-specific, image\-corrupted, and long\-tailed datasets, where it achieves state\-of\-the\-art performance among label\-free and label\-efficient baselines, while also demonstrating competitive performance on standard benchmarks\.
+
+## AdaM\-Rec: Adaptive Modality Routing for Multimodal Recommendation
+
+**Authors:** Honghao Fu; Jiacheng Chen; Manxi Lin; Junjun Zheng; Xiangheng Kong; Yiwei Wang; Xin Yu; Miao Xu; Yuning Jiang; Yujun Cai
+
+**ID:** 148211 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=zXa9cVWJdT>) | [PDF](<https://openreview.net/pdf?id=zXa9cVWJdT>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148211>)
+
+While recent multimodal recommender systems have demonstrated the effectiveness of incorporating visual and textual information to improve downstream performance, most existing methods rely on static modality fusion, assuming that the relative importance of textual and visual signals remains stable across recommendation scenarios\. This design may not fully account for an important variation across recommendation requests: some queries require fine\-grained visual cues, whereas others are better served by textual or functional semantics, in which case indiscriminate modality fusion brings in uninformative cues and impairs recommendation quality\. To address this, we propose AdaM\-Rec, an LLM\-based framework for adaptive modality routing in multimodal recommendation, which enables dynamic calibration of reliance on textual and multimodal evidence for user\-specific queries\. Built on structured natural\-language representations of items and user preferences, it estimates modality reliability using proxy recall tasks\. Specifically, it generates pseudo\-queries that match the granularity of the actual query while pointing to the user's positively interacted items as verifiable proxy targets, evaluating which modality yields better recall performance in analogous scenarios and optimizing the routing strategy in an agentic manner\. It then performs routed recall with optimized strategy, enriches results with collaborative items, and ranks candidates by their relevance to both the query and user preferences\. Experiments demonstrate that AdaM\-Rec delivers strong performance against state\-of\-the\-art baselines, highlighting the effectiveness and broader potential of adaptive control over modality reliance in multimodal recommendation\. Code will be publicly available\.
+
+## Vendi Anomaly Scores for Efficient and Accurate Anomaly Detection
+
+**Authors:** Amey Pasarkar; Adji Bousso Dieng
+
+**ID:** 148885 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=uT5yKtgYS0>) | [PDF](<https://openreview.net/pdf?id=uT5yKtgYS0>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148885>)
+
+Anomaly detection \(AD\) is a critical task in machine learning and scientific discovery\. Existing methods that operate on learned embeddings typically define anomalies through local density, isolation heuristics, or distance from a fitted distribution, making them sensitive to neighborhood scale, partitioning choices, or restrictive distributional assumptions\. In this work, we introduce a new paradigm by formulating anomaly detection in terms of dataset diversity\. We propose the Vendi Anomaly Score \(VAS\), which detects anomalies by quantifying how much a sample changes the diversity of the dataset, as measured by the Vendi Score, when removed\. VAS captures both local redundancy and global data structure without relying on density estimation or partitioning heuristics\. Moreover, VAS requires no hyperparameter tuning, instead adapting automatically to the spectral structure of the data\. VAS is non\-parametric and scales linearly with dataset size\. Across 148 benchmark embedding datasets derived from 10 source datasets and 4 embedding architectures, VAS achieves state\-of\-the\-art AD performance\. We further validate VAS on large\-scale ImageNet experiments, where it remains robust as both contamination rate and dataset scale increase\.
+
+## The Missing Corpus: Infinite Ground Truth for File\-Grounded LLM Evaluation
+
+**Authors:** Anush Sankaran; Arijit Banerjee; Pamela Bhattacharya; Tanujay Saha
+
+**ID:** 139327 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=X8UDpzYS5G>) | [PDF](<https://openreview.net/pdf?id=X8UDpzYS5G>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139327>)
+
+Evaluating enterprise LLMs on file\-grounded Question Answering \(QA\) requires large, labeled corpora of realistic enterprise PDFs, yet real documents are sensitive, scarce, and impossible to annotate at scale\. Existing synthetic approaches produce visually crude renders, annotate ground truth post\-hoc \(introducing hallucination risk\), or are non\-reproducible one\-off scripts with no diversity control\. We present SynthDocQA, an Intermediate Representation\(IR\)\-driven pipeline that co\-generates photorealistic multi\-page enterprise PDFs and provenance\-grounded evaluation pairs in a single pass\. A compact Document Generation IR encodes topic, content schedule, and perturbation profile before rendering begins\. Templates are retrieved per page via Contrastive Language\-Image Pretraining \(CLIP\) embedding\-based cross\-modal search over a 10,000\-layout library; a 15\-stage physical degradation pipeline models five scan quality tiers from pristine to poor\. Every QA assertion is derived analytically from the same structured artifact that populated the page, making hallucination structurally impossible, and a hierarchical fork\-based Random Number Generator \(RNG\) guarantees exact reproducibility from a single integer seed\. A reference 100\-document corpus spans 50 enterprise domains, 4,374 pages, 16,589 QA pairs, and 21,402 assertions at zero annotation cost\.
+
+## Robust Approximate Nearest Neighbor Search for Any Dataset
+
+**Authors:** Alexandr Andoni; Themistoklis Haris; Esty Kelman; Krzysztof Onak
+
+**ID:** 150072 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=kxeeWaxYv9>) | [PDF](<https://openreview.net/pdf?id=kxeeWaxYv9>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150072>)
+
+Approximate Nearest Neighbor Search \(ANN\) is an important algorithmic primitive that has found a plethora of applications in machine learning and information retrieval\. The classic approach to this problem due to Indyk and Motwani \(1998\) leverages Locality Sensitive Hashing \(LSH\) by sampling multiple hash functions that are likely to identify similar data points\. This approach has, however, been demonstrated to be vulnerable to adaptive queries and updates which may not be independent of its internal randomness \(Kapralov et al\. 2024\)\. While differential\-privacy\-based techniques have yielded robust versions of randomized algorithms and data structures for estimation problems \(Hassidim et al\., 2022\), ANN is a search problem: the algorithm must return an actual dataset point, without obfuscating the output by adding noise or rounding it\. Feng et al\. \(2025\) circumvent this limitation by relying on a density assumption that bounds the number of points near each query point\.  We study a stronger worst\-case model in which the adversary chooses both the initial dataset and an adaptive query sequence\. For LSH\-equipped metric spaces, we give adversarially robust ANN algorithms with sublinear query time whose guarantees do not depend on any structural assumption on the dataset\. The main technical challenge is to preserve sublinear search time when the adversary selects a dataset with arbitrarily many points near a query\. Rather than applying differential\-privacy robustification as a black box, we develop search\-specific mechanisms: fairness as a route to adaptive security, a bucketing reduction from search to robust decision, and a concentric annuli construction that improves the query\-time exponent\. Moreover, for low\-dimensional spaces, we give algorithms with a strong \`\`for\-all'' guarantee, which are correct for every possible query\.
+
+## Slower Generalization, Faster Memorization: A Sweet Spot in Algorithmic Learning
+
+**Authors:** Shin So; Kyelim Lee; Albert No
+
+**ID:** 154236 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=FDIVnGvUBM>) | [PDF](<https://openreview.net/pdf?id=FDIVnGvUBM>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154236>)
+
+Critical\-data\-size accounts of grokking suggest a natural post\-threshold intuition: once training data is sufficient to identify the underlying rule, additional data should accelerate validation convergence\. We show that this intuition can fail in a controlled structured\-output task\. In Needleman\-\-Wunsch \(NW\) matrix generation, small Transformers reach high validation exact\-match accuracy fastest at an intermediate dataset size, not at the largest one\. Past this dataset\-size sweet spot, generalization remains achievable but requires more gradient updates\. Conversely, in the regime where partial validation competence first appears, larger datasets can require fewer updates to reach high training accuracy, suggesting that emerging rule structure can accelerate fitting beyond example\-wise memorization\. A multiplication baseline does not show the same post\-threshold slowdown\. These results separate the critical data size for the onset of generalization from the dataset size that optimizes update\-based convergence, and identify structured\-output tasks where learning the rule and completing exact\-fitting can diverge\.
+
+## FLARE: Full\-Modality Long\-Video Audiovisual Retrieval Benchmark with User\-Simulated Queries
+
+**Authors:** Qijie You; Hao Liang; Mingrui Chen; Bohan Zeng; Meiyi Qiang; Zhen H Wong; Wentao Zhang
+
+**ID:** 139338 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=VwiAEEv0xh>) | [PDF](<https://openreview.net/pdf?id=VwiAEEv0xh>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139338>)
+
+As video becomes increasingly central to information dissemination and multimodal large language models \(MLLMs\) continue to advance, evaluating video retrieval has become increasingly important\. In realistic search scenarios, this requires matching short user queries to long\-form content using both visual and auditory evidence\. Yet existing retrieval benchmarks are still dominated by short clips, single modalities, and caption\-based evaluation\. We introduce FLARE, a full\-modality long\-video audiovisual retrieval benchmark with user\-simulated queries\. Built from 399 carefully screened Video\-MME videos \(10\-\-60\\,min, 225\.4\\,h\) to ensure source quality and diversity, FLARE contains 87,697 clips annotated with vision, audio, and unified audiovisual captions, together with 274,933 user\-style queries\. Cross\-modal queries are further filtered by a hard bimodal constraint, requiring retrieval to fail under either modality alone but succeed when both are combined\. FLARE evaluates models under two regimes, caption\-based and query\-based retrieval, across vision, audio, and unified audiovisual settings\. Experiments with 15 representative retrievers show that user\-style queries substantially change model behavior, strong caption\-based performance does not always transfer to query\-based retrieval, and audio\-\-language alignment remains a key bottleneck for unified audiovisual retrieval\. Our code and data are released at https://flarebench\.github\.io/\.
+
+## Political Neutrality as Balanced Approval: A Large\-Scale Human Evaluation of AI Responses
+
+**Authors:** Jonathan Stray; David Yang; Steven Luo; Miu N Takagi; Serina Chang
+
+**ID:** 139670 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=BqLBsgGqSC>) | [PDF](<https://openreview.net/pdf?id=BqLBsgGqSC>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139670>)
+
+As AI systems increasingly shape political views, defining and evaluating AI political neutrality is an urgent problem\. Here, we propose a new definition of AI political neutrality and design a large\-scale user study to test it, releasing a new dataset PARETO with 6,696 participants and 187,488 evaluations of AI responses\. Our definition follows a simple principle grounded in political theory: when asked about a controversial issue, an AI model should generate responses that maximize approval across groups with opposing viewpoints, while balancing approval between groups\. This maximum equal approval definition allows empirical testing of whether an AI response is “neutral” and generalizes to any political context without pre\-supposing a single left\-right axis of division\. We construct a benchmark of controversial US issues, with prompts sourced from politically charged questions on Reddit and responses from frontier AI models, and recruit human participants to rate AI responses\. Across all 20 issues, we find that it is possible for AI responses to achieve high rates of approval on both sides, even as those sides disagree strongly with each other on the substance of the issues\. We also find that default responses lean liberal for GPT, Gemini, Claude, and Llama, but not Grok, and that user prompts with political charges are harder to respond to than neutral prompts\. This work introduces a rigorous definition and benchmark of AI political neutrality, and a dataset to measure progress toward it\.
+
+## Intent2CAD: How Semantic\-Parametric Supervision Shapes Text\-to\-CAD Generation
+
+**Authors:** Jinbo Yang; Shikai Jing; Mingyue Yuan
+
+**ID:** 155244 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=7BejwX1V86>) | [PDF](<https://openreview.net/pdf?id=7BejwX1V86>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155244>)
+
+Text\-to\-CAD generation aims to make CAD modeling more accessible by generating executable CAD programs from natural\-language descriptions\.  However, practical CAD workflows require more than executable geometry: generated programs should also expose reusable structure that supports later modification\.  We introduce intent\-oriented text\-to\-CAD generation, where design intent is expressed as recoverable code\-level signals: semantic features, reusable parameters, and lightweight parametric relations\.  Rather than changing the model architecture or decoding procedure, we investigate how supervision representation granularity affects both CAD generation and zero\-shot intent\-preserving editing\.  To enable this study, we construct IntentCAD\-100K, a 100K paired text\-\-code dataset built by converting low\-level CAD construction traces into executable CadQuery programs\.  We further construct IntentCAD\-Edit\-1K to evaluate zero\-shot intent\-preserving editing from the same representation perspective\.  Intent2CAD uses a two\-stage conservative lifting pipeline: semantic lifting rewrites reliable primitive groups into feature\-level operations, while parametric lifting exposes lightweight parametric relations\.  Under controlled fine\-tuning, semantic lifting mainly improves generation reliability and feature recovery, reducing IR from 2\.39% to 0\.22% and achieving 99\.96% API Recovery, while parametric lifting makes reusable relation structure explicit and further improves relation\-aware zero\-shot editing\.
+
 ## Optimal Representation Size: High\-Dimensional Analysis of Pretraining and Linear Probing
 
 **Authors:** Valentina Njaradi; Clémentine Dominé; Rachel A Swanson; Marco Mondelli; Andrew Saxe
 
-**ID:** 152669\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 152669
+**ID:** 152669 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
 [Paper](<https://openreview.net/forum?id=RHhBaG1Vop>) | [PDF](<https://openreview.net/pdf?id=RHhBaG1Vop>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152669>)
 
@@ -954,117 +550,117 @@ Learning to generalise from limited data is a fundamental challenge for both art
 
 **Authors:** Yizhen Jiang; 浩伟 郭; Tianyi Bai; Zengjie Hu; Lu Ma; Zhengyang Zhao; Haoze Sun; Peng Pei; Wentao Zhang
 
-**ID:** 139758\-\-2 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 139758
+**ID:** 139758 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
 [Paper](<https://openreview.net/forum?id=6XKGOgVQft>) | [PDF](<https://openreview.net/pdf?id=6XKGOgVQft>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139758>)
 
-_Abstract unavailable from the accessible public sources._
+Large language model agents are increasingly deployed through the Model Context Protocol \(MCP\), which allows them to discover and invoke tools across multiple servers at runtime\. Existing MCP benchmarks primarily measure task completion capability but provide limited insight into why agents fail, reporting aggregate success rates without attributing failures to specific reasoning, execution, or memory breakdowns\.  We introduce MCPHallu, a benchmark for diagnosing hallucination\-prone agent failures in MCP environments along three axes: reasoning, execution, and memory\. MCPHallu contains 358 tasks across five capability domains and runs on 36 production MCP servers in isolated containers\. Each task is designed with a structural trigger that makes one of four subtypes the dominant failure risk: Branch Collapse, Unreachable Goal, Tool Misuse, or Context Forgetting\. This design enables subtype\-level analysis rather than aggregate task success alone\.  We evaluate fourteen frontier LLM agents from eight vendors on 5,012 trajectories\. Current MCP agents remain vulnerable to hallucination\-inducing tool environments, achieving an average score of 0\.642\. Failures concentrate on Unreachable Goal tasks, where the average score drops to 0\.458 and 22\.1\\% of runs pass, indicating that agents often continue issuing tool calls or claim successful completion rather than recognizing infeasible goals\. Performance across the four subtypes is largely independent: per\-model ranks span on average 6\.9 of 13 positions, and Branch Collapse is uncorrelated with Unreachable Goal across models \($r = \-0\.12$\)\. MCPHallu is released at https://anonymous\.4open\.science/r/mcp\_hallu\.
+
+## LinuxArena: A Control Setting for AI Agents in Live Production Software Environments
+
+**Authors:** Tyler Tracy; Ram Potham; Nikolas Kuhn; Myles Heller; Anshul Khandelwal; Cody Rushing; Henri Lemoine; Miguel Brandão; Tomáš Turlík; Adam Hanson; Josh Hills; Amy D Ngo; Ram Rachum; Nik Mitchell; Falko Galperin; Oscar Sykes; Pip Arnott; Samuel P Lima; Carlos R Giudice; Matt Goldwater; Daniel J Popp; Drew de Wet; Ruben Castaing; Qi Guo; Douw Marx; Benjamin Shaffrey; Justin Shenk; Martin Milbradt; Hannah Meagher; Shaheen Ahmed\-Chowdhury; Daniel O&amp;amp;\#x27;Connell; Christopher W Canal; Buck Shlegeris; Aryan Bhatt
+
+**ID:** 138940 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=v2oaVIPUYs>) | [PDF](<https://openreview.net/pdf?id=v2oaVIPUYs>) | [Official poster](<https://neurips.cc/virtual/2026/poster/138940>)
+
+As AI agents are given more autonomy in software engineering workflows, the risks grow if they pursue goals different from the ones their users intended\. The field of AI control develops control protocols that prevent such harm without restricting the agent's ability to do useful work\. We introduce \\textbf\{LinuxArena\}, a control setting for testing such protocols, where agents operate directly on live, multi\-service production environments\. LinuxArena contains 10 public environments \(with an additional 10 held out privately\), providing 906 main tasks representing legitimate software engineering work and 92 side tasks representing safety failures such as data exfiltration and access\-control bypassing, making it the largest and most diverse control setting for agentic software engineering to date\. We demonstrate LinuxArena's utility by running sabotage and monitor evaluations: against a GPT\-5 Nano trusted monitor at a 1% step\-wise false positive rate, Claude Opus 4\.6 achieves an undetected sabotage rate of 42%\. We additionally release \\textbf\{LaStraj\}, a dataset of human\-crafted attack trajectories that achieves an undetected sabotage rate of 97% against the same monitor\. Together, these results suggest meaningful headroom for both attackers and defenders, making LinuxArena a strong testbed for developing and evaluating future control protocols\.
+
+## Flow\-Direct: Feedback\-Efficient and Reusable Guidance for Flow Models via Non\-Parametric Guidance Field
+
+**Authors:** Kim Yong Tan; Yueming LYU; Ivor Tsang; Yew Soon Ong
+
+**ID:** 151143 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=chIrbGRrfT>) | [PDF](<https://openreview.net/pdf?id=chIrbGRrfT>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151143>)
+
+Training\-free guidance enables pre\-trained diffusion and flow models to optimize application\-specific objectives using feedback from external black\-box reward functions\. However, existing methods are feedback\-inefficient because reward feedback is used only transiently to inform a localized gradient approximation or a discrete search decision, and is subsequently discarded\. To address this limitation, we propose Flow\-Direct, a framework that guides the generation process via a persistent \*guidance field\*\. Theoretically, this guidance field is analytically derived from the log\-density ratio between the base and reward\-weighted target distributions; it transports the pre\-trained distribution to the target distribution\. In practice, the field is implemented as a non\-parametric estimator constructed from all accumulated reward\-evaluated samples\. As more samples are collected during optimization, this empirical guidance field becomes increasingly accurate\. This persistent formulation yields two major advantages\. First, Flow\-Direct is highly \*feedback\-efficient\*: because every evaluated sample is used to refine the global guidance field, no reward information is wasted\. Second, the framework is naturally \*reusable\*: once optimization is complete, the collected dataset defines a reusable guidance field for generating novel target samples without additional reward evaluations, and distinct guidance fields can be combined to generate samples that simultaneously satisfy multiple objectives\.
+
+## KNN Implementation Details Can Dramatically Change Performance: An Example from Cover Trees
+
+**Authors:** Amol Khanna; Edward Raff
+
+**ID:** 139272 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=aTFEoAwK2Q>) | [PDF](<https://openreview.net/pdf?id=aTFEoAwK2Q>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139272>)
+
+Nearest neighbor search algorithms are widely used and have a long history, but we find that key implementation details are seldom reviewed in articles about them\. These details can materially impact performance, and thus change the conclusions one makes about a given algorithm's superiority\. In this article, we highlight these impacts by reviewing the Cover Tree as an example, producing RustKNN, a unified Rust implementation of three construction variants of the Cover Tree with three query modes\. Our analysis reveals: \(1\) the optimal query strategy depends on $k$ and on the dataset — single\-tree search is fastest at $k\{=\}1$ on three of our four largest datasets, while dual\-tree search is fastest at $k\{\\ge\}5$ on the three largest — and choosing the wrong query mode can cost up to a $7\.5\\times$ factor in runtime; \(2\) the cover tree base parameter, set to 2 in theory and 1\.3 in practice, is not a safe default for dual\-tree search: 1\.3 is optimal on only one of seven datasets, and on covtype it is $1\.6\\times$ slower than the optimum; \(3\) among five micro\-optimizations, only early\-exit distance computation has a consistent effect, and that effect grows with dimension \(none at $d\{=\}32$, $1\.31\\times$ at $d\{=\}54$, and $1\.49\\times$ at $d\{=\}784$\); and \(4\) all\-nearest\-neighbor and held\-out benchmarks yield different implementation rankings\. All main timing tables report medians over 20 independent allocations with bootstrap 95\\% confidence intervals\. RustKNN is open source at https://github\.com/CrowdStrike/RustKNN\.
+
+## EchoXFlow: A Beamspace Echocardiography Dataset for Cardiac Motion, Flow, and Function
+
+**Authors:** Elias Stenhede; Joanna Sulkowska; Eivind B Orstad; Henrik Schirmer; Arian Ranjbar
+
+**ID:** 139612 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=FRLt06JRGu>) | [PDF](<https://openreview.net/pdf?id=FRLt06JRGu>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139612>)
+
+We introduce EchoXFlow, a clinical echocardiography dataset for learning from ultrasound in its native acquisition geometry rather than from scan\-converted Cartesian videos\. Existing public datasets offer limited opportunities to study cross\-modal relationships between cardiac anatomy, myocardial motion, and blood flow, as Doppler is typically absent or fused as RGB overlays, and acquisitions are released after lossy vendor display processing\. EchoXFlow comprises 37125 recordings from 666 routine\-care examinations, preserving the timing, geometry, and modality relationships needed for physically grounded echo learning\. Each recording is retained as separable modality\-specific streams: temporally resolved 1D, 2D, and 3D data alongside multiple Doppler modalities, paired with a synchronized ECG\. Clinical annotations span guideline\-based measurements to dense 2D myocardial contours and 3D left\-ventricular endocardial meshes\. With its associated open\-source tooling, EchoXFlow enables cross\-modal, acquisition\-aware learning tasks that cannot be formulated from conventional scan\-converted videos alone, and serves as a testbed for 4D vision and physically grounded multi\-modal learning more broadly\.
+
+## Anymotion: A Dataset, Benchmark, and Baseline for Controllable Human Motion Editing
+
+**Authors:** Haiyang Yan; Jianxin Sun; Yuhan Wu; libin wang; Zhiwei Li; Man Zhang; Jingdong Chen; DanDan Zheng
+
+**ID:** 151900 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=X6fainOrUU>) | [PDF](<https://openreview.net/pdf?id=X6fainOrUU>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151900>)
+
+Human motion change is currently hindered by the lack of large\-scale datasets, comprehensive benchmarks, and robust algorithms capable of handling diverse motion requirements\. To address these gaps, we propose AnyMotion, a novel open\-world paradigm for highly controllable and identity\-consistent human motion editing across arbitrary scenes and actions\. Our contributions are two\-fold\. First, we establish a hierarchical label taxonomy covering six major categories and 527 fine\-grained classes, and curate HME\-1M, a large\-scale dataset containing 1\.04 million editing quadruplets via systematic data balancing, cleaning, and reverse construction\. Second, we introduce the Skeleton Chain\-of\-Thought \(SCoT\) framework, a two\-stage pipeline consisting of motion reasoning and guided generation\. In the reasoning stage, a multimodal large language model serves as a cognitive planner to derive target skeletal keypoints and MetaQueries\. These outputs subsequently function as explicit structural and semantic priors, providing the necessary guidance for the diffusion transformer to perform high\-fidelity motion generation\. Finally, built upon our label taxonomy, we present Human Motion\-Bench, the first motion\-centric benchmark equipped with multi\-category fine\-grained evaluation metrics\. Extensive experiments demonstrate that AnyMotion achieves state\-of\-the\-art performance across diverse editing scenarios\.
+
+## Can Folding Models Tell Binders from Bluffers? Evidence from POISK: The Patent\-Derived Antibody Dataset
+
+**Authors:** Daria Tupikina; Andrea Roncoli; Alexander Bujotzek; Brennan Abanades Kenyon
+
+**ID:** 139745 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=746elmHkM0>) | [PDF](<https://openreview.net/pdf?id=746elmHkM0>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139745>)
+
+Structure prediction models are increasingly deployed as zero\-shot digital screens in antibody design, operating under the assumption that high folding confidence implies true binding\. However, rigorous validation of this premise has been limited by small test sets, narrow target diversity, and the risk of data leakage from training\-adjacent structures\. Here we introduce POISK: Patent\-extracted Organization of Immunoglobulin Sequence Knowledge, a large\-scale dataset derived from the US patent literature, comprising 89074 antibody\-antigen records extracted from 10110 patents using an LLM\-based pipeline\. From this resource, we curate a balanced benchmark set of 22494 complexes: 11247 patent\-validated binders without a known resolved structure paired with putative non\-binders constructed from sequence\-similar human repertoire antibodies\. Using this dataset, we benchmark six leading structure prediction models \(AlphaFold\-Multimer, Boltz\-2, Intellifold v2, OpenFold3, Protenix\-v1, and Protenix\-v2\) on their ability to discriminate binders from decoys\. The best\-performing model, Protenix\-v2, achieves 87% pairwise accuracy on the most confident half of predictions and correctly identifies the true binder from a pool of 50 candidates in 32% of trials; this represents a substantial enrichment over random selection, yet remains far from reliable single\-candidate identification\.  Structural consensus across models also discriminates binders from decoys, with pairwise accuracy reaching 73\.1% when three or more models converge on a pose DockQ $\\geq$ 0\.23, covering around 54\.2% of pairs\)\. Yet epitope localization remains poor: the best model contacts annotated epitope residues in only 45% of cases, indicating that high confidence reflects learned statistical associations rather than accurate physical binding modes\. Our results suggest that current folding models provide useful but limited signal for antibody screening and should be complemented by orthogonal methods\. We release POISK as a community resource for future benchmarking and model training\.
+
+## Isharah\-Selfie: Continuous Sign Language Recognition Dataset for One\-handed Signing
+
+**Authors:** Ahmed A Hasanaath; Murtadha Aljubran; Sarah Alyami; Muhammad Haris Khan; Hamzah Luqman
+
+**ID:** 139100 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=l3pvG8AHwe>) | [PDF](<https://openreview.net/pdf?id=l3pvG8AHwe>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139100>)
+
+Current sign language recognition and translation benchmarks are commonly collected in controlled settings using fixed or studio\-style cameras, particularly limiting their ability to reflect how signers communicate in everyday mobile scenarios\. As such, this gap becomes increasingly evident when considering the Arabic Sign Language \(ArSL\), which is a primary sign language used across Arab countries\.  In this work, we introduce Isharah\-Selfie, a large\-scale ArSL dataset collected entirely using front\-facing smartphone cameras under unconstrained selfie conditions\. The dataset comprises 8,997 video clips performed by 16 signers across 1,493 unique sentences, covering several domains such as healthcare, education, and transportation\. Unlike conventional datasets dominated by fixed\-camera, two\-handed signing, Isharah\-Selfie captures realistic mobile communication characterized by one\-handed signing, close\-range viewpoints, partial body visibility, camera motion, unconstrained environments, and heterogeneous device resolutions\. Each video is annotated with both gloss sequences for continuous sign language recognition \(CSLR\) and Arabic sentence translations for sign language translation \(SLT\)\. Moreover, we define signer\-independent and unseen\-sentences evaluation protocols to assess generalization across unseen signers and novel sentence compositions\. Extensive benchmarks using RGB\-based and pose\-based data show that current CSLR and SLT methods remain challenged by selfie\-style signing conditions, particularly under unseen\-sentence evaluation, where compositional generalization remains weak\. By releasing Isharah\-Selfie, we aim to support research toward robust, user\-centered sign language technologies that operate reliably in realistic smartphone\-based communication settings\. The Isharah\-Selfie dataset is available on https://www\.github\.com/\.
 
 ## Nereus: A Large\-Scale Underwater Dataset for Fine\-Grained Attribute Understanding and Grounded Counting Perception
 
 **Authors:** Jingtao Deng; Zihao Jin; Yuehe Chen; Feixiang He; Shuiwang Li; Dan Zeng
 
-**ID:** 139205\-\-2 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 139205
+**ID:** 139205 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
 [Paper](<https://openreview.net/forum?id=egBeNgdC7E>) | [PDF](<https://openreview.net/pdf?id=egBeNgdC7E>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139205>)
 
-_Abstract unavailable from the accessible public sources._
+Underwater imagery records rich ecological information and supports applications such as science communication, fishery monitoring, ecological conservation, and oceanographic research\. Beyond general scene understanding, these applications require models to recognize fine\-grained biological traits and reason over spatially grounded evidence\. However, existing underwater datasets often provide coarse category labels, generic captions, or total\-count supervision, which limits their use for organism\-level analysis and ecological reasoning\.  We introduce Nereus, a large\-scale dataset for fine\-grained underwater perception that jointly supports Fine\-Grained Object Attribute Understanding and Grounded Counting Perception\. Nereus contains 88K images and 2\.68M question\-answer pairs, including annotations for 136K marine organism objects across 2,690 species and 1,515 genera, as well as 65K point annotations and 67K grounded counting QA pairs\. Experiments with representative multimodal models show that Nereus improves downstream adaptation over existing underwater\-domain data and provides a foundation for future research on fine\-grained marine perception\.
 
-## AgentCollabBench: Diagnosing When Good Agents Make Bad Collaborators
+## Croissant Baker: Metadata Generation for Discoverable, Governable, and Reusable ML Datasets
 
-**Authors:** Aritra Mazumder; Shubhashis Roy Dipta; Nusrat Jahan Lia; Tanzila Khan; Kainat R Hossain; Nehaa Shri; Humayra Tasnim; Gour G Shawon; Shubhrangshu Debsarkar; Sumaiya A Rani; Al Jami Islam Anik; Debjoty Mitra; Al Nafeu Khan
+**Authors:** Rafi Al Attrach; Rajna Fani; Sebastian Lobentanzer; Joan Giner\-Miguelez; DEBANSHU DAS; Varuni H K; Nobin Sarwar; Rajat Ghosh; Anwai Archit; Surbhi Motghare; Christina C Parry; Luis Oala; Lara Grosso; Joaquin Vanschoren; Steffen Vogler; Sujata Goswami; Eric Rosenthal; Marzyeh Ghassemi; Matthew McDermott; Tom Pollard
 
-**ID:** 139450\-\-2 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+**ID:** 139027 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-**Repeated source row:** 139450
+[Paper](<https://openreview.net/forum?id=pVO3A5soQi>) | [PDF](<https://openreview.net/pdf?id=pVO3A5soQi>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139027>)
 
-[Paper](<https://openreview.net/forum?id=P9qqypDzuC>) | [PDF](<https://openreview.net/pdf?id=P9qqypDzuC>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139450>)
+Croissant has emerged as the metadata standard for machine learning datasets, providing a structured, JSON\-LD\-based format that makes dataset discovery, automated ingestion, and reproducible analysis machine\-checkable across ML platforms\. Adoption has accelerated, and NeurIPS now requires Croissant metadata in every submission to its dataset tracks\. Yet in practice Croissant generation usually starts with uploading data to a public platform, a path infeasible for governed and large local repositories that hold much of the high\-value data ML increasingly relies on\. We release Croissant Baker, a local\-first, open\-source command\-line tool that generates validated Croissant metadata directly from a dataset directory through a modular handler registry\. We evaluate Croissant Baker on over 140 datasets, scaling to MIMIC\-IV at 886 million rows and 374 Parquet files\. On held\-out comparisons against producer\-authored or standards\-derived ground truth, Croissant Baker reaches 97–100% agreement across multiple domains\.
 
-Multi\-agent systems achieve state\-of\-the\-art outcomes through peer     collaboration\. However, when an agent in the pipeline silently drops a     constraint, the system's final output may look correct even though the     reasoning chain was quietly corrupted, and existing outcome\-based     evaluations are blind to such multi\-hop process failures\. To make these     vulnerabilities measurable before deployment, we introduce     AgentCollabBench, a diagnostic benchmark of 900 human\-validated tasks     spanning software engineering, DevOps, and data engineering\. Each task     isolates one of four behavioral risks: instruction decay \(does a     constraint survive peer pressure?\), false\-belief contagion \(does a     falsehood spread through consensus?\), context leakage \(does information     bleed between tasks?\), and tracer durability \(does marked data reach the     final agent?\)\. Evaluating four modern LLMs \(GPT 4\.1 mini,     Gemini 2\.5 Flash Lite, Qwen\-3\.5\-35B\-A3B, and Llama 3\.1 8B Instruct\),     we expose model\-specific vulnerability profiles invisible to     outcome\-only evaluation; Qwen\-3\.5\-35B\-A3B, for example, leads on     tracer durability and instruction stability, while GPT 4\.1 mini leads     on leakage containment and false\-belief resistance\.     Beyond per\-model differences, communication topology emerges as a     primary risk factor that explains 7\-40% of the variance in multi\-hop     information survival\. The effect traces to a synthesis bottleneck     specific to converging\-DAG nodes: an agent weighing competing parent     inputs discards constraints carried by a minority branch, a bottleneck structurally absent from linear chains\. AgentCollabBench demonstrates that suboptimal     topology can silently erase the safeguards of highly capable models,     arguing that multi\-agent reliability is fundamentally a structural     problem and that scaling model intelligence alone is no substitute for     architecture\.
+## DepthMaster: Unified Monocular Depth Estimation for Perspective and Panoramic Images
 
-## SCTI: Self\-Calibrated Trident Identification of Black\-Box LLM Watermarks
+**Authors:** Pengfei Wang; Shihao Wang; liyi chen; Zhiyuan Ma; Guowen Zhang; Lei Zhang
 
-**Authors:** Zhixiong Nan; Haoyu Lu; Tao Xiang; Yiwei Wang
+**ID:** 149698 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
 
-**ID:** 149151\-\-2 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
+[Paper](<https://openreview.net/forum?id=o6YcOXGpEx>) | [PDF](<https://openreview.net/pdf?id=o6YcOXGpEx>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149698>)
 
-**Repeated source row:** 149151
-
-[Paper](<https://openreview.net/forum?id=sSXd2zEa4O>) | [PDF](<https://openreview.net/pdf?id=sSXd2zEa4O>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149151>)
-
-_Abstract unavailable from the accessible public sources._
-
-## Label\-Efficient Dataset Pruning via Semi\-Supervised Pseudo\-Labeling
-
-**Authors:** Yeseul Cho; Baekrok Shin; Changmin Kang; Chulhee Yun
-
-**ID:** 150749\-\-2 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 150749
-
-[Paper](<https://openreview.net/forum?id=fgWh6OZ6W8>) | [PDF](<https://openreview.net/pdf?id=fgWh6OZ6W8>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150749>)
-
-_Abstract unavailable from the accessible public sources._
-
-## Fast Diverse Nearest Neighbor Search
-
-**Authors:** Justin Chen; Soham Nagawanshi; Shenghao Xie; Haike Xu; Alan Zhou; Samson Zhou
-
-**ID:** 156099\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 156099
-
-[Paper](<https://openreview.net/forum?id=0NrAOwOmiN>) | [PDF](<https://openreview.net/pdf?id=0NrAOwOmiN>) | [Official poster](<https://neurips.cc/virtual/2026/poster/156099>)
-
-In the $k$\-diverse nearest neighbor search problem, the input is a dataset in which each point is assigned a color, and given a query $q$, the goal is to retrieve $k$ approximate nearest neighbors with distinct colors\. This color diversity metric is highly essential for information retrieval tasks where results are required to have different categories, e\.g\., recommending products from different sellers\. Previous state\-of\-the\-art solution by Anand et al\. \[ICML 2025\] constructs a diversity\-aware graph to meet this requirement\. However, they suffer from an $\\mathcal\{O\}\(k^2\)$  multiplicative query time overhead, creating a computational bottleneck when $k$ is large\.  To break this barrier, we propose a novel color bucketing framework that selects a subset of colors in each bucket and instantiates an independent approximate nearest neighbor search algorithm on the corresponding points\. Inspired by group testing, we provide a randomized color sampling scheme that achieves an $\\mathcal\{O\}\\left\(k^\{1\-\\frac\{1\}\{c^2\}\-o\(1\)\}\\log k\\right\)$ overhead in Euclidean spaces and an $\\mathcal\{O\}\\left\(k \\log k\\right\)$ overhead in general metric spaces, where $c$ is the approximation factor, reducing a factor of $k$\. In addition, the space usage to store the data structure matches or improves upon prior methods\. Empirical results on semi\-synthetic and real\-world datasets demonstrate that our approach achieves significantly faster search times and higher recall compared to state\-of\-the\-art diversity search baselines\.  Furthermore, we introduce a dataset\-oblivious deterministic bucketing scheme using expander graphs for a relaxed diverse search problem that only requires $k\(1\-\\varepsilon\)$ colors\. Here, dataset\-oblivious means that the color bucket construction does not depend on the spatial configuration of the dataset\. We then establish an $\\Omega\(k^2\)$ lower bound on the number of buckets for any dataset\-oblivious deterministic bucketing scheme that gives an \\emph\{exact\} $k$\-diverse solution\. We subsequently circumvent this by a dataset\-aware adaptive segment tree bucketing scheme with an overhead of only $\\mathcal\{O\}\(k \\log N\)$, where $N$ is the number of colors\. As an extension of our results, we solve the problem with general diversity metric, where the goal is to maximize the minimum pair\-wise distance of the $k$ solutions, and improve the query time\.
-
-## Space\-Optimal Streaming Algorithms via Efficient Encodings
-
-**Authors:** Liudeng Wang; David Woodruff; Shenghao Xie; Samson Zhou
-
-**ID:** 155183\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 155183
-
-[Paper](<https://openreview.net/forum?id=7fVfD6Nmw4>) | [PDF](<https://openreview.net/pdf?id=7fVfD6Nmw4>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155183>)
-
-We study the problem of constructing coresets on data streams: Given a dataset of $n$ points in $\\mathbb\{R\}^d$ arriving sequentially, the goal is to maintain a small weighted subset that accurately approximates the objective values of the entire dataset for a given class of query functions\. Previous methods like merge\-and\-reduce and online sensitivity sampling required more space than the size of an optimal such subset in the offline setting\. In this work, we show that such overheads are not necessary by presenting space\-optimal streaming algorithms for central high\-dimensional optimization problems such as Euclidean $\(k,z\)$\-clustering and $L\_p$ subspace embeddings, as well as applications to projection\-cost preserving sketches\.   For $\(k,z\)$\-clustering, our streaming algorithm uses memory independent of the number $n$ of input points \(in words of memory\) and the aspect ratio $\\Delta$, yielding a coreset with an optimal $\\tilde\{\\mathcal\{O\}\}\\left\(\\frac\{dk\}\{\\min\(\\varepsilon^4,\\varepsilon^\{z\+2\}\)\}\\right\)$ words of memory for accuracy parameter $\\varepsilon\\in\(0,1\)$\. For $L\_p$ subspace embeddings, where the rows of matrix $\\mathbf\{A\} \\in \\mathbb\{R\}^\{n \\times d\}$ arrive in an insertion\-only stream, we achieve an efficient algorithm that uses optimal space for different ranges of $p$: $\\tilde\{\\mathcal\{O\}\}\\left\(\\frac\{d^2\}\{\\varepsilon^2\}\\right\)$ words for $p\\le 2$ and $\\tilde\{\\mathcal\{O\}\}\\left\(\\frac\{d^\{p/2\+1\}\}\{\\varepsilon^2\}\\right\)$ words for $p&gt;2$, both independent of the number of rows $n$\. Thus, our work shows that streaming algorithms can match offline algorithms in space complexity\.
-
-## ALETHEIA: A Multi\-Frequency Eddy Current Pulsed Thermography Dataset for Neural Operator Learning in Nondestructive Testing
-
-**Authors:** Changbin Sun; jie Xiao; Xiaotian Chen; Yuankai Wu
-
-**ID:** 139797\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 139797
-
-[Paper](<https://openreview.net/forum?id=3x55aqNQ9m>) | [PDF](<https://openreview.net/pdf?id=3x55aqNQ9m>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139797>)
-
-Learning neural solvers for spatiotemporal partial differential equations \(PDEs\) under real\-world constraints remains a key challenge in scientific machine learning, especially for inverse tasks with sparse and noisy boundary observations\. We present the Aletheia dataset, the first 3D benchmark for learning data\-driven solvers in the context of nondestructive testing \(NDT\)\. The dataset simulates eddy\-current\-induced heating in conductive solids and models the resulting transient heat propagation governed by the heat equation\. Aletheia contains over 4,700 high\-resolution samples across 10 excitation frequencies \(1\-100\\,kHz\), each providing volumetric heat source and temperature fields over time\. It supports both forward prediction of temperature evolution and inverse reconstruction of internal heat sources or defects from surface infrared measurements\. Real infrared thermography data from cracked rail specimens are included for calibration and generalization studies\. We define three canonical tasks on both regular and irregular grids and benchmark them using various neural operators\. Aletheia establishes a unified platform for evaluating neural PDE solvers under realistic NDT conditions, enabling progress in reliable, data\-driven inverse modeling\.
-
-## Knowledge Transfer Scaling Laws for 3D Medical Imaging
-
-**Authors:** Ho Hin Lee; Dongna Du; Chu Wang; Yuankai Huo; Shi Gu; James Gee; Yifan Wu
-
-**ID:** 149904\-\-2 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 149904
-
-[Paper](<https://openreview.net/forum?id=mLgd1pC49X>) | [PDF](<https://openreview.net/pdf?id=mLgd1pC49X>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149904>)
-
-Vision foundation models are increasingly moving beyond 2D to volumetric domains such as 3D medical imaging, where unified pretraining across different imaging modalities \(i\.e\. CT, MRI, and PET\) could provide foundational models for diverse clinical tasks\. However, training such models requires mixing heterogeneous imaging domains, and current mixture strategies remain largely heuristic\. In this work, we observe that different medical imaging domains scale at variable rates during pretraining, and knowledge transfer between domains is strongly asymmetric: training on one domain can substantially improve another, but the reverse may be much weaker\. Interestingly, both MAE reconstruction loss and cross\-domain transfer follow predictable power\-law trends with domain\-specific behaviors\. Motivated by these findings, we formulate data allocation as a scaling\-law optimization problem\. The derived allocations reveal an interpretable hub\-and\-island structure: highly transferable domains emerge as hubs that benefit many others and deserve strategic allocation, while isolated domains act as islands requiring direct investment\. Empirically, transfer\-aware allocation outperforms data\-proportional sampling by up to 58\\% and generalizes well to unseen budgets with r=0\.989\. Downstream validation on disease classification and organ/lesion segmentation further confirms that the derived transfer\-aware mixtures provide stronger pretrained representations for clinical 3D medical imaging tasks\.
+While monocular depth estimation has achieved significant progress, achieving generalized metric depth estimation for both narrow field\-of\-view \(FoV\) perspectives and $360^\\circ$ panoramas remains an unsolved challenge\. Existing methods are often tailored to specific camera types and struggle to produce accurate metric depth that generalizes across diverse settings\. This limitation stems from two key challenges: the inherent geometric discrepancy between perspective and panoramic cameras, and the scarcity of panoramic training data with metric annotations\. In this work, we introduce \\textbf\{DepthMaster\}, a unified metric depth estimation framework\. Rather than employing specialized networks to learn spherical distortions, we reformulate the problem by decomposing panoramic images into overlapping perspective patches\. Crucially, distinct from prior projection\-based methods that rely on ad\-hoc architectural modifications to handle boundaries, we introduce a novel Correspondence Consistency Loss \(CCL\) and inject virtual projection cameras as geometric priors, allowing us to seamlessly stitch the patches while avoiding specialized operators and keeping the backbone largely compatible with standard Transformer designs\. This strategy also resolves the geometric differences by unifying all inputs into a canonical perspective representation, and effectively circumvents data scarcity by directly unlocking powerful metric priors from vast perspective datasets\. Trained on a mixed dataset that contains only one panorama dataset, DepthMaster achieves state\-of\-the\-art zero\-shot performance on 13 diverse datasets, outperforming not only universal methods but also leading specialist models in both perspective and panoramic domains\. The code and models of DepthMaster will be released\.
 
 ## Phantom Transfer: Data Poisoning can Survive Data\-Level Defences
 
 **Authors:** Andrew Draganov; Tolga Hasan Dur; Anandmayi \(Andi\) Bhongade; Mary Phuong
 
-**ID:** 148827\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 148827
+**ID:** 148827 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
 [Paper](<https://openreview.net/forum?id=uqYXmNMqRZ>) | [PDF](<https://openreview.net/pdf?id=uqYXmNMqRZ>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148827>)
 
@@ -1074,169 +670,491 @@ We present a data poisoning attack\-\-\-Phantom Transfer\-\-\-with the property 
 
 **Authors:** Vineet Goyal; Jiangze \(Jay\) Han; Will Ma
 
-**ID:** 150544\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 150544
+**ID:** 150544 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
 [Paper](<https://openreview.net/forum?id=hL3RIcTy5X>) | [PDF](<https://openreview.net/pdf?id=hL3RIcTy5X>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150544>)
 
 Direct Preference Optimization \(DPO\) has become a standard method for preference\-based fine\-tuning in RLHF pipelines\. A practical but largely heuristic step in DPO is dataset curation: given a fixed budget of preference labels, which candidate pairs should be compared to produce the most informative training set and the best downstream policy? This paper studies DPO dataset curation as a sampling\-design problem\. We model the curated dataset by a sampling design over candidate pairs and analyze how this design propagates through DPO training to the KL\-regularized RLHF objective\.  Our main results provide matching upper and lower bounds on the RLHF optimality gap of the policy learned from a curated DPO dataset\. The bounds reveal a simple structural message: the effect of pair selection enters only through a single design\-dependent matrix that summarizes how informative the collected comparisons are for learning the policy parameters\. This leads to a trace\-form criterion that characterizes both an achievable performance guarantee for the DPO estimator and an information\-theoretic lower bound for any induced policy estimator, thereby identifying a canonical objective for comparison curation under budget constraints\.
 
-## Early Prediction of Future Behavioral Strategy from Process Traces
+## Cracks in the Foundation: A Civil Infrastructure Dataset to Challenge Vision Foundation Models
 
-**Authors:** Robert Kasumba; Dennis Barbour; Chien\-Ju Ho
+**Authors:** Nicola Farronato; Niccolò Avogaro; Thomas Frick; Mattia Rigotti; Rizwan U Khan; Michele Magno; Konrad Schindler; A\. Cristiano I\. Malossi; Florian Scheidegger
 
-**ID:** 149638\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+**ID:** 139052 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-**Repeated source row:** 149638
+[Paper](<https://openreview.net/forum?id=nxteZPGIxC>) | [PDF](<https://openreview.net/pdf?id=nxteZPGIxC>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139052>)
 
-[Paper](<https://openreview.net/forum?id=ob4yUUSPk3>) | [PDF](<https://openreview.net/pdf?id=ob4yUUSPk3>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149638>)
+Automated structural health monitoring is essential to prevent catastrophic infrastructure failures\. Precise, pixel\-level defect segmentation is needed to accurately assess structural integrity, but progress in defect segmentation for civil infrastructures has been held back by an extreme scarcity of data, which requires costly expert annotation\. The need for data is accentuated by algorithmic hurdles intrinsic to the problem, including center\-bias and the need to rely more on shape when inspecting nearly textureless building materials\. To remove the bottleneck, we introduce \*\*Cracks in the Foundation \(CiF\)\*\*, the largest and most detailed civil infrastructure \(instance\) segmentation dataset to date, comprising $\\approx$150,000 high\-resolution images meticulously curated over five years in collaboration with civil engineering experts\. With the help of this unprecedented data source, we expose a blind spot of current visual AI: despite the advent of promptable Foundation Models \(FMs\) and Vision Language Models \(VLMs\), and despite the impressive abilities of today's specialised segmentation models, it turns out that dense image understanding in the built environment is nowhere near solved\. Our evaluations indicate that even the most recent zero\-shot FMs face significant challenges when deployed on real\-world infrastructure and even the performance of specialised models with domain\-specific supervision plateaus at  $\\approx$25\\% mAP\. CiF establishes inspection of civil infrastructure, an elementary and seemingly easy perceptual task, as an open challenge that reveals fundamental weaknesses of present\-day models trained predominantly on internet images, literally and figuratively highlighting \*cracks in the current foundation model paradigm\*\.
 
-Adaptive systems often need to make task\-specific decisions about a person from limited prior evidence: a tutor may need to anticipate how a learner will approach a new problem, a game may need to adapt when a player enters a new level, and a human\-AI system may need to infer whether a partner will persist with a plan or switch goals\. These decisions depend on person\-level behavioral tendencies that shape how people solve related tasks, but such tendencies are difficult to infer from standard behavioral evidence\. One approach is to use aggregate outcome summaries, such as scores, completion rates, or productivity measures; these summaries are compact and available across tasks, but can collapse distinct behavioral processes into similar outcomes\. Another approach is to use process\-level traces, which record how behavior unfolds over time; however, process modeling within a single task can entangle stable person\-level tendencies with task\-specific layout, timing, and affordances\. In this work, we study early cross\-task behavioral inference: whether partial process traces from multiple source tasks can reveal transferable person\-level behavioral structure that predicts strategy in a held\-out target task\. We introduce Process\-Level Latent Variable Models \(PLVM\), which encode task\-specific traces and fuse them into a shared person\-level latent representation for cross\-task prediction\. In PowerWash Simulator, a naturalistic telemetry dataset of real human gameplay, PLVM uses partial traces from two earlier cleaning tasks to predict whether a player will exhibit locally persistent Zone Planner behavior or frequent Zone Hopper behavior in the held\-out Fire Station level\. Controlled simulations with known latent behavioral types show that cross\-task fusion helps when different source tasks reveal complementary dimensions of a shared latent behavioral process\. These results suggest that process\-level cross\-task modeling can support early prediction of target\-task behavioral strategy when waiting to observe sufficient target\-task behavior is impractical\.
+## Ad\-Hoc Teamwork from Human Demonstrations
 
-## AgentLens: Revealing The Lucky Pass Problem in SWE\-Agent Evaluation
+**Authors:** Darius Muglich; Niklas Lauffer; Tin Dizdarević; Jakob Foerster
 
-**Authors:** Priyam Sahoo; Gaurav Mittal; Xiaomin Li; Shengjie Ma; Benjamin Steenhoek; Pingping Lin; Yu Hu
+**ID:** 148597 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-**ID:** 138951\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+[Paper](<https://openreview.net/forum?id=wYE8NC5FXe>) | [PDF](<https://openreview.net/pdf?id=wYE8NC5FXe>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148597>)
 
-**Repeated source row:** 138951
+Human players in cooperative games often rely on conventions: reusable patterns of play that coordinate well when used by the whole team, but can fail otherwise\. Evaluating agents in this setting is difficult because human demonstration datasets are usually unlabeled: trajectories do not identify which player, group, or convention produced them\. As a result, standard proxy\-based evaluations can miss important population diversity\. In particular, proxy bots produced by regularised self\-play around a pooled behavioural cloning policy can remain concentrated around a single dominant mode of play\. We introduce a pipeline for recovering and evaluating this hidden convention diversity from unlabeled demonstrations\. Our method first learns latent convention structure from the dataset, then selects a compact set of distinct but plausible conventions, and finally reconstructs each selected convention into a high\-performing playable proxy using KL\-regularised PPO\. A key practical challenge is that KL\-regularised PPO is sensitive to the KL penalty, which is often tuned using online interaction\. We provide an empirical offline calibration procedure for choosing this KL penalty in the PPO\+KL reconstruction settings studied here\. On Hanabi, we find that the BC\-derived proxy suite is highly concentrated, and that the relative ordering of agents changes when evaluation uses the latent proxy suite instead\.
 
-[Paper](<https://openreview.net/forum?id=uHjkDW1QfY>) | [PDF](<https://openreview.net/pdf?id=uHjkDW1QfY>) | [Official poster](<https://neurips.cc/virtual/2026/poster/138951>)
+## Don't Match the Noise: Distribution Matching under Unknown Measurement Error with an Audit Sample
 
-Evaluation of software engineering \(SWE\) agents is dominated by a binary signal: whether the final patch passes the tests\. This outcome\-only view treats a principled solution and a chaotic trial\-and\-error process as equivalent\. We show that this equivalence is empirically false\. We evaluate 2,614 OpenHands trajectories from eight model backends on SWE\-bench Verified\. Of the 60 tasks in this corpus, 47 have enough passing trajectories to construct task\-level process references, yielding a 1,815\-trajectory evaluation subset\. Among passing trajectories in this subset, 10\.7% exhibit behavior we call a Lucky Pass: regression cycles, blind retries, missing verification, or temporally disordered exploration, implementation, and verification\.  We introduce AgentLens, a framework for process\-level assessment of SWE\-agent trajectories, and release AgentLens\-Bench, a dataset of 1,815 trajectories annotated with quality scores, waste signals, divergence points, and 47 task\-level Prefix Tree Acceptor \(PTA\) references\. AgentLens combines two components\. First, it merges multiple passing solutions for the same task into a PTA reference space of correct behaviors\. Second, it uses a context\-sensitive intent\-stage labeler that assigns actions to Exploration, Implementation, Verification, or Orchestration using trajectory history rather than tool identity alone\.  On AgentLens\-Bench, the composite score separates passing trajectories into Lucky, Solid, and Ideal tiers; decomposes Lucky Passes into five recurring mechanisms; and changes how the eight evaluated model backends are ranked compared with pass rate alone\. Across these models, AgentLens classifies between 0\.5% and 23\.2% of successful trajectories as Lucky, and some models move by as many as five rank positions when ranked by quality score instead of pass rate\. We release the anonymized project repository, including the AgentLens\-Bench dataset and AgentLens SDK, at https://anonymous\.4open\.science/r/agentlens\-app\-6810/\.
+**Authors:** Arya Farahi; Ritwik Vashistha
 
-## CoilStellaration: A Dataset and Benchmark for Engineering\-Aware Stellarator Coilset Generation
+**ID:** 153320 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
 
-**Authors:** Jan\-Hendrik Ewers; Santiago Cadena; Nicolò Foppiani; Andrea Merlo
+[Paper](<https://openreview.net/forum?id=MCFiU6DNGg>) | [PDF](<https://openreview.net/pdf?id=MCFiU6DNGg>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153320>)
 
-**ID:** 139216\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+Real\-world machine learning systems often operate on imperfect measurements: sensors are noisy, annotations are produced by non\-experts, and scientific observations are often indirect\. In these settings, classic distribution comparison tools such as maximum mean discrepancy \(MMD\) can be systematically biased, matching artifacts of the measurement process rather than the underlying mechanisms of interest\. We study a practical regime in which noisy observations are abundant, but only a small audited subset contains ground\-truth measurements\. We propose measurement\-error\-corrected MMD \(MEC\-MMD\), an audit\-based estimator that debiases kernel evaluations without requiring a noise model\. MEC\-MMD is exactly unbiased for the oracle MMD under simple random auditing, admits an explicit variance decomposition, and is consistent for the population MMD, achieving the standard $O\_p\(N^\{\-1/2\}\)$ rate when the audit size scales with the dataset\. We demonstrate the utility of distributional matching with MEC\-MMD loss for both parameter estimation and unsupervised applications, showing that MEC\-MMD consistently outperforms MMD and alternative methods\. These results provide a principled foundation for robust distribution comparison, simulation\-based inference, and learning in noisy real\-world machine learning pipelines\.
 
-**Repeated source row:** 139216
+## InSpect: A Curated Natural History Collection Dataset for Insect Specimen Understanding
 
-[Paper](<https://openreview.net/forum?id=eD6yGqTL8u>) | [PDF](<https://openreview.net/pdf?id=eD6yGqTL8u>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139216>)
+**Authors:** Junhao Zhang; Feng Xu; Ahalya Ravendran; Nicole Fisher; Brendan Tidd; Lars Petersson; Dadong Wang; Xun Li
 
-Stellarators are fusion energy devices that confine hot plasma using a carefully shaped magnetic field, and they are one of the most promising candidates in the race towards commercial fusion\. Among the many systems that make up a stellarator, the electromagnetic coils generate the confining magnetic field\. Their design is the key factor in deciding whether a stellarator can be practically engineered and cost‑effectively realized\. Coilset design is an intrinsically complex problem: it does not admit either a closed or a unique solution, making it suitable for optimization\. Coilset optimization is therefore at the heart of stellarator design: a coilset must accurately reproduce a target magnetic field while satisfying stringent engineering constraints on coil spacing, curvature, and length\. Although recent datasets have accelerated progress on stellarator equilibria optimization, data\-driven coilset design is limited by the lack of standardized datasets that pair target plasma configurations with engineering\-aware coilsets\. Here, we release a dataset \(https://huggingface\.co/datasets/proxima\-fusion/coilstellaration\) of 177,000 optimized stellarator coilsets targeting plasma configurations sampled from the publicly available ConStellaration dataset\. For each configuration, we optimized coilsets to reproduce the magnetic field while satisfying a diverse set of engineering constraints\. Alongside the dataset, we introduce a benchmark for conditional coilset generation: given a target plasma boundary and a set of engineering requirements, a model should produce a coilset that satisfies the engineering constraints while reproducing the target field\. We provide reference code, evaluation scripts and baselines models trained on a subset of the provided data \(https://github\.com/proximafusion/coilstellaration\)\. Beyond enabling better optimization initializations and one\-shot coil design, our dataset provides a testbed for data\-driven constrained optimization and for studying which plasma geometry features predict simpler, more engineerable coils\. By releasing data, and code for benchmarks and baselines, we aim to lower the barrier for machine learning and optimization researchers to engage with stellarator coilset design and accelerate progress toward engineerable and cost\-effective stellarators power plants\.
+**ID:** 139783 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-## AnyHand: A Large\-Scale Synthetic Dataset for RGB\(\-D\) Hand Pose Estimation
+[Paper](<https://openreview.net/forum?id=51J0UrBZZy>) | [PDF](<https://openreview.net/pdf?id=51J0UrBZZy>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139783>)
 
-**Authors:** Chen Si; Yulin Liu; Bo Ai; Jianwen Xie; Rolandos Alexandros Potamias; Chuanxia Zheng; Hao Su
+Visual insect specimen understanding aims to identify biological taxa and characterize morphology\-relevant structures from specimen images\. Existing insect benchmarks have advanced this problem through large\-scale pretraining and multimodal learning, but remain centered on taxonomic recognition with strong auxiliary modalities\. We introduce \\textbf\{InSpect\}, a curated natural history collection dataset containing 48,184 digitized insect specimen images with aligned crops, hierarchical taxonomy, label\-derived structured metadata, and 1,859 images with fine\-grained anatomical part masks\. We thus establish two benchmark settings\. The first is \\textbf\{open taxonomic recognition\}, which evaluates zero\-shot, fine\-tuned, and unseen\-taxon recognition using cropped insect images, label\-derived metadata, or their combination\. The second is \\textbf\{fine\-grained anatomical part segmentation\}, which evaluates supervised and text\-guided segmentation of insect structures such as antennae, legs, wings, and body regions\. Experiments show that open taxonomic recognition remains challenging despite strong closed\-set performance, and that specimen metadata provides useful but unstable contextual cues\. For anatomical segmentation, closed\-set segmentation models remain weak on thin structures, and zero\-shot open\-vocabulary models often fail to distinguish insect parts from the body or background\. Together, these results show that InSpect enables systematic evaluation of insect specimen understanding across cropped visual morphology, label\-derived context, and fine\-grained anatomical annotations\.
 
-**ID:** 139245\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+## $\\mathbf\{D^\{3\}S^\{2\}\}$: Diffusion\-Guided Dataset Distillation for Semantic Segmentation
 
-**Repeated source row:** 139245
+**Authors:** Wenjie Zheng; Haoji Hu; Jiali Lu; Xingze Zou; Jing Wang
 
-[Paper](<https://openreview.net/forum?id=cUZmslkWyQ>) | [PDF](<https://openreview.net/pdf?id=cUZmslkWyQ>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139245>)
+**ID:** 155224 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-We present AnyHand, a large\-scale synthetic dataset designed to advance the state of the art in 3D hand pose estimation\. While recent works with foundation approaches have shown that scaling training data markedly improves hand pose estimation, existing real\-world datasets are limited in coverage, and prior synthetic datasets rarely provide occlusions, arm details, and aligned depth together at scale\. To address this bottleneck, our proposed AnyHand contains 2\.5M single\-hand and 4\.1M hand\-object interaction RGB\-D images, with rich geometric annotations\. We show that extending the original training data recipes of existing RGB baselines with AnyHand yields significant gains on multiple benchmarks \(FreiHAND and HO\-3D\), even when keeping the architectures and training schemes fixed\. Together with extensive ablations on the scale and composition of the training data setups, these results suggest that training data diversity and quality are as critical as scale for advancing hand pose estimation\. We further examine the utility of AnyHand's aligned depth maps in the appendix, showing that scaling RGB\-D supervision with AnyHand allows a lightweight depth\-fusion variant of existing RGB baselines to outperform prior RGB\-D methods\.
+[Paper](<https://openreview.net/forum?id=7L1ql4wXb3>) | [PDF](<https://openreview.net/pdf?id=7L1ql4wXb3>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155224>)
 
-## HiGraph: A Large\-Scale Hierarchical Graph Dataset for Malware Analysis
+Dataset distillation \(DD\) aims to compress large\-scale datasets into compact synthetic sets while preserving training efficacy\. However, existing studies mainly focus on image classification, leaving dense prediction tasks such as semantic segmentation largely underexplored\. In this work, we identify three key challenges for segmentation DD: \(\*i\*\) long\-tailed class imbalance, \(\*ii\*\) the need for strict pixel\-wise alignment between images and dense labels, and \(\*iii\*\) the high computational cost of optimizing high\-resolution data with complex models\. To address these challenges, we propose $\\mathbf\{D^\{3\}S^\{2\}\}$, a \*\*D\*\*iffusion\-guided \*\*D\*\*ataset \*\*D\*\*istillation framework for \*\*S\*\*emantic \*\*S\*\*egmentation\. Our method adopts a two\-stage design\. In \*\*Class\-Balanced Mask Selection\*\*, we construct a representative mask set via a greedy strategy that prioritizes underrepresented classes\. In \*\*Diffusion\-Guided Image Synthesis\*\*, we employ a pretrained layout\-to\-image diffusion model to generate images conditioned on the selected masks, naturally ensuring spatial alignment\. To further enhance the training utility of synthesized data, we introduce guided diffusion sampling with two complementary objectives: a segmentation\-consistency loss for pixel\-level alignment, and a class\-wise feature matching loss for aligning per\-class feature statistics across layers\. Extensive experiments demonstrate the superiority of $D^\{3\}S^\{2\}$\. Notably, at an extremely compression rate of 1\\%, our method achieves 24\.99\\% and 35\.49\\% mIoU on ADE20K and COCO\-Stuff with Mask2Former \(Swin\-S\), outperforming random selection by 9\.34\\% and 5\.70\\%, respectively\.
 
-**Authors:** Han Chen; Hanchen Wang; Hongmei Chen; Ying Zhang; Lu Qin; Wenjie Zhang
+## View\-Spectral Reconciliation Learning for Text\-based Multispectral Aerial–Ground Person Re\-Identification
 
-**ID:** 139227\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+**Authors:** Zhongao Zhou; Bin Yang; Yuxuan Zhao; Yudi Xie; Jun Chen; Mang Ye
 
-**Repeated source row:** 139227
+**ID:** 153176 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=djQ8j3qxbm>) | [PDF](<https://openreview.net/pdf?id=djQ8j3qxbm>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139227>)
+[Paper](<https://openreview.net/forum?id=NHJz7Yvk50>) | [PDF](<https://openreview.net/pdf?id=NHJz7Yvk50>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153176>)
 
-The advancement of graph\-based malware analysis is critically limited by the absence of large\-scale datasets that capture the inherent hierarchical structure of software\. Existing methods often oversimplify programs into single\-level graphs, failing to model the crucial semantic relationship between high\-level functional interactions and low\-level instruction logic\. To bridge this gap, we introduce HiGraph, the largest public hierarchical graph dataset for malware analysis, comprising over 200M Control Flow Graphs \(CFGs\) nested within 499K Function Call Graphs \(FCGs\)\. This two\-level representation preserves structural semantics essential for building robust detectors resilient to code obfuscation and malware evolution\. We demonstrate HiGraph’s utility through a large\-scale analysis that reveals distinct structural properties of benign and malicious software, establishing it as a foundational benchmark for the community\. The dataset and tools are publicly available at https://higraph\.org\.
+Conventional text\-based person re\-identification \(ReID\) approaches mainly rely on visible\-spectrum images captured from ground\-level viewpoints\. However, with the increasing prevalence of UAVs and multispectral imaging systems, pedestrians can be captured from both ground and aerial viewpoints, and different spectral sensors provide complementary cues that reveal diverse pedestrian characteristics\. As a result, conventional text\-based ReID methods become inadequate for such retrieval scenarios\. To address this limitation, we introduce a novel task termed Text\-based Multispectral Aerial\-Ground Person Re\-Identification \(TMAG\-ReID\), which aims to retrieve pedestrian images across aerial and ground viewpoints under multispectral scenarios using textual descriptions\. To facilitate this task, we construct the T\-MSAG dataset, which consists of multispectral pedestrian images captured from aerial and ground viewpoints, paired with corresponding textual descriptions\. Furthermore, we propose a novel View\-Spectral Reconciliation Learning framework \(VSRL\) that leverages textual guidance to interweave discriminative semantics across distinct views and spectral modalities\. This fusion yields robust cross\-view and cross\-modal pedestrian features, thereby enabling high\-performance retrieval\. Extensive experiments on the T\-MSAG dataset demonstrate the effectiveness of VSRL\.
+
+## Real\-World Dual\-Pixel Raindrop Removal: A New Benchmark and Degradation\-Adaptive RWKV Baseline
+
+**Authors:** Hao Yang; Ruikun Zhang; Liyuan Pan
+
+**ID:** 154736 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=BPGDlHCoK4>) | [PDF](<https://openreview.net/pdf?id=BPGDlHCoK4>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154736>)
+
+Raindrop removal is challenging because raindrops exhibit strong spatial non\-uniformity and scene dependency\. Although previous works have demonstrated that dual\-pixel \(DP\) sensors can facilitate raindrop removal, their effectiveness in complex real\-world scenarios remains limited due to local modeling paradigms and insufficient coverage of real data\. In this work, we collect a large\-scale real\-world DP raindrop dataset that covers day/night scenes, diverse light conditions, and varying raindrop intensities\. Based on this dataset, we establish a challenging benchmark for DP raindrop removal in real\-world scenarios\. Building upon this dataset, we develop DRWKV, which models raindrop removal as a degradation\-conditioned state evolution process\. DRWKV explicitly injects raindrop degradation information derived from DP sensors into the recurrent state update process, enabling the model to adaptively balance information preservation and content restoration across spatial regions while maintaining linear computational complexity\. This design facilitates effective global modeling of spatially non\-uniform raindrop degradations\. Extensive experiments demonstrate that the proposed DRWKV outperforms prior methods on the proposed benchmark as well as existing datasets\.
+
+## PRISM: Polarimetric Road\-surface Intelligent Sensing and Measurement Dataset
+
+**Authors:** Minseo Jung; Chanwoo Kim; Donggue Kim; Hyunjun Kim; Jeongwoo Park; Kichun Jo
+
+**ID:** 138944 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=up7uSAvqnp>) | [PDF](<https://openreview.net/pdf?id=up7uSAvqnp>) | [Official poster](<https://neurips.cc/virtual/2026/poster/138944>)
+
+RGB cameras struggle on the road surface itself: pavement is nearly texture\-less at the centimetre scale, and dry, wet, and icy asphalt can look photometrically identical\. Polarization is the natural complement, since Fresnel optics ties the angle of linear polarization \(AoLP\) to surface\-normal azimuth and the degree of linear polarization \(DoLP\) to refractive index, but no public dataset has made it possible to test whether this physical promise translates into measurable gains on real roads\.  We introduce PRISM, a polarimetric road\-surface dataset of 47,098 time\-synchronized frames combining trichromatic linear polarization, co\-boresighted RGB, 128\-channel LiDAR, and RTK\-GNSS/INS, collected across proving\-ground and open\-road environments under clear, overcast, rainy, foggy, and snowy conditions\. Dense road\-surface elevation ground truth, validated against as\-designed proving\-ground geometry, accompanies frame\-level labels over five materials and five surface states\. Two benchmark tracks are defined on these data: road\-surface condition classification and bird's\-eye\-view elevation estimation\. Both share a five\-variant input ablation crossing RGB, monochromatic and trichromatic polarization, and their combinations\. Reference baselines turn the physical promise into a measurable one\. Adding trichromatic polarization to RGB reduces elevation MAE from 3\.61 to 3\.26cm and improves every threshold metric, while yielding consistent gains on condition classification across backbones\. The improvement is task\-conditional: trichromatic resolution drives the elevation gain, where AoLP encodes geometric information that intensity cannot, and stratified evaluation localizes where polarimetric channels matter most\. PRISM, together with reference baselines, evaluation and stratification scripts, and a datasheet, is publicly available at \\url\{https://huggingface\.co/datasets/NeurIPS\-2026\-PRISM/PRISM\-Dataset\}\.
+
+## SLAyiNG: A Diverse and Community\-validated Dataset of Queer Slang
+
+**Authors:** Leonor Veloso; Lea Hirlimann; Lucija M Zidar; Philipp Wicke; Valentin Hofmann; Hinrich Schuetze
+
+**ID:** 138946 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=ub2Ru5hNGA>) | [PDF](<https://openreview.net/pdf?id=ub2Ru5hNGA>) | [Official poster](<https://neurips.cc/virtual/2026/poster/138946>)
+
+Queer vernacular is rarely studied in NLP, despite advancements in resources and evaluation for other sociolects and informal language\. Because of this, NLP systems often process queer language incorrectly, e\.g\., they misclassify it as hate speech or generate negative responses\. To address this problem, we propose \\textsc\{Slaying\}, the first real\-world dataset of English queer slang\. \\textsc\{Slaying\} is community\-validated,  and includes over 400 queer slang terms that pertain to more than 20 queer subcommunities\. We argue that queer language data resources have great potential in NLP \-\- e\.g\., as components of large pretraining corpora and as the basis for benchmarks \-\- and can improve queer users' experience of NLP systems\. We leverage \\textsc\{Slaying\} for two novel findings in support of this argument: \(i\) For a number of language models, we show that they are unbiased towards the queer community, but at the same time unable to process its language, i\.e\., absence of representation bias does not entail the absence of linguistic bias\. \(ii\) Model performance on queer slang varies across queer subcommunities; it is generally worse for slang pertaining to African\-American and Latine communities\. These findings are relevant for both the queer NLP and the broader ML communities\. \\textsc\{Slaying\} is available to the public, and open to future revisions and extensions\. \\textbf\{Warning:\} This paper contains profane and potentially offensive language\.
+
+## Generative Modeling under Non\-Monotone MAR Missingness via Approximate Wasserstein Gradient Flows
+
+**Authors:** Gitte Kremling; Jeffrey Näf; Johannes Lederer
+
+**ID:** 155457 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=5SVmGGtTIM>) | [PDF](<https://openreview.net/pdf?id=5SVmGGtTIM>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155457>)
+
+The prevalence of missing values in data science poses a substantial risk to any further analyses\. Despite a wealth of research, principled nonparametric methods to deal with general non\-monotone missingness are still scarce\. Instead, ad\-hoc imputation methods are often used, for which it remains unclear whether the correct distribution can be recovered\. In this paper, we propose FLOWGEM, a principled iterative method for generating a complete dataset from a dataset with values Missing at Random \(MAR\)\. Motivated by convergence results of the ignoring maximum likelihood estimator, our approach minimizes the expected Kullback\-Leibler \(KL\) divergence between the observed data distribution and the distribution of the generated sample over different missingness patterns\. To minimize the KL divergence, we employ a discretized particle evolution of the corresponding Wasserstein Gradient Flow, where the velocity field is approximated using a local linear estimator of the density ratio\. This construction yields a data generation scheme that iteratively transports an initial particle ensemble toward the target distribution\. Simulation studies and real\-data benchmarks demonstrate that FLOWGEM achieves state\-of\-the\-art performance across a range of settings, including the challenging case of non\-monotone MAR mechanisms\. Together, these results position FLOWGEM as a principled and practical alternative to existing imputation methods, and a decisive step towards closing the gap between theoretical rigor and empirical performance\.
+
+## A Mahalanobis Margin \\texorpdfstring\{$\\gamma\_\{\\min\}$\}\{gamma\\\_min\} Bound on Task Confusion in Pretrained Class\-Incremental Learning: From Infeasibility to Exponential Attenuation
+
+**Authors:** Milad Khademi Nori; Guanghui Wang
+
+**ID:** 151690 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=Yljy4oNHZD>) | [PDF](<https://openreview.net/pdf?id=Yljy4oNHZD>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151690>)
+
+Class\-incremental learning \(class\-IL\) faces a structural obstacle: discriminative sequential training optimises only the diagonal blocks of a pairwise loss matrix, leaving the inter\-task blocks\-\-\-task confusion \(TC\)\-\-\-unminimised\. A recent Infeasibility Theorem makes this precise, proving that no discriminative class\-IL learner can attain the joint\-training optimum even when catastrophic forgetting \(CF\) is perfectly addressed\. Yet the state of the art consists almost entirely of discriminative methods built on pretrained foundation models that approach joint\-training performance\. We explain this regime by showing that pretraining \\emph\{exponentially attenuates\} the obstacle\. For any pretrained backbone $\\phi$, the TC gap of any CF\-optimal prototype\-based discriminative learner\-\-\-a class that captures the test\-time classifier of SLDA, RanPAC, FeCAM, and the prototype branches of EASE and InfLoRA\-\-\-is bounded by $\\exp\(\-\\gamma\_\{\\min\}\(\\phi\)/8\)$, where $\\gamma\_\{\\min\}\(\\phi\)$ is the worst\-case Mahalanobis margin between task centroids in feature space: a single, computable scalar that determines how much TC remains\. Combined with a finite\-sample convergence analysis under heavy\-tailed gradient noise and a representation drift bound governing backbone fine\-tuning, this yields a diagnostic decomposition of the class\-IL excess risk into $E\_\{\\mathrm\{CF\}\} \+ E\_\{\\mathrm\{TC\}\}$, with disjoint direct dependencies on optimisation budget and backbone quality\. Across 12 \(backbone, dataset\) configurations spanning ViT\-IN21K, DINOv2, and CLIP plus four random\-backbone anchor points, the pooled empirical slope of $\\log\(\\mathrm\{TC\\ gap\}\)$ versus $\\widehat\\gamma\_\{\\min\}$ on softmax cross\-entropy heads is $\-0\.119$ \(bootstrap 95\\% CI $\[\-0\.134, \-0\.105\]$\), consistent with the predicted $\-1/8$ and excluding the conservative fall\-back $\-1/16$\. The slope fit extends the rate beyond the formal LDA/QDA scope\. $E\_\{\\mathrm\{CF\}\}$ scales as $K^\{\-\(\\alpha\-1\)/\\alpha\}$ as predicted, with the rate steepening by more than $3\\times$ under gradient clipping; representation drift scales linearly in the backbone learning rate \($r = \+0\.998$\)\. A theory\-derived training procedure\-\-\-whose schedule is determined by $\\widehat\\gamma\_\{\\min\}$, the tail index $\\widehat\\alpha$, and warm\-up estimates of smoothness and curvature\-\-\-is competitive with the strongest pretrained\-CIL baselines across the four standard benchmarks\.
+
+## World\-Model\-Inspired Flicker State Modeling for Burst Flicker Removal
+
+**Authors:** Bowen Tang; Tao Wang; Xin Yu; Wenhan Luo; Kaihao Zhang; Bo Li; Min zhang
+
+**ID:** 149133 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=sc5SUE0LJN>) | [PDF](<https://openreview.net/pdf?id=sc5SUE0LJN>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149133>)
+
+Burst imaging under unstable illumination suffers from flicker, a periodic degradation that modulates local brightness differently across adjacent frames, creating frame\-specific flicker states\. Existing methods rely on spatial priors or reference\-centric fusion without explicitly modeling the evolving flicker state, whose temporal periodicity makes it predictable from adjacent observations by world models that capture latent state transitions\. Motivated by this predictive capacity, we propose StateFlicker, a state\-aware burst restoration framework that interprets adjacent frames as observations under evolving flicker states\. StateFlicker comprises two state\-aware designs: Cross\-State Visibility \(CSV\) and Flicker\-State Understanding \(FSU\)\. CSV leverages complementary visibility across adjacent flicker states to selectively recover content suppressed under the center state\. With this cross\-state support, FSU constructs dual state pathways through a frozen world model to obtain predicted and observed center states, and distills their state discrepancy into dense features that characterize the center\-specific flicker condition for restoration\. Extensive experiments on the burst flicker removal dataset show that StateFlicker achieves superior performance over state\-of\-the\-art methods\.
+
+## Algebraic Machine Learning: learning as computing subsets of the subdirect decomposition from Abstract Algebra
+
+**Authors:** Fernando Martin\-Maroto; Nabil Abderrahaman\-Elena; David Mendez; Gonzalo de Polavieja
+
+**ID:** 150997 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=dhg9MiFY8n>) | [PDF](<https://openreview.net/pdf?id=dhg9MiFY8n>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150997>)
+
+We propose a machine\-learning framework based on the principle that learning can be achieved through algebraic decomposition rather than numerical optimization\. A learning task is encoded as axioms of an algebra, and learning proceeds by computing a subdirect decomposition of the algebra into subdirectly irreducible components\. We show that suitable subsets of these components form models that generalize to unseen data because they approximate the underlying rule in the training data\. The method has no dataset\-specific hyperparameters to tune and shows no evidence of classical overfitting in our experiments, so we run it without a validation dataset\.  We compare against multilayer perceptrons as generic parametric baselines without task\-specific inductive biases\. Across 24 classification datasets, the algebraic method is applied only once to each training set without hyperparameter tuning, whereas the multi\-layer perceptrons are selected from many configurations using validation data or cross\-validation\. Nevertheless, the resulting test accuracies are statistically indistinguishable\. Moreover, adding a statistical readout on top of the algebraic representation, using untuned logistic regression, improves over the best multilayer perceptrons selected by validation or cross\-validation\. More broadly, because task axioms may encode examples, formal knowledge, or both, this approach provides a common algebraic framework and the same algorithm for data\-driven problems such as classification, formally specified problems such as computing Hamiltonian cycles from specifications, and mixed settings combining data with formal constraints\.
+
+## X\-Palm: Paired Multispectral\-to\-Smartphone Dataset for Cross\-Domain Palmprint Authentication
+
+**Authors:** Seyed Jamal Seyedmohammadi; Pai Chet Ng; Angelo Genovese; Zhixiang Chi; Jeannie Lee; Konstantinos N Plataniotis
+
+**ID:** 139013 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=qHrnNiWydF>) | [PDF](<https://openreview.net/pdf?id=qHrnNiWydF>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139013>)
+
+Palmprint modality offers a privacy\-preserving biometric solution, yet its deployment is hindered by the domain gap between controlled enrollment and unconstrained authentication\. Existing datasets are largely restricted to controlled setups and fail to capture the compound variability of real\-world environments\. In this paper, we introduce X\-Palm, a cross\-domain dataset comprising 6,006 palm images from 103 individuals \(206 hands\)\.  To the best of our knowledge, X\-Palm is the first palmprint dataset providing novel paired\-identity acquisition specifically designed to bridge the gap between reliably controlled multispectral enrollment and unconstrained mobile authentication while encompassing a broad spectrum of in\-the\-wild variability\. Unlike existing datasets that focus on single to a few variations, X\-Palm addresses the massive modality and environmental shifts encountered in practical deployments by capturing paired data for identities across two distinct domains: \(1\) a controlled Multispectral Palmprint setting using our custom\-developed scanner, and \(2\) an unconstrained smartphone palmprint setting that is participant\-driven, incorporating simultaneous variations in hardware, hand pose, illumination, background, camera\-to\-hand distance, perspective, and palm surface conditions \(e\.g\., moisture and occlusions\)\. Our extensive benchmarks of 12 SOTA models reveal that while existing methods achieve high performance on controlled data, they experience severe performance collapse on X\-Palm\.  Conversely, models trained on X\-Palm demonstrate consistent robustness across domains, positioning X\-Palm as a valuable resource for training a model towards real\-world, cross\-domain generalization\. Data access instructions and the related benchmarking codes are publicly available at: https://github\.com/X\-Palm/X\-Palm\-2026
+
+## A Theoretical Bridge Between Long\-Tailed Recognition and Continual Learning
+
+**Authors:** Mahdiyar Molahasani; Michael Greenspan; Ali Etemad
+
+**ID:** 148638 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=wERJT1NgQB>) | [PDF](<https://openreview.net/pdf?id=wERJT1NgQB>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148638>)
+
+We theoretically and empirically establish a previously unexplored connection between Long\-Tailed Recognition \(LTR\) and Continual Learning \(CL\)\. Specifically, we show that training on a long\-tailed dataset drives model parameters into an $\\mathcal\{O\}\(1/\\sqrt\{\\mathrm\{IF\}\}\)$ neighborhood of the dominant\-class solution, under both uniform and exponentially decaying cardinality distributions\. Building on this result, we prove that the CL objective upper\-bounds the balanced LTR loss, revealing that LTR can be reformulated as a sequential learning problem\. Motivated by this connection, we introduce Continual Learning for Long\-Tailed Recognition \(CLTR\), a principled framework that leverages standard off\-the\-shelf CL methods to sequentially learn Head and Tail classes while mitigating catastrophic forgetting\. Extensive experiments on CIFAR100\-LT, CIFAR10\-LT, ImageNet\-LT, and Caltech256 validate our theoretical predictions and demonstrate strong performance across diverse LTR benchmarks\. In the foundation\-model regime, CLTR with DualPrompt on a CLIP backbone outperforms standard adaptation baselines and is competitive with specialized methods using external semantic supervision\. Our work bridges LTR and CL both theoretically and empirically, providing a principled approach for addressing long\-tailed learning using standard CL strategies\.
 
 ## OpenWhistle: A Large\-Scale Longitudinal Dataset and Benchmark of Bottlenose Dolphin Vocalizations
 
 **Authors:** Faadil Mustun; Chiara Semenzin; Roberto Dessi; Pablo Robin Guerrero; pierre orhan; Alexis Emanuelli; Emanuele Rossi; Yair Lakretz; Gonzalo de Polavieja; Germán Sumbre
 
-**ID:** 139275\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 139275
+**ID:** 139275 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
 [Paper](<https://openreview.net/forum?id=a5IbpMVeS0>) | [PDF](<https://openreview.net/pdf?id=a5IbpMVeS0>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139275>)
 
 Recent advances in bioacoustics have been driven by large\-scale corpora and standardized benchmarks, yet existing resources are overwhelmingly bird\-centric and shallow per species, limiting their use for studying the structure of a single species' communication system\. This gap is particularly acute for cetaceans: despite bottlenose dolphins \(\\textit\{Tursiops truncatus\}\) being a compelling case of complex vocal communication among non\-human mammals, existing dolphin datasets are small, fragmented, and largely closed\. We introduce OpenWhistle, the largest publicly available dataset of dolphin vocalizations\. It  comprises approximately 180,000 whistles \(114 hours\) recorded over five years from a stable pod of five individuals in a semi\-natural environment, paired with a curated subset of 8,354 expert\-annotated whistles and reproducible evaluation protocols for whistle\-type detection and classification\. We further release the full processing pipeline for whistle detection, segmentation, and categorization\. To demonstrate its utility, we pretrain a Wav2Vec2\.0 model adapted to dolphin acoustics on the OpenWhistle corpus and show that it learns effective representations, outperforming general\-purpose bioacoustic models such as AVES and BioLingual on both tasks while leaving meaningful headroom for future work\. By releasing the dataset, pipeline, and evaluation protocol, we provide the first open dolphin whistle dataset tailored for training self\-supervised models, laying the groundwork for advancing dolphin communication research and developing models that capture fine\-grained acoustic structure within species\.
 
-## Leveraging Data Symmetries to Select an Optimal Subset of Training Data under Label Noise
-
-**Authors:** Kumar Shubham; Pavan Karjol; Kiran M K; Prathosh AP
-
-**ID:** 151105\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 151105
-
-[Paper](<https://openreview.net/forum?id=cwzwMwsjQA>) | [PDF](<https://openreview.net/pdf?id=cwzwMwsjQA>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151105>)
-
-The performance of machine learning models often relies on large labeled datasets; however, data collected from diverse sources can contain label noise\. Recent work has shown that, in noisy settings, there may exist a subset of the training data on which models can achieve performance comparable to training on a noise\-free dataset\. A widely used method for identifying such subsets is \\textit\{cutstats\}, which employs $k$\-nearest neighbors \($k$\-NN\) to detect low\-noise samples\. However, its performance on high\-dimensional data remains largely unexplored\. In this work, we formally establish that the performance of a classifier trained on a subset of a noisy dataset selected via \\textit\{cutstats\} is influenced by the accuracy of $k$\-NN\. We further demonstrate that, in noisy environments, exploiting data invariance and knowledge of underlying symmetries can significantly enhance the performance of $k$\-NN, bringing it closer to the Bayes optimal classifier even in high\-dimensional regimes\. Finally, we show that for real\-world scenarios, where information about the underlying invariance is only partially known, learnt invariant representations can still facilitate the identification of near\-optimal subsets\.
-
-## M$^2$E\-UAV: A Benchmark and Analysis for Onboard Motion\-on\-Motion Event\-Based Tiny UAV Detection
-
-**Authors:** Weiqi Yan; Lixin Chen; Xiangrui Hou; zhipeng cai; Youbiao Wang; Yangyang Shi; Yu Zang; Cheng Wang
-
-**ID:** 153776\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 153776
-
-[Paper](<https://openreview.net/forum?id=IkIsmHmudK>) | [PDF](<https://openreview.net/pdf?id=IkIsmHmudK>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153776>)
-
-Tiny UAV detection from an onboard event camera is difficult when the observer and target move at the same time\. In this motion\-on\-motion regime, ego\-motion activates background edges across buildings, vegetation, and horizon structures, while the UAV may appear as a sparse event cluster\. To explore this practical problem, we present M$^2$E\-UAV, a benchmark and analysis setup for onboard motion\-on\-motion event\-based tiny UAV detection\. The processed M$^2$E\-UAV benchmark contains 87,223 training samples and 21,395 validation samples across four scene families: sunny building\-forest, sunny farm\-village, sunset building\-forest, and sunset farm\-village\. We provide M$^2$E\-Point, a point\-based event baseline, and M$^2$E\-Point \+ IMU, an IMU\-conditioned variant, to analyze the role of inertial cues under onboard motion\-on\-motion detection\. M$^2$E\-Point encodes events as $\[x,y,t,p\]$ point sets, extracts local event structure with EdgeConv, and predicts event\-level UAV foreground scores, from which bounding boxes are derived via DBSCAN\. Our validation\-stage analysis shows that point\-based event modeling is a strong baseline, while simple IMU conditioning provides only marginal aggregate gains\. Under the train/validation split, M$^2$E\-Point achieves 0\.9673 F1 and 0\.5501 mAP50\-95, while the IMU\-conditioned variant reaches 0\.5561 mAP50\-95 with only marginal aggregate changes, serving as an initial baseline for future exploration in this domain\. The dataset will be publicly released upon acceptance\.
-
-## Formal Conjectures: An Open and Evolving Benchmark for Verified Discovery in Mathematics
-
-**Authors:** Moritz Firsching; Paul Lezeau; Salvatore Mercuri; Miklós Z\. Horváth; Yaël Dillies; Calle Sönne; Eric Wieser; Fred Zhang; Thomas Hubert; Blaise Aguera y Arcas; Pushmeet Kohli
-
-**ID:** 139299\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 139299
-
-[Paper](<https://openreview.net/forum?id=YcOzhUo7z3>) | [PDF](<https://openreview.net/pdf?id=YcOzhUo7z3>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139299>)
-
-As automated reasoning systems advance rapidly, there is a growing need for research\-level formal mathematical problems to accurately evaluate their capabilities\. To address this, we present Formal Conjectures, an evolving benchmark of currently 2615 mathematical problem statements formalized in Lean 4\. Sourced from areas of active mathematical research, the dataset features 1029 open research conjectures providing a zero\-contamination benchmark for mathematical proof discovery, and 836 solved problems for proof autoformalization\. Notably, the repository provides a structured interface connecting mathematicians who formalize and clarify problems with the AI systems and humans attempting to solve them\. Demonstrating its immediate utility, the benchmark has already been leveraged to make new mathematical discoveries, including the resolution of open research conjectures\. We describe our approach to ensuring the correctness of these formalizations in a collaborative open\-source project where contributions stem from an active community\. In this framework, AI\-generated proofs and disproofs serve as a valuable auditing mechanism to iteratively improve the fidelity of the benchmark\. Finally, we provide a standardized evaluation setup and report baseline results on frozen evaluation subsets, demonstrating a climbable signal that measures the current frontier of automated reasoning on research\-level mathematics\.
-
-## GameVerse: A Minute\-Scale Gameplay Dataset for Long\-Horizon Interactive World Modeling
-
-**Authors:** Kang He; Wenshuo Peng; Chuanhao Li; Zihui Gao; Xiaojie Xu; Zhengyuan Lin; Yuzhe Ding; Donghong Ji; Kaipeng Zhang; Yongtao Ge
-
-**ID:** 139301\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 139301
-
-[Paper](<https://openreview.net/forum?id=YbEXKsFhkZ>) | [PDF](<https://openreview.net/pdf?id=YbEXKsFhkZ>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139301>)
-
-Recent advances in world models have emphasized the need for learning temporally consistent and interactive representations of dynamic environments\. However, existing video datasets fail to simultaneously support long\-horizon dynamics, precise camera control, and structured semantic representations\. To address this, we introduce GameVerse, a large\-scale game video dataset for interactive world modeling\. GameVerse provides minute\-level continuous video sequences, covering diverse interaction behaviors, across both first\- and third\-person perspectives\. The dataset is constructed through a unified data processing pipeline, including scene\-consistent segmentation, quality filtering, camera pose estimation, and multi\-granular semantic annotation\. GameVerse consists of 11,092 videos, with a total duration of 4,692 hours \(195\.5 days\) and approximately 986\.6 million frames\. Each video segment is augmented with temporally stable camera trajectories and structured semantic annotations\. Comprehensive data analysis and experiments demonstrate that GameVerse exhibits strong advantages in terms of scale, diversity, and annotation quality, and shows promising performance for long\-horizon modeling and interactive world understanding\. We expect GameVerse to provide a unified data foundation for long\-horizon modeling and interactive world modeling, and to facilitate future research in this area\.
-
-## What Survival Benchmarks Don’t Tell You: Impact of Model Selection and Dataset Regimes
-
-**Authors:** Sandra Dening; Emre Kavak; Christian Wachinger; George H Chen
-
-**ID:** 139306\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 139306
-
-[Paper](<https://openreview.net/forum?id=YMMtTSpEEk>) | [PDF](<https://openreview.net/pdf?id=YMMtTSpEEk>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139306>)
-
-Despite the proliferation of survival analysis methods, current benchmarks often operate under narrow conditions: they heavily rely on the concordance index \(C\-index\) for evaluation and model selection, and frequently exclude deep learning \(DL\) or underrepresent challenging dataset regimes\. To address this, we conduct a large\-scale, neutral benchmark comparing 10 classical, tree\-based, and DL methods across 49 diverse datasets\. Crucially, we treat the model selection criterion \-\- optimizing for C\-index, Integrated Brier Score \(IBS\), or Mean Absolute Error \(MAE\-PO\) \-\- as an independent experimental variable\.  Using Bayesian mixed\-effects modeling, we demonstrate that evaluation design heavily dictates conclusions\. For complex DL and tree\-based architectures, shifting hyperparameter selection from the C\-index to IBS unlocks massive gains in probabilistic accuracy and calibration at a negligible cost to discriminative ranking\. Furthermore, method success is fundamentally governed by dataset characteristics\. While DL models scale exceptionally well with larger sample sizes, they suffer notable performance drops in high\-dimensional feature spaces\. Additionally, we expose a structural vulnerability where heavy censoring artificially inflates absolute calibration metrics, creating overly conservative tests\.  Ultimately, our findings challenge the utility of global single\-number performance summaries and advocate for regime\-conditioned reporting\. We further demonstrate that aligning the model selection strategy with the target application is not merely an implementation detail, but a critical requirement for realizing the true probabilistic and temporal accuracy of complex survival architectures\. We make our benchmark publicly available upon publication\.
-
 ## DINOv3
 
 **Authors:** Oriane Siméoni; Huy Vo; Maximilian Seitzer; Federico Baldassarre; Maxime Oquab; Cijo Jose; Vasil Khalidov; Marc Szafraniec; Seung Eun Yi; Michaël Ramamonjisoa; Francisco Massa; Daniel Haziza; Luca Wehrstedt; Jianyuan Wang; Timothée Darcet; Théo Moutakanni; Leonel Sentana; Claire Roberts; Andrea Vedaldi; Jamie Tolan; John Brandt; Camille Couprie; Julien Mairal; Herve Jegou; Patrick Labatut; Piotr Bojanowski
 
-**ID:** 156661\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+**ID:** 156661 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** missing
 
-**Repeated source row:** 156661
-
-[Paper](<https://openreview.net/pdf?id=2NlGyqNjns>) | [PDF](<https://openreview.net/pdf?id=2NlGyqNjns>) | [Official poster](<https://neurips.cc/virtual/2026/poster/156661>)
+[Official poster](<https://neurips.cc/virtual/2026/poster/156661>)
 
 Self\-supervised learning holds the promise of eliminating the need for manual data annotation, enabling models to scale effortlessly to massive datasets and larger architectures\. By not being tailored to specific tasks or domains, this training paradigm has the potential to learn visual representations from diverse sources, ranging from natural to aerial images \-\- using a single algorithm\. This technical report introduces DINOv3, a major milestone toward realizing this vision by leveraging simple yet effective strategies\. First, we leverage the benefit of scaling both dataset and model size by careful data preparation, design, and optimization\. Second, we introduce a new method called Gram anchoring, which effectively addresses the known yet unsolved issue of dense feature maps degrading during long training schedules\. Finally, we apply post\-hoc strategies that further enhance our models' flexibility with respect to resolution, model size, and alignment with text\. As a result, we present a versatile vision foundation model that outperforms the specialized state of the art across a broad range of settings, without fine\-tuning\. DINOv3 produces high\-quality dense features that achieve outstanding performance on various vision tasks, significantly surpassing previous self\- and weakly\-supervised foundation models\. We also share the DINOv3 suite of vision models, designed to advance the state of the art on a wide spectrum of tasks and data by providing scalable solutions for diverse resource constraints and deployment scenarios\.
 
-## ELMA: Benchmarking Anaphoric Compositions for Long\-Term Text\-to\-Motion Generation
+## ReefNet: A Large\-Scale Dataset and Benchmark for Fine\-Grained Coral Reef Recognition
 
-**Authors:** Shun Kato; Dixin Yang; Kotaro Amaya; Yuiga Wada; Kazumi Fukuda; Takashi Shibuya; Yuki Mitsufuji; Mariko Isogawa
+**Authors:** Abdulwahab Felemban; Yahia Battach; Faizan F Khan; Yuqian Fu; Xuhui Liu; Yesmeen Khattab; Yousef A Radwan; Xiang Li; Natalie Dunn; Susanne Bähr; Tullia I Terraneo; Fabio Marchese; Sara Beery; Burton H Jones; Francesca Benzoni; Mohamed Elhoseiny
 
-**ID:** 139367\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+**ID:** 139436 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-**Repeated source row:** 139367
+[Paper](<https://openreview.net/forum?id=QFiKGFMr8u>) | [PDF](<https://openreview.net/pdf?id=QFiKGFMr8u>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139436>)
 
-[Paper](<https://openreview.net/forum?id=UWLadjotaK>) | [PDF](<https://openreview.net/pdf?id=UWLadjotaK>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139367>)
+Coral reefs are rapidly declining under anthropogenic pressures \(e\.g\., climate change\), creating an urgent need for scalable and automated monitoring\. Progress in data\-driven coral analysis, however, is constrained by the scarcity of large\-scale datasets with fine\-grained labels that are taxonomically consistent across sites and studies\. To address this gap, we introduce ReefNet, a large\-scale public coral reef image dataset with point\-level annotations mapped to the World Register of Marine Species \(WoRMS\) taxonomy\. ReefNet aggregates imagery from 76 curated CoralNet sources and an additional reef site from Al\-Wajh \(Red Sea\), totaling approximately 925K genus\-level hard coral annotations\. Through expert\-driven verification and targeted filtering, we derive a high\-confidence benchmark subset with 92% expert agreement over 39 hard\-coral label classes, enabling reliable evaluation under realistic label noise and strong class imbalance\. Beyond dataset construction, we establish a comprehensive benchmark spanning zero\-shot, cross\-domain few\-shot adaptation, within\-source evaluation, and cross\-source transfer to the Al\-Wajh dataset\. Experiments with state\-of\-the\-art vision–language models \(VLMs\), multimodal large language models \(MLLMs\), and vision\-only backbones reveal substantial degradation in zero\-shot and extremely few\-shot regimes, while adaptation with in\-domain supervision yields large gains yet still leaves a persistent gap under cross\-source shift and on long\-tail genera\. These results highlight fundamental challenges in applying general\-purpose multimodal models to biodiversity monitoring and underscore the importance of large\-scale, taxonomically grounded, high\-quality datasets\. ReefNet serves as both a benchmark and a training resource for advancing fine\-grained coral reef understanding\. ReefNet data and trained models are provided on Hugging Face, and code for accessing and benchmarking the data is provided on GitHub\.
 
-Text\-guided long\-term human motion generation is essential for applications such as continuously operating digital avatars\. Despite recent progress on short clips, existing models struggle with multi\-segment instructions that involve anaphora, where constraints established in earlier segments must be preserved over time\. In this paper, we introduce a novel task of long\-term motion generation from such anaphoric compositions\. To mitigate this, we present ELMA, an episodic long\-term motion dataset with dense segment\-level annotations that preserve cross\-segment dependencies\. Built via a fully automated collection and filtering pipeline, ELMA extracts high\-quality, continuous 30\-second clips from in\-the\-wild videos, capturing the episodic narratives necessary for long\-range state modeling\. Leveraging this dataset, we fine\-tune state\-of\-the\-art motion generation models to incorporate long\-range context\. Extensive experiments reveal fundamental shortcomings in current models when handling context\-dependent instructions\. We demonstrate that ELMA enables significant improvements in both global physical realism and semantic alignment, setting a robust new baseline for long\-term motion synthesis\.
+## FineVision: Open Data Is All You Need
+
+**Authors:** Luis Wiedmann; Orr Zohar; Amir Mahla; Xiaohan Wang; Rui Li; Thibaud Frere; Leandro Von Werra; Aritra Roy Gosthipaty; Andrés Marafioti
+
+**ID:** 139537 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=KCL7nFQzRl>) | [PDF](<https://openreview.net/pdf?id=KCL7nFQzRl>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139537>)
+
+The advancement of vision\-language models \(VLMs\) is hampered by a fragmented landscape of inconsistent and contaminated public datasets\. We introduce FineVision, a meticulously collected, curated, and unified corpus of 24 million samples, the largest open resource of its kind\. We unify more than 200 sources into 185 subsets via a semi\-automated, human\-in\-the\-loop pipeline: automation performs bulk ingestion and schema mapping, while reviewers audit the mappings and spot\-check outputs from every subset to verify that source annotations are converted faithfully and formatted consistently; issues trigger targeted fixes and re\-runs\. The workflow further applies rigorous de\-duplication within and across sources and decontamination against 66 public benchmarks\. FineVision also encompasses agentic/GUI tasks with a unified action space; reviewers validate schemas and inspect a sample of trajectories to confirm executable fidelity\. Models trained on FineVision consistently outperform those trained on existing open mixtures across a broad evaluation suite, underscoring the benefits of scale, data hygiene, and balanced automation with human oversight\. We release the corpus and curation tools to accelerate data\-centric VLM research\.
+
+## ASO Atlas 2\.0: Evaluating antisense oligonucleotide prediction across the preclinical pipeline
+
+**Authors:** Barney Hill; Nicola Whiffin; Carlo Rinaldi; Stephan J Sanders
+
+**ID:** 139593 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=GVCHxvTflc>) | [PDF](<https://openreview.net/pdf?id=GVCHxvTflc>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139593>)
+
+Predictive models have the potential to transform drug development by increasing success rates across all stages of development pipelines\. Evaluating this potential needs to include the whole pipeline, from initial screens of thousands of compounds to the expensive assays, such as toxicity assessment, focused on a few compounds in the later stages\. Genetic medicines, such as antisense oligonucleotides \(ASOs\), could benefit millions affected by individually rare genetic disorders, if economic limitations imposed by the need to screen hundreds of sequences at considerable expense can be overcome\. To enable systematic analysis of this problem, we present ASO Atlas 2\.0, the largest public multi\-endpoint ASO preclinical dataset, spanning 295,007 data points, including both in vitro efficacy and in vivo toxicology, across 430\. Using this resource, we introduce a cost\-based evaluation framework that translates per\-stage classifier enrichment into projected cost savings under a representative preclinical pipeline model\. We find that incorporating model predictions across all stages reduces projected pipeline cost by 71%\. This saving is largely attributable to modest enrichment at costly late\-stage in vivo studies rather than strong enrichment at lower\-cost in vitro assays, reversing the model ranking suggested by accuracy alone and highlighting the need for improved toxicology modelling\.
+
+## Text\-to\-CAD Evaluation with CADTests
+
+**Authors:** Dimitrios Mallis; Marco Wang; Ahmet Karadeniz; Elisa Ricci; Anis Kacem; Djamila Aouada
+
+**ID:** 139514 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=LITtdZUzkt>) | [PDF](<https://openreview.net/pdf?id=LITtdZUzkt>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139514>)
+
+Text\-to\-CAD has recently emerged as an important task with the potential to substantially accelerate design workflows\. Despite its significance, there has been surprisingly little work on Text\-to\-CAD evaluation, and assessing CAD model generation performance remains a considerable challenge\. In this work, we introduce a new evaluation perspective for Text\-to\-CAD based on automated testing\. We propose CADTestBench, the first test\-based benchmark for Text\-to\-CAD, based on CADTests, executable software tests that verify whether a generated CAD model satisfies the geometric and topological requirements of the input prompt\. Using CADTestBench, we conduct comprehensive benchmarking of recent Text\-to\-CAD methods and further demonstrate that CADTests can also guide CAD model generation, yielding simple baselines that surpass performance of current methods\. CADTestBench code and data are available at GitHub and Hugging Face dataset\.
+
+## LSC\-Parlament: An Automatically Aligned Catalan Sign Language Dataset from Parliament Videos\.
+
+**Authors:** Carlos Escolano; Gerard Sant; Marc J Garcia; Joan G Cortés; Marcel Granero Moya; Francesca De Luca Fornaciari; Maite Melero
+
+**ID:** 139029 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=pPt0iqECnh>) | [PDF](<https://openreview.net/pdf?id=pPt0iqECnh>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139029>)
+
+Progress in Sign Language Translation \(SLT\) is frequently hampered by the "data bottleneck," a challenge particularly acute for regional languages such as Catalan Sign Language \(LSC\)\. In this paper, we present LSC\-Parlament, a large\-scale, multimodal dataset for LSC derived from Catalan Parliament sessions spanning 2021 to 2024\. The dataset comprises over 87 hours of LSC video, synchronized with speech and text translations in either Catalan or Spanish\. To curate this resource, we developed a fully automated pipeline that enables alignment between sign language, speech, and text without requiring prior human\-annotated data\. We provide a systematic evaluation of the dataset across multiple dimensions, including video tracking quality, audio transcription accuracy, and translation benchmarks\. Our experiments compare transfer learning, zero\-shot, and supervised translation settings, demonstrating significant knowledge transfer between spoken languages in the LSC\-Spanish modality\. By releasing LSC\-Parlament, we provide a challenging open\-domain benchmark to foster research in inclusive and scalable translation technologies\.
+
+## ACDP: Architecture\-aware Cross\-Dataset Performance Predictor for NAS
+
+**Authors:** Jiawen Deng; Yuqi Feng; Han Ji; Yanan Sun
+
+**ID:** 154537 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=Cr87H0HSqL>) | [PDF](<https://openreview.net/pdf?id=Cr87H0HSqL>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154537>)
+
+Performance predictors are pivotal in accelerating evaluation in NAS\. Cross\-dataset predictors are trained on \(dataset, architecture, performance\) triplets to efficiently estimate architectural performance for unseen datasets\. However, existing cross\-dataset predictors rely on a naive concatenation of dataset and architecture features\. This fusion ignores the architecture\-aware nature, where the same dataset manifests as distinct representations under different architectures, thereby limiting generalization\. To tackle this issue, we propose ACDP, an Architecture\-aware Cross\-Dataset Performance Predictor that dynamically adjusts dataset feature extraction based on specific architecture\. Initially, ACDP develops an elastic mechanism to extract raw dataset traits, providing a configurable lever for the trade\-off between efficiency and accuracy\. Furthermore, ACDP leverages a hypernetwork to determine dataset feature extractor parameters conditioned on architectural features, transforming raw dataset traits into tailored representations\. ACDP excels in both specialization and generalization on six unseen datasets\. Notably, in NAS\-Bench\-201, ACDP achieves 0\.758/0\.741 Kendall's Tau on CIFAR\-10/100, surpassing single\-dataset SOTAs trained with over 100 target samples\. In MobileNetV3, ACDP discovers architectures outperforming cross\-dataset SOTAs, notably gaining \+2\.04% accuracy on Aircraft\. Code: https://anonymous\.4open\.science/r/ACDP/
+
+## CroissantMiner: Automated Extraction and Validation of Croissant Metadata for ML Datasets
+
+**Authors:** Berke Arda; Mubashara Akhtar; Ahmetcan Yavuz; Paul Gerry; Sebastian Lobentanzer; Nobin Sarwar; Joan Giner\-Miguelez; Kongtao Chen; Luyao Zhang; Mrinmaya Sachan
+
+**ID:** 139073 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=mrHeRim4QM>) | [PDF](<https://openreview.net/pdf?id=mrHeRim4QM>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139073>)
+
+Croissant has emerged as a standard for machine\-readable dataset metadata, yet populating its fields remains labor\-intensive and requires careful reading of accompanying dataset documentation\. The benchmark comprises 602 papers, including 102 with human\-validated gold annotations \(9,595 ratings\) and 500 with LLM\-validated silver annotations, covering the full Croissant schema with both core and Responsible AI \(RAI\) fields\. To our knowledge, this is the first benchmark enabling end\-to\-end evaluation of metadata extraction aligned with a community\-standard schema\. We evaluate 20 extraction systems, including frontier and open\-weight models as well as four agentic architectures, using a two\-tier evaluation framework that combines rule\-based scoring with an LLM judge selected via human audit\. Our results show that single\-pass extraction with Claude Sonnet 4\.6 and a canonical prompt is the strongest configuration \(composite 0\.704\)\. Across all backbones, agentic architectures consistently underperform their single\-pass counterparts, indicating that task decomposition degrades performance for schema\-complete metadata extraction\. This effect is most prevalent on long\-form RAI fields, where accurate extraction requires integrating information across multiple sections\. Claude Sonnet 4\.5, used to seed the gold pre\-fills, is excluded from the headline ranking to avoid circularity\. We release the benchmark, evaluation code, and judge audit anonymously for review at https://anonymous\.4open\.science/r/croissantminer\-F87C, with a live Hugging Face Space demo to be provided at camera\-ready\.
+
+## Towards Unified Dynamic Face Landmark Detection
+
+**Authors:** Sebastian Regalado Lozano; Varshanth R Rao; Ruowei Jiang; Parham Aarabi; Igor Gilitschenski
+
+**ID:** 151381 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=b1iNnvFc6A>) | [PDF](<https://openreview.net/pdf?id=b1iNnvFc6A>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151381>)
+
+Although advancements in face landmark detection \(FLD\) methods continue to push performance boundaries, they overlook two major functional limitations: \(1\) different network parameters need to be trained independently for each "N\-point" benchmark dataset, and \(2\) a model trained on an "N\-point" dataset reliably outputs only the N landmarks\. In our work, we first conceptualize Face Part\-Anchored Landmark Positions \(FPALPs\), wherein each landmark is treated as a progression value between zero \(start\) and one \(end\) along a face part's contour\. Every landmark can be expressed in the FPALP format, irrespective of its source dataset, hence unlocking the ability to unify all "N\-point" datasets into a single dataset\. Secondly, we represent each landmark with an FPALP\-based query, refine it progressively with a cross\-modality decoder, and predict its coordinates based on the final representation\. Our approach, called Unified Dynamic FLD, embodies these two design choices and streamlines the landmark detection pipeline by enabling \(1\) a single model to learn on any number of "N\-point" datasets, and \(2\) yield any number of specific landmark predictions by loading the designated landmark queries at runtime\. Extensive experiments on multiple benchmark datasets show that our method delivers these benefits while remaining competitive with, and in several cases outperforming existing state\-of\-the\-art methods\.
+
+## Measuring and Mitigating the Distributional Gap Between Real and Simulated User Behaviors
+
+**Authors:** Shuhaib Mehri; Philippe Laban; Sumuk Shashidhar; Marwa Abdulhai; Sergey Levine; Michel Galley; Dilek Hakkani\-Tur
+
+**ID:** 139106 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=kkKJ6xTPMS>) | [PDF](<https://openreview.net/pdf?id=kkKJ6xTPMS>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139106>)
+
+As user simulators are increasingly used for interactive training and evaluation of AI assistants, it is essential that they represent the diverse behaviors of real users\. While existing works train user simulators to generate human\-like responses, whether they capture the broad and heterogeneous distribution of real user behaviors remains an open question\. In this work, we introduce a method to measure the distributional gap between real and simulated user behaviors, validated through a human study and ablations\. Given a dataset of real and simulated conversations, our method extracts representations of user behavior from each conversation, quantizes them into discrete distributions via clustering, then computes divergence metrics\. We provide the first systematic evaluation of 24 LLM\-based user simulators on coding and writing tasks, and reveal a large distributional gap from real users that varies across model families, scales, and behavioral facets\. Pairwise comparisons show that most simulators behave similarly, while a few stand apart\. Combining behaviorally complementary simulators brings the resulting distribution closer to real users compared to either simulator on its own\. Finally, a TF\-IDF analysis of the clusters surfaces interpretable patterns of behaviors that simulators capture, miss, and hallucinate\.
+
+## CSI\-TextBench: A Dataset and Benchmark for Language\-Grounded Ambient Sensing Perception
+
+**Authors:** Guozhen Zhu; Yuqian Hu; Sakila S Jayaweera; Wei\-Hsiang Wang; Beibei Wang; K\. Liu
+
+**ID:** 139630 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=EO00lY9oOt>) | [PDF](<https://openreview.net/pdf?id=EO00lY9oOt>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139630>)
+
+Indoor context deciphered by ambient sensing underpins many applications, from assisted living to smart buildings, yet remains weakly connected to the language\-aligned paradigm of modern multimodal systems\. Through billions of IoT devices, ambient WiFi Channel State Information \(CSI\) captures the indoor context of human activity and environmental dynamics passively via ubiquitous, always\-on infrastructure\. However, unlike vision or audio, CSI lacks naturally paired text like captions or transcripts, limiting its integration with language\-driven AI systems\. We present CSI\-TextBench, a large\-scale dataset and benchmark for aligning CSI data with natural language, unifying 3 sensing benchmarks into 285,790 samples across 7 tasks and pairing them with 2,291 hierarchically structured, label\-derived descriptions via many\-to\-many assignment to construct 2\.0 million CSI–text training tuples\. Benchmarking 5 alignment methods from 4 paradigm families, we show that contrastive CSI\-\-text alignment matches supervised classifiers without class labels, adapts to unseen classes with few samples, and responds to open\-vocabulary natural\-language prompts\. A single unified model supports compositional scene understanding, answering joint queries over activity, proximity, and identity, achieving 86\.9\\% top\-1 accuracy on 140 composite scenes, outperforming task\-specific classifier ensembles\. CSI\-TextBench enables ubiquitous ambient sensing as a language\-indexed perception layer, enabling indoor contextual awareness in language\-driven AI systems\.
+
+## Beyond Score: A Dataset for Joint Action and Score Predictions in 2v2 Sports
+
+**Authors:** Yuting Wang; Peng Wen; Fengshun Wang; Jiayong Zuo; Xinyu Peng; Qiurui Wang
+
+**ID:** 138978 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=sv4gnW1mM1>) | [PDF](<https://openreview.net/pdf?id=sv4gnW1mM1>) | [Official poster](<https://neurips.cc/virtual/2026/poster/138978>)
+
+Current sports analysis methods often rely on high\-level statistics and therefore provide limited insight into the action\-level interactions underlying tactical outcomes\. To enable fine\-grained modeling of tactical processes, we present JAS\-2v2, the first public dataset for action\-based tactical analysis across 2v2 sports\. By unifying beach volleyball, badminton doubles, tennis doubles, and table tennis doubles, JAS\-2v2 enables comparative study of diverse tactical structures spanning both open and closed tactical systems under a shared sequence modeling framework\. This dataset reframes score prediction as a sequence understanding problem, emphasizing how fine\-grained action flows contribute to final tactical outcomes rather than only what the final outcome is\. We further propose a unified action\-to\-score modeling framework based on graph reasoning and temporal modeling\. Experiments show that our method outperforms strong baselines on both action prediction and score outcome prediction, and further demonstrate that fine\-grained action semantics and sequential action dependencies are critical for tactical reasoning\. In particular, using action prediction as an intermediate objective provides more effective representations for score outcome prediction\.
+
+## The two clocks and the innovation window: When and how generative models learn rules
+
+**Authors:** Binxu Wang; Emma Finn; Bingbin Liu
+
+**ID:** 155088 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=8WJCdo8rks>) | [PDF](<https://openreview.net/pdf?id=8WJCdo8rks>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155088>)
+
+Generative models trained on finite data face a fundamental tension: their score\-matching or next\-token objective converges to the empirical training distribution rather than the population distribution we seek to learn\. Using rule\-valid synthetic tasks, we trace this tension across two training timescales: $\\tau\_\{rule\}$, the step at which generations first become rule\-valid, and $\\tau\_\{mem\}$, the step at which models begin reproducing training samples\. Focusing on parity and extending to other binary rules and combinatorial puzzles, we characterize how these two clocks $\\tau\_\{rule\}$, $\\tau\_\{mem\}$ depend on key aspects of the learning setup\. Specifically, we show that $\\tau\_\{rule\}$ increases with rule complexity and decreases with model capacity, while $\\tau\_\{mem\}$ is approximately invariant to the rule and scales nearly linearly with dataset size $N$\. We define the \\emph\{innovation window\} as the interval $\[\\tau\_\{rule\}, \\tau\_\{mem\}\]$\. This window widens with increasing $N$ and narrows with rule complexity, and may vanish entirely when $\\tau\_\{rule\} \\geq \\tau\_\{mem\}$\. The same two\-clock structure arises in both diffusion \(DiT\) and autoregressive \(GPT\) models, with architecture\-dependent offsets\. Dissecting the learned score of DiT models reveals a corresponding evolution of the optimization landscapes, where attractors emerge at both timescales: rule\-valid samples' basins expand substantially around $\\tau\_\{rule\}$, while training samples' basins begin to dominate around $\\tau\_\{mem\}$\. Together, these results yield a unified and predictive account of when and how generative models exhibit genuine innovation\.
+
+## Theory\-Scale Auto\-Formalization of Logics for Computer Science
+
+**Authors:** Yuming Feng; Frederick Pu; One An; Osbert Bastani; Li Zhang; Jiani Huang; Xujie Si; Ziyang Li
+
+**ID:** 139146 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=iKP2FDkWuw>) | [PDF](<https://openreview.net/pdf?id=iKP2FDkWuw>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139146>)
+
+Auto\-formalization is critical for scalable formal verification, but existing progress largely focuses on isolated statements, while theory\-scale auto\-formalization, which coherently translates hundreds of interdependent definitions, lemmas, and theorems, remains open due to challenges in consistency, faithfulness, scalability, and correctness\. In this paper, we introduce LCS\-Bench, a stand\-alone, theory\-scale benchmark based on Logics for Computer Science\. LCS\-Bench is built through a novel semi\-automated agentic pipeline that leverages dependency graphs, concept tagging, issue tracking, and iterative refinement, complemented by significant faithfulness review from human experts\. The resulting artifact covers 327 textbook items, over 4,076 Lean declarations, and more than 85K lines of Lean code\. The dataset supports broad evaluation through a data engine that automatically derives five tracks of evaluation benchmarks, measuring different aspects of auto\-formalization and theorem\-proving capabilities\. We also introduce a novel evaluation protocol featuring definitional equivalence checkers, enabling more fine\-grained and faithful assessment\. Through extensive evaluation on 14 models, we demonstrate that \(1\) LCS\-Bench is of high quality, consistent, and faithful; \(2\) the benchmark is challenging, with state\-of\-the\-art models achieving only 20\.1% on auto\-formalization tasks; and \(3\) our analysis reveals key findings regarding theory\-scale auto\-formalization and suggests promising directions for future work\.
+
+## DopplerWild: A Doppler Dataset and Benchmark for Human Kinematic Understanding in the Wild
+
+**Authors:** Shubo Yang; Aaron Wang; Narayan Schuetz; Jida Zhang; Edison R Altamirano; Kaitlyn Leitherer; Ehsan Adeli; Amin Arbabian
+
+**ID:** 139019 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=qB0eixkokM>) | [PDF](<https://openreview.net/pdf?id=qB0eixkokM>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139019>)
+
+Understanding human kinematics in outdoor, real\-world environments is critical for assistive robots and intelligent infrastructure\.  Many perception systems rely on cameras and LiDAR, which infer motion indirectly from spatial observations, making estimates sensitive to discontinuities and ambiguity under low lighting or at distance\. In contrast, mmWave radar is robust to lighting and weather, operates at long range, and directly measures motion through Doppler signatures\.  However, Doppler\-based kinematic understanding remains largely unexplored in the wild because existing datasets are primarily controlled and scripted\. We introduce DopplerWild, a dataset and benchmark for evaluating Doppler\-based kinematic understanding in the wild\.  DopplerWild comprises 447k radar frames across four outdoor locations, including an unlabeled subset for self\-supervised representation learning and a labeled subset of 539 subjects with nearby\-person interference \(56\\%\) and occlusion \(16\\%\)\.  The benchmark spans coarse and fine\-grained motion classification, as well as velocity estimation\. Beyond aggregate metrics on controlled datasets, DopplerWild evaluation isolates real\-world factors: subject variation, location shift, multi\-person interference, occlusion, sensing geometry, and low\-label regimes\.  DopplerWild reveals three findings\. First, self\-supervised pretraining matches supervised performance with less than half the labeled data and improves performance under interference, occlusion, and lateral motion\.  Second, we identify key challenges for single\-view Doppler sensing, including physical limits in lateral motion, subtle asymmetric limb motion, and location distribution shifts\. Third, we observe bidirectional transfer asymmetry between DopplerWild and an external controlled Doppler dataset, suggesting that real\-world coverage is important for transferable Doppler representations\. DopplerWild provides an evaluation framework for characterizing the generalization, limits, and transferability of Doppler\-based kinematic representations in the wild\.
+
+## Fast Diverse Nearest Neighbor Search
+
+**Authors:** Justin Chen; Soham Nagawanshi; Shenghao Xie; Haike Xu; Alan Zhou; Samson Zhou
+
+**ID:** 156099 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=0NrAOwOmiN>) | [PDF](<https://openreview.net/pdf?id=0NrAOwOmiN>) | [Official poster](<https://neurips.cc/virtual/2026/poster/156099>)
+
+In the $k$\-diverse nearest neighbor search problem, the input is a dataset in which each point is assigned a color, and given a query $q$, the goal is to retrieve $k$ approximate nearest neighbors with distinct colors\. This color diversity metric is highly essential for information retrieval tasks where results are required to have different categories, e\.g\., recommending products from different sellers\. Previous state\-of\-the\-art solution by Anand et al\. \[ICML 2025\] constructs a diversity\-aware graph to meet this requirement\. However, they suffer from an $\\mathcal\{O\}\(k^2\)$  multiplicative query time overhead, creating a computational bottleneck when $k$ is large\.  To break this barrier, we propose a novel color bucketing framework that selects a subset of colors in each bucket and instantiates an independent approximate nearest neighbor search algorithm on the corresponding points\. Inspired by group testing, we provide a randomized color sampling scheme that achieves an $\\mathcal\{O\}\\left\(k^\{1\-\\frac\{1\}\{c^2\}\-o\(1\)\}\\log k\\right\)$ overhead in Euclidean spaces and an $\\mathcal\{O\}\\left\(k \\log k\\right\)$ overhead in general metric spaces, where $c$ is the approximation factor, reducing a factor of $k$\. In addition, the space usage to store the data structure matches or improves upon prior methods\. Empirical results on semi\-synthetic and real\-world datasets demonstrate that our approach achieves significantly faster search times and higher recall compared to state\-of\-the\-art diversity search baselines\.  Furthermore, we introduce a dataset\-oblivious deterministic bucketing scheme using expander graphs for a relaxed diverse search problem that only requires $k\(1\-\\varepsilon\)$ colors\. Here, dataset\-oblivious means that the color bucket construction does not depend on the spatial configuration of the dataset\. We then establish an $\\Omega\(k^2\)$ lower bound on the number of buckets for any dataset\-oblivious deterministic bucketing scheme that gives an \\emph\{exact\} $k$\-diverse solution\. We subsequently circumvent this by a dataset\-aware adaptive segment tree bucketing scheme with an overhead of only $\\mathcal\{O\}\(k \\log N\)$, where $N$ is the number of colors\. As an extension of our results, we solve the problem with general diversity metric, where the goal is to maximize the minimum pair\-wise distance of the $k$ solutions, and improve the query time\.
+
+## Space\-Optimal Streaming Algorithms via Efficient Encodings
+
+**Authors:** Liudeng Wang; David Woodruff; Shenghao Xie; Samson Zhou
+
+**ID:** 155183 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=7fVfD6Nmw4>) | [PDF](<https://openreview.net/pdf?id=7fVfD6Nmw4>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155183>)
+
+We study the problem of constructing coresets on data streams: Given a dataset of $n$ points in $\\mathbb\{R\}^d$ arriving sequentially, the goal is to maintain a small weighted subset that accurately approximates the objective values of the entire dataset for a given class of query functions\. Previous methods like merge\-and\-reduce and online sensitivity sampling required more space than the size of an optimal such subset in the offline setting\. In this work, we show that such overheads are not necessary by presenting space\-optimal streaming algorithms for central high\-dimensional optimization problems such as Euclidean $\(k,z\)$\-clustering and $L\_p$ subspace embeddings, as well as applications to projection\-cost preserving sketches\.   For $\(k,z\)$\-clustering, our streaming algorithm uses memory independent of the number $n$ of input points \(in words of memory\) and the aspect ratio $\\Delta$, yielding a coreset with an optimal $\\tilde\{\\mathcal\{O\}\}\\left\(\\frac\{dk\}\{\\min\(\\varepsilon^4,\\varepsilon^\{z\+2\}\)\}\\right\)$ words of memory for accuracy parameter $\\varepsilon\\in\(0,1\)$\. For $L\_p$ subspace embeddings, where the rows of matrix $\\mathbf\{A\} \\in \\mathbb\{R\}^\{n \\times d\}$ arrive in an insertion\-only stream, we achieve an efficient algorithm that uses optimal space for different ranges of $p$: $\\tilde\{\\mathcal\{O\}\}\\left\(\\frac\{d^2\}\{\\varepsilon^2\}\\right\)$ words for $p\\le 2$ and $\\tilde\{\\mathcal\{O\}\}\\left\(\\frac\{d^\{p/2\+1\}\}\{\\varepsilon^2\}\\right\)$ words for $p&gt;2$, both independent of the number of rows $n$\. Thus, our work shows that streaming algorithms can match offline algorithms in space complexity\.
+
+## MITO: A Millimeter\-Wave Dataset and Simulator for Non\-Line\-of\-Sight Perception
+
+**Authors:** Tara Boroushaki; Laura Dodds; Cusuh Ham; Fadel Adib
+
+**ID:** 139166 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=hJlnaYhXuZ>) | [PDF](<https://openreview.net/pdf?id=hJlnaYhXuZ>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139166>)
+
+The ability to observe the world is fundamental to reasoning and making informed decisions on how to interact with the environment\. However, optical perception can often be disrupted due to common occurrences like occlusions, which can pose challenges to existing vision systems\. We present MITO, the first millimeter\-wave \(mmWave\) dataset of diverse, everyday objects, collected using a UR5 robotic arm with two mmWave radars operating at different frequencies and an RGB\-D camera\. Unlike visible light, mmWave signals can penetrate common occlusions \(e\.g\., cardboard boxes, fabric, plastic\)\. MITO captures over 24 million mmWave frames and uses them to generate 550 high\-resolution mmWave images in line\-of\-sight and non\-light\-of\-sight \(NLOS\), as well as RGB\-D images, segmentation masks, and raw mmWave signals, taken from 76 different objects\. We develop an open\-source simulation tool that can be used to generate synthetic mmWave images for any 3D triangle mesh\. Finally, we establish benchmarks for NLOS segmentation and classification to demonstrate the utility of our dataset and simulator for enabling broader NLOS perception\.
+
+## MSConsensus: A Hundred\-Million\-Scale, Batch\-Effect–Suppressed Dataset and Benchmark for Proteomics Machine Learning
+
+**Authors:** Christopher Grams; Chang Liu; Michael Papka; Yu Gao
+
+**ID:** 139206 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=egB7UnD256>) | [PDF](<https://openreview.net/pdf?id=egB7UnD256>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139206>)
+
+MSConsensus: A Hundred\-Million\-Scale, Batch\-Effect–Suppressed Dataset and Benchmark for Proteomics Machine Learning Machine learning for proteomics is bottlenecked by three coupled and under\-explored challenges: \(i\) noisy mass\-spectrometry \(MS\) data dominated by instrument\- and protocol\-specific batch effects, \(ii\) slow data loading from legacy XML\- and text\-based file formats, and \(iii\) a fragmented evaluation landscape that prevents meaningful cross\-study comparison\. Each silently constrains what proteomics models learn, how efficiently they train, and how reliably they are compared\. We address all three with MSConsensus, a multi\-task dataset and benchmark built natively for proteomics ML\. MSConsensus contains 110,209,043 consensus spectra distilled from 1\.01 PB of public PRIDE data spanning 1,500 repositories and all major Orbitrap and timsTOF platforms, with per\-peak ion annotations and stratified ML splits across instruments, species, and post\-translational modifications\. Unlike single\-representative spectral libraries \(MassIVE\-KB v2, NIST, ProteomeTools\), MSConsensus uses a new Weighted\-Score Binning \(WSBIN\) algorithm that emits multiple consensus spectra per \(peptide, charge\) cluster, preserving intra\-cluster variance required by contrastive and representation\-learning objectives while suppressing context\-specific artifacts\. Across five held\-out PRIDE repositories and four search engines \(Comet, MetaMorpheus, MSFragger, Sage\), WSBIN improves signal\-to\-noise ratio by an average of \+3\.86 dB \(range \+0\.57 to \+10\.47 dB\) without sacrificing protein, peptide, or PSM identification counts\. To eliminate the I/O bottleneck during model training, we pair MSConsensus with MSCompress and a new msz binary container\. msz compresses to 45% of mzML size losslessly and supports 25,378 random\-access spectra/sec — 3\.2× HDF5 — through a drop\-in PyTorch / JAX dataloader\. A unified public leaderboard standardizes evaluation across three core tasks—spectrum embedding, intensity prediction, and de novo peptide identification—and we report results for ten widely used systems \(Casanovo, InstaNovo, Prosit, MS²PIP, GLEAMS, Spec2Vec, Comet, MetaMorpheus, MSFragger, Sage\)\. Replacing raw training data with MSConsensus stabilizes Prosit's spectral angle on a never\-before\-seen 2025 instrument \(PXD053296\) from 0\.6964 to 0\.8137 and improves Spec2Vec top\-1 retrieval from 39\.2% to 46\.7% \(\+19\.0% relative\)\. By jointly addressing scale, batch\-effect suppression, I/O efficiency, and standardized evaluation, MSConsensus provides foundational infrastructure for training, evaluating, and comparing future proteomics models\. The dataset is released on Harvard Dataverse \(doi:10\.7910/DVN/NUCT4N\) under CC BY 4\.0; MSCompress, MSDatasets, preprocessing pipelines, and baseline scripts are released on GitHub under Apache 2\.0, with Docker containers for reproducibility\.
+
+## AnyHand: A Large\-Scale Synthetic Dataset for RGB\(\-D\) Hand Pose Estimation
+
+**Authors:** Chen Si; Yulin Liu; Bo Ai; Jianwen Xie; Rolandos Alexandros Potamias; Chuanxia Zheng; Hao Su
+
+**ID:** 139245 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=cUZmslkWyQ>) | [PDF](<https://openreview.net/pdf?id=cUZmslkWyQ>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139245>)
+
+We present AnyHand, a large\-scale synthetic dataset designed to advance the state of the art in 3D hand pose estimation\. While recent works with foundation approaches have shown that scaling training data markedly improves hand pose estimation, existing real\-world datasets are limited in coverage, and prior synthetic datasets rarely provide occlusions, arm details, and aligned depth together at scale\. To address this bottleneck, our proposed AnyHand contains 2\.5M single\-hand and 4\.1M hand\-object interaction RGB\-D images, with rich geometric annotations\. We show that extending the original training data recipes of existing RGB baselines with AnyHand yields significant gains on multiple benchmarks \(FreiHAND and HO\-3D\), even when keeping the architectures and training schemes fixed\. Together with extensive ablations on the scale and composition of the training data setups, these results suggest that training data diversity and quality are as critical as scale for advancing hand pose estimation\. We further examine the utility of AnyHand's aligned depth maps in the appendix, showing that scaling RGB\-D supervision with AnyHand allows a lightweight depth\-fusion variant of existing RGB baselines to outperform prior RGB\-D methods\.
+
+## State\-of\-art minibatches via novel DPP kernels: discretization, wavelets, and rough objectives
+
+**Authors:** Hoang Son Tran; Pranav Gupta; Rémi Bardenet; Subhroshekhar Ghosh
+
+**ID:** 154500 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=D8tqZupi52>) | [PDF](<https://openreview.net/pdf?id=D8tqZupi52>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154500>)
+
+Determinant point processes \(DPPs\) have recently emerged as a kernelized alternative to vanilla independent sampling for generating efficient minibatches, coresets and other parsimonious representations of large\-scale datasets\. While basic theoretical foundations and promising empirical performance have been demonstrated, there are two main challenges for current proposals for DPP\-based coresets or minibatches\. The first is the need for families of DPPs with certain key variance reduction properties, usually constructed in a continuous setting, of which there are few known examples\. The second is the need for an ad\-hoc construction of a discrete DPP defined on a given dataset, that inherits such variance reduction\. In this work, we contribute to the programme of establishing DPPs as a subsampling toolbox for ML by advancing on these two fronts\. First, we propose new DPPs on the Euclidean space based on wavelets, with provably better accuracy guarantees than the best known rates\. Second, we introduce a general method to convert such continuous DPPs, which are more amenable to proving analytical statements, into discrete kernels, which are pertinent for subsampling tasks such as minibatch and coreset constructions\. This conversion mechanism simultaneously preserves the desired variance decay and reveals a low\-rank decomposition of the discrete kernel, which makes sampling the corresponding DPP computationally inexpensive\. En route, we enlarge the class of ML tasks amenable to improvements via DPP\-based minibatches and coresets to include highly non\-smooth objective functions, with arbitrarily low regularity, and rate guarantees that adapt explicitly to this regularity\.
+
+## AgentCollabBench: Diagnosing When Good Agents Make Bad Collaborators
+
+**Authors:** Aritra Mazumder; Shubhashis Roy Dipta; Nusrat Jahan Lia; Tanzila Khan; Kainat R Hossain; Nehaa Shri; Humayra Tasnim; Gour G Shawon; Shubhrangshu Debsarkar; Sumaiya A Rani; Al Jami Islam Anik; Debjoty Mitra; Al Nafeu Khan
+
+**ID:** 139450 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=P9qqypDzuC>) | [PDF](<https://openreview.net/pdf?id=P9qqypDzuC>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139450>)
+
+Multi\-agent systems achieve state\-of\-the\-art outcomes through peer     collaboration\. However, when an agent in the pipeline silently drops a     constraint, the system's final output may look correct even though the     reasoning chain was quietly corrupted, and existing outcome\-based     evaluations are blind to such multi\-hop process failures\. To make these     vulnerabilities measurable before deployment, we introduce     AgentCollabBench, a diagnostic benchmark of 900 human\-validated tasks     spanning software engineering, DevOps, and data engineering\. Each task     isolates one of four behavioral risks: instruction decay \(does a     constraint survive peer pressure?\), false\-belief contagion \(does a     falsehood spread through consensus?\), context leakage \(does information     bleed between tasks?\), and tracer durability \(does marked data reach the     final agent?\)\. Evaluating four modern LLMs \(GPT 4\.1 mini,     Gemini 2\.5 Flash Lite, Qwen\-3\.5\-35B\-A3B, and Llama 3\.1 8B Instruct\),     we expose model\-specific vulnerability profiles invisible to     outcome\-only evaluation; Qwen\-3\.5\-35B\-A3B, for example, leads on     tracer durability and instruction stability, while GPT 4\.1 mini leads     on leakage containment and false\-belief resistance\.     Beyond per\-model differences, communication topology emerges as a     primary risk factor that explains 7\-40% of the variance in multi\-hop     information survival\. The effect traces to a synthesis bottleneck     specific to converging\-DAG nodes: an agent weighing competing parent     inputs discards constraints carried by a minority branch, a bottleneck structurally absent from linear chains\. AgentCollabBench demonstrates that suboptimal     topology can silently erase the safeguards of highly capable models,     arguing that multi\-agent reliability is fundamentally a structural     problem and that scaling model intelligence alone is no substitute for     architecture\.
+
+## Dynamic k\-center clustering with lifetimes
+
+**Authors:** Simone Moretti; Paolo Pellizzoni; Andrea Pietracaprina; Geppino Pucci
+
+**ID:** 153912 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=HlPYOXghrm>) | [PDF](<https://openreview.net/pdf?id=HlPYOXghrm>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153912>)
+
+The $k$\-center problem is a fundamental clustering variant with applications in learning systems and data summarization\. In several real\-world scenarios, the dataset to be clustered is not static, but evolves over time, as new data points arrive and old ones become stale\. To account for dynamicity, the $k$\-center problem has been mainly studied under the sliding window setting, where only the $N$ most recent points are considered non\-stale, or the fully dynamic setting, where arbitrary sequences of point arrivals and deletions without prior notice may occur\. In this paper, we introduce the dynamic setting with lifetimes, which bridges the two aforementioned classical settings by still allowing arbitrary arrivals and deletions, but making the deletion time of each point known upon its arrival\. Under this new setting, we devise a deterministic $\(2\+\\varepsilon\)$\-approximation algorithm with $\\widetilde\{O\}\(k/\\varepsilon\)$ amortized update time and memory usage linear in the number of currently active points\. Moreover, we develop a deterministic $\(6\+\\varepsilon\)$\-approximation algorithm that, under ‘‘tame” update sequences, has $\\widetilde\{O\}\(k/\\varepsilon\)$ worst\-case update time and heavily sublinear working memory\.
+
+## When Scores Conflict with Preferences: Calibrated Drift Control for Heterogeneous DPO
+
+**Authors:** Ping Liu; Yan Yan
+
+**ID:** 151343 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=bFc8A2Irjf>) | [PDF](<https://openreview.net/pdf?id=bFc8A2Irjf>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151343>)
+
+Direct Preference Optimization \(DPO\) is increasingly used in settings where pairwise preference signals coexist with pointwise criteria such as response length, answer correctness, or safety scores\. When the two disagree, standard DPO does not explicitly distinguish pairs that improve the pointwise criterion from those that worsen it\. We show that this mismatch induces a systematic failure mode, which we call \*\*constraint drift\*\*: updates on disagreement pairs tend to increase pointwise violation, while updates on aligned pairs tend to repair it, with the overall drift governed by their balance\. Under a first\-order approximation, this balance yields a closed\-form pre\-alignment diagnostic, $\\rho^\{\*\}\_\\mathrm\{eq\}$, computable from dataset statistics alone, that predicts whether the data is self\-correcting or requires intervention before alignment begins\. Building on this diagnostic, we propose \*\*Conflict\-aware DPO \(CoDPO\)\*\*, a calibrated modification to the DPO loss with two complementary components: a coarse per\-sample control for primary drift regulation and a fine adaptive margin tilting for residual correction during training\. Across six domains, drift grows monotonically with conflict exposure, and $\\rho^\{\*\}\_\\mathrm\{eq\}$ tracks the empirical drift transition, including self\-correcting settings where intervention is unnecessary\. Across four base\-model architectures and multiple preference losses, CoDPO reduces drift while preserving preference learning\. Compared with hard filtering and recent constrained\-alignment and multi\-objective baselines, CoDPO achieves a more favorable trade\-off between drift control and preference performance\.
+
+## Auditing Evidence Framing at NeurIPS: A Decade\-Scale Study of Accepted Papers
+
+**Authors:** Jason Godfrey
+
+**ID:** 139236 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=d3J7bxCLHH>) | [PDF](<https://openreview.net/pdf?id=d3J7bxCLHH>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139236>)
+
+NeurIPS now publishes a broad mix of algorithmic, theoretical, empirical, dataset, benchmark, systems, and evaluation\-infrastructure work\. Yet we lack systematic evidence on how the composition of this mix has changed over time\. We audit titles, abstracts, and metadata for 19,361 accepted NeurIPS papers from 2015\-\-2024\. We define semantic axes for formal\-theoretical evidence, benchmark/resource evidence, empirical\-performance evidence, artifact\-release orientation, scale/capability framing, claim strength, and hedging; score papers with contrastive embedding measures; and validate the constructs with blinded LLM\-agent ratings, lexical probes, encoder triangulation, length checks, and topic controls\. In raw decade trends, accepted papers shift toward benchmark/resource evidence \(\+0\.842 SD\), empirical\-performance evidence \(\+0\.750 SD\), and scale/capability framing \(\+0\.606 SD\), and away from formal\-theoretical framing \(\-0\.872 SD\)\. Topic composition explains much of this movement, but embedding\-cluster residuals remain \+0\.246, \+0\.264, \+0\.247, and \-0\.300 SD, respectively\. Independent lexical LDA controls preserve the same signs at smaller magnitudes\. Artifact\-release framing is a useful negative result: it rises modestly in the raw corpus \(\+0\.226 SD\) but is near zero or negative after topic adjustment\. We release a reusable audit package that includes metadata, semantic and lexical features, validation artifacts, robustness scripts, and an interactive Evidence Norms Atlas for inspecting aggregate evidence\-framing patterns by year, topic neighborhood, and track\.
+
+## RoMo Hands: A Large Scale Richly Organized Text to Hand Motion Dataset
+
+**Authors:** Yizhak Ben\-Shabat; Jiahao Zhang; Joseph Liu; Seonghyeon Moon; Young\-Yoon Lee; Haomiao Jiang; Oren Jacob; Mubbasir Kapadia
+
+**ID:** 150930 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=eGVue7g2tp>) | [PDF](<https://openreview.net/pdf?id=eGVue7g2tp>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150930>)
+
+While text\-driven body motion generation has matured, pure\-hand synthesis remains bottlenecked by data\. Existing datasets often treat hands as rigid end\-effectors, lack fine\-grained captions, or are too limited in scale to support robust generalization\. We introduce \\textbf\{RoMo Hands\}, an in\-the\-wild, text\-paired dataset of $\\sim$542K sequences \(884 hours, 95\.5M frames at 30\\,fps\) which is an order of magnitude larger than prior work\. To ensure high\-quality supervision, a stringent dexterity filter discards low\-articulation sequences, focusing the distribution on complex bimanual movement\. Each clip is paired with five captions at increasing granularities from global semantic tags to atomic finger states, organized under a hierarchical taxonomy\. To bridge the gap between body and hand architectures, we propose a novel 393\-D bimanual representation that adapts redundant body\-motion paradigms to the high\-DoF kinematics of hands\. Systematic benchmarking of state\-of\-the\-art diffusion, masked\-token, and autoregressive generators reveals that body\-centric design choices do not transfer cleanly to hands, exposing a sharp divergence between semantic alignment and kinematic plausibility\. Our dataset, representation, and benchmark establish a rigorous foundation for the next generation of dexterous motion synthesis\.
+
+## An Embarrassingly Simple Graph Heuristic Reveals Shortcut\-Solvable Benchmarks for Sequential Recommendation
+
+**Authors:** Haoyu Han; Li Ma; Hanbing Wang; Bingheng Li; Daochen Zha; Chun How Tan; Huiji Gao; Xin Liu; Stephanie Moyerman; Sanjeev Katariya; Hui Liu; Jiliang Tang
+
+**ID:** 139297 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=Yt9idh9KSB>) | [PDF](<https://openreview.net/pdf?id=Yt9idh9KSB>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139297>)
+
+Sequential recommendation is a central task in recommender systems, and recent research has increasingly shifted toward generative recommenders that leverage both sequential patterns and semantic item information\. However, these methods are often evaluated on a small set of widely used benchmarks\. This raises a natural question:  do these benchmarks actually require the advanced modeling capabilities of modern generative recommenders? We conduct a benchmark audit using an intentionally simple graph heuristic: starting from only the most recent one or two interacted items, it retrieves candidates from a few\-hop item\-transition graph and ranks them with item\-feature similarity\. Surprisingly, despite its simplicity, this heuristic matches or outperforms a broad set of modern baselines on a variety of popular sequential recommendation benchmarks\. For example, it achieves relative NDCG@10 improvements of 38\.10\\% and 44\.18\\%  over the best competing baseline on the widely used Amazon Review Sports and CDs datasets, respectively\.  We further show that this phenomenon is not merely an artifact of a particular heuristic, but reflects shortcut solvability in existing benchmarks\. Specifically, we identify three potential shortcut structures that could make next\-item prediction easier than expected: low\-branching local transition structure, feature\-smooth transitions, and limited dependence on long user histories\. These shortcuts do not need to appear simultaneously\. Depending on the dataset, even one or two strong shortcut signals can make simple local retrieval highly competitive, while weakening the relevant signals allows more sophisticated models to show clearer benefits\. Our broader evaluation across 14 diverse datasets further shows that model rankings change substantially with dataset properties, while the simple graph heuristic remains competitive on 10 out of 14 datasets\. These findings suggest that strong performance on several standard sequential recommendation benchmarks may not faithfully reflect whether recent methods achieve the advanced modeling capabilities they aim to demonstrate\. Rather than treating datasets as interchangeable leaderboards, we argue for more careful dataset selection and dataset\-level diagnostic analysis when using benchmarks to support claims about the benefits of new recommendation models\.
+
+## Precise Debugging Benchmark: Is Your Model Debugging or Regenerating?
+
+**Authors:** Miaosen Chai; Wang Bill Zhu; Shangshang Wang; Yejia Liu; Song Bian; Honghua Dong; Willie Neiswanger; Robin Jia
+
+**ID:** 139017 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=qBuOrD12Mv>) | [PDF](<https://openreview.net/pdf?id=qBuOrD12Mv>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139017>)
+
+Unlike code completion, debugging requires localizing faults and applying targeted edits\. We observe that frontier LLMs often hack unit tests by regenerating correct but over\-edited solutions during debugging\. To evaluate how far LLMs are from precise debugging, we introduce Precise Debugging Benchmarking \(PDB\), a general, dataset\-agnostic framework that converts any coding dataset into a debugging benchmark with precision\-aware evaluation\. PDB generates buggy programs by synthesizing verified atomic bugs and composing them into multi\-bug programs\. We define two novel metrics, edit\-level precision and bug\-level recall, which measure how many necessary edits are made and how many bugs are resolved\. We release two evaluation benchmarks: PDB\-Single on single\-line bugs and PDB\-Wild on multi\-line and repository\-level bugs\. Experiments show that frontier models, such as GPT\-5\.1\-Codex and DeepSeek\-V3\.2\-Thinking, achieve unit\-test pass rates above 76% but exhibit precision below 45%, even when explicitly instructed to perform minimal debugging on single\-line bugs\. Iterative and agentic debugging strategies do not substantially improve precision or recall, highlighting the need to rethink post\-training pipelines for coding models\.
+
+## Non\-Linear Pricing Restores Tractability for a Data Seller
+
+**Authors:** Bhaskar Ray Chaudhury; Jugal Garg; Eklavya Sharma; Jiaxin Song
+
+**ID:** 155203 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=7WJ1EDR5yc>) | [PDF](<https://openreview.net/pdf?id=7WJ1EDR5yc>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155203>)
+
+We consider a data seller who designs pricing mechanisms over multiple datasets to maximize revenue from budget\-constrained buyers\. The seller offers multiple datasets and assigns each a pricing function that maps the quantity purchased to a total payment\. The goal is to design these pricing functions to maximize revenue, anticipating that buyers—who trade off accuracy gains against cost—choose bundles optimally subject to their budget constraints\. Prior work \[Chaudhury et al\., 2026\] studies such optimal pricing under the restriction that each dataset is assigned a linear price, and shows that computing optimal linear prices is computationally intractable\. In contrast, we allow each dataset to be priced via a general function and show that this additional flexibility can not only increase the revenue but also restore tractability, yielding a surprising simultaneous improvement in economic performance and computational efficiency\. Even when pricing functions are only required to be monotone and lower\-continuous, optimal pricing admits a highly structured and simple form: each pricing function is piecewise linear and convex \(PLC\), and the optimal solution can be computed in polynomial time\. Moreover, the total number of kinks across all pricing functions is bounded by the number of buyers\. Consequently, when datasets significantly outnumber buyers, most pricing functions are effectively linear\. We further empirically study the structure of optimal pricing by analyzing the number of kinks and the revenue gap between optimal nonlinear pricing and optimal linear pricing on simulations generated from a real dataset\.
+
+## A Large\-Scale Multi\-Source Dataset Linking Hacker Community Discourse to the CVE Vulnerability Lifecycle
+
+**Authors:** Benjamin M Ampel; Sagar Samtani
+
+**ID:** 139194 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=fHiKImVYbt>) | [PDF](<https://openreview.net/pdf?id=fHiKImVYbt>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139194>)
+
+We introduce HackerSignal, a benchmark for temporal out\-of\-distribution cyber threat intelligence \(CTI\) and cross\-source CVE linkage\. HackerSignal aggregates 7\.45 million exact\-deduplicated documents from 64 public forum/source identifiers spanning eight source layers and a 36\-year window \(1990\-2026\)\. In contrast to other publicly accessible cybersecurity datasets, HackerSignal is among the first public benchmark datasets that maps the full potential exploit to vulnerability trajectory from hacker community discourse, exploit databases with working and proof of concept exploits, vulnerability advisories, and software fix commits\. HackerSignal creates these linkages through a shared CVE identifier space while preserving source\-specific release modes to support a range of unique Artificial Intelligence \(AI\)\-enabled cybersecurity analytics tasks\. In this paper, we summarize HackerSignal and illustrate three selected benchmark tasks it uniquely supports: \(1\) CVE linkage retrieval \(cross\-source temporal out\-of\-distribution entity grounding\); \(2\) exploit type classification \(8\-class vulnerability type prediction with temporal OOD evaluation\); and \(3\) temporal generalization \(prospective CVE\-disjoint evaluation where $C\_\{\\text\{train\}\} \\cap C\_\{\\text\{test\}\} = \\emptyset$\)\. All tasks use temporal splits to evaluate prospective generalization\. We release source\-shortcut and leakage diagnostics; manual\-audit packets; a datasheet; and a release\-governance addendum to support the dissemination of the dataset\. HackerSignal's code, data, and Croissant metadata are available at hf\.co/datasets/DatasetSubmission/HackerSignal\.
+
+## Early Prediction of Future Behavioral Strategy from Process Traces
+
+**Authors:** Robert Kasumba; Dennis Barbour; Chien\-Ju Ho
+
+**ID:** 149638 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=ob4yUUSPk3>) | [PDF](<https://openreview.net/pdf?id=ob4yUUSPk3>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149638>)
+
+Adaptive systems often need to make task\-specific decisions about a person from limited prior evidence: a tutor may need to anticipate how a learner will approach a new problem, a game may need to adapt when a player enters a new level, and a human\-AI system may need to infer whether a partner will persist with a plan or switch goals\. These decisions depend on person\-level behavioral tendencies that shape how people solve related tasks, but such tendencies are difficult to infer from standard behavioral evidence\. One approach is to use aggregate outcome summaries, such as scores, completion rates, or productivity measures; these summaries are compact and available across tasks, but can collapse distinct behavioral processes into similar outcomes\. Another approach is to use process\-level traces, which record how behavior unfolds over time; however, process modeling within a single task can entangle stable person\-level tendencies with task\-specific layout, timing, and affordances\. In this work, we study early cross\-task behavioral inference: whether partial process traces from multiple source tasks can reveal transferable person\-level behavioral structure that predicts strategy in a held\-out target task\. We introduce Process\-Level Latent Variable Models \(PLVM\), which encode task\-specific traces and fuse them into a shared person\-level latent representation for cross\-task prediction\. In PowerWash Simulator, a naturalistic telemetry dataset of real human gameplay, PLVM uses partial traces from two earlier cleaning tasks to predict whether a player will exhibit locally persistent Zone Planner behavior or frequent Zone Hopper behavior in the held\-out Fire Station level\. Controlled simulations with known latent behavioral types show that cross\-task fusion helps when different source tasks reveal complementary dimensions of a shared latent behavioral process\. These results suggest that process\-level cross\-task modeling can support early prediction of target\-task behavioral strategy when waiting to observe sufficient target\-task behavior is impractical\.
+
+## Regret–Oracle Complexity Tradeoffs in Agnostic Online Learning
+
+**Authors:** Idan Attias; Steve Hanneke; Arvind Ramaswami
+
+**ID:** 148781 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=v7q3GJgA5O>) | [PDF](<https://openreview.net/pdf?id=v7q3GJgA5O>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148781>)
+
+Agnostic online learning is classically solved via a reduction to the realizable setting, utilizing Littlestone's Standard Optimal Algorithm \(SOA\) as a base learner\. However, the SOA is computationally intractable to execute even for a single round\. To overcome this barrier, recent work in oracle\-efficient online learning replaces the SOA with a realizable base learner that accesses the concept class exclusively through an offline empirical risk minimization \(ERM\) oracle\. While such agnostic learners achieve near\-optimal expected regret, they suffer from a doubly\-exponential oracle complexity of $\\mathcal\{O\}\\big\(T^\{2^\{\\mathcal\{O\}\(d\_\\mathrm\{LD\}\)\}\}\\big\)$, where $d\_\\mathrm\{LD\}$ is the Littlestone dimension and $T$ is the number of rounds\. In this work, we significantly improve this oracle complexity while relying on an even weaker primitive: a weak\-consistency oracle, which merely decides whether a given labeled dataset is realizable\. At the core of our approach is an adaptive and dynamic agnostic\-to\-realizable reduction that actively prunes non\-realizable label sequences on the fly\. By using the VC dimension \($d\_\\mathrm\{VC\}$\) to bound the number of dynamically maintained active paths, our algorithm reduces the total query complexity down to $\\mathcal\{O\}\(T^\{d\_\\mathrm\{VC\}\+1\}\)$ while perfectly preserving near\-optimal expected regret\. Crucially, this dynamic pruning also yields a memory reduction over the standard reduction\. Furthermore, we formally quantify the regret\-\-oracle complexity tradeoff, providing upper bounds that smoothly interpolate between restricted query budgets and attainable expected regret\. We complement these with lower bounds proving that any learner restricted to $Q = o\(\\sqrt\{T\}\)$ queries must suffer an expected regret of $\\Omega\(T/Q\)$\.
 
 ## Clean\-Label Poisoning for Gradient\-Boosted Decision Trees
 
@@ -1252,87 +1170,9 @@ Clean\-label poisoning attacks have been well studied for differentiable models,
 
 **Authors:** Lee Cohen; Jon Kleinberg; Omer Reingold
 
-**ID:** 154495\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 154495
+**ID:** 154495 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
 [Paper](<https://openreview.net/forum?id=DBFZrcg8Hf>) | [PDF](<https://openreview.net/pdf?id=DBFZrcg8Hf>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154495>)
 
 We introduce a notion of monoculture robustness in Probably Approximately Correct \(PAC\) learning, as a way to mitigate the problem of  \*algorithmic monoculture\* \(Kleinberg &amp; Raghavan, 2021\): the tendency of models sharing the same components \(e\.g\., training data\) to fail on the same inputs\. Specifically, we ask whether a learner with access to a single dataset can output $k$ individually accurate hypotheses whose joint failure probability is comparable to training on $k$ independent datasets\. We say that such a learning procedure achieves \*monoculture robustness\*, and we quantify this by bounding the \*conjunctive error\* that all $k$ hypotheses misclassify points in an individual sense\.  We design methods for achieving this type of guarantee by drawing a surprising connection between replicability \(Impagliazzo et al\., 2022\) and monoculture robustness\. Specifically, we show that if the base learner is $\\rho$\-replicable, then running it independently $k$ times on the same sample yields individual monoculture error that shrinks exponentially with $k$, controlled by the single\-run error of the base learner at the point and $\\rho$\. We complement these positive results with a lower bound: for individual monoculture robustness,  we prove a worst\-case lower bound showing that, for learners, driving the individual conjunctive error down to $\\gamma$ can require a sample\-size multiplier of $t = \\Omega\(\\log\(1/\\gamma\)\)$\.
-
-## Towards Unified Dynamic Face Landmark Detection
-
-**Authors:** Sebastian Regalado Lozano; Varshanth R Rao; Ruowei Jiang; Parham Aarabi; Igor Gilitschenski
-
-**ID:** 151381\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 151381
-
-[Paper](<https://openreview.net/forum?id=b1iNnvFc6A>) | [PDF](<https://openreview.net/pdf?id=b1iNnvFc6A>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151381>)
-
-Although advancements in face landmark detection \(FLD\) methods continue to push performance boundaries, they overlook two major functional limitations: \(1\) different network parameters need to be trained independently for each "N\-point" benchmark dataset, and \(2\) a model trained on an "N\-point" dataset reliably outputs only the N landmarks\. In our work, we first conceptualize Face Part\-Anchored Landmark Positions \(FPALPs\), wherein each landmark is treated as a progression value between zero \(start\) and one \(end\) along a face part's contour\. Every landmark can be expressed in the FPALP format, irrespective of its source dataset, hence unlocking the ability to unify all "N\-point" datasets into a single dataset\. Secondly, we represent each landmark with an FPALP\-based query, refine it progressively with a cross\-modality decoder, and predict its coordinates based on the final representation\. Our approach, called Unified Dynamic FLD, embodies these two design choices and streamlines the landmark detection pipeline by enabling \(1\) a single model to learn on any number of "N\-point" datasets, and \(2\) yield any number of specific landmark predictions by loading the designated landmark queries at runtime\. Extensive experiments on multiple benchmark datasets show that our method delivers these benefits while remaining competitive with, and in several cases outperforming existing state\-of\-the\-art methods\.
-
-## Ad\-Hoc Teamwork from Human Demonstrations
-
-**Authors:** Darius Muglich; Niklas Lauffer; Tin Dizdarević; Jakob Foerster
-
-**ID:** 148597\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 148597
-
-[Paper](<https://openreview.net/forum?id=wYE8NC5FXe>) | [PDF](<https://openreview.net/pdf?id=wYE8NC5FXe>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148597>)
-
-Human players in cooperative games often rely on conventions: reusable patterns of play that coordinate well when used by the whole team, but can fail otherwise\. Evaluating agents in this setting is difficult because human demonstration datasets are usually unlabeled: trajectories do not identify which player, group, or convention produced them\. As a result, standard proxy\-based evaluations can miss important population diversity\. In particular, proxy bots produced by regularised self\-play around a pooled behavioural cloning policy can remain concentrated around a single dominant mode of play\. We introduce a pipeline for recovering and evaluating this hidden convention diversity from unlabeled demonstrations\. Our method first learns latent convention structure from the dataset, then selects a compact set of distinct but plausible conventions, and finally reconstructs each selected convention into a high\-performing playable proxy using KL\-regularised PPO\. A key practical challenge is that KL\-regularised PPO is sensitive to the KL penalty, which is often tuned using online interaction\. We provide an empirical offline calibration procedure for choosing this KL penalty in the PPO\+KL reconstruction settings studied here\. On Hanabi, we find that the BC\-derived proxy suite is highly concentrated, and that the relative ordering of agents changes when evaluation uses the latent proxy suite instead\.
-
-## OpenSanctions Pairs: A Large\-Scale Dataset for Pairwise Entity Matching
-
-**Authors:** Chandler Smith; Magnus Sesodia; Friedrich Lindenberg; Christian Schroeder de Witt
-
-**ID:** 139718\-\-2 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 139718
-
-[Paper](<https://openreview.net/forum?id=8gjD9mKs1q>) | [PDF](<https://openreview.net/pdf?id=8gjD9mKs1q>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139718>)
-
-_Abstract unavailable from the accessible public sources._
-
-## EmoPhone: A Multi\-Wave Dataset for In\-the\-Wild Mobile and Wearable Affect Sensing
-
-**Authors:** Panyu Zhang; minseo Park; Soowon Kang; Ismatzoda Tomiris; Azizbek Mustafakulov; Otabek Najimov; Woohyeok Choi; JUMABEK Alikhanov; Surjya Ghosh; Uichin Lee
-
-**ID:** 139785 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=4xXw8qgOwz>) | [PDF](<https://openreview.net/pdf?id=4xXw8qgOwz>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139785>)
-
-_Abstract unavailable from the accessible public sources._
-
-## SynthHair: Leveraging MetaHumans for a High\-Quality 4K Hair Matting Dataset
-
-**Authors:** Markus Karmann; Shile Li; Philip Torr; Puneet Dokania; Qi Zhang; Peng\-Tao Jiang; Bo Li; Onay Urfalioglu
-
-**ID:** 139817 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=2xR9SbLJIE>) | [PDF](<https://openreview.net/pdf?id=2xR9SbLJIE>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139817>)
-
-_Abstract unavailable from the accessible public sources._
-
-## MosaicMRI: A Diverse Dataset and Benchmark for Raw Musculoskeletal MRI
-
-**Authors:** Paula Arguello; Berk Tinaz; Mohammad Shahab Sepehri; Maryam Soltanolkotabi; Mahdi Soltanolkotabi
-
-**ID:** 139818 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=2w0L3gwZS7>) | [PDF](<https://openreview.net/pdf?id=2w0L3gwZS7>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139818>)
-
-_Abstract unavailable from the accessible public sources._
-
-## Model Capacity Determines Grokking through Competing Memorisation and Generalisation Speeds
-
-**Authors:** Yiding Song; Hanming Ye
-
-**ID:** 155807 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=2kLkhhcpNe>) | [PDF](<https://openreview.net/pdf?id=2kLkhhcpNe>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155807>)
-
-Existing accounts of grokking explain the phenomena in terms of mechanistic frameworks such as circuit efficiency or lazy\-to\-rich transitions\. However, despite a known dependence between grokking and model size, how model capacity shapes grokking remains an open question\. We give an information\-theoretic account of this relationship on the task of modular arithmetic, showing that grokking does not immediately occur when a model becomes large enough to memorise the training set, but rather emerges as the outcome of a competition between two measurable timescales: a memorisation speed $T\_\{\\text\{mem\}\}\(P\)$ and a generalisation speed $T\_\{\\text\{gen\}\}\(P\)$, both of which are functions of model parameter count $P$\. Adapting the information capacity framework of Morris et al\. \(2025\), we estimate $T\_\{\\text\{mem\}\}\(P\)$ on random\-label data of equivalent complexity and $T\_\{\\text\{gen\}\}\(P\)$ on the modular task itself, and show that grokking emerges close to the parameter scale where these timescales intersect\. The framework also suggests an empirical model for predicting memorisation speed given model capacity and dataset complexity, recovering the previously reported empirical observation that larger models memorise faster\. Overall, we motivate the formalisation of different learning timescales as important abstractions to study when explaining how model capacity shapes grokking on algorithmic tasks\.
 

@@ -88,7 +88,8 @@ export function validateData({ papers: paperData, topics, manifest }, { allowCou
 
 export async function validateDirectory(directory, options = {}) {
   const [papers, topics, manifest] = await Promise.all(['papers.json', 'topics.json', 'manifest.json'].map((file) => readJson(path.join(directory, file))));
-  const result = validateData({ papers, topics, manifest }, options);
+  const expectedCount = options.allowCountChange ? manifest.expectedCount : options.expectedCount;
+  const result = validateData({ papers, topics, manifest }, { ...options, ...(expectedCount !== undefined ? { expectedCount } : {}) });
   for (const [file, expected] of Object.entries(manifest.artifacts ?? {})) {
     assert.ok(!path.isAbsolute(file) && !file.split(/[\\/]/).includes('..'), 'Invalid artifact path');
     const data = await readFile(path.join(directory, file));

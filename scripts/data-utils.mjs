@@ -94,7 +94,7 @@ export function csvCell(value) {
 }
 
 export function papersCsv(papers) {
-  const columns = ['id', 'sourceEventId', 'sourceOccurrence', 'duplicateOf', 'title', 'authors', 'abstract', 'abstractSource', 'category', 'topic', 'topicSource', 'officialTopic', 'keywords', 'paperUrl', 'pdfUrl', 'pdfSource', 'pdfVerified', 'posterUrl', 'decision'];
+  const columns = ['id', 'sourceEventId', 'sourceOccurrence', 'duplicateOf', 'title', 'authors', 'abstract', 'abstractSource', 'abstractSourceUrl', 'sourceKind', 'pageIndexed', 'oralPresentation', 'category', 'topic', 'topicSource', 'officialTopic', 'keywords', 'paperUrl', 'pdfUrl', 'pdfSource', 'pdfVerified', 'posterUrl', 'decision'];
   return `${columns.map(csvCell).join(',')}\r\n${papers.map((paper) => columns.map((key) => csvCell(paper[key])).join(',')).join('\r\n')}\r\n`;
 }
 

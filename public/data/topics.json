@@ -4,73 +4,73 @@
       "id": "applications",
       "name": "Applications",
       "nameZh": "应用",
-      "count": 1305,
+      "count": 1303,
       "topics": [
         {
           "id": "applications-applications",
           "name": "Applications",
           "nameZh": "综合应用",
-          "count": 31
+          "count": 19
         },
         {
           "id": "applications-chemistry-and-drug-discovery",
           "name": "Chemistry and Drug Discovery",
           "nameZh": "化学与药物发现",
-          "count": 122
+          "count": 124
         },
         {
           "id": "applications-climate",
           "name": "Climate",
           "nameZh": "气候",
-          "count": 20
+          "count": 24
         },
         {
           "id": "applications-genetics-cell-biology-etc",
           "name": "Genetics, Cell Biology, etc",
           "nameZh": "遗传学与细胞生物学",
-          "count": 79
+          "count": 74
         },
         {
           "id": "applications-health",
           "name": "Health",
           "nameZh": "医疗健康",
-          "count": 168
+          "count": 172
         },
         {
           "id": "applications-language-speech-and-dialog",
           "name": "Language, Speech and Dialog",
           "nameZh": "语言、语音与对话",
-          "count": 196
+          "count": 164
         },
         {
           "id": "applications-neuroscience-cognitive-science",
           "name": "Neuroscience, Cognitive Science",
           "nameZh": "神经科学与认知科学",
-          "count": 151
+          "count": 141
         },
         {
           "id": "applications-physics",
           "name": "Physics",
           "nameZh": "物理学",
-          "count": 141
+          "count": 162
         },
         {
           "id": "applications-robotics",
           "name": "Robotics",
           "nameZh": "机器人",
-          "count": 196
+          "count": 202
         },
         {
           "id": "applications-time-series",
           "name": "Time Series",
           "nameZh": "时间序列",
-          "count": 176
+          "count": 195
         },
         {
           "id": "applications-everything-else",
           "name": "Everything Else",
           "nameZh": "其他应用",
-          "count": 25
+          "count": 26
         }
       ]
     },
@@ -78,43 +78,43 @@
       "id": "computer-vision",
       "name": "Computer Vision",
       "nameZh": "计算机视觉",
-      "count": 1671,
+      "count": 1711,
       "topics": [
         {
           "id": "computer-vision-3d-rendering-reconstruction",
           "name": "3D Rendering & Reconstruction",
           "nameZh": "三维渲染与重建",
-          "count": 263
+          "count": 283
         },
         {
           "id": "computer-vision-classification-and-understanding",
           "name": "Classification and Understanding",
           "nameZh": "图像分类与理解",
-          "count": 104
+          "count": 102
         },
         {
           "id": "computer-vision-image-and-video-generation",
           "name": "Image and Video Generation",
           "nameZh": "图像与视频生成",
-          "count": 307
+          "count": 322
         },
         {
           "id": "computer-vision-segmentation",
           "name": "Segmentation",
           "nameZh": "图像分割",
-          "count": 61
+          "count": 66
         },
         {
           "id": "computer-vision-vision-models-multimodal",
           "name": "Vision Models & Multimodal",
           "nameZh": "视觉模型与多模态",
-          "count": 544
+          "count": 514
         },
         {
           "id": "computer-vision-everything-else",
           "name": "Everything Else",
           "nameZh": "其他视觉研究",
-          "count": 392
+          "count": 424
         }
       ]
     },
@@ -122,19 +122,25 @@
       "id": "data-centric-ai",
       "name": "Data-centric AI",
       "nameZh": "以数据为中心的人工智能",
-      "count": 219,
+      "count": 248,
       "topics": [
         {
           "id": "data-centric-ai-data-centric-ai-methods-and-tools",
           "name": "Data-centric AI methods and tools",
           "nameZh": "数据方法与工具",
-          "count": 95
+          "count": 105
+        },
+        {
+          "id": "data-centric-ai-data-augmentation",
+          "name": "Data augmentation",
+          "nameZh": "数据增强",
+          "count": 26
         },
         {
           "id": "data-centric-ai-everything-else",
           "name": "Everything Else",
           "nameZh": "其他数据研究",
-          "count": 124
+          "count": 117
         }
       ]
     },
@@ -142,49 +148,49 @@
       "id": "deep-learning",
       "name": "Deep Learning",
       "nameZh": "深度学习",
-      "count": 1039,
+      "count": 1120,
       "topics": [
         {
           "id": "deep-learning-algorithms",
           "name": "Algorithms",
           "nameZh": "算法",
-          "count": 168
+          "count": 180
         },
         {
           "id": "deep-learning-attention-mechanisms",
           "name": "Attention Mechanisms",
           "nameZh": "注意力机制",
-          "count": 70
+          "count": 85
         },
         {
           "id": "deep-learning-generative-models-and-autoencoders",
           "name": "Generative Models and Autoencoders",
           "nameZh": "生成模型与自编码器",
-          "count": 438
+          "count": 448
         },
         {
           "id": "deep-learning-graph-neural-networks",
           "name": "Graph Neural Networks",
           "nameZh": "图神经网络",
-          "count": 117
+          "count": 123
         },
         {
           "id": "deep-learning-robustness",
           "name": "Robustness",
           "nameZh": "鲁棒性",
-          "count": 140
+          "count": 186
         },
         {
           "id": "deep-learning-theory",
           "name": "Theory",
           "nameZh": "深度学习理论",
-          "count": 58
+          "count": 57
         },
         {
           "id": "deep-learning-everything-else",
           "name": "Everything Else",
           "nameZh": "其他深度学习",
-          "count": 48
+          "count": 41
         }
       ]
     },
@@ -192,31 +198,31 @@
       "id": "general-machine-learning",
       "name": "General Machine Learning",
       "nameZh": "通用机器学习",
-      "count": 1313,
+      "count": 800,
       "topics": [
         {
           "id": "general-machine-learning-causality",
           "name": "Causality",
           "nameZh": "因果学习",
-          "count": 102
+          "count": 123
         },
         {
           "id": "general-machine-learning-representation-learning",
           "name": "Representation Learning",
           "nameZh": "表征学习",
-          "count": 212
+          "count": 221
         },
         {
           "id": "general-machine-learning-transfer-multitask-and-meta-learning",
           "name": "Transfer, Multitask and Meta-learning",
           "nameZh": "迁移、多任务与元学习",
-          "count": 115
+          "count": 109
         },
         {
           "id": "general-machine-learning-everything-else",
           "name": "Everything Else",
           "nameZh": "其他机器学习",
-          "count": 884
+          "count": 347
         }
       ]
     },
@@ -224,55 +230,55 @@
       "id": "optimization",
       "name": "Optimization",
       "nameZh": "优化",
-      "count": 482,
+      "count": 475,
       "topics": [
         {
           "id": "optimization-optimization",
           "name": "Optimization",
           "nameZh": "综合优化",
-          "count": 187
+          "count": 188
         },
         {
           "id": "optimization-bayesian-black-box-optimization",
           "name": "Bayesian & Black-box Optimization",
           "nameZh": "贝叶斯与黑盒优化",
-          "count": 48
+          "count": 40
         },
         {
           "id": "optimization-discrete-optimization",
           "name": "Discrete Optimization",
           "nameZh": "离散优化",
-          "count": 26
+          "count": 29
         },
         {
           "id": "optimization-large-scale-parallel-and-distributed",
           "name": "Large Scale, Parallel and Distributed",
           "nameZh": "大规模、并行与分布式优化",
-          "count": 33
+          "count": 28
         },
         {
           "id": "optimization-neural-network-optimization",
           "name": "Neural Network Optimization",
           "nameZh": "神经网络优化",
-          "count": 92
+          "count": 93
         },
         {
           "id": "optimization-optimization-and-learning-under-uncertainty",
           "name": "Optimization and Learning under Uncertainty",
           "nameZh": "不确定性下的优化与学习",
-          "count": 17
+          "count": 18
         },
         {
           "id": "optimization-stochastic-convex-optimization",
           "name": "Stochastic & Convex Optimization",
           "nameZh": "随机与凸优化",
-          "count": 67
+          "count": 71
         },
         {
           "id": "optimization-everything-else",
           "name": "Everything Else",
           "nameZh": "其他优化",
-          "count": 12
+          "count": 8
         }
       ]
     },
@@ -280,37 +286,37 @@
       "id": "probabilistic-methods",
       "name": "Probabilistic Methods",
       "nameZh": "概率方法",
-      "count": 183,
+      "count": 195,
       "topics": [
         {
           "id": "probabilistic-methods-probabilistic-methods",
           "name": "Probabilistic Methods",
           "nameZh": "综合概率方法",
-          "count": 42
+          "count": 37
         },
         {
           "id": "probabilistic-methods-bayesian-models-and-methods",
           "name": "Bayesian Models and Methods",
           "nameZh": "贝叶斯模型与方法",
-          "count": 79
+          "count": 83
         },
         {
           "id": "probabilistic-methods-gaussian-processes",
           "name": "Gaussian Processes",
           "nameZh": "高斯过程",
-          "count": 15
+          "count": 19
         },
         {
           "id": "probabilistic-methods-monte-carlo-and-sampling-methods",
           "name": "Monte Carlo and Sampling Methods",
           "nameZh": "蒙特卡洛与采样",
-          "count": 35
+          "count": 46
         },
         {
           "id": "probabilistic-methods-everything-else",
           "name": "Everything Else",
           "nameZh": "其他概率方法",
-          "count": 12
+          "count": 10
         }
       ]
     },
@@ -318,31 +324,31 @@
       "id": "reinforcement-learning",
       "name": "Reinforcement Learning",
       "nameZh": "强化学习",
-      "count": 572,
+      "count": 626,
       "topics": [
         {
           "id": "reinforcement-learning-batch-offline",
           "name": "Batch Offline",
           "nameZh": "离线强化学习",
-          "count": 42
+          "count": 47
         },
         {
           "id": "reinforcement-learning-deep-rl",
           "name": "Deep RL",
           "nameZh": "深度强化学习",
-          "count": 280
+          "count": 348
         },
         {
           "id": "reinforcement-learning-multi-agent",
           "name": "Multi-agent",
           "nameZh": "多智能体",
-          "count": 155
+          "count": 138
         },
         {
           "id": "reinforcement-learning-everything-else",
           "name": "Everything Else",
           "nameZh": "其他强化学习",
-          "count": 95
+          "count": 93
         }
       ]
     },
@@ -350,43 +356,43 @@
       "id": "social-aspects",
       "name": "Social Aspects",
       "nameZh": "社会影响与可信人工智能",
-      "count": 634,
+      "count": 620,
       "topics": [
         {
           "id": "social-aspects-social-aspects",
           "name": "Social Aspects",
           "nameZh": "综合社会影响",
-          "count": 28
+          "count": 26
         },
         {
           "id": "social-aspects-accountability-transparency-and-interpretability",
           "name": "Accountability, Transparency and Interpretability",
           "nameZh": "问责、透明度与可解释性",
-          "count": 159
+          "count": 162
         },
         {
           "id": "social-aspects-fairness-equity-justice-and-safety",
           "name": "Fairness, Equity, Justice and Safety",
           "nameZh": "公平、公正与安全",
-          "count": 184
+          "count": 167
         },
         {
           "id": "social-aspects-privacy-preserving-statistics-and-machine-learning",
           "name": "Privacy-preserving Statistics and Machine Learning",
           "nameZh": "隐私保护统计与机器学习",
-          "count": 92
+          "count": 87
         },
         {
           "id": "social-aspects-trustworthy-machine-learning",
           "name": "Trustworthy Machine Learning",
           "nameZh": "可信机器学习",
-          "count": 162
+          "count": 165
         },
         {
           "id": "social-aspects-everything-else",
           "name": "Everything Else",
           "nameZh": "其他社会影响",
-          "count": 9
+          "count": 13
         }
       ]
     },
@@ -394,37 +400,37 @@
       "id": "theory",
       "name": "Theory",
       "nameZh": "理论",
-      "count": 338,
+      "count": 321,
       "topics": [
         {
           "id": "theory-domain-adaptation-and-transfer-learning",
           "name": "Domain Adaptation and Transfer Learning",
           "nameZh": "领域适应与迁移学习理论",
-          "count": 9
+          "count": 11
         },
         {
           "id": "theory-game-theory",
           "name": "Game Theory",
           "nameZh": "博弈论",
-          "count": 41
+          "count": 37
         },
         {
           "id": "theory-learning-theory",
           "name": "Learning Theory",
           "nameZh": "学习理论",
-          "count": 187
+          "count": 170
         },
         {
           "id": "theory-reinforcement-learning-and-planning",
           "name": "Reinforcement Learning and Planning",
           "nameZh": "强化学习与规划理论",
-          "count": 48
+          "count": 49
         },
         {
           "id": "theory-everything-else",
           "name": "Everything Else",
           "nameZh": "其他理论",
-          "count": 53
+          "count": 54
         }
       ]
     },
@@ -432,25 +438,25 @@
       "id": "language-models-nlp",
       "name": "Language Models & NLP",
       "nameZh": "语言模型与自然语言处理",
-      "count": 1221,
+      "count": 1521,
       "topics": [
         {
           "id": "language-models-nlp-large-language-models",
           "name": "Large Language Models",
           "nameZh": "大语言模型",
-          "count": 959
+          "count": 1193
         },
         {
           "id": "language-models-nlp-reasoning-and-agents",
           "name": "Reasoning and Agents",
           "nameZh": "推理与智能体",
-          "count": 222
+          "count": 280
         },
         {
           "id": "language-models-nlp-natural-language-processing",
           "name": "Natural Language Processing",
           "nameZh": "自然语言处理",
-          "count": 40
+          "count": 48
         }
       ]
     },
@@ -458,25 +464,25 @@
       "id": "ml-systems-efficiency",
       "name": "ML Systems & Efficiency",
       "nameZh": "机器学习系统与效率",
-      "count": 175,
+      "count": 203,
       "topics": [
         {
           "id": "ml-systems-efficiency-efficient-models-and-inference",
           "name": "Efficient Models and Inference",
           "nameZh": "高效模型与推理",
-          "count": 110
+          "count": 120
         },
         {
           "id": "ml-systems-efficiency-distributed-and-federated-learning",
           "name": "Distributed and Federated Learning",
           "nameZh": "分布式与联邦学习",
-          "count": 39
+          "count": 48
         },
         {
           "id": "ml-systems-efficiency-hardware-and-infrastructure",
           "name": "Hardware and Infrastructure",
           "nameZh": "硬件与基础设施",
-          "count": 26
+          "count": 35
         }
       ]
     }

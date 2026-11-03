@@ -18,6 +18,7 @@ import { buildTopics, classifyTopic } from '../scripts/taxonomy.mjs';
 import { validateData, validateDirectory } from '../scripts/validate-data.mjs';
 import { snapshot } from '../scripts/snapshot.mjs';
 import { downloadPdfs, isPdfContent, selectPdfDownloads } from '../scripts/download-pdfs.mjs';
+import { parseDetailPage, parsePageIndex } from '../scripts/fetch-details.mjs';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
 const fixture = {
@@ -135,6 +136,10 @@ test('compressed source snapshots restore exact bytes and reject mismatched prov
   const abstractBytes = jsonText(abstracts);
   await writeFile(path.join(raw, 'metadata.json'), metadata);
   await writeFile(path.join(raw, 'abstracts.json'), abstractBytes);
+  await writeFile(path.join(raw, 'metadata-latest.json'), metadata);
+  await writeFile(path.join(raw, 'abstracts-latest.json'), abstractBytes);
+  await writeFile(path.join(raw, 'page-index.html'), '<li><a href="/virtual/2026/poster/101">Paper</a></li>');
+  await writeFile(path.join(raw, 'details.json'), jsonText({ entries: {} }));
   await writeFile(path.join(raw, 'openreview.json'), jsonText({ notes: [], probes: [] }));
   const manifest = { sources: [{ cacheFile: 'metadata.json', sha256: sha256(metadata) }, { cacheFile: 'abstracts.json', sha256: sha256(abstractBytes) }] };
   await writeFile(path.join(output, 'manifest.json'), jsonText(manifest));
@@ -335,16 +340,44 @@ test('PDF CLI does not download without explicit opt-in', () => {
   assert.match(output, /No downloads were started/);
 });
 
-test('generated official snapshot has complete contracts and honest availability counts', async () => {
+test('page parser preserves literal title markup and deduplicates repeated page links', () => {
+  const html = '<li><a href="/virtual/2026/poster/1">MiniPIC: Caching in <100LOC</a></li><li><a href="/virtual/2026/poster/1">Duplicate</a></li><li><a href="/virtual/2026/poster/2">Second &amp; last</a></li>';
+  assert.deepEqual(parsePageIndex(html), [
+    { id: '1', title: 'MiniPIC: Caching in <100LOC', posterUrl: 'https://neurips.cc/virtual/2026/poster/1' },
+    { id: '2', title: 'Second & last', posterUrl: 'https://neurips.cc/virtual/2026/poster/2' },
+  ]);
+});
+
+test('detail parser reads original abstract, authors, and OpenReview links from the official page', () => {
+  const html = '<script type="application/ld+json">{"@type":"CreativeWork","name":"A <100LOC","author":[{"name":"Ada Example"},{"name":"Bo Example"}]}</script><div class="abstract-text-inner"><p>An &amp; original abstract.</p></div><a href="https://openreview.net/forum?id=abc%2B123">OpenReview</a>';
+  const detail = parseDetailPage(html, { expectedTitle: 'A <100LOC', sourceUrl: 'https://neurips.cc/virtual/2026/poster/1' });
+  assert.equal(detail.title, 'A <100LOC');
+  assert.deepEqual(detail.authors, ['Ada Example', 'Bo Example']);
+  assert.equal(detail.abstract, 'An & original abstract.');
+  assert.equal(detail.paperUrl, 'https://openreview.net/forum?id=abc%2B123');
+  assert.equal(detail.titleMismatch, false);
+  assert.equal(parseDetailPage(html, { expectedTitle: 'Another paper' }).titleMismatch, true);
+});
+
+test('generated official snapshot is page-indexed, deduplicated, and fully abstracted', async () => {
   const result = await validateDirectory(path.join(root, 'public/data'), { allowCountChange: true });
-  assert.ok(result.totalPapers > 0);
+  assert.ok(result.totalPapers >= 9000);
   const manifest = JSON.parse(await readFile(path.join(root, 'public/data/manifest.json'), 'utf8'));
-  assert.equal(manifest.abstractsAvailable + manifest.abstractsMissing, manifest.totalPapers);
+  assert.equal(manifest.abstractsAvailable, manifest.totalPapers);
+  assert.equal(manifest.abstractsMissing, 0);
   assert.equal(manifest.pdfLinksVerified, 0);
-  assert.ok(manifest.uniqueOfficialEventIds <= manifest.totalPapers);
+  assert.equal(manifest.uniqueOfficialEventIds, manifest.totalPapers);
+  assert.equal(manifest.repeatedPosterRows, 0);
+  assert.equal(manifest.pageIndexEntries + manifest.jsonOnlyEntries, manifest.totalPapers);
+  assert.ok(manifest.uniqueTitles > 0 && manifest.uniqueTitles <= manifest.totalPapers);
+  assert.equal(manifest.details.missing, 0);
+  assert.equal(manifest.details.errors, 0);
+  assert.ok(manifest.abstractsBySource['official-poster-page'] > 0);
   assert.ok(manifest.sources.every((source) => /^[a-f0-9]{64}$/.test(source.sha256)));
+  assert.ok(manifest.sources.some((source) => source.name === 'page-index'));
+  assert.ok(manifest.sources.some((source) => source.name === 'details'));
+  assert.ok(manifest.sourceUrls.includes(SOURCE_URLS.listing));
   const compressed = await readFile(path.join(root, 'public/data/papers.json.gz'));
   assert.deepEqual(gunzipSync(compressed), await readFile(path.join(root, 'public/data/papers.json')));
   assert.ok(compressed.length < manifest.artifacts['papers.json'].bytes / 2);
-  assert.ok(manifest.sourceUrls.includes(SOURCE_URLS.listing));
 });

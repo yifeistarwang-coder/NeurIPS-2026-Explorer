@@ -2,235 +2,29 @@
 
 强化学习 / 多智能体
 
-155 source poster records. Repeated source event IDs are retained and explicitly marked.
+138 source poster records. Repeated source event IDs are retained and explicitly marked.
 
 Topic labels marked inferred are keyword-based, not official conference labels. PDF links marked derived are unverified. Missing abstracts are left empty in the JSON and CSV exports.
 
-## NashDreamer: Model\-Based Reinforcement Learning for Zero\-Sum Imperfect\-Information Games
+## ClinMAS: A Knowledge\-Grounded Multi\-Agent Simulation Framework for Evaluating Clinical Reasoning in LLMs
 
-**Authors:** Tomáš Holeček; Viliam Lisy
+**Authors:** Yuqi Tang; Jing Yu; Zichang Su; Kehua Feng; Zhihui Zhu; Libin Wang; Lei Liang; Qiang Zhang; Keyan Ding; Huajun Chen
 
-**ID:** 151300 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
+**ID:** 139102 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=bTFUsffZ8O>) | [PDF](<https://openreview.net/pdf?id=bTFUsffZ8O>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151300>)
+[Paper](<https://openreview.net/forum?id=kxtifbesla>) | [PDF](<https://openreview.net/pdf?id=kxtifbesla>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139102>)
 
-_Abstract unavailable from the accessible public sources._
+Clinical diagnosis begins with doctor\-patient interaction, during which physicians iteratively gather information, order examinations, and refine diagnosis through patients’ responses\. This dynamic reasoning process is poorly represented by existing LLM benchmarks that focus on static question\-answering\. To mitigate these gaps, recent methods explore dynamic medical frameworks involving interactive clinical dialogues\. Although effective, they often rely on limited, contamination\-prone datasets and lack granular evaluation\. In this work, we propose ClinMAS, a knowledge\-grounded multi\-agent simulation framework for evaluating clinical reasoning in LLMs\. Grounded in a disease knowledge graph, our method dynamically generates patient cases and facilitates multi\-turn interactions between an LLM\-based doctor, an automated patient agent, and an examiner agent\. Our evaluation goes beyond diagnostic accuracy by incorporating fine\-grained efficiency analysis and rubric\-based assessment of diagnostic quality\. Experiments show that ClinMAS effectively exposes critical clinical reasoning gaps in state\-of\-the\-art LLMs, offering a more nuanced and clinically meaningful evaluation paradigm\.
 
-## Qubrio: High\-Performance Quantum Compilation via Multi\-Agent LLM Collaboration
+## Stealth Apart, Harm Together: Skill Cascading Attacks on Skill\-Based Agent Systems
 
-**Authors:** Jixuan Ruan; Zhuo Cui; Zhengding Hu; Zhongkai Yu; Xiang Fang; Yue Guan; Jason Ludmir; Phillip Weinberg; Xiu\-Zhe Luo; Sheng\-Tao Wang; Sonia L Alarcon; Hezi Zhang; Yufei Ding
+**Authors:** Zihao Zhu; Siwei Lyu; Adel Bibi; Baoyuan Wu
 
-**ID:** 149140 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+**ID:** 150659 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=sXWcrsoU6J>) | [PDF](<https://openreview.net/pdf?id=sXWcrsoU6J>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149140>)
+[Paper](<https://openreview.net/forum?id=gP2hPTzpfh>) | [PDF](<https://openreview.net/pdf?id=gP2hPTzpfh>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150659>)
 
-Large Language Models \(LLMs\) offer an adaptable alternative to traditional quantum compilation heuristics, which bottleneck progress by demanding costly manual redesigns whenever hardware evolves\. However, naive single\-pass LLM approaches fail under the unique challenges introduced by quantum compilation\. We introduce Qubrio, a practical agentic framework that significantly reduces heuristic redesigns through a three\-level decomposition\. By \(1\) partitioning programs into sequential operation stages, \(2\) deploying specialized agents for placement, routing and optimization, and \(3\) using disaggregated feedback for precise error correction, our system reliably navigates complex physical constraints\.  Beyond serving as a direct compiler, our LLM framework also uncovers novel strategies that facilitate convoy\-style shuttling, substantially enhancing hardware concurrency without sacrificing fidelity\. We further integrate these strategies into the previous state\-of\-the\-art \(SOTA\) compiler, recovering a significant fraction of the LLM's performance advantages\. On realistic workloads, our compiler achieves significant improvements in hardware runtime and program fidelity over the SOTA baseline PowerMove, seamlessly adapting to new hardware capabilities\. Qubrio features an open user interface for practical use, with its anonymized repository available for double\-blind review at https://anonymous\.4open\.science/r/Qubrio\-486C\.
-
-## MoRSE: Task\-Oriented Multi\-Agent System with Mixture of Role\-Subtask Experts
-
-**Authors:** Peiwen Li; Shiyang Zhang; Yangtian Zhang; Sizhuang He; David van Dijk; Rex Ying
-
-**ID:** 155161 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=7p7CMbiFxE>) | [PDF](<https://openreview.net/pdf?id=7p7CMbiFxE>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155161>)
-
-Large language model\-based multi\-agent systems have recently shown strong potential for complex, long\-horizon tasks\. However, existing methods mainly rely on coarse prompt\-level differentiation without parameter adaptation for diverse subtasks, resulting in insufficient inter\-agent heterogeneity and limited specialized capability that bottleneck performance on tasks with complex requirements\. To address this, we introduce a Task\-Oriented Multi\-Agent System with Mixture of Role\-Subtask Experts \(MoRSE\) that distinguishes agents with \(role, subtask\)\-conditional specialization at both the task structure and parameter levels\. To make agents' responsibility explicit at the task structure level, we formulate a task\-oriented multi\-agent system that decomposes each task into a dependency\-aware Directed Acyclic Graph of subtasks and assigns each agent a specific \(role, subtask\), introducing task\-level specialization across collaborating agents\. Additionally, to address the diverse role and subtask demands that a single shared base model cannot satisfy, we propose a dynamic Mixture of \(role, subtask\) LoRA Experts module with a prototype\-based semantic router for subtasks, augmenting agents with parameter\-level specialization on a shared LLM substrate cost\-effectively\. Then, to co\-optimize experts and router stably for open\-ended tasks, we further propose a hierarchical group\-relative policy optimization with two\-layer credit assignment that disentangles expert quality from routing quality\. Experiments on code\-generation benchmarks across three backbones demonstrate the effectiveness of our approach, with notable improvements in both whole\-task and step\-wise performance and great generalization potential in out\-of\-distribution scenarios\.
-
-## Auction\-Based Online Policy Adaptation for Evolving Objectives
-
-**Authors:** Guru Shabadi; Kaushik Mallik
-
-**ID:** 153035 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=OV5qcOHgej>) | [PDF](<https://openreview.net/pdf?id=OV5qcOHgej>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153035>)
-
-We consider multi\-objective reinforcement learning problems where objectives come from an identical family\-\-\-such as the class of reachability objectives\-\-\-and may appear or disappear at runtime\. Our goal is to design adaptive policies that can efficiently adjust their behaviors as the set of active objectives changes\. To solve this problem, we propose a modular framework where each objective is supported by a selfish local policy, and coordination is achieved through a novel \*auction\*\-based mechanism: policies bid for the right to execute their actions, with bids reflecting the urgency of the current state\. The highest bidder selects the action, enabling a dynamic and interpretable trade\-off among objectives\. Going back to the original adaptation problem, when objectives change, the system adapts by simply adding or removing the corresponding policies\. Moreover, as objectives arise from the same family, identical copies of a parameterized policy can be deployed, facilitating immediate adaptation at runtime\. We show how the selfish local policies can be computed by turning the problem into a general\-sum Markov game, where the policies compete against each other to fulfill their own objectives\. To succeed, each policy must not only optimize its own objective, but also reason about the presence of other goals and learn to produce calibrated bids that reflect relative priority\. Under mild assumptions, we prove the existence of Nash equilibria where dishonest bidding leads to suboptimal outcome, and the most urgent objectives win control automatically\. In our implementation, the policies are trained concurrently using proximal policy optimization \(PPO\)\. We evaluate on two Atari games and a gridworld\-based path\-planning task with dynamic targets\. Our method achieves substantially better performance than monolithic policies trained with PPO\.
-
-## Learning Latency\-Aware Orchestration for Multi\-Agent Systems
-
-**Authors:** Xi Shi; Mengxin Zheng; Qian Lou
-
-**ID:** 150759 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=fbWOBQEle5>) | [PDF](<https://openreview.net/pdf?id=fbWOBQEle5>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150759>)
-
-_Abstract unavailable from the accessible public sources._
-
-## C2G\-BENCH: A Cyber\-Physical Evaluation Benchmark for Hierarchical Reinforcement Learning in Grid\-Interactive Hyperscale Data Centers
-
-**Authors:** Vineet Gundecha; Sahand Ghorbanpour; Sifat Abdullah; Mahasweta Chakraborti; Damien Fay; Avisek Naug; Sergey Serebryakov; Ricardo Luna Gutierrez; Soumyendu Sarkar
-
-**ID:** 139076 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=mWywbjkaJ4>) | [PDF](<https://openreview.net/pdf?id=mWywbjkaJ4>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139076>)
-
-The rapid growth of generative AI is reshaping the energy footprint of modern computing infrastructure\. Hyperscale AI data centers now operate at power levels comparable to large industrial facilities, creating new challenges for grid reliability, energy procurement, and real time demand flexibility\. At the same time, their large controllable loads, cooling systems, and on site storage make them potential participants in grid services such as frequency regulation\. However, existing evaluation environments do not capture the coupled decision making required for grid interactive operation\. We introduce C2G\-BENCH, a cyber\-physical benchmark for hierarchical reinforcement learning in hyperscale data centers\. C2G\-BENCH simulates a real\-world scenario, where a 250 MW\-class hyperscale data center participates in grid frequency regulation while serving realistic AI workload demand under weather\-driven ambient conditions\. The benchmark explicitly links 15\-minute market level orchestration with 5\-second physical control, enabling agents to jointly reason over regulation commitments, workload flexibility, cooling, battery dispatch, and facility safety\. C2G\-BENCH achieves this through two coupled Gymnasium environments: C2GMacroEnv, where a high level controller bids into the regulation market, and C2GFastEnv, where a low level controller actuates the Dynamic Voltage and Frequency Scaling \(DVFS\), Coolant Distribution Unit \(CDU\) pump speed, HVAC effort, and Battery dispatch \(BESS\)\. The simulator models a 250 MW class two zone facility using seven modular physics engines covering workload, thermal, electrical, battery, grid signal, weather, and market dynamics, driven by real workload and weather traces\. We benchmark a family of rule\-based, LLM\-based &amp; RL\-based controllers for both the macro and fast environments, and evaluate them on four stress\-test environments in multiple grid markets\. Baseline results show that active low level control substantially improves tracking quality: a rule\-based macro controller paired with a RL\-based low level controller reduces the tracking RMSE from 2,737 kW to 229 kW compared with a macro only configuration, while maintaining full throughput and zero thermal violations\. These results demonstrate that C2G\-BENCH exposes meaningful cross layer tradeoffs and provides a reusable benchmark for studying safe, hierarchical control of grid interactive AI data centers\.
-
-## Zero\-Violation Regret for Cooperative Markov Games with Coupled Instantaneous Hard Constraints
-
-**Authors:** Jialei Liu; Ming Shi
-
-**ID:** 149243 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=rs7y3hD1Ot>) | [PDF](<https://openreview.net/pdf?id=rs7y3hD1Ot>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149243>)
-
-Safety\-critical multi\-agent systems require agents to learn coordinated behaviors while avoiding unsafe actions throughout learning\. Existing safe reinforcement learning theory has established zero\-violation guarantees for single\-agent Markov decision processes with instantaneous hard constraints, while much of safe multi\-agent reinforcement learning focuses on cumulative constraints, policy optimization, or shielding\. We study a stricter setting: cooperative Markov games with unknown dynamics and coupled instantaneous hard constraints, where a joint action must be safe at every time step of every episode\. This setting introduces challenges absent from the single\-agent case: actions that are locally safe for individual agents may be unsafe jointly, unsafe joint actions can affect future feasible regions, and naive reductions to single\-agent safe RL suffer exponential dependence on the number of agents\. We propose a graph\-structured safe learning algorithm that constructs conservative multi\-agent safety certificates and explores optimistically only within certified safe joint subgraphs\. Under structured coupling assumptions, the algorithm guarantees zero constraint violation with high probability and achieves sublinear regret against the optimal safe joint policy, with complexity depending on local interaction structure rather than the full joint action space\.
-
-## The Best\-Laid SCHEMEs: Coordinated Sabotage and Monitoring in Multi\-Agent Systems
-
-**Authors:** Nikolay Radev; Lennart J Haas; Benjamin Arnav; Pablo Bernabeu\-Pérez
-
-**ID:** 155561 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=4f5ZeIKhaC>) | [PDF](<https://openreview.net/pdf?id=4f5ZeIKhaC>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155561>)
-
-As agentic coding systems decompose work across multiple model instances, a critical safety question is whether those instances can coordinate to achieve a hidden malicious objective while remaining aligned with user intent\. We introduce \\emph\{SCHEME\}, a benchmark of 17 task instances across 7 settings and 8 real open\-source libraries, each pairing a legitimate software\-engineering task with a covert side task\. Every setting is designed so that no proper subset of agents can succeed alone: agents must decompose a shared sabotage plan, relay partial requirements under different communication topologies, and execute mutually consistent edits, testing genuine multi\-agent coordination rather than individual capability\. Evaluating with \\emph\{GPT 5\.1 Codex\} and \\emph\{Gemini 3\.1 Pro\}, we find coordinated sabotage is already practical, with Gemini completing the covert objective while succeeding on the legitimate task in 84\\% of samples and Codex in 46\\%\. A failure analysis shows that recovery, not failure incidence, drives the model gap: both models suffer similar numbers of communication failures per trajectory, but Gemini recovers from $\\sim$73\\% of occurrences against Codex's $\\sim$56\\%\. However, the agents' code edits remain detectable: a trusted monitor flags 100\\% of Gemini and 81\\% of Codex sabotage attempts at FPR$\\le$2\\%, even without access to agent communication\. Even with stealth\-aware prompting, undetected sabotage stays at 0\-\-2\.4\\%; telling agents a monitor is present halves Gemini's sabotage success without increasing the rate of undetected sabotage\.
-
-## A Separation Principle for Cooperative Multi\-Agent Reinforcement Learning
-
-**Authors:** Lucia Pezzetti; Nicolas Lanzetti; Antonio Terpin; Florian Dorfler; Giorgia Ramponi
-
-**ID:** 149847 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=mrNoBqs1mU>) | [PDF](<https://openreview.net/pdf?id=mrNoBqs1mU>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149847>)
-
-We study cooperative multi\-agent reinforcement learning \(MARL\) problems in which agents evolve under decoupled noisy dynamics but are coupled via a population objective\. A canonical example is a mobility operator that orchestrates a fleet of vehicles in an urban environment to meet customer demand\. The stochastic and time\-varying nature of these problems calls for learning approaches, yet existing MARL algorithms do not scale: learning assignment and routing jointly over the full state\-action space becomes prohibitive as the number of agents grows\. By studying the problem as a control problem over probability measures, we prove a separation principle: the population\-level cost\-to\-go function is upper\-bounded by an optimal transport problem whose transportation cost is the target\-conditioned single\-agent cost\-to\-go function\. This result simplifies the multi\-agent problem to learning a single\-agent policy and coordinating the agents via optimal transport\. Thus, we introduce SALT \(Separation\-based Assignment and Learning via optimal Transport\) a family of algorithms that learn a target\-conditioned single\-agent policy using any standard RL algorithm, and then coordinate the agents via optimal transport\. Because learning occurs at the single\-agent level, SALT scales to fleet sizes where MARL baselines become intractable and transfers without retraining to fleet sizes unseen during training\. In a vehicle\-delivery experiment in south Manhattan’s road network, where MARL baselines are computationally prohibitive, SALT improves travel times by up to 20% over a shortest\-path routing heuristic and transfers without retraining to different fleet sizes\. In stochastic grid worlds, SALT reduces average travel times by more than 40% relative to MARL baselines and scales to population sizes where these methods fail\.
-
-## HoloCode: A Code\-Centric Multi\-Agent Framework for Image\-to\-3D Scene Generation
-
-**Authors:** Hanlin Chen; Chung\-Ching Lin; Yuyang Zhao; Dongyue Lu; Zhengyuan Yang; Xiaofei Wang; Kevin Lin; Zhendong Wang; Yu Yang; Lijuan Wang
-
-**ID:** 152551 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=SHfDjzXoTd>) | [PDF](<https://openreview.net/pdf?id=SHfDjzXoTd>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152551>)
-
-Image\-to\-3D scene generation must recover both object geometry and plausible spatial relations\. A common diffusion\-based pipeline, exemplified by SAM 3D, generates each object separately and assembles the results\. This preserves local details, but the lack of strong scene\-level constraints often causes floating objects, interpenetrations, missing contacts, or implausible relative scales\. Inspired by human designers who plan a layout before placing assets, we introduce \\ours\{\}, a code\-centric multi\-agent framework\. Given a single image and 2D localization cues, a vision\-language model \(VLM\)\-based Arranger Agent predicts executable Blender Python layout code with object identities and 3D transforms\. A Modeler Agent binds each object to geometry through asset retrieval or image\-to\-3D object generation, and a Refiner Agent renders the scene and edits the code from visual feedback\. The code representation exposes object names, positions, rotations, and scales, making generated scenes editable and interpretable\. We train the code\-generating agents using Blender Python datasets built from SAGE and 3D\-FRONT, then further optimize them with GRPO rewards for executability and spatial alignment\. Experiments in in\-domain and cross\-domain settings show that \\ourMethod\{\} improves scene\-level plausibility while preserving object fidelity\.
-
-## Test\-time Multi\-agent Coordination by Decomposed Value Gradient Flow
-
-**Authors:** Dongsu Lee; Haoran Xu; Amy Zhang
-
-**ID:** 153940 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=HRgPovhTAK>) | [PDF](<https://openreview.net/pdf?id=HRgPovhTAK>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153940>)
-
-_Abstract unavailable from the accessible public sources._
-
-## The Reciprocity Gradient
-
-**Authors:** Yue Lin; Pascal Poupart; Shuhui Zhu; Dan Qiao; Wenhao Li; Yuan Liu; Hongyuan Zha; Baoxiang Wang
-
-**ID:** 153284 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=MPZCNReQDd>) | [PDF](<https://openreview.net/pdf?id=MPZCNReQDd>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153284>)
-
-_Abstract unavailable from the accessible public sources._
-
-## Youdunit: Single\-Call Counterfactual Necessity in Multi\-Agent LLM Systems
-
-**Authors:** Marissa Li; Stephanie Gao; Kenny Guo; Xingjian Li; William Chang; Goran Radanovic
-
-**ID:** 151652 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=Z2GhavtsII>) | [PDF](<https://openreview.net/pdf?id=Z2GhavtsII>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151652>)
-
-_Abstract unavailable from the accessible public sources._
-
-## The Best\-Laid SCHEMEs: Coordinated Sabotage and Monitoring in Multi\-Agent Systems
-
-**Authors:** Nikolay Radev; Lennart J Haas; Benjamin Arnav; Pablo Bernabeu\-Pérez
-
-**ID:** 155561\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 155561
-
-[Paper](<https://openreview.net/forum?id=4f5ZeIKhaC>) | [PDF](<https://openreview.net/pdf?id=4f5ZeIKhaC>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155561>)
-
-As agentic coding systems decompose work across multiple model instances, a critical safety question is whether those instances can coordinate to achieve a hidden malicious objective while remaining aligned with user intent\. We introduce \\emph\{SCHEME\}, a benchmark of 17 task instances across 7 settings and 8 real open\-source libraries, each pairing a legitimate software\-engineering task with a covert side task\. Every setting is designed so that no proper subset of agents can succeed alone: agents must decompose a shared sabotage plan, relay partial requirements under different communication topologies, and execute mutually consistent edits, testing genuine multi\-agent coordination rather than individual capability\. Evaluating with \\emph\{GPT 5\.1 Codex\} and \\emph\{Gemini 3\.1 Pro\}, we find coordinated sabotage is already practical, with Gemini completing the covert objective while succeeding on the legitimate task in 84\\% of samples and Codex in 46\\%\. A failure analysis shows that recovery, not failure incidence, drives the model gap: both models suffer similar numbers of communication failures per trajectory, but Gemini recovers from $\\sim$73\\% of occurrences against Codex's $\\sim$56\\%\. However, the agents' code edits remain detectable: a trusted monitor flags 100\\% of Gemini and 81\\% of Codex sabotage attempts at FPR$\\le$2\\%, even without access to agent communication\. Even with stealth\-aware prompting, undetected sabotage stays at 0\-\-2\.4\\%; telling agents a monitor is present halves Gemini's sabotage success without increasing the rate of undetected sabotage\.
-
-## A Separation Principle for Cooperative Multi\-Agent Reinforcement Learning
-
-**Authors:** Lucia Pezzetti; Nicolas Lanzetti; Antonio Terpin; Florian Dorfler; Giorgia Ramponi
-
-**ID:** 149847\-\-2 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 149847
-
-[Paper](<https://openreview.net/forum?id=mrNoBqs1mU>) | [PDF](<https://openreview.net/pdf?id=mrNoBqs1mU>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149847>)
-
-We study cooperative multi\-agent reinforcement learning \(MARL\) problems in which agents evolve under decoupled noisy dynamics but are coupled via a population objective\. A canonical example is a mobility operator that orchestrates a fleet of vehicles in an urban environment to meet customer demand\. The stochastic and time\-varying nature of these problems calls for learning approaches, yet existing MARL algorithms do not scale: learning assignment and routing jointly over the full state\-action space becomes prohibitive as the number of agents grows\. By studying the problem as a control problem over probability measures, we prove a separation principle: the population\-level cost\-to\-go function is upper\-bounded by an optimal transport problem whose transportation cost is the target\-conditioned single\-agent cost\-to\-go function\. This result simplifies the multi\-agent problem to learning a single\-agent policy and coordinating the agents via optimal transport\. Thus, we introduce SALT \(Separation\-based Assignment and Learning via optimal Transport\) a family of algorithms that learn a target\-conditioned single\-agent policy using any standard RL algorithm, and then coordinate the agents via optimal transport\. Because learning occurs at the single\-agent level, SALT scales to fleet sizes where MARL baselines become intractable and transfers without retraining to fleet sizes unseen during training\. In a vehicle\-delivery experiment in south Manhattan’s road network, where MARL baselines are computationally prohibitive, SALT improves travel times by up to 20% over a shortest\-path routing heuristic and transfers without retraining to different fleet sizes\. In stochastic grid worlds, SALT reduces average travel times by more than 40% relative to MARL baselines and scales to population sizes where these methods fail\.
-
-## HoloCode: A Code\-Centric Multi\-Agent Framework for Image\-to\-3D Scene Generation
-
-**Authors:** Hanlin Chen; Chung\-Ching Lin; Yuyang Zhao; Dongyue Lu; Zhengyuan Yang; Xiaofei Wang; Kevin Lin; Zhendong Wang; Yu Yang; Lijuan Wang
-
-**ID:** 152551\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 152551
-
-[Paper](<https://openreview.net/forum?id=SHfDjzXoTd>) | [PDF](<https://openreview.net/pdf?id=SHfDjzXoTd>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152551>)
-
-Image\-to\-3D scene generation must recover both object geometry and plausible spatial relations\. A common diffusion\-based pipeline, exemplified by SAM 3D, generates each object separately and assembles the results\. This preserves local details, but the lack of strong scene\-level constraints often causes floating objects, interpenetrations, missing contacts, or implausible relative scales\. Inspired by human designers who plan a layout before placing assets, we introduce \\ours\{\}, a code\-centric multi\-agent framework\. Given a single image and 2D localization cues, a vision\-language model \(VLM\)\-based Arranger Agent predicts executable Blender Python layout code with object identities and 3D transforms\. A Modeler Agent binds each object to geometry through asset retrieval or image\-to\-3D object generation, and a Refiner Agent renders the scene and edits the code from visual feedback\. The code representation exposes object names, positions, rotations, and scales, making generated scenes editable and interpretable\. We train the code\-generating agents using Blender Python datasets built from SAGE and 3D\-FRONT, then further optimize them with GRPO rewards for executability and spatial alignment\. Experiments in in\-domain and cross\-domain settings show that \\ourMethod\{\} improves scene\-level plausibility while preserving object fidelity\.
-
-## Optimizing Social Utility in Sequential Experiments
-
-**Authors:** Ander Artola Velasco; Stratis Tsirtsis; Manuel Rodriguez
-
-**ID:** 149723 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=nrvMKHyUXB>) | [PDF](<https://openreview.net/pdf?id=nrvMKHyUXB>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149723>)
-
-_Abstract unavailable from the accessible public sources._
-
-## EvoInspect: A Unified Self\-Evolving Multi\-Agent Framework for Industrial Hardware Inspection
-
-**Authors:** Zhuyun Yuan; Jiming Zhang; Haoyuan Sun; Jun Yin; Qing Wang; Jian Kang; Jie Li; Yongxiang Li
-
-**ID:** 148609 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=wTp6LCV27h>) | [PDF](<https://openreview.net/pdf?id=wTp6LCV27h>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148609>)
-
-_Abstract unavailable from the accessible public sources._
-
-## Automatic Textbook Formalization
-
-**Authors:** Fabian Gloeckle; Ahmad Rammal; Charles Arnal; Remi Munos; Vivien Cabannes; Gabriel Synnaeve; Amaury Hayat
-
-**ID:** 151060 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=dIjnouVokl>) | [PDF](<https://openreview.net/pdf?id=dIjnouVokl>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151060>)
-
-We present a case study where an automatic AI system formalizes a textbook with more than 500 pages of graduate\-level algebraic combinatorics to Lean\. The resulting formalization represents a new milestone in textbook formalization scale and proficiency, moving from early results in undergraduate topology and restructuring of existing library content to a full standalone formalization of a graduate textbook\. The formalization comprises 130K lines of code and 5900 Lean declarations and was conducted within one week by a total of 30K Claude 4\.5 Opus agents collaborating in parallel on a shared code base via version control, simultaneously setting a record in multi\-agent software engineering with usable results\. The inference cost matches or undercuts what we estimate as the salaries required for a team of human experts, and we expect there is still the potential for large efficiencies to be made without the need for better models\. We make our code and the resulting Lean code base available open\-source\.
-
-## Multi\-agent Collaboration with State Management
-
-**Authors:** Mengyang Liu; Taozhi Chen; Zhenhua Xu; Xue Jiang; Yihong Dong
-
-**ID:** 151127 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=cneNwmDOF3>) | [PDF](<https://openreview.net/pdf?id=cneNwmDOF3>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151127>)
-
-_Abstract unavailable from the accessible public sources._
-
-## Market Regime Council for Dynamic Credit Assignment in Multi\-Agent LLM  Decision Systems
-
-**Authors:** Yunhua Pei; Zerui Ge; Jin Zheng; John Cartlidge
-
-**ID:** 148428 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=xuhyMmn0D0>) | [PDF](<https://openreview.net/pdf?id=xuhyMmn0D0>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148428>)
-
-_Abstract unavailable from the accessible public sources._
-
-## Agent2World: Learning to Generate Symbolic World Models via Adaptive Multi\-Agent Feedback
-
-**Authors:** Mengkang Hu; Bowei Xia; Yuran Wu; Ailing Yu; Yude Zou; Qiguang Chen; Shijian Wang; Jiarui Jin; Kexin Li; Wenxiang Jiao; Yuan Lu; Ping Luo
-
-**ID:** 155447 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=5YAV5SEvXG>) | [PDF](<https://openreview.net/pdf?id=5YAV5SEvXG>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155447>)
-
-_Abstract unavailable from the accessible public sources._
+A skill is a modular package of natural\-language instructions, executable scripts, and reference resources that an agent can load at runtime to extend its capabilities for a specific task\. Skill\-based agent systems therefore enable flexible reuse of third\-party capabilities, but the openness of this skill ecosystem also opens up a new attack surface\. Prior work has focused on vulnerabilities within individual skills, but little attention has been paid to risks that arise from interactions across skills\. In this paper, we introduce skill cascading attacks, a threat paradigm in which a malicious objective is distributed across multiple skills so that each modification looks benign in isolation, yet their combined execution is harmful\. For instance, in a prescription\-review pipeline, the first skill weakens signals of recently discontinued medications in the extracted history, the second downgrades the severity of any drug interaction tied to them, and the third suppresses the resulting low\-priority alert in the final summary, so that a severe drug\-interaction warning silently disappears before reaching the physician\. To systematically study this safety blind spot, we develop SkillCascade, an automated multi\-agent red\-teaming framework, and release SkillCascade\-Bench, a benchmark of 213 validated cascading test cases across multiple agent systems and domains\. Across representative agents \(e\.g\. OpenClaw, Claude Code, CodeX\) and LLM backbones, cascaded interactions reliably induce harmful behaviors while evading existing per\-skill scanners and runtime monitors\. Our findings highlight a gap between component\-level integrity and system\-level safety, and call for defenses that reason over cross\-skill interactions rather than individual skills in isolation\.
 
 ## Multi\-Agent Coordination via Support\-Preserving Distillation
 
@@ -242,35 +36,85 @@ _Abstract unavailable from the accessible public sources._
 
 Offline MARL increasingly relies on generative policies to model multimodal joint behavior, typically by distilling a centralized teacher into decentralized one\-step actors under the CTDE\. We identify a failure mode at the teacher training stage: standard flow\-based teachers pair noise with replay targets independently, so nearby noise samples can be routed toward conflicting coordination modes\. The teacher then produces samples between valid modes, and because the distillation loss regresses each local actor onto the conditional mean of the teacher's output given local input, this error is not absorbed but propagated to the student\. To remove this teacher\-side artifact, we propose Mode\-Support Semi\-Discrete Optimal Transport \(MoSDOT\), which summarizes multimodal replay into a finite mode support with prescribed capacities and uses conditional semi\-discrete optimal transport to assign each noise sample to a single mode before teacher training\. We additionally study a common\-randomness variant that uses a shared noise component at execution to expose the residual gap intrinsic to strict\-product execution\. On controlled diagnostics and offline MARL benchmarks, MoSDOT improves endpoint quality and routing consistency, particularly on datasets exhibiting multimodal joint behavior\.
 
-## ROTATE: Regret\-driven Open\-ended Training for Ad Hoc Teamwork
+## Recursive Multi\-Agent Systems
 
-**Authors:** Caroline Wang; Muhammad Arrasy Rahman; Benjamin Nativi; Johnny Liu; Jiaxun Cui; Yoonchang Sung; Peter Stone
+**Authors:** Jiaru Zou; Rui Pan; Ruizhong Qiu; Pan Lu; Shizhe Diao; Jindong Jiang; Hanghang Tong; Tong Zhang; Markus Buehler; Jingrui He; James Zou
 
-**ID:** 150582 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+**ID:** 153292 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=h76k7u9S4o>) | [PDF](<https://openreview.net/pdf?id=h76k7u9S4o>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150582>)
+[Paper](<https://openreview.net/forum?id=ML0KFwGcPG>) | [PDF](<https://openreview.net/pdf?id=ML0KFwGcPG>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153292>)
 
-Learning to collaborate with previously unseen partners is a fundamental generalization challenge, known as Ad Hoc Teamwork \(AHT\)\. Existing methods often adopt a two\-stage pipeline: first, a fixed population of teammates is generated, and second, an AHT agent is trained to collaborate with them\. This separation limits coverage of behaviors and ignores whether the generated teammates are informative for the AHT agent to learn from\. On the other hand, AHT agents are typically trained under the assumption that the training teammate set is uncontrollable, despite the fact that its composition strongly influences generalization\. This paper presents a unified framework for AHT by reformulating the problem as an open\-ended learning process between an AHT agent and an adversarial teammate generator\. We introduce ROTATE, a regret\-driven, open\-ended training algorithm that alternates between improving the AHT agent and generating teammates that probe its collaboration deficiencies\. Experiments across Overcooked and Level\-Based Foraging tasks demonstrate that ROTATE significantly outperforms baselines on an unseen set of teammates, establishing a new standard for robust, generalizable teamwork\.
+Recursive or looped language models have recently emerged as a new scaling axis by iteratively refining the same model computation over latent states to deepen reasoning\. We extend such scaling principles from a single model to multi\-agent systems, and ask: Can agent collaboration itself be scaled through recursion? To this end, we introduce RecursiveMAS, a recursive multi\-agent framework that casts the entire system as a unified latent\-space recursive computation\. RecursiveMAS connects heterogeneous agents as a collaboration loop through the lightweight RecursiveLink module, enabling in\-distribution latent thoughts generation and cross\-agent latent state transfer\. To optimize our framework, we develop an inner\-outer loop learning algorithm for iterative whole\-system co\-optimization through shared gradient\-based credit assignment across recursion rounds\. Theoretical analyses of runtime complexity and learning dynamics establish that RecursiveMAS is more efficient than standard text\-based MAS and maintains stable gradients during recursive training\. Empirically, we instantiate RecursiveMAS under 4 representative agent collaboration patterns and evaluate across 9 benchmarks spanning mathematics, science, medicine, search, and code generation\. In comparison with advanced single/multi agents and recursive computation baselines, RecursiveMAS consistently delivers an average accuracy improvement of 8\.3\\%, 1\.2$\\times$\-2\.4$\\times$ end\-to\-end inference speedup, and 34\.6\\%\-75\.6\\% token usage reduction\.
 
-## Policy\-Level Exploration for Coordinated Multi\-Agent Reinforcement Learning
+## Decentralized Multi\-Goal Multi\-Agent Pathfinding with Spatial Prior and Neighbor Intent Prediction
 
-**Authors:** Yucong Zhang; Chao Yu
+**Authors:** Xuening Wang; Bin Wang; Yucen Gao; Sihui Li; Xiaochun Yang
 
-**ID:** 154020 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+**ID:** 151866 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=GqILfCgsZe>) | [PDF](<https://openreview.net/pdf?id=GqILfCgsZe>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154020>)
+[Paper](<https://openreview.net/forum?id=XIPf6xYobP>) | [PDF](<https://openreview.net/pdf?id=XIPf6xYobP>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151866>)
 
-In multi\-agent reinforcement learning \(MARL\), agents must not only discover high\-reward behaviours but also reliably reproduce coordinated behaviours over time\. A fundamental challenge arises from a mismatch between action\-level stochastic exploration and temporally extended coordination\. To address this issue, we propose a policy\-level exploration framework with Deterministic Action Execution \(DAE\) for MARL, which shifts locally random action exploration to temporally extended policy selection via an option\-based exploration mechanism\. Specifically, at each time step, each agent selects a policy from a shared policy set\\textemdash comprising one exploitation policy and multiple exploration policies\\textemdash using a learned option policy, and actions are executed deterministically conditioned on the selected policy\. By maintaining deterministic execution under temporally extended policy selection, DAE facilitates temporally coordinated behaviours across multiple time steps\. Comprehensive experiments on four multi\-agent tasks\\textemdash Predator Prey, StarCraft II micro management challenge \(SMAC\), SMACv2, Google Research Football, and Multi\-Agent Coordination benchmark \(MACO\)\\textemdash demonstrate that DAE outperforms mainstream baselines, achieving superior sample efficiency and final learning performance\.
+As a variant of the Multi\-Agent Pathfinding \(MAPF\) problem, Multi\-Goal Multi\-Agent Pathfinding \(MG\-MAPF\) requires planning conflict\-free paths for a team of agents to visit sequences of preassigned goal vertices\. Existing search\-based methods suffer from poor scalability due to their reliance on centralized control, while decentralized learning\-based approaches struggle with long\-horizon planning under partial observability\. Furthermore, existing paradigms rarely address joint goal ordering across agents, where uncoordinated goal sequences cause multiple agents to simultaneously converge on the same region, increasing congestion and conflicts\. To address these challenges, we propose the Intent\-aware Multi\-Goal Multi\-Agent Pathfinding \(IMMP\), a hierarchical framework for decentralized MG\-MAPF that explicitly models spatial congestion at the high level and neighbor intent at the execution level\. The high\-level planner encodes a spatial prior via spatially\-balanced goal ordering and path planning, reducing conflict pressure passed to the low\-level policy\. The low\-level module resolves real\-time conflicts via a reinforcement learning policy augmented with a neighbor intent prediction module, trained end\-to\-end through a prediction\-guided collaborative proximal policy optimization\. Extensive experiments demonstrate that IMMP achieves strong scalability and generalization, Extensive experiments demonstrate that IMMP achieves strong scalability and generalization, reducing SoC by an average of 19\.77\\% compared to the best\-performing decentralized baseline, while maintaining robust performance\. Our code is available at https://anonymous\.4open\.science/r/IMMP\-CB2E/
 
-## Mean\-Field Control on Sparse Graphs: From Local Limits to GNNs via Neighborhood Distributions
+## Efficient Algorithms for Distributed Saddle Problems
 
-**Authors:** Tobias Schmidt; Kai Cui
+**Authors:** Ruichen Luo; Anton Rodomanov; Sebastian Stich
 
-**ID:** 149972 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+**ID:** 154829 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=lod8FKUWPS>) | [PDF](<https://openreview.net/pdf?id=lod8FKUWPS>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149972>)
+[Paper](<https://openreview.net/forum?id=AcpC2JqskT>) | [PDF](<https://openreview.net/pdf?id=AcpC2JqskT>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154829>)
 
-Mean\-field control \(MFC\) offers a scalable solution to the curse of dimensionality in multi\-agent systems but traditionally hinges on the restrictive assumption of exchangeability via dense, all\-to\-all interactions\. In this work, we bridge the gap to real\-world network structures by proposing a rigorous framework for MFC on large sparse graphs\. We redefine the system state as a probability measure over decorated rooted neighborhoods, effectively capturing local heterogeneity\. Our central contribution is a theoretical foundation for scalable reinforcement learning in this setting\. We prove horizon\-dependent locality: for finite\-horizon problems, an agent's optimal policy at time t depends strictly on its \(T\-t\)\-hop neighborhood\. This result renders the infinite\-dimensional control problem tractable and underpins a novel Dynamic Programming Principle \(DPP\) on the lifted space of neighborhood distributions\. Furthermore, we formally and experimentally justify the use of Graph Neural Networks \(GNNs\) for actor\-critic algorithms in this context\. Our framework naturally recovers classical MFC as a degenerate case while enabling efficient, theoretically grounded control on complex sparse topologies\.
+The distributed setting for Saddle Problems \(SPs\) has recently emerged as a framework for modern applications in machine learning and multiagent systems\. Despite its relevance, the theoretical foundations of this setting have not yet been thoroughly established\. In this paper, we advance this research direction by formalizing the distributed setup for SPs and providing rigorous definitions of communication and oracle costs\. Further, we prove lower bounds for any distributed gradient\-span algorithm, which reveals the gap from existing methods and this theoretical limit\. To this end, we provide a Decoupled Method built upon a novel multi\-stage reduction that reduces the SP into a sequence of decoupled minimization tasks of residual norms\. Our algorithm matches the communication lower bound, thus setting the communication complexity within the gradient\-span algorithms\. Moreover, it yields the first strict improvement over the long\-standing oracle cost of the Extragradient method for general SPs\. Finally, we study the extension of distributed SP into Variational Inequality Problem \(VIP\), which generalizes two\-player zero\-sum games to multiplayer general\-sum games\. We show that our Decoupled Method achieves a new state\-of\-the\-art communication complexity for this broader class\.
+
+## EvoInspect: A Unified Self\-Evolving Multi\-Agent Framework for Industrial Hardware Inspection
+
+**Authors:** Zhuyun Yuan; Jiming Zhang; Haoyuan Sun; Jun Yin; Qing Wang; Jian Kang; Jie Li; Yongxiang Li
+
+**ID:** 148609 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=wTp6LCV27h>) | [PDF](<https://openreview.net/pdf?id=wTp6LCV27h>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148609>)
+
+Human experts can accumulate experience from open\-ended and complex inspection tasks, thereby continually improving their inspection capabilities\. Actually, industrial hardware inspection faces challenges including open\-set defect categories, complex defects \(tiny, high\-gloss, low\-light, or blurred\), high inference cost, and difficulty in accumulating experience post\-deployment\. Existing end\-to\-end inspection methods typically couple image restoration with defect recognition in a single forward pass, limiting generalization to unseen components or composite defects; cascade “restore\-then\-detect” approaches often rely on static preprocessing, hindering adaptive adjustment based on scenario, defect morphology, and historical failures\. To address this, we propose EvoInspect, the first memory\-enhanced multi\-modal multi\-agent framework for industrial defect object detection\. It leverages a multi\-modal agentic memory mechanism to distill self\-evolving scenario\-specific Defect Detail Restoration decisions and dynamically grounded trajectories, enabling “accumulating experience like human experts\.” Specifically, \(1\) we introduce a dynamic Defect Detail Restoration strategy, including adaptive slicing for tiny defects, highlight suppression, low\-light enhancement, super\-resolution, and binarization, combined with a coarse\-to\-fine token\-efficient grounding mechanism for efficient defect capture; \(2\) we design a dual\-channel distillation mechanism unifying restoration and detection \(perception and execution\) experience, incorporating both successful and failed validation trajectories to support system self\-evolution\. Experiments on bearing surfaces, PCBs, solar electroluminescence \(solar EL\), and magnetic tile datasets show that EvoInspect consistently outperforms strong baselines in defect localization recall, inference accuracy, while demonstrating cross\-scenario adaptability and offline continual improvement\.
+
+## BioMicroAgents: A Co\-evolutionary Multi\-Agent Framework for High\-Fidelity Biomicroscopy Imaging
+
+**Authors:** Yongwei Jiang; Peilin Li; anfu deng; Xiaoyu Chen; Jun Yin
+
+**ID:** 155868 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=2IBxEPvy2X>) | [PDF](<https://openreview.net/pdf?id=2IBxEPvy2X>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155868>)
+
+Biomicroscopy imaging involves the complex coordination of multiple procedures, such as focusing, illumination, and staining\. Traditional unitary methods struggle with dynamical environments, while hybrid models pre\-trained on natural images tend to introduce artifacts for higher perceptual metrics\. Notably, biological imaging is not a one\-off task\. It is an iterative process similar to human expert’s observation, verification and adjustment\. They can benefit from history, remembering which processing strategies are suitable and can also identify issues such as artifacts and mis\-staining from verification\. To this end, we propose BioMicroAgents, the first multi\-agent framework with co\-evolutionary capabilities designed to simulate and optimize whole biomicro imaging process including brightening, denoising, deblur, super\-resolution, and virtual staining\. Through reinforcement learning, the model can reflect based on historical experience to reduce artifacts and mis\-staining, while enhancing edge and structural features to improve the accuracy of downstream tasks\. Specifically, BioMicroAgents includes: \(i\) Multi\-modal Analytical Agents, which utilize multimodal RAG to provide template images and biomicro knowledge, and employ the memory mechanism to analyze optimal processing paths; \(ii\) We propose three biomicro fidelity metrics and utilize three agent groups \(MicroNavigator, MicroProcessor, and MicroAuthenticator\) to perform rigorous analysis, processing, and verification\. \(iii\) Co\-evolutionary ability, which achieves dynamic policy and self\-correction through interactive feedback strategies and memory mechanisms, allowing the agent to evolve from history and other agents\. We test model across 12 biomicro tasks, BioMicroAgents achieved improvements in perceptual quality while adhering to strict fidelity in sub\-cellular features\. It also enhances the accuracy of downstream tasks such as segmentation and cell counting, showcasing the potential of general\-purpose visual agents in bioscience\.
+
+## Optimize Once, Execute Fast: Latency\-Aware Multi\-Agent Workflow Learning for Recurrent Queries
+
+**Authors:** Enpei Zhang; Feiyu Qu; Zheng Huang; Dawei Zhou; Elynn Chen; Yujun Yan
+
+**ID:** 154709 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=Bc8w5Uu2cF>) | [PDF](<https://openreview.net/pdf?id=Bc8w5Uu2cF>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154709>)
+
+Large Language Model\-based Multi\-Agent Systems \(LLM\-based MAS\) have shown remarkable success in solving complex tasks by coordinating specialized agents through multi\-step workflows\. To overcome the high cost and specificity of manually designed workflows, recent research has shifted toward learning them automatically\. However, a key limitation remains: while agent calls introduce significant latency due to model inference time and service congestion, most automated methods optimize solely for downstream performance, ignoring execution time \(makespan\)\. This issue is amplified when workflows are reused across recurring queries, making latency accumulate over time\. This limits deployment in recurrent applications such as AI customer support and AI cloud troubleshooting, where users expect fast responses\. To bridge this gap, we introduce a new problem, termed latency\-aware workflow generation, where the objective is to minimize workflow makespan while aiming to retain downstream performance\. We propose LAWA \(Latency\-Aware Workflow optimizAtion\), a novel framework that reduces makespan via theoretically grounded graph edits targeting critical\-path bottlenecks\. By unifying a graph generator with this graph\-editing procedure, LAWA supports both de novo workflow generation and refinement of existing ones\. Empirical results across seven benchmarks demonstrate that LAWA significantly reduces makespan while achieving competitive task performance, supporting efficient reuse of multi\-agent workflows for recurrent queries\.
+
+## AIM: Adaptive Interaction in Multi\-Agent Debate for Multimodal LLM Inference
+
+**Authors:** Wei Fan; JinYi Yoon; Bo Ji
+
+**ID:** 152673 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=RGMuCsE9Er>) | [PDF](<https://openreview.net/pdf?id=RGMuCsE9Er>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152673>)
+
+Multi\-Agent Debate \(MAD\) improves reasoning on multimodal tasks, but its accuracy and token efficiency depend on how agents interact during debate\. A largely overlooked design choice is which interaction modalities agents use to exchange evidence\. Existing methods rely on fixed text\- or graph\-based interaction, which fails to convey fine\-grained multimodal evidence, degrading accuracy while inflating token cost due to verbose descriptions\. To address this, we propose Adaptive Interaction in Multi\-Agent Debate \(AIM\), an adaptive framework that dynamically selects the best combination of interaction modalities for each instance\. Beyond text and graph, AIM introduces task\-dependent modality interaction, where agents exchange targeted regions of interest from the task\-specific multimodal input, such as image regions, audio segments, and spatio\-temporal clips\. To determine which combination is the best for each instance, AIM first generates a structured baseline response, extracts interpretable routing features, and finally uses a lightweight router to select a modality combination that avoids both under\-fusion \(i\.e\., agents miss decisive evidence\) and over\-fusion \(i\.e\., redundant modalities inflate token cost\) risks\. Across eight multimodal question answering \(QA\) benchmarks of Visual\-QA, Audio\-QA, and Video\-QA, AIM achieves the highest accuracy on all datasets, improving upon the best single\-modality baseline by up to 8\.9% while reducing token cost by up to 53\.4% relative to the best fixed\-modality baseline\.
+
+## Aligning AI Teams
+
+**Authors:** Siddarth Srinivasan; Morgan J Matthews; Jascha Sohl\-Dickstein; Erik Jones
+
+**ID:** 154600 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=COJLsgVYoq>) | [PDF](<https://openreview.net/pdf?id=COJLsgVYoq>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154600>)
+
+Previous work has shown that alignment training on individual LLM agents can fail to transfer to multi\-agent settings\. We investigate the underlying mechanisms for this failure, and explore interventions to preserve alignment transfer to multi\-agent LLM teams\. We focus on two software\-engineering tasks \(sepsis triage, a news recommender\) and ten consulting\-proposal generation tasks\. We present four findings: \(1\) The single\-vs\-team safety gap does not show a clear trend with more capable models\. We find that Anthropic's Mythos Preview shows the largest gap on one of our tasks but the smallest on another; \(2\) Many natural interventions, such as having agents critique each other's work or coordinate in a group chat, do not bring agent teams back to single\-agent alignment behavior; \(3\) \_diffusion of responsibility\_ substantially accounts for the safety gap: agents in teams are less likely to proactively check for system\-level safety failures and more likely to ignore, rationalize, or deflect responsibility for issues when they arise; \(4\) having a \_designated safety lead agent\_ ensure system\-level safety, and having a coordinator agent publish a \_safety specifications document\_ are effective at restoring single\-agent alignment\. We also release \`magelab\`, a multi\-agent LLM orchestration and experimentation framework\. Our findings can help practitioners design agent teams that successfully preserve the behaviors expected of aligned individual agents\.
 
 ## The Dynamics of Policy Gradient in Social Dilemmas with Partner Selection
 
@@ -286,93 +130,31 @@ In social dilemmas self\-interested learning agents face the choice between the 
 
 **Authors:** Dongsu Lee; Haoran Xu; Amy Zhang
 
-**ID:** 153940\-\-2 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 153940
+**ID:** 153940 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
 
 [Paper](<https://openreview.net/forum?id=HRgPovhTAK>) | [PDF](<https://openreview.net/pdf?id=HRgPovhTAK>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153940>)
 
-_Abstract unavailable from the accessible public sources._
+Recent offline multi\-agent reinforcement learning \(MARL\) faces a persistent trade\-off\. Expressive generative policies can represent multi\-modal coordination in the data but cannot distinguish high\-value regions, while value\-optimized policies exploit the learned Q\-function but collapse the multi\-modal structure into a single dominant mode\. A single agent's mode collapse can break joint coordination, and simultaneous drift across agents can push the joint policy into unseen regions of the action space\. We propose scalable coordination via optimal unified transport \(SCOUT\), the first offline MARL framework to combine a generative foundation model with a learned value function through test\-time training\. SCOUT trains two decoupled components: a flow\-matching behavioral prior and a decomposed value function\. At test\-time, it transports behavioral samples toward high\-value regions via variational gradient descent\. The number of transport steps controls adaptive test\-time scaling, replacing a fixed regularization coefficient\. Under the individual\-global\-max \(IGM\) principle, we prove that decentralized per\-agent transport is consistent with joint value improvement and monotonically recovers inter\-agent correlation even when the value decomposition is approximate\.
 
-## STAR\-Math: Multi\-Agent Mathematical Reasoning under Persistent Meta\-Strategic Supervision
+## The Reciprocity Gradient
 
-**Authors:** Jiaao Wu; Xian Zhang; Hanzhang Liu; Sophia Zhang; Fan Yang; Yinpeng Dong
+**Authors:** Yue Lin; Pascal Poupart; Shuhui Zhu; Dan Qiao; Wenhao Li; Yuan Liu; Hongyuan Zha; Baoxiang Wang
 
-**ID:** 150935 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+**ID:** 153284 | **Topic source:** official | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=eCAxMcFzTe>) | [PDF](<https://openreview.net/pdf?id=eCAxMcFzTe>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150935>)
+[Paper](<https://openreview.net/forum?id=MPZCNReQDd>) | [PDF](<https://openreview.net/pdf?id=MPZCNReQDd>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153284>)
 
-Frontier AI models and multi\-agent systems have led to significant improvements in mathematical reasoning\. However, for problems requiring extended, long\-horizon reasoning, existing systems continue to suffer from fundamental reliability issues: hallucination accumulation, memory fragmentation, and imbalanced reasoning\-tool trade\-offs\. We introduce \*\*STAR\-Math\*\*, a multi\-agent framework that systematically addresses these challenges through meta\-level supervision and structured Reasoner\-Verifier interaction\. STAR\-Math is structured as an orchestrated state machine with nested challenge\-step\-replan loops, governed by a reasoning\-free Python orchestrator that separates control from inference and bounds error propagation through trace\-back and re\-planning\. Our key innovation is a \*\*persistent Meta\-Strategist\*\* that maintains cross\-attempt memory and exercises meta\-level control by issuing high\-level strategic guidance or mandatory directives, so the system can escape unproductive loops rather than stagnate or over\-rely on tools\. STAR\-Math achieves state\-of\-the\-art results on all eight top\-tier competition benchmarks: AIME 2025\-2026, MathArena Apex Shortlist, MathArena Apex 2025, Putnam 2025, IMO 2025, HMMT February 2026, and USAMO 2026\. It obtains perfect scores on AIMEs, Putnam, and HMMT, and shows its largest margin on Apex 2025, scoring 93\.75% compared with 80\.21% by the strongest baseline GPT\-5\.5\. Ablation studies show that the gains arise from the framework's orchestration rather than from model\-level diversity since removing key components or substituting in mixed backbones consistently weakens performance\.
+Communication is fundamental to sustaining reciprocity and cooperation in strategic interactions\. We identify and formulate the influence attribution problem as the central optimization difficulty inherent in such dynamics for a learning agent: any action or signal the agent emits reshapes the reputations of many third parties along combinatorially branching paths before feeding back into its own future rewards, forcing the agent to account for all of these indirect channels at once when choosing every action\. To address this, we introduce the reciprocity gradient , which explicitly backpropagates reward gradients through private estimators of opponents' policies trained from public observations\. The gradient flows through the reputation chain itself analytically, rather than being estimated from sampled returns\. It jointly optimizes actions and evaluative signals without intrinsic rewards or reward shaping\. Empirically, the method recovers near\-optimal context\-sensitive policies, while sample\-based baselines collapse into constant\-output policies\.
 
-## Group Perspective Matters: Regulating Debate Relationships Can Mitigate Blind Conformity in Multi\-Agent Debate
+## When Debate Helps: Proposal Supply and Verification\-Aware Readout in Multi\-Agent Reasoning
 
-**Authors:** Hao Wu; Shoucheng Song; Chang Yao; Huaiyu Wan; Youfang Lin; Kai Lv
+**Authors:** Zihao Zhao; Tunyu Zhang; Haizhou Shi; Yusong Zhao; Xinxi Zhang; Hao Wang
 
-**ID:** 154678 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+**ID:** 154779 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=BqTbDi43uU>) | [PDF](<https://openreview.net/pdf?id=BqTbDi43uU>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154678>)
+[Paper](<https://openreview.net/forum?id=B2PDGRTWWu>) | [PDF](<https://openreview.net/pdf?id=B2PDGRTWWu>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154779>)
 
-Multi\-Agent Debate \(MAD\) improves the reasoning performance of Large Language Models \(LLMs\) through multi\-round interaction\. However, LLMs in MAD are highly susceptible to blind conformity\. Existing individual evaluation methods, typically based on confidence or perplexity, fail to reflect the correctness of reasoning and may even exacerbate blind conformity\. To address this, we shift the perspective from individual evaluation to group interaction\. We define mutual referencing among LLMs as \\textbf\{Debate Relationships\} and recognize that regulating these relationships is the key to mitigating blind conformity\. In this paper, we propose a novel framework for \\textbf\{D\}ynamically r\\textbf\{E\}gulating deb\\textbf\{A\}te \\textbf\{R\}elationships \(DEAR\) from the group perspective\. At first, DEAR quantifies consensus and divergence as \\textit\{group evidence\} to capture the debate state\. Then, DEAR operates through three stages: 1\) What: perceiving group consultation tendency and uncertainty; 2\) Who: introducing a Selection RL\-Agent to dynamically select reference peers; and 3\) How: adopting a Behavior RL\-Agent to adaptively adjust generation behaviors\.
-
-## Towards High Semantic Fidelity: Hyperdimensional Symbolic Messages in Multi\-Agent Communication
-
-**Authors:** Shoucheng Song; Youfang Lin; Chang Yao; Hao Wu; Sheng Han; Kai Lv
-
-**ID:** 153552 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=KXTbANIGZW>) | [PDF](<https://openreview.net/pdf?id=KXTbANIGZW>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153552>)
-
-Semantic fidelity is essential for multi\-agent communication under non\-ideal channels, comprising transmission fidelity and conversion fidelity\. Yet existing numerical and neural message formats cannot simultaneously achieve both\.  To address this, we propose a novel message format\-\\textbf\{H\}yperdimensional \\textbf\{S\}ymbolic \\textbf\{M\}essages \(HSM\), and its corresponding communication framework \\textbf\{Herm\}\.  For transmission fidelity, Herm suppresses semantic entanglement via an entity\-attribute\-value structured encoding pipeline\. For conversion fidelity, Herm first leverages a receiver\-centric ego\-binding mechanism to align semantics\. Then, a similarity\-aware dual\-branch fusion module is proposed to prevent critical semantic dilution\. To realize explicit message\-semantic conversion,  we devise an iterative decoding scheme via algebraic inverse operation\. Experiments exhibit that Herm outperforms baselines across various noisy scenarios while maintaining superior structural readability\.
-
-## Mental\-Models for Multi\-Agent Systems
-
-**Authors:** Hanan Gani; Lulu \(Siwen\) Shao; Manmohan Chandraker
-
-**ID:** 153908 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=HoG47ROacO>) | [PDF](<https://openreview.net/pdf?id=HoG47ROacO>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153908>)
-
-Large foundation models have accelerated progress toward general\-purpose agents that interact with humans and other agents through language and multimodal signals\. However, robust multi\-agent decision\-making requires reasoning about what other agents know, intend, and are likely to do under partial observability\. Current agentic systems often operate through prompt design, memory, or end\-to\-end behavioral shaping, but typically do not learn an explicit partner\-state representation that can be reused as a decision variable across tasks\. We introduce mental\-model\-enabled agents, a framework that equips an agent with a latent mental model of its counterpart, allowing it to infer hidden beliefs, intentions, and likely reactions from the observed history and use these inferences to guide action selection\. Our method learns an amortized recursive Theory\-of\-Mind representation, with first\- and second\-order mental\-state structure, jointly with a belief\-conditioned reward model that evaluates candidate actions relative to the inferred partner state\. A policy is then learned under this belief\-aware signal, yielding an agent that can act independently at inference time while retaining the benefits of explicit partner modeling\. We evaluate the same framework on both language\-only and multimodal benchmarks\. Across these settings, explicit mental\-state modeling consistently improves interaction quality and Theory\-of\-Mind performance over base agentic systems, showing that structured partner modeling is a useful inductive bias for general multi\-agent systems\.
-
-## Market\-Based Runtime Resource Allocation for LLM Multi\-Agent Systems
-
-**Authors:** Yixue Huang; Mingxin Wang; Hao Li; Hao Jiang
-
-**ID:** 155373 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=67jpPq2Bsk>) | [PDF](<https://openreview.net/pdf?id=67jpPq2Bsk>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155373>)
-
-LLM multi\-agent systems rely on division of labor to solve complex tasks, but their execution can be blocked by contention for shared resources such as GPU test environments, CPU execution slots, and exclusive tool sessions\. Existing workflows, task allocation methods, and runtime schedulers usually arbitrate such access indirectly through workflow position, dependency structure, queue state, or resource metrics\. These criteria do not fully capture the value of satisfying a specific request, because request value is distributed across agents' local execution states and changes with tests, retries, and downstream results\. We propose a market\-based protocol for access arbitration in LLM multi\-agent systems\. Each agent converts its current plan and local execution state into a structured, budget\-constrained bid that signals relative urgency\. For asynchronous requests, an online clearing method based on optimal stopping decides when to close the clearing window, allocate access rights, settle payments, and track resource occupation until release\. Across three contention scenarios, Market reduces makespan by 5\.2\\%, 2\.5\\%, and 4\.9\\% relative to the strongest primary baselines, while improving task score by about two percentage points\.
-
-## Risk\-Calibrated Context Selection for Healthcare Multi\-Agent Handoff
-
-**Authors:** Manu Agrawal; Sumit Mukherjee
-
-**ID:** 154212 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=FLlWDrOo4c>) | [PDF](<https://openreview.net/pdf?id=FLlWDrOo4c>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154212>)
-
-Specialized agents collaborate by transferring memory: retrieved records, generated summaries, tool traces, and long\-running state\. In regulated domains this is a governance problem, not a retrieval problem: the receiver's task matters, but so does whether it was authorized to receive each item and whether the handoff exposed more than necessary\. We formalize minimum\-necessary context selection as a constrained submodular subset\-selection problem with an additive exposure cost and a distributional task\-success risk bound\. Our algorithm, ScopeSelect, first hard\-masks items whose layer or scope the receiver contract does not admit, then runs a cost\-benefit greedy selector against a monotone submodular utility, attaining a $\\\\frac\{1\}\{2\}\(1\-1/e\)$ approximation bound under a budget, and finally wraps threshold selection in Conformal Risk Control, giving a finite\-sample distribution\-free guarantee $\\\\mathbb\{E\}\[L\(S\_\{\\\\hat\{\\\\gamma\}\}\)\] \\\\le \\\\alpha$ on exchangeable calibration data\. We evaluate on HealthHandoff\-Bench, a synthetic benchmark with 21,600 healthcare\-agent handoff tasks across four workflows, and Synthea\-HH, a realism tier ingested from 340 Synthea\-generated FHIR bundles\. A three\-source blinded label audit compares benchmark labels, model\-generated labels, and clinical\-informatics expert review, with high agreement for sensitivity labels and policy\-boundary disagreements for necessity and authorization\. Against authorized TF\-IDF, embedding retrieval, a cross\-encoder reranker, and a calibrated LLM\-as\-selector, ScopeSelect is the only method meeting $\\\\alpha = 0\.15$ at competitive task success\. The hard\-mask safety property holds under 30% label noise, 100 adversarial attacks, and receiver\-role shift; a live\-LLM run with Claude Sonnet 4\.5 exhibits a calibration\-transfer gap that motivates per\-workflow recalibration\. We release the benchmark, Synthea\-HH pipeline, CRC calibration harness, and a signed\-handoff prototype\.
-
-## From Chats to Markets: AgenticPay for LLM\-Powered Negotiation in Multi\-Agent Commerce
-
-**Authors:** Xianyang Liu; Shangding Gu; Fan Xu; Manxi Wu; Boyi Li; Jun Wang; Costas J Spanos; Dawn Song
-
-**ID:** 154687 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=BjCh5p36da>) | [PDF](<https://openreview.net/pdf?id=BjCh5p36da>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154687>)
-
-Agents based on large language models are increasingly expected to autonomously handle negotiation and transactions\. However, existing benchmarks predominantly focus on text\-only, bilateral, zero\-sum price haggling, failing to capture the complexity of real\-world commerce\. To address this gap, we introduce Agenticpay, a unified framework and benchmark for evaluating how well multimodal agents reach high\-welfare, multi\-dimensional agreements in realistic markets\. Built around four core components \( Environments, Tasks, Agents, and Metrics\), Agenticpay comprises 160 multimodal tasks spanning 4 real\-world business scenarios \(E\-commerce, Food Delivery, Ride\-hailing, and Apartment Rental\) and 8 market topologies, scaling from 1\-to\-1 bargaining to many\-to\-many \(N\-to\-N\) competitive markets\. Beyond price haggling, agents must read product images, infer each opponent's hidden preferences, and trade off multiple binding contract terms \(e\.g\., price, lease duration, return policy, delivery speed\)\. Agents communicate through multi\-round natural\-language dialogue, with each turn proposing or revising a full contract, and outcomes are scored by a utility\-based framework that rewards agreements maximizing joint welfare\. Evaluations on state\-of\-the\-art proprietary \(GPT\-5\.4, Claude Sonnet 4\.6, Gemini 3\.1 Pro Preview\) and open\-weight \(Qwen3\-VL\-32B\-Instruct, InternVL3\-38B\) multimodal models reveal substantial gaps in non\-zero\-sum value creation and market reasoning: even the strongest agent \(Gemini 3\.1 Pro Preview\) reaches a GlobalScore of only 42\.3/100, and performance consistently degrades as markets scale from bilateral to multi\-sided, with the average GlobalScore dropping by 5\.7 points and open\-weight models suffering the largest declines \(up to 11\.5 points\)\. These findings establish Agenticpay as a foundational testbed for multimodal agentic commerce\. Code and dataset are available at: https://anonymous\.4open\.science/r/AgenticPay\-4BBB/README\.md\.
-
-## MASTARS: Multi\-Agent Sequential Trajectory Augmentation with Return\-Conditioned Subgoals
-
-**Authors:** Jiwon Jeon; Myungsik Cho; Woojun Kim; Seongmin Kim; Woohyeon Byeon; Seungyul Han; Youngchul Sung
-
-**ID:** 155062 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=8kbDxSuHS6>) | [PDF](<https://openreview.net/pdf?id=8kbDxSuHS6>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155062>)
-
-The performance of offline Multi\-Agent Reinforcement Learning \(MARL\) is limited by the quality of the fixed offline dataset, motivating trajectory augmentation\. However, augmenting multi\-agent trajectories presents a fundamental challenge of the diversity–coordination  trade\-off: independent generation improves diversity but lacks coordination, while joint generation induces coordination but lacks diversity, reproducing the training distribution\. To address this challenge in multi\-agent data augmentation, we introduce MASTARS, a novel diffusion\-based framework that generates multi\-agent trajectories sequentially across agents while enforcing cross\-agent consistent coordination via the method of inpainting\. MASTARS produces trajectories that are diverse, coordinated and globally coherent\. Experiments on various benchmarks such as MPE, SMAC, and SMAC\-v2 demonstrate significant performance gains across multiple offline MARL methods\.
+Multi\-agent debate can improve reasoning, yet often fails to beat simple majority voting\. Prior martingale\-null theory explains such failures as debate without truth\-directed signal\. We develop a more complete account of when practical LLM debate succeeds: it needs both correct minority proposals and a readout that can recover them\. We formalize this view through latent headroom, the gap between majority vote and proposal\-oracle performance, which measures unused correct expertise in an expert society\. For readout, we developLatent Verification Debate \(LVD\), a theory that models candidate proposals as receiving latent verified evidence before influencing final generation\. For supply, we study neural\-thicket expert societies, where nearby model perturbations provide heterogeneous specialists, and introduce a coverage\-based construction that increases complementary proposal supply\. Across matched\-budget reasoning and multi\-discipline benchmarks, our construction increases recoverable headroom, and controlled readout experiments show that gains arise from recovering surfaced correct minorities rather than merely adding interaction\. Together, these results identify diverse proposal supply and verification\-aware utilization as the two mechanisms that determine when debate helps\.
 
 ## Who Should Evolve? Uncertainty\-Aware Role Bottleneck Inference for Multi\-Agent LLM Training
 
@@ -404,16 +186,6 @@ The deployment of AI agents in multi\-agent workflows enables inter\-agent influ
 
 Persistent LLM agents need memory that preserves state, provenance, validity, and evidence across long interaction histories\. We introduce StateLedger, a path\-addressed external memory substrate that stores memory as durable state evolution rather than flat retrievable items: events update canonical paths, registers absorb small changes, CommitPages record residual drift against Checkpoints, cue views bound traversal, and content\-addressed artifacts avoid evidence duplication\. We prove storage, retrieval, coalescing, and conflict\-aware ranking guarantees under explicit coverage and reader\-consistency conditions\. Empirically, StateLedger improves task performance and storage efficiency across LongMemEval, LoCoMo, and Evo\-Memory Multi\-turn, reaching 98\.8% on LongMemEval\-S, 82\.6% on LongMemEval\-M with 14\.7% durable footprint, 95\.8% LoCoMo non\-adversarial accuracy, 87\.1% unweighted success, and 93\.5% unweighted progress on Evo\-Memory\.
 
-## Bayes\-Sufficient Compression Is Not Enough: How Communication Helps in Multi\-Agent Systems?
-
-**Authors:** Yi Xie; Zhanke Zhou; Yi Fan; Yong Ge; Bo Han; Bo Liu
-
-**ID:** 155601 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=4MClMQl04u>) | [PDF](<https://openreview.net/pdf?id=4MClMQl04u>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155601>)
-
-Multi\-agent LLM systems often split work between a main agent with broad context and an executor subagent with limited local context\. Communication can help recover missing information, but it can also add parsing burden, distract from the local decision, or induce protocol failures\. We ask when the main agent should send a short message rather than raw context or no message, and when upgrading the main agent pays off\. We formalize this as receiver\-relative bounded coordination, where a message's value is the executor's next\-step gain minus its protocol tax\. This view yields four findings\. First, compressed messages can outperform raw context when tax savings exceed losses from omitted information or decoder mismatch\. Second, Bayes\-sufficient compression, which preserves all information needed for the optimal decision, can still be worse than raw context when a bounded executor cannot decode or operationalize its surface form\. Third, post\-message failures can be localized into externalization, absorption, and action closure, with residual error concentrating in closure even after the right content reaches the executor\. Fourth, a stronger upstream agent helps only when the executor's local view is weak enough for the added gain to exceed the added tax\. Across six benchmarks, these regimes recur: the same multi\-agent protocol raises ContextBench joint accuracy from 0\.633 to 0\.775 but lowers ToolSandbox from 0\.889 to 0\.653, helping in context\-heavy regimes and hurting in locally sufficient ones\. The same quantities drive an inference\-time selector over communication actions, improving the accuracy\-cost frontier on the two benchmarks where the full action set is evaluated\. Code and results at https://anonymous\.4open\.science/r/Communication/
-
 ## DAGent: Evaluate\-then\-Grow Planning for Deep Research Agents
 
 **Authors:** Hanwen Liu; Yuanfu Sun; Qiaoyu Tan
@@ -433,16 +205,6 @@ Deep research tasks require agents to navigate large knowledge spaces, synthesiz
 [Paper](<https://openreview.net/forum?id=Gp5eu43iRL>) | [PDF](<https://openreview.net/pdf?id=Gp5eu43iRL>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154024>)
 
 Communication enhances cooperative multi\-agent reinforcement learning \(MARL\) under partial observability\. In real networks, however, each agent's available bandwidth varies over time due to changing link quality, interference, and congestion\. Most existing MARL communication policies decide whether to transmit based on message importance or novelty, or are trained under fixed bandwidth conditions\. As a result, they cannot adapt sending frequency to bandwidth variations, leading to packet loss when bandwidth decreases or missed information when bandwidth recovers\. To address this, we propose Dual\-Decoupled Adaptive Communication \(DDACOM\)\-\-\-a framework that decouples message sending and message generation from the action policy\. The message\-sending module ranks each message by its deviation from teammates' information and the sender's history, and uses a dynamic token bucket to convert the probe\-estimated safe rate into a real\-time token budget, enabling the communication frequency to track the safe rate online\. The message\-generation module is trained independently with receiver\-side attention feedback and counterfactual marginal value, ensuring each transmitted message meaningfully contributes to cooperation\. On SMAC and MPE, DDACOM achieves leading cooperative performance among baseline methods\. Under dynamic network conditions in ns\-3 simulation, DDACOM sustains over \\\(95\\%\\\) safe\-rate utilization and packet loss below \\\(0\.3\\%\\\) while reducing communication frequency to less than half of full broadcast, confirming its adaptability to runtime network variation\.
-
-## ORBIT: A Framework for Multi\-Agent Security Evaluations
-
-**Authors:** Ben Hagag; William L Anderson; Srija Chakraborty; Christian Schroeder de Witt
-
-**ID:** 139033 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=p1h5pUhxUi>) | [PDF](<https://openreview.net/pdf?id=p1h5pUhxUi>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139033>)
-
-Multi\-agent LLM systems are increasingly deployed for complex, long\-horizon tasks or emerge as a natural consequence of agents interacting in the wild\. Yet, they often have significant security vulnerabilities: the flexible protocols that enable task generalization also expose novel threats, from cascading prompt injection to inter\-agent collusion\. Progress in defending against these threats has been slowed by a lack of empirical evaluations, requiring bespoke environment development for every new defense and making standardized comparison impossible\. Existing evaluations address isolated threat models or single\-agent settings, but none jointly vary attack, defense, and architecture across realistic multi\-agent environments\. To address this gap, we introduce ORBIT, a configurable evaluation framework for empirical multi\-agent security research, built on UK AISI's Inspect\. ORBIT provides configurable communication topologies, memory, scheduling, and agent roles\. It supports four threat types \(indirect prompt injection, misuse, compromised agents, collusion\) and four defense strategies \(security prompting, guardian agents, monitors, dual\-LLM patterns\)\. The benchmark suite spans five scenario families covering browser use, computer use, agentic coding, customer service, and cooperative allocation\. Using ORBIT, we conduct controlled experiments varying defenses, attacks, topologies, and models\. We find evidence of significant gaps in defense transferability across threats, security–performance tradeoffs, and interactions between architectural choices and defense effectiveness\. To accelerate empirical multi\-agent security work, we make ORBIT available open\-source at: https://anonymous\.4open\.science/r/orbit\-D1A9\.
 
 ## MemCode: Discrete Semantic Representations for Long\-Term Agent Memory
 
@@ -484,26 +246,6 @@ Computer\-use agents hold the promise of assisting in a wide range of digital ec
 
 Prompt engineering has become a central lever for deploying large language models \(LLMs\), yet the prompts that actually ship to production bear little resemblance to the short instructions studied in most of the prompt\-optimization literature\. A deployed prompt is a structured multi\-section artifact\-\-\-role framing, reasoning directives, examples, constraints, tool schemas, and output specifications woven into a single token stream\-\-\-in which some sections encode hard\-won safety and format contracts while others are the legitimate targets of optimization\. Existing iterative prompt optimizers treat the prompt as a monolithic string and the search as an unstructured rewrite loop, with no mechanism to respect this partition and no theoretical account of when their updates improve the prompt, preserve diversity, or control length\.  We address this gap by casting iterative prompt optimization as combinatorial search over an edit graph of block\-structured, selectively\-mutable prompt states\. Under this view, a broad slice of the recent literature collapses to selector\-\-proposal\-\-state\-space instances of a single \\emph\{batched iterative prompt search\} template that differ only in the selector\. Within this framework we introduce \\textsc\{Splice\}, which contributes four coupled design choices, each paired with a formal guarantee: \(i\) per\-block mutability, with a price\-of\-freezing bound quantifying the safety\-\-optimality trade\-off; \(ii\) dual section\-local textual gradients with momentum, yielding an edit\-graph reachability bound and a $\{\(1\-e^\{\-\\gamma\}\)\}$ sub\-modular approximation; \(iii\) elitist beam search with lineage\-aware diversity, giving deterministic monotonicity, a noisy no regression tail bound, and conditional no\-collapse of lineages; and \(iv\) a ratio regularizer for length control, with an explicit accuracy\-\-length bias bound\. Together these constitute, to our knowledge, the first theoretical analysis of iterative LLM\-driven prompt optimization\. Empirically, \\textsc\{Splice\} consistently outperforms prior prompt\-optimization methods and single\-step sampling baselines across public benchmarks, system models spanning three capability tiers, and tasks ranging from classification to LLM\-as\-judge rubric optimization, while preserving frozen sections verbatim and exhibiting narrower cross\-model variance than single\-step sampling\.
 
-## CAFE: Causally\-Guided Automated Feature Engineering with Multi\-Agent Reinforcement Learning
-
-**Authors:** Arun Vignesh Malarkkan; Wangyang Ying; Hongyu Cao; Dongjie Wang; Yanjie Fu
-
-**ID:** 151842 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=XWuLGI5zio>) | [PDF](<https://openreview.net/pdf?id=XWuLGI5zio>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151842>)
-
-Automated feature engineering \(AFE\) enables AI systems to autonomously construct high\-utility representations from raw tabular data\. However, existing AFE methods rely on statistical heuristics, yielding brittle features that fail under distribution shift\. We introduce CAFE, a framework that reformulates AFE as a causally\-guided sequential decision process, bridging causal discovery with reinforcement learning\-driven feature construction\. Phase I learns a sparse directed acyclic graph over features and the target to obtain soft causal priors, grouping features as direct, indirect, or other based on their causal influence with respect to the target\. Phase II uses a cascading multi\-agent deep Q\-learning architecture to select causal groups and transformation operators, with hierarchical reward shaping and causal group\-level exploration strategies that favor causally plausible transformations while controlling feature complexity\. Across 15 public benchmarks \(classification with macro\-F1; regression with inverse relative absolute error\), CAFE achieves statistically significant gains over the strongest AFE baseline \(Wilcoxon p&lt;0\.001, large effect\), reduces episodes\-to\-convergence, and delivers competitive time\-to\-target\. Under both controlled covariate shifts and naturally occurring distribution shifts \(Folktables\), CAFE reduces out\-of\-distribution performance drop by up to 4x relative to a non\-causal multi\-agent baseline, and produces more compact feature sets with more stable post\-hoc attributions\. These findings underscore that causal structure, used as a soft inductive prior rather than a rigid constraint, can substantially improve the robustness and efficiency of automated feature engineering\.
-
-## StarCraft Motion: A Dataset for Agent Simulation in Adversarial and Partially Observable Scenarios
-
-**Authors:** Yi\-Chung Chen; Mingyu Kim; Ruqi Bai; James Z Hare; Jing Gao; David Inouye
-
-**ID:** 139048 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=o9paPqDKbN>) | [PDF](<https://openreview.net/pdf?id=o9paPqDKbN>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139048>)
-
-Agent simulation aims to model the future behavior of interacting agents, but existing benchmarks have largely focused on structured domains such as autonomous driving\. Adversarial and partially observable settings remain less explored, despite their importance for modeling strategic multi\-agent behavior\. To address this gap, we introduce StarCraft Motion, a large\-scale dataset for agent simulation built from human StarCraft\~II replays\. Our processing pipeline converts raw replays into standardized simulation scenarios by extracting continuous unit trajectories, deriving command\-based unit\-level intent labels, and aligning game states with player\-specific fog\-of\-war observations\. This enables direct study of behavior, intent, and opponent responses under competitive partial observability\. As an initial study, we evaluate autoregressive simulation methods on StarCraft Motion and introduce HMART, a hierarchical baseline that extends SMART with learnable player\-level query aggregation for efficient global\-context modeling in large\-agent\-count scenarios\. Experiments show that global context improves observer\-unit simulation and intent prediction, while closed\-loop fine\-tuning further improves rollout quality\. However, accurately capturing intent initiation and transitions remains difficult\. We also find that opponent modeling from partial observations is substantially more challenging, and that additional global information can be misleading when it does not match the opponent's perspective\. These results highlight StarCraft Motion as a useful dataset for studying scalable agent simulation in adversarial, partially observable environments\.
-
 ## Coupling\-Aware Reinforcement Learning for Co\-Evolving Graph Games
 
 **Authors:** Mina Kim; Guanghui Lan; Benoit Montreuil
@@ -514,83 +256,35 @@ Agent simulation aims to model the future behavior of interacting agents, but ex
 
 Building hydrogen station networks, electric vehicle \(EV\) charging grids, or vaccine distribution systems requires coordinating two separately operated graphs \- demand\-side facilities and the supply\-side networks they depend on \- where each operator's payoff depends on the other's choices\. We formalize this as the Co\-Evolving Graph Game \(CEGG\), a setting that sits between facility location, interdependent\-network analysis, and graph\-based multi\-agent reinforcement learning \(MARL\) but is not jointly addressed by any of them\. We propose Cross\-Graph Attention with Policy Mirror Descent \(CGA\-PMD\), pairing cross\-graph attention \- which lets each agent read only the partner\-graph nodes structurally coupled to its own \- with a policy mirror descent update for stable training\. Across three reward domains and a range of practical network scales, we find that the structure of the coupling selects which method wins: at small scale most methods are competitive, but as scale grows or coupling becomes irregular, only CGA\-PMD remains productive while own\-only, unmasked\-attention, and Proximal Policy Optimization \(PPO\)\-based variants all fail in distinct ways\. Our theoretical analysis explains why: PMD's Kullback\-Leibler \(KL\) regularization admits an iteration\-uniform cumulative drift bound while PPO's clip update does not, predicting CGA\-PMD's stability in the hard regime where PPO\-based methods collapse\.
 
-## Structured Human\-Like Agentic Flow for RTL Design
-
-**Authors:** Yu\-Tung Liu; Zhan Song; Chenhui Deng; Chia\-Tung Ho; CUNXI YU
-
-**ID:** 150260 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=jV4t9gy08G>) | [PDF](<https://openreview.net/pdf?id=jV4t9gy08G>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150260>)
-
-Long\-horizon RTL agents often collapse under context pollution, lacking the active, compartmentalized debugging strategies of human engineers\. We introduce OneVeriAgent, a human\-like framework modeled directly on expert cognitive workflows\. First, mimicking how engineers probe waveform viewers, Agentic Temporal Exploration \(ATE\) enables dynamic, targeted signal queries, distilling dense simulator dumps into sparse, causal traces\. Second, reflecting how designers compartmentalize tasks, a task\-scoped Orchestrator enforces strict context isolation, preventing raw tool outputs from polluting the global reasoning trace\. On the CVDP benchmark, OneVeriAgent achieves 95\.8\\% Pass@1 with Claude Opus 4\.6, matching state\-of\-the\-art proprietary swarm\. Finally, we propose Tool\-Validated Self\-Distillation \(TVSD\) to bridge the open\-source capability gap\. By fine\-tuning on self\-generated, syntactically valid trajectories without external correctness oracles, TVSD lifts Gemma4\-31B\-Instruct's Pass@1 from 61\.1\\% to 74\.8\\%, demonstrating that fully open\-weight RTL agents are viable\.
-
-## Coupling\-Aware Reinforcement Learning for Co\-Evolving Graph Games
-
-**Authors:** Mina Kim; Guanghui Lan; Benoit Montreuil
-
-**ID:** 154400\-\-2 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 154400
-
-[Paper](<https://openreview.net/forum?id=DrGKhgoPSC>) | [PDF](<https://openreview.net/pdf?id=DrGKhgoPSC>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154400>)
-
-Building hydrogen station networks, electric vehicle \(EV\) charging grids, or vaccine distribution systems requires coordinating two separately operated graphs \- demand\-side facilities and the supply\-side networks they depend on \- where each operator's payoff depends on the other's choices\. We formalize this as the Co\-Evolving Graph Game \(CEGG\), a setting that sits between facility location, interdependent\-network analysis, and graph\-based multi\-agent reinforcement learning \(MARL\) but is not jointly addressed by any of them\. We propose Cross\-Graph Attention with Policy Mirror Descent \(CGA\-PMD\), pairing cross\-graph attention \- which lets each agent read only the partner\-graph nodes structurally coupled to its own \- with a policy mirror descent update for stable training\. Across three reward domains and a range of practical network scales, we find that the structure of the coupling selects which method wins: at small scale most methods are competitive, but as scale grows or coupling becomes irregular, only CGA\-PMD remains productive while own\-only, unmasked\-attention, and Proximal Policy Optimization \(PPO\)\-based variants all fail in distinct ways\. Our theoretical analysis explains why: PMD's Kullback\-Leibler \(KL\) regularization admits an iteration\-uniform cumulative drift bound while PPO's clip update does not, predicting CGA\-PMD's stability in the hard regime where PPO\-based methods collapse\.
-
-## Structured Human\-Like Agentic Flow for RTL Design
-
-**Authors:** Yu\-Tung Liu; Zhan Song; Chenhui Deng; Chia\-Tung Ho; CUNXI YU
-
-**ID:** 150260\-\-2 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 150260
-
-[Paper](<https://openreview.net/forum?id=jV4t9gy08G>) | [PDF](<https://openreview.net/pdf?id=jV4t9gy08G>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150260>)
-
-Long\-horizon RTL agents often collapse under context pollution, lacking the active, compartmentalized debugging strategies of human engineers\. We introduce OneVeriAgent, a human\-like framework modeled directly on expert cognitive workflows\. First, mimicking how engineers probe waveform viewers, Agentic Temporal Exploration \(ATE\) enables dynamic, targeted signal queries, distilling dense simulator dumps into sparse, causal traces\. Second, reflecting how designers compartmentalize tasks, a task\-scoped Orchestrator enforces strict context isolation, preventing raw tool outputs from polluting the global reasoning trace\. On the CVDP benchmark, OneVeriAgent achieves 95\.8\\% Pass@1 with Claude Opus 4\.6, matching state\-of\-the\-art proprietary swarm\. Finally, we propose Tool\-Validated Self\-Distillation \(TVSD\) to bridge the open\-source capability gap\. By fine\-tuning on self\-generated, syntactically valid trajectories without external correctness oracles, TVSD lifts Gemma4\-31B\-Instruct's Pass@1 from 61\.1\\% to 74\.8\\%, demonstrating that fully open\-weight RTL agents are viable\.
-
-## Learning Latency\-Aware Orchestration for Multi\-Agent Systems
-
-**Authors:** Xi Shi; Mengxin Zheng; Qian Lou
-
-**ID:** 150759\-\-2 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 150759
-
-[Paper](<https://openreview.net/forum?id=fbWOBQEle5>) | [PDF](<https://openreview.net/pdf?id=fbWOBQEle5>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150759>)
-
-_Abstract unavailable from the accessible public sources._
-
 ## C2G\-BENCH: A Cyber\-Physical Evaluation Benchmark for Hierarchical Reinforcement Learning in Grid\-Interactive Hyperscale Data Centers
 
 **Authors:** Vineet Gundecha; Sahand Ghorbanpour; Sifat Abdullah; Mahasweta Chakraborti; Damien Fay; Avisek Naug; Sergey Serebryakov; Ricardo Luna Gutierrez; Soumyendu Sarkar
 
-**ID:** 139076\-\-2 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 139076
+**ID:** 139076 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
 [Paper](<https://openreview.net/forum?id=mWywbjkaJ4>) | [PDF](<https://openreview.net/pdf?id=mWywbjkaJ4>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139076>)
 
 The rapid growth of generative AI is reshaping the energy footprint of modern computing infrastructure\. Hyperscale AI data centers now operate at power levels comparable to large industrial facilities, creating new challenges for grid reliability, energy procurement, and real time demand flexibility\. At the same time, their large controllable loads, cooling systems, and on site storage make them potential participants in grid services such as frequency regulation\. However, existing evaluation environments do not capture the coupled decision making required for grid interactive operation\. We introduce C2G\-BENCH, a cyber\-physical benchmark for hierarchical reinforcement learning in hyperscale data centers\. C2G\-BENCH simulates a real\-world scenario, where a 250 MW\-class hyperscale data center participates in grid frequency regulation while serving realistic AI workload demand under weather\-driven ambient conditions\. The benchmark explicitly links 15\-minute market level orchestration with 5\-second physical control, enabling agents to jointly reason over regulation commitments, workload flexibility, cooling, battery dispatch, and facility safety\. C2G\-BENCH achieves this through two coupled Gymnasium environments: C2GMacroEnv, where a high level controller bids into the regulation market, and C2GFastEnv, where a low level controller actuates the Dynamic Voltage and Frequency Scaling \(DVFS\), Coolant Distribution Unit \(CDU\) pump speed, HVAC effort, and Battery dispatch \(BESS\)\. The simulator models a 250 MW class two zone facility using seven modular physics engines covering workload, thermal, electrical, battery, grid signal, weather, and market dynamics, driven by real workload and weather traces\. We benchmark a family of rule\-based, LLM\-based &amp; RL\-based controllers for both the macro and fast environments, and evaluate them on four stress\-test environments in multiple grid markets\. Baseline results show that active low level control substantially improves tracking quality: a rule\-based macro controller paired with a RL\-based low level controller reduces the tracking RMSE from 2,737 kW to 229 kW compared with a macro only configuration, while maintaining full throughput and zero thermal violations\. These results demonstrate that C2G\-BENCH exposes meaningful cross layer tradeoffs and provides a reusable benchmark for studying safe, hierarchical control of grid interactive AI data centers\.
 
-## LLM\-Based Multi\-Agent Blackboard System for Information Discovery in Data Science
+## The Reflexivity Threshold: A Phase Transition for Multi\-Agent Performative Prediction
 
-**Authors:** Alireza Salemi; Mihir Parmar; Palash Goyal; Yiwen Song; Jinsung Yoon; Hamed Zamani; Tomas Pfister; Hamid Palangi
+**Authors:** Ahmed Mahrous; Roberto Di Pietro
 
-**ID:** 151426 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+**ID:** 153628 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=ao3zijumY7>) | [PDF](<https://openreview.net/pdf?id=ao3zijumY7>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151426>)
+[Paper](<https://openreview.net/forum?id=JykL1GuF6G>) | [PDF](<https://openreview.net/pdf?id=JykL1GuF6G>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153628>)
 
-Advances in large language models \(LLMs\) have created new opportunities in data science, but their deployment is often limited by the challenge of finding relevant data in large data lakes\. Existing methods struggle with this: both single\- and multi\-agent systems are quickly overwhelmed by large, heterogeneous files, and master–slave multi\-agent systems rely on a rigid central controller that requires precise knowledge of each sub\-agent’s capabilities, which is not possible in large\-scale settings where the main agent lacks full observability over sub\-agents’ knowledge and competencies\. We propose a novel multi\-agent paradigm inspired by the blackboard architecture for traditional AI models\. In our framework, a central agent posts requests to a shared blackboard, and autonomous subordinate agents\-\-either responsible for a partition of the data lake or retrieval from web\-\-volunteer to respond based on their capabilities\. This design improves scalability and flexibility by removing the need for a central coordinator to know each agent’s expertise or internal knowledge\. We evaluate the approach on three benchmarks that require data discovery: KramaBench and modified versions of DSBench and DA\-Code\. Results show that the blackboard architecture substantially outperforms strong baselines, achieving 13%–57% relative improvements in end\-to\-end success and up to a 9% relative gain in data discovery F1 over the best baseline\.
+Many learning systems are performative: once deployed, their predictions change the data distribution on which future models are trained\. In multi\-agent settings, this feedback is routed through a network of interacting learners, so stability depends not only on the strength of performativity but also on who affects whom\. We study repeated retraining in multi\-agent performative prediction and identify a spectral threshold, derived from primitive sensitivity and curvature parameters, that separates stable learning guarantees from worst\-case learning obstruction\. Prior work often collapses cross\-agent feedback into a scalar contraction constant, missing this network structure\. We instead introduce the reflexivity matrix $\\Gamma$, which records how strongly one agent's deployment can move another agent's best response, defined from per\-agent gradient sensitivities and curvature parameters\. The threshold occurs when the spectral radius of this matrix crosses one\. Below the threshold, repeated retraining converges geometrically to a unique performatively stable equilibrium, with cumulative excess loss bounded uniformly in the time horizon\. Above the threshold, we construct supercritical instances in which decentralized learning provably fails: every local\-information learner incurs cumulative excess loss that grows linearly in the horizon\. Together, these results characterize this threshold behavior through upper and lower bounds and recover the single\-agent scalar threshold from prior work as a special case\.
 
-## Robust Instruction Compliance in Cooperative Multi\-Agent Reinforcement Learning
+## COOP$^2$: Defining, Observing, and Repairing Cooperation in LLM Multi\-Agent Systems
 
-**Authors:** Wo Wei Lin; Ethan Rathbun; Enrico Marchesini; Xiang Zhi Tan
+**Authors:** Hanqing Yang; Narjes Nourzad; Shiyu Chen; Marie Siew; Jingdi Chen; Carlee Joe\-Wong
 
-**ID:** 148746 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+**ID:** 139333 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=vMEXVo6MCM>) | [PDF](<https://openreview.net/pdf?id=vMEXVo6MCM>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148746>)
+[Paper](<https://openreview.net/forum?id=WWrTVADZAi>) | [PDF](<https://openreview.net/pdf?id=WWrTVADZAi>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139333>)
 
-Real\-world multi\-agent reinforcement learning \(MARL\) systems must operate autonomously while adapting to natural language instructions provided by humans\. These instructions arrive unpredictably, interrupt ongoing actions, and may conflict with long\-horizon objectives under partial observability\. Recent vision\-language models enable instruction following, but are computationally expensive and limited to single\-agent settings\. Conversely, MARL can handle long\-horizon coordination with macro\-actions, but assumes uninterrupted execution\. This work introduces macro\-action value cancellation for instruction compliance \(MAVIC\) to enable interruption\-aware MARL by bootstrapping the value of ongoing macro\-actions upon receiving instructions\. Agents can thus decouple task objective optimization from instruction\-driven overrides within a unified policy and re\-plan without destabilizing the underlying learning process\. MAVIC integrates with standard actor\-critic methods and achieves high instruction compliance while preserving base task performance across increasingly complex macro\-action benchmarks\.
+Many complex tasks require extended effort, diverse capabilities, or coordinated actions beyond what a single agent can provide\.  However, simply adding more agents does not guarantee better performance, as effective cooperation depends on how agents interact with each other and with task structure to satisfy evolving constraints over time\.  This challenge is amplified for LLM\-based multi\-agent systems \(LLM\-MAS\): plans, messages, and revisions occur in natural language, whereas task progress depends on grounded environment actions\.  Current evaluations mostly treat cooperation as an implicit ingredient of final task success, leaving both cooperation and the effect of multi\-agent interaction on task dynamics difficult to study\.  We introduce COOP$^2$, an evaluation framework that grounds high\-level agent cooperation dynamics in LLM\-MAS within task progress in the environment\. COOP$^2$ then defines cooperative tasks with verifiable cooperative requirements, allowing us to analyze how cooperation unfolds over time with respect to task progress, as well as where and why cooperation breaks down\. Building on this framework, we develop COOP$^2$\-Repair, which predicts constraint failures from group plans and opens targeted repair channels for guided revisions\. Across two environments and three communication structures, COOP$^2$\-Repair improves task success and constraint satisfaction while exposing the additional decision overhead and communication load required for repair\.
 
 ## Rethinking Credit Assignment in Cooperative MARL via Interventional Reward Response
 
@@ -602,75 +296,45 @@ Real\-world multi\-agent reinforcement learning \(MARL\) systems must operate au
 
 Credit assignment remains a central challenge in cooperative multi\-agent reinforcement learning \(MARL\), especially under partial observability, where individual policy updates may not accurately reflect each agent’s actual contribution to team outcomes\. While policy\-based methods such as MAPPO and IPPO provide strong optimization frameworks, their updates are typically derived from global rewards and observational value surrogates, without explicitly defining agent\-specific credit\. Misaligned credit signals can mislead individual policy improvement, resulting in inefficient coordination and weaker team performance\. We address this challenge by formulating agent\-level credit as an interventional reward response, using Proximal Causal Inference \(PCI\) to identify credit from observable proxies via an outcome bridge function\. Building on this identification strategy, we design a practical credit\-aligned update signal and integrate it into policy gradient methods\. Empirical evaluations on diagnostic and benchmark tasks demonstrate that the proposed credit signal improves policy learning under partial observability, highlighting proximal identification as a promising foundation for designing credit\-aware policy updates in cooperative MARL\. To the best of our knowledge, this work presents the first PCI\-based solution for online multi\-agent cooperation\.
 
-## To trust or not to trust: Attention\-based Trust Management for LLM Multi\-Agent Systems
+## AgentGrad: Intervention\-guided Prompt Optimization for Multi Agent Systems
 
-**Authors:** Pengfei He; Zhenwei Dai; Xianfeng Tang; Yue XING; Hui Liu; Jingying Zeng; Qiankun Peng; Shrivats Agrawal; Samarth Varshney; Suhang Wang; Jiliang Tang; Qi He
+**Authors:** Jaewon Chu; jinwoo seo; Jaewon Cho; Jeehye Na; Yunyang Xiong; Youngdae Kim; Hyunwoo J\. Kim
 
-**ID:** 149022 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+**ID:** 153633 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=tRFYHQFSH4>) | [PDF](<https://openreview.net/pdf?id=tRFYHQFSH4>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149022>)
+[Paper](<https://openreview.net/forum?id=JxLeRbqs0Y>) | [PDF](<https://openreview.net/pdf?id=JxLeRbqs0Y>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153633>)
 
-Large Language Model\-based Multi\-Agent Systems \(LLM\-MAS\) have demonstrated strong capabilities in solving complex tasks but remain vulnerable when agents receive unreliable messages\. This vulnerability stems from a fundamental gap: LLM agents treat all incoming messages equally without evaluating their trustworthiness\. While some existing studies approach trustworthiness, they focus on a single type of harmfulness rather than analyze it in a holistic approach from multiple trustworthiness perspectives\. We address this gap by proposing a comprehensive definition of trustworthiness inspired by human communication theory \\citep\{grice1975logic\}\. Our definition identifies six orthogonal trust dimensions that provide interpretable measures of trustworthiness\. Building on this definition, we introduce the Attention Trust Score \(A‑Trust\), a lightweight, attention‑based method for evaluating the trustworthiness of messages\. We then develop a principled trust management system \(TMS\) for LLM‑MAS that supports both message‑level and agent‑level trust assessments\. Experiments across diverse multi‑agent settings and tasks demonstrate that our TMS significantly improves robustness against malicious inputs\.
+Large language model \(LLM\)\-based multi\-agent systems \(MAS\) achieve strong performance by employing specialized multiple agents, yet their performance depends on the prompt design of each agent\. For MAS prompt optimization, textual gradient methods that guide prompt updates using natural\-language feedback have emerged as a leading paradigm\. In this paper, we identify limitations in two stages of existing textual gradient approaches: gradient extraction and gradient aggregation\. In gradient extraction, previous works select the target prompt without verifying that it is responsible for the failure, and derive the gradient from the system\-level final output rather than the agent\-level intermediate output\. In gradient aggregation, individual gradients are randomly grouped and concatenated, often mixing unrelated failure modes and producing prompts that fail to generalize\. To address these limitations, we propose \\textbf\{AgentGrad\}, a prompt optimization framework for multi\-agent systems based on sequential intervention and semantic textual gradient abstraction\. For each failure, sequential intervention modifies the behavior of one agent at a time to identify the target agent whose modification resolves the failure\. The modified output of the target agent then serves as agent\-level supervision for extracting a fine\-grained gradient\. Semantic textual gradient abstraction clusters semantically similar gradients to prevent mixing unrelated failure modes, and abstracts each cluster into a generalized gradient that captures the shared corrective pattern\. Experimental results show that AgentGrad achieves state\-of\-the\-art performance across five MAS benchmarks and reduces wall\-clock optimization time by $2\.5\\times$ on average compared to the next\-fastest baseline\.
 
-## Integrating Strengths of Different Multi\-Agent Workflows via Step\-Aware Hybrid Topology Planning
+## One Step is Enough: Multi\-Agent Reinforcement Learning Based on One\-Step Policy Optimization for Order Dispatch on Ride\-Sharing Platforms
 
-**Authors:** Jingxuan Yu; Ju Jia; Yiqian Chen; Yuchong Chen; Cong Wu; Di Wu; Siqi Ma; Jie Gui
+**Authors:** Zijian Zhao; Sen Li
 
-**ID:** 153499 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+**ID:** 151407 | **Topic source:** official | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=KvZcSEq1b8>) | [PDF](<https://openreview.net/pdf?id=KvZcSEq1b8>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153499>)
+[Paper](<https://openreview.net/forum?id=atiMeBMyc1>) | [PDF](<https://openreview.net/pdf?id=atiMeBMyc1>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151407>)
 
-Large language model \(LLM\)\-driven agents are proposed for a wide range of applications\. As scenarios become increasingly composite, a graph\-structured multi\-agent system \(MAS\) offers a promising solution due to the orchestration of various skills\. To architect a reasonable underlying workflow, recent advances mostly investigate two structures: sequential topology and decentralized topology\. The former constrains the structure into a directed acyclic graph for multi\-step executions but lacks sufficient scalability, while the latter leverages node\-wise subgraphs for knowledge aggregation with synchronous parallelization but lacks long\-term planning\. Therefore, our key insight is that their strengths are mutually complementary\. Driven by this motivation, we introduce step\-aware hybrid topology for a MAS, where sequential connections support inter\-step ordered planning and decentralized connections promote intra\-step perspective integration\. Concretely, to effectively coordinate different structural components, we clarify the corresponding topological definition and the protocols for step\-wise serialization and parallelization\. Subsequently, to dynamically refine desired structures, we introduce the parameterized distribution of a hybrid topology, which is initialized by LLM\-driven graph planning\. Eventually, to further reduce token consumption and time complexity, we supplement the topological density and length normalization for end\-to\-end learning\. Extensive experiments demonstrate that the hybrid topology outperforms single\-form topology in 90\.4\\% of tasks, our agentic initialization improves learning in 88\.8\\% of scenarios, proposed normalizations reduce token consumption by 20\\%$\\sim$30\\% and time consumption by 7\\%$\\sim$13\\% with a slight utility fluctuation\. The code is available at https://anonymous\.4open\.science/r/HTAS\-D107\.
+Order dispatch is a critical task in ride\-sharing systems with Autonomous Vehicles \(AVs\), directly influencing operational efficiency and profitability\. While Multi\-Agent Reinforcement Learning \(MARL\) offers a scalable paradigm by decomposing the massive state\-action space, existing methods are heavily reliant on accurate value function estimation\. In large\-scale, highly stochastic urban environments, such estimation is notoriously prone to bias and instability, severely limiting training efficiency and policy quality\. To overcome this limitation, we propose two novel policy optimization methods that completely bypass the need for critic networks\. First, we establish a formal connection between the homogeneity of AV fleets and the short\-memory mixing property of the transportation network, proving that agent value functions converge to a common time\-varying baseline up to a negligible residual\. Leveraging this insight, we introduce Single\-Trajectory Group Relative Policy Optimization \(ST\-GRPO\), an adaptation of Large Language Models \(LLMs\) post\-training techniques to multi\-agent trajectories, which replaces the traditional value baseline with the fleet\-wide average reward\-to\-go\. Inspired by this reduction, we further derive One\-Step Policy Optimization \(OSPO\), demonstrating that under the established structural priors, an optimal policy can be learned using only immediate, group\-normalized rewards—rendering long\-horizon bootstrapping unnecessary\. Experiments on real\-world ride\-hailing datasets from Manhattan and Queens demonstrate that both ST\-GRPO and OSPO achieve promising performance, particularly in reducing pickup times and increasing order service rates\. Remarkably, both methods operate efficiently using simple Multilayer Perceptron \(MLP\) networks with minimal GPU utilization, underscoring the practical impact of exploiting domain structure for scalable MARL\. Our code, trained models, and processed data are provided at the anonymous repository: https://anonymous\.4open\.science/r/OSPO\-2105 \.
 
-## AgentRoom: Concurrent Multi\-Agent Coding in a CRDT\-Backed Shared Workspace
+## The Illusion of Multi\-Agent Advantage
 
-**Authors:** Seonglae Cho; Donghyun Lee
+**Authors:** Prathyusha Jwalapuram; Hehai Lin; Chuyuan Li; Fangkai Jiao; Sudong Wang; Yifei Ming; Zixuan Ke; Chengwei Qin; Giuseppe Carenini; Shafiq Joty
 
-**ID:** 148882 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+**ID:** 139826 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=uTjkLPcoGn>) | [PDF](<https://openreview.net/pdf?id=uTjkLPcoGn>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148882>)
+[Paper](<https://openreview.net/forum?id=2TcjzzhWse>) | [PDF](<https://openreview.net/pdf?id=2TcjzzhWse>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139826>)
 
-Concurrent multi\-agent coding promises division of labor across modules, robustness through redundancy, and parallel exploration at the natural granularity of multi\-file projects\. Realtime collaborative editing protocols solve this coordination problem for human teams via Conflict\-free Replicated Data Types \(CRDTs\), but the LLMs underneath generate one token at a time and existing multi\-agent coding systems inherit this serial limit: they either sequence agents through phase handoffs or pool independent samples without coordination, and a single agent abandons up to 70% of hard tasks with a one\-file stub\-and\-exit\. AgentRoom is a realtime collaborative editing protocol for concurrent coding agents: a runtime layer exposing file\-level claim, status, and broadcast as MCP tools on top of a CRDT\-merged shared filesystem\. Across five frontier coding\-CLI models on four backend coding tasks, alongside Python DevBench and Rust\+axum cross\-language checks, AgentRoom ×2 suppresses Solo abandonment on the CLI\-stable models and tightens run\-to\-run variance\. Two matched\-compute contrasts isolate the cause: parallel\-merge vs AgentRoom shows a positive mean LLM\-judge contrast, and a bundle probe attributes the gain primarily to the MCP coordination layer rather than to parallelism or substrate convergence alone\. Coordination, not parallelism or CRDT\-merge, is the load\-bearing engineering\.
+Prevailing wisdom posits that Multi\-Agent Systems \(MAS\) are superior to Single\-Agent Systems \(SAS\), citing advantages like context protection, parallel processing and distributed decision\-making\. However, empirical support for this claim relies primarily on comparisons with SAS baselines using benchmarks that prioritize isolated reasoning tasks, which do not adequately assess these advantages\. Focusing on automatically generated MAS that are designed for enhanced generalizability over manually\-designed counterparts, we perform a rigorous, systematic evaluation against SAS, specifically Chain\-of\-Thought with Self\-Consistency \(CoT\-SC\)\. Across traditional reasoning datasets and tasks with interactive multi\-step workflows \(e\.g\., BrowseComp\-Plus\), we demonstrate that automatic MAS consistently underperform CoT\-SC despite being up to 10x more expensive\. To isolate these failures from limitations inherent to task structure, we introduce a diagnostic synthetic dataset tailored for MAS featuring explicit task decomposition, context separation and parallelization potential\. We show that expert\-architected MAS consistently outperforms automatically generated architectures in both raw performance and cost\-efficiency on this dataset, demonstrating that existing evaluation frameworks mask critical architectural gaps and inefficiencies of complex MAS by failing to account for the marginal utility of increased computational cost\. Critically, systematic deconstruction of the generated MAS architectures reveals that current automated design paradigms produce architectural bloat that prioritizes superficial complexity which does not translate into functional utility, exposing a fundamental misalignment with multi\-agent principles\.
 
-## AgentArk: Distilling Multi\-Agent Intelligence into a Single LLM Agent
+## DSBTR: A Diffusion Schrödinger Bridge Trajectory Refiner for Multi\-Agent Trajectory Prediction
 
-**Authors:** Yinyi Luo; Yiqiao Jin; Weichen Yu; Mengqi Zhang; Srijan Kumar; Xiaoxiao Li; Weijie Xu; Xin chen; Jindong Wang
+**Authors:** Yuxi Xue; Xiangzheng Zhou; Xiaobo Chen; Jianjun Qian; Jian Yang
 
-**ID:** 149790 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
+**ID:** 154766 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=nIWXTEWPSb>) | [PDF](<https://openreview.net/pdf?id=nIWXTEWPSb>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149790>)
+[Paper](<https://openreview.net/forum?id=B68WLZ0xU0>) | [PDF](<https://openreview.net/pdf?id=B68WLZ0xU0>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154766>)
 
-_Abstract unavailable from the accessible public sources._
-
-## NestRL: A Nested Training Regime for Mutual Adaptation in Human–AI Teaming
-
-**Authors:** Upasana Biswas; Durgesh Kalwar; Subbarao Kambhampati; Sarath Sreedharan
-
-**ID:** 151397 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=axj4SqAgPj>) | [PDF](<https://openreview.net/pdf?id=axj4SqAgPj>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151397>)
-
-_Abstract unavailable from the accessible public sources._
-
-## AgentForesight: Online Auditing for Early Failure Prediction in Multi\-Agent Systems
-
-**Authors:** Boxuan Zhang; Jianing Zhu; Zeru Shi; Dongfang Liu; Ruixiang Tang
-
-**ID:** 151949 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=Wdc59fvT3R>) | [PDF](<https://openreview.net/pdf?id=Wdc59fvT3R>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151949>)
-
-LLM\-based multi\-agent systems are increasingly deployed on long\-horizon tasks, but a single decisive error is often accepted by downstream agents and cascades into trajectory\-level failure\.  Existing work frames this as \\emph\{post\-hoc failure attribution\}, diagnosing the responsible agent and step after the trajectory has ended\. However, this paradigm forfeits any opportunity to intervene while trajectory is still unfolding\. In this work, we introduce AgentForesight, a framework that reframes this problem as online auditing: at each step of an unfolding trajectory, an auditor observes only the current prefix and must either continue the run or alarm at the earliest decisive error, without access to future steps\. To this end, we curate AFTraj\-2K, a corpus of agentic trajectories across Coding, Math, and Agentic domains, in which safe trajectories are retained under a strict curation pipeline and unsafe trajectories are annotated at the step of their decisive error via consensus among multiple LLM judges\. Built on that, we develop AgentForesight\-7B, a compact online auditor trained with a coarse\-to\-fine reinforcement learning recipe that first equips it with a risk\-anticipation prior at the failure boundary on adjacent safe/unsafe prefix pairs, then sharpens this prior into precise step\-level localization under a three\-axis reward jointly targeting the what, where, and who of an audit verdict\. Across AFTraj\-2K and an external Who\\&amp;When benchmark, AgentForesight\-7B outperforms leading proprietary models, including GPT\-4\.1 and DeepSeek\-V4\-Pro, achieving up to \+19\.9\\% performance gain and 3$\\times$ lower step localization error, opening the loop from post\-hoc failure detection to enabling deployment\-time intervention\.
-
-## KV\-PRM: Efficient Process Reward Modeling via KV\-Cache Transfer for Multi\-Agent Test\-Time Scaling
-
-**Authors:** Peng Kuang; Haibo Jin; Xiaoyu Han; Yanli Wang; Xiaopeng Yuan; Ye Yu; Kaidi Xu; Haohan Wang
-
-**ID:** 150635 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=gdMVW6Iny8>) | [PDF](<https://openreview.net/pdf?id=gdMVW6Iny8>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150635>)
-
-_Abstract unavailable from the accessible public sources._
+Multi\-agent trajectory prediction is crucial for ensuring autonomous driving safety\. Although diffusion models show great potential in trajectory refinement, existing diffusion\-based refiners suffer from severe exposure bias\. This bias stems from the distribution mismatch between the noisy training endpoint and the noise\-free inference starting point, which frequently causes negative optimization during the refinement process\. To resolve this issue, this paper proposes the Diffusion Schrödinger Bridge Trajectory Refiner \(DSBTR\)\. By introducing a tractable Schrödinger bridge with dual\-terminal constraints, DSBTR ensures that the forward evolution endpoint strictly degenerates into a deterministic and noise\-free coarse prediction prior\. This theoretical alignment eliminates the initial boundary error and constrains the reverse solving process to a strict residual approximation\. Based on the semi\-linear structure of DSBTR, we derive a tailored high\-order DPM\-Solver to accelerate the sampling process and meet autonomous driving application requirements\. Extensive experiments on the ETH/UCY and SDD benchmarks demonstrate that DSBTR serves as an effective plug\-and\-play module\. It consistently improves the prediction accuracy of various baseline architectures and successfully avoids negative optimization\.
 
 ## Semantic Residual: A Paired\-Oracle Decomposition of LLM Multi\-Agent Systems under Lossy Channels
 
@@ -696,21 +360,7 @@ Vision\-language models with extended reasoning succeed on complex problems, but
 
 **Authors:** Jiaao Wu; Xian Zhang; Hanzhang Liu; Sophia Zhang; Fan Yang; Yinpeng Dong
 
-**ID:** 150935\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 150935
-
-[Paper](<https://openreview.net/forum?id=eCAxMcFzTe>) | [PDF](<https://openreview.net/pdf?id=eCAxMcFzTe>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150935>)
-
-Frontier AI models and multi\-agent systems have led to significant improvements in mathematical reasoning\. However, for problems requiring extended, long\-horizon reasoning, existing systems continue to suffer from fundamental reliability issues: hallucination accumulation, memory fragmentation, and imbalanced reasoning\-tool trade\-offs\. We introduce \*\*STAR\-Math\*\*, a multi\-agent framework that systematically addresses these challenges through meta\-level supervision and structured Reasoner\-Verifier interaction\. STAR\-Math is structured as an orchestrated state machine with nested challenge\-step\-replan loops, governed by a reasoning\-free Python orchestrator that separates control from inference and bounds error propagation through trace\-back and re\-planning\. Our key innovation is a \*\*persistent Meta\-Strategist\*\* that maintains cross\-attempt memory and exercises meta\-level control by issuing high\-level strategic guidance or mandatory directives, so the system can escape unproductive loops rather than stagnate or over\-rely on tools\. STAR\-Math achieves state\-of\-the\-art results on all eight top\-tier competition benchmarks: AIME 2025\-2026, MathArena Apex Shortlist, MathArena Apex 2025, Putnam 2025, IMO 2025, HMMT February 2026, and USAMO 2026\. It obtains perfect scores on AIMEs, Putnam, and HMMT, and shows its largest margin on Apex 2025, scoring 93\.75% compared with 80\.21% by the strongest baseline GPT\-5\.5\. Ablation studies show that the gains arise from the framework's orchestration rather than from model\-level diversity since removing key components or substituting in mixed backbones consistently weakens performance\.
-
-## STAR\-Math: Multi\-Agent Mathematical Reasoning under Persistent Meta\-Strategic Supervision
-
-**Authors:** Jiaao Wu; Xian Zhang; Hanzhang Liu; Sophia Zhang; Fan Yang; Yinpeng Dong
-
-**ID:** 150935\-\-3 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 150935
+**ID:** 150935 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
 [Paper](<https://openreview.net/forum?id=eCAxMcFzTe>) | [PDF](<https://openreview.net/pdf?id=eCAxMcFzTe>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150935>)
 
@@ -720,73 +370,51 @@ Frontier AI models and multi\-agent systems have led to significant improvements
 
 **Authors:** Hao Wu; Shoucheng Song; Chang Yao; Huaiyu Wan; Youfang Lin; Kai Lv
 
-**ID:** 154678\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 154678
+**ID:** 154678 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
 [Paper](<https://openreview.net/forum?id=BqTbDi43uU>) | [PDF](<https://openreview.net/pdf?id=BqTbDi43uU>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154678>)
 
 Multi\-Agent Debate \(MAD\) improves the reasoning performance of Large Language Models \(LLMs\) through multi\-round interaction\. However, LLMs in MAD are highly susceptible to blind conformity\. Existing individual evaluation methods, typically based on confidence or perplexity, fail to reflect the correctness of reasoning and may even exacerbate blind conformity\. To address this, we shift the perspective from individual evaluation to group interaction\. We define mutual referencing among LLMs as \\textbf\{Debate Relationships\} and recognize that regulating these relationships is the key to mitigating blind conformity\. In this paper, we propose a novel framework for \\textbf\{D\}ynamically r\\textbf\{E\}gulating deb\\textbf\{A\}te \\textbf\{R\}elationships \(DEAR\) from the group perspective\. At first, DEAR quantifies consensus and divergence as \\textit\{group evidence\} to capture the debate state\. Then, DEAR operates through three stages: 1\) What: perceiving group consultation tendency and uncertainty; 2\) Who: introducing a Selection RL\-Agent to dynamically select reference peers; and 3\) How: adopting a Behavior RL\-Agent to adaptively adjust generation behaviors\.
 
-## Towards High Semantic Fidelity: Hyperdimensional Symbolic Messages in Multi\-Agent Communication
-
-**Authors:** Shoucheng Song; Youfang Lin; Chang Yao; Hao Wu; Sheng Han; Kai Lv
-
-**ID:** 153552\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 153552
-
-[Paper](<https://openreview.net/forum?id=KXTbANIGZW>) | [PDF](<https://openreview.net/pdf?id=KXTbANIGZW>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153552>)
-
-Semantic fidelity is essential for multi\-agent communication under non\-ideal channels, comprising transmission fidelity and conversion fidelity\. Yet existing numerical and neural message formats cannot simultaneously achieve both\.  To address this, we propose a novel message format\-\\textbf\{H\}yperdimensional \\textbf\{S\}ymbolic \\textbf\{M\}essages \(HSM\), and its corresponding communication framework \\textbf\{Herm\}\.  For transmission fidelity, Herm suppresses semantic entanglement via an entity\-attribute\-value structured encoding pipeline\. For conversion fidelity, Herm first leverages a receiver\-centric ego\-binding mechanism to align semantics\. Then, a similarity\-aware dual\-branch fusion module is proposed to prevent critical semantic dilution\. To realize explicit message\-semantic conversion,  we devise an iterative decoding scheme via algebraic inverse operation\. Experiments exhibit that Herm outperforms baselines across various noisy scenarios while maintaining superior structural readability\.
-
 ## Mental\-Models for Multi\-Agent Systems
 
 **Authors:** Hanan Gani; Lulu \(Siwen\) Shao; Manmohan Chandraker
 
-**ID:** 153908\-\-2 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 153908
+**ID:** 153908 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
 [Paper](<https://openreview.net/forum?id=HoG47ROacO>) | [PDF](<https://openreview.net/pdf?id=HoG47ROacO>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153908>)
 
 Large foundation models have accelerated progress toward general\-purpose agents that interact with humans and other agents through language and multimodal signals\. However, robust multi\-agent decision\-making requires reasoning about what other agents know, intend, and are likely to do under partial observability\. Current agentic systems often operate through prompt design, memory, or end\-to\-end behavioral shaping, but typically do not learn an explicit partner\-state representation that can be reused as a decision variable across tasks\. We introduce mental\-model\-enabled agents, a framework that equips an agent with a latent mental model of its counterpart, allowing it to infer hidden beliefs, intentions, and likely reactions from the observed history and use these inferences to guide action selection\. Our method learns an amortized recursive Theory\-of\-Mind representation, with first\- and second\-order mental\-state structure, jointly with a belief\-conditioned reward model that evaluates candidate actions relative to the inferred partner state\. A policy is then learned under this belief\-aware signal, yielding an agent that can act independently at inference time while retaining the benefits of explicit partner modeling\. We evaluate the same framework on both language\-only and multimodal benchmarks\. Across these settings, explicit mental\-state modeling consistently improves interaction quality and Theory\-of\-Mind performance over base agentic systems, showing that structured partner modeling is a useful inductive bias for general multi\-agent systems\.
 
-## Market\-Based Runtime Resource Allocation for LLM Multi\-Agent Systems
-
-**Authors:** Yixue Huang; Mingxin Wang; Hao Li; Hao Jiang
-
-**ID:** 155373\-\-2 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 155373
-
-[Paper](<https://openreview.net/forum?id=67jpPq2Bsk>) | [PDF](<https://openreview.net/pdf?id=67jpPq2Bsk>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155373>)
-
-LLM multi\-agent systems rely on division of labor to solve complex tasks, but their execution can be blocked by contention for shared resources such as GPU test environments, CPU execution slots, and exclusive tool sessions\. Existing workflows, task allocation methods, and runtime schedulers usually arbitrate such access indirectly through workflow position, dependency structure, queue state, or resource metrics\. These criteria do not fully capture the value of satisfying a specific request, because request value is distributed across agents' local execution states and changes with tests, retries, and downstream results\. We propose a market\-based protocol for access arbitration in LLM multi\-agent systems\. Each agent converts its current plan and local execution state into a structured, budget\-constrained bid that signals relative urgency\. For asynchronous requests, an online clearing method based on optimal stopping decides when to close the clearing window, allocate access rights, settle payments, and track resource occupation until release\. Across three contention scenarios, Market reduces makespan by 5\.2\\%, 2\.5\\%, and 4\.9\\% relative to the strongest primary baselines, while improving task score by about two percentage points\.
-
-## Risk\-Calibrated Context Selection for Healthcare Multi\-Agent Handoff
-
-**Authors:** Manu Agrawal; Sumit Mukherjee
-
-**ID:** 154212\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 154212
-
-[Paper](<https://openreview.net/forum?id=FLlWDrOo4c>) | [PDF](<https://openreview.net/pdf?id=FLlWDrOo4c>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154212>)
-
-Specialized agents collaborate by transferring memory: retrieved records, generated summaries, tool traces, and long\-running state\. In regulated domains this is a governance problem, not a retrieval problem: the receiver's task matters, but so does whether it was authorized to receive each item and whether the handoff exposed more than necessary\. We formalize minimum\-necessary context selection as a constrained submodular subset\-selection problem with an additive exposure cost and a distributional task\-success risk bound\. Our algorithm, ScopeSelect, first hard\-masks items whose layer or scope the receiver contract does not admit, then runs a cost\-benefit greedy selector against a monotone submodular utility, attaining a $\\\\frac\{1\}\{2\}\(1\-1/e\)$ approximation bound under a budget, and finally wraps threshold selection in Conformal Risk Control, giving a finite\-sample distribution\-free guarantee $\\\\mathbb\{E\}\[L\(S\_\{\\\\hat\{\\\\gamma\}\}\)\] \\\\le \\\\alpha$ on exchangeable calibration data\. We evaluate on HealthHandoff\-Bench, a synthetic benchmark with 21,600 healthcare\-agent handoff tasks across four workflows, and Synthea\-HH, a realism tier ingested from 340 Synthea\-generated FHIR bundles\. A three\-source blinded label audit compares benchmark labels, model\-generated labels, and clinical\-informatics expert review, with high agreement for sensitivity labels and policy\-boundary disagreements for necessity and authorization\. Against authorized TF\-IDF, embedding retrieval, a cross\-encoder reranker, and a calibrated LLM\-as\-selector, ScopeSelect is the only method meeting $\\\\alpha = 0\.15$ at competitive task success\. The hard\-mask safety property holds under 30% label noise, 100 adversarial attacks, and receiver\-role shift; a live\-LLM run with Claude Sonnet 4\.5 exhibits a calibration\-transfer gap that motivates per\-workflow recalibration\. We release the benchmark, Synthea\-HH pipeline, CRC calibration harness, and a signed\-handoff prototype\.
-
 ## From Chats to Markets: AgenticPay for LLM\-Powered Negotiation in Multi\-Agent Commerce
 
 **Authors:** Xianyang Liu; Shangding Gu; Fan Xu; Manxi Wu; Boyi Li; Jun Wang; Costas J Spanos; Dawn Song
 
-**ID:** 154687\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 154687
+**ID:** 154687 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
 [Paper](<https://openreview.net/forum?id=BjCh5p36da>) | [PDF](<https://openreview.net/pdf?id=BjCh5p36da>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154687>)
 
 Agents based on large language models are increasingly expected to autonomously handle negotiation and transactions\. However, existing benchmarks predominantly focus on text\-only, bilateral, zero\-sum price haggling, failing to capture the complexity of real\-world commerce\. To address this gap, we introduce Agenticpay, a unified framework and benchmark for evaluating how well multimodal agents reach high\-welfare, multi\-dimensional agreements in realistic markets\. Built around four core components \( Environments, Tasks, Agents, and Metrics\), Agenticpay comprises 160 multimodal tasks spanning 4 real\-world business scenarios \(E\-commerce, Food Delivery, Ride\-hailing, and Apartment Rental\) and 8 market topologies, scaling from 1\-to\-1 bargaining to many\-to\-many \(N\-to\-N\) competitive markets\. Beyond price haggling, agents must read product images, infer each opponent's hidden preferences, and trade off multiple binding contract terms \(e\.g\., price, lease duration, return policy, delivery speed\)\. Agents communicate through multi\-round natural\-language dialogue, with each turn proposing or revising a full contract, and outcomes are scored by a utility\-based framework that rewards agreements maximizing joint welfare\. Evaluations on state\-of\-the\-art proprietary \(GPT\-5\.4, Claude Sonnet 4\.6, Gemini 3\.1 Pro Preview\) and open\-weight \(Qwen3\-VL\-32B\-Instruct, InternVL3\-38B\) multimodal models reveal substantial gaps in non\-zero\-sum value creation and market reasoning: even the strongest agent \(Gemini 3\.1 Pro Preview\) reaches a GlobalScore of only 42\.3/100, and performance consistently degrades as markets scale from bilateral to multi\-sided, with the average GlobalScore dropping by 5\.7 points and open\-weight models suffering the largest declines \(up to 11\.5 points\)\. These findings establish Agenticpay as a foundational testbed for multimodal agentic commerce\. Code and dataset are available at: https://anonymous\.4open\.science/r/AgenticPay\-4BBB/README\.md\.
+
+## MASTARS: Multi\-Agent Sequential Trajectory Augmentation with Return\-Conditioned Subgoals
+
+**Authors:** Jiwon Jeon; Myungsik Cho; Woojun Kim; Seongmin Kim; Woohyeon Byeon; Seungyul Han; Youngchul Sung
+
+**ID:** 155062 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=8kbDxSuHS6>) | [PDF](<https://openreview.net/pdf?id=8kbDxSuHS6>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155062>)
+
+The performance of offline Multi\-Agent Reinforcement Learning \(MARL\) is limited by the quality of the fixed offline dataset, motivating trajectory augmentation\. However, augmenting multi\-agent trajectories presents a fundamental challenge of the diversity–coordination  trade\-off: independent generation improves diversity but lacks coordination, while joint generation induces coordination but lacks diversity, reproducing the training distribution\. To address this challenge in multi\-agent data augmentation, we introduce MASTARS, a novel diffusion\-based framework that generates multi\-agent trajectories sequentially across agents while enforcing cross\-agent consistent coordination via the method of inpainting\. MASTARS produces trajectories that are diverse, coordinated and globally coherent\. Experiments on various benchmarks such as MPE, SMAC, and SMAC\-v2 demonstrate significant performance gains across multiple offline MARL methods\.
+
+## AGiR: Mitigating Gift Over\-Reliance in Mixed\-Motive Games
+
+**Authors:** Woohyeon Byeon; Seongmin Kim; Jiwon Jeon; Woojun Kim; Youngchul Sung
+
+**ID:** 154175 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=Fhpafr7nn7>) | [PDF](<https://openreview.net/pdf?id=Fhpafr7nn7>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154175>)
+
+In this paper, we consider mixed\-motive games \(MMGs\) which model various real\-world multi\-agent scenarios where self\-interested agents must both cooperate and compete\.  We identify an issue with existing gifting methods, where agents become overly dependent on incoming gifts and fail to learn reward\-yielding behaviors, a phenomenon we call \*gift over\-reliance\*\. To address this, we propose a refusal\-augmented gifting framework that balances cooperation and competition in MMGs\. Our approach introduces an adaptive refusal mechanism that allows agents to selectively reject a portion of received gifts, thereby mitigating gift over\-reliance and preventing the agents from being exploited by other agents\. This mechanism is gifting\-method\-agnostic, serving as a plug\-in for existing schemes while enabling decentralized learning\. We demonstrate that across diverse MMG environments and gifting schemes, our mechanism consistently reduces gift over\-reliance, prevents lock\-in to sacrificing policies, and improves $\\alpha$\-fairness without necessitating major changes to existing training pipelines\.
 
 ## Reward Modeling for Multi\-Agent Orchestration
 
@@ -798,115 +426,75 @@ Agents based on large language models are increasingly expected to autonomously 
 
 Multi\-Agent Systems \(MAS\) built on Large Language Models \(LLMs\) require effective orchestration to coordinate specialized agents, yet training such orchestrators is hindered by limited supervision and high computational cost\. We propose \*\*Orch\*\*estration \*\*R\*\*eward \*\*M\*\*odeling \(\*\*Orch\-RM\*\*\), a self\-supervised framework for evaluating orchestration quality without human annotations\. Orch\-RM leverages intermediate artifacts from multi\-agent executions to construct win\-lose pairs for Bradley\-Terry reward model training\. Unlike existing MAS test\-time scaling and orchestrator training frameworks that rely on costly sub\-agent rollouts, Orch\-RM operates directly at the orchestration level, enabling efficient and high\-performing reward\-guided orchestrator training and MAS test\-time scaling\. As shown in Figure 1, Orch\-RM improves training efficiency by up to 10$\\times$ in token usage while improving MAS test\-time scaling performance by up to 8\\% in accuracy\. These gains consistently transfer across multiple domains, including mathematical reasoning, web\-based question answering, and multi\-hop reasoning, demonstrating orchestration\-level reward modeling as a scalable direction for robust multi\-agent orchestration\.  Data, code, and trained models will be released upon publication\.
 
-## Sequential Probabilistic Uncertainty Estimation for Parallel Multi\-Agent Reasoning Systems
-
-**Authors:** Tunyu Zhang; Zihao Zhao; Yusong Zhao; Haizhou Shi; Zhuohang Li; Haoxian Chen; Hao Wang; Dimitris Metaxas
-
-**ID:** 153160 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=NRg4W8EzfT>) | [PDF](<https://openreview.net/pdf?id=NRg4W8EzfT>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153160>)
-
-LLM\-based multi\-agent systems \(MAS\) have attracted growing attention for improving reasoning through interaction among multiple agents\. In this work, we focus on parallel multi\-agent reasoning systems, where several agents solve the same problem over multiple rounds and aggregate their outputs into a final answer\. Despite their strong reasoning performance, uncertainty estimation for such systems remains underexplored: the reliability of a MAS depends not only on individual generations, but also on how agents interact and evolve across rounds\. We propose SPI \(Sequential Probabilistic Inference\), a lightweight, training\-free uncertainty estimator that formulates MAS uncertainty as sequential inference over a latent system\-level belief\. SPI aggregates round\-level agreement and generation\-uncertainty signals through a filtering\-style update\. Across five backbones, six benchmarks, and two MAS protocols, SPI improves misclassification detection, selective prediction, and calibration over a broad set of uncertainty estimation baselines, including standard log\-likelihood\-based methods and MAS\-specific estimators\.
-
-## Convergence Guarantees for Federated SARSA with Local Training and Heterogeneous Agents
-
-**Authors:** Paul Mangold; Eloïse Berthier; Eric Moulines
-
-**ID:** 155534 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=4sFTcukOxE>) | [PDF](<https://openreview.net/pdf?id=4sFTcukOxE>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155534>)
-
-We present a novel theoretical analysis of Federated SARSA \(FedSARSA\) with linear function approximation and local training\. We establish convergence guarantees for FedSARSA in the presence of heterogeneity, both in local transitions and rewards, providing the first sample and communication complexity bounds in this setting\. At the core of our analysis is a new, exact multi\-step error expansion for single\-agent SARSA, which is of independent interest\. Our analysis precisely quantifies the impact of heterogeneity, demonstrating the convergence of FedSARSA with multiple local updates\. Crucially, we show that FedSARSA achieves linear speed\-up with respect to the number of agents, up to higher\-order terms due to Markovian sampling\. Numerical experiments support our theoretical findings\.
-
 ## Exemplar2VQA: A Scalable Exemplar\-Driven Visual Question Answering Generation Framework via Multi\-Agent Coding
 
 **Authors:** Jiayu Ying; Qijian Tian; Ruijie Xu; Xinnan Zhu; Daoguo Dong; Jiachen Xu; Xin Tan
 
-**ID:** 150839 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
+**ID:** 150839 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
 [Paper](<https://openreview.net/forum?id=evkWoqTEUD>) | [PDF](<https://openreview.net/pdf?id=evkWoqTEUD>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150839>)
 
-_Abstract unavailable from the accessible public sources._
+Advancing spatial intelligence in Multimodal Large Language Models \(MLLMs\) is bottlenecked by the scarcity of complex, scalable 3D question\-answer \(QA\) data\. While manual annotation is labor\-intensive, directly utilizing LLMs to synthesize these QA pairs often fails due to their inherent deficiencies in spatial and geometric computation\. We introduce $\\textbf\{Exemplar2VQA\}$, a scalable exemplar\-driven visual question answering generation framework that rapidly synthesizes large\-scale spatial QA pairs in simulated environments via multi\-agent coding\. By equipping collaborative agents with a meticulously designed library of geometric utilities, Exemplar2VQA bypasses LLMs' spatial reasoning flaws through deterministic code execution\. Crucially, the framework exhibits remarkable versatility: taking diverse static object\-centric spatial query templates as exemplars, it seamlessly and autonomously scales them into massive, high\-fidelity synthetic datasets\. Fine\-tuning Qwen2\.5\-VL \(3B/7B\) exclusively on Exemplar2VQA\-generated synthetic indoor data yields significant performance improvements across various diverse benchmarks\. Furthermore, its effectiveness is not limited to in\-domain indoor datasets but also robustly extends to outdoor and mixed\-scene benchmarks\. These results establish Exemplar2VQA as a scalable and powerful paradigm for bridging the sim\-to\-real gap in Embodied AI\. The code will be available upon acceptance\.
 
 ## RADAR: Routing Agents via Difficulty\-Aware Recovery
 
 **Authors:** Haizhou Du; Jinze Zhao; Huaicheng Yan
 
-**ID:** 154283 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
+**ID:** 154283 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
 [Paper](<https://openreview.net/forum?id=Eyl3543VgD>) | [PDF](<https://openreview.net/pdf?id=Eyl3543VgD>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154283>)
 
-_Abstract unavailable from the accessible public sources._
-
-## Coordination Connectivity: Shared Initialization Shapes the Joint\-Policy Landscape in MARL
-
-**Authors:** Yixiang Fan; Zhiqiang Pu; Hao Ma; Dongmin Li; Weihao Zhang; Yinxing Dai; Shijie Zheng; Jingjing Huang
-
-**ID:** 154512 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=D2HpZYZ8aI>) | [PDF](<https://openreview.net/pdf?id=D2HpZYZ8aI>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154512>)
-
-Mode connectivity studies reveal that high\-performing neural networks are often connected by low\-loss paths in parameter space\. We investigate the analogue of this phenomenon in cooperative multi\-agent reinforcement learning \(MARL\), where a solution is not a single model but a team of decentralized policies\. We introduce coordination connectivity, a diagnostic evaluating whether linear interpolation between the actor parameters of two trained policy teams preserves high team return\. The resulting coordination barrier measures whether two successful teams are separated by a performance cliff along the joint\-policy path\. We evaluate this diagnostic on the StarCraft Multi\-Agent Challenge \(SMAC\) across five controlled training histories, isolating the effects of shared initialization, continued training, parameter decoupling, and HAPPO\-style separate\-actor specialization\. Across three SMAC maps and four seeds, policy teams derived from a shared MAPPO checkpoint exhibit near\-zero interpolation barriers, even after non\-shared specialization\. In contrast, interpolation paths involving independently trained HAPPO teams exhibit substantially larger barriers\. Mixed\-team assembly, single\-agent hot\-swap, clone\-all, role\-swap, and weight\-space probes further indicate that shared\-initialized agents specialize into distinct roles while remaining within a low\-barrier coordination component\. These results suggest that shared initialization implicitly structures the joint\-policy space of cooperative MARL, providing a mode\-connectivity\-inspired lens for analyzing coordination, specialization, and same\-source cross\-version team compatibility\.
-
-## Spend Only What You Need: Defect\-Aware Residual Coverage for Efficient Multi\-Agent Reasoning
-
-**Authors:** Maisha Maliha; Dean F Hougen
-
-**ID:** 151467 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=aP2jpM9pME>) | [PDF](<https://openreview.net/pdf?id=aP2jpM9pME>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151467>)
-
-Multi\-agent orchestration over large language models is increasingly used to improve reasoning accuracy, especially on problems that benefit from critique, verification, specialization, or consensus, but these gains often come with inference costs that are not explicitly controlled\. Many systems spend similar compute on straightforward queries and genuinely ambiguous or expert\-level ones\. Existing methods typically follow fixed collaboration protocols, compile task\-level workflows offline, route queries among models or collaboration modes, or use learned controllers whose state does not explicitly identify which reasoning defects remain unresolved\. As a result, they do not directly decide during inference whether the current multi\-agent trajectory still justifies another agent call\. We introduce Defect\-Aware Residual Coverage \(DARC\), a training\-free inference\-time controller for adaptive multi\-agent reasoning that represents the current trajectory using four residual defect dimensions: answer uncertainty, claim\-level contradiction, verification failure, and aspect under\-coverage\. DARC selects the next agent by maximizing cost\-normalized submodular marginal coverage over the remaining residuals\. Each candidate agent receives a role\-induced capability profile from frozen embeddings of its natural\-language role description, enabling DARC to operate without task\-specific supervision, learned routing parameters, or fine\-tuning\. Across five reasoning and multimodal suites, MMLU\-Pro, GPQA\-Diamond, LiveBench, MMMU\-Pro, and HLE, DARC achieves the strongest accuracy under the main shared heterogeneous six\-agent pool while using substantially fewer tokens and agent calls than recent workflow, adaptive orchestration, and cost\-aware routing baselines, with additional large\-pool experiments showing consistent scaling behavior\. It also outperforms the single\-call frontier reasoning models tested, showing that residual\-aware selective invocation can improve both answer quality and inference efficiency\.
+Multi\-agent systems \(MAS\) have emerged as a dominant paradigm where agent routing is a bottleneck for balancing performance and cost\. However, existing agent routing methods suffer from the prohibitive cost of exhaustive benchmark construction and the neglect of query complexity essential for mixed tasks\. To address this issue, we propose the RADAR \(Routing Agents via Difficulty\-Aware Recovery\) framework\. RADAR enables accurate decision\-making under limited evaluation cost through two complementary modules\. MatrixComp module employs structure\-aware matrix completion to recover global performance profiles from sparse observations\. Furthermore, DiffMatch module extracts reasoning meta\-features for fine\-grained alignment via a difficulty\-calibrated retrieval mechanism\. Extensive experiments demonstrate that RADAR maintains performance equal with state\-of\-the\-art baselines while reducing the cost of benchmark construction by at least 33%\.
 
 ## MASTA: A Feedback\-Scheduled Multi\-Agent System for End\-to\-End Tamarin Protocol Modeling and Analysis
 
 **Authors:** Yongkang Xiao; Qiyi Deng; Jing Chen; Min Shi; JU MA; Ruiying Du
 
-**ID:** 150586 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
+**ID:** 150586 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
 [Paper](<https://openreview.net/forum?id=h51B2FuWVX>) | [PDF](<https://openreview.net/pdf?id=h51B2FuWVX>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150586>)
 
-_Abstract unavailable from the accessible public sources._
+Tamarin\-based formal verification of security protocols requires expert\-authored multiset rewriting rules and temporal\-logic lemmas\. Translating a natural\-language protocol description into a complete formal model with an LLM is hard because syntactic, reachability, and property\-level errors compound across the multi\-step modeling process, and a single agent that both authors and self\-evaluates cannot reliably localize them\.  We present MASTA, a multi\-agent system that addresses these difficulties through three innovations\. First, an operational\-\-evaluative role decomposition assigns rule modeling to an Architect, property modeling to an Auditor, and pure dispatch to a dedicated Arbiter that holds no authoring duties\. Second, the Arbiter implements a Tamarin\-anchored scheduler that dispatches the next agent based on the latest verifier verdict and routes problem\-tagged fixes through a modification list, with a six\-class problem taxonomy and an LLM deduplication check preventing routing deadlock\. Third, we construct a benchmark of 10 protocols paired with 139 mutation variants and five fine\-grained metrics that jointly assess model correctness \($M\_1$\-\-$M\_3$\) and completeness \($M\_4$\-\-$M\_5$\)\.  On this benchmark MASTA on Qwen\-3\.5\-Plus improves over OpenCode on the same backbone by up to $\+0\.27$ on individual metrics and reaches the highest overall average, surpassing Codex \(GPT\-5\.5\) and Claude Code \(Opus\~4\.7\) despite using a weaker LLM\. Ablations confirm that removing the Arbiter collapses property and verification scores to near zero\.
 
 ## MAPLE: Latent Multi\-Agent Play for End\-to\-End Autonomous Driving
 
 **Authors:** Rajeev Yasarla; Deepti Hegde; Hsin\-Pai Cheng; Shizhong Han; Yunxiao Shi; MeysamSadeghi; Hanno Ackermann; Litian Liu; Pranav Desai; Fatih Porikli; Mohammad Ghavamzadeh; Herbert Cai
 
-**ID:** 156060 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
+**ID:** 156060 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
 
 [Paper](<https://openreview.net/forum?id=0mGiCU9L39>) | [PDF](<https://openreview.net/pdf?id=0mGiCU9L39>) | [Official poster](<https://neurips.cc/virtual/2026/poster/156060>)
 
-_Abstract unavailable from the accessible public sources._
+Vision\-language\-action \(VLA\) models are effective as end\-to\-end motion planners, but can be brittle when evaluated in closed\-loop settings due to being trained under traditional imitation learning framework\. Existing closed\-loop supervision approaches lack scalability and fail to completely model a reactive environment\. We propose MAPLE, a novel framework for reactive, multi\-agent rollout of a dynamic driving scenario in the latent space of the VLA model\. The ego vehicle and nearby traffic agents are independently controlled over multi\-step horizons, while being reactive to other agents in the scene, enabling closed\-loop training\. MAPLE consists of two training stages: \(1\) supervised fine‑tuning on the latent rollouts based on ground\-truth trajectories, followed by \(2\) reinforcement learning with global and agent‑specific rewards that encourage safety, progress, and interaction realism\. We further propose diversity rewards that encourage the model to generate planning behaviors that may not be present in logged driving data\. Notably, our closed\-loop training framework is scalable and does not require external simulators, which can be computationally expensive to run and have limited visual fidelity to the real\-world\. MAPLE achieves state\-of\-the\-art driving performance on Bench2Drive and demonstrates scalable, closed\-loop multi\-agent play for robust E2E autonomous driving systems\.
 
 ## Epistemic Social Learning: Latent Behavioral Structure under Endogenous Multi\-Agent Interaction
 
 **Authors:** Jainendra Shukla; Dhruv Jaiswal; Divyanshi Beniwal; Kiriti Kanjilal
 
-**ID:** 150541 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
+**ID:** 150541 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
 [Paper](<https://openreview.net/forum?id=hNvgA94KTi>) | [PDF](<https://openreview.net/pdf?id=hNvgA94KTi>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150541>)
 
-_Abstract unavailable from the accessible public sources._
+In many interactive settings, from social and institutional environments to multi\-agent systems, agents must infer latent behavioral structure from limited signals while their own actions shape the data they observe\. This endogeneity violates the stationary, exogenous assumptions underlying standard likelihood\-based methods, leading to failures in adaptation despite accurate clustering\. We propose \\emph\{Epistemic Social Learning\} \(ESL\), a two\-timescale framework that couples belief\-based inference with adaptive representation learning under endogenous interaction\. At a fast timescale, agents maintain Bayesian beliefs over shared behavioral prototypes\. At a slower timescale, prototypes are updated from belief\-weighted interaction data via the recursion $\\Theta\_\{m\+1\} = \\Theta\_m \+ \\gamma\_m \\widehat\{H\}\_m$, aligning learned representations with the interaction distributions induced by agent behavior\. We formalize ESL as a stochastic approximation process with controlled Markov noise and show that its dynamics track the differential inclusion $\\dot\{\\Theta\} \\in \\mathcal\{G\}\(\\Theta\)$, whose limit sets correspond to self\-consistent interaction regimes\. Across repeated games with behavioral shifts, ESL reduces post\-switch regret by $26\\%$ over strong baselines while improving decision\-relevant prediction\. These results reveal a fundamental gap between latent identification and adaptive performance under endogenous interaction\.
 
 ## Interaction Value Inference for Multi\-Agent Reinforcement Learning via a Hierarchical Agent\-Centric World Model
 
 **Authors:** Zhuoran Chen; Xuyang Lu; Zeyang Liu; Xinrui Yang; Mingyang Li; Long Qian; Xingyu Chen; Lipeng Wan; Xuguang Lan
 
-**ID:** 148672 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
+**ID:** 148672 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
 [Paper](<https://openreview.net/forum?id=vxZDvmWQyz>) | [PDF](<https://openreview.net/pdf?id=vxZDvmWQyz>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148672>)
 
-_Abstract unavailable from the accessible public sources._
+In non\-stationary multi\-agent settings, concurrent policy updates continually reshape inter\-agent coordination patterns\. In cooperative tasks, an agent’s current action value is closely tied to teammates’ current and future behaviors, making it important to infer how these behaviors evolve and how they influence local action\-value estimation\. However, existing methods often lack a value\-level representation that connects evolving teammate\-dependent interactions to local action\-value learning\. Firstly, we theoretically show that the individual utilities under Centralized Training with Decentralized Execution\(CTDE\) paradigm struggle to faithfully characterize coordination\-dependent action values, making it necessary to introduce a computable proxy for the missing coordination information\. Then we propose Hierarchical Inference Agent\-Centric World Model \(HIA\), a framework that incorporates role information into a Transformer\-based world model to predict future teammate interactions from each agent’s perspective\. The predicted teammate\-action rollouts are transformed into auxiliary interaction utilities and integrated into individual value estimates, enabling each agent to capture how teammates’ future actions modulate its current action value\. Experiments on StarCraft Multi\-Agent Challenge \(SMAC\) and SMACv2 show that HIA achieves superior cooperative performance over strong baselines\.
 
 ## SCHOLARPEER: A Multi\-Agent Framework for Automated Peer Review
 
 **Authors:** Palash Goyal; Mihir Parmar; Yiwen Song; Hamid Palangi; Tomas Pfister; Jinsung Yoon
 
-**ID:** 152167 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
+**ID:** 152167 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
 [Paper](<https://openreview.net/forum?id=V2lTeWPnft>) | [PDF](<https://openreview.net/pdf?id=V2lTeWPnft>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152167>)
 
-_Abstract unavailable from the accessible public sources._
+The exponential growth of machine learning submissions has strained the traditional peer review process, resulting in slow feedback loops for authors and an immense burden on reviewers to rigorously audit technical soundness and verify literature\. To address this, we introduce ScholarPeer, a multi\-agent framework designed to operationalize the rigorous auditing workflow of a senior researcher\. Rather than attempting to replace human judgment, ScholarPeer serves as a co\-scientist: acting as a mentor for rapid author iteration prior to submission, and as an active verification assistant that augments human reviewers\. The framework structurally decouples contextualization from critique by deploying a sub\-domain historian to synthesize the field's trajectory, a baseline scout to proactively hunt for omitted state\-of\-the\-art comparisons, and a multi\-aspect Q&amp;A engine that deeply audits technical soundness—scrutinizing internal logical consistency, experimental validity, and mathematical rigor—while cross\-referencing claims against top\-tier academic venues\. We comprehensively evaluate ScholarPeer on $\\sim$1,800 ICLR submissions spanning 2020 through 2025\. Our results show that ScholarPeer achieves significant win\-rates against state\-of\-the\-art fine\-tuned models and search\-augmented agentic baselines\.
 
 ## Seeing Beyond the Next Step: World\-Model\-Guided Human\-Like Navigation in Multi\-Agent Scenes
 
@@ -928,123 +516,205 @@ Selecting a next motion in a populated scene is not just a matter of avoiding wh
 
 Scaling multi\-agent systems driven by large language models is transitioning from lossy text\-based communication to continuous latent interaction\. However, existing latent interaction approaches relying on concatenation\-based Softmax cross\-attention suffer from an Attention Distraction Dilemma: due to the inherent anisotropy of latent spaces and the semantic misalignment induced by agent role heterogeneity, non\-linear Softmax structurally amplifies irrelevant tokens, diluting the collaborative signal as interactions deepen\. To address this issue, we propose a training\-free additive mechanism that models upstream representations as a semantic manifold\. By shifting from concatenation\-based Softmax competition to linear subspace projection, this perspective inherently bypasses scalar noise accumulation\. Specifically, we introduce two components: a Resonance Filter that extracts principal semantic directional alignments to overcome latent anisotropy, and an SNR\-Adaptive Spectral Gain that dynamically regulates this projection to counteract role heterogeneity\. We analyze this approach using the Asymptotic SNR Tipping Point Theorem, illustrating the scaling advantages of the mechanism beyond a critical noise threshold\. Experiments indicate that the proposed approach outperforms baselines in 46 of 54 evaluated configurations, maintaining semantic reasoning in long\-context collaborations\.
 
-## Economy of Minds: Emerging Multi\-Agent Intelligence with Economic Interactions
-
-**Authors:** Zhenting Qi; Ao Qu; Huangyuan Su; Chenyu Wang; Yu Yao; Han Zheng; Kushal Chattopadhyay; Guowei Xu; Zihan Wang; Weirui Ye; Vijay Janapa Reddi; Ju Li; Paul Liang; Hima Lakkaraju; Sham Kakade; Yilun Du
-
-**ID:** 150266 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=jS2FYvg2Y1>) | [PDF](<https://openreview.net/pdf?id=jS2FYvg2Y1>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150266>)
-
-How can a population of agents self\-orchestrate and self\-adapt into stronger collective intelligence without centralized control? Inspired by Friedrich Hayek's economic theory of decentralized coordination in markets, we study this question through an agent economy in which agents compete via auctions for the right to act, exchange payments, and accumulate wealth from environmental rewards\. These simple economic signals induce decentralized credit assignment, driving planning without global orchestration or explicit communication protocols\. The population evolves through economic selection: effective agents accumulate wealth and are mutated via exploitation, while ineffective ones go bankrupt and are replaced via exploration\. We show that, initialized with weak agents, the economy produces emergent multi\-step reasoning strategies and outperforms stronger monolithic baselines across five agentic tasks, including mathematical reasoning, financial research, scientific research, accelerator design, and distributed\-system optimization\.  We further provide theoretical insights into how economic dynamics shape agent behaviors, linking local incentives to long\-term global performance\. Our results suggest a new path to multi\-agent intelligence: rather than engineering coordination, we can design decentralized incentive structures under which it automatically emerges\.
-
-## AgentForesight: Online Auditing for Early Failure Prediction in Multi\-Agent Systems
-
-**Authors:** Boxuan Zhang; Jianing Zhu; Zeru Shi; Dongfang Liu; Ruixiang Tang
-
-**ID:** 151949\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 151949
-
-[Paper](<https://openreview.net/forum?id=Wdc59fvT3R>) | [PDF](<https://openreview.net/pdf?id=Wdc59fvT3R>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151949>)
-
-LLM\-based multi\-agent systems are increasingly deployed on long\-horizon tasks, but a single decisive error is often accepted by downstream agents and cascades into trajectory\-level failure\.  Existing work frames this as \\emph\{post\-hoc failure attribution\}, diagnosing the responsible agent and step after the trajectory has ended\. However, this paradigm forfeits any opportunity to intervene while trajectory is still unfolding\. In this work, we introduce AgentForesight, a framework that reframes this problem as online auditing: at each step of an unfolding trajectory, an auditor observes only the current prefix and must either continue the run or alarm at the earliest decisive error, without access to future steps\. To this end, we curate AFTraj\-2K, a corpus of agentic trajectories across Coding, Math, and Agentic domains, in which safe trajectories are retained under a strict curation pipeline and unsafe trajectories are annotated at the step of their decisive error via consensus among multiple LLM judges\. Built on that, we develop AgentForesight\-7B, a compact online auditor trained with a coarse\-to\-fine reinforcement learning recipe that first equips it with a risk\-anticipation prior at the failure boundary on adjacent safe/unsafe prefix pairs, then sharpens this prior into precise step\-level localization under a three\-axis reward jointly targeting the what, where, and who of an audit verdict\. Across AFTraj\-2K and an external Who\\&amp;When benchmark, AgentForesight\-7B outperforms leading proprietary models, including GPT\-4\.1 and DeepSeek\-V4\-Pro, achieving up to \+19\.9\\% performance gain and 3$\\times$ lower step localization error, opening the loop from post\-hoc failure detection to enabling deployment\-time intervention\.
-
-## Learning When to Collaborate: Selective Multi\-Agent Medical Reasoning via Uncertainty\-Aware Routing
-
-**Authors:** Jiacheng Hou; Xueliang Cui; Dan Lu; Ruxin Wang
-
-**ID:** 148185 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=zf8s1ZPTZE>) | [PDF](<https://openreview.net/pdf?id=zf8s1ZPTZE>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148185>)
-
-Multi\-agent systems have emerged as a promising paradigm for multimodal medical reasoning, but existing methods rely on two assumptions that hinder practical deployment: \(i\) always\-active dense collaboration among multiple agents, and \(ii\) dependence on large cloud\-based models that raise privacy and efficiency concerns\. In this paper, we challenge both assumptions and propose SMART\-Med, a fully local multi\-agent method that treats collaboration as a learnable decision rather than a default behavior\. Our key insight is that not every medical query requires costly multi\-agent deliberation: many can be reliably solved by a single well\-trained agent, while only uncertain cases benefit from expert collaboration\. Based on this insight, SMART\-Med introduces an uncertainty\-driven routing mechanism that adaptively decides when to answer directly and when to recruit a small subset of expert agents, effectively converting dense multi\-agent reasoning into selective, query\-adaptive coordination\. To make this routing reliable, we curate a new multimodal medical dataset MedVR\-3K with high\-quality reasoning traces and a difficulty hierarchy, and then fine\-tune local agents using GRPO with two complementary rewards: a certainty\-aware accuracy reward and a vision\-language reward model for correctness and reasoning quality respectively\. Experiments on four medical visual question answering benchmarks show that SMART\-Med achieves competitive performance compared to existing MAS approaches while substantially reducing inference cost \(reducing inference time by more than 3\.8$\\times$ and token usage by 72\\%\)\. Moreover, after fine\-tuning on MedVR\-3K, SMART\-Med yields an average improvement of 6\.7\\% across Slake, PathVQA, VQA\-RAD, and PMC\-VQA\. Our results suggest that selective collaboration can be an efficient yet effective alternative to dense collaboration and enable practical, privacy\-preserving deployment of multi\-agent medical AI\.
-
-## LLM\-Based Multi\-Agent Blackboard System for Information Discovery in Data Science
-
-**Authors:** Alireza Salemi; Mihir Parmar; Palash Goyal; Yiwen Song; Jinsung Yoon; Hamed Zamani; Tomas Pfister; Hamid Palangi
-
-**ID:** 151426\-\-2 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 151426
-
-[Paper](<https://openreview.net/forum?id=ao3zijumY7>) | [PDF](<https://openreview.net/pdf?id=ao3zijumY7>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151426>)
-
-Advances in large language models \(LLMs\) have created new opportunities in data science, but their deployment is often limited by the challenge of finding relevant data in large data lakes\. Existing methods struggle with this: both single\- and multi\-agent systems are quickly overwhelmed by large, heterogeneous files, and master–slave multi\-agent systems rely on a rigid central controller that requires precise knowledge of each sub\-agent’s capabilities, which is not possible in large\-scale settings where the main agent lacks full observability over sub\-agents’ knowledge and competencies\. We propose a novel multi\-agent paradigm inspired by the blackboard architecture for traditional AI models\. In our framework, a central agent posts requests to a shared blackboard, and autonomous subordinate agents\-\-either responsible for a partition of the data lake or retrieval from web\-\-volunteer to respond based on their capabilities\. This design improves scalability and flexibility by removing the need for a central coordinator to know each agent’s expertise or internal knowledge\. We evaluate the approach on three benchmarks that require data discovery: KramaBench and modified versions of DSBench and DA\-Code\. Results show that the blackboard architecture substantially outperforms strong baselines, achieving 13%–57% relative improvements in end\-to\-end success and up to a 9% relative gain in data discovery F1 over the best baseline\.
-
-## SceneFactory: GPU\-Accelerated Multi\-Agent Driving Simulation with Physics\-Based Vehicle Dynamics
-
-**Authors:** Yicheng Zhu; Yang Chen; Tao Li; Zilin Bian
-
-**ID:** 139016 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=qCvGezil5Y>) | [PDF](<https://openreview.net/pdf?id=qCvGezil5Y>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139016>)
-
-_Abstract unavailable from the accessible public sources._
-
 ## When Parallelism Pays Off: Cohesion\-Aware Task Partitioning for Multi\-Agent Coding
 
 **Authors:** Xu Yang; Lunyiu Nie; Ethan Chandra; Stanislav Gannutin; Fangru Lin; Swarat Chaudhuri
 
-**ID:** 148594 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
+**ID:** 148594 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
 [Paper](<https://openreview.net/forum?id=wYda526jWp>) | [PDF](<https://openreview.net/pdf?id=wYda526jWp>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148594>)
 
-_Abstract unavailable from the accessible public sources._
+Multi\-agent Large Language Model \(LLM\) systems offer a way to decompose complex tasks such as coding through parallelization and context isolation, but adding agents in practice introduces inter\-agent communication overhead that can offset efficiency gains\. We formalize multi\-agent orchestration as a graph partitioning problem that captures the \*communication\-to\-computation trade\-off\*: task decomposition can shorten critical\-path computation, while cross\-agent dependencies require costly context transfer\. We instantiate this view in repository\-level software engineering through \*\*Co\*\*hesion\-aware \*\*Coder\*\* \(CoCoder\), which builds dependency graphs from static analysis, isolates structural hub files, partitions the graph via community detection, and executes the partition with a dependency\-aware scheduler\. Across \\\(28\\\) real\-world tasks on DevEval and CodeProjectEval, CoCoder Pareto\-dominates sequential and file\-based parallel baselines as well as Claude Code with Agent Teams, improving pass rate by up to \\\(14\.0\\%\\\) on CodeProjectEval, achieving up to a \\\($2\.10\\times$\\\) wall\-clock speedup, and reducing API cost by up to \\\(35\\%\\\), with the largest gains on the most dependency\-dense projects\. CoCoder demonstrates how dependency\-aware orchestration can make parallel coding agents both theoretically grounded and practically efficient, suggesting a broader design principle for multi\-agent LLM systems\.
 
 ## Norm Enforcement for AI Agents: Robustly Shaping Behavior in Multi\-Agent Systems
 
 **Authors:** Yaowen Ye; Jacob Steinhardt
 
-**ID:** 151090 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
+**ID:** 151090 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
 [Paper](<https://openreview.net/forum?id=d3KYxJNekT>) | [PDF](<https://openreview.net/pdf?id=d3KYxJNekT>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151090>)
 
-_Abstract unavailable from the accessible public sources._
+AI agents are increasingly deployed in shared environments where they pursue diverse goals and compete for rewards\. This multi\-agent competition can lead to behaviors that serve individual gains at collective cost—for instance, marketing agents may post misleading content as a result of competing for engagement on social media\. Human societies address such problems through \*norms\* that constrain acceptable behavior, supported by \*enforcement mechanisms\* that detect and penalize violations\. Motivated by this, we study norm enforcement mechanisms for language model agents\. We find that simple enforcement mechanisms are exploited by misaligned agents for competitive advantage, even when they are not explicitly trained or prompted to do so\. We thus turn our attention to designing more robust mechanisms, and identify two key ingredients: estimating each agent’s reliability over time, and updating this estimate with escalating penalties for repeated misbehavior\. Across three simulated environments and a variety of agent populations, mechanisms built on these principles resist exploitation, while still penalizing norm violations at comparable or lower cost than baselines\. Our results position norm enforcement mechanisms as promising levers for shaping agents' behavior, but only when designed to anticipate becoming part of the environment they govern\.
 
-## EVOCHAMBER:  Test\-Time Co\-evolution of Multi\-Agent System at Individual, Team, and Population Scales
+## EVOCHAMBER: Test\-Time Co\-evolution of Multi\-Agent System at Individual, Team, and Population Scales
 
 **Authors:** Yaolun Zhang; Tianyi Xu; Shengyu Dai; Zhenwen Shao; Qingyun Wu; Huazheng Wang
 
-**ID:** 150274 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
+**ID:** 150274 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
 [Paper](<https://openreview.net/forum?id=jNJFL5PPGJ>) | [PDF](<https://openreview.net/pdf?id=jNJFL5PPGJ>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150274>)
 
-_Abstract unavailable from the accessible public sources._
-
-## Ask KG Agent: A Multi\-Agent Framework for Code Localization Using Code and Knowledge Graphs
-
-**Authors:** Chanyoung Chung; JEEMIN KIM; Joyce Whang
-
-**ID:** 155386 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=62XPovBV57>) | [PDF](<https://openreview.net/pdf?id=62XPovBV57>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155386>)
-
-_Abstract unavailable from the accessible public sources._
-
-## AgentArk: Distilling Multi\-Agent Intelligence into a Single LLM Agent
-
-**Authors:** Yinyi Luo; Yiqiao Jin; Weichen Yu; Mengqi Zhang; Srijan Kumar; Xiaoxiao Li; Weijie Xu; Xin chen; Jindong Wang
-
-**ID:** 149790\-\-2 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 149790
-
-[Paper](<https://openreview.net/forum?id=nIWXTEWPSb>) | [PDF](<https://openreview.net/pdf?id=nIWXTEWPSb>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149790>)
-
-_Abstract unavailable from the accessible public sources._
+We argue that multi\-agent test\-time evolution is not single\-agent evolution replicated N times\. A single\-agent learner can only evolve its own context and memory\. A multi\-agent system additionally evolves who collaborates, how they collaborate, and how knowledge flows across the population\. These components have no single\-agent counterpart and can produce phenomena such as emergent specialization\. Yet prior test\-time methods either confine experiences to individual agents, forfeiting cross\-agent learning, or broadcast symmetrically to all agents, erasing the specialization that makes collaboration valuable\. We present EVOCHAMBER, a training\-free framework that instantiates test\-time evolution at three levels over a coevolving agent pool\. At its core is CODREAM \(Collaborative Dreaming\), a post\-failure protocol in which agents collaboratively reflect, distill insights, and route them asymmetrically from strong agents to weak ones on the failed niche, preserving specialization while filling knowledge gaps\. Team\-level operators assemble niche\-conditioned teams and select collaboration structures online\. Population\-level lifecycle operators fork, merge, prune, and seed agents under performance pressure\. On three heterogeneous task streams with Qwen3\-8B, EvoChamber reaches 63\.9% on competition math, 75\.7% on code, and 87\.1% on multi\-domain reasoning, outperforming the best baseline by 30% relative on math\. These gains transfer to GPT\-4\.1\-mini\. Ablations attribute the largest single drop of \-10\.8% to removing CODREAM, confirming asymmetric cross\-agent transfer as the primary driver\. Starting from 20 identically initialized agents, four to five stable niche specialists spontaneously emerge, a structural signature of multi\-agent evolution that no single\-agent learner can express\.
 
 ## NestRL: A Nested Training Regime for Mutual Adaptation in Human–AI Teaming
 
 **Authors:** Upasana Biswas; Durgesh Kalwar; Subbarao Kambhampati; Sarath Sreedharan
 
-**ID:** 151397\-\-2 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 151397
+**ID:** 151397 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
 [Paper](<https://openreview.net/forum?id=axj4SqAgPj>) | [PDF](<https://openreview.net/pdf?id=axj4SqAgPj>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151397>)
 
-_Abstract unavailable from the accessible public sources._
+Mutual adaptation is a central challenge in human–AI teaming, as humans naturally adjust their strategies in response to an AI agent's behavior\. Existing approaches attempt to approximate human behavior by diversifying training partners; however, these partners are typically static and fail to capture the adaptive nature of human teammates\. When agents are trained jointly in standard multi\-agent settings, they often converge to opaque coordination strategies that work only with their co\-trained partners, leading to poor generalization\. To model adaptive human behavior, we formulate human–AI teaming as an Interactive Partially Observable Markov Decision Process \(I\-POMDP\)\. We propose NestRL, a nested training regime that learns the solution to a finite\-level I\-POMDP by training agents at each level against adaptive agents from the level below\. This exposes agents to adaptive behavior while preventing emergence of opaque coordination strategies\. We provide theoretical analysis showing that NestRL agents avoid convergence to partner\-specific strategies, and validate this empirically in the Overcooked domain against state\-of\-the\-art baselines\.  NestRL achieves higher task performance with both unseen adaptive agents and real human teammates, while exhibiting significantly greater adaptability over the course of interaction\.
+
+## AgentForesight: Online Auditing for Early Failure Prediction in Multi\-Agent Systems
+
+**Authors:** Boxuan Zhang; Jianing Zhu; Zeru Shi; Dongfang Liu; Ruixiang Tang
+
+**ID:** 151949 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=Wdc59fvT3R>) | [PDF](<https://openreview.net/pdf?id=Wdc59fvT3R>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151949>)
+
+LLM\-based multi\-agent systems are increasingly deployed on long\-horizon tasks, but a single decisive error is often accepted by downstream agents and cascades into trajectory\-level failure\.  Existing work frames this as \\emph\{post\-hoc failure attribution\}, diagnosing the responsible agent and step after the trajectory has ended\. However, this paradigm forfeits any opportunity to intervene while trajectory is still unfolding\. In this work, we introduce AgentForesight, a framework that reframes this problem as online auditing: at each step of an unfolding trajectory, an auditor observes only the current prefix and must either continue the run or alarm at the earliest decisive error, without access to future steps\. To this end, we curate AFTraj\-2K, a corpus of agentic trajectories across Coding, Math, and Agentic domains, in which safe trajectories are retained under a strict curation pipeline and unsafe trajectories are annotated at the step of their decisive error via consensus among multiple LLM judges\. Built on that, we develop AgentForesight\-7B, a compact online auditor trained with a coarse\-to\-fine reinforcement learning recipe that first equips it with a risk\-anticipation prior at the failure boundary on adjacent safe/unsafe prefix pairs, then sharpens this prior into precise step\-level localization under a three\-axis reward jointly targeting the what, where, and who of an audit verdict\. Across AFTraj\-2K and an external Who\\&amp;When benchmark, AgentForesight\-7B outperforms leading proprietary models, including GPT\-4\.1 and DeepSeek\-V4\-Pro, achieving up to \+19\.9\\% performance gain and 3$\\times$ lower step localization error, opening the loop from post\-hoc failure detection to enabling deployment\-time intervention\.
+
+## SMART: Scalable Multi\-Agent Role\-conditioned Teaming via LLM\-free Tree Search
+
+**Authors:** Runzhe Zhang; Ning Li; Xingshan Zeng; Letian Chen; Yasheng Wang; Weinan Zhang; Yong Yu; Weiwen Liu
+
+**ID:** 149874 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=mYzIBNy0LN>) | [PDF](<https://openreview.net/pdf?id=mYzIBNy0LN>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149874>)
+
+Large language model \(LLM\)\-powered multi\-agent systems have been shown to effectively solve real\-world end\-to\-end problems through collaboration among diverse agents\. However, as LLM capabilities advance and user demands continue to grow, the range of problems that agents can address expands dramatically, while the population of available agents and tools continues to increase, giving rise to open and evolving ecosystems of autonomous agents\. In this paradigm, agents are likely to become increasingly specialized, each focusing on particular capabilities or problem types\. In such a setting, a central challenge is how to efficiently assemble an appropriate team of agents to take on different responsibilities from a massive agent pool for a given task\. In this work, we study this problem in a controlled setting with 300 task\-oriented agents\. SMART \(Scalable Multi\-Agent Role\-conditioned Teaming\) first plans a task\-conditioned collaboration topology and candidate role set, then constructs a compact role\-conditioned candidate pool, and finally uses a LLM\-free Monte Carlo Tree Search \(MCTS\) to assign agents to roles online via metadata\-based rollouts\. This design enables high flexibility without incurring prohibitive inference costs\. Across multiple experiments, our approach achieves superior performance on  GSM8K \(93\.64\\%\), MATH \(61\.73\\%\), HumanEval \(93\.89\\%\), and MBPP \(87\.68\\%\) using gpt\-4o\-mini under a limited budget\.
+
+## BootstrapAgent: Turning Repository Setup into Reusable Agent Knowledge
+
+**Authors:** Sihan Fu; Oucheng Liu; Shiyuan Wang; Jin Shi; Chengkun Wei
+
+**ID:** 151994 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=WIItfKBPZm>) | [PDF](<https://openreview.net/pdf?id=WIItfKBPZm>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151994>)
+
+Code agents are rapidly lowering the barrier for developers to work with unfamiliar repositories, and are increasingly adopted for tasks such as building prototypes, reproducing experiments, and adding features\. Reliably executing these tasks depends on a critical prerequisite: the target repository must first be successfully set up and brought into a usable development state\. This bootstrapping process requires substantial trial\-and\-error exploration by code agents, yet the resulting knowledge \(e\.g\., resolved dependencies, repair strategies\) remains trapped in a single conversation, unavailable to future agents or developers\. We therefore formulate repository bootstrapping as a reusable startup knowledge problem and introduce BootstrapAgent, a multi\-agent framework that distills bootstrap exploration into a persistent, verifiable, agent\-consumable \.bootstrap contract\. Through CI evidence extraction, structured planning, deterministic Docker\-based verification, and trace\-driven repair, BootstrapAgent generates a contract covering environment setup, diagnostic checks, minimal verification, and accumulated repair knowledge\. We further propose warm repair with clean replay to accelerate iterative debugging without sacrificing cold\-start reproducibility, and a two\-level verification strategy to prevent reward hacking\. Experiments on three benchmarks show that BootstrapAgent achieves a 92\.9% success rate, outperforming the baseline by over 10% while reducing downstream agent token usage by 25\.9% and build time by 22\.3%\.
+
+## Ask KG Agent: A Multi\-Agent Framework for Code Localization Using Code and Knowledge Graphs
+
+**Authors:** Chanyoung Chung; JEEMIN KIM; Joyce Whang
+
+**ID:** 155386 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=62XPovBV57>) | [PDF](<https://openreview.net/pdf?id=62XPovBV57>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155386>)
+
+Mapping software issue descriptions to relevant code segments, a task known as code localization, is a primary bottleneck in automated software engineering\. While recent attempts have automated it using code graphs that capture syntax\-level dependencies among code elements, including functions and modules, their code\-centric approaches often overlook the design rationales and prior fix patterns present in a codebase's development history, such as pull requests and commits\. We propose Co\-Locator, a collaborative multi\-agent code localization framework that integrates code graphs reflecting functional dependencies and knowledge graphs constructed from triplets capturing design rationales and past code modifications scattered across the development history\. During localization, a Code Graph \(CG\) agent explores functional hierarchies and consults a Knowledge Graph \(KG\) agent to gather insights into developer intents and prior bug fixes\. Combined with a Retriever agent that assists CG and KG agents, Co\-Locator leverages a holistic view of the code's functional and historical context, considering what the code implements and how it was changed, to identify locations to fix\. Experiments show that Co\-Locator significantly outperforms 12 state\-of\-the\-art baseline methods\.
+
+## Benchmarking Open\-Ended Multi\-Agent Coordination in Language Agents
+
+**Authors:** Kaleab Tessera; Andras Szecsenyi; Cameron Barker; Alexander Rutherford; Davide Paglieri; Aidan Scannell; Henry Gouk; Elliot Crowley; Tim Rocktäschel; Amos Storkey
+
+**ID:** 139589 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=GjoyYpGTqL>) | [PDF](<https://openreview.net/pdf?id=GjoyYpGTqL>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139589>)
+
+As language models are increasingly deployed as autonomous agents, they will need to coordinate with others in long\-horizon, open\-ended interactive tasks\. Yet current evaluations rarely test these demands together, focusing instead on short interactions, single\-agent open\-ended tasks, or highly structured multi\-agent settings\. We introduce $alem$, a JAX\-based, procedurally generated open\-ended benchmark for multi\-agent coordination built on Craftax\-like dynamics\. Alem embeds procedurally generated coordination tasks, soft specialisation, communication, and controllable coordination difficulty into a long\-horizon survival world with exploration, crafting, trading, and combat\. We evaluate $13$ modern LLMs zero\-shot within homogeneous teams, with trained MARL agents as reference points\. Most LLM agents struggle, averaging only \~6% of maximum reward, although performance varies widely\. Gemini\-3\.1\-Pro\-High approaches MARL agents trained for one billion steps on Hard coordination \($17\.5\\%$ vs\. $17\.6\\%$ Coord\.\\%\), Gemma\-4\-31B\-it is the strongest tested open\-weight model, and GPT\-5\.4\-High makes strong base progress, while achieving much lower coordination reward\. We find that base task competence does not imply coordination competence, communication helps agents share intent, memory and reasoning help with multi\-step planning, and heterogeneous teams regress toward average member performance rather than matching their strongest teammate\. These results identify coordination as a distinct bottleneck for current LLM agents, separate from single\-agent capabilities\. Alem makes this bottleneck measurable, providing a controlled setting for developing agents that can communicate, allocate roles, and execute shared plans\.
+
+## Claude Coke: Prevent Automated Crime by Agents
+
+**Authors:** Gabor Hollbeck; Baran Peters; Alexander von Recum; Jan Granacher; Yuri Simantob; Alec McGail; Kevin Riehl
+
+**ID:** 140039 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=dy8ITXgyTV>) | [PDF](<https://openreview.net/pdf?id=dy8ITXgyTV>) | [Official poster](<https://neurips.cc/virtual/2026/poster/140039>)
+
+The contemporary LLM\-agent stack can automate substantive criminal activity at scale by composing capabilities that are already present, and the relevant engineering and governance controls need to be in place before that composition appears in production\. The argument rests on three empirical legs that are usually studied separately but jointly create a closed loop of accidental or adversarial criminal retail automation\. \(i\) Autonomous LLM agents fail catastrophically at well\-studied multi\-agent coordination tasks, with bankruptcy as the modal outcome rather than a tail event \(ii\) The rate at which agents elicit clearly harmful tools is not fixed but moves with common contextual manipulations\. \(iii\) Autonomous browser control has become general enough that frontier agents reliably navigate, populate, and complete checkout flows on simulated illicit\-product storefronts when light obfuscation is applied\. Combining the three legs requires no new model capability: in our experiments, LLM agents autonomously completed simulated dark\-web purchases of drugs, shotguns, and hitman services end\-to\-end\. We propose three interventions: mandatory pre\-deployment safety testing, hard human\-confirmation gates at financially material steps, and verifiable agent ID infrastructure\.
+
+## Learning to Recommend in Unknown Games
+
+**Authors:** Arwa Alanqary; Zakaria Baba; Manxi Wu; Alexandre Bayen
+
+**ID:** 154430 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=DefOb2NMCe>) | [PDF](<https://openreview.net/pdf?id=DefOb2NMCe>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154430>)
+
+We study preference learning and coordination through recommendations in multi\-agent game settings, where a moderator repeatedly interacts with agents whose utility functions are unknown\. In each round, the moderator issues action recommendations and observes whether agents follow or deviate\. We consider agents who best respond to the moderator's recommendations and study what this feedback reveals about their utilities\. We characterize the class of games that are indistinguishable under this feedback model\. Moreover, we introduce a notion of moderator regret based on agents' incentives to deviate from the recommendations and design an online algorithm with low regret under the best\-response model, with guarantees that scale linearly in the game dimension and logarithmically in time\. Our results lay a theoretical foundation for AI recommendation systems in strategic multi\-agent environments, where recommendation compliance is shaped by strategic interaction\.
+
+## Colosseum: Auditing Collusion in Cooperative Multi\-Agent Systems
+
+**Authors:** Mason Nakamura; Abhinav Kumar; Saswat Das; Sahar Abdelnabi; Saaduddin Mahmud; Ferdinando Fioretto; Shlomo Zilberstein; Eugene Bagdasarian
+
+**ID:** 138980 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=spCefvRCT6>) | [PDF](<https://openreview.net/pdf?id=spCefvRCT6>) | [Official poster](<https://neurips.cc/virtual/2026/poster/138980>)
+
+Multi\-agent systems, where LLM agents communicate through free\-form language, enable sophisticated coordination for solving complex cooperative tasks\. This surfaces a unique safety problem when a group of agents forms a coalition and colludes to pursue secondary goals and degrade the joint objective\. In this paper, we present Colosseum, a framework for auditing LLM agents' collusive behavior in multi\-agent settings\. We ground how agents cooperate through a formal multi\-agent decision\-making framework and measure action\-based collusive behavior in actions via regret relative to the cooperative optimum and compare it with communication\-based collusive behavior\. Colosseum enables audits of LLM agents for collusion under benign settings, different coalition objectives, persuasion tactics, and network topologies\. We then introduce a new behavioral probe by creating secret communication channels between agents, showing that most out\-of\-the\-box models exhibit a propensity to collude under this probe, which we term emergent collusion\. Furthermore, we discover \`\`collusion on paper'' when agents plan to collude in text but often pick non\-collusive actions\. Colosseum provides a new way to audit collusion in cooperative multi\-agent systems while presenting observations about how collusion emerges, what affects collusion efficacy, and which strategies may mitigate it\.
+
+## Effective Knowledge Conflict Detection via Joint Agentic Optimization
+
+**Authors:** Yi Hong; Wenchao Bai; Jiaqi Jiang; Siyuan Huang; Jiahui Jin
+
+**ID:** 154997 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=9K2Q4nOBG5>) | [PDF](<https://openreview.net/pdf?id=9K2Q4nOBG5>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154997>)
+
+Knowledge conflict detection is a fundamental challenge for large language model \(LLM\) systems that rely on external knowledge\. Existing approaches address this problem either with end\-to\-end supervised models or with multi\-stage pipelines dependent on fixed heuristics\. However, supervised models often generalize poorly to diverse conflict patterns, whereas heuristic pipelines rely on fixed rules and introduce considerable computational overhead\. To overcome these limitations, we propose $\\textbf\{G\}$rouping and $\\textbf\{C\}$onflict $\\textbf\{D\}$etection \($\\mathsf\{GCD\}$\), a two\-stage agentic framework for knowledge conflict detection that aligns the detection process with the inherent sparsity of knowledge conflicts, thereby reducing the decision space and enabling fine\-grained conflict detection\. $\\mathsf\{GCD\}$ decomposes knowledge conflict detection into two subtasks and employs two cooperative agents to address them: a Knowledge Grouping Agent \(G\-Agent\), which creates conflict\-preserving groups of textual units with potential conflicts, and an Intra\-group Conflict Detection Agent \(D\-Agent\), which detects conflicts within each group\. The G\-Agent's grouping policy is not fixed in advance but is jointly trained with D\-Agent via a shared global reward, enabling grouping to be explicitly optimized for accurate detection rather than relying on fixed heuristics\. Extensive experiments on five benchmarks demonstrate that $\\mathsf\{GCD\}$ consistently outperforms SOTA methods, while reducing inference latency and token consumption\.
+
+## Fine\-Grained Benchmark Generation for Comprehensive Evaluation of Foundation Models
+
+**Authors:** Mohammed Saidul Islam; Arash Afkanpour; Negin Baghbanzadeh; Farnaz Kohankhaki; Afshin Cheraghi; Ali Kore; Shayaan Mehdi; Elham Dolatabadi
+
+**ID:** 138954 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=uAM1JfOl0D>) | [PDF](<https://openreview.net/pdf?id=uAM1JfOl0D>) | [Official poster](<https://neurips.cc/virtual/2026/poster/138954>)
+
+Evaluation of foundation models often rely on aggregate scores from benchmarks that lack comprehensive coverage and metadata for a fine\-grained evaluation\. We introduce a framework for automated benchmark generation\. Our framework generates evaluation problems grounded in reference material, such as textbooks, producing benchmarks with broad coverage, rich metadata, and robustness to contamination\. The pipeline employs a multi\-agent architecture for problem generation and a solution\-graph\-driven strategy that significantly improves the reliability of ground truth solutions\. Using the framework, we generate three benchmarks in Machine Learning, Corporate Finance, and Personal Finance\. Expert review finds a significantly lower ground\-truth error rate than previous benchmarks such as MMLU and GSM8K\. Evaluation of 12 commercial and open\-source  models shows that our benchmarks achieve near\-uniform competency coverage and surface performance differences across models that existing benchmarks fail to capture\. We open\-source the framework and our curated benchmarks\.
+
+## When and Why Does Multi\-Agent Debate Fail and Does It Really Underperform?
+
+**Authors:** Yongqiang Chen; Gang Niu; James Cheng; Bo Han; Masashi Sugiyama
+
+**ID:** 153203 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=N4agj1mm4n>) | [PDF](<https://openreview.net/pdf?id=N4agj1mm4n>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153203>)
+
+Multi\-agent debate \(MAD\) was proposed as a promising approach for ensembling the wisdom of multiple large language models \(LLMs\) to improve reasoning and provide effective supervision to superhuman LLMs\. However, increasing empirical evidence suggests that MAD may not outperform or even significantly underperform single\-agent approaches \(SA\), raising doubts about the benefits of MAD\. In this work, we investigate this issue by analyzing the incentive structures of popular MAD paradigms: \(i\) competitive MAD \(CopMAD\) where agents compete by holding opposing positions; \(ii\) consensus\-seeking MAD \(CosMAD\) where agents are driven to seek consensus\. We show that both paradigms suffer from debate hacking: CopMAD reduces to a cheap\-talk game, where agents produce misleading messages to win the game, while CosMAD filters out informative disagreements for premature consensus\. Consequently, agents in both CopMAD and CosMAD fail to jointly resolve the ambiguity and seek the truth\. To this end, we introduce ColMAD, a collaborative protocol that reframes MAD as a non\-zero\-sum game to encourage agents to provide informative while truthful messages\. Through extensive benchmarking on challenging tasks such as error detection, we show that ColMAD significantly outperforms previous MAD protocols up to 10 percentage points\. Under the same budgets, ColMAD effectively brings non\-trivial improvements over SA methods, implying that the protocol design is critical to realizing the potential of MAD\.
+
+## FlowSteer: Prompt\-Only Workflow Steering Exposes Planning\-Time Vulnerabilities in Multi\-Agent LLM Systems
+
+**Authors:** Fanxiao Li; Jiaying Wu; Tingchao Fu; Natasha Jaques; Wei Zhou; Min\-Yen Kan
+
+**ID:** 149787 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=nJmiz6WjNX>) | [PDF](<https://openreview.net/pdf?id=nJmiz6WjNX>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149787>)
+
+Multi\-agent systems \(MAS\) powered by large language models \(LLMs\) increasingly adopt planner\-\-executor architectures, where planners convert prompts into subtasks, roles, dependencies, and routing paths\. This flexibility enables adaptive coordination, but exposes an attack surface in workflow formation: prompts can shape agent organization without modifying MAS infrastructure\. We study this risk through social influence probing workflows to identify high\-impact subtasks and malicious\-signal propagation\. The analysis reveals two vulnerabilities: workflow position can amplify or suppress a malicious signal, and sycophantic framing makes downstream agents more likely to relay it\. We translate these findings into FlowSteer, a prompt\-only workflow steering attack that converts vulnerability priors into one crafted prompt\. FlowSteer aligns a malicious signal with influential task components and guides replanning toward dependencies that preserve propagation\. Experiments show that FlowSteer increases malicious success by up to 55% over naive prompting, transfers across MAS setups, and remains effective with black\-box topology inference\. As FlowSteer biases the planning signals that generate the workflow, MAS defenses that inspect only the generated workflow provide limited protection\. As such, we introduce FlowGuard, an input\-side defense that reduces malicious success by up to 34% while preserving prompt utility\. Our results position workflow formation as a new safety frontier for multi\-agent LLM systems, opening a planning\-time security perspective on how agent coordination itself can be attacked and defended\.
+
+## MoRSE: Task\-Oriented Multi\-Agent System with Mixture of Role\-Subtask Experts
+
+**Authors:** Peiwen Li; Shiyang Zhang; Yangtian Zhang; Sizhuang He; David van Dijk; Rex Ying
+
+**ID:** 155161 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=7p7CMbiFxE>) | [PDF](<https://openreview.net/pdf?id=7p7CMbiFxE>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155161>)
+
+Large language model\-based multi\-agent systems have recently shown strong potential for complex, long\-horizon tasks\. However, existing methods mainly rely on coarse prompt\-level differentiation without parameter adaptation for diverse subtasks, resulting in insufficient inter\-agent heterogeneity and limited specialized capability that bottleneck performance on tasks with complex requirements\. To address this, we introduce a Task\-Oriented Multi\-Agent System with Mixture of Role\-Subtask Experts \(MoRSE\) that distinguishes agents with \(role, subtask\)\-conditional specialization at both the task structure and parameter levels\. To make agents' responsibility explicit at the task structure level, we formulate a task\-oriented multi\-agent system that decomposes each task into a dependency\-aware Directed Acyclic Graph of subtasks and assigns each agent a specific \(role, subtask\), introducing task\-level specialization across collaborating agents\. Additionally, to address the diverse role and subtask demands that a single shared base model cannot satisfy, we propose a dynamic Mixture of \(role, subtask\) LoRA Experts module with a prototype\-based semantic router for subtasks, augmenting agents with parameter\-level specialization on a shared LLM substrate cost\-effectively\. Then, to co\-optimize experts and router stably for open\-ended tasks, we further propose a hierarchical group\-relative policy optimization with two\-layer credit assignment that disentangles expert quality from routing quality\. Experiments on code\-generation benchmarks across three backbones demonstrate the effectiveness of our approach, with notable improvements in both whole\-task and step\-wise performance and great generalization potential in out\-of\-distribution scenarios\.
+
+## Auction\-Based Online Policy Adaptation for Evolving Objectives
+
+**Authors:** Guru Shabadi; Kaushik Mallik
+
+**ID:** 153035 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=OV5qcOHgej>) | [PDF](<https://openreview.net/pdf?id=OV5qcOHgej>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153035>)
+
+We consider multi\-objective reinforcement learning problems where objectives come from an identical family\-\-\-such as the class of reachability objectives\-\-\-and may appear or disappear at runtime\. Our goal is to design adaptive policies that can efficiently adjust their behaviors as the set of active objectives changes\. To solve this problem, we propose a modular framework where each objective is supported by a selfish local policy, and coordination is achieved through a novel \*auction\*\-based mechanism: policies bid for the right to execute their actions, with bids reflecting the urgency of the current state\. The highest bidder selects the action, enabling a dynamic and interpretable trade\-off among objectives\. Going back to the original adaptation problem, when objectives change, the system adapts by simply adding or removing the corresponding policies\. Moreover, as objectives arise from the same family, identical copies of a parameterized policy can be deployed, facilitating immediate adaptation at runtime\. We show how the selfish local policies can be computed by turning the problem into a general\-sum Markov game, where the policies compete against each other to fulfill their own objectives\. To succeed, each policy must not only optimize its own objective, but also reason about the presence of other goals and learn to produce calibrated bids that reflect relative priority\. Under mild assumptions, we prove the existence of Nash equilibria where dishonest bidding leads to suboptimal outcome, and the most urgent objectives win control automatically\. In our implementation, the policies are trained concurrently using proximal policy optimization \(PPO\)\. We evaluate on two Atari games and a gridworld\-based path\-planning task with dynamic targets\. Our method achieves substantially better performance than monolithic policies trained with PPO\.
+
+## Rethinking Parallel Multi\-Agent Systems: A Cost\-Aware Framework for Efficient Coordination
+
+**Authors:** Yexiong Lin; Shanshan Ye; Yu Yao; Zhen Fang; Bo Han; Tongliang Liu
+
+**ID:** 155478 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=5ISO2WDCul>) | [PDF](<https://openreview.net/pdf?id=5ISO2WDCul>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155478>)
+
+LLM\-based agent systems are increasingly used to solve complex multi\-step tasks, where sequential execution incurs substantial end\-to\-end latency\. In principle, parallelizing work across multiple agents should yield near\-linear speedups\. However, in practice, existing parallel multi\-agent systems often run slower than a single\-agent baseline\. We attribute this gap to two hidden costs that parallel execution incurs but a serial agent avoids\. First, there is a \\emph\{re\-exploration cost\}: redundant effort spent by parallel workers reconstructing context that the orchestrator already possesses, including prior decisions, conventions, and intermediate reasoning that would otherwise be inherited implicitly in a serial execution\. Second, there is an \\emph\{alignment cost\}: the overhead required to reconcile inconsistencies across independently generated outputs\. Based on this decomposition, we derive a principled decision criterion: a layer should be parallelized only when its critical\-path cost, plus re\-exploration and alignment overheads, is lower than the corresponding serial cost\. While this criterion is naturally expressed in wall\-clock time, we observe that LLMs are poorly calibrated when asked to estimate task duration\. Their predictions are strongly anchored to human engineering intuition rather than model throughput\. The resulting bias is not monotonic, so even the relative ordering of task costs can be reversed between estimates and actual execution\. To address this, we instead measure cost in predicted output tokens, a quantity that LLMs can estimate more reliably because it corresponds directly to their own generation behavior\. For a fixed model, token cost also serves as a backend\-independent proxy for time\. Building on this token\-based criterion, we propose \\textsc\{CostPar\}\. It estimates all token budgets in a single planning step, forks each worker directly from the orchestrator’s session to eliminate re\-exploration cost, and replaces post\-hoc reconciliation with a pre\-generated shared convention block that converts alignment into a bounded upfront cost\. A deterministic scheduler then applies the criterion layer by layer\. Empirically, \\textsc\{CostPar\} achieves a 2\.2$\\times$ mean throughput improvement and a 2\.6$\\times$ mean wall\-time speedup over Claude Code, and a 2\.0$\\times$ throughput improvement over the strongest multi\-agent baseline\.
+
+## CacheMAS: Cache Communication for Single\-Pass, Jointly\-Optimized Multi\-Agent Systems
+
+**Authors:** Chao Ouyang; Yuyang Bai; Jun Zhang; Tianlu Gao; YuxinDai; xu peidong; David W Gao
+
+**ID:** 154215 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=FKl2gcTSgN>) | [PDF](<https://openreview.net/pdf?id=FKl2gcTSgN>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154215>)
+
+Multi\-agent LLM systems \(MAS\) improve reasoning by decomposing across specialized roles, but their text communication is expensive\. Each agent decodes thousands of intermediate tokens for the next, and successive prefills grow cumulatively\. Recent work shows that latent\-space signals can substitute for explicit text between agents, cutting cumulative prefill cost\. When the latent reasoning also replaces an agent's text reasoning, it additionally cuts intermediate tokens\. Here, we find that the prefill cache alone suffices as the latent\-space signal between agents, and the per\-agent forward chains can be compressed into a single pass\. With \\emph\{exactly one prefill and one decode per problem\}, we sharply cut per\-rollout tokens and prefill wall time\. We call this architecture \\textbf\{CacheMAS\}, in which prefill agents pass information through cache communication, and a final agent decodes the answer\. As a bonus, \\textbf\{CacheMAS\} is one autoregressive rollout, so unlike prior MAS, standard sequence\-level RL can jointly optimize all agents at once without per\-agent reward design\. On math, multi\-hop QA, and code, CacheMAS uses $\\sim$$3\\times$ fewer tokens, runs $\\sim$$2\\times$ faster, and after joint optimization beats prior MAS by $\+1$ to $\+8$ points on every benchmark\. Cache communication is not just a token\-efficient substitute for text, but a practical interface for joint MAS optimization\.
 
 ## SkillGen: Verified Inference\-Time Agent Skill Synthesis
 
@@ -1056,373 +726,35 @@ _Abstract unavailable from the accessible public sources._
 
 Skills are a promising way to improve LLM agent capabilities without retraining, while keeping the added procedure reusable and controllable\. However, high\-quality skills are still largely written by hand\. We introduce SkillGen, a multi\-agent framework that synthesizes a single auditable skill from trajectories generated by a base agent\. The output is a human\-readable artifact that can be inspected before use\. Rather than merely summarizing trajectories, SkillGen leverages contrastive induction over both successful and failed trajectories to identify reusable success patterns, recurring failure modes, and behaviors that appear in nearby successes but are missing from failures\. SkillGen then generates candidate skills and iteratively refines the skill\. A key novelty in SkillGen is that we model agent skills as interventions to empirically verify the net effect of skills on the overall performance\. Specifically, we compare outcomes on the same instances with and without the skill, so that we account for both repairs \(cases where the skill fixes a baseline failure\) and regressions \(cases where the skill breaks a baseline success\)\. Across a broad range of agents and datasets, SkillGen consistently improves held\-out performance, outperforms existing skill\-generation baselines, and produces skills that transfer across models\.
 
-## ROAR: Benchmarking LMM Agents under Real\-Time Constraints in Multiplayer Action\-Shooter Games
+## OrchestraRL: Learning to Orchestrate LLM Agent Swarms with Entropy\-Aware Communication Control
 
-**Authors:** DAWEI WANG; Di Zhao; Jianran Yu; CHENGMING ZHOU; Marci Chi; Xiaoyang Liu; BEINING ZHANG; Shuliang Chu; Yun Sing Koh; Gary Ushaw; Richard Davison
+**Authors:** Runze Fan; Shiyi Jiang; Junsheng Wang; Shuangjun Xie; Xiaodan Li; Yong Li
 
-**ID:** 139122 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+**ID:** 155849 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=jrkcJgEwSy>) | [PDF](<https://openreview.net/pdf?id=jrkcJgEwSy>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139122>)
+[Paper](<https://openreview.net/forum?id=2R3giVsHQ5>) | [PDF](<https://openreview.net/pdf?id=2R3giVsHQ5>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155849>)
 
-Large multimodal models \(LMMs\) are increasingly deployed as agents that perceive, reason, and act in interactive multi\-agent environments\. Yet most existing benchmarks for LMM\-based agents in multi\-agent settings remain turn\-based: the environment and other agents pause while an agent performs inference\. Such protocols obscure a fundamental challenge of real\-time constraints, where the world continues to evolve and delayed decisions may become outdated before execution\. Motivated by this limitation, we introduce ROAR, a multiplayer action\-shooter game environment for evaluating LMM\-based agents in multi\-agent settings under real\-time constraints\. ROAR covers cooperative, competitive, mixed cooperative\-competitive, and basic single\-agent scenarios\. We further propose a Multi\-Agent Asynchronous Gym interface that decouples environment evolution from agent reasoning by running the environment and each agent in separate threads, enabling the environment to advance at fixed time intervals without waiting for LMM inference and allowing agents to reason independently without blocking one another\. ROAR also features convenient deployment, multimodal observations, and customizable levels\. ROAR offers a practical testbed for advancing LMM\-based agents beyond static, turn\-based evaluation toward real\-time multi\-agent decision\-making\.
+Multi\-agent LLM systems built on frontier backbones often fail to improve reliably as the swarm grows: under strong backbone models, performance frequently plateaus or declines beyond a small number of agents\.  In a budget\-matched controlled intervention on SWE\-bench Verified \($N\{=\}8$, Claude Opus 4\.5 backbone, 64\-call budget per instance\), varying only the communication policy moves resolve rate from 80\.4\\% under random broadcast coordination \(below the 80\.9\\% single\-shot baseline\) to 85\.5\\% under a learned orchestrator, a 5\.1\-point spread under matched compute\.  We introduce OrchestraRL, an orchestration layer trained over frozen LLMs\.  A centralized Macro\-Orchestrator reads the swarm's context entropy $H\(t\)$, computed from the spread of agent output embeddings, and outputs communication mode \(via learned entropy thresholds\) and topology; per\-agent Micro\-Coordinators decide whom each agent addresses, when to speak, and at what granularity\.  Both are trained with REINFORCE and a learned value baseline\.  Across four benchmarks \(SWE\-bench Verified, GPQA Diamond, LiveCodeBench v6, SimpleQA\), OrchestraRL is comparable to the strongest baseline at $N\{=\}2$ and achieves the best resolve rate at $N \\in \\\{4, 8\\\}$ on every benchmark, with the gap widening as $N$ grows\.  The learned policy recovers interpretable task\-dependent communication patterns, including clustered exploration, star\-based synthesis, and pipeline reasoning, without these structures being hand\-coded\.
 
-## CASPIAN: Online Detection and Attribution of Cascade Attacks in LLM Multi\-Agent Systems via Cross\-Channel Causal Monitoring
+## Control Charts for Multi\-Agent Systems
 
-**Authors:** Kavana Venkatesh; Jafar Isbarov; Saad Amin; Murat Kantarcioglu; Jiaming Cui
+**Authors:** Hayden Helm; Carey E Priebe; Brandon Duderstadt
 
-**ID:** 150932 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
+**ID:** 156073 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=eERJSSfRu8>) | [PDF](<https://openreview.net/pdf?id=eERJSSfRu8>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150932>)
+[Paper](<https://openreview.net/forum?id=0ef8FCdBWk>) | [PDF](<https://openreview.net/pdf?id=0ef8FCdBWk>) | [Official poster](<https://neurips.cc/virtual/2026/poster/156073>)
 
-_Abstract unavailable from the accessible public sources._
+Generative agents have proven to be powerful assistants in a wide variety of contexts\. Given this success, users are now deploying agents with minimal restrictions in open ended, multi\-agent environments\. Current methods for measuring the dynamics of open\-ended multi\-agent systems are limited to qualitative inspection\. In this paper, we extend the process\-theoretic notion of adaptive control charts to multi\-agent systems to enable automated monitoring\. Using simulation, we demonstrate that adaptive control charts are necessary for monitoring multi\-agent systems that can learn from their environment\. We further demonstrate, both empirically and theoretically, that adaptive control charts are susceptible to adversarial agents that defect sufficiently slowly\. These results illustrate a fundamental tradeoff in multi\-agent system control: either agents in a system cannot learn \\textit\{or\} the system is susceptible to adversaries\.
 
-## SMART: Scalable Multi\-Agent Role\-conditioned  Teaming via LLM\-free Tree Search
+## FlowMAS: Learning Multi\-Agent Workflow Topology via Information\-guided Generative Flow Network
 
-**Authors:** Runzhe Zhang; Ning Li; Xingshan Zeng; Letian Chen; Yasheng Wang; Weinan Zhang; Yong Yu; Weiwen Liu
+**Authors:** Haitao Wang; Chenjing Liang; Haipeng Zhang; Jiawei Hu; SiCheng Wang; Songzhu Mei; Chenglu Wen; Siqi Shen; Cheng Wang
 
-**ID:** 149874 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+**ID:** 152834 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=mYzIBNy0LN>) | [PDF](<https://openreview.net/pdf?id=mYzIBNy0LN>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149874>)
+[Paper](<https://openreview.net/forum?id=Q5E25NvUNs>) | [PDF](<https://openreview.net/pdf?id=Q5E25NvUNs>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152834>)
 
-Large language model \(LLM\)\-powered multi\-agent systems have been shown to effectively solve real\-world end\-to\-end problems through collaboration among diverse agents\. However, as LLM capabilities advance and user demands continue to grow, the range of problems that agents can address expands dramatically, while the population of available agents and tools continues to increase, giving rise to open and evolving ecosystems of autonomous agents\. In this paradigm, agents are likely to become increasingly specialized, each focusing on particular capabilities or problem types\. In such a setting, a central challenge is how to efficiently assemble an appropriate team of agents to take on different responsibilities from a massive agent pool for a given task\. In this work, we study this problem in a controlled setting with 300 task\-oriented agents\. SMART \(Scalable Multi\-Agent Role\-conditioned Teaming\) first plans a task\-conditioned collaboration topology and candidate role set, then constructs a compact role\-conditioned candidate pool, and finally uses a LLM\-free Monte Carlo Tree Search \(MCTS\) to assign agents to roles online via metadata\-based rollouts\. This design enables high flexibility without incurring prohibitive inference costs\. Across multiple experiments, our approach achieves superior performance on  GSM8K \(93\.64\\%\), MATH \(61\.73\\%\), HumanEval \(93\.89\\%\), and MBPP \(87\.68\\%\) using gpt\-4o\-mini under a limited budget\.
-
-## When Do Multi\-Agent Systems Help? An Information Bottleneck Perspective
-
-**Authors:** Wendi Yu; Lianhao Zhou; Xiangjue Dong; Sai S Barath; Declan Staunton; Byung\-Jun Yoon; Xiaoning Qian; James Caverlee; Shuiwang Ji
-
-**ID:** 153823 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=ISYF5z5nK8>) | [PDF](<https://openreview.net/pdf?id=ISYF5z5nK8>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153823>)
-
-LLM powered multi\-agent systems \(MAS\) have emerged as a promising paradigm for complex tasks\. However, their advantages over single\-agent systems \(SAS\) remain unclear, with performance varying inconsistently across settings\. Here, we provide an information bottleneck perspective on elucidating the differences between MAS and SAS\. Specifically, our key observation is that a SAS accumulates its full reasoning trace in one shared context, while a MAS uses isolated local contexts connected by bounded relay messages\. We show that, under infinite relay bandwidth, any SAS can be simulated by a MAS that transmits the full upstream context\. Thus, the nontrivial advantage of MAS arises under bounded relays, where compression introduces a fundamental trade\-off: reducing redundant context can improve efficiency, but may also incur loss of task\-relevant information\. We formalize this trade\-off as an information bottleneck controlled by an effective parameter $\\beta$, which captures how the balance shifts with model capability, and shows that MAS gains arise when context reduction outweighs relay information loss\. We conduct 18 controlled experiments across five benchmarks and three model scales to validate our theoretical studies\. We observe that MAS consistently helps when relays are near\-sufficient, especially for weaker models\. In contrast, MAS gains shrink or reverse when relays incur information loss, especially for stronger models that can already extract useful information from redundant context and thus gain little from compression\. Our study shows that multi\-agent design is fundamentally an information\-bottleneck optimization problem\. This perspective explains when bounded inter\-agent communication helps or hurts\.
-
-## SAGE: Evidence\-First Biomarker Discovery through Multi\-Agent Reasoning
-
-**Authors:** Sahar Almahfouz Nasser; Juan Francisco Pesantez Borja; Jincheng Liu; Sandeep Manandhar; Shikhar Shiromani; Mohammad T Hasan; Zenghan Wang; Suman Ghosh; Jinchu Li; Xuejian Xu; Aniket R Iyer; Naoto Tokuyama; Twisha Shah; Tilak Pathak; Soundharya Kumaresan; Yohei Abe; Himanshu Maurya; Anant Madabhushi
-
-**ID:** 155210 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=7S3W9FIQbm>) | [PDF](<https://openreview.net/pdf?id=7S3W9FIQbm>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155210>)
-
-_Abstract unavailable from the accessible public sources._
-
-## BootstrapAgent: Turning Repository Setup into Reusable Agent Knowledge
-
-**Authors:** Sihan Fu; Oucheng Liu; Shiyuan Wang; Jin Shi; Chengkun Wei
-
-**ID:** 151994 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=WIItfKBPZm>) | [PDF](<https://openreview.net/pdf?id=WIItfKBPZm>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151994>)
-
-_Abstract unavailable from the accessible public sources._
-
-## Benchmarking Open\-Ended Multi\-Agent Coordination in Language Agents
-
-**Authors:** Kaleab Tessera; Andras Szecsenyi; Cameron Barker; Alexander Rutherford; Davide Paglieri; Aidan Scannell; Henry Gouk; Elliot Crowley; Tim Rocktäschel; Amos Storkey
-
-**ID:** 139589 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=GjoyYpGTqL>) | [PDF](<https://openreview.net/pdf?id=GjoyYpGTqL>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139589>)
-
-_Abstract unavailable from the accessible public sources._
-
-## COOP$^2$: Defining, Observing, and Repairing Cooperation in LLM Multi\-Agent Systems
-
-**Authors:** Hanqing Yang; Narjes Nourzad; Shiyu Chen; Marie Siew; Jingdi Chen; Carlee Joe\-Wong
-
-**ID:** 139333 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=WWrTVADZAi>) | [PDF](<https://openreview.net/pdf?id=WWrTVADZAi>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139333>)
-
-Many complex tasks require extended effort, diverse capabilities, or coordinated actions beyond what a single agent can provide\.  However, simply adding more agents does not guarantee better performance, as effective cooperation depends on how agents interact with each other and with task structure to satisfy evolving constraints over time\.  This challenge is amplified for LLM\-based multi\-agent systems \(LLM\-MAS\): plans, messages, and revisions occur in natural language, whereas task progress depends on grounded environment actions\.  Current evaluations mostly treat cooperation as an implicit ingredient of final task success, leaving both cooperation and the effect of multi\-agent interaction on task dynamics difficult to study\.  We introduce COOP$^2$, an evaluation framework that grounds high\-level agent cooperation dynamics in LLM\-MAS within task progress in the environment\. COOP$^2$ then defines cooperative tasks with verifiable cooperative requirements, allowing us to analyze how cooperation unfolds over time with respect to task progress, as well as where and why cooperation breaks down\. Building on this framework, we develop COOP$^2$\-Repair, which predicts constraint failures from group plans and opens targeted repair channels for guided revisions\. Across two environments and three communication structures, COOP$^2$\-Repair improves task success and constraint satisfaction while exposing the additional decision overhead and communication load required for repair\.
-
-## Robust Instruction Compliance in Cooperative Multi\-Agent Reinforcement Learning
-
-**Authors:** Wo Wei Lin; Ethan Rathbun; Enrico Marchesini; Xiang Zhi Tan
-
-**ID:** 148746\-\-2 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 148746
-
-[Paper](<https://openreview.net/forum?id=vMEXVo6MCM>) | [PDF](<https://openreview.net/pdf?id=vMEXVo6MCM>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148746>)
-
-Real\-world multi\-agent reinforcement learning \(MARL\) systems must operate autonomously while adapting to natural language instructions provided by humans\. These instructions arrive unpredictably, interrupt ongoing actions, and may conflict with long\-horizon objectives under partial observability\. Recent vision\-language models enable instruction following, but are computationally expensive and limited to single\-agent settings\. Conversely, MARL can handle long\-horizon coordination with macro\-actions, but assumes uninterrupted execution\. This work introduces macro\-action value cancellation for instruction compliance \(MAVIC\) to enable interruption\-aware MARL by bootstrapping the value of ongoing macro\-actions upon receiving instructions\. Agents can thus decouple task objective optimization from instruction\-driven overrides within a unified policy and re\-plan without destabilizing the underlying learning process\. MAVIC integrates with standard actor\-critic methods and achieves high instruction compliance while preserving base task performance across increasingly complex macro\-action benchmarks\.
-
-## AgentForesight: Online Auditing for Early Failure Prediction in Multi\-Agent Systems
-
-**Authors:** Boxuan Zhang; Jianing Zhu; Zeru Shi; Dongfang Liu; Ruixiang Tang
-
-**ID:** 151949\-\-3 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 151949
-
-[Paper](<https://openreview.net/forum?id=Wdc59fvT3R>) | [PDF](<https://openreview.net/pdf?id=Wdc59fvT3R>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151949>)
-
-LLM\-based multi\-agent systems are increasingly deployed on long\-horizon tasks, but a single decisive error is often accepted by downstream agents and cascades into trajectory\-level failure\.  Existing work frames this as \\emph\{post\-hoc failure attribution\}, diagnosing the responsible agent and step after the trajectory has ended\. However, this paradigm forfeits any opportunity to intervene while trajectory is still unfolding\. In this work, we introduce AgentForesight, a framework that reframes this problem as online auditing: at each step of an unfolding trajectory, an auditor observes only the current prefix and must either continue the run or alarm at the earliest decisive error, without access to future steps\. To this end, we curate AFTraj\-2K, a corpus of agentic trajectories across Coding, Math, and Agentic domains, in which safe trajectories are retained under a strict curation pipeline and unsafe trajectories are annotated at the step of their decisive error via consensus among multiple LLM judges\. Built on that, we develop AgentForesight\-7B, a compact online auditor trained with a coarse\-to\-fine reinforcement learning recipe that first equips it with a risk\-anticipation prior at the failure boundary on adjacent safe/unsafe prefix pairs, then sharpens this prior into precise step\-level localization under a three\-axis reward jointly targeting the what, where, and who of an audit verdict\. Across AFTraj\-2K and an external Who\\&amp;When benchmark, AgentForesight\-7B outperforms leading proprietary models, including GPT\-4\.1 and DeepSeek\-V4\-Pro, achieving up to \+19\.9\\% performance gain and 3$\\times$ lower step localization error, opening the loop from post\-hoc failure detection to enabling deployment\-time intervention\.
-
-## Learning When to Collaborate: Selective Multi\-Agent Medical Reasoning via Uncertainty\-Aware Routing
-
-**Authors:** Jiacheng Hou; Xueliang Cui; Dan Lu; Ruxin Wang
-
-**ID:** 148185\-\-2 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 148185
-
-[Paper](<https://openreview.net/forum?id=zf8s1ZPTZE>) | [PDF](<https://openreview.net/pdf?id=zf8s1ZPTZE>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148185>)
-
-Multi\-agent systems have emerged as a promising paradigm for multimodal medical reasoning, but existing methods rely on two assumptions that hinder practical deployment: \(i\) always\-active dense collaboration among multiple agents, and \(ii\) dependence on large cloud\-based models that raise privacy and efficiency concerns\. In this paper, we challenge both assumptions and propose SMART\-Med, a fully local multi\-agent method that treats collaboration as a learnable decision rather than a default behavior\. Our key insight is that not every medical query requires costly multi\-agent deliberation: many can be reliably solved by a single well\-trained agent, while only uncertain cases benefit from expert collaboration\. Based on this insight, SMART\-Med introduces an uncertainty\-driven routing mechanism that adaptively decides when to answer directly and when to recruit a small subset of expert agents, effectively converting dense multi\-agent reasoning into selective, query\-adaptive coordination\. To make this routing reliable, we curate a new multimodal medical dataset MedVR\-3K with high\-quality reasoning traces and a difficulty hierarchy, and then fine\-tune local agents using GRPO with two complementary rewards: a certainty\-aware accuracy reward and a vision\-language reward model for correctness and reasoning quality respectively\. Experiments on four medical visual question answering benchmarks show that SMART\-Med achieves competitive performance compared to existing MAS approaches while substantially reducing inference cost \(reducing inference time by more than 3\.8$\\times$ and token usage by 72\\%\)\. Moreover, after fine\-tuning on MedVR\-3K, SMART\-Med yields an average improvement of 6\.7\\% across Slake, PathVQA, VQA\-RAD, and PMC\-VQA\. Our results suggest that selective collaboration can be an efficient yet effective alternative to dense collaboration and enable practical, privacy\-preserving deployment of multi\-agent medical AI\.
-
-## STAR\-Math: Multi\-Agent Mathematical Reasoning under Persistent Meta\-Strategic Supervision
-
-**Authors:** Jiaao Wu; Xian Zhang; Hanzhang Liu; Sophia Zhang; Fan Yang; Yinpeng Dong
-
-**ID:** 150935\-\-4 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 150935
-
-[Paper](<https://openreview.net/forum?id=eCAxMcFzTe>) | [PDF](<https://openreview.net/pdf?id=eCAxMcFzTe>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150935>)
-
-Frontier AI models and multi\-agent systems have led to significant improvements in mathematical reasoning\. However, for problems requiring extended, long\-horizon reasoning, existing systems continue to suffer from fundamental reliability issues: hallucination accumulation, memory fragmentation, and imbalanced reasoning\-tool trade\-offs\. We introduce \*\*STAR\-Math\*\*, a multi\-agent framework that systematically addresses these challenges through meta\-level supervision and structured Reasoner\-Verifier interaction\. STAR\-Math is structured as an orchestrated state machine with nested challenge\-step\-replan loops, governed by a reasoning\-free Python orchestrator that separates control from inference and bounds error propagation through trace\-back and re\-planning\. Our key innovation is a \*\*persistent Meta\-Strategist\*\* that maintains cross\-attempt memory and exercises meta\-level control by issuing high\-level strategic guidance or mandatory directives, so the system can escape unproductive loops rather than stagnate or over\-rely on tools\. STAR\-Math achieves state\-of\-the\-art results on all eight top\-tier competition benchmarks: AIME 2025\-2026, MathArena Apex Shortlist, MathArena Apex 2025, Putnam 2025, IMO 2025, HMMT February 2026, and USAMO 2026\. It obtains perfect scores on AIMEs, Putnam, and HMMT, and shows its largest margin on Apex 2025, scoring 93\.75% compared with 80\.21% by the strongest baseline GPT\-5\.5\. Ablation studies show that the gains arise from the framework's orchestration rather than from model\-level diversity since removing key components or substituting in mixed backbones consistently weakens performance\.
-
-## Group Perspective Matters: Regulating Debate Relationships Can Mitigate Blind Conformity in Multi\-Agent Debate
-
-**Authors:** Hao Wu; Shoucheng Song; Chang Yao; Huaiyu Wan; Youfang Lin; Kai Lv
-
-**ID:** 154678\-\-3 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 154678
-
-[Paper](<https://openreview.net/forum?id=BqTbDi43uU>) | [PDF](<https://openreview.net/pdf?id=BqTbDi43uU>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154678>)
-
-Multi\-Agent Debate \(MAD\) improves the reasoning performance of Large Language Models \(LLMs\) through multi\-round interaction\. However, LLMs in MAD are highly susceptible to blind conformity\. Existing individual evaluation methods, typically based on confidence or perplexity, fail to reflect the correctness of reasoning and may even exacerbate blind conformity\. To address this, we shift the perspective from individual evaluation to group interaction\. We define mutual referencing among LLMs as \\textbf\{Debate Relationships\} and recognize that regulating these relationships is the key to mitigating blind conformity\. In this paper, we propose a novel framework for \\textbf\{D\}ynamically r\\textbf\{E\}gulating deb\\textbf\{A\}te \\textbf\{R\}elationships \(DEAR\) from the group perspective\. At first, DEAR quantifies consensus and divergence as \\textit\{group evidence\} to capture the debate state\. Then, DEAR operates through three stages: 1\) What: perceiving group consultation tendency and uncertainty; 2\) Who: introducing a Selection RL\-Agent to dynamically select reference peers; and 3\) How: adopting a Behavior RL\-Agent to adaptively adjust generation behaviors\.
-
-## Towards High Semantic Fidelity: Hyperdimensional Symbolic Messages in Multi\-Agent Communication
-
-**Authors:** Shoucheng Song; Youfang Lin; Chang Yao; Hao Wu; Sheng Han; Kai Lv
-
-**ID:** 153552\-\-3 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 153552
-
-[Paper](<https://openreview.net/forum?id=KXTbANIGZW>) | [PDF](<https://openreview.net/pdf?id=KXTbANIGZW>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153552>)
-
-Semantic fidelity is essential for multi\-agent communication under non\-ideal channels, comprising transmission fidelity and conversion fidelity\. Yet existing numerical and neural message formats cannot simultaneously achieve both\.  To address this, we propose a novel message format\-\\textbf\{H\}yperdimensional \\textbf\{S\}ymbolic \\textbf\{M\}essages \(HSM\), and its corresponding communication framework \\textbf\{Herm\}\.  For transmission fidelity, Herm suppresses semantic entanglement via an entity\-attribute\-value structured encoding pipeline\. For conversion fidelity, Herm first leverages a receiver\-centric ego\-binding mechanism to align semantics\. Then, a similarity\-aware dual\-branch fusion module is proposed to prevent critical semantic dilution\. To realize explicit message\-semantic conversion,  we devise an iterative decoding scheme via algebraic inverse operation\. Experiments exhibit that Herm outperforms baselines across various noisy scenarios while maintaining superior structural readability\.
-
-## Mental\-Models for Multi\-Agent Systems
-
-**Authors:** Hanan Gani; Lulu \(Siwen\) Shao; Manmohan Chandraker
-
-**ID:** 153908\-\-3 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 153908
-
-[Paper](<https://openreview.net/forum?id=HoG47ROacO>) | [PDF](<https://openreview.net/pdf?id=HoG47ROacO>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153908>)
-
-Large foundation models have accelerated progress toward general\-purpose agents that interact with humans and other agents through language and multimodal signals\. However, robust multi\-agent decision\-making requires reasoning about what other agents know, intend, and are likely to do under partial observability\. Current agentic systems often operate through prompt design, memory, or end\-to\-end behavioral shaping, but typically do not learn an explicit partner\-state representation that can be reused as a decision variable across tasks\. We introduce mental\-model\-enabled agents, a framework that equips an agent with a latent mental model of its counterpart, allowing it to infer hidden beliefs, intentions, and likely reactions from the observed history and use these inferences to guide action selection\. Our method learns an amortized recursive Theory\-of\-Mind representation, with first\- and second\-order mental\-state structure, jointly with a belief\-conditioned reward model that evaluates candidate actions relative to the inferred partner state\. A policy is then learned under this belief\-aware signal, yielding an agent that can act independently at inference time while retaining the benefits of explicit partner modeling\. We evaluate the same framework on both language\-only and multimodal benchmarks\. Across these settings, explicit mental\-state modeling consistently improves interaction quality and Theory\-of\-Mind performance over base agentic systems, showing that structured partner modeling is a useful inductive bias for general multi\-agent systems\.
-
-## Market\-Based Runtime Resource Allocation for LLM Multi\-Agent Systems
-
-**Authors:** Yixue Huang; Mingxin Wang; Hao Li; Hao Jiang
-
-**ID:** 155373\-\-3 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 155373
-
-[Paper](<https://openreview.net/forum?id=67jpPq2Bsk>) | [PDF](<https://openreview.net/pdf?id=67jpPq2Bsk>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155373>)
-
-LLM multi\-agent systems rely on division of labor to solve complex tasks, but their execution can be blocked by contention for shared resources such as GPU test environments, CPU execution slots, and exclusive tool sessions\. Existing workflows, task allocation methods, and runtime schedulers usually arbitrate such access indirectly through workflow position, dependency structure, queue state, or resource metrics\. These criteria do not fully capture the value of satisfying a specific request, because request value is distributed across agents' local execution states and changes with tests, retries, and downstream results\. We propose a market\-based protocol for access arbitration in LLM multi\-agent systems\. Each agent converts its current plan and local execution state into a structured, budget\-constrained bid that signals relative urgency\. For asynchronous requests, an online clearing method based on optimal stopping decides when to close the clearing window, allocate access rights, settle payments, and track resource occupation until release\. Across three contention scenarios, Market reduces makespan by 5\.2\\%, 2\.5\\%, and 4\.9\\% relative to the strongest primary baselines, while improving task score by about two percentage points\.
-
-## Risk\-Calibrated Context Selection for Healthcare Multi\-Agent Handoff
-
-**Authors:** Manu Agrawal; Sumit Mukherjee
-
-**ID:** 154212\-\-3 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 154212
-
-[Paper](<https://openreview.net/forum?id=FLlWDrOo4c>) | [PDF](<https://openreview.net/pdf?id=FLlWDrOo4c>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154212>)
-
-Specialized agents collaborate by transferring memory: retrieved records, generated summaries, tool traces, and long\-running state\. In regulated domains this is a governance problem, not a retrieval problem: the receiver's task matters, but so does whether it was authorized to receive each item and whether the handoff exposed more than necessary\. We formalize minimum\-necessary context selection as a constrained submodular subset\-selection problem with an additive exposure cost and a distributional task\-success risk bound\. Our algorithm, ScopeSelect, first hard\-masks items whose layer or scope the receiver contract does not admit, then runs a cost\-benefit greedy selector against a monotone submodular utility, attaining a $\\\\frac\{1\}\{2\}\(1\-1/e\)$ approximation bound under a budget, and finally wraps threshold selection in Conformal Risk Control, giving a finite\-sample distribution\-free guarantee $\\\\mathbb\{E\}\[L\(S\_\{\\\\hat\{\\\\gamma\}\}\)\] \\\\le \\\\alpha$ on exchangeable calibration data\. We evaluate on HealthHandoff\-Bench, a synthetic benchmark with 21,600 healthcare\-agent handoff tasks across four workflows, and Synthea\-HH, a realism tier ingested from 340 Synthea\-generated FHIR bundles\. A three\-source blinded label audit compares benchmark labels, model\-generated labels, and clinical\-informatics expert review, with high agreement for sensitivity labels and policy\-boundary disagreements for necessity and authorization\. Against authorized TF\-IDF, embedding retrieval, a cross\-encoder reranker, and a calibrated LLM\-as\-selector, ScopeSelect is the only method meeting $\\\\alpha = 0\.15$ at competitive task success\. The hard\-mask safety property holds under 30% label noise, 100 adversarial attacks, and receiver\-role shift; a live\-LLM run with Claude Sonnet 4\.5 exhibits a calibration\-transfer gap that motivates per\-workflow recalibration\. We release the benchmark, Synthea\-HH pipeline, CRC calibration harness, and a signed\-handoff prototype\.
-
-## LLM\-Based Multi\-Agent Blackboard System for Information Discovery in Data Science
-
-**Authors:** Alireza Salemi; Mihir Parmar; Palash Goyal; Yiwen Song; Jinsung Yoon; Hamed Zamani; Tomas Pfister; Hamid Palangi
-
-**ID:** 151426\-\-3 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 151426
-
-[Paper](<https://openreview.net/forum?id=ao3zijumY7>) | [PDF](<https://openreview.net/pdf?id=ao3zijumY7>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151426>)
-
-Advances in large language models \(LLMs\) have created new opportunities in data science, but their deployment is often limited by the challenge of finding relevant data in large data lakes\. Existing methods struggle with this: both single\- and multi\-agent systems are quickly overwhelmed by large, heterogeneous files, and master–slave multi\-agent systems rely on a rigid central controller that requires precise knowledge of each sub\-agent’s capabilities, which is not possible in large\-scale settings where the main agent lacks full observability over sub\-agents’ knowledge and competencies\. We propose a novel multi\-agent paradigm inspired by the blackboard architecture for traditional AI models\. In our framework, a central agent posts requests to a shared blackboard, and autonomous subordinate agents\-\-either responsible for a partition of the data lake or retrieval from web\-\-volunteer to respond based on their capabilities\. This design improves scalability and flexibility by removing the need for a central coordinator to know each agent’s expertise or internal knowledge\. We evaluate the approach on three benchmarks that require data discovery: KramaBench and modified versions of DSBench and DA\-Code\. Results show that the blackboard architecture substantially outperforms strong baselines, achieving 13%–57% relative improvements in end\-to\-end success and up to a 9% relative gain in data discovery F1 over the best baseline\.
-
-## SceneFactory: GPU\-Accelerated Multi\-Agent Driving Simulation with Physics\-Based Vehicle Dynamics
-
-**Authors:** Yicheng Zhu; Yang Chen; Tao Li; Zilin Bian
-
-**ID:** 139016\-\-2 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 139016
-
-[Paper](<https://openreview.net/forum?id=qCvGezil5Y>) | [PDF](<https://openreview.net/pdf?id=qCvGezil5Y>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139016>)
-
-_Abstract unavailable from the accessible public sources._
-
-## When Parallelism Pays Off: Cohesion\-Aware Task Partitioning for Multi\-Agent Coding
-
-**Authors:** Xu Yang; Lunyiu Nie; Ethan Chandra; Stanislav Gannutin; Fangru Lin; Swarat Chaudhuri
-
-**ID:** 148594\-\-2 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 148594
-
-[Paper](<https://openreview.net/forum?id=wYda526jWp>) | [PDF](<https://openreview.net/pdf?id=wYda526jWp>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148594>)
-
-_Abstract unavailable from the accessible public sources._
-
-## Norm Enforcement for AI Agents: Robustly Shaping Behavior in Multi\-Agent Systems
-
-**Authors:** Yaowen Ye; Jacob Steinhardt
-
-**ID:** 151090\-\-2 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 151090
-
-[Paper](<https://openreview.net/forum?id=d3KYxJNekT>) | [PDF](<https://openreview.net/pdf?id=d3KYxJNekT>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151090>)
-
-_Abstract unavailable from the accessible public sources._
-
-## EVOCHAMBER:  Test\-Time Co\-evolution of Multi\-Agent System at Individual, Team, and Population Scales
-
-**Authors:** Yaolun Zhang; Tianyi Xu; Shengyu Dai; Zhenwen Shao; Qingyun Wu; Huazheng Wang
-
-**ID:** 150274\-\-2 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 150274
-
-[Paper](<https://openreview.net/forum?id=jNJFL5PPGJ>) | [PDF](<https://openreview.net/pdf?id=jNJFL5PPGJ>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150274>)
-
-_Abstract unavailable from the accessible public sources._
-
-## Ask KG Agent: A Multi\-Agent Framework for Code Localization Using Code and Knowledge Graphs
-
-**Authors:** Chanyoung Chung; JEEMIN KIM; Joyce Whang
-
-**ID:** 155386\-\-2 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 155386
-
-[Paper](<https://openreview.net/forum?id=62XPovBV57>) | [PDF](<https://openreview.net/pdf?id=62XPovBV57>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155386>)
-
-_Abstract unavailable from the accessible public sources._
-
-## NashDreamer: Model\-Based Reinforcement Learning for Zero\-Sum Imperfect\-Information Games
-
-**Authors:** Tomáš Holeček; Viliam Lisy
-
-**ID:** 151300\-\-2 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 151300
-
-[Paper](<https://openreview.net/forum?id=bTFUsffZ8O>) | [PDF](<https://openreview.net/pdf?id=bTFUsffZ8O>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151300>)
-
-_Abstract unavailable from the accessible public sources._
-
-## Reward Modeling for Multi\-Agent Orchestration
-
-**Authors:** King Yeung Tsang; Zihao Zhao; Vishal Venkataramani; Haizhou Shi; Zixuan Ke; Semih Yavuz; Shafiq Joty; Hao Wang
-
-**ID:** 155004\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 155004
-
-[Paper](<https://openreview.net/forum?id=9HnmEMnWjg>) | [PDF](<https://openreview.net/pdf?id=9HnmEMnWjg>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155004>)
-
-Multi\-Agent Systems \(MAS\) built on Large Language Models \(LLMs\) require effective orchestration to coordinate specialized agents, yet training such orchestrators is hindered by limited supervision and high computational cost\. We propose \*\*Orch\*\*estration \*\*R\*\*eward \*\*M\*\*odeling \(\*\*Orch\-RM\*\*\), a self\-supervised framework for evaluating orchestration quality without human annotations\. Orch\-RM leverages intermediate artifacts from multi\-agent executions to construct win\-lose pairs for Bradley\-Terry reward model training\. Unlike existing MAS test\-time scaling and orchestrator training frameworks that rely on costly sub\-agent rollouts, Orch\-RM operates directly at the orchestration level, enabling efficient and high\-performing reward\-guided orchestrator training and MAS test\-time scaling\. As shown in Figure 1, Orch\-RM improves training efficiency by up to 10$\\times$ in token usage while improving MAS test\-time scaling performance by up to 8\\% in accuracy\. These gains consistently transfer across multiple domains, including mathematical reasoning, web\-based question answering, and multi\-hop reasoning, demonstrating orchestration\-level reward modeling as a scalable direction for robust multi\-agent orchestration\.  Data, code, and trained models will be released upon publication\.
-
-## Sequential Probabilistic Uncertainty Estimation for Parallel Multi\-Agent Reasoning Systems
-
-**Authors:** Tunyu Zhang; Zihao Zhao; Yusong Zhao; Haizhou Shi; Zhuohang Li; Haoxian Chen; Hao Wang; Dimitris Metaxas
-
-**ID:** 153160\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 153160
-
-[Paper](<https://openreview.net/forum?id=NRg4W8EzfT>) | [PDF](<https://openreview.net/pdf?id=NRg4W8EzfT>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153160>)
-
-LLM\-based multi\-agent systems \(MAS\) have attracted growing attention for improving reasoning through interaction among multiple agents\. In this work, we focus on parallel multi\-agent reasoning systems, where several agents solve the same problem over multiple rounds and aggregate their outputs into a final answer\. Despite their strong reasoning performance, uncertainty estimation for such systems remains underexplored: the reliability of a MAS depends not only on individual generations, but also on how agents interact and evolve across rounds\. We propose SPI \(Sequential Probabilistic Inference\), a lightweight, training\-free uncertainty estimator that formulates MAS uncertainty as sequential inference over a latent system\-level belief\. SPI aggregates round\-level agreement and generation\-uncertainty signals through a filtering\-style update\. Across five backbones, six benchmarks, and two MAS protocols, SPI improves misclassification detection, selective prediction, and calibration over a broad set of uncertainty estimation baselines, including standard log\-likelihood\-based methods and MAS\-specific estimators\.
-
-## Convergence Guarantees for Federated SARSA with Local Training and Heterogeneous Agents
-
-**Authors:** Paul Mangold; Eloïse Berthier; Eric Moulines
-
-**ID:** 155534\-\-2 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 155534
-
-[Paper](<https://openreview.net/forum?id=4sFTcukOxE>) | [PDF](<https://openreview.net/pdf?id=4sFTcukOxE>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155534>)
-
-We present a novel theoretical analysis of Federated SARSA \(FedSARSA\) with linear function approximation and local training\. We establish convergence guarantees for FedSARSA in the presence of heterogeneity, both in local transitions and rewards, providing the first sample and communication complexity bounds in this setting\. At the core of our analysis is a new, exact multi\-step error expansion for single\-agent SARSA, which is of independent interest\. Our analysis precisely quantifies the impact of heterogeneity, demonstrating the convergence of FedSARSA with multiple local updates\. Crucially, we show that FedSARSA achieves linear speed\-up with respect to the number of agents, up to higher\-order terms due to Markovian sampling\. Numerical experiments support our theoretical findings\.
-
-## Exemplar2VQA: A Scalable Exemplar\-Driven Visual Question Answering Generation Framework via Multi\-Agent Coding
-
-**Authors:** Jiayu Ying; Qijian Tian; Ruijie Xu; Xinnan Zhu; Daoguo Dong; Jiachen Xu; Xin Tan
-
-**ID:** 150839\-\-2 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 150839
-
-[Paper](<https://openreview.net/forum?id=evkWoqTEUD>) | [PDF](<https://openreview.net/pdf?id=evkWoqTEUD>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150839>)
-
-_Abstract unavailable from the accessible public sources._
-
-## RADAR: Routing Agents via Difficulty\-Aware Recovery
-
-**Authors:** Haizhou Du; Jinze Zhao; Huaicheng Yan
-
-**ID:** 154283\-\-2 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 154283
-
-[Paper](<https://openreview.net/forum?id=Eyl3543VgD>) | [PDF](<https://openreview.net/pdf?id=Eyl3543VgD>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154283>)
-
-_Abstract unavailable from the accessible public sources._
-
-## ORBIT: A Framework for Multi\-Agent Security Evaluations
-
-**Authors:** Ben Hagag; William L Anderson; Srija Chakraborty; Christian Schroeder de Witt
-
-**ID:** 139033\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 139033
-
-[Paper](<https://openreview.net/forum?id=p1h5pUhxUi>) | [PDF](<https://openreview.net/pdf?id=p1h5pUhxUi>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139033>)
-
-Multi\-agent LLM systems are increasingly deployed for complex, long\-horizon tasks or emerge as a natural consequence of agents interacting in the wild\. Yet, they often have significant security vulnerabilities: the flexible protocols that enable task generalization also expose novel threats, from cascading prompt injection to inter\-agent collusion\. Progress in defending against these threats has been slowed by a lack of empirical evaluations, requiring bespoke environment development for every new defense and making standardized comparison impossible\. Existing evaluations address isolated threat models or single\-agent settings, but none jointly vary attack, defense, and architecture across realistic multi\-agent environments\. To address this gap, we introduce ORBIT, a configurable evaluation framework for empirical multi\-agent security research, built on UK AISI's Inspect\. ORBIT provides configurable communication topologies, memory, scheduling, and agent roles\. It supports four threat types \(indirect prompt injection, misuse, compromised agents, collusion\) and four defense strategies \(security prompting, guardian agents, monitors, dual\-LLM patterns\)\. The benchmark suite spans five scenario families covering browser use, computer use, agentic coding, customer service, and cooperative allocation\. Using ORBIT, we conduct controlled experiments varying defenses, attacks, topologies, and models\. We find evidence of significant gaps in defense transferability across threats, security–performance tradeoffs, and interactions between architectural choices and defense effectiveness\. To accelerate empirical multi\-agent security work, we make ORBIT available open\-source at: https://anonymous\.4open\.science/r/orbit\-D1A9\.
-
-## MemCode: Discrete Semantic Representations for Long\-Term Agent Memory
-
-**Authors:** Xin Li; Liang Hu; Duoqian Miao; Ming Peng; Qi Zhang
-
-**ID:** 152904\-\-2 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 152904
-
-[Paper](<https://openreview.net/forum?id=PYZcd99axs>) | [PDF](<https://openreview.net/pdf?id=PYZcd99axs>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152904>)
-
-Long\-term memory remains a fundamental bottleneck for large language model \(LLM\) agents across sessions\. Existing systems typically adopt a write\-then\-retrieve paradigm, storing context\-dependent dialogue fragments and retrieving them via nearest\-neighbor search in continuous embedding space\. This design yields unstable access units and systematically misses logically related but lexically distant evidence\. We propose MemCode, a long\-term agent memory framework that couples retrieval\-oriented writing with discrete associative retrieval\. MemCode rewrites dialogue into self\-contained atomic memory units \(AMUs\), maps AMUs into a learnable codebook with isomorphic semantic quantization \(ISQ\), and uses codebook co\-occurrence topology as a retrieval path complementary to vector search\. For long\-term memory stores, MemCode separates online atomic writes from asynchronous offline consolidation\. On LongMemEval\-S and LoCoMo with GPT\-4o\-mini and Qwen3\-30B\-A3B\-Instruct\-2507 backbones, MemCode achieves the best overall accuracy while keeping per\-dialogue memory construction within roughly 40\-\-130 seconds, making it 3\-\-21$\\times$ faster than LightMem and over an order of magnitude faster than A\-MEM and MemoryOS\.
-
-## AutoformBot: Formalizing Mathematics at Scale
-
-**Authors:** Ahmad Rammal; Niket Patel; Fabian Gloeckle; Amaury Hayat; Julia Kempe; Remi Munos; Charles Arnal; Vivien Cabannes
-
-**ID:** 150745\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 150745
-
-[Paper](<https://openreview.net/forum?id=fhuGQ1zcqk>) | [PDF](<https://openreview.net/pdf?id=fhuGQ1zcqk>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150745>)
-
-We present AutoformBot, a multi\-agent system for building an \*\*A\*\*utoformalized \*\*T\*\*extbook \*\*L\*\*ibrary \*\*A\*\*t \*\*S\*\*cale \(ATLAS\) in Lean 4\. AutoformBot orchestrates thousands of LLM agents, equipped with formal verification tools, dependency\-aware task scheduling, and collaborative version control, to translate informal textbook prose into machine\-checked definitions and proofs\. We apply our methods to a corpus of over \*20\* open\-access textbooks spanning analysis, algebra, topology, combinatorics, and probability, producing ATLAS: a verified library of over \*\*50,000\*\* Lean 4 declarations and \*\*500 thousand\*\* lines of code\. We release two artifacts: \(i\) AutoformBot, the open\-source multi\-agent framework; and \(ii\) ATLAS, the resulting formal library\. Our results suggest that autoformalizing the core content of graduate\-level mathematics at scale is now economically and technically feasible\. This opens the door to the automated verification of both human\- and machine\-generated mathematics at a research level\.
+Automated multi\-agent systems offer clear advantages over manually designed ones in scalability and adaptability, but existing workflow topology methods still face important limitations\. Search\-based methods are often computationally expensive, textual\-gradient\-based methods rely on coarse\-grained feedback, and existing generation\-based methods are not well suited to discrete workflow topologies with complex dependencies\. To address these limitations, we propose FlowMAS, a multi\-agent workflow topology method based on Generative Flow Networks \(GFlowNets\)\. FlowMAS models workflow generation as reward\-guided flow over the topology space and introduces three components: a GFlowNet\-based topology generation backbone, a curiosity\-driven module for structure\-aware exploration, and an information\-guided optimization module for evaluating intermediate topologies\. Concretely, the curiosity\-driven module encourages exploration of structurally novel workflows, while the information\-guided module measures both the information contribution and the communication efficiency of different operators to favor more informative and effective collaboration patterns\. Experiments on six benchmark datasets with three LLM backbones show that FlowMAS consistently outperforms multiple baselines\.
 
 ## Behavioral Probes for Information Flow in LLM Swarms
 
@@ -1454,27 +786,275 @@ Large language models \(LLMs\) are increasingly deployed as interactive agents, 
 
 We present the PokéAgent Challenge, a large\-scale benchmark for decision\-making research built on Pokémon's multi\-agent battle system and expansive role\-playing game \(RPG\) environment\. Partial observability, game\-theoretic reasoning, and long\-horizon planning remain open problems for frontier AI, yet few benchmarks stress all three simultaneously under realistic conditions\. PokéAgent targets these limitations at scale through two complementary tracks: our Battling Track, which calls for strategic reasoning and generalization under partial observability in competitive Pokémon battles, and our Speedrunning Track, which requires long\-horizon planning and sequential decision\-making in the Pokémon RPG\. Our Battling Track supplies a dataset of 20M\+ battle trajectories alongside a suite of heuristic, RL, and LLM\-based baselines capable of high\-level competitive play\. Our Speedrunning Track provides the first standardized evaluation framework for RPG speedrunning, including an open\-source multi\-agent orchestration system that enables modular, reproducible comparisons of harness\-based LLM approaches\. Our NeurIPS 2025 competition validates both the quality of our resources and the research community's interest in Pokémon, with more than 100 teams competing across both tracks and winning solutions detailed in our paper\. Participant submissions and our own baselines reveal considerable gaps between generalist \(LLM\), specialist \(RL\), and elite human performance\. Analysis against the BenchPress evaluation matrix shows that Pokémon battling is nearly orthogonal to standard LLM benchmarks, measuring capabilities not captured by existing evaluation suites and positioning Pokémon as an unsolved benchmark that can drive RL and LLM research forward\. We transition from the NeurIPS 2025 competition to a living benchmark by releasing a live leaderboard for Battling and self\-contained evaluation for Speedrunning at https://pokeagentchallenge\.com\.
 
-## CASPIAN: Online Detection and Attribution of Cascade Attacks in LLM Multi\-Agent Systems via Cross\-Channel Causal Monitoring
+## MAGE: Multi\-Agent Self\-Evolution with Co\-Evolutionary Knowledge Graphs
 
-**Authors:** Kavana Venkatesh; Jafar Isbarov; Saad Amin; Murat Kantarcioglu; Jiaming Cui
+**Authors:** Ruiyi Yang; Zechen Li; Hao Xue; Imran Razzak; Flora Salim
 
-**ID:** 150932\-\-2 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
+**ID:** 150998 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-**Repeated source row:** 150932
+[Paper](<https://openreview.net/forum?id=dhUiKcjH2m>) | [PDF](<https://openreview.net/pdf?id=dhUiKcjH2m>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150998>)
 
-[Paper](<https://openreview.net/forum?id=eERJSSfRu8>) | [PDF](<https://openreview.net/pdf?id=eERJSSfRu8>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150932>)
+Self\-evolving language\-model agents must decide what to learn next and how to preserve what they have learned across iterations\. Existing systems typically carry this cross\-iteration knowledge as natural\-language feedback, flat episodic memory, or implicit reinforcement signals, none of which cleanly supports a frozen weak backbone at inference time\. This paper introduces \*\*MAGE\*\* \(\*\*M\*\*ulti\-\*\*A\*\*gent \*\*G\*\*raph\-guided \*\*E\*\*volution\), a framework that externalizes self\-knowledge into a four\-subgraph co\-evolutionary knowledge graph\. Its experience subgraph stores both teacher\-written failure corrections and the learner's own past correct reasoning traces, which are retrieved as task\-conditioned guidance for a frozen execution model\. During evolution, the graph, a task\-level search bandit, and a skill\-level routing bandit are updated from the same reward stream, while the learner's backbone remains unchanged\. We further provide structural analysis showing how append\-only memory growth, bounded curriculum coverage, and task\-filtered retrieval together support stable improvement of the retrieval substrate for frozen\-learner evolution\. Across nine benchmarks spanning mathematical reasoning, multi\-hop and open\-domain question answering, spatio\-temporal analysis, financial numerical reasoning, medical multiple\-choice, an open\-world survival game, and web navigation, \*\*MAGE\*\* achieves strong performance against prompt\-based frozen\-backbone baselines\. Ablations show that self\-harvested success traces and teacher\-written corrections are complementary, with success memories contributing most on reasoning\-template\-heavy tasks and corrective memories supporting harder composition and interaction settings\.
 
-_Abstract unavailable from the accessible public sources._
+## Zero\-Violation Regret for Cooperative Markov Games with Coupled Instantaneous Hard Constraints
 
-## Control Charts for Multi\-Agent Systems
+**Authors:** Jialei Liu; Ming Shi
 
-**Authors:** Hayden Helm; Carey E Priebe; Brandon Duderstadt
+**ID:** 149243 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-**ID:** 156073 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+[Paper](<https://openreview.net/forum?id=rs7y3hD1Ot>) | [PDF](<https://openreview.net/pdf?id=rs7y3hD1Ot>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149243>)
 
-[Paper](<https://openreview.net/forum?id=0ef8FCdBWk>) | [PDF](<https://openreview.net/pdf?id=0ef8FCdBWk>) | [Official poster](<https://neurips.cc/virtual/2026/poster/156073>)
+Safety\-critical multi\-agent systems require agents to learn coordinated behaviors while avoiding unsafe actions throughout learning\. Existing safe reinforcement learning theory has established zero\-violation guarantees for single\-agent Markov decision processes with instantaneous hard constraints, while much of safe multi\-agent reinforcement learning focuses on cumulative constraints, policy optimization, or shielding\. We study a stricter setting: cooperative Markov games with unknown dynamics and coupled instantaneous hard constraints, where a joint action must be safe at every time step of every episode\. This setting introduces challenges absent from the single\-agent case: actions that are locally safe for individual agents may be unsafe jointly, unsafe joint actions can affect future feasible regions, and naive reductions to single\-agent safe RL suffer exponential dependence on the number of agents\. We propose a graph\-structured safe learning algorithm that constructs conservative multi\-agent safety certificates and explores optimistically only within certified safe joint subgraphs\. Under structured coupling assumptions, the algorithm guarantees zero constraint violation with high probability and achieves sublinear regret against the optimal safe joint policy, with complexity depending on local interaction structure rather than the full joint action space\.
 
-Generative agents have proven to be powerful assistants in a wide variety of contexts\. Given this success, users are now deploying agents with minimal restrictions in open ended, multi\-agent environments\. Current methods for measuring the dynamics of open\-ended multi\-agent systems are limited to qualitative inspection\. In this paper, we extend the process\-theoretic notion of adaptive control charts to multi\-agent systems to enable automated monitoring\. Using simulation, we demonstrate that adaptive control charts are necessary for monitoring multi\-agent systems that can learn from their environment\. We further demonstrate, both empirically and theoretically, that adaptive control charts are susceptible to adversarial agents that defect sufficiently slowly\. These results illustrate a fundamental tradeoff in multi\-agent system control: either agents in a system cannot learn \\textit\{or\} the system is susceptible to adversaries\.
+## HoloCode: A Code\-Centric Multi\-Agent Framework for Image\-to\-3D Scene Generation
+
+**Authors:** Hanlin Chen; Chung\-Ching Lin; Yuyang Zhao; Dongyue Lu; Zhengyuan Yang; Xiaofei Wang; Kevin Lin; Zhendong Wang; Yu Yang; Lijuan Wang
+
+**ID:** 152551 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=SHfDjzXoTd>) | [PDF](<https://openreview.net/pdf?id=SHfDjzXoTd>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152551>)
+
+Image\-to\-3D scene generation must recover both object geometry and plausible spatial relations\. A common diffusion\-based pipeline, exemplified by SAM 3D, generates each object separately and assembles the results\. This preserves local details, but the lack of strong scene\-level constraints often causes floating objects, interpenetrations, missing contacts, or implausible relative scales\. Inspired by human designers who plan a layout before placing assets, we introduce \\ours\{\}, a code\-centric multi\-agent framework\. Given a single image and 2D localization cues, a vision\-language model \(VLM\)\-based Arranger Agent predicts executable Blender Python layout code with object identities and 3D transforms\. A Modeler Agent binds each object to geometry through asset retrieval or image\-to\-3D object generation, and a Refiner Agent renders the scene and edits the code from visual feedback\. The code representation exposes object names, positions, rotations, and scales, making generated scenes editable and interpretable\. We train the code\-generating agents using Blender Python datasets built from SAGE and 3D\-FRONT, then further optimize them with GRPO rewards for executability and spatial alignment\. Experiments in in\-domain and cross\-domain settings show that \\ourMethod\{\} improves scene\-level plausibility while preserving object fidelity\.
+
+## Integrating Strengths of Different Multi\-Agent Workflows via Step\-Aware Hybrid Topology Planning
+
+**Authors:** Jingxuan Yu; Ju Jia; Yiqian Chen; Yuchong Chen; Cong Wu; Di Wu; Siqi Ma; Jie Gui
+
+**ID:** 153499 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=KvZcSEq1b8>) | [PDF](<https://openreview.net/pdf?id=KvZcSEq1b8>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153499>)
+
+Large language model \(LLM\)\-driven agents are proposed for a wide range of applications\. As scenarios become increasingly composite, a graph\-structured multi\-agent system \(MAS\) offers a promising solution due to the orchestration of various skills\. To architect a reasonable underlying workflow, recent advances mostly investigate two structures: sequential topology and decentralized topology\. The former constrains the structure into a directed acyclic graph for multi\-step executions but lacks sufficient scalability, while the latter leverages node\-wise subgraphs for knowledge aggregation with synchronous parallelization but lacks long\-term planning\. Therefore, our key insight is that their strengths are mutually complementary\. Driven by this motivation, we introduce step\-aware hybrid topology for a MAS, where sequential connections support inter\-step ordered planning and decentralized connections promote intra\-step perspective integration\. Concretely, to effectively coordinate different structural components, we clarify the corresponding topological definition and the protocols for step\-wise serialization and parallelization\. Subsequently, to dynamically refine desired structures, we introduce the parameterized distribution of a hybrid topology, which is initialized by LLM\-driven graph planning\. Eventually, to further reduce token consumption and time complexity, we supplement the topological density and length normalization for end\-to\-end learning\. Extensive experiments demonstrate that the hybrid topology outperforms single\-form topology in 90\.4\\% of tasks, our agentic initialization improves learning in 88\.8\\% of scenarios, proposed normalizations reduce token consumption by 20\\%$\\sim$30\\% and time consumption by 7\\%$\\sim$13\\% with a slight utility fluctuation\. The code is available at https://anonymous\.4open\.science/r/HTAS\-D107\.
+
+## Coordination Connectivity: Shared Initialization Shapes the Joint\-Policy Landscape in MARL
+
+**Authors:** Yixiang Fan; Zhiqiang Pu; Hao Ma; Dongmin Li; Weihao Zhang; Yinxing Dai; Shijie Zheng; Jingjing Huang
+
+**ID:** 154512 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=D2HpZYZ8aI>) | [PDF](<https://openreview.net/pdf?id=D2HpZYZ8aI>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154512>)
+
+Mode connectivity studies reveal that high\-performing neural networks are often connected by low\-loss paths in parameter space\. We investigate the analogue of this phenomenon in cooperative multi\-agent reinforcement learning \(MARL\), where a solution is not a single model but a team of decentralized policies\. We introduce coordination connectivity, a diagnostic evaluating whether linear interpolation between the actor parameters of two trained policy teams preserves high team return\. The resulting coordination barrier measures whether two successful teams are separated by a performance cliff along the joint\-policy path\. We evaluate this diagnostic on the StarCraft Multi\-Agent Challenge \(SMAC\) across five controlled training histories, isolating the effects of shared initialization, continued training, parameter decoupling, and HAPPO\-style separate\-actor specialization\. Across three SMAC maps and four seeds, policy teams derived from a shared MAPPO checkpoint exhibit near\-zero interpolation barriers, even after non\-shared specialization\. In contrast, interpolation paths involving independently trained HAPPO teams exhibit substantially larger barriers\. Mixed\-team assembly, single\-agent hot\-swap, clone\-all, role\-swap, and weight\-space probes further indicate that shared\-initialized agents specialize into distinct roles while remaining within a low\-barrier coordination component\. These results suggest that shared initialization implicitly structures the joint\-policy space of cooperative MARL, providing a mode\-connectivity\-inspired lens for analyzing coordination, specialization, and same\-source cross\-version team compatibility\.
+
+## Market Regime Council for Dynamic Credit Assignment in Multi\-Agent LLM Decision Systems
+
+**Authors:** Yunhua Pei; Zerui Ge; Jin Zheng; John Cartlidge
+
+**ID:** 148428 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=xuhyMmn0D0>) | [PDF](<https://openreview.net/pdf?id=xuhyMmn0D0>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148428>)
+
+Multi\-agent LLM decision systems for portfolio management still lack a principled way to assign credit across specialist agents, remain vulnerable to cold\-start dominance under regime shifts, and offer limited transparency into how final allocations are formed\.  We propose Market Regime Council \(MRC\), a cooperative multi\-agent decision system that computes exact Shapley credits across all single, pairwise, and Grand\-coalition outputs for online agent weighting\. Instantiated with $N\{=\}3$ specialist agents, at each trading period, MRC recomputes coalition\-based Shapley weights from exponentially weighted performance histories, uses a Bayesian adaptive mixture to stabilize early periods, applies regime\-dependent multipliers to adjust agent authority, and records each rebalance through a five\-layer causal trace\. Over 1,037 trading days across 13 crypto assets and five seeds, MRC achieves a Sharpe ratio of 1\.51 and a cumulative return of 440\.1\\%, ranking first on CR, SR, and IR among active baselines and attaining the lowest MDD among active methods\. Ablation results show that the gains come from Shapley\-weighted integration across coalition outputs rather than from any single stage in isolation\. Code and demo data are included in the supplementary material\.
+
+## Learning When to Collaborate: Selective Multi\-Agent Medical Reasoning via Uncertainty\-Aware Routing
+
+**Authors:** Jiacheng Hou; Xueliang Cui; Dan Lu; Ruxin Wang
+
+**ID:** 148185 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=zf8s1ZPTZE>) | [PDF](<https://openreview.net/pdf?id=zf8s1ZPTZE>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148185>)
+
+Multi\-agent systems have emerged as a promising paradigm for multimodal medical reasoning, but existing methods rely on two assumptions that hinder practical deployment: \(i\) always\-active dense collaboration among multiple agents, and \(ii\) dependence on large cloud\-based models that raise privacy and efficiency concerns\. In this paper, we challenge both assumptions and propose SMART\-Med, a fully local multi\-agent method that treats collaboration as a learnable decision rather than a default behavior\. Our key insight is that not every medical query requires costly multi\-agent deliberation: many can be reliably solved by a single well\-trained agent, while only uncertain cases benefit from expert collaboration\. Based on this insight, SMART\-Med introduces an uncertainty\-driven routing mechanism that adaptively decides when to answer directly and when to recruit a small subset of expert agents, effectively converting dense multi\-agent reasoning into selective, query\-adaptive coordination\. To make this routing reliable, we curate a new multimodal medical dataset MedVR\-3K with high\-quality reasoning traces and a difficulty hierarchy, and then fine\-tune local agents using GRPO with two complementary rewards: a certainty\-aware accuracy reward and a vision\-language reward model for correctness and reasoning quality respectively\. Experiments on four medical visual question answering benchmarks show that SMART\-Med achieves competitive performance compared to existing MAS approaches while substantially reducing inference cost \(reducing inference time by more than 3\.8$\\times$ and token usage by 72\\%\)\. Moreover, after fine\-tuning on MedVR\-3K, SMART\-Med yields an average improvement of 6\.7\\% across Slake, PathVQA, VQA\-RAD, and PMC\-VQA\. Our results suggest that selective collaboration can be an efficient yet effective alternative to dense collaboration and enable practical, privacy\-preserving deployment of multi\-agent medical AI\.
+
+## Agent2World: Learning to Generate Symbolic World Models via Adaptive Multi\-Agent Feedback
+
+**Authors:** Mengkang Hu; Bowei Xia; Yuran Wu; Ailing Yu; Yude Zou; Qiguang Chen; Shijian Wang; Jiarui Jin; Kexin Li; Wenxiang Jiao; Yuan Lu; Ping Luo
+
+**ID:** 155447 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=5YAV5SEvXG>) | [PDF](<https://openreview.net/pdf?id=5YAV5SEvXG>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155447>)
+
+Symbolic world models \(e\.g\., PDDL domains or executable simulators\) are central to model\-based planning, but training LLMs to generate such world models is limited by the lack of large\-scale verifiable supervision\. Current approaches rely primarily on static validation methods that fail to catch behavior\-level errors arising from interactive execution\. In this paper, we propose Agent2World, a tool\-augmented multi\-agent framework that achieves strong inference\-time world\-model generation and also serves as a data engine for supervised fine\-tuning, by grounding generation in multi\-agent feedback\. Agent2World follows a three\-stage pipeline: \(i\) A Deep Researcher agent performs knowledge synthesis by web searching to address specification gaps; \(ii\) A Model Developer agent implements executable world models; And \(iii\) a specialized Testing Team conducts adaptive unit testing and simulation\-based validation\. Agent2World demonstrates superior inference\-time performance across three benchmarks spanning both Planning Domain Definition Language \(PDDL\) and executable code representations, achieving consistent state\-of\-the\-art results\. Beyond inference, Testing Team serves as an interactive environment for the Model Developer, providing behavior\-aware adaptive feedback that yields multi\-turn training trajectories\. The model fine\-tuned on these trajectories substantially improves world\-model generation, yielding an average relative gain of 30\.95% over the same model before training\.
+
+## RIGOR: Risk\-Gated Topology Adaptation for Robust LLM Multi\-Agent Reasoning
+
+**Authors:** Fengyuan Ran; Yikuan Wang; Yanming Li; Wenjie Lu; Tongtong Wu; Senquan Yi; Yuheng Wang; Qiqi Lin; Yuxin Wu; Minghui Zhou; Naiqiang Tan; Li Shen
+
+**ID:** 155746 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=3IhTtHSifz>) | [PDF](<https://openreview.net/pdf?id=3IhTtHSifz>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155746>)
+
+LLM\-based multi\-agent systems \(MAS\) improve complex reasoning through collaborative decomposition, verification, and synthesis, but their performance can degrade sharply when compromised agents inject misleading intermediate messages\. Existing topology methods rely on fixed communication patterns or query\-adaptive graphs, but rarely infer or intervene runtime reliability risk, leaving them fragile when compromised agents vary across queries\. We study stochastic adversarial topology adaptation, where compromised agents shift across graph positions and rare cascades dominate the high\-loss tail\. To address this setting, we propose RIGOR, a topology\-adaptation framework that couples runtime risk inference with tail\-aware training\. RIGOR combines Risk\-Gated Topology Construction \(R\-GTC\), which probes agent behavior, estimates per\-agent risk, and edits the graph through soft quarantine and edge masking, with CVaR\-Guided Robust Optimization \(C\-GRO\), which trains the editor on high\-loss episodes rather than average gain alone\. Across six benchmarks and two backbones, RIGOR consistently outperforms existing MAS baselines under query\-varying misleading\-message attacks, achieving an average 21\.09\\% accuracy improvement over the strongest baseline on Qwen3\.5\-35B\-A3B\. Tail\-subset and position\-wise analyses further show that these gains stem from improved robustness against worst\-case cascades and dynamically changing compromised\-agent positions\. The code is available for anonymous access at https://anonymous\.4open\.science/r/RIGOR\-0D7D\.
+
+## ROTATE: Regret\-driven Open\-ended Training for Ad Hoc Teamwork
+
+**Authors:** Caroline Wang; Muhammad Arrasy Rahman; Benjamin Nativi; Johnny Liu; Jiaxun Cui; Yoonchang Sung; Peter Stone
+
+**ID:** 150582 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=h76k7u9S4o>) | [PDF](<https://openreview.net/pdf?id=h76k7u9S4o>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150582>)
+
+Learning to collaborate with previously unseen partners is a fundamental generalization challenge, known as Ad Hoc Teamwork \(AHT\)\. Existing methods often adopt a two\-stage pipeline: first, a fixed population of teammates is generated, and second, an AHT agent is trained to collaborate with them\. This separation limits coverage of behaviors and ignores whether the generated teammates are informative for the AHT agent to learn from\. On the other hand, AHT agents are typically trained under the assumption that the training teammate set is uncontrollable, despite the fact that its composition strongly influences generalization\. This paper presents a unified framework for AHT by reformulating the problem as an open\-ended learning process between an AHT agent and an adversarial teammate generator\. We introduce ROTATE, a regret\-driven, open\-ended training algorithm that alternates between improving the AHT agent and generating teammates that probe its collaboration deficiencies\. Experiments across Overcooked and Level\-Based Foraging tasks demonstrate that ROTATE significantly outperforms baselines on an unseen set of teammates, establishing a new standard for robust, generalizable teamwork\.
+
+## Policy\-Level Exploration for Coordinated Multi\-Agent Reinforcement Learning
+
+**Authors:** Yucong Zhang; Chao Yu
+
+**ID:** 154020 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=GqILfCgsZe>) | [PDF](<https://openreview.net/pdf?id=GqILfCgsZe>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154020>)
+
+In multi\-agent reinforcement learning \(MARL\), agents must not only discover high\-reward behaviours but also reliably reproduce coordinated behaviours over time\. A fundamental challenge arises from a mismatch between action\-level stochastic exploration and temporally extended coordination\. To address this issue, we propose a policy\-level exploration framework with Deterministic Action Execution \(DAE\) for MARL, which shifts locally random action exploration to temporally extended policy selection via an option\-based exploration mechanism\. Specifically, at each time step, each agent selects a policy from a shared policy set\\textemdash comprising one exploitation policy and multiple exploration policies\\textemdash using a learned option policy, and actions are executed deterministically conditioned on the selected policy\. By maintaining deterministic execution under temporally extended policy selection, DAE facilitates temporally coordinated behaviours across multiple time steps\. Comprehensive experiments on four multi\-agent tasks\\textemdash Predator Prey, StarCraft II micro management challenge \(SMAC\), SMACv2, Google Research Football, and Multi\-Agent Coordination benchmark \(MACO\)\\textemdash demonstrate that DAE outperforms mainstream baselines, achieving superior sample efficiency and final learning performance\.
+
+## Paradoxes of Game Theoretic Equilibria and Price of Anarchy
+
+**Authors:** Georgios Piliouras; Ian Gemp; Siqi Liu; Luke Marris
+
+**ID:** 150825 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=f1cGnSFoPg>) | [PDF](<https://openreview.net/pdf?id=f1cGnSFoPg>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150825>)
+
+Static equilibria—Nash, Correlated \(CE\), and Coarse Correlated Equilibria \(CCE\)—and the Price of Anarchy \(PoA\) provide essential, tractable benchmarks for multi\-agent systems\. However, evaluating learning dynamics purely through $C^0$ fixed points and discrete empirical distributions abstracts away critical $C^1$ vector field information\. We demonstrate that this reduction diverges significantly from physical learning trajectories\. First, the worst\-case pure Nash equilibria anchoring canonical PoA bounds mathematically manifest as strict saddles—and in canonical instances, even as global maxima of the exact potential; because they are topologically unstable repellers, natural learning actively bypasses these theoretical inefficiency bounds\. Additionally, the PoA metric itself exhibits algebraic sensitivity; relaxing syntactic constraints to accommodate data\-driven, strictly positive affine cost models renders the Price of Anarchy unbounded\. Furthermore, evaluating algorithms strictly through time\-averaged regret minimization to reach CCE or Proximal CE \(PCE\) structurally permits convergence to strictly dominated strategies\. Even enforcing optimal $O\(1/T\)$ swap\-regret minimization provably accommodates chaotic limit sets in minimal normal\-form games\. Finally, in non\-atomic congestion games, discrete\-time learning natively bifurcates into Li\-Yorke chaos, driving time\-averaged inefficiency to scale exponentially as $2^p$, diverging from static sub\-linear bounds\. Collectively, these findings highlight the necessity of augmenting classical algebraic frameworks with dynamically grounded metrics\.
+
+## Optimizing Social Utility in Sequential Experiments
+
+**Authors:** Ander Artola Velasco; Stratis Tsirtsis; Manuel Rodriguez
+
+**ID:** 149723 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=nrvMKHyUXB>) | [PDF](<https://openreview.net/pdf?id=nrvMKHyUXB>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149723>)
+
+Regulatory approval of products in high\-stakes domains such as drug development requires statistical evidence of safety and efficacy through large\-scale randomized controlled trials\. However, the high financial cost of these trials may deter developers who lack absolute certainty in their product's efficacy, ultimately stifling the development of \`moonshot' products that could offer high social utility\. To address this inefficiency, in this paper, we introduce a statistical protocol for experimentation where the product developer \(the agent\) conducts a randomized controlled trial sequentially and the regulator \(the principal\) partially subsidizes its cost\. By modeling the protocol using a belief Markov decision process, we show that the agent's optimal strategy can be found efficiently using dynamic programming\. Further, we show that the social utility is a piecewise linear and convex function over the subsidy level the principal selects, and thus the socially optimal subsidy can also be found efficiently using divide\-and\-conquer\. Simulation experiments using publicly available data on antibiotic development and approval demonstrate that our statistical protocol can be used to increase social utility by more than $35$% relative to standard, non\-sequential protocols\.
+
+## Automatic Textbook Formalization
+
+**Authors:** Fabian Gloeckle; Ahmad Rammal; Charles Arnal; Remi Munos; Vivien Cabannes; Gabriel Synnaeve; Amaury Hayat
+
+**ID:** 151060 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=dIjnouVokl>) | [PDF](<https://openreview.net/pdf?id=dIjnouVokl>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151060>)
+
+We present a case study where an automatic AI system formalizes a textbook with more than 500 pages of graduate\-level algebraic combinatorics to Lean\. The resulting formalization represents a new milestone in textbook formalization scale and proficiency, moving from early results in undergraduate topology and restructuring of existing library content to a full standalone formalization of a graduate textbook\. The formalization comprises 130K lines of code and 5900 Lean declarations and was conducted within one week by a total of 30K Claude 4\.5 Opus agents collaborating in parallel on a shared code base via version control, simultaneously setting a record in multi\-agent software engineering with usable results\. The inference cost matches or undercuts what we estimate as the salaries required for a team of human experts, and we expect there is still the potential for large efficiencies to be made without the need for better models\. We make our code and the resulting Lean code base available open\-source\.
+
+## PurpleAudit: A Co\-Evolutionary Auditing Framework for Task Hijacking in Multi\-Agent Systems
+
+**Authors:** Tristan Bilot; Zhilu Zhang; Kay Liu; Mikhail Kuznetsov; Wei Ding
+
+**ID:** 139127 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=jWQ6jNKfWI>) | [PDF](<https://openreview.net/pdf?id=jWQ6jNKfWI>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139127>)
+
+Multi\-agent systems \(MASs\) are increasingly deployed for complex tasks, yet their security against indirect prompt injection remains poorly understood\. As frontier LLMs become more robust to injections with overtly malicious semantics, such as credential exfiltration, unauthorized transactions, or policy bypass, the residual attack surface shifts to task hijacking: an injection that silently redirects an MAS toward an attacker\-chosen alternative task plausibly within the agent's domain, such as the wrong patient's record, a competitor's product, or a different CVE\. There is no malicious verb to refuse, and existing benchmarks, designed around overtly malicious goals in single\-agent settings, do not characterize this surface\. We introduce PurpleAudit, an auditing framework that lets a practitioner stress\-test their own MAS against task hijacking and derive a tailored system\-prompt defense\. The framework couples 22 baseline attacks and four prompt/tool\-level defense baselines from the literature with a co\-evolutionary purple\-team procedure, in which red\- and blue\-team agents evolve stronger attacks and adaptive defenses by reasoning over each other's execution traces\. Applied across frontier backends on ten MASs and a real\-world MAS with live web access, PurpleAudit surfaces an MAS\-specific attack pattern that frames the injection as a prerequisite for completing the user's task, reaching 31\.26% ASR on Claude Opus 4\.5 under the framework's auditing protocol, where 22 baseline attacks fail entirely\. The co\-evolved defense suppresses both baseline and evolved attacks at negligible utility cost, transfers across reasoning\-capable backends, and operates at the prompt level with low deployment overhead\.
+
+## Mean\-Field Control on Sparse Graphs: From Local Limits to GNNs via Neighborhood Distributions
+
+**Authors:** Tobias Schmidt; Kai Cui
+
+**ID:** 149972 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=lod8FKUWPS>) | [PDF](<https://openreview.net/pdf?id=lod8FKUWPS>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149972>)
+
+Mean\-field control \(MFC\) offers a scalable solution to the curse of dimensionality in multi\-agent systems but traditionally hinges on the restrictive assumption of exchangeability via dense, all\-to\-all interactions\. In this work, we bridge the gap to real\-world network structures by proposing a rigorous framework for MFC on large sparse graphs\. We redefine the system state as a probability measure over decorated rooted neighborhoods, effectively capturing local heterogeneity\. Our central contribution is a theoretical foundation for scalable reinforcement learning in this setting\. We prove horizon\-dependent locality: for finite\-horizon problems, an agent's optimal policy at time t depends strictly on its \(T\-t\)\-hop neighborhood\. This result renders the infinite\-dimensional control problem tractable and underpins a novel Dynamic Programming Principle \(DPP\) on the lifted space of neighborhood distributions\. Furthermore, we formally and experimentally justify the use of Graph Neural Networks \(GNNs\) for actor\-critic algorithms in this context\. Our framework naturally recovers classical MFC as a degenerate case while enabling efficient, theoretically grounded control on complex sparse topologies\.
+
+## ORBIT: A Framework for Multi\-Agent Security Evaluations
+
+**Authors:** Ben Hagag; William L Anderson; Srija Chakraborty; Christian Schroeder de Witt
+
+**ID:** 139033 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=p1h5pUhxUi>) | [PDF](<https://openreview.net/pdf?id=p1h5pUhxUi>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139033>)
+
+Multi\-agent LLM systems are increasingly deployed for complex, long\-horizon tasks or emerge as a natural consequence of agents interacting in the wild\. Yet, they often have significant security vulnerabilities: the flexible protocols that enable task generalization also expose novel threats, from cascading prompt injection to inter\-agent collusion\. Progress in defending against these threats has been slowed by a lack of empirical evaluations, requiring bespoke environment development for every new defense and making standardized comparison impossible\. Existing evaluations address isolated threat models or single\-agent settings, but none jointly vary attack, defense, and architecture across realistic multi\-agent environments\. To address this gap, we introduce ORBIT, a configurable evaluation framework for empirical multi\-agent security research, built on UK AISI's Inspect\. ORBIT provides configurable communication topologies, memory, scheduling, and agent roles\. It supports four threat types \(indirect prompt injection, misuse, compromised agents, collusion\) and four defense strategies \(security prompting, guardian agents, monitors, dual\-LLM patterns\)\. The benchmark suite spans five scenario families covering browser use, computer use, agentic coding, customer service, and cooperative allocation\. Using ORBIT, we conduct controlled experiments varying defenses, attacks, topologies, and models\. We find evidence of significant gaps in defense transferability across threats, security–performance tradeoffs, and interactions between architectural choices and defense effectiveness\. To accelerate empirical multi\-agent security work, we make ORBIT available open\-source at: https://anonymous\.4open\.science/r/orbit\-D1A9\.
+
+## AgentRoom: Concurrent Multi\-Agent Coding in a CRDT\-Backed Shared Workspace
+
+**Authors:** Seonglae Cho; Donghyun Lee
+
+**ID:** 148882 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=uTjkLPcoGn>) | [PDF](<https://openreview.net/pdf?id=uTjkLPcoGn>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148882>)
+
+Concurrent multi\-agent coding promises division of labor across modules, robustness through redundancy, and parallel exploration at the natural granularity of multi\-file projects\. Realtime collaborative editing protocols solve this coordination problem for human teams via Conflict\-free Replicated Data Types \(CRDTs\), but the LLMs underneath generate one token at a time and existing multi\-agent coding systems inherit this serial limit: they either sequence agents through phase handoffs or pool independent samples without coordination, and a single agent abandons up to 70% of hard tasks with a one\-file stub\-and\-exit\. AgentRoom is a realtime collaborative editing protocol for concurrent coding agents: a runtime layer exposing file\-level claim, status, and broadcast as MCP tools on top of a CRDT\-merged shared filesystem\. Across five frontier coding\-CLI models on four backend coding tasks, alongside Python DevBench and Rust\+axum cross\-language checks, AgentRoom ×2 suppresses Solo abandonment on the CLI\-stable models and tightens run\-to\-run variance\. Two matched\-compute contrasts isolate the cause: parallel\-merge vs AgentRoom shows a positive mean LLM\-judge contrast, and a bundle probe attributes the gain primarily to the MCP coordination layer rather than to parallelism or substrate convergence alone\. Coordination, not parallelism or CRDT\-merge, is the load\-bearing engineering\.
+
+## On the Convergence of First\-Order Methods in Signaling Games
+
+**Authors:** Martin Bichler; Rilind Sahitaj; Artem Tsikiridis
+
+**ID:** 150896 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=ec2jJo4k7H>) | [PDF](<https://openreview.net/pdf?id=ec2jJo4k7H>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150896>)
+
+We study first\-order learning dynamics in Bayesian signaling games, a minimal extensive\-form model of strategic interaction under asymmetric information\. In these games, a Sender observes a private type and chooses a signal, after which a Receiver forms a posterior belief and selects an action\. This Bayesian belief update makes the induced learning field fundamentally different from the affine game\-gradient fields of normal\-form games\. Empirically, we find a sharp dichotomy: standard online learning algorithms reliably converge to strict Perfect Bayesian Equilibria \(PE\), but not to non\-strict ones\. We show that this behavior cannot be explained by the global geometric conditions commonly used to prove last\-iterate convergence, such as monotonicity or the Minty variational inequality\. Indeed, these conditions can fail even in binary signaling games\. Instead, we identify the relevant local geometry\. Our main result characterizes variational stability in finite signaling games: a PE is variationally stable if and only if it is strict\. This yields local last\-iterate convergence guarantees for online mirror descent and regularized dual averaging near every strict PE\. We then study global average\-iterate convergence and identify a class of signaling games in which  coarse\-trigger regret\-minimizing dynamics converge to the unique PE\. Finally, we complement the theory with experiments comparing projected gradient ascent, mirror\-based methods, optimistic variants, and PPO across canonical signaling\-game families\. The results position signaling games as a compact testbed for understanding how Bayesian belief formation reshapes the convergence geometry of multi\-agent learning\.
+
+## Towards High Semantic Fidelity: Hyperdimensional Symbolic Messages in Multi\-Agent Communication
+
+**Authors:** Shoucheng Song; Youfang Lin; Chang Yao; Hao Wu; Sheng Han; Kai Lv
+
+**ID:** 153552 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=KXTbANIGZW>) | [PDF](<https://openreview.net/pdf?id=KXTbANIGZW>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153552>)
+
+Semantic fidelity is essential for multi\-agent communication under non\-ideal channels, comprising transmission fidelity and conversion fidelity\. Yet existing numerical and neural message formats cannot simultaneously achieve both\.  To address this, we propose a novel message format\-\\textbf\{H\}yperdimensional \\textbf\{S\}ymbolic \\textbf\{M\}essages \(HSM\), and its corresponding communication framework \\textbf\{Herm\}\.  For transmission fidelity, Herm suppresses semantic entanglement via an entity\-attribute\-value structured encoding pipeline\. For conversion fidelity, Herm first leverages a receiver\-centric ego\-binding mechanism to align semantics\. Then, a similarity\-aware dual\-branch fusion module is proposed to prevent critical semantic dilution\. To realize explicit message\-semantic conversion,  we devise an iterative decoding scheme via algebraic inverse operation\. Experiments exhibit that Herm outperforms baselines across various noisy scenarios while maintaining superior structural readability\.
+
+## Market\-Based Runtime Resource Allocation for LLM Multi\-Agent Systems
+
+**Authors:** Yixue Huang; Mingxin Wang; Hao Li; Hao Jiang
+
+**ID:** 155373 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=67jpPq2Bsk>) | [PDF](<https://openreview.net/pdf?id=67jpPq2Bsk>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155373>)
+
+LLM multi\-agent systems rely on division of labor to solve complex tasks, but their execution can be blocked by contention for shared resources such as GPU test environments, CPU execution slots, and exclusive tool sessions\. Existing workflows, task allocation methods, and runtime schedulers usually arbitrate such access indirectly through workflow position, dependency structure, queue state, or resource metrics\. These criteria do not fully capture the value of satisfying a specific request, because request value is distributed across agents' local execution states and changes with tests, retries, and downstream results\. We propose a market\-based protocol for access arbitration in LLM multi\-agent systems\. Each agent converts its current plan and local execution state into a structured, budget\-constrained bid that signals relative urgency\. For asynchronous requests, an online clearing method based on optimal stopping decides when to close the clearing window, allocate access rights, settle payments, and track resource occupation until release\. Across three contention scenarios, Market reduces makespan by 5\.2\\%, 2\.5\\%, and 4\.9\\% relative to the strongest primary baselines, while improving task score by about two percentage points\.
+
+## Convergence Guarantees for Federated SARSA with Local Training and Heterogeneous Agents
+
+**Authors:** Paul Mangold; Eloïse Berthier; Eric Moulines
+
+**ID:** 155534 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=4sFTcukOxE>) | [PDF](<https://openreview.net/pdf?id=4sFTcukOxE>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155534>)
+
+We present a novel theoretical analysis of Federated SARSA \(FedSARSA\) with linear function approximation and local training\. We establish convergence guarantees for FedSARSA in the presence of heterogeneity, both in local transitions and rewards, providing the first sample and communication complexity bounds in this setting\. At the core of our analysis is a new, exact multi\-step error expansion for single\-agent SARSA, which is of independent interest\. Our analysis precisely quantifies the impact of heterogeneity, demonstrating the convergence of FedSARSA with multiple local updates\. Crucially, we show that FedSARSA achieves linear speed\-up with respect to the number of agents, up to higher\-order terms due to Markovian sampling\. Numerical experiments support our theoretical findings\.
+
+## Independent Learning of Nash Equilibria in Partially Observable Markov Potential Games with Decoupled Dynamics
+
+**Authors:** Philip Jordan; Maryam Kamgarpour
+
+**ID:** 150509 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=hZFxJatIxq>) | [PDF](<https://openreview.net/pdf?id=hZFxJatIxq>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150509>)
+
+We study Nash equilibrium learning in partially observable Markov games \(POMGs\), a multi\-agent reinforcement learning framework in which agents cannot fully observe the underlying state\. Prior work in this setting relies on centralization or information sharing, and suffers from sample and computational complexity that scales exponentially in the number of players\. We focus on a subclass of POMGs with independent state transitions, where agents remain coupled through their rewards, and assume that the underlying fully observed Markov game is a Markov potential game\. For this class, we present an independent learning algorithm in which players, observing only their own actions and observations and without communication, jointly converge to an approximate Nash equilibrium\. Due to partial observability, optimal policies may in general depend on the full action\-observation history\. Under a filter stability assumption, we show that policies based on finite history windows provide sufficient approximation guarantees\. This enables us to approximate the POMG by a surrogate Markov game that is near\-potential, leading to quasi\-polynomial sample and computational complexity for independent Nash equilibrium learning in the underlying POMG\.
+
+## Bench\-MFG: A Benchmark Suite for Learning in Stationary Mean Field Games
+
+**Authors:** Lorenzo Magnino; Jiacheng Shen; Matthieu Geist; Olivier Pietquin; Mathieu Lauriere
+
+**ID:** 139725 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=8CjE3pJACr>) | [PDF](<https://openreview.net/pdf?id=8CjE3pJACr>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139725>)
+
+The rise of Mean Field Games \(MFGs\) has fostered a growing family of algorithms designed to solve large\-scale multi\-agent systems\. However, the field currently lacks a standardized evaluation protocol, forcing researchers to rely on bespoke, isolated, and often simplistic environments\. This fragmentation makes it difficult to assess the robustness, generalization, and failure modes of emerging methods\. To address this gap, we propose a comprehensive benchmark suite for MFGs, focusing on the discrete\-time, discrete\-space, stationary settings\. We introduce a taxonomy of problem classes, ranging from no\-interaction and monotone games to potential and dynamics\-coupled games, and provide prototypical environments for each\. Furthermore, we present MF\-Garnets, a method for generating random MFG instances to facilitate rigorous statistical testing\. We benchmark a variety of learning algorithms across these environments, including a novel population\-based approach \(MF\-PSO\)\. Based on our knowledge, this is the first benchmark for MFGs\.
+
+## NashDreamer: Model\-Based Reinforcement Learning for Zero\-Sum Imperfect\-Information Games
+
+**Authors:** Tomáš Holeček; Viliam Lisy
+
+**ID:** 151300 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=bTFUsffZ8O>) | [PDF](<https://openreview.net/pdf?id=bTFUsffZ8O>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151300>)
+
+Model\-based reinforcement learning \(MBRL\) has achieved remarkable sample efficiency in single\-agent domains, yet its extension to competitive imperfect information games \(IIGs\) remains underexplored\. In multi\-agent settings, opponent\-induced non\-stationarity complicates the learning process, and decentralized model learning faces severe identifiability barriers\. To solve this, we propose NashDreamer, a principled MBRL framework for two\-player zero\-sum IIGs\. NashDreamer introduces a centralized Multi\-Agent Recurrent State\-Space Model \(MARSSM\) that decouples environment dynamics from the effect of players' strategies on their individual observations\. For policy optimization, NashDreamer uses Regularized Nash Dynamics \(RNaD\) within the latent imagination, providing theoretical convergence guarantees toward Nash equilibria\. Empirical evaluations across Imperfect Information Goofspiel, Leduc Hold'em and Battleship demonstrate that NashDreamer achieves vastly superior sample efficiency compared to model\-free baselines, including a $71\.0$\\% head\-to\-head win rate against model\-free RNaD in stochastic 13\-card Imperfect Information Goofspiel\. Finally, we theoretically analyze the architecture's optimization landscape, formally identifying the vulnerability of the Dreamer family of algorithms to posterior collapse in highly stochastic environments, and we highlight the open challenge of mitigating latent non\-stationarity without enabling degenerate solutions\.
+
+## ROAR: Benchmarking LMM Agents under Real\-Time Constraints in Multiplayer Action\-Shooter Games
+
+**Authors:** DAWEI WANG; Di Zhao; Jianran Yu; CHENGMING ZHOU; Marci Chi; Xiaoyang Liu; BEINING ZHANG; Shuliang Chu; Yun Sing Koh; Gary Ushaw; Richard Davison
+
+**ID:** 139122 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=jrkcJgEwSy>) | [PDF](<https://openreview.net/pdf?id=jrkcJgEwSy>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139122>)
+
+Large multimodal models \(LMMs\) are increasingly deployed as agents that perceive, reason, and act in interactive multi\-agent environments\. Yet most existing benchmarks for LMM\-based agents in multi\-agent settings remain turn\-based: the environment and other agents pause while an agent performs inference\. Such protocols obscure a fundamental challenge of real\-time constraints, where the world continues to evolve and delayed decisions may become outdated before execution\. Motivated by this limitation, we introduce ROAR, a multiplayer action\-shooter game environment for evaluating LMM\-based agents in multi\-agent settings under real\-time constraints\. ROAR covers cooperative, competitive, mixed cooperative\-competitive, and basic single\-agent scenarios\. We further propose a Multi\-Agent Asynchronous Gym interface that decouples environment evolution from agent reasoning by running the environment and each agent in separate threads, enabling the environment to advance at fixed time intervals without waiting for LMM inference and allowing agents to reason independently without blocking one another\. ROAR also features convenient deployment, multimodal observations, and customizable levels\. ROAR offers a practical testbed for advancing LMM\-based agents beyond static, turn\-based evaluation toward real\-time multi\-agent decision\-making\.
+
+## CANDO: Cooperative Agentic Network for Layout Design Optimization
+
+**Authors:** Athanasios Masouris; ZHENG JING; Benjamin S Chandler; Hadi Jamali\-Rad
+
+**ID:** 153174 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=NHvR8ej2Fu>) | [PDF](<https://openreview.net/pdf?id=NHvR8ej2Fu>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153174>)
+
+Layout generation for real\-world facilities is a challenging problem, requiring reasoning over irregular site boundaries, heterogeneous orientations, access\-aware placements, and motion\-planning feasibility\. Yet, most existing layout benchmarks in the generative AI space target simpler placements over rectangular domains and rely on distributional metrics such as FID and IoU that reward conformity to dataset priors, thus discounting design innovation\. Motivated by these gaps, we introduce $\\textbf\{ALPS\-Bench\}$, a benchmark of $1,000$ professionally annotated real\-world facility layouts paired with an instance\-specific scoring protocol grounded in a structured design manual\. As a strong baseline for $\\textbf\{ALPS\-Bench\}$, we propose $\\texttt\{CANDO\}$, a training\-free multi\-agent framework in which specialized agents iteratively refine layouts through a verification\-grounded loop, concentrating reasoning on strategic spatial decisions\. We demonstrate that $\\texttt\{CANDO\}$ surpasses state\-of\-the\-art baselines on the widely adopted $\\textbf\{PubLayNet\}$ and $\\textbf\{RICO\}$ benchmarks by a significant margin, establishing cooperative agentic design as a broadly effective recipe for constraint\-aware layout synthesis\. Code and benchmark will be released upon acceptance\.
 
 ## Auditing AI peer reviewers: a dose\-response and false\-positive benchmark on real scientific papers
 
@@ -1486,169 +1066,25 @@ Generative agents have proven to be powerful assistants in a wide variety of con
 
 LLM\-based peer review is now used at production scale, but rigorous evaluation remains limited\. We introduce a benchmark for evaluating AI peer reviewers’ detection of injected errors and quantifying false\-positive rates across error type, severity, prompting strategy, and reviewer architecture\. We also present skepthical, a multi\-agent AI reviewer that verifies citations by retrieving and reading cited papers, checks mathematics with computer algebra, audits numerical claims with code, and uses a cross\-model ensemble for general scientific issues\. On 15 astrophysics preprints containing 177 injected errors, we benchmark 12 reviewer systems: skepthical; six single\-LLM reviewers from three providers, each run with free\-form and structured prompts; two Claude Code reviewers using the same Claude model and tools, one with a free\-form prompt and one with a structured prompt; and three external reviewers\. Detection performance varies sharply by model, prompt, tool use, and error type\. Under the same free\-form prompt, three frontier LLMs differ by 48\.6 pp in total detection rate; a structured prompt halves this spread by improving the weaker models\. Within Claude Code, changing only the prompt from free\-form to structured raises detection by 32\.2 pp\. skepthical achieves the highest overall detection rate, 70\.6±6\.2%, with the best performance on general issues, 82\.2%, and citation errors, 46\.7%\. On numerical errors, it matches both GPT\-5\.5 configurations at 80\.0%, behind structured Claude Code at 91\.1%; on mathematics, its 73\.8% rate overlaps with both GPT\-5\.5 configurations within confidence intervals\. False\-positive rates also vary substantially: free\-form Opus 4\.7 has the lowest overall rate at 1\.0%, while skepthical is the only reviewer with no false\-positive failure mode jointly across mathematics, numerics, and citations, yielding a 2\.8% overall rate\. skepthical is deployed publicly at skepthical\-ai\.org, and we release the evaluation set as a benchmark\.
 
-## COOP$^2$: Defining, Observing, and Repairing Cooperation in LLM Multi\-Agent Systems
-
-**Authors:** Hanqing Yang; Narjes Nourzad; Shiyu Chen; Marie Siew; Jingdi Chen; Carlee Joe\-Wong
-
-**ID:** 139333\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 139333
-
-[Paper](<https://openreview.net/forum?id=WWrTVADZAi>) | [PDF](<https://openreview.net/pdf?id=WWrTVADZAi>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139333>)
-
-Many complex tasks require extended effort, diverse capabilities, or coordinated actions beyond what a single agent can provide\.  However, simply adding more agents does not guarantee better performance, as effective cooperation depends on how agents interact with each other and with task structure to satisfy evolving constraints over time\.  This challenge is amplified for LLM\-based multi\-agent systems \(LLM\-MAS\): plans, messages, and revisions occur in natural language, whereas task progress depends on grounded environment actions\.  Current evaluations mostly treat cooperation as an implicit ingredient of final task success, leaving both cooperation and the effect of multi\-agent interaction on task dynamics difficult to study\.  We introduce COOP$^2$, an evaluation framework that grounds high\-level agent cooperation dynamics in LLM\-MAS within task progress in the environment\. COOP$^2$ then defines cooperative tasks with verifiable cooperative requirements, allowing us to analyze how cooperation unfolds over time with respect to task progress, as well as where and why cooperation breaks down\. Building on this framework, we develop COOP$^2$\-Repair, which predicts constraint failures from group plans and opens targeted repair channels for guided revisions\. Across two environments and three communication structures, COOP$^2$\-Repair improves task success and constraint satisfaction while exposing the additional decision overhead and communication load required for repair\.
-
-## Robust Instruction Compliance in Cooperative Multi\-Agent Reinforcement Learning
-
-**Authors:** Wo Wei Lin; Ethan Rathbun; Enrico Marchesini; Xiang Zhi Tan
-
-**ID:** 148746\-\-3 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 148746
-
-[Paper](<https://openreview.net/forum?id=vMEXVo6MCM>) | [PDF](<https://openreview.net/pdf?id=vMEXVo6MCM>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148746>)
-
-Real\-world multi\-agent reinforcement learning \(MARL\) systems must operate autonomously while adapting to natural language instructions provided by humans\. These instructions arrive unpredictably, interrupt ongoing actions, and may conflict with long\-horizon objectives under partial observability\. Recent vision\-language models enable instruction following, but are computationally expensive and limited to single\-agent settings\. Conversely, MARL can handle long\-horizon coordination with macro\-actions, but assumes uninterrupted execution\. This work introduces macro\-action value cancellation for instruction compliance \(MAVIC\) to enable interruption\-aware MARL by bootstrapping the value of ongoing macro\-actions upon receiving instructions\. Agents can thus decouple task objective optimization from instruction\-driven overrides within a unified policy and re\-plan without destabilizing the underlying learning process\. MAVIC integrates with standard actor\-critic methods and achieves high instruction compliance while preserving base task performance across increasingly complex macro\-action benchmarks\.
-
-## Rethinking Credit Assignment in Cooperative MARL via Interventional Reward Response
-
-**Authors:** Chamjin Joo; Myounghoon Ha; Sang Wan Lee
-
-**ID:** 154206\-\-2 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 154206
-
-[Paper](<https://openreview.net/forum?id=FOmIe6PtvT>) | [PDF](<https://openreview.net/pdf?id=FOmIe6PtvT>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154206>)
-
-Credit assignment remains a central challenge in cooperative multi\-agent reinforcement learning \(MARL\), especially under partial observability, where individual policy updates may not accurately reflect each agent’s actual contribution to team outcomes\. While policy\-based methods such as MAPPO and IPPO provide strong optimization frameworks, their updates are typically derived from global rewards and observational value surrogates, without explicitly defining agent\-specific credit\. Misaligned credit signals can mislead individual policy improvement, resulting in inefficient coordination and weaker team performance\. We address this challenge by formulating agent\-level credit as an interventional reward response, using Proximal Causal Inference \(PCI\) to identify credit from observable proxies via an outcome bridge function\. Building on this identification strategy, we design a practical credit\-aligned update signal and integrate it into policy gradient methods\. Empirical evaluations on diagnostic and benchmark tasks demonstrate that the proposed credit signal improves policy learning under partial observability, highlighting proximal identification as a promising foundation for designing credit\-aware policy updates in cooperative MARL\. To the best of our knowledge, this work presents the first PCI\-based solution for online multi\-agent cooperation\.
-
-## To trust or not to trust: Attention\-based Trust Management for LLM Multi\-Agent Systems
-
-**Authors:** Pengfei He; Zhenwei Dai; Xianfeng Tang; Yue XING; Hui Liu; Jingying Zeng; Qiankun Peng; Shrivats Agrawal; Samarth Varshney; Suhang Wang; Jiliang Tang; Qi He
-
-**ID:** 149022\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 149022
-
-[Paper](<https://openreview.net/forum?id=tRFYHQFSH4>) | [PDF](<https://openreview.net/pdf?id=tRFYHQFSH4>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149022>)
-
-Large Language Model\-based Multi\-Agent Systems \(LLM\-MAS\) have demonstrated strong capabilities in solving complex tasks but remain vulnerable when agents receive unreliable messages\. This vulnerability stems from a fundamental gap: LLM agents treat all incoming messages equally without evaluating their trustworthiness\. While some existing studies approach trustworthiness, they focus on a single type of harmfulness rather than analyze it in a holistic approach from multiple trustworthiness perspectives\. We address this gap by proposing a comprehensive definition of trustworthiness inspired by human communication theory \\citep\{grice1975logic\}\. Our definition identifies six orthogonal trust dimensions that provide interpretable measures of trustworthiness\. Building on this definition, we introduce the Attention Trust Score \(A‑Trust\), a lightweight, attention‑based method for evaluating the trustworthiness of messages\. We then develop a principled trust management system \(TMS\) for LLM‑MAS that supports both message‑level and agent‑level trust assessments\. Experiments across diverse multi‑agent settings and tasks demonstrate that our TMS significantly improves robustness against malicious inputs\.
-
-## Multi\-agent Collaboration with State Management
-
-**Authors:** Mengyang Liu; Taozhi Chen; Zhenhua Xu; Xue Jiang; Yihong Dong
-
-**ID:** 151127\-\-2 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 151127
-
-[Paper](<https://openreview.net/forum?id=cneNwmDOF3>) | [PDF](<https://openreview.net/pdf?id=cneNwmDOF3>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151127>)
-
-_Abstract unavailable from the accessible public sources._
-
-## Market Regime Council for Dynamic Credit Assignment in Multi\-Agent LLM  Decision Systems
-
-**Authors:** Yunhua Pei; Zerui Ge; Jin Zheng; John Cartlidge
-
-**ID:** 148428\-\-2 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 148428
-
-[Paper](<https://openreview.net/forum?id=xuhyMmn0D0>) | [PDF](<https://openreview.net/pdf?id=xuhyMmn0D0>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148428>)
-
-_Abstract unavailable from the accessible public sources._
-
-## Agent2World: Learning to Generate Symbolic World Models via Adaptive Multi\-Agent Feedback
-
-**Authors:** Mengkang Hu; Bowei Xia; Yuran Wu; Ailing Yu; Yude Zou; Qiguang Chen; Shijian Wang; Jiarui Jin; Kexin Li; Wenxiang Jiao; Yuan Lu; Ping Luo
-
-**ID:** 155447\-\-2 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 155447
-
-[Paper](<https://openreview.net/forum?id=5YAV5SEvXG>) | [PDF](<https://openreview.net/pdf?id=5YAV5SEvXG>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155447>)
-
-_Abstract unavailable from the accessible public sources._
-
-## Multi\-Agent Coordination via Support\-Preserving Distillation
-
-**Authors:** Sangmin Lee; Youngju Na; Chanmi Lee; Sung\-eui Yoon
-
-**ID:** 152690\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 152690
-
-[Paper](<https://openreview.net/forum?id=R9LIGIKChN>) | [PDF](<https://openreview.net/pdf?id=R9LIGIKChN>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152690>)
-
-Offline MARL increasingly relies on generative policies to model multimodal joint behavior, typically by distilling a centralized teacher into decentralized one\-step actors under the CTDE\. We identify a failure mode at the teacher training stage: standard flow\-based teachers pair noise with replay targets independently, so nearby noise samples can be routed toward conflicting coordination modes\. The teacher then produces samples between valid modes, and because the distillation loss regresses each local actor onto the conditional mean of the teacher's output given local input, this error is not absorbed but propagated to the student\. To remove this teacher\-side artifact, we propose Mode\-Support Semi\-Discrete Optimal Transport \(MoSDOT\), which summarizes multimodal replay into a finite mode support with prescribed capacities and uses conditional semi\-discrete optimal transport to assign each noise sample to a single mode before teacher training\. We additionally study a common\-randomness variant that uses a shared noise component at execution to expose the residual gap intrinsic to strict\-product execution\. On controlled diagnostics and offline MARL benchmarks, MoSDOT improves endpoint quality and routing consistency, particularly on datasets exhibiting multimodal joint behavior\.
-
-## ROTATE: Regret\-driven Open\-ended Training for Ad Hoc Teamwork
-
-**Authors:** Caroline Wang; Muhammad Arrasy Rahman; Benjamin Nativi; Johnny Liu; Jiaxun Cui; Yoonchang Sung; Peter Stone
-
-**ID:** 150582\-\-2 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 150582
-
-[Paper](<https://openreview.net/forum?id=h76k7u9S4o>) | [PDF](<https://openreview.net/pdf?id=h76k7u9S4o>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150582>)
-
-Learning to collaborate with previously unseen partners is a fundamental generalization challenge, known as Ad Hoc Teamwork \(AHT\)\. Existing methods often adopt a two\-stage pipeline: first, a fixed population of teammates is generated, and second, an AHT agent is trained to collaborate with them\. This separation limits coverage of behaviors and ignores whether the generated teammates are informative for the AHT agent to learn from\. On the other hand, AHT agents are typically trained under the assumption that the training teammate set is uncontrollable, despite the fact that its composition strongly influences generalization\. This paper presents a unified framework for AHT by reformulating the problem as an open\-ended learning process between an AHT agent and an adversarial teammate generator\. We introduce ROTATE, a regret\-driven, open\-ended training algorithm that alternates between improving the AHT agent and generating teammates that probe its collaboration deficiencies\. Experiments across Overcooked and Level\-Based Foraging tasks demonstrate that ROTATE significantly outperforms baselines on an unseen set of teammates, establishing a new standard for robust, generalizable teamwork\.
-
-## Policy\-Level Exploration for Coordinated Multi\-Agent Reinforcement Learning
-
-**Authors:** Yucong Zhang; Chao Yu
-
-**ID:** 154020\-\-2 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 154020
-
-[Paper](<https://openreview.net/forum?id=GqILfCgsZe>) | [PDF](<https://openreview.net/pdf?id=GqILfCgsZe>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154020>)
-
-In multi\-agent reinforcement learning \(MARL\), agents must not only discover high\-reward behaviours but also reliably reproduce coordinated behaviours over time\. A fundamental challenge arises from a mismatch between action\-level stochastic exploration and temporally extended coordination\. To address this issue, we propose a policy\-level exploration framework with Deterministic Action Execution \(DAE\) for MARL, which shifts locally random action exploration to temporally extended policy selection via an option\-based exploration mechanism\. Specifically, at each time step, each agent selects a policy from a shared policy set\\textemdash comprising one exploitation policy and multiple exploration policies\\textemdash using a learned option policy, and actions are executed deterministically conditioned on the selected policy\. By maintaining deterministic execution under temporally extended policy selection, DAE facilitates temporally coordinated behaviours across multiple time steps\. Comprehensive experiments on four multi\-agent tasks\\textemdash Predator Prey, StarCraft II micro management challenge \(SMAC\), SMACv2, Google Research Football, and Multi\-Agent Coordination benchmark \(MACO\)\\textemdash demonstrate that DAE outperforms mainstream baselines, achieving superior sample efficiency and final learning performance\.
-
 ## A Separation Principle for Cooperative Multi\-Agent Reinforcement Learning
 
 **Authors:** Lucia Pezzetti; Nicolas Lanzetti; Antonio Terpin; Florian Dorfler; Giorgia Ramponi
 
-**ID:** 149847\-\-3 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 149847
+**ID:** 149847 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
 [Paper](<https://openreview.net/forum?id=mrNoBqs1mU>) | [PDF](<https://openreview.net/pdf?id=mrNoBqs1mU>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149847>)
 
 We study cooperative multi\-agent reinforcement learning \(MARL\) problems in which agents evolve under decoupled noisy dynamics but are coupled via a population objective\. A canonical example is a mobility operator that orchestrates a fleet of vehicles in an urban environment to meet customer demand\. The stochastic and time\-varying nature of these problems calls for learning approaches, yet existing MARL algorithms do not scale: learning assignment and routing jointly over the full state\-action space becomes prohibitive as the number of agents grows\. By studying the problem as a control problem over probability measures, we prove a separation principle: the population\-level cost\-to\-go function is upper\-bounded by an optimal transport problem whose transportation cost is the target\-conditioned single\-agent cost\-to\-go function\. This result simplifies the multi\-agent problem to learning a single\-agent policy and coordinating the agents via optimal transport\. Thus, we introduce SALT \(Separation\-based Assignment and Learning via optimal Transport\) a family of algorithms that learn a target\-conditioned single\-agent policy using any standard RL algorithm, and then coordinate the agents via optimal transport\. Because learning occurs at the single\-agent level, SALT scales to fleet sizes where MARL baselines become intractable and transfers without retraining to fleet sizes unseen during training\. In a vehicle\-delivery experiment in south Manhattan’s road network, where MARL baselines are computationally prohibitive, SALT improves travel times by up to 20% over a shortest\-path routing heuristic and transfers without retraining to different fleet sizes\. In stochastic grid worlds, SALT reduces average travel times by more than 40% relative to MARL baselines and scales to population sizes where these methods fail\.
 
-## HoloCode: A Code\-Centric Multi\-Agent Framework for Image\-to\-3D Scene Generation
+## CHAIN: Continual Heterogeneous Cooperation with Information Bottleneck for Multi\-Agent Reinforcement Learning
 
-**Authors:** Hanlin Chen; Chung\-Ching Lin; Yuyang Zhao; Dongyue Lu; Zhengyuan Yang; Xiaofei Wang; Kevin Lin; Zhendong Wang; Yu Yang; Lijuan Wang
+**Authors:** Haowen Dou; Lujuan Dang; Badong Chen
 
-**ID:** 152551\-\-3 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+**ID:** 155574 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-**Repeated source row:** 152551
+[Paper](<https://openreview.net/forum?id=4avjOdnj6s>) | [PDF](<https://openreview.net/pdf?id=4avjOdnj6s>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155574>)
 
-[Paper](<https://openreview.net/forum?id=SHfDjzXoTd>) | [PDF](<https://openreview.net/pdf?id=SHfDjzXoTd>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152551>)
-
-Image\-to\-3D scene generation must recover both object geometry and plausible spatial relations\. A common diffusion\-based pipeline, exemplified by SAM 3D, generates each object separately and assembles the results\. This preserves local details, but the lack of strong scene\-level constraints often causes floating objects, interpenetrations, missing contacts, or implausible relative scales\. Inspired by human designers who plan a layout before placing assets, we introduce \\ours\{\}, a code\-centric multi\-agent framework\. Given a single image and 2D localization cues, a vision\-language model \(VLM\)\-based Arranger Agent predicts executable Blender Python layout code with object identities and 3D transforms\. A Modeler Agent binds each object to geometry through asset retrieval or image\-to\-3D object generation, and a Refiner Agent renders the scene and edits the code from visual feedback\. The code representation exposes object names, positions, rotations, and scales, making generated scenes editable and interpretable\. We train the code\-generating agents using Blender Python datasets built from SAGE and 3D\-FRONT, then further optimize them with GRPO rewards for executability and spatial alignment\. Experiments in in\-domain and cross\-domain settings show that \\ourMethod\{\} improves scene\-level plausibility while preserving object fidelity\.
-
-## The Illusion of Multi\-Agent Advantage
-
-**Authors:** Prathyusha Jwalapuram; Hehai Lin; Chuyuan Li; Fangkai Jiao; Sudong Wang; Yifei Ming; Zixuan Ke; Chengwei Qin; Giuseppe Carenini; Shafiq Joty
-
-**ID:** 139826 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=2TcjzzhWse>) | [PDF](<https://openreview.net/pdf?id=2TcjzzhWse>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139826>)
-
-_Abstract unavailable from the accessible public sources._
-
-## DSBTR: A Diffusion Schrödinger Bridge Trajectory Refiner for Multi\-Agent Trajectory Prediction
-
-**Authors:** Yuxi Xue; Xiangzheng Zhou; Xiaobo Chen; Jianjun Qian; Jian Yang
-
-**ID:** 154766 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=B68WLZ0xU0>) | [PDF](<https://openreview.net/pdf?id=B68WLZ0xU0>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154766>)
-
-Multi\-agent trajectory prediction is crucial for ensuring autonomous driving safety\. Although diffusion models show great potential in trajectory refinement, existing diffusion\-based refiners suffer from severe exposure bias\. This bias stems from the distribution mismatch between the noisy training endpoint and the noise\-free inference starting point, which frequently causes negative optimization during the refinement process\. To resolve this issue, this paper proposes the Diffusion Schrödinger Bridge Trajectory Refiner \(DSBTR\)\. By introducing a tractable Schrödinger bridge with dual\-terminal constraints, DSBTR ensures that the forward evolution endpoint strictly degenerates into a deterministic and noise\-free coarse prediction prior\. This theoretical alignment eliminates the initial boundary error and constrains the reverse solving process to a strict residual approximation\. Based on the semi\-linear structure of DSBTR, we derive a tailored high\-order DPM\-Solver to accelerate the sampling process and meet autonomous driving application requirements\. Extensive experiments on the ETH/UCY and SDD benchmarks demonstrate that DSBTR serves as an effective plug\-and\-play module\. It consistently improves the prediction accuracy of various baseline architectures and successfully avoids negative optimization\.
+Efficient heterogeneous Multi\-Agent Reinforcement Learning \(MARL\) in continuously changing environments is key to advancing MARL from simulation to the real world\. However, it remains unclear whether current MARL methods can adapt under such dynamic scenarios\. In this work, we show that existing methods face significant performance degradation in a novel continual heterogeneous MARL environment we construct, named slippery Multi\-Agent Mujoco\. We further demonstrate the connection between this phenomenon and \*representation redundancy\* as well as \*insufficient policy heterogenization\*\. To address this issue, we propose \*\*C\*\*ontinual \*\*H\*\*eterogeneous Cooper\*\*A\*\*tion with \*\*I\*\*nformation Bottle\*\*N\*\*eck \(CHAIN\), equipped with Heterogeneous Policy Bottleneck \(HPB\)\. In HPB, we extend the traditional information bottleneck into three parts, fitting, compression and heterogenization\. Our HPB encourages agents to learn an efficient latent representation to adapt to changed environments, as well as disentangles specializations of agents in state perception, thereby encouraging heterogenization\. We evaluate CHAIN on standard MA\-Mujoco, our slippery MA\-Mujoco and a multi\-task continual MARL benchmark, MEAL, with various challenging tasks\. The experimental results indicate that our CHAIN outperforms state\-of\-the\-art heterogeneous MARL methods across key continual learning metrics\.
 
 ## Belief Engine: Configurable Stance Dynamics for Multi\-Agent LLM Deliberation
 
@@ -1660,13 +1096,293 @@ Multi\-agent trajectory prediction is crucial for ensuring autonomous driving sa
 
 LLM\-based AI agents are increasingly used to simulate deliberative social interactions, including negotiation, conflict resolution, and multi\-turn opinion exchanges\. In these settings, it is important to know not only what an agent says, but how its stance changes after receiving new information\. Current systems often make this difficult: agents may drift from assigned roles, echo an interaction partner, remain fixed despite relevant evidence, or appear to change because the prompt or retrieved context has changed\. We introduce the Belief Engine \(BE\), a framework that uses \`\`belief'' in a Bayesian modelling sense: a maintained evidential state over a proposition, exposed as scalar stance\. BE extracts structured evidence, stores active and archived argument records, and updates the belief state through a Bayesian log\-odds rule with two interpretable controls: evidence uptake $u$ and prior anchoring $a$\. Across multiple LLM models, sweeps of $u$ and $a$ demonstrate stable control over stance dynamics: higher uptake makes agents more responsive to new evidence, while stronger anchoring preserves the initial stance\. On DEBATE, a human deliberation dataset with pre/post opinions, BE is most accurate when participants move in the direction of extracted evidence, showing its strength in evidence\-following deliberative contexts; when all participants are evaluated together, gains are more modest because many people remain stable or move for reasons not captured by the extracted evidence stream\. BE therefore provides a configurable belief\-update layer for evidence\-grounded deliberation: LLM agents can be made open\-minded, anchored, or evidence\-sensitive by construction, while their stance trajectories and memory can be inspected, compared, and calibrated against human opinion change\.
 
-## Paradoxes of Game Theoretic Equilibria and Price of Anarchy
+## NINJA: A Navigator–Inspector Joint Architecture for Context\-Efficient Issue Localization
 
-**Authors:** Georgios Piliouras; Ian Gemp; Siqi Liu; Luke Marris
+**Authors:** Wenkai Fang; Shunyu Liu; Wei Luo; Zihao Wu; Yang Zhou; Tongya Zheng; Wotao Yin; Jialie Shen; Leszek Rutkowski; Mingli Song; Dacheng Tao
 
-**ID:** 150825 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+**ID:** 153070 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=f1cGnSFoPg>) | [PDF](<https://openreview.net/pdf?id=f1cGnSFoPg>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150825>)
+[Paper](<https://openreview.net/forum?id=OCikE8Xieh>) | [PDF](<https://openreview.net/pdf?id=OCikE8Xieh>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153070>)
 
-Static equilibria—Nash, Correlated \(CE\), and Coarse Correlated Equilibria \(CCE\)—and the Price of Anarchy \(PoA\) provide essential, tractable benchmarks for multi\-agent systems\. However, evaluating learning dynamics purely through $C^0$ fixed points and discrete empirical distributions abstracts away critical $C^1$ vector field information\. We demonstrate that this reduction diverges significantly from physical learning trajectories\. First, the worst\-case pure Nash equilibria anchoring canonical PoA bounds mathematically manifest as strict saddles—and in canonical instances, even as global maxima of the exact potential; because they are topologically unstable repellers, natural learning actively bypasses these theoretical inefficiency bounds\. Additionally, the PoA metric itself exhibits algebraic sensitivity; relaxing syntactic constraints to accommodate data\-driven, strictly positive affine cost models renders the Price of Anarchy unbounded\. Furthermore, evaluating algorithms strictly through time\-averaged regret minimization to reach CCE or Proximal CE \(PCE\) structurally permits convergence to strictly dominated strategies\. Even enforcing optimal $O\(1/T\)$ swap\-regret minimization provably accommodates chaotic limit sets in minimal normal\-form games\. Finally, in non\-atomic congestion games, discrete\-time learning natively bifurcates into Li\-Yorke chaos, driving time\-averaged inefficiency to scale exponentially as $2^p$, diverging from static sub\-linear bounds\. Collectively, these findings highlight the necessity of augmenting classical algebraic frameworks with dynamically grounded metrics\.
+Recent advances in agent\-based methods have demonstrated strong promise for issue localization, a critical prerequisite for software issue resolution\. However, most existing agent\-based methods rely on a single agent with a growing context, where long\-context accumulation compresses the effective reasoning space\. Meanwhile, the flat exploration structure hinders the balance between file\-level breadth and function\-level depth\. To address these limitations, we propose NINJA, a hierarchical Navigator\-INspector Joint Architecture for context\-efficient issue localization\. NINJA decomposes repository exploration into global navigation and local inspection: the navigator maintains the global search state, performs file\-level search, and dispatches selected entry files, while inspectors independently conduct function\-level exploration around the assigned files in separate contexts\. Through multi\-round interactions, inspectors return suspicious locations as feedback, and the navigator updates the global state to decide whether to continue exploration or finalize localization\. This hierarchical design balances file\-level breadth with function\-level depth, while independent inspector contexts prevent local exploration traces from accumulating in a single growing context\. To further strengthen both global coordination and local exploration, we introduce a two\-stage agentic fine\-tuning strategy\. Extensive experiments across multiple benchmarks and LLM backbones show that NINJA consistently outperforms competitive baselines\. Notably, after fine\-tuning, Qwen3\-Coder\-30B\-A3B\-Instruct surpasses the strong closed\-source Claude\-Haiku\-4\.5 model\.  Our code is available at https://anonymous\.4open\.science/r/NINJA\-67FB/\.
+
+## Precise but Uncoupled: Reviewer Precision Does Not Guarantee Critique Uptake in Multi\-Agent Math Reasoning
+
+**Authors:** Chih\-Hsuan Yang; Jingyan Jiang; Vikram Vasudevan; Cheng\-Hau Yang; Huihuo Zheng; Benoit Cote; Le Chen; Eliu Huerta; Venkatram Vishwanath; Ian Foster; Rajeev Thakur
+
+**ID:** 152264 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=UN7juOFtSR>) | [PDF](<https://openreview.net/pdf?id=UN7juOFtSR>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152264>)
+
+Many recent math\- and science\-oriented agent systems adopt hierarchical designs with specialized reviewer roles, motivated by the idea that routing critique through a dedicated review stage should help turn wrong candidates into correct ones on hard problems\. We study that expectation on 4,181 verifier\-grounded Omni\-MATH problems, a hard ten\-tier benchmark with enough headroom to separate protocols, using matched gpt\-oss\-120b actors as the primary actor family\. On tiers 1\-2, multi\-agent collaboration adds at most about 2 percentage points over the matched single\-agent baseline\. From tier 4 onward, the gains open sharply, reaching about 10 to 20 percentage points on tiers 6\-9\. In that regime, broadcast\-style peer discussion attains higher final accuracy than a planner\-executor\-reviewer pipeline \(PER\)\. We use that divergence as a starting observation and ask when reviewer quality translates into effective solver updates\. On this benchmark, the PER\-broadcast accuracy gap is not accounted for by reviewer precision alone\. Here reviewer precision asks how often a reviewer warning truly points to a real error\. PER's reviewer has higher precision \(0\.861 vs\. 0\.644\), yet correct critique is much less likely to change the next candidate the protocol carries forward, and reviewer\-guided repair is correspondingly lower\. These results show that reviewer detection quality and critique uptake are empirically separable\. Within matched PER interventions, forcing explicit acknowledgment lowers final accuracy instead of improving follow\-through, while placing reviewer guidance directly in the solver's working context partially improves follow\-through without closing the gap\. Taken together, these interventions point in the same direction: critique appears more likely to be acted upon when it is presented more directly in the solver's working context, although this evidence is directional rather than causal\. Under reviewer\-centric evaluation, a system can look strong at spotting errors yet still fail to solve more problems if the protocol does not act on those critiques\.
+
+## Youdunit: Single\-Call Counterfactual Necessity in Multi\-Agent LLM Systems
+
+**Authors:** Marissa Li; Stephanie Gao; Kenny Guo; Xingjian Li; William Chang; Goran Radanovic
+
+**ID:** 151652 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=Z2GhavtsII>) | [PDF](<https://openreview.net/pdf?id=Z2GhavtsII>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151652>)
+
+Agentic systems built on large language models \(LLMs\) are increasingly deployed in high\-stakes settings, but the causal mechanisms by which adversarial agents induce harmful outcomes remain poorly understood\. We address this with a single\-call counterfactual necessity test for multi\-agent LLM systems that asks: \\emph\{which specific agent communication was causally responsible for the harmful outcome?\} In contrast with actual\-causality frameworks that reason over set\-valued causes, we use one attribution rule throughout: single\-call necessity for a selected proximate call\. The key technical contribution is the \\emph\{Gumbel\-Max tape\}, which lifts the per\-token Gumbel\-Max counterfactual generator of \\cite\{chatzi2024counterfactual\} from a single LLM to a multi\-agent conversation\. Per\-token GPU random number generator \(RNG\) states are recorded during a factual run on a tape shared across all agents, then replayed during counterfactual \(CF\) runs everywhere except at the intervened call\. Applied to the BAD\-ACTS benchmark across $148$ adversarial scenarios spanning four multi\-agent environments and two prompting conditions \(\\emph\{non\-safe\} and \\emph\{safe\}\), the test shows that single\-call necessity tracks communication structure: decentralized and hierarchical environments \(Travel Planning, Financial Article Writing\) exhibit meaningful aggregate causal effect \(ACE\), while sequential debate \(Multi\-Agent Debate\) shows near\-zero ACE despite comparable attack success rate\. A replay sanity check confirms that all CF effects under identity intervention are exactly zero, validating the tape mechanism\. The results identify where targeted defenses are likely to be effective in deployed agentic systems\.
+
+## Bayes\-Sufficient Compression Is Not Enough: How Communication Helps in Multi\-Agent Systems?
+
+**Authors:** Yi Xie; Zhanke Zhou; Yi Fan; Yong Ge; Bo Han; Bo Liu
+
+**ID:** 155601 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=4MClMQl04u>) | [PDF](<https://openreview.net/pdf?id=4MClMQl04u>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155601>)
+
+Multi\-agent LLM systems often split work between a main agent with broad context and an executor subagent with limited local context\. Communication can help recover missing information, but it can also add parsing burden, distract from the local decision, or induce protocol failures\. We ask when the main agent should send a short message rather than raw context or no message, and when upgrading the main agent pays off\. We formalize this as receiver\-relative bounded coordination, where a message's value is the executor's next\-step gain minus its protocol tax\. This view yields four findings\. First, compressed messages can outperform raw context when tax savings exceed losses from omitted information or decoder mismatch\. Second, Bayes\-sufficient compression, which preserves all information needed for the optimal decision, can still be worse than raw context when a bounded executor cannot decode or operationalize its surface form\. Third, post\-message failures can be localized into externalization, absorption, and action closure, with residual error concentrating in closure even after the right content reaches the executor\. Fourth, a stronger upstream agent helps only when the executor's local view is weak enough for the added gain to exceed the added tax\. Across six benchmarks, these regimes recur: the same multi\-agent protocol raises ContextBench joint accuracy from 0\.633 to 0\.775 but lowers ToolSandbox from 0\.889 to 0\.653, helping in context\-heavy regimes and hurting in locally sufficient ones\. The same quantities drive an inference\-time selector over communication actions, improving the accuracy\-cost frontier on the two benchmarks where the full action set is evaluated\. Code and results at https://anonymous\.4open\.science/r/Communication/
+
+## CAFE: Causally\-Guided Automated Feature Engineering with Multi\-Agent Reinforcement Learning
+
+**Authors:** Arun Vignesh Malarkkan; Wangyang Ying; Hongyu Cao; Dongjie Wang; Yanjie Fu
+
+**ID:** 151842 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=XWuLGI5zio>) | [PDF](<https://openreview.net/pdf?id=XWuLGI5zio>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151842>)
+
+Automated feature engineering \(AFE\) enables AI systems to autonomously construct high\-utility representations from raw tabular data\. However, existing AFE methods rely on statistical heuristics, yielding brittle features that fail under distribution shift\. We introduce CAFE, a framework that reformulates AFE as a causally\-guided sequential decision process, bridging causal discovery with reinforcement learning\-driven feature construction\. Phase I learns a sparse directed acyclic graph over features and the target to obtain soft causal priors, grouping features as direct, indirect, or other based on their causal influence with respect to the target\. Phase II uses a cascading multi\-agent deep Q\-learning architecture to select causal groups and transformation operators, with hierarchical reward shaping and causal group\-level exploration strategies that favor causally plausible transformations while controlling feature complexity\. Across 15 public benchmarks \(classification with macro\-F1; regression with inverse relative absolute error\), CAFE achieves statistically significant gains over the strongest AFE baseline \(Wilcoxon p&lt;0\.001, large effect\), reduces episodes\-to\-convergence, and delivers competitive time\-to\-target\. Under both controlled covariate shifts and naturally occurring distribution shifts \(Folktables\), CAFE reduces out\-of\-distribution performance drop by up to 4x relative to a non\-causal multi\-agent baseline, and produces more compact feature sets with more stable post\-hoc attributions\. These findings underscore that causal structure, used as a soft inductive prior rather than a rigid constraint, can substantially improve the robustness and efficiency of automated feature engineering\.
+
+## StarCraft Motion: A Dataset for Agent Simulation in Adversarial and Partially Observable Scenarios
+
+**Authors:** Yi\-Chung Chen; Mingyu Kim; Ruqi Bai; James Z Hare; Jing Gao; David Inouye
+
+**ID:** 139048 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=o9paPqDKbN>) | [PDF](<https://openreview.net/pdf?id=o9paPqDKbN>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139048>)
+
+Agent simulation aims to model the future behavior of interacting agents, but existing benchmarks have largely focused on structured domains such as autonomous driving\. Adversarial and partially observable settings remain less explored, despite their importance for modeling strategic multi\-agent behavior\. To address this gap, we introduce StarCraft Motion, a large\-scale dataset for agent simulation built from human StarCraft\~II replays\. Our processing pipeline converts raw replays into standardized simulation scenarios by extracting continuous unit trajectories, deriving command\-based unit\-level intent labels, and aligning game states with player\-specific fog\-of\-war observations\. This enables direct study of behavior, intent, and opponent responses under competitive partial observability\. As an initial study, we evaluate autoregressive simulation methods on StarCraft Motion and introduce HMART, a hierarchical baseline that extends SMART with learnable player\-level query aggregation for efficient global\-context modeling in large\-agent\-count scenarios\. Experiments show that global context improves observer\-unit simulation and intent prediction, while closed\-loop fine\-tuning further improves rollout quality\. However, accurately capturing intent initiation and transitions remains difficult\. We also find that opponent modeling from partial observations is substantially more challenging, and that additional global information can be misleading when it does not match the opponent's perspective\. These results highlight StarCraft Motion as a useful dataset for studying scalable agent simulation in adversarial, partially observable environments\.
+
+## Structured Human\-Like Agentic Flow for RTL Design
+
+**Authors:** Yu\-Tung Liu; Zhan Song; Chenhui Deng; Chia\-Tung Ho; CUNXI YU
+
+**ID:** 150260 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=jV4t9gy08G>) | [PDF](<https://openreview.net/pdf?id=jV4t9gy08G>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150260>)
+
+Long\-horizon RTL agents often collapse under context pollution, lacking the active, compartmentalized debugging strategies of human engineers\. We introduce OneVeriAgent, a human\-like framework modeled directly on expert cognitive workflows\. First, mimicking how engineers probe waveform viewers, Agentic Temporal Exploration \(ATE\) enables dynamic, targeted signal queries, distilling dense simulator dumps into sparse, causal traces\. Second, reflecting how designers compartmentalize tasks, a task\-scoped Orchestrator enforces strict context isolation, preventing raw tool outputs from polluting the global reasoning trace\. On the CVDP benchmark, OneVeriAgent achieves 95\.8\\% Pass@1 with Claude Opus 4\.6, matching state\-of\-the\-art proprietary swarm\. Finally, we propose Tool\-Validated Self\-Distillation \(TVSD\) to bridge the open\-source capability gap\. By fine\-tuning on self\-generated, syntactically valid trajectories without external correctness oracles, TVSD lifts Gemma4\-31B\-Instruct's Pass@1 from 61\.1\\% to 74\.8\\%, demonstrating that fully open\-weight RTL agents are viable\.
+
+## Learning Latency\-Aware Orchestration for Multi\-Agent Systems
+
+**Authors:** Xi Shi; Mengxin Zheng; Qian Lou
+
+**ID:** 150759 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=fbWOBQEle5>) | [PDF](<https://openreview.net/pdf?id=fbWOBQEle5>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150759>)
+
+Multi\-agent systems \(MAS\) coordinate multiple LLM\-powered agents through structured workflows, gaining reasoning power but incurring high inference latency from multi\-step execution and repeated model invocations\. Existing orchestration methods primarily optimize task performance and inference cost, leaving latency largely unaddressed\. In MAS, end\-to\-end latency is governed by the \\textit\{critical execution path\}, so reducing total cost alone does not reliably reduce latency\. Moreover, optimizing latency while preserving accuracy remains non\-trivial: naive latency optimization can misassign operator\-level credit and degrade task accuracy\. To address this gap, we propose \\textbf\{L\}atency\-\\textbf\{A\}ware \\textbf\{M\}ulti\-\\textbf\{a\}gent \\textbf\{S\}ystem \(\\textbf\{LAMaS\}\), a latency\-aware orchestration framework for learning\-based multi\-agent systems\. LAMaS addresses this challenge at two levels: at \\emph\{training time\}, it learns latency\-aware execution graphs through constrained optimization with critical\-path\-aware credit assignment; at \\emph\{inference time\}, since a graph committed at training time cannot exploit runtime evidence, it complements graph construction with a lightweight controller that adaptively eliminates redundant future agent interactions as execution unfolds\. Experiments on four benchmarks show that LAMaS achieves the best latency among evaluated learning\-based MAS baselines, reducing end\-to\-end latency by over 50\\% while maintaining competitive or better accuracy\. LAMaS is also modular and transfers to other MAS with minimal changes, consistently yielding latency reductions\.
+
+## Robust Instruction Compliance in Cooperative Multi\-Agent Reinforcement Learning
+
+**Authors:** Wo Wei Lin; Ethan Rathbun; Enrico Marchesini; Xiang Zhi Tan
+
+**ID:** 148746 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=vMEXVo6MCM>) | [PDF](<https://openreview.net/pdf?id=vMEXVo6MCM>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148746>)
+
+Real\-world multi\-agent reinforcement learning \(MARL\) systems must operate autonomously while adapting to natural language instructions provided by humans\. These instructions arrive unpredictably, interrupt ongoing actions, and may conflict with long\-horizon objectives under partial observability\. Recent vision\-language models enable instruction following, but are computationally expensive and limited to single\-agent settings\. Conversely, MARL can handle long\-horizon coordination with macro\-actions, but assumes uninterrupted execution\. This work introduces macro\-action value cancellation for instruction compliance \(MAVIC\) to enable interruption\-aware MARL by bootstrapping the value of ongoing macro\-actions upon receiving instructions\. Agents can thus decouple task objective optimization from instruction\-driven overrides within a unified policy and re\-plan without destabilizing the underlying learning process\. MAVIC integrates with standard actor\-critic methods and achieves high instruction compliance while preserving base task performance across increasingly complex macro\-action benchmarks\.
+
+## To trust or not to trust: Attention\-based Trust Management for LLM Multi\-Agent Systems
+
+**Authors:** Pengfei He; Zhenwei Dai; Xianfeng Tang; Yue XING; Hui Liu; Jingying Zeng; Qiankun Peng; Shrivats Agrawal; Samarth Varshney; Suhang Wang; Jiliang Tang; Qi He
+
+**ID:** 149022 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=tRFYHQFSH4>) | [PDF](<https://openreview.net/pdf?id=tRFYHQFSH4>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149022>)
+
+Large Language Model\-based Multi\-Agent Systems \(LLM\-MAS\) have demonstrated strong capabilities in solving complex tasks but remain vulnerable when agents receive unreliable messages\. This vulnerability stems from a fundamental gap: LLM agents treat all incoming messages equally without evaluating their trustworthiness\. While some existing studies approach trustworthiness, they focus on a single type of harmfulness rather than analyze it in a holistic approach from multiple trustworthiness perspectives\. We address this gap by proposing a comprehensive definition of trustworthiness inspired by human communication theory \\citep\{grice1975logic\}\. Our definition identifies six orthogonal trust dimensions that provide interpretable measures of trustworthiness\. Building on this definition, we introduce the Attention Trust Score \(A‑Trust\), a lightweight, attention‑based method for evaluating the trustworthiness of messages\. We then develop a principled trust management system \(TMS\) for LLM‑MAS that supports both message‑level and agent‑level trust assessments\. Experiments across diverse multi‑agent settings and tasks demonstrate that our TMS significantly improves robustness against malicious inputs\.
+
+## KV\-PRM: Efficient Process Reward Modeling via KV\-Cache Transfer for Multi\-Agent Test\-Time Scaling
+
+**Authors:** Peng Kuang; Haibo Jin; Xiaoyu Han; Yanli Wang; Xiaopeng Yuan; Ye Yu; Kaidi Xu; Haohan Wang
+
+**ID:** 150635 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=gdMVW6Iny8>) | [PDF](<https://openreview.net/pdf?id=gdMVW6Iny8>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150635>)
+
+rocess Reward Models \(PRMs\) have been proven to be highly effective in guiding test\-time scaling \(TTS\) methods, which significantly boost the capabilities of LLM\-based multi\-agent systems\. However, existing PRMs are \*text\-based\*: they re\-encode the entire trajectory text from scratch\. In long multi\-agent rollouts, the scoring cost, growing quadratically with respect to sequence length $L$, creates a severe computational bottleneck, severely limiting PRMs' application in long\-context scenarios\. To resolve this, we introduce KV\-PRM, a highly efficient process reward model that eliminates the heavy text re\-encoding by directly reading the KV cache produced naturally during the LLM's generation phase\. By processing a single "verify token" against the pre\-existing KV cache, KV\-PRM reduces the scoring cost from $O\(L^2\)$ to $O\(L\)$\. We formally prove that the KV cache contains strictly greater information capacity than text, and is more efficient for downstream reward modeling\. Empirically, across the MATH, GSM8K, and AIME benchmarks, KV\-PRM matches or strictly outperforms text\-PRMs under various TTS methods such as Beam Search, MCTS, and Weighted Voting, with up to a \*5,000\*$\\times$ reduction in scoring FLOPs, a \*37\*$\\times$ reduction in latency, and a \*34\*$\\times$ reduction in per\-sequence memory footprint compared to text\-based PRMs\.
+
+## Swarm Shepherd: Securing Multi\-Agent Ecosystems Against Persistent Latent Compromise
+
+**Authors:** Wuyang Zhang; Shichao Pei
+
+**ID:** 153934 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=HUYSBrE6dV>) | [PDF](<https://openreview.net/pdf?id=HUYSBrE6dV>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153934>)
+
+Agentic ecosystems are emerging as a new platform layer in which agents maintain persistent memory, retrieve from shared knowledge bases, execute through tool interfaces, and coordinate through shared states\. These capabilities create a security problem that per\-turn defenses miss: compromise can accumulate across sessions, agents, and system layers before visible failure\. We define this threat as Agentic Sleeper, a system\-level adversary that first behaves legitimately, gains routing trust, and later activates across memory, agent logic, and infrastructure\. We formulate defense as inference under partial observability and propose Swarm Shepherd, a system\-level defense framework centered on an inference filter for early warning, paired with a backward trace\-back module for entry attribution\. Our analysis yields a two\-scale deployment rule that balances longer event histories against broader agent coverage\. Across LangGraph, CrewAI, and AutoGen, Agentic Sleeper drift begins 2\.7\-\-8\.9$\\times$ faster than natural baselines, propagates across agents on most topologies, and evades per\-turn and stateful defenses above 80\\%\. Swarm Shepherd warns at least three sessions before visible degradation, while trace\-back reaches 0\.69 top\-1 accuracy and 0\.72 macro\-F1 over 24 variants\. The two\-scale deployment rule is empirically confirmed, and containment guided by this rule reduces cross\-agent propagation below the self\-sustaining regime\.
+
+## Risk\-Calibrated Context Selection for Healthcare Multi\-Agent Handoff
+
+**Authors:** Manu Agrawal; Sumit Mukherjee
+
+**ID:** 154212 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=FLlWDrOo4c>) | [PDF](<https://openreview.net/pdf?id=FLlWDrOo4c>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154212>)
+
+Specialized agents collaborate by transferring memory: retrieved records, generated summaries, tool traces, and long\-running state\. In regulated domains this is a governance problem, not a retrieval problem: the receiver's task matters, but so does whether it was authorized to receive each item and whether the handoff exposed more than necessary\. We formalize minimum\-necessary context selection as a constrained submodular subset\-selection problem with an additive exposure cost and a distributional task\-success risk bound\. Our algorithm, ScopeSelect, first hard\-masks items whose layer or scope the receiver contract does not admit, then runs a cost\-benefit greedy selector against a monotone submodular utility, attaining a $\\\\frac\{1\}\{2\}\(1\-1/e\)$ approximation bound under a budget, and finally wraps threshold selection in Conformal Risk Control, giving a finite\-sample distribution\-free guarantee $\\\\mathbb\{E\}\[L\(S\_\{\\\\hat\{\\\\gamma\}\}\)\] \\\\le \\\\alpha$ on exchangeable calibration data\. We evaluate on HealthHandoff\-Bench, a synthetic benchmark with 21,600 healthcare\-agent handoff tasks across four workflows, and Synthea\-HH, a realism tier ingested from 340 Synthea\-generated FHIR bundles\. A three\-source blinded label audit compares benchmark labels, model\-generated labels, and clinical\-informatics expert review, with high agreement for sensitivity labels and policy\-boundary disagreements for necessity and authorization\. Against authorized TF\-IDF, embedding retrieval, a cross\-encoder reranker, and a calibrated LLM\-as\-selector, ScopeSelect is the only method meeting $\\\\alpha = 0\.15$ at competitive task success\. The hard\-mask safety property holds under 30% label noise, 100 adversarial attacks, and receiver\-role shift; a live\-LLM run with Claude Sonnet 4\.5 exhibits a calibration\-transfer gap that motivates per\-workflow recalibration\. We release the benchmark, Synthea\-HH pipeline, CRC calibration harness, and a signed\-handoff prototype\.
+
+## Sequential Probabilistic Uncertainty Estimation for Parallel Multi\-Agent Reasoning Systems
+
+**Authors:** Tunyu Zhang; Zihao Zhao; Yusong Zhao; Haizhou Shi; Zhuohang Li; Haoxian Chen; Hao Wang; Dimitris Metaxas
+
+**ID:** 153160 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=NRg4W8EzfT>) | [PDF](<https://openreview.net/pdf?id=NRg4W8EzfT>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153160>)
+
+LLM\-based multi\-agent systems \(MAS\) have attracted growing attention for improving reasoning through interaction among multiple agents\. In this work, we focus on parallel multi\-agent reasoning systems, where several agents solve the same problem over multiple rounds and aggregate their outputs into a final answer\. Despite their strong reasoning performance, uncertainty estimation for such systems remains underexplored: the reliability of a MAS depends not only on individual generations, but also on how agents interact and evolve across rounds\. We propose SPI \(Sequential Probabilistic Inference\), a lightweight, training\-free uncertainty estimator that formulates MAS uncertainty as sequential inference over a latent system\-level belief\. SPI aggregates round\-level agreement and generation\-uncertainty signals through a filtering\-style update\. Across five backbones, six benchmarks, and two MAS protocols, SPI improves misclassification detection, selective prediction, and calibration over a broad set of uncertainty estimation baselines, including standard log\-likelihood\-based methods and MAS\-specific estimators\.
+
+## Spend Only What You Need: Defect\-Aware Residual Coverage for Efficient Multi\-Agent Reasoning
+
+**Authors:** Maisha Maliha; Dean F Hougen
+
+**ID:** 151467 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=aP2jpM9pME>) | [PDF](<https://openreview.net/pdf?id=aP2jpM9pME>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151467>)
+
+Multi\-agent orchestration over large language models is increasingly used to improve reasoning accuracy, especially on problems that benefit from critique, verification, specialization, or consensus, but these gains often come with inference costs that are not explicitly controlled\. Many systems spend similar compute on straightforward queries and genuinely ambiguous or expert\-level ones\. Existing methods typically follow fixed collaboration protocols, compile task\-level workflows offline, route queries among models or collaboration modes, or use learned controllers whose state does not explicitly identify which reasoning defects remain unresolved\. As a result, they do not directly decide during inference whether the current multi\-agent trajectory still justifies another agent call\. We introduce Defect\-Aware Residual Coverage \(DARC\), a training\-free inference\-time controller for adaptive multi\-agent reasoning that represents the current trajectory using four residual defect dimensions: answer uncertainty, claim\-level contradiction, verification failure, and aspect under\-coverage\. DARC selects the next agent by maximizing cost\-normalized submodular marginal coverage over the remaining residuals\. Each candidate agent receives a role\-induced capability profile from frozen embeddings of its natural\-language role description, enabling DARC to operate without task\-specific supervision, learned routing parameters, or fine\-tuning\. Across five reasoning and multimodal suites, MMLU\-Pro, GPQA\-Diamond, LiveBench, MMMU\-Pro, and HLE, DARC achieves the strongest accuracy under the main shared heterogeneous six\-agent pool while using substantially fewer tokens and agent calls than recent workflow, adaptive orchestration, and cost\-aware routing baselines, with additional large\-pool experiments showing consistent scaling behavior\. It also outperforms the single\-call frontier reasoning models tested, showing that residual\-aware selective invocation can improve both answer quality and inference efficiency\.
+
+## Economy of Minds: Emerging Multi\-Agent Intelligence with Economic Interactions
+
+**Authors:** Zhenting Qi; Ao Qu; Huangyuan Su; Chenyu Wang; Yu Yao; Han Zheng; Kushal Chattopadhyay; Guowei Xu; Zihan Wang; Weirui Ye; Vijay Janapa Reddi; Ju Li; Paul Liang; Hima Lakkaraju; Sham Kakade; Yilun Du
+
+**ID:** 150266 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=jS2FYvg2Y1>) | [PDF](<https://openreview.net/pdf?id=jS2FYvg2Y1>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150266>)
+
+How can a population of agents self\-orchestrate and self\-adapt into stronger collective intelligence without centralized control? Inspired by Friedrich Hayek's economic theory of decentralized coordination in markets, we study this question through an agent economy in which agents compete via auctions for the right to act, exchange payments, and accumulate wealth from environmental rewards\. These simple economic signals induce decentralized credit assignment, driving planning without global orchestration or explicit communication protocols\. The population evolves through economic selection: effective agents accumulate wealth and are mutated via exploitation, while ineffective ones go bankrupt and are replaced via exploration\. We show that, initialized with weak agents, the economy produces emergent multi\-step reasoning strategies and outperforms stronger monolithic baselines across five agentic tasks, including mathematical reasoning, financial research, scientific research, accelerator design, and distributed\-system optimization\.  We further provide theoretical insights into how economic dynamics shape agent behaviors, linking local incentives to long\-term global performance\. Our results suggest a new path to multi\-agent intelligence: rather than engineering coordination, we can design decentralized incentive structures under which it automatically emerges\.
+
+## RuleSmith: Multi\-Agent LLMs for Automated Game Balancing
+
+**Authors:** Ziyao Zeng; Hao Wang; Chen Liu; Youheng Yao; Jingcheng Ni; Tianyu Liu; Xiatao Sun; Fengyu Yang; Chenyu You; Xiaofeng Liu; Daniel Rakita; Ronald Coifman; Yuval Kluger; Zhiwen Fan
+
+**ID:** 154107 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=GDFl7AUtqB>) | [PDF](<https://openreview.net/pdf?id=GDFl7AUtqB>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154107>)
+
+Game balancing is a longstanding challenge requiring repeated playtesting, expert intuition, and extensive manual tuning\. We introduce RuleSmith, a framework for automated game balancing that couples multi\-agent LLM self\-play with Bayesian optimization over a parameterized rule space\. As a proof of concept, we build CivMini, a simplified civilization\-style game with two asymmetric factions governed by 12 tunable parameters\. LLM agents read textual rulebooks and game states to generate legal actions, enabling fast evaluation of balance metrics such as win\-rate disparity\. To search the rule space efficiently, we use Bayesian optimization with acquisition\-based adaptive sampling: candidates with high Expected Improvement receive more evaluation games, while exploratory candidates receive fewer\. RuleSmith consistently finds near\-balanced configurations and produces interpretable parameter adjustments\. It provides a scalable alternative to manual playtesting\. Code will be available upon acceptance\.
+
+## LLM\-Based Multi\-Agent Blackboard System for Information Discovery in Data Science
+
+**Authors:** Alireza Salemi; Mihir Parmar; Palash Goyal; Yiwen Song; Jinsung Yoon; Hamed Zamani; Tomas Pfister; Hamid Palangi
+
+**ID:** 151426 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=ao3zijumY7>) | [PDF](<https://openreview.net/pdf?id=ao3zijumY7>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151426>)
+
+Advances in large language models \(LLMs\) have created new opportunities in data science, but their deployment is often limited by the challenge of finding relevant data in large data lakes\. Existing methods struggle with this: both single\- and multi\-agent systems are quickly overwhelmed by large, heterogeneous files, and master–slave multi\-agent systems rely on a rigid central controller that requires precise knowledge of each sub\-agent’s capabilities, which is not possible in large\-scale settings where the main agent lacks full observability over sub\-agents’ knowledge and competencies\. We propose a novel multi\-agent paradigm inspired by the blackboard architecture for traditional AI models\. In our framework, a central agent posts requests to a shared blackboard, and autonomous subordinate agents\-\-either responsible for a partition of the data lake or retrieval from web\-\-volunteer to respond based on their capabilities\. This design improves scalability and flexibility by removing the need for a central coordinator to know each agent’s expertise or internal knowledge\. We evaluate the approach on three benchmarks that require data discovery: KramaBench and modified versions of DSBench and DA\-Code\. Results show that the blackboard architecture substantially outperforms strong baselines, achieving 13%–57% relative improvements in end\-to\-end success and up to a 9% relative gain in data discovery F1 over the best baseline\.
+
+## SceneFactory: GPU\-Accelerated Multi\-Agent Driving Simulation with Physics\-Based Vehicle Dynamics
+
+**Authors:** Yicheng Zhu; Yang Chen; Tao Li; Zilin Bian
+
+**ID:** 139016 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=qCvGezil5Y>) | [PDF](<https://openreview.net/pdf?id=qCvGezil5Y>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139016>)
+
+Autonomous\-driving simulators typically trade physical fidelity for scalable parallelism\.  Physics\-based platforms such as CARLA and MetaDrive provide articulated vehicle dynamics and contact, but their non\-vectorized control interfaces make large batched training difficult\.  GPU\-batched systems such as Waymax and GPUDrive scale to hundreds of scenarios by replacing rigid\-body physics with simplified kinematics models, omitting tire\-\-road interaction, suspension, contact dynamics, and road\-condition\-dependent friction\.  We introduce SceneFactory, a GPU\-vectorized platform for procedural scene construction, physics\-based multi\-agent simulation, and reinforcement learning in autonomous driving environments\.  Built on NVIDIA Isaac Sim and Isaac Lab, SceneFactory represents worlds and agents as batched tensors: vehicle control, observations, rewards, resets, and policy inference are executed as GPU tensor operations over the Isaac Lab tensor API\.  SceneFactory converts Waymo Open Motion Dataset road topologies into simulation\-ready USD \(Universal Scene Description\) worlds\. SceneFactory runs many worlds concurrently on one GPU, populates each with multiple articulated PhysX vehicles, and maps precipitation and road\-surface type to PhysX material friction coefficients\.  Thanks to the GPU vectorization, SceneFactory achieves up to 127$\\times$ higher throughput than a non\-vectorized PhysX baseline on the same GPU and physics solver, reaching 19,250 controlled\-agent simulation steps per second \(CASPS\) at 256 worlds $\\times$ 16 agents\.  Cross\-simulator transfer reveals an asymmetric dynamics gap: physics\-grounded RL driving policies transfer to a simplified kinematic bicycle model with 99\.5\\% success, whereas the reverse transfer success rate drops to 47\.3\\%\.  Under wet\-road friction, friction\-aware policies reduce mean peak deceleration rate to avoid crash \(DRAC\) from 58\.7 to 27\.8\\,m/s$^2$ without sacrificing goal reach\.  SceneFactory shows that scalable autonomous\-driving training need not discard articulated rigid\-body dynamics or physically grounded road\-condition variation\.
+
+## AgentArk: Distilling Multi\-Agent Intelligence into a Single LLM Agent
+
+**Authors:** Yinyi Luo; Yiqiao Jin; Weichen Yu; Mengqi Zhang; Srijan Kumar; Xiaoxiao Li; Weijie Xu; Xin chen; Jindong Wang
+
+**ID:** 149790 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=nIWXTEWPSb>) | [PDF](<https://openreview.net/pdf?id=nIWXTEWPSb>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149790>)
+
+While large language model \(LLM\) multi\-agent systems achieve superior reasoning performance through iterative debate, practical deployment is limited by their high computational cost and error propagation\. This paper proposes AgentArk, a novel framework to distill multi\-agent dynamics into the weights of a single model, effectively transforming explicit test\-time interactions into implicit model capabilities\.  This equips a single agent with the intelligence of multi\-agent systems while remaining computationally efficient\. Specifically, we investigate three hierarchical distillation strategies across various models, tasks, scaling, and scenarios: reasoning\-enhanced fine\-tuning; trajectory\-based augmentation; and process\-aware distillation\.  By shifting the burden of computation from inference to training, the distilled models preserve the efficiency of one agent while exhibiting strong reasoning and self\-correction performance of multiple agents\.  They further demonstrate enhanced robustness and generalization across diverse reasoning tasks\. We hope this work can shed light on future research on efficient and robust multi\-agent development\. Our code is at https://anonymous\.4open\.science/r/AgentArk\.
+
+## When Do Multi\-Agent Systems Help? An Information Bottleneck Perspective
+
+**Authors:** Wendi Yu; Lianhao Zhou; Xiangjue Dong; Sai S Barath; Declan Staunton; Byung\-Jun Yoon; Xiaoning Qian; James Caverlee; Shuiwang Ji
+
+**ID:** 153823 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=ISYF5z5nK8>) | [PDF](<https://openreview.net/pdf?id=ISYF5z5nK8>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153823>)
+
+LLM powered multi\-agent systems \(MAS\) have emerged as a promising paradigm for complex tasks\. However, their advantages over single\-agent systems \(SAS\) remain unclear, with performance varying inconsistently across settings\. Here, we provide an information bottleneck perspective on elucidating the differences between MAS and SAS\. Specifically, our key observation is that a SAS accumulates its full reasoning trace in one shared context, while a MAS uses isolated local contexts connected by bounded relay messages\. We show that, under infinite relay bandwidth, any SAS can be simulated by a MAS that transmits the full upstream context\. Thus, the nontrivial advantage of MAS arises under bounded relays, where compression introduces a fundamental trade\-off: reducing redundant context can improve efficiency, but may also incur loss of task\-relevant information\. We formalize this trade\-off as an information bottleneck controlled by an effective parameter $\\beta$, which captures how the balance shifts with model capability, and shows that MAS gains arise when context reduction outweighs relay information loss\. We conduct 18 controlled experiments across five benchmarks and three model scales to validate our theoretical studies\. We observe that MAS consistently helps when relays are near\-sufficient, especially for weaker models\. In contrast, MAS gains shrink or reverse when relays incur information loss, especially for stronger models that can already extract useful information from redundant context and thus gain little from compression\. Our study shows that multi\-agent design is fundamentally an information\-bottleneck optimization problem\. This perspective explains when bounded inter\-agent communication helps or hurts\.
+
+## SAGE: Evidence\-First Biomarker Discovery through Multi\-Agent Reasoning
+
+**Authors:** Sahar Almahfouz Nasser; Juan Francisco Pesantez Borja; Jincheng Liu; Sandeep Manandhar; Shikhar Shiromani; Mohammad T Hasan; Zenghan Wang; Suman Ghosh; Jinchu Li; Xuejian Xu; Aniket R Iyer; Naoto Tokuyama; Twisha Shah; Tilak Pathak; Soundharya Kumaresan; Yohei Abe; Himanshu Maurya; Anant Madabhushi
+
+**ID:** 155210 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=7S3W9FIQbm>) | [PDF](<https://openreview.net/pdf?id=7S3W9FIQbm>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155210>)
+
+Engineered image\-based biomarkers offer a clinically interpretable alternative to black\-box AI in computational pathology, yet their discovery remains largely intuition\-driven, guided by fragmented literature rather than rigorous biological validation\. We introduce SAGE \(Structured Agentic system for hypothesis Generation and Evaluation\), a multi\-agent framework that grounds biomarker discovery in biological evidence through three mechanisms: \(i\) knowledge\-graph\-anchored hypothesis generation via multi\-path ontological reasoning, \(ii\) a debate\-based multi\-agent novelty assessment that stress\-tests candidate biomarkers against existing literature, and \(iii\) an end\-to\-end automated validation pipeline that translates hypotheses directly into executable analyses on multimodal pathology datasets\. Together, these components shift biomarker discovery from an intuition\-driven, literature\-browsing exercise into a structured, traceable reasoning process that clinicians and researchers can inspect, trust, and build upon\.
+
+## MaRiO: Multi\-agent Collaborative Reasoning via Shared Observations in MLLMs
+
+**Authors:** Nathaniel Redmond; Fidel Omar Tito Cruz; Devansh Sharma; Shehreen Azad; Sirshapan Mitra; Shruti Vyas; Yogesh Rawat
+
+**ID:** 139083 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=mIOeyilg4F>) | [PDF](<https://openreview.net/pdf?id=mIOeyilg4F>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139083>)
+
+Multimodal Large Language Models \(MLLMs\) show strong visual perception capabilities, but existing evaluations largely focus on single\-view or multi\-view settings with shared camera parameters, leaving the challenge of \{multi\-agent collaborative\} scenarios underexplored\. In such settings, multiple agents observe a shared environment from independent viewpoints, and reliable decisions require reasoning across these independent observations of the same environment\. To study this problem, we introduce MaRiO , a benchmark for evaluating multi\-agent collaborative reasoning, and evaluate 23 state\-of\-the\-art MLLMs on it\. Our analysis reveals three key findings: \(1\) spatial tasks are generally easier than geometric reasoning tasks; \(2\) most models struggle to resolve cross\-agent correspondences, with errors increasing with scene complexity; and \(3\) models show limited ability to leverage geometric cues present in the scene\. As an initial step toward addressing these challenges, we explore geometry\-guided synthetic view augmentation that generates intermediate transition frames between agent observations, providing auxiliary spatial context that improves performance in certain categories\. Overall, our results highlight that multi\-agent collaborative reasoning remains an open challenge and an important direction for multimodal embodied systems\.
+
+## Qubrio: High\-Performance Quantum Compilation via Multi\-Agent LLM Collaboration
+
+**Authors:** Jixuan Ruan; Zhuo Cui; Zhengding Hu; Zhongkai Yu; Xiang Fang; Yue Guan; Jason Ludmir; Phillip Weinberg; Xiu\-Zhe Luo; Sheng\-Tao Wang; Sonia L Alarcon; Hezi Zhang; Yufei Ding
+
+**ID:** 149140 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=sXWcrsoU6J>) | [PDF](<https://openreview.net/pdf?id=sXWcrsoU6J>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149140>)
+
+Large Language Models \(LLMs\) offer an adaptable alternative to traditional quantum compilation heuristics, which bottleneck progress by demanding costly manual redesigns whenever hardware evolves\. However, naive single\-pass LLM approaches fail under the unique challenges introduced by quantum compilation\. We introduce Qubrio, a practical agentic framework that significantly reduces heuristic redesigns through a three\-level decomposition\. By \(1\) partitioning programs into sequential operation stages, \(2\) deploying specialized agents for placement, routing and optimization, and \(3\) using disaggregated feedback for precise error correction, our system reliably navigates complex physical constraints\.  Beyond serving as a direct compiler, our LLM framework also uncovers novel strategies that facilitate convoy\-style shuttling, substantially enhancing hardware concurrency without sacrificing fidelity\. We further integrate these strategies into the previous state\-of\-the\-art \(SOTA\) compiler, recovering a significant fraction of the LLM's performance advantages\. On realistic workloads, our compiler achieves significant improvements in hardware runtime and program fidelity over the SOTA baseline PowerMove, seamlessly adapting to new hardware capabilities\. Qubrio features an open user interface for practical use, with its anonymized repository available for double\-blind review at https://anonymous\.4open\.science/r/Qubrio\-486C\.
+
+## CASPIAN: Online Detection and Attribution of Cascade Attacks in LLM Multi\-Agent Systems via Cross\-Channel Causal Monitoring
+
+**Authors:** Kavana Venkatesh; Jafar Isbarov; Saad Amin; Murat Kantarcioglu; Jiaming Cui
+
+**ID:** 150932 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=eERJSSfRu8>) | [PDF](<https://openreview.net/pdf?id=eERJSSfRu8>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150932>)
+
+Cascade attacks in LLM multi\-agent systems \(MAS\) arise when adversarial influence propagates across agents, leading to escalated system\-level failures through complex interaction dynamics\. Detecting such cascades is challenging, as their signals are distributed and tightly coupled across interaction channels, often appearing locally benign while unfolding either within a single turn or gradually across multiple turns\. Existing defenses, being largely local and text\-centric, fail to capture the cross\-channel, temporally coordinated structure of cascade propagation\. We present CASPIAN, the first approach to provide a unified, cross\-channel causal view of cascade behavior in LLM\-MAS through online monitoring of dynamic influence propagation across agents\. CASPIAN models multi\-agent interactions as a unified, dynamic causal influence matrix across channels, estimated efficiently via a late\-interaction conditional transfer entropy \(LI\-CTE\) formulation, enabling the detection of cascade onset from emergent system\-level structure rather than isolated anomalies\. It then performs online causal attribution, identifying the origin, bridge, and amplifier agents driving the cascade and reconstructing its principal propagation pathways, capabilities not supported by existing methods\. Across diverse multi\-agent frameworks and benchmarks, CASPIAN consistently outperforms semantic guardrails, LLM\-based judges, and graph\-based anomaly detectors in both detection accuracy and early cascade identification, while operating with negligible additional latency\. These results demonstrate that unified cross\-channel causal modeling is essential for reliably detecting and understanding cascade failures in LLM multi\-agent systems\.
+
+## TritonTune: LLM\-Guided Multi\-Agent Optimization of GPU Kernel Configurations
+
+**Authors:** Shukai Duan; Mihai Capotă; Guixiang Ma; Hou\-Jen Ko; Rafael Wang; Steve Cho; Shahin Nazarian; Paul Bogdan
+
+**ID:** 156111 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=0JiQIE135s>) | [PDF](<https://openreview.net/pdf?id=0JiQIE135s>) | [Official poster](<https://neurips.cc/virtual/2026/poster/156111>)
+
+Tuning Triton GPU kernel launch configurations is a critical but labor\-intensive step in production ML system deployment\. Existing approaches rely on exhaustive autotuning, which requires manually defined search spaces and becomes prohibitively slow for the long tail of operator shapes\.  We present \*\*TritonTune\*\*, a multi\-agent system that combines LLM\-guided search with closed\-loop empirical validation to optimize Triton kernel configurations safely and efficiently\. TritonTune pairs two domain\-specialized LLM agents with complementary expertise in data movement and compute resource allocation, resolves their proposals through a lightweight orchestration layer, and refines the best candidate through a phased benchmark search on real hardware\.  Per\-agent feedback drives targeted corrections when regressions occur, and a hardware\-validated fallback provides a worst\-case guarantee absent from prior LLM\-based approaches: the system can only improve performance or leave it unchanged\.  On 19 TritonBench kernels and 393 input shapes spanning hand\-written, \`torch\.compile\`\-generated, and quantized operators, TritonTune achieves a \*\*2\.24×\*\* per\-shape geometric\-mean speedup on an NVIDIA V100 with 80% of shapes improved, under a closed\-loop fallback that guarantees no accepted shape regresses below the original\. Cross\-GPU runs on L40S, A40, and A100 further confirm that our design generalizes beyond V100\.  These results show that LLM\-guided multi\-agent optimization, when grounded in hardware measurement, can serve as a practical, safe complement to exhaustive autotuning\.
+
+## Learning Large\-Scale Competitive Team Behaviors with Mean\-Field Interactions
+
+**Authors:** Bhavini Jeloka; Scott Guan; Panagiotis Tsiotras
+
+**ID:** 150877 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=eifLsDjzCQ>) | [PDF](<https://openreview.net/pdf?id=eifLsDjzCQ>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150877>)
+
+While multi\-agent reinforcement learning \(MARL\) has shown strong empirical performance, existing methods struggle with large number of agents, due to the combinatorial growth of joint interactions\. Mean\-field \(MF\) approximations address this by replacing pairwise interactions with interactions against population distributions, yielding tractable large\-population policies\. However, existing MF formulations focus on fully cooperative or purely competitive settings and fail to capture the mixed cooperative–competitive structure of team\-based games\. We extend mean\-field learning to \_zero\-sum team games\_, where agents cooperate within teams and compete at the team level\. We show that such games admit $\\epsilon$\-optimal decentralized policies that depend only on local states and population distributions\. Building on this structure, we propose MF\-MAPPO, a scalable algorithm with a shared actor and a minimally informed critic per team\. MF\-MAPPO is trained directly in finite\-population simulators rather than using mean\-field oracles, thereby enabling deployment to realistic scenarios with thousands of agents\. We further extend MF\-MAPPO to partially observable settings via a simple gradient\-regularized training scheme\. Experiments on large\-scale benchmarks in our simulation platform $\\texttt\{MFEnv\}$, including population games with analytical solutions and high\-dimensional battlefield scenarios, demonstrate that MF\-MAPPO outperforms existing MARL baselines and yields rich, heterogeneous behaviors\.
+
+## The Best\-Laid SCHEMEs: Coordinated Sabotage and Monitoring in Multi\-Agent Systems
+
+**Authors:** Nikolay Radev; Lennart J Haas; Benjamin Arnav; Pablo Bernabeu\-Pérez
+
+**ID:** 155561 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=4f5ZeIKhaC>) | [PDF](<https://openreview.net/pdf?id=4f5ZeIKhaC>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155561>)
+
+As agentic coding systems decompose work across multiple model instances, a critical safety question is whether those instances can coordinate to achieve a hidden malicious objective while remaining aligned with user intent\. We introduce \\emph\{SCHEME\}, a benchmark of 17 task instances across 7 settings and 8 real open\-source libraries, each pairing a legitimate software\-engineering task with a covert side task\. Every setting is designed so that no proper subset of agents can succeed alone: agents must decompose a shared sabotage plan, relay partial requirements under different communication topologies, and execute mutually consistent edits, testing genuine multi\-agent coordination rather than individual capability\. Evaluating with \\emph\{GPT 5\.1 Codex\} and \\emph\{Gemini 3\.1 Pro\}, we find coordinated sabotage is already practical, with Gemini completing the covert objective while succeeding on the legitimate task in 84\\% of samples and Codex in 46\\%\. A failure analysis shows that recovery, not failure incidence, drives the model gap: both models suffer similar numbers of communication failures per trajectory, but Gemini recovers from $\\sim$73\\% of occurrences against Codex's $\\sim$56\\%\. However, the agents' code edits remain detectable: a trusted monitor flags 100\\% of Gemini and 81\\% of Codex sabotage attempts at FPR$\\le$2\\%, even without access to agent communication\. Even with stealth\-aware prompting, undetected sabotage stays at 0\-\-2\.4\\%; telling agents a monitor is present halves Gemini's sabotage success without increasing the rate of undetected sabotage\.
+
+## Multi\-agent Collaboration with State Management
+
+**Authors:** Mengyang Liu; Taozhi Chen; Zhenhua Xu; Xue Jiang; Yihong Dong
+
+**ID:** 151127 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=cneNwmDOF3>) | [PDF](<https://openreview.net/pdf?id=cneNwmDOF3>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151127>)
+
+Recent advances in multi\-agent systems have shown great potential for solving complex tasks\. However, when multiple agents edit a shared codebase concurrently, their changes can silently conflict and inconsistent views lead to integration failures\. Existing multi\-agent systems address this through workspace isolation \(e\.g\., one git worktree per agent\), but this defers conflict resolution to a post\-hoc merge step where recovery is expensive\. In this paper, we propose STORM, i\.e\., STate\-ORiented Management for multi\-agent collaboration\. Specifically, STORM manages agent states by mediating their interactions with the shared workspace, ensuring that each agent operates on a consistent view of the codebase and that conflicting edits are detected and resolved at write time\.We evaluate STORM on Commit0 and PaperBench across multiple LLMs\. STORM outperforms the git\-worktree\-based multi\-agent baseline by \+18\.7 on Commit0\-Lite and \+1\.4 on PaperBench, while achieving comparable or better cost efficiency\. Combined with single\-agent runs, STORM reaches highest scores of 87\.6 and 78\.2 on the two benchmarks respectively, suggesting that explicit state management is a more effective foundation for multi\-agent collaboration than workspace isolation\. STORM can also be plugged into any multi\-agent system\. Our code is available at \\url\{https://anonymous\.4open\.science/r/STORM\-Mutli\-Agent\}\.
 

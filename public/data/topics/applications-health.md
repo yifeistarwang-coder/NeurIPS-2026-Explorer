@@ -2,69 +2,369 @@
 
 应用 / 医疗健康
 
-168 source poster records. Repeated source event IDs are retained and explicitly marked.
+172 source poster records. Repeated source event IDs are retained and explicitly marked.
 
 Topic labels marked inferred are keyword-based, not official conference labels. PDF links marked derived are unverified. Missing abstracts are left empty in the JSON and CSV exports.
 
-## MedMemoryBench: Benchmarking Agent Memory in Personalized Healthcare
+## EmoTrack: Robust Depression Tracking from Counseling Transcripts across Session Regimes
 
-**Authors:** Yihao Wang; Haoran Xu; Renjie Gu; Yixuan Ye; Xinyi Chen; Xinyu Mu; Yuan Gao; guo chunxiao; Peng Wei; Jinjie GU; Huan Li; Ke Chen; Lidan Shou
+**Authors:** Zhaomin Wu; Jiayi Li; Bingsheng He
 
-**ID:** 139145 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+**ID:** 152590 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=iL37bwRpOg>) | [PDF](<https://openreview.net/pdf?id=iL37bwRpOg>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139145>)
+[Paper](<https://openreview.net/forum?id=RxhWFgA7GC>) | [PDF](<https://openreview.net/pdf?id=RxhWFgA7GC>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152590>)
 
-The large\-scale deployment of personalized healthcare agents demands memory mechanisms that are exceptionally precise, safe, and capable of long\-term clinical tracking\. However, existing benchmarks primarily focus on daily open\-domain conversations, failing to capture the high\-stakes complexity of real\-world medical applications\. Motivated by the stringent production requirements of an industry\-leading health management agent serving tens of millions of active users, we introduce \*\*MedMemoryBench\*\*\. We develop a human\-agent collaborative pipeline to synthesize highly realistic, long\-horizon medical trajectories based on clinically grounded, synthetic patient archetypes\. This process yields a massive, expertly validated dataset comprising approximately 2,000 sessions and 16,000 interaction turns\. Crucially, MedMemoryBench departs from traditional static evaluations by pioneering an \*evaluate\-while\-constructing\* streaming assessment protocol, which precisely mirrors dynamic memory accumulation in production environments\. Furthermore, we formalize and systematically investigate the critical phenomenon of memory saturation, where sustained information influx actively degrades retrieval and reasoning robustness\. Comprehensive benchmarking reveals severe bottlenecks in mainstream architectures, particularly concerning complex medical reasoning and noise resilience\. By exposing these fundamental flaws, MedMemoryBench establishes a vital foundation for developing robust, production\-ready medical agents\. Our dataset and benchmark are publicly available at: \.
+Text\-based counseling is an important interface for AI mental\-health support, where transcripts may be used to monitor depression severity and flag sessions requiring timely human review\. However, robust PHQ\-8 prediction across session regimes remains challenging: fine\-tuning\-based methods can exploit richer supervision but may generalize poorly under data scarcity, while prompt\-based LLM methods are data\-efficient but usually treat each transcript holistically and provide limited support for longitudinal context\. We study robust depression tracking from counseling transcripts across single\-session and multi\-session regimes\. We introduce LongCounsel\-8 , a multi\-session counseling dataset with session\-level PHQ\-8 supervision for evaluating repeated\-session tracking under partial symptom disclosure and cross\-session continuity\. We further propose EmoTrack , a PHQ\-8 prediction framework that combines LLM\-extracted clinical signals with frozen turn\-level semantic embeddings and trains symptom\-specific predictors over the resulting transcript representation\. When prior sessions are available, EmoTrack can further incorporate them through compact cross\-session memory\. Experiments on LongCounsel\-8 and DAIC\-WOZ show that EmoTrack achieves a clear gain on the real single\-session benchmark, including a 13\.5% relative MAE reduction over the strongest DAIC\-WOZ baseline, and remains competitive with the strongest longitudinal baseline on LongCounsel\-8\.
+
+## LARGO: Low\-Rank Hypernetwork for Handling Missing Modalities
+
+**Authors:** Niels Vyncke; Pooya Ashtari; Aleksandra Pizurica
+
+**ID:** 149154 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=sRYobtj67O>) | [PDF](<https://openreview.net/pdf?id=sRYobtj67O>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149154>)
+
+Addressing missing modalities is an important challenge in multimodal image analysis and often relies on complex architectures that do not transfer easily to different datasets without architectural modifications or hyperparameter tuning\. While most existing methods tackle this problem in feature space by engineering representations that are robust to missing inputs, we instead operate in weight space\. We propose LARGO, a hypernetwork that compresses the $2^N\-1$ dedicated missing\-modality models into a single network by modelling the convolutional weights using the Canonical Polyadic \(CP\) tensor decomposition\. Extensive experimental validation on BraTS 2018 \(4 modalities, 15 scenarios\) and ISLES 2022 \(3 modalities, 7 scenarios\) shows that our method ranks first in 47 out of 52 configurations, achieving average Dice improvements of \+0\.68\\% and \+2\.53\\% over state\-of\-the\-art baselines \(mmFormer, M³AE, ShaSpec, SimMLM\)\. A proof\-of\-concept experiment on avMNIST suggests that LARGO may extend beyond medical imaging to heterogeneous non\-medical modalities\.
+
+## DoAtlas\-1: A Causal Compilation Paradigm for Clinical AI
+
+**Authors:** Yulong Li; Jianxu Chen; Xiwei Liu; Chuanyue Suo; Rong Xia; Yichen Li; Xinlin Zhuang; Niranjana A Menon; Jionglong Su; Eran Segal; Imran Razzak
+
+**ID:** 152826 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=Q7ooeLQ5Xm>) | [PDF](<https://openreview.net/pdf?id=Q7ooeLQ5Xm>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152826>)
+
+Medical foundation models generate narrative explanations but cannot quantify intervention effects, detect evidence conflicts, or validate literature claims, limiting clinical auditability\. We propose causal compilation, a paradigm that transforms medical evidence from narrative text into executable code\. The paradigm standardizes heterogeneous research evidence into structured estimand objects, each explicitly specifying intervention contrast, effect scale, time horizon, and target population, supporting six executable causal queries: do\-calculus, counterfactual reasoning, temporal trajectories, heterogeneous effects, mechanistic decomposition, and joint interventions\. We instantiate this paradigm in DoAtlas\-1, compiling 1,445 effect kernels from 754 studies through effect standardization, conflict\-aware graph construction, and real\-world validation \(Human Phenotype Project, 10,000 participants\)\. The system achieves 98\.5% canonicalization accuracy, 100% conflict detection recall, and 80\.5% query executability\. This paradigm shifts medical AI from text generation to executable, auditable, and verifiable causal reasoning\.
 
 ## pyCD: A Unified Benchmark for Reliable Evaluation of Cognitive Diagnosis Models
 
 **Authors:** Youheng Bai; Xueyi Li; Tengteng Cheng; Mingliang Hou; Teng Guo; Jiaqi Zheng; Zitao Liu
 
-**ID:** 139115 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
+**ID:** 139115 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
 [Paper](<https://openreview.net/forum?id=kGok2e0ST7>) | [PDF](<https://openreview.net/pdf?id=kGok2e0ST7>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139115>)
 
-_Abstract unavailable from the accessible public sources._
+Cognitive diagnosis \(CD\) infers students' mastery of knowledge components \(KCs\) from their responses, supporting personalized feedback and exercise recommendation\.  Cognitive diagnosis models \(CDMs\) are often ranked by response\-prediction AUC under inconsistent experimental protocols, while their KC\-level mastery profiles are not consistently audited under a shared protocol\.  We introduce \\texttt\{pyCD\}, a unified benchmark of eleven CDMs on six public datasets that fixes preprocessing, splits, hyperparameter search, and stopping rules; the benchmark reports KC\-level diagnostic metrics for learned mastery alongside standard prediction metrics\. Two findings show that gains in AUC do not translate into gains in diagnostic quality\.  First, the AUC leaderboard is sharply compressed and sensitive to protocol choices: modern CDMs often cluster within $0\.005$\-\-$0\.020$ AUC, with the per\-dataset best non\-IRT CDM improving over IRT by only $0\.017$ AUC on average; removing validation\-AUC early stopping can shift AUC by up to $0\.13$ on individual cells\.  Second, the AUC gaps that remain do not reliably transfer into diagnosis: the top\-1 AUC model is typically outside the top\-3 by KC\-level diagnostic agreement \(DOA\)\.  The same mismatch extends to exercise difficulty: against Junyi's human pairwise difficulty ratings, learned CDM difficulty parameters rank worse than both an empirical accuracy\-based baseline and zero\-shot LLMs given only exercise titles\.  CDM evaluations should therefore report diagnostic outputs directly rather than infer them from predictive gains; \\texttt\{pyCD\} provides a unified protocol for doing so\.  Code, splits, and configurations are available at \\url\{https://anonymous\.4open\.science/r/pyCD\-NeurIPS2026\-60B8\}\.
 
-## MathCD: A Benchmark Dataset for Cognitive Diagnosis with Semantic Information
+## CUVET: A Partitioning Approach for Continuous Treatment Assignment At Scale
 
-**Authors:** Xueyi Li; Youheng Bai; Tengteng Cheng; Mingliang Hou; Teng Guo; Jiaqi Zheng; Yongdong WU; Zitao Liu
+**Authors:** Artem Betlei; Mariia Vladimirova; Victor Girou; Thibaud Rahier
 
-**ID:** 139318 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
+**ID:** 148338 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=XhTjbnmlac>) | [PDF](<https://openreview.net/pdf?id=XhTjbnmlac>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139318>)
+[Paper](<https://openreview.net/forum?id=yaAz2Trarn>) | [PDF](<https://openreview.net/pdf?id=yaAz2Trarn>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148338>)
 
-_Abstract unavailable from the accessible public sources._
+Treatment assignment problems arise wherever limited budget must be allocated to heterogeneous users, with applications ranging from personalized recommendations to online advertising and healthcare\. In such settings, individuals exhibit heterogeneous responses to different treatments, making it essential to learn cost\-aware personalized treatments\. This paper introduces the Cost per Unit Value Equalization Tree \(CUVET\) algorithm, a novel treatment assignment approach that partitions the user space\. Under a diminishing\-returns \(power\-law\) assumption, CUVET solves the within\-cohort allocation problem by equalizing the marginal cost per unit value across each user group, yielding a closed\-form cost\-aware treatment assignment suited for large\-scale industrial deployment\. We also release CUVET\-policy, an 86\.7\-million\-impression public benchmark derived from real\-world industrial A/B tests, providing an open\-source evaluation framework for decision\-focused learning\. Across a multi\-method benchmark suite, the Bayesian variant of CUVET achieves the largest cost\-feasible value uplift on the public MT\-LIFT dataset \+11\.1% under LP, vs\. at most \+1\.3% for all baselines, while on CUVET\-policy, where treatment effects are sub\-percent, CUVET variants are the most efficient and strongest cost\-feasible methods\.
 
-## Prototype\-Aligned Multi\-View Graph Learning for EHR Prediction
+## Rare Disease Diagnosis Agent with Decoupled Workflows and Knowledge\-Driven Self\-Evaluation
 
-**Authors:** Jong\-Hoon Park; Young\-Rae Cho
+**Authors:** Yunlu Yan; Yawen Huang; Xian Wu; Lei Zhu
 
-**ID:** 148619 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+**ID:** 152822 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=wOyvN1QBWX>) | [PDF](<https://openreview.net/pdf?id=wOyvN1QBWX>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148619>)
+[Paper](<https://openreview.net/forum?id=Q8qlMNXMvx>) | [PDF](<https://openreview.net/pdf?id=Q8qlMNXMvx>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152822>)
 
-Electronic health records \(EHRs\) are a valuable resource for clinical prediction because they capture rich longitudinal information about patient care\. Existing graph\-based EHR models often learn relations at the cohort level, but do not clearly distinguish between global event associations and the subset of interactions actually instantiated within an individual visit\. To address this limitation, we propose MVP\-EHR, a multi\-view prototype learning framework for EHR prediction with shared type\-aware prototype alignment\. MVP\-EHR combines three key ideas: \(i\) a lift\-thresholded global knowledge graph that captures cohort\-level event associations, \(ii\) a visit\-induced local knowledge graph that preserves only the observed events and supported event\-event relations within each visit, and \(iii\) shared type\-aware prototypes that align local and global event representations before post\-event multi\-view fusion and temporal prediction\. Experiments on MIMIC\-IV show that MVP\-EHR achieves strong and consistent performance across multiple clinical prediction tasks, including 0\.9339 AUROC and 0\.1706 AUPRC for mortality prediction, the best AUROC on readmission prediction, the best overall performance on phenotype prediction, and a strong AUPRC/F1 tradeoff on drug recommendation among the compared baselines\. Ablation results further show that separating global prior from visit\-instantiated evidence, together with shared prototype alignment, is critical for robust performance\.
+Rare disease diagnosis is a fundamental challenge due to heterogeneous and overlapping clinical phenotypes\. While recent LLM\-based agentic systems have demonstrated promise by integrating external medical tools and knowledge, they typically rely on large\-scale or commercial LLMs, limiting their practical deployment in resource\-constrained settings\. In this work, we observe that their performance significantly degrades when using small\-scale LLMs, due to entangled workflows and unreliable multi\-evidence aggregation\.  To address this issue, we propose RADAR, a rare disease diagnostic framework designed for small\-scale LLMs\. RADAR adopts a divide\-and\-conquer paradigm that decouples heterogeneous diagnostic evidence into specialized workflows, reducing reasoning complexity and improving robustness\. It further introduces a knowledge\-driven self\-evaluation mechanism that performs evidence\-aware reasoning over structured disease knowledge to produce interpretable reliability scores by identifying key supporting phenotypes and conflicting evidence\. Finally, a multi\-evidence fusion strategy integrates outputs from multiple sources based on reliability and clinical agreement, resolving conflicts and producing stable diagnostic rankings\. Experiments on three benchmarks show that RADAR consistently outperforms various state\-of\-the\-art baselines, including general and medical LLMs and agentic systems\. Code will be released\.
 
-## Hyperbolic Concept Embedding Model for Interpretable Medical Image Diagnosis
+## Aegis: Generative Gradient Masking for Privacy\-Preserving Medical Federated Learning
 
-**Authors:** Qihao Xu; Yadong Liu; Yong Xu; Xiaoling Luo; Chengliang Liu
+**Authors:** Chaoyu Zhang; Shanghao Shi; Heng Jin; Ning Wang; Thomas Hou; Wenjing Lou
 
-**ID:** 150377 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+**ID:** 148730 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=iXV1pqk7ar>) | [PDF](<https://openreview.net/pdf?id=iXV1pqk7ar>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150377>)
+[Paper](<https://openreview.net/forum?id=vUlQnQztWO>) | [PDF](<https://openreview.net/pdf?id=vUlQnQztWO>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148730>)
 
-Although deep neural networks \(DNNs\) have demonstrated strong performance in medical classification, their opaque reasoning undermines the trustworthiness of clinical diagnoses due to limited interpretability\. Concept bottleneck models \(CBMs\) introduce an intermediate concept layer, decomposing black\-box prediction into an explicit reasoning path: image → concept → disease\. However, concepts and their corresponding diagnostic results in medical image diagnosis are often hierarchical, inclusive, and semantically unevenly distributed\. Most concept\-based methods represent concepts in Euclidean space and treat them as isolated entities, which hinders the modeling of their structural relationships and thereby reduces diagnostic transparency\. To address this, we introduce a hyperbolic concept embedding model \(HCEM\) that maps medical concepts into a hyperbolic space better suited for hierarchical representation, enabling explicit modeling of complex concept relationships and their semantic associations with diseases\. In this model, we regularize the hyperbolic concept embedding space using a positive–negative concept contrastive loss and a concept entailment cone loss\. Furthermore, we employ an intervention\-aware disease concept hyperbolic embedding regularization to learn their dynamic relationships\. It avoids rigid rule priors while improving diagnostic consistency and flexibility under concept interventions\. Extensive experiments on four medical datasets validate that our HCEM provides high accuracy in both concept and disease classification, as well as superior interpretability and intervenability\. The code will be released soon\.
+Federated learning \(FL\) has become a foundational paradigm for multi\-institutional medical AI, allowing hospitals and research centers to jointly train diagnostic models without exchanging patient records\. This privacy promise, however, is increasingly contested: a malicious or honest\-but\-curious server can launch model inversion attacks \(MIAs\) that reconstruct private patient images directly from shared model updates, and recent scalable, closed\-form attacks penetrate even secure aggregation at clinically realistic batch sizes\. Existing defenses face an unsatisfactory dilemma\. Gradient\-perturbation methods such as differential privacy and pruning trade away the diagnostic accuracy on which clinical reliability depends, while cryptographic protocols add system complexity yet still leave updates exposed to these scalable attacks\. We propose Aegis, a principled client\-side defense that breaks this dilemma without perturbing patient data or modifying the FL protocol\. Our key insight is that the success of every known MIA is fundamentally bounded by the local batch size relative to the model's leakage capacity; once this limit is exceeded, distinct samples collide and reconstructions collapse into indistinguishable mixtures\. Aegis turns this universal bottleneck into a defense: each client superimposes onto its real update a masking gradient computed on locally synthesized, task\-relevant data, deliberately pushing the effective batch beyond the attack's recovery capacity\. We complement the design with theoretical convergence guarantees under standard convex assumptions and evaluate Aegis on MNIST, CIFAR\-10, and three MedMNIST modalities \(chest X\-ray, abdominal CT, colon pathology\)\. Aegis neutralizes three state\-of\-the\-art MIAs while preserving model utility and incurring only modest overhead, offering a practical privacy primitive for medical FL\.
 
-## Cite What You Explore: Budget\-Aware LLM Reasoning over Medical KGs with Verifiable Evidence
+## EndoSCOP\-V: A Multi\-Turn Video Understanding Evaluation Framework for Multimodal Models in Endoscopy Reporting and Clinical Reasoning
 
-**Authors:** Chen Chen; Dongjie Wang; Mei Liu; Zijun Yao
+**Authors:** Abhishek Tyagi; TANMAY JAIN; Vilas Biradar; Krithi K Koduri; Misba h Masoodi; Swetha Rapolu; HARDIK RUGHWANI; Rachana Kotha; Anjan K kaipa; Anudeep Katrevula; Rakesh Garlapati; ANIRUDDHA P SINGH; Rajendra Patel; Abhay Tyagi; SUNDEEP LAKHTAKIA; MOHAN RAMCHANDANI; RAKESH KALAPALA; NAGESHWAR REDDY
 
-**ID:** 153952 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+**ID:** 138889 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=HKqJQcqfEb>) | [PDF](<https://openreview.net/pdf?id=HKqJQcqfEb>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153952>)
+[Paper](<https://openreview.net/forum?id=yeEUbJaub1>) | [PDF](<https://openreview.net/pdf?id=yeEUbJaub1>) | [Official poster](<https://neurips.cc/virtual/2026/poster/138889>)
 
-Post\-discharge risk prediction from electronic health records \(EHRs\) is difficult because many dependencies that link discharge\-time observations to downstream complications, such as comorbidity cascades and drug\-disease interactions, are absent from the record\. External medical knowledge graphs \(KGs\) can supply these missing dependencies, but tracing them demands three properties: KG exploration must remain cost\-bounded, retrieved evidence must be differentiated by source quality, and the resulting rationale must be citable for retrospective review\. Large language models \(LLMs\) can plan and verify over structured evidence, making them natural candidates for KG reasoning, but existing LLM\-based methods do not satisfy these three properties jointly\. In this paper, we propose BAR, a Budget\-Aware LLM Reasoning framework over medical KGs with three components\. First, BAR refines the raw KG into disease\-specific evidence graphs whose edges carry support scores and provenance records, turning the KG into a quality\-annotated reasoning space rather than a static feature source\. Second, an LLM then reasons over this graph through a plan\-navigate\-verify loop that decomposes the question into steps, retrieves evidence under a patient\-specific budget, and revises when verification fails\. Third, a reasoning policy is trained with a reward that compares predictions with and without acquired evidence, combined with acquisition cost and citation\-integrity terms\. Across 8 diseases and 3 prediction horizons on MIMIC\-III and MIMIC\-IV, BAR improves AUPRC by 3\.4 points over the strongest baseline, raises citation precision from 59\.8\\% to 77\.9\\%, and consumes only 62\-65\\% of the budget cap\. The code is available at https://anonymous\.4open\.science/r/BAR/\.
+Real\-world endoscopic diagnosis unfolds across native video, depending on continuous traversal of gastrointestinal organs where a single positive finding triggers a multi\-minute reasoning chain over location, morphology, severity, and intervention\. Existing endoscopy multimodal benchmarks evaluate only static images or single\-disease videos that fail to capture the temporal and clinical reasoning demands of real\-world endoscopy reporting\. We introduce EndoSCOP\-V, a video\-grounded multi\-turn evaluation framework for long\-horizon clinical reasoning in endoscopy\. The benchmark contains 1,307 real\-world endoscopy and colonoscopy videos \(63\.2 h; 97% 1080p; mean \~174 s\) — the time\-scale at which endoscopists actually reason about a finding\. The corpus is paired with 20,275 question–answer turns deterministically instantiated from clinician\-filled structured endoscopy\-reporting EHRs, avoiding synthetic or LLM\-rephrased per\-case annotations\. Questions are derived from 1,033 clinician\-reviewed templates spanning a clinically aligned 9\-task × 30\-sub\-task reporting taxonomy across 54 World Endoscopy Organization \(WEO\) MST 3\.0 diseases at \~18 templates per disease, substantially deeper per\-disease examination than prior endoscopy benchmarks\. To mirror real\-world case mix, 22% of procedures carry co\-existing pathologies, up to six per case\. To model the hierarchical and conditional nature of clinical reporting, EndoSCOP\-V introduces a Markovian context\-pruned oracle\-forcing protocol that evaluates multi\-turn dialogues turn\-by\-turn\. By injecting the gold answer before each subsequent turn, the protocol isolates per\-turn reasoning from cascading dialogue errors and enables fine\-grained analysis of clinical reasoning capabilities\. Clinician\-marked key\-frame anchors further separate temporal\-localization from frame\-level comprehension failures\. A panel of 15 board\-certified endoscopists anchors a 78% strict\-accuracy baseline on a 1,500\-question audit\. Across 14 open\-weight LMMs, the best 27B\-class model reaches 59\.8% strict accuracy, falling to 53\.4% once format\-trivial disease\-rejection items are excluded\. On a between\-subjects spot\-check, the best of 3 frontier proprietary models trails the clinician panel by 23 pp on strict accuracy\. Sub\-task analysis reveals consistent gaps in quantitative measurement, multi\-variable grading, and intervention reasoning on long\-horizon video, providing a clinically grounded benchmark for evaluating multimodal reasoning in endoscopy\.
+
+## MindGuard: Guardrail Classifiers for Multi\-Turn Mental Health Support
+
+**Authors:** António Farinhas; Nuno M Guerreiro; José Pombal; Pedro Henrique Martins; Laura Melton; Alexandra Conway; Cara Dochat; Maya D&amp;amp;\#x27;Eon; Ricardo Rei
+
+**ID:** 138950 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=uMIiizxIrQ>) | [PDF](<https://openreview.net/pdf?id=uMIiizxIrQ>) | [Official poster](<https://neurips.cc/virtual/2026/poster/138950>)
+
+Large language models are increasingly used for mental health support, yet their conversational coherence alone does not ensure clinical appropriateness\. Existing general\-purpose safeguards often fail to distinguish therapeutic disclosures from genuine clinical crises, and progress on developing better ones is bottlenecked by a lack of clinically grounded evaluation resources\. To address this gap, we introduce a risk taxonomy, developed in collaboration with PhD\-level clinical psychologists, that identifies actionable harm \(self\-harm and harm to others\) while preserving space for safe, non\-crisis therapeutic content\. We release MindGuard\-testset, a dataset of multi\-turn conversations annotated at the turn level by clinical experts, which is, to our knowledge, the first public benchmark with turn\-level clinical risk labels for multi\-turn mental health support\. We also release an automated red\-teaming \(ART\) framework designed to measure how safety classifiers affect downstream model behavior in adversarial multi\-turn interactions\. Using synthetic dialogues generated via a controlled two\-agent setup, we train MindGuard, a family of lightweight safety classifiers \(with 4B and 8B parameters\)\. Our classifiers reduce false positives at high\-recall operating points and, when paired with clinician language models, help achieve lower attack success and harmful engagement rates compared to general\-purpose safeguards\. We release all models, human evaluation data, and the ART framework\.
+
+## Uncertainty Estimation for Pretrained Medical Image Registration Models via Transformation Equivariance
+
+**Authors:** Lin Tian; Xiaoling Hu; Juan Eugenio Iglesias
+
+**ID:** 148713 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=vcFcWZeEEC>) | [PDF](<https://openreview.net/pdf?id=vcFcWZeEEC>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148713>)
+
+Accurate image registration is essential in many medical imaging applications, yet most deep registration networks provide little indication of when or where their predictions are unreliable\. Existing uncertainty estimation approaches, such as Bayesian methods, ensembles, or MC\-dropout, typically require architectural modifications or retraining, precluding their applicability to pretrained registration models\. We propose an inference\-time, model\-agnostic uncertainty estimation framework that applies directly to any pretrained registration network\. Our approach is grounded in the transformation equivariance property of image registration, which states that the underlying anatomical mapping should remain consistent under spatial perturbations of the input\. Experiments across three pretrained registration models and four anatomical structures show that the resulting uncertainty maps consistently correlate with registration error and highlight unreliably aligned regions\. This framework turns pretrained registration networks into risk\-aware tools at test time, moving medical image registration closer to safe clinical and large\-scale research deployment\. The code will be released at \*\*\*\.
+
+## Experience Makes Skillful: Enabling Generalizable Medical Agent Reasoning via Self\-Evolving Skill Memory
+
+**Authors:** Haoran Sun; Wenjie Li; Yujie Zhang; Zekai Lin; Fanrui Zhang; Kaitao Chen; Xingqi He; Yichen Li; Mianxin Liu; Lei Liu; Yankai Jiang
+
+**ID:** 150444 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=i09nlt9B6r>) | [PDF](<https://openreview.net/pdf?id=i09nlt9B6r>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150444>)
+
+Medical agent systems are increasingly expected to support interactive clinical decision making rather than only static question answering\. In such settings, effective agents must reuse prior experience across evolving cases, yet existing memory mechanisms often retain raw historical traces that are redundant, noisy, and difficult to govern\. More importantly, they rarely distinguish which memories are truly useful for future reasoning\. This limits their ability to accumulate compact and reliable experience for long\-horizon clinical reasoning\. To close this gap, we propose SkeMex, a post\-deployment self\-evolution framework that improves medical agents through a skill\-based memory without updating model weights\. SkeMex distills informative interaction trajectories into structured skills that encode reusable procedural knowledge, and organizes them into a multi\-branch repository spanning general, task\-specific, and action\-level experience\. To determine which memories should be reused and retained, SkeMex estimates context\-dependent utility from environment feedback and uses it to guide value\-aware retrieval and repository governance\. A closed\-loop \`\`Read\-\-Write\-\-Assess\-\-Govern" lifecycle further supports continual evolution by writing new skills, updating utilities, promoting useful memories, and removing harmful entries\. Experiments across diverse clinical tasks show that SkeMex consistently outperforms representative memory\-based agents in both offline and online settings\. It also generalizes across model backbones and supports transferable skill memory\. All data and code will be released publicly\.
+
+## RealICU: Do LLM Agents Understand Long\-Context ICU Data? A Benchmark Beyond Behavior Imitation
+
+**Authors:** Chengzhi Shen; Weixiang Shen; Tobias Susetzky; Chen Chen; Jun Li; Yuyuan Liu; zhang xuepeng; Zhenyu Gong; Daniel Rueckert; Jiazhen Pan
+
+**ID:** 138984 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=sXvJmaafJ2>) | [PDF](<https://openreview.net/pdf?id=sXvJmaafJ2>) | [Official poster](<https://neurips.cc/virtual/2026/poster/138984>)
+
+Intensive care units \(ICU\) generate dense, evolving streams of clinical information, where physicians must repeatedly reassess patient states under time pressure, underscoring a clear need for reliable AI decision support\. Existing ICU benchmarks typically treat historical clinician actions as ground truth\. However, these actions are made under incomplete information and limited temporal context of the underlying patient state, and may therefore be suboptimal, making it difficult to assess the true reasoning capabilities of AI systems\. We introduce RealICU, a hindsight\-annotated benchmark for evaluating large language models \(LLMs\) under realistic ICU conditions, where labels are created after senior physicians review the full patient trajectory\. We formulate four physician\-motivated tasks: assess \\emph\{Patient Status\}, \\emph\{Acute Problems\}, \\emph\{Recommended Actions\}, and \\emph\{Red Flag\} actions that risk unsafe outcomes\. We partition each trajectory with 30\-min windows and release two datasets: RealICU\-Gold with 930\-window annotations from 94 MIMIC\-IV patients, and RealICU\-Scale with 11,862 windows extended by \\emph\{Oracle\}, a physician\-validated LLM hindsight labeler\. Existing LLMs including memory\-augmented ones performed poorly on RealICU, exposing two failure modes: a recall–safety tradeoff for clinical recommendations, and an anchoring bias to early interpretations of the patient\. We further introduce ICU\-Evo to study structured\-memory agents that improves long\-horizon reasoning but does not eliminate safety failures\. Together, RealICU provides a clinically grounded testbed for measuring and improving AI sequential decision\-support in high\-stakes care\.
+
+## Risk\-Sensitive Deep Optimal Stopping
+
+**Authors:** Yechan Jeong; Youngjoon Hong
+
+**ID:** 153309 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=MFjT1ZaVMp>) | [PDF](<https://openreview.net/pdf?id=MFjT1ZaVMp>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153309>)
+
+Risk\-sensitive optimal stopping arises wherever a single bad outcome dominates a sequential decision, such as option exercise, sequential medical treatment, and safety\-critical control\. The natural objective is the conditional value\-at\-risk \(CVaR\) of the stopped reward\. We develop the first theoretical framework and algorithm for risk\-sensitive deep optimal stopping\. Together they resolve all four structural problems of risk\-sensitive RL: state augmentation, score\-function pathology, blindness to success, and bootstrapping circularity\. We isolate three structural properties of optimal stopping: single\-point reward, action\-independent dynamics, and sum\-zero gradient\. They yield Markov optimality on the original state space and uniform boundedness of the per\-step pathwise gradient at the deterministic\-policy boundary, resolving the first two\. From these, we derive DIOS \(Distribution\-Informed Optimal Stopping\), a single\-time\-scale CVaR estimator on the Rockafellar\-Uryasev envelope that resolves the remaining two\. A soft penalty replaces the hard tail indicator, and a tail\-level annealing schedule initializes training in the risk\-neutral regime, where no trajectory is gated out\. The inner quantile admits a closed\-form update without an auxiliary critic\. DIOS admits a finite\-time best\-iterate stationarity guarantee under standard CVaR non\-degeneracy, the first explicit rate for CVaR optimal stopping\. On Bermudan max\-call options, DIOS achieves the highest mean CVaR and the lowest wall time against five representative CVaR baselines\.
+
+## From Intent to Evidence: A Categorical Approach for Structural Evaluation of Deep Research Agents
+
+**Authors:** Shuoling Liu; Zhiquan Tan; Kun Yi; Hui Wu; Yihan Li; Jiangpeng Yan; Liyuan Chen; Kai Chen; Qiang Yang
+
+**ID:** 153875 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=I6Icjutm2f>) | [PDF](<https://openreview.net/pdf?id=I6Icjutm2f>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153875>)
+
+Deep Research Agents \(DRAs\) answer complex questions by searching the web, checking evidence, and synthesizing conclusions across heterogeneous sources\. We introduce a category\-theoretic framework for evaluating such agents\. The framework treats deep research as a structured mapping from user intent to evidence\-grounded conclusions, making retrieval traces, cross\-source alignment, and final synthesis explicit\. Guided by this view, we build a mechanism\-aware benchmark of 296 bilingual questions covering four structural skills: following multi\-hop evidence chains, verifying claims across sources, re\-ordering fragmented information, and rejecting unsupported assumptions\. We evaluate 16 systems with human verification and find that these tasks remain difficult: the best system reaches 19\.9\\% average accuracy\. The results reveal complementary strengths across systems, but also persistent weaknesses in long\-horizon retrieval and intersection\-heavy verification\. We further instantiate two theory\-guided interventions, tracked search and category tools, in API\-based agents\. These variants improve over their corresponding baselines, suggesting that the framework is useful not only for diagnosis but also for modest, targeted system design\.
+
+## CoE\-Agent: Co\-Evolving Patient\-Doctor Agents via Interactive Policy Graph Optimization for Clinical Decision Making
+
+**Authors:** Guolin Huang; Wenting Chen; Linlin Shen
+
+**ID:** 155085 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=8YLhu314Jr>) | [PDF](<https://openreview.net/pdf?id=8YLhu314Jr>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155085>)
+
+Clinical Decision Making \(CDM\) requires integrating heterogeneous information across sequential diagnostic stages while interacting with patients whose behaviors are often non\-stationary and unreliable\. However, existing medical agents are typically trained against cooperative patient simulators and tackle each clinical task in isolation, making them fragile to dynamic patient behaviors and unable to capture inter\-task dependencies essential for globally coherent decision\-making\. To address these issues, we propose CoE\-Agent, a co\-evolving patient–doctor agentic framework that learns globally coherent CDM strategies via interactive policy graph optimization\. First, Dynamic Patient–Doctor Co\-Evolutionary Learning pairs a Dynamic Patient Agent, which maintains an evolving cognition state to simulate non\-stationary behaviors, with an Interactive Policy Graph\-Based Doctor Agent that generates DAG\-structured policy graphs unifying interactions, tool invocations, and reasoning steps\. The doctor agent is then optimized via Interactive Policy Graph Optimization \(IPGO\), which jointly enforces structural validity and task\-aligned correctness through reinforcement learning\. Second, Cross\-Task Policy Graph Consolidation and Unified Model Learning prunes low\-value nodes, aggregates high\-value nodes across tasks while filtering redundancy, and distills a unified policy planner with task\-specific decision models for globally coherent decision\-making\. Experiments on MedChain and ClinicalBench show that CoE\-Agent surpasses state\-of\-the\-art baselines by 11\.13\\% and 23\.63\\% in average score, while achieving up to 19\.5$\\times$ faster inference\. Source code is to be released\.
+
+## FinAl: Fine\-grained Alignment for Detail\-Preserving Medical Vision\-Language Pretraining
+
+**Authors:** Jongsu Youn; Dongyoung Lee; JaeHyeong Bae; SANG\-IL CHOI; Sangtae Choi; Dae Ung Jo; Jongwon Choi
+
+**ID:** 152146 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=VBJAawjSql>) | [PDF](<https://openreview.net/pdf?id=VBJAawjSql>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152146>)
+
+We present a vision–language pretraining \(VLP\) framework for the medical domain that focuses on preserving fine\-detail clinical information, such as disease severity, which plays a critical role in downstream medical applications\. Despite recent advances in medical VLP, existing approaches often struggle to retain such subtle semantics\. This limitation mainly stems from the use of contrastive learning schemes that treat supervision as hard one\-hot labels, overlooking the ordinal and overlapping nature of clinical findings and thereby introducing false negatives\. To overcome these challenges, we propose FinAl, a fine\-grained alignment approach that incorporates soft alignment targets into vision\-language pretraining\. These targets are derived from structured radiology reports and encode relative semantic relationships among clinical descriptions, allowing fine\-grained linguistic information to be transferred into the visual representation space\. Extensive experiments show that FinAl improves performance on fine\-grained clinical tasks, including severity grading and severity\-aware retrieval, with additional evaluations on challenging fine\-grained scenarios further supporting its robustness\. At the same time, the proposed method maintains competitive performance on standard coarse\-grained clinical benchmarks\.
+
+## The Shape of Events: Edge\-Based Inductive Biases via Cross\-Domain Distillation
+
+**Authors:** Shunsuke Yasuki; Masato Taki; Soshun Kihara
+
+**ID:** 148705 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=vfKGFX4uRY>) | [PDF](<https://openreview.net/pdf?id=vfKGFX4uRY>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148705>)
+
+Convolutional neural networks trained on ImageNet are known to rely heavily on local high\-frequency texture, an inductive bias that translates into fragile robustness against distribution shifts in real\-world environments\. Event cameras, in contrast, record only changes in scene brightness and are therefore well suited to capturing contour information; however, due to the absence of diagnostic benchmarks in the event domain, the inductive bias that event\-camera data instills in vision models has remained unexplored\. In this work, we use knowledge distillation from the event domain to the RGB domain so as to exploit the rich evaluation toolkit available in the RGB domain and systematically dissect this inductive bias\. Our experiments show that distillation from the event domain induces, in the RGB domain, notable color invariance, shape bias, and robustness to high\-frequency noise\. We identify the underlying mechanism as the model suppressing its dependence on high\-frequency texture while simultaneously acquiring a strong dependence on edge\-based object shape\. This hypothesis is supported by changes in how color and spatial information are processed at the early layers, together with a "spectral trade\-off" in which robustness to the absence of high\-frequency components coexists with vulnerability to contamination of the relied\-upon frequency bands and to disruption of geometric structure\. We further show that this inductive bias differs markedly from existing robustification methods and that it functions as a strong prior for diverse downstream tasks that demand shape\-based reasoning, such as medical imaging\. The code and experimental configurations for reproducing our experiments are submitted alongside this paper as supplementary material\.
+
+## Information Bottleneck\-Guided Adaptive Hypergraph Transformer for Brain Disease Diagnosis
+
+**Authors:** Jingxi Feng; Xudong Chen; Yifan Zhang; Heming Xu; Hongcheng Han; Xijing Wang; Dong Zhang; Shaoyi Du
+
+**ID:** 151673 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=Yu6MCCLKmF>) | [PDF](<https://openreview.net/pdf?id=Yu6MCCLKmF>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151673>)
+
+Exploring high\-order correlations and long\-range dependencies in brain networks holds significant value for both neuroscience research and clinical diagnosis\. However, previous studies have lacked a unified integration of high\-order and long\-range dependency information in brain networks, and there is substantial redundancy behind various types of information\. These issues limit their effectiveness in the diagnosis of brain diseases\. To address this, we propose an Information Bottleneck\- Guided Adaptive HyperGraph Transformer \(IBAHGT\)\. By incorporating the information bottleneck \(IB\) principle, this approach enables adaptive learning of high\-order correlations and both short\- and long\-range dependencies within a unified framework for brain network analysis, achieving high\-precision brain disease diagnosis\. IBAHGT consists of three key components: an information bottleneck\- guided adaptive hypergraph convolution, which introduces a novel hypergraph information bottleneck \(HIB\) principle to adaptively learn hypergraph message\- passing weights between nodes and hyperedges, optimizes information flow and captures high\-order information in brain networks that is maximally informative and minimally redundant \(MIMR\)\. The Transformer encoder captures global information within brain networks through the attention mechanism, specifically modeling short\- and long\-range dependencies\. An information bottleneck\-guided node\-level adaptive fusion employs the IB principle to learn independent weights for each node, facilitating the fine\-grained integration of high\-order information and global information to obtain an efficient representation for downstream tasks\. Extensive experiments demonstrate that the proposed method outperforms current state\-of\-the\-art methods and can identify biomarkers for clinical applications\.
+
+## JMed48k: A Multi\-Profession Japanese Medical Licensing Benchmark for Vision\-Language Model Evaluation
+
+**Authors:** Yue Xun; Junyu Liu; Qian Niu; Xinyi Wang; Zheng Yuan; Zirui Li; Zequn Zhang; Bowen Zhao; Emma, Shujun Wang; Zihui Li; Kan Hatakeyama\-Sato; Yusuke Iwasawa; Yutaka Matsuo
+
+**ID:** 139030 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=pFkWhEmt1A>) | [PDF](<https://openreview.net/pdf?id=pFkWhEmt1A>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139030>)
+
+We introduce JMed48k, a multi\-profession Japanese healthcare licensing benchmark for evaluating vision\-language models\. Built from official PDF materials released by the Japanese Ministry of Health, Labour and Welfare, JMed48k contains 48,862 exam questions and 20,142 images from 11 national licensing examinations between 2005 and 2025, with visual content annotated under an 8\-type taxonomy\. From this corpus, we derive JMed48k\-Eval, a recent five\-year evaluation subset with 12,484 scored questions, including 9,905 text\-only questions and 2,579 questions with images\. We evaluate 21 proprietary, open\-source, and medical\-specific models, reporting text\-only and with\-image performance separately\. Because these subsets contain different questions, we further introduce a paired image\-removal audit that evaluates questions with images before and after removing visual content to explore four answer\-transition states\. The audit shows that proprietary and open\-source models gain substantially from images, whereas medical\-specific systems show limited observable use of visual evidence, with many correct answers persisting after image removal\. Even among proprietary models, the net image\-removal effect varies sevenfold across professions, from \+5\.7 points on Physician questions to \+39\.8 points on Public Health Nurse questions\. We release JMed48k to support reproducible, profession\-stratified evaluation of vision\-language models in medical licensing settings\.
+
+## CORAL: Learning Amyloid Fibril Ligand Docking with Cooperative Binding Rewards
+
+**Authors:** Yasheng SUN; Bohan Li; Youqi Tao; Jürgen Schmidhuber
+
+**ID:** 154426 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=Dfzv8dmnaf>) | [PDF](<https://openreview.net/pdf?id=Dfzv8dmnaf>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154426>)
+
+A hallmark of neurodegenerative diseases such as Alzheimer's and Parkinson's is the aberrant aggregation of proteins into amyloid fibrils, and small molecules that selectively bind to these fibrils hold promise as diagnostics, imaging probes, and therapeutics\. Predicting how such ligands bind to fibril targets, however, presents two fundamental challenges\. First, resolved co\-crystal structures of amyloid–ligand complexes are exceptionally scarce; even with recent advances in cryo\-EM only a handful have been structurally characterized, making supervised training of docking models impractical for this target class\. Second, amyloid fibrils present a binding mode fundamentally different from globular proteins: ligands intercalate into longitudinal cross\-β grooves and stack cooperatively along the fibril axis, a geometry that existing docking models are not designed to capture\. To address these challenges, we present CORAL \(Cooperative Amyloid Ligand docking\), a reinforcement learning framework that trains a generative docking model to produce ligand pose distributions tailored to the cross\-β groove geometry\. Our reward explicitly incorporates cooperative ligand–ligand stacking energy alongside protein–ligand docking affinity, directly capturing the distinctive binding geometry of amyloid fibrils\. We further introduce a curated evaluation set of amyloid–ligand complexes constructed from model\-generated poses validated by domain experts\. Experiments on both experimentally resolved structures and this evaluation set demonstrate improved pose quality and binding affinity correlation over existing docking baselines\.
+
+## XL\-DocBench: Benchmarking Evidence\-Grounded Extra\-Long Document Understanding
+
+**Authors:** Hongchen Wei; Yuanzhe Wang; Bei Liu; Yifan Yang; Qi Dai; Ruichun Ma; Kai Qiu; Yunsheng Li; Dongdong Chen; Chong Luo; Zhenzhong Chen; Baining Guo
+
+**ID:** 139062 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=nTsgMNdxMa>) | [PDF](<https://openreview.net/pdf?id=nTsgMNdxMa>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139062>)
+
+Real\-world document tasks often ask professionals to answer questions from annual reports, regulations, clinical guidelines, and technical manuals that span hundreds or thousands of pages\. Some questions also require comparing related reports\. Reliable long\-document understanding is therefore a prerequisite for using LLMs in compliance, clinical, financial, and engineering workflows, where decisions must be traceable to specific evidence pages and the cost of an unsupported answer is high \-\- yet most existing benchmarks still measure short\-context or single\-page QA\. We introduce \\textbf\{XL\-DocBench\}, a fully human\-verified benchmark for extra\-long document understanding, with 1519 retained questions from six professional domains and contexts up to 2,303 pages\. XL\-DocBench goes beyond page\-level lookup\. 1,103 examples \(72\.6\\%\) use multiple evidence pages\. The final set also includes 556 questions \(36\.6\\%\) that use tables, charts, or figures, and 165 questions \(10\.9\\%\) that require evidence from multiple documents\. Each question has one of twelve reasoning labels, expert\-annotated evidence pages, a typed verification rule, and an answer format, including 218 \\texttt\{None\}\-answer cases\. We build the benchmark with a tree\-guided synthesis pipeline followed by artifact filters and full verification by 194 human experts\. By coupling extra\-long professional contexts with page\-level evidence and typed rules, XL\-DocBench fills a gap left by prior single\-page, short multi\-page, or text\-only long\-context benchmarks, and lets future work attribute system failures to retrieval, evidence use, or rule following rather than to a single leaderboard score\. The results show that current systems still struggle with long contexts, multi\-page evidence, and structured reasoning over professional documents\.
+
+## Next\-Token Prediction Enables Scalable Learning of Sleep Physiology
+
+**Authors:** Jonathan F Carter; Lionel Tarassenko
+
+**ID:** 149519 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=pXVvnchQzY>) | [PDF](<https://openreview.net/pdf?id=pXVvnchQzY>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149519>)
+
+Foundation models offer a promising route to compress multi\-modal physiological signals into better measures of human health, with broad applications across sleep medicine, cardiology, neurology and other healthcare domains\. Existing models are typically trained with contrastive or masked\-reconstruction objectives\. However, masked reconstruction may be poorly suited to the stochastic nature of these signals, while contrastive approaches rely on positive\-pair definitions despite the semantic invariances of physiological signals being poorly understood\. In this work, we show that next\-token prediction is a simple and scalable alternative\. We develop Hypnos, a multi\-modal sleep foundation model trained via next\-token prediction using eight different sensing modalities \(e\.g\. EEG, ECG, respiratory signals\) from overnight polysomnography recordings\. We tokenize each modality into streams of discrete tokens using residual vector quantization\. We then train a large auto\-regressive RQ\-Transformer to jointly predict the next token across all modalities in parallel, using a novel modality masking strategy to enable generalisation to subsets of modalities during inference\. Using over 20,000 overnight recordings drawn from nine public datasets, we find that both next\-token perplexity and downstream probing performance continue to improve with model scale\. Across a range of tasks, Hypnos matches or exceeds prior sleep foundation models and strong supervised baselines on sleep stage classification across in\-domain and held\-out test sets\. Our results indicate that next\-token prediction is a strong self\-supervised objective for learning representations from multi\-modal physiological signals\.
+
+## Anatomy\-Preserving Unpaired Medical Image Translation via Shared Latent Anchoring
+
+**Authors:** Zhilin Zou; Hieu Minh Le; Saumya Gupta; Jingyi Xu; Prateek Prasanna; Chao Chen
+
+**ID:** 154881 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=AC5Xd25rUC>) | [PDF](<https://openreview.net/pdf?id=AC5Xd25rUC>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154881>)
+
+Unpaired medical image\-to\-image translation requires synthesizing target\-modality images from source\-modality images without aligned supervision\. Existing methods learn a direct source\-to\-target mapping that entangles structure preservation and appearance generation within a single model, often distorting clinically meaningful anatomy in the translated output\. We argue that these two objectives should be decoupled entirely: anatomical structure should be captured independently of generation, and the generator should operate only on a frozen structural representation\. To this end, we propose a two\-stage framework for unpaired medical image translation\. In the first stage, we learn a shared structure space by training a structure encoder\-decoder on source images, target images, and structural masks jointly, using mask reconstruction to anchor the latent space to modality\-agnostic anatomy\. For source images without mask annotations, a target\-domain memory bank provides soft structural supervision via prototype retrieval\. In the second stage, a conditional flow model learns to render target\-domain appearance under fixed structural conditions\. This ensures the generator inherits target appearance statistics and can focus entirely on structural conditioning rather than learning appearance from scratch\. We validate our framework on OCT\-to\-OCTA synthesis and brain MR\-to\-CT translation\. Our method outperforms all unpaired baselines on both tasks and, despite requiring no paired supervision, also surpasses paired baselines, improving PSNR by up to 11\.2% and SSIM by up to 26\.4% on OCT\-to\-OCTA, and achieving consistent gains across whole\-image, soft\-tissue, and bone regions on MR\-to\-CT\.
+
+## MedEvoEval: Evaluating Continual Evolution of Doctor Agents through Simulated Clinical Episodes
+
+**Authors:** Hui Zhang
+
+**ID:** 139548 | **Topic source:** official | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=Ja5320z9Vi>) | [PDF](<https://openreview.net/pdf?id=Ja5320z9Vi>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139548>)
+
+Doctor agents are moving beyond single\-turn answer generation toward evolving clinical decision systems that acquire evidence within episodes and reuse experience across episodes\. Fixed\-input medical QA and many interactive benchmarks provide limited support for evaluating how episode\-level decisions interact with cross\-episode experience\. We introduce MedEvoEval, an executable longitudinal evaluation framework based on action\-gated simulated outpatient episodes\. Each case is converted into role\-specific patient, examination, and manager views; evidence is revealed through valid actions, and structured traces link observations, actions, final outputs, scores, and optional experience write\-back\. Experiments show that these traces expose process costs hidden by final\-answer scoring, characterize how MDT\-style consultation reallocates resources, and support analyses of memory maturation, held\-out transfer, update\-stage response, and backward retention\. On 200 held\-out cases, the mature\-memory condition with sequential write\-back reduces interaction turns by 0\.915 and improves composite utility by 0\.0483 after Holm correction\. MedEvoEval provides a concrete basis for evaluating experience\-driven improvement, transfer, and retention\. The accompanying artifact provides 700 processed episode records with provenance, role\-specific schemas, and execution, scoring, and analysis code\.
+
+## MedHEB: Benchmarking Medical Embeddings Across Heterogeneous Clinical Evidence
+
+**Authors:** Yingshu Li; Shaoyang Zhou; Zhanyu Wang; YUNYI LIU; Xinyu Liang; Xi Zhang; Lingqiao Liu; Lei Wang; Luping Zhou
+
+**ID:** 139097 | **Topic source:** official | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=lB0apeSkIu>) | [PDF](<https://openreview.net/pdf?id=lB0apeSkIu>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139097>)
+
+Clinical evidence is inherently relational: medical images are interpreted with prior studies, cross\-modal examinations, reports, and localized findings, and retrieving relevant evidence is therefore central to clinical interpretation\. Recent foundation models increasingly encode these heterogeneous sources into shared embedding spaces, yet existing embedding evaluation often focuses on isolated matches, leaving unclear whether current models retrieve relevant evidence across changes in modality, appearance, and granularity\. We introduce MedHEB, a unified benchmark with $107$ retrieval tasks from $54$ datasets, including both in\-distribution and held\-out\-source evaluation, across three axes: evidence form \(2D images, 3D volumes, text\), pairing type \(image\-\-image, image\-\-text, text\-\-text, and modality\-bridging visual matching\), and relevance granularity \(global, question\-conditioned, region\-level\)\. Under a single ranking protocol, MedHEB varies clinically relevant evidence definitions to test whether embedding proximity remains meaningful across heterogeneous evidence, including modality\-bridging visual retrieval and region\-level text\-to\-region retrieval\. Across representative models, performance is uneven across retrieval families: models strong on conventional image\-\-text or text\-\-text retrieval are less reliable on modality\-bridging and region\-level tasks\. Current embedding spaces capture some clinical relationships well but do not yet provide balanced retrieval across heterogeneous evidence\. We further provide MedEmb, an MLLM\-based reference embedding model trained on the MedHEB ID split, as a reproducible baseline for unified 2D\-\-3D\-\-text medical retrieval\. We release MedHEB with preprocessing scripts, evaluation code, access manifests, and MedEmb to support research on clinically meaningful medical embeddings\.
+
+## CCTimeBoost: Learning Time\-Varying Relative Risk with Case\-Control Boosted Trees
+
+**Authors:** Rahul Goswami
+
+**ID:** 148611 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=wSn3dZhijP>) | [PDF](<https://openreview.net/pdf?id=wSn3dZhijP>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148611>)
+
+Many survival problems are inherently time\-dependent: a biomarker may be predictive soon after diagnosis but irrelevant years later, or a treatment effect may diminish, reverse, or interact with follow\-up duration\. However, tree\-based survival models commonly used in practice typically assign each individual a fixed, time\-independent risk score\. Neural non\-proportional\-hazards models can capture dynamic effects, but are often more challenging to tune, scale, and interpret than boosted trees\. We present CCTimeBoost, a gradient\-boosted tree framework for learning continuous\-time, time\-varying relative risk\. The method augments covariates with time features, trains boosted trees on sampled risk sets using a group\-softmax objective, and estimates a full\-risk\-set baseline hazard to generate survival curves\. We show that this objective has a likelihood interpretation: for finite sampled risk sets, it matches a nested case\-control likelihood, and in the full\-risk\-set limit, it converges to the Cox partial likelihood\. Across eight right\-censored survival benchmarks, CCTimeBoost delivers state\-of\-the\-art discrimination performance relative to tree and neural baselines and is competitive in calibration\. In controlled simulations, it accurately recovers diminishing effects, crossing hazards, and rule\-based temporal interactions, also behaving as a proportional model when proportional hazards are present\. These results indicate that non\-proportional survival modeling can be incorporated into standard boosted\-tree methods\.
+
+## EHRNote\-ChatQA: A Benchmark for Evidence\-Grounded Multi\-Turn Clinical Question Answering over Longitudinal Discharge Summaries
+
+**Authors:** Jiyoun Kim; Muhan Yeo; Eunhye Jang; Jeewon Yang; Hangyul Yoon; Su Ji Lee; Hee J Han; Hee\-Jae Jung; Doyun Kwon; Jun y Lee; Jaehun Lee; Jung\-Oh Lee; Sunjun Kweon; Jong\-Hak Moon; Daseul Kim; Minjae Cho; Edward Choi
+
+**ID:** 139551 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=J8cq4kNTbz>) | [PDF](<https://openreview.net/pdf?id=J8cq4kNTbz>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139551>)
+
+Discharge summaries are crucial clinical documents for patient care, containing clinical context of a patient's overall admission, and are routinely reviewed by medical experts during patient readmission, ongoing care, and diagnostic decision\-making\. In practice, medical experts often must synthesize information across multiple lengthy discharge summaries by iteratively obtaining information from the documents, while also verifying the evidence supporting each answer\. Although large language models \(LLMs\) are increasingly explored for clinical document question answering, existing benchmarks do not sufficiently capture this clinical setting: they either evaluate exam\-style medical knowledge or focus on single\-turn question answering with limited evidence\-grounding evaluation\. We introduce \*\*EHRNote\-ChatQA\*\*, the first benchmark for evidence\-grounded multi\-turn clinical question answering over patients' multiple discharge summaries\. Built from de\-identified MIMIC\-IV discharge summaries, EHRNote\-ChatQA contains 967 patient\-level multi\-turn samples spanning one to five notes and 16,072 medical\-expert\-verified QA pairs \(8,036 content questions, each paired with an evidence\-grounding question\) across eight clinical categories\. We construct the benchmark through an expert\-informed pipeline that combines a comprehensive discharge\-summary structuring schema, expert\-curated multi\-turn QA templates, and LLM\-based generation\. Every single QA sample is then reviewed and revised by 11 medical experts over three weeks\. Benchmarking 22 LLMs \(both open and closed\-sourced\) reveals several findings; evidence grounding is consistently harder than content answering, multi\-turn errors compound across turns, and strong performance on existing single\-turn clinical QA benchmarks does not reliably transfer to this setting\. These results establish EHRNote\-ChatQA as a rigorous and practical benchmark for evaluating clinical QA systems\.
+
+## HyperNSDE: Personalized Neural SDEs for Joint Static—Longitudinal Clinical Data Generation
+
+**Authors:** Perrine Chassat; Agathe Guilloux
+
+**ID:** 153453 | **Topic source:** official | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=LB1dWNecCT>) | [PDF](<https://openreview.net/pdf?id=LB1dWNecCT>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153453>)
+
+Synthetic patient data generation is a promising solution to the dual challenge of data scarcity and privacy constraints in healthcare machine learning\. Realistic synthesis of patient\-level clinical data requires jointly modeling heterogeneous static covariates, irregularly sampled longitudinal trajectories, and informative observation times — three tightly coupled components in practice yet rarely addressed together\. We propose HyperNSDE, a continuous\-time generative model that conditions a latent Neural SDE on static patient representations through a hypernetwork, allowing baseline characteristics to shape the full trajectory dynamics rather than only the initial condition, without requiring a trajectory encoder, while stochastic latent dynamics capture realistic variability in generated paths\. Observation times are modeled jointly through a latent\-state\-dependent intensity process\. Training on irregular stochastic paths is stabilized via a deterministic—stochastic path decomposition with a non\-adversarial signature\-kernel objective\. Experiments on simulated and real clinical datasets demonstrate consistent improvements over strong baselines across fidelity, privacy, and utility metrics\.
+
+## Structure\-Semantic Guided Closed\-Loop Medical Anomaly Detection via Multi\-Agent Collaboration
+
+**Authors:** Chunjing Xiao; Yunxiao Dai; Yuwan Fu; Yucong Wang; Chong Tang; Fan Zhou; Ying Ma
+
+**ID:** 153376 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=LplVYRTK4x>) | [PDF](<https://openreview.net/pdf?id=LplVYRTK4x>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153376>)
+
+Unsupervised medical anomaly detection aims to identify images or regions that deviate from the learned normal distribution\. Reconstruction\-based methods are a dominant paradigm, generating a normal\-looking reference for each test image and detecting anomalies via input\-\-reconstruction discrepancy\. However, most existing methods follow a one\-shot reconstruction\-and\-comparison pipeline, making anomaly scoring vulnerable to reconstruction failures: abnormal regions may be preserved, while normal anatomical structures may be distorted\. Moreover, they often lack coordinated control from structural and semantic normality, which can lead to anatomical inconsistency and semantic drift\. We propose S2Agent, a structure\- and semantic\-guided multi\-agent framework that reformulates medical anomaly detection as feedback\-driven normality reconstruction\. S2Agent decomposes the process into three collaborative agents\. The Planner derives sample\-specific matched\-tree structural priors and normal\-only semantic claims from normality knowledge\. The Reconstructor generates a normality\-oriented reference image under their joint guidance\. The Detector verifies the reconstruction in matched\-tree and semantic\-claim spaces, returning feedback to refine structural weights and semantic constraints for the next round\. Through this closed loop, S2Agent iteratively corrects structural deviation and semantic drift, suppresses abnormal or unsupported content, and improves the reliability of anomaly scoring\. Experiments on three public medical benchmarks demonstrate the effectiveness of the proposed closed\-loop guidance\.
+
+## Beyond Stabilization: Dual\-EMA Teachers for Global–Local Semantic Learning in Semi\-Supervised Medical Image Segmentation
+
+**Authors:** KAIBO LIAO; Yazhou Ren; Song Wu; Kecheng Chen; Xiaorong Pu; Lixin Duan
+
+**ID:** 153534 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=KcwJaRLHaj>) | [PDF](<https://openreview.net/pdf?id=KcwJaRLHaj>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153534>)
+
+Semi\-supervised medical image segmentation has gained increasing attention for its outstanding performance with limited annotations\. Most methods follow the Mean Teacher framework, where Exponential Moving Average \(EMA\) is primarily used to stabilize predictions, while its potential roles beyond stabilization are largely overlooked\. In this work, we interpret EMA as a first\-order infinite impulse response \(IIR\) low\-pass filter with inherent frequency selectivity, which enables the preservation of semantic information at different levels\. Motivated by this insight, we propose a dual\-EMA teachers framework, including a long\-term teacher focusing on global structures and a short\-term teacher emphasizing local details\. Furthermore, to help the student better exploit the guidance from both teachers, a First\-In\-First\-Out replay queue is designed to reuse historical high\-confidence pseudo\-labeled pairs, leveraging pseudo labels provided at different training stages and reducing the sensitivity to sampling bias\. Meanwhile, we impose feature\-level global semantic and local relation consistency constraints to alleviate the impact of noisy pseudo labels, facilitating robust transfer of complementary representations from dual teachers to the student model\. Experiments on three public medical image datasets demonstrate that our method outperforms current SoTA methods, verifying its effectiveness\.
+
+## Incentivizing Agentic Retrieval for Disease\-Centric Clinical Case Search via Trajectory Memory
+
+**Authors:** Jie Lin; Xiang Liu; Lihao Liu; Liansheng Wang
+
+**ID:** 149120 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=sjtN3Mjrl6>) | [PDF](<https://openreview.net/pdf?id=sjtN3Mjrl6>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149120>)
+
+Clinical case search aims to retrieve disease\-consistent prior cases from electronic health record databases for a natural\-language patient query under a retrospective retrieval objective\.  The task is challenging because patient queries contain heterogeneous evidence, including symptoms, diagnoses, laboratory results, treatments, and timelines\. These fields are often only partially specified, and fixed retrieval pipelines cannot adapt from prior search trajectories\. Existing clinical retrieval methods typically flatten the query into a single representation, use static retrieval pipelines, or lack an explicit mechanism for cross\-case adaptation\.  \\textbf\{PatientSearch\-SE\} addresses retrospective disease\-centric clinical case search with three components: a \\emph\{sufficiency\-aware planner\} that separates dimensions suitable for direct matching from those requiring hypothesis completion, a \\emph\{hierarchical tool orchestration\} module that maps these states to retrieval and re\-ranking actions, and a \\emph\{trajectory\-guided memory consolidation\} mechanism that writes reusable disease cards and strategy templates without parameter updates\.  We also propose an evaluation framework that combines disease\-centric retrieval outcomes with trajectory\-level process probes for retrieval behavior analysis\. Experiments on PMC\-Patients and MIMIC\-IV show higher disease\-centric retrieval metrics for PatientSearch\-SE than for the compared same\-interface sparse, dense, and reasoning\-based baselines, with larger gains on PMC\-Patients and more modest gains on MIMIC\-IV\. Its memory\-accumulation results are consistent with controlled external\-memory adaptation, and its retrieved cases provide additional evidence for diagnosis\-masked downstream few\-shot RAG prediction under this retrospective protocol\.
+
+## HandXFM: Semantic\-Structural Distillation for Hand Radiograph Foundation Models
+
+**Authors:** Yuxi Long; Ganlin Feng; Lianghong Chen; Liam J O&amp;amp;\#x27;Neil; Carol A Hitchon; Pingzhao Hu
+
+**ID:** 150797 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=fKr07Pdg6F>) | [PDF](<https://openreview.net/pdf?id=fKr07Pdg6F>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150797>)
+
+Hand radiographs support diverse clinical tasks, including skeletal maturity assessment, rheumatoid arthritis scoring, abnormality screening, and anatomical localization, yet existing models are typically trained separately for each task and dataset\. We present HandXFM, a domain\-specific foundation model that leverages cross\-modality knowledge for comprehensive hand X\-ray understanding\. HandXFM distills semantic priors from BiomedCLIP and structural cues from a chest X\-ray Vision Transformer \(ViT\) through a unified alignment framework, integrating complementary medical knowledge in an interpretable way\. After pretraining, HandXFM can be adapted to a range of musculoskeletal tasks, including bone age estimation, SvH score prediction, abnormality detection, joint localization, bone segmentation, and visual question answering\. It consistently outperforms task\-specific and single\-expert baselines, achieving up to 0\.11 improvement in Pearson correlation coefficient \(PCC\) for bone age prediction and a 12\\% accuracy gain in abnormality classification\. Moreover, HandXFM generalizes to unseen datasets and yields cross\-attention maps linking clinical terms to anatomical regions\. These results demonstrate that multi\-expert distillation effectively unifies semantic and structural supervision within a single pretrained model, establishing HandXFM as an interpretable and generalizable foundation model for hand radiograph analysis\.
+
+## MedVIGOR: Visual Evidence Internalization for Observation\-Driven Reasoning in Medical VLMs
+
+**Authors:** Yuan Wu; Jiayu Qian; Sipeng Wu; Songpan Gao; Ruiming Ye; Zongxian Yang; JinYue Li; Qiankun Li; Yang Liu
+
+**ID:** 150235 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=jlwCHX9Sxe>) | [PDF](<https://openreview.net/pdf?id=jlwCHX9Sxe>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150235>)
+
+Medical image interpretation requires diagnoses grounded in case\-specific visual evidence\. However, medical vision\-language models often produce plausible answers by exploiting clinical language priors and report\-level co\-occurrence patterns rather than faithfully using the input image, leading to Visual De\-anchoring and Spatial\-Semantic Binding Breakdown, where reasoning detaches from visual evidence or binds correct answers to incorrect anatomical support\. In this work, we introduce MedVIGOR, a framework that internalizes visual evidence as an intrinsic constraint on medical VLM reasoning\. MedVIGOR combines visual\-necessity supervision, dual\-pathway visual anchor internalization with MedSAM\-derived spatial support and DINOv2\-derived semantic patterns, and evidence\-consistent reinforcement learning to preserve alignment among visual evidence, intermediate reasoning, and final answers\. We further present MedVIGOR\-Bench, a unified benchmark for evaluating whether medical VLMs are both diagnostically correct and evidentially grounded across concept recognition and visual localization tasks\. Experiments show that MedVIGOR improves diagnostic accuracy and grounding fidelity over strong medical VLM baselines, highlighting the value of internalized visual evidence for trustworthy medical reasoning\.
+
+## MedIGen: Reliable Medical Illustration Generation via Interleaved Introspective Reasoning
+
+**Authors:** Rongsheng Wang; Hongru Zhou; Ruizhe Zhou; HAOMING CHEN; Zhenyang Cai; Junying Chen; Minghao Wu; Yaofei Duan; Ziyi Zeng; Benyou Wang
+
+**ID:** 152588 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=RyrXhwjZ2I>) | [PDF](<https://openreview.net/pdf?id=RyrXhwjZ2I>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152588>)
+
+Medical illustration generation is not merely domain\-specific text\-to\-image \(T2I\) generation, but a high\-constraint visual reasoning problem where visually plausible images can be invalid due to anatomical and structural errors\. Existing T2I models largely rely on one\-pass generation and lack an internal mechanism to inspect and correct such biomedical inconsistencies\. We introduce \*\*MedIGen\*\*, a unified medical illustration generation model that transforms one\-pass synthesis into an \*\*interleaved introspection\-aware refinement\*\* process, coupling generation with self\-reflection and re\-generation through “generate–reflect–refine” cycles\. MedIGen is trained with three progressive stages: \(1\) large\-scale medical illustration pretraining on 1\.21M samples, \(2\) mixture training over generation, reflection, and refinement sub\-skills, and \(3\) reinforcement learning with dual\-level rewards that optimize both reasoning validity and final visual correctness\. We further present \*\*IlluGenBench\*\*, an expert\-aligned, rubric\-driven benchmark with 296 diverse tasks and 9,015 criteria, evaluating scientific accuracy, structural correctness, and semantic alignment beyond coarse visual plausibility\. Experiments show that MedIGen substantially outperforms strong open\-source unified and reasoning\-based baselines, establishing a new open\-source frontier\. All resources will be open\-sourced to facilitate future research\.
+
+## Explainability matters: The effect of liability rules on the healthcare sector
+
+**Authors:** Jiawen Wei; Elena Verona; Andrea Bertolini; Gianmarco Mengaldo
+
+**ID:** 139994 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=yYJYksvTw5>) | [PDF](<https://openreview.net/pdf?id=yYJYksvTw5>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139994>)
+
+Explainability, the capability of an artificial intelligence system \(AIS\) to explain its outcomes in a manner that is comprehensible to human beings at an acceptable level, has been deemed essential for critical sectors, such as healthcare\.  Is it really the case?  In this perspective, we consider two extreme cases, Oracle \(without explainability\) versus AI Colleague \(with explainability\) for a thorough analysis\. We discuss how the level of automation and explainability of AIS can affect the determination of liability among the medical practitioner/facility and manufacturer of AIS\.  We argue that explainability plays a crucial role in setting a responsibility framework in healthcare, from a legal standpoint, to shape the behavior of all involved parties and mitigate the risk of potential defensive medicine practices\.
+
+## MedHorizon: Towards Long\-context Medical Video Understanding in the Wild
+
+**Authors:** Bodong Du; Bowen Liu; Yang YU; Xinpeng Ding; Zhiheng Wu; Shuning Wang; Shuo Nie; Naiming Liu; Qifeng Chen; Yangqiu Song; Xiaomeng Li
+
+**ID:** 139391 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=TJgyeENlQ5>) | [PDF](<https://openreview.net/pdf?id=TJgyeENlQ5>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139391>)
+
+Medical multimodal large language models \(MLLMs\) have advanced image understanding and short\-video analysis, but real clinical review often requires full\-procedure video understanding\. Unlike general long videos, medical procedures contain highly redundant anatomical views, while decisive evidence is temporally sparse, spatially subtle, and context dependent\. Existing benchmarks often assume this evidence has already been localized through images, short clips, or pre\-segmented videos, leaving the retrieval\-before\-reasoning problem under\-tested\. We introduce MedHorizon, an in\-the\-wild benchmark for long\-context medical video understanding\. MedHorizon preserves 759 hours of full\-length clinical procedures and provides 1,253 evidence\-grounded multiple\-choice questions that jointly evaluate sparse evidence understanding and multi\-hop clinical reasoning\. Its evidence is extremely sparse, with only 0\.166% evidence frames on average, requiring models to search noisy procedural streams before interpreting and aggregating findings\. We evaluate representative general\-domain, medical\-domain, and long\-video MLLMs\. The best model reaches only 41\.1% accuracy, showing that current systems remain far from robust full\-procedure understanding\. Further analysis yields four key findings: performance does not scale reliably with more frames, evidence retrieval and clinical interpretation remain primary bottlenecks; these bottlenecks are rooted in weak procedural reasoning and attention drift under redundancy, and generic sampling methods only partially balances local detail with global coverage\. MedHorizon provides a rigorous testbed for MLLMs that retrieve sparse evidence and reason over complete clinical workflows\.
 
 ## Long\-Term Risks of Risk\-Based Allocation
 
@@ -106,383 +406,305 @@ Evaluating general\-purpose multimodal large language models \(MLLMs\) for surgi
 
 Current virtual staining approaches offer the potential for time\- and cost\-efficient  biomarker quantification in cancer diagnostics and prognostics\.  However, patch\-wise inference for gigapixel whole slide images \(WSIs\) fails to maintain spatial continuity,  yielding artifacts that cause catastrophic mismatches with ground\-truth images\. Although pathology Vision Foundation Models \(VFMs\) offer rich representations,  their self\-attention causes varying global contexts to produce inconsistent embeddings  for the same physical region\.  We formalize and validate this \`\`context contamination'' as a sheaf\-theoretic problem  where these embeddings form a presheaf that violates the gluing axiom\. To address this, we propose SheafStain, a new approach that reinterprets  VFM features as sheaf\-like sections for spatially and biologically coherent virtual staining\.  Specifically, SheafStain integrates class and patch tokens into a Schr\\"odinger Bridge framework  as sheaf\-like sections\.  While the class token anchors biological consistency, patch tokens form a per\-position spatial map\. A backbone co\-pretrained on Hematoxylin \\&amp; Eosin \(H\\&amp;E\) and Immunohistochemistry \(IHC\) yields  non\-degenerate cross\-stain stalks, so a single VFM feature space supervises  both input conditioning and output stain alignment\. Departing from prior work that evaluates on isolated $256 \\times 256$ patches  and either random\-crops or resizes the $1024 \\times 1024$ ground truth,  we translate at $256 \\times 256$ and evaluate on the stitched $1024 \\times 1024$ outputs  across HER2, ER, PR, and Ki\-67\. SheafStain demonstrates promising results against six prior methods while mitigating patch\-boundary stitching artifacts\. Code will soon be released upon acceptance\.
 
-## RxDiff: Discrete Diffusion for Medication Recommendation with Inference\-Time Safety Control
+## Distribution\-First Framework for Learning Risk\-Sensitive Individualized Treatment Rules
 
-**Authors:** Jinke Feng; Wenjie Du; Xuchang Zhong; Yang Wang
+**Authors:** Zhen Fang; Guanting Chen; Yufeng Liu
 
-**ID:** 151020 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+**ID:** 148521 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=dZ1BldSaSA>) | [PDF](<https://openreview.net/pdf?id=dZ1BldSaSA>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151020>)
+[Paper](<https://openreview.net/forum?id=xIGdrNsewI>) | [PDF](<https://openreview.net/pdf?id=xIGdrNsewI>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148521>)
 
-Medication recommendation requires generating drug combinations that are therapeutically effective while minimizing harmful drug\-drug interactions \(DDIs\)\. Both objectives are rooted in the combinatorial nature of prescriptions\. Existing discriminative methods predict drugs independently, neglecting inter\-drug dependencies; autoregressive methods introduce sequential dependencies but impose arbitrary generation orders and accumulate errors\. Both paradigms confine DDI mitigation to training\-time penalties, offering limited capacity to regulate interactions during inference for individual prescriptions\. We reformulate medication recommendation as a discrete diffusion process and propose RxDiff, which leverages iterative denoising for bidirectional and revisable generation and provides a natural interface for dynamic DDI regulation at each step\. A clinically grounded dual\-guided forward process and an inference\-time  interaction\-aware modulation mechanism are designed to jointly enable RxDiff to achieve consistent accuracy improvements, lower and more individually controlled DDI rates, and robustness to evolving DDI knowledge across MIMIC\-III, MIMIC\-IV, and a real\-world inpatient dataset\. Code is available at https://anonymous\.4open\.science/r/RxDiff\-9157\.
+Learning a risk\-sensitive individualized treatment rule \(ITR\) with patient covariates is challenging when the treatment criterion depends on the full conditional outcome distribution rather than only its conditional mean\. Existing methods are largely criterion\-specific, making it difficult to compare multiple treatment criteria within a common pipeline, such as quantiles, conditional value\-at\-risk \(CVaR\), and complex preference\-based objectives such as cumulative prospect theory \(CPT\)\. We propose a distribution\-first framework for risk\-sensitive ITR learning that first estimates treatment\-specific conditional outcome distributions and then constructs the target ITR by plug\-in criterion evaluation\. The proposed framework unifies treatment rule learning across multiple criteria and accommodates hard\-to\-optimize objectives within the same estimation pipeline\. On the theoretical side, it yields a general error propagation result for Lipschitz treatment criteria, linking first\-stage distribution estimation error to downstream criterion estimation and treatment regret, together with sharper regret bounds under standard margin conditions\. Empirically, we show that the proposed framework outperforms direct criterion\-specific methods in multiple settings and further evaluate it on the ACTG175 HIV clinical trial, a randomized study comparing several antiretroviral regimens in HIV\-infected adults\.
 
-## HyperNSDE: Personalized Neural SDEs for Joint Static—Longitudinal Clinical Data Generation
+## Teach\-to\-Reason: Competition\-Guided Reasoning with a Self\-Improving Teacher
 
-**Authors:** Perrine Chassat; Agathe Guilloux
+**Authors:** Xiao Han; Hao Liu; Zhimin Bao; Jile Jiao; Yue Wang; Hui Guo; Mou X Feng; Yi Xu
 
-**ID:** 153453 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
+**ID:** 150121 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=LB1dWNecCT>) | [PDF](<https://openreview.net/pdf?id=LB1dWNecCT>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153453>)
+[Paper](<https://openreview.net/forum?id=kWZzaC732G>) | [PDF](<https://openreview.net/pdf?id=kWZzaC732G>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150121>)
 
-_Abstract unavailable from the accessible public sources._
+Chest X\-ray visual question answering \(CXR VQA\) requires models not only to predict correct answers, but also to produce reliable medical reasoning\. However, existing reinforcement\-learning\-based training typically relies on answer\-level rewards, which are often too coarse to improve chain\-of\-thought \(CoT\) quality and can become ineffective when group\-level advantages collapse to zero\. We propose \\textbf\{Teach\-to\-Reason \(T2R\)\}, a framework that introduces comparison\-based supervision into CoT optimization through a self\-improving \\emph\{Teacher\} and a competition\-guided \\emph\{Reasoner\}\. As the Teacher is iteratively strengthened via self\-competition, the Reasoner is optimized against progressively stronger Teacher\-generated references\. We further introduce a case\-wise reward design that preserves the original reward\-induced positive/negative partition when it is informative, and restores supervision from competition scores when the original reward signal degenerates\. Experiments on multiple CXR open\-ended VQA benchmarks show that T2R consistently outperforms strong baselines, indicating that comparison\-based supervision, when integrated in a controlled and principled manner, provides a more effective training signal for reasoning optimization\.
 
-## Structure\-Semantic Guided Closed\-Loop Medical Anomaly Detection via Multi\-Agent Collaboration
+## When Medical VLMs Stop Understanding: MedTEC\-Bench for Probing Semantic Specificity
 
-**Authors:** Chunjing Xiao; Yunxiao Dai; Yuwan Fu; Yucong Wang; Chong Tang; Fan Zhou; Ying Ma
+**Authors:** Ahsan H Akash; Alina Devkota; Donald A Adjeroh; Binod Bhattarai; Prashnna K Gyawali
 
-**ID:** 153376 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
+**ID:** 139493 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=LplVYRTK4x>) | [PDF](<https://openreview.net/pdf?id=LplVYRTK4x>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153376>)
+[Paper](<https://openreview.net/forum?id=MOBI3rF3Rq>) | [PDF](<https://openreview.net/pdf?id=MOBI3rF3Rq>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139493>)
 
-_Abstract unavailable from the accessible public sources._
+Medical vision\-\-language models \(VLMs\) are attracting growing interest as a foundation for clinical image interpretation, retrieval, and decision support\.  However, current evaluations largely emphasize aggregate accuracy, retrieval, or classification performance, offering limited insight into whether these models possess the fine\-grained semantic understanding required for safe and reliable use in high\-stakes clinical settings\.  In this work, we introduce \\textbf\{MedTEC\-Bench\}, a diagnostic benchmark for probing semantic understanding in medical VLMs across five levels of increasing specificity, from broad modality recognition to fine\-grained findings, and negation\.  MedTEC\-Bench spans five medical imaging modalities: chest radiography, brain MRI, retinal fundus photography,  dermoscopy, and histopathology\. It combines controlled semantic probes with a suite of metrics designed to reveal failures hidden by aggregate benchmarks\.  Evaluating a diverse set of VLMs, from broad biomedical models to clinical\-specialist models, we find that existing systems often fail on basic yet clinically meaningful semantic distinctions, despite strong reported performance on standard tasks\.  Our results suggest that current medical VLM evaluations may overestimate vision\-grounded clinical understanding and highlight the need for targeted semantic benchmarks before such models are deployed in high\-stakes medical workflows\.
 
-## Topology\-Reinforced Swin Transformer for Medical Image Analysis
+## MedFlowBench: Auditing Medical Agents in Full\-Study Workflows
 
-**Authors:** Pengfei Gu; Huimin Li; Guangyu Meng; Hao Zheng; Haoteng Tang; Bin Fu; Danny Z Chen
+**Authors:** Weixiang Shen; Chengzhi Shen; Che Liu; Junde Wu; Jiayuan Zhu; Xiao Han; Zongyue Li; Jingpei Wu; Min Xu; Daguang Xu; Yueming Jin; Benedikt Wiestler; Daniel Rueckert; Jiazhen Pan
 
-**ID:** 154830 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
+**ID:** 139506 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=AcOoZ44WpN>) | [PDF](<https://openreview.net/pdf?id=AcOoZ44WpN>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154830>)
+[Paper](<https://openreview.net/forum?id=LoRV8GArdJ>) | [PDF](<https://openreview.net/pdf?id=LoRV8GArdJ>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139506>)
 
-_Abstract unavailable from the accessible public sources._
+Medical imaging benchmarks often evaluate VLMs on pre\-selected 2D images, slices, crops, or patches, making evaluation closer to visual recognition\. Real clinical workflows impose a different burden: readers must search through complete studies, operate imaging software, navigate across slices and magnifications, and document visual evidence that can be audited\. We argue that this evidence\-producing workflow is a critical missing evaluation axis for medical imaging agents\. To study it, we introduce MedFlowBench, a full\-study benchmark for VLM agents, together with MedOpenClaw, a controlled and replayable runtime in which agents operate medical imaging viewers such as 3D Slicer and QuPath\. In each episode, an agent inspects a complete radiology study or whole\-slide pathology image, returns a task answer, and submits structured evidence, including key slices, coordinates, regions of interest, or lesion\-state fields\. This evidence is automatically checked against withheld masks, annotations, and labels\. Across evaluated models, final answer\-only scoring gives an overly optimistic picture: when answers must also be supported by correct evidence, performance drops substantially on complex workflows\. We further find that adding image\-analysis tools does not by itself solve the problem\. Tools help when they make a complex procedure simple and reliable, but agents still struggle when they must choose inputs, manage viewer state, and verify intermediate outputs over multiple steps\. MedFlowBench exposes whether medical imaging agents can produce auditable evidence from complete studies, rather than plausible answers from selected images\.
 
-## Beyond Stabilization: Dual\-EMA Teachers for Global–Local Semantic Learning in Semi\-Supervised Medical Image Segmentation
+## RealDev\-QA: Trajectory\-Level Diagnosis for Developer RAG Under Real\-World Noises
 
-**Authors:** KAIBO LIAO; Yazhou Ren; Song Wu; Kecheng Chen; Xiaorong Pu; Lixin Duan
+**Authors:** Tianling Lan; Yao Junxiao; Tingyang Chen; Cibo Yu; Siyuan Gong; Cong Fu; Xiangyu Ke; Beng Chin Ooi
 
-**ID:** 153534 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
+**ID:** 139440 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=KcwJaRLHaj>) | [PDF](<https://openreview.net/pdf?id=KcwJaRLHaj>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153534>)
+[Paper](<https://openreview.net/forum?id=PfvTJzO0lU>) | [PDF](<https://openreview.net/pdf?id=PfvTJzO0lU>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139440>)
 
-_Abstract unavailable from the accessible public sources._
+Real\-world developer help\-seeking is rarely a clean search query: requests mix stack traces, failed attempts, environment constraints, and mistaken hypotheses, while relevant\-looking documents may be invalid under the user's specific runtime settings\. We introduce RealDev\-QA, a trajectory\-supervised benchmark for developer RAG under diagnostic query noise and evidence conflict\. RealDev\-QA contains 1,233 post\-June\-2024 multi\-hop questions derived from public developer discussions, each paired with decomposed sub\-queries, dependency edges, per\-step gold evidence, verified reasoning graphs, and adversarial hard negatives drawn from real documentation, release notes, and verified issues\. Its construction uses answer\-conditioned evidence tracing to ensure each retained instance has a verifiable evidence path; evaluation then removes the resolution and tests whether systems can recover and use that path from the diagnostic query alone\. Across static, graph\-based, and agentic RAG systems, comprehensive evaluations show that retrieval helps but does not solve RealDev\-QA: the best human\-audited accuracy reaches only 24\.7\\%\. Trajectory diagnostics show that failures are typically decided early: over 78\\% of incorrect trajectories miss gold evidence in the first retrieval step, and first\-query precision predicts downstream correctness beyond aggregate evidence coverage—broad initial queries admit hard negatives that persist and pollute later evidence navigation\. Low correctness decomposes into five pipeline\-level failure modes, while retrieval, automatic, and human\-grounded metrics yield divergent system rankings largely masked by aggregate evaluations on standard benchmarks\. RealDev\-QA reframes developer RAG as evidence\-path control: deciding where to start, what to connect, what to reject, and how to recover\.
 
-## Incentivizing Agentic Retrieval for Disease\-Centric Clinical Case Search via Trajectory Memory
+## DDx\-TRACE: A Benchmark for Medical Diagnostic Trajectories in VLMs
 
-**Authors:** Jie Lin; Xiang Liu; Lihao Liu; Liansheng Wang
+**Authors:** Jiazhen Pan; Weixiang Shen; Jun Li; Julian Canisius; Felix Bitzer; Paula Roßmüller; Jiancheng Yang; Virginie Kreutzinger; Daniel Rueckert; Benedikt Wiestler
 
-**ID:** 149120 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+**ID:** 139550 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=sjtN3Mjrl6>) | [PDF](<https://openreview.net/pdf?id=sjtN3Mjrl6>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149120>)
+[Paper](<https://openreview.net/forum?id=JBTAcOAyaB>) | [PDF](<https://openreview.net/pdf?id=JBTAcOAyaB>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139550>)
 
-Clinical case search aims to retrieve disease\-consistent prior cases from electronic health record databases for a natural\-language patient query under a retrospective retrieval objective\.  The task is challenging because patient queries contain heterogeneous evidence, including symptoms, diagnoses, laboratory results, treatments, and timelines\. These fields are often only partially specified, and fixed retrieval pipelines cannot adapt from prior search trajectories\. Existing clinical retrieval methods typically flatten the query into a single representation, use static retrieval pipelines, or lack an explicit mechanism for cross\-case adaptation\.  \\textbf\{PatientSearch\-SE\} addresses retrospective disease\-centric clinical case search with three components: a \\emph\{sufficiency\-aware planner\} that separates dimensions suitable for direct matching from those requiring hypothesis completion, a \\emph\{hierarchical tool orchestration\} module that maps these states to retrieval and re\-ranking actions, and a \\emph\{trajectory\-guided memory consolidation\} mechanism that writes reusable disease cards and strategy templates without parameter updates\.  We also propose an evaluation framework that combines disease\-centric retrieval outcomes with trajectory\-level process probes for retrieval behavior analysis\. Experiments on PMC\-Patients and MIMIC\-IV show higher disease\-centric retrieval metrics for PatientSearch\-SE than for the compared same\-interface sparse, dense, and reasoning\-based baselines, with larger gains on PMC\-Patients and more modest gains on MIMIC\-IV\. Its memory\-accumulation results are consistent with controlled external\-memory adaptation, and its retrieved cases provide additional evidence for diagnosis\-masked downstream few\-shot RAG prediction under this retrospective protocol\.
+Medical diagnosis is not a single prediction from a fully specified vignette\. It is a sequential workup: clinicians decide what evidence to obtain, revise a differential diagnosis, and stop when the diagnosis is sufficiently supported\. Most medical AI benchmarks instead reveal the relevant context upfront and score only the final answer, making unsupported correct guesses, premature closure, inefficient workups, and poor uncertainty updating invisible\. We introduce DDx\-TRACE, a physician\-adjudicated benchmark for multimodal neuroradiology that evaluates diagnostic trajectories under hidden evidence over 211 challenging cases\. Each case begins with limited clinical history; models request imaging studies in free form, receive matched image bundles when available, update a probabilistic differential diagnosis after each turn, and stop with a localized final diagnosis\. Evaluating state\-of\-the\-art VLMs, we find that final diagnosis scores can substantially misrepresent workup quality: models may guess plausible diagnoses without essential evidence, request useful studies but misinterpret raw images, or acquire evidence inefficiently while updating uncertainty poorly\. Controlled evidence variants isolate bottlenecks in planning, visual evidence extraction, and downstream differential reasoning\. DDx\-TRACE shifts medical AI evaluation from final answers to evidence\-supported diagnostic trajectories\.
 
-## Revisiting Incremental Learning: A Three\-Interface Diagnosis of Stability and Plasticity
+## Dynamic Representation Modeling for Federated Medical Image Domain Generalization
 
-**Authors:** Keuntae Kim; Beomseok Lee; Hyunwoo Kim; Yong Suk Choi
+**Authors:** Yuxi Ma; Lin Zhao; Jing Yang; jiacheng wang; Liansheng Wang
 
-**ID:** 150119 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+**ID:** 154596 | **Topic source:** official | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=kX9Kbog4s6>) | [PDF](<https://openreview.net/pdf?id=kX9Kbog4s6>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150119>)
+[Paper](<https://openreview.net/forum?id=CPjD7nRUf2>) | [PDF](<https://openreview.net/pdf?id=CPjD7nRUf2>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154596>)
 
-Incremental learning is usually evaluated through the final classifier or LM head, but this interface does not indicate where forgetting occurs\. A drop in accuracy may reflect representation degradation in the backbone, readout mismatch in the head, or both\. We argue that BWT and FWT should therefore be interpreted as interface\-dependent quantities rather than as single model\-level properties\. We study three evaluation interfaces: the sequentially trained head, a newly optimized probing classifier, and a classifier\-free backbone separability diagnostic based on clustering\. These interfaces answer different questions: deployed performance, recoverable information under a new readout, and representation\-level separability\. Across CIL experiments with encoder and decoder language backbones, plus discriminative\-backbone TIL sanity checks, we find that qualitative conclusions about forgetting and plasticity change substantially with the evaluation interface\. Standard heads often indicate severe forgetting, probes often suggest near\-complete recoverability, and backbone diagnostics suggest intermediate representation changes and a stability\-\-plasticity pattern\. This pattern is consistent across five clustering algorithms and three clustering metrics, suggesting that it is not an artifact of a single diagnostic choice\. Finally, we use Just LM\-Head Tuning \(JLT\) as a head\-only intervention to quantify recoverable performance on a fixed incrementally trained backbone\. The large gap between standard and head\-realigned performance suggests that many failures attributed to catastrophic forgetting are better understood as head\-\-backbone mismatch plus partial representation drift\. Our results call for reporting where forgetting is measured, not only how much forgetting is observed\.
+Federated Domain Generalization \(FDG\) aims to learn a global model robust to heterogeneous domain shifts without sharing raw data, a critical challenge in multi\-center medical imaging\. Most existing methods implicitly assume static inter\-domain discrepancies, overlooking the fact that client representations evolve continuously during local optimization\. We identify this phenomenon as representation dynamics, which refers to the temporal evolution of latent features induced by training updates rather than shifts in underlying data distributions\. Such dynamics often lead to unstable aggregation, particularly in heterogeneous medical imaging scenarios\. To address this issue, we propose Dynamic Knowledge Tracked FDG \(DKT\-FDG\), a framework that explicitly tracks these dynamics by leveraging flow matching to model continuous representation trajectories\. By aligning representation evolution instead of static snapshots, DKT\-FDG improves robustness to domain shifts\. Comprehensive experiments on multiple multi\-center medical benchmarks demonstrate consistent improvements over state\-of\-the\-art FDG methods, highlighting the importance of modeling representation dynamics in federated learning\.
 
-## CoE\-Agent: Co\-Evolving Patient\-Doctor Agents via Interactive Policy Graph Optimization for Clinical Decision Making
+## Rethinking CT Synthesis through Semantics\-Structure Alignment
 
-**Authors:** Guolin Huang; Wenting Chen; Linlin Shen
+**Authors:** Riyu Qiu; Qichao Zhou; jiacheng wang; Liansheng Wang
 
-**ID:** 155085 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
+**ID:** 155079 | **Topic source:** official | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=8YLhu314Jr>) | [PDF](<https://openreview.net/pdf?id=8YLhu314Jr>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155085>)
+[Paper](<https://openreview.net/forum?id=8cb59z0dK9>) | [PDF](<https://openreview.net/pdf?id=8cb59z0dK9>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155079>)
 
-_Abstract unavailable from the accessible public sources._
+Mask\-guided CT synthesis bridges structural annotations with imaging appearance, facilitating data augmentation and clinical tasks such as radiotherapy planning\. Despite plausible visual realism, current methods seek optimal solutions by treating all tissues uniformly, failing to capture intrinsic CT properties such as tissue\-specific distributions and strict anatomy, leading to semantic misalignment and structural hallucinations\. To address this, we decompose CT synthesis into semantics\-structure alignment through the proposed Semantics and Structure Loss\. Specifically, the Semantic Intensity Distribution \(SID\) Loss partitions the broad Hounsfield Unit \(HU\) range into semantic subspaces to achieve tissue\-specific intensity alignment\. Building on SID\-based semantic alignment, the Structural Anatomy \(SA\) Loss further improves structural fidelity by regularizing gradient manifolds within clinically\-informed spatial domains\. Extensive experiments across GAN, Diffusion, Flow, and foundation models demonstrate the broad compatibility and consistent gains of our approach\. A user study further confirms the clinical realism and mask fidelity, while downstream segmentation demonstrates the practical utility\. Code will be released after acceptance\.
 
-## FinAl: Fine\-grained Alignment for Detail\-Preserving Medical Vision\-Language Pretraining
+## CardioLens: Revealing the Clinical Reality Gap of MLLMs via Multi\-Sequence Cardiac MRI Evaluations
 
-**Authors:** Jongsu Youn; Dongyoung Lee; JaeHyeong Bae; SANG\-IL CHOI; Sangtae Choi; Dae Ung Jo; Jongwon Choi
+**Authors:** Zixian Su; Hongkai Zhang; Fan Gao; Encheng Su; Taiping Qu; Jingwei Guo; Zhang Nan; Hui Wang; Zhen Zhou; Kairui Bo; Yan Chen; Yue Ren; Shuai Li; Lei Xu; Henggui Zhang
 
-**ID:** 152146 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
+**ID:** 139679 | **Topic source:** official | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=VBJAawjSql>) | [PDF](<https://openreview.net/pdf?id=VBJAawjSql>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152146>)
+[Paper](<https://openreview.net/forum?id=AtO6HYwYrW>) | [PDF](<https://openreview.net/pdf?id=AtO6HYwYrW>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139679>)
 
-_Abstract unavailable from the accessible public sources._
+Multimodal Large Language Models \(MLLMs\) have shown strong performance on medical public benchmarks, but existing evaluations remain limited as clinically grounded assessments because they often rely on isolated inputs lacking study\-level structure and simplified, recognition\-style tasks that are far from real diagnostic workflows\. We introduce \\textbf\{CardioLens\}, a leakage\-resistant evaluation testbed using multi\-sequence Cardiovascular Magnetic Resonance \(CMR\), constructed from private hospital archives via a rigorous report\-to\-QA construction and verification pipeline\. CardioLens is built from 473,896 slices and 13,494 verified QA pairs across 4D Cine, LGE, perfusion, and T2\-weighted imaging, and evaluates three stages of CMR interpretation: image understanding, report generation, and disease diagnosis\. Across 24 state\-of\-the\-art MLLMs, CardioLens reveals a substantial clinical reality gap\. Models perform poorly overall, with performance degrading along the real CMR workflow\. Confusion analysis further reveals a category\-collapse failure mode: models often default to frequent abnormal categories rather than reliably telling distinct clinical findings\. To rule out MLLM\-compatible input construction as the failure cause, we compare random, clinically\-motivated, and data\-driven selection protocols under different slice budgets; performance changes only marginally, typically by about 1\\%\. Explicit reasoning prompts also fail to rescue performance, often driving models toward conservative predictions rather than improving visual evidence use\. These results show that current MLLMs remain far from reliable CMR interpretation, where clinical decisions require integrating distributed evidence across sequences, views, and temporal phases\. By exposing where and how current MLLMs fall short, CardioLens provides a clinically grounded testbed for developing the next generation of MLLMs toward real\-world clinical depolyment\.
 
-## Information Bottleneck\-Guided Adaptive Hypergraph Transformer for Brain Disease Diagnosis
+## GUITAR: Structured Failure Diagnosis of GUI Agents via State Transitions
 
-**Authors:** Jingxi Feng; Xudong Chen; Yifan Zhang; Heming Xu; Hongcheng Han; Xijing Wang; Dong Zhang; Shaoyi Du
+**Authors:** Shaoqing Zhang; Kehai Chen; Xuefeng Bai; Zhuosheng Zhang; Pengfei Zhang; Yang Xiang; Min zhang
 
-**ID:** 151673 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
+**ID:** 139804 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=Yu6MCCLKmF>) | [PDF](<https://openreview.net/pdf?id=Yu6MCCLKmF>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151673>)
+[Paper](<https://openreview.net/forum?id=3bg3fAhQJU>) | [PDF](<https://openreview.net/pdf?id=3bg3fAhQJU>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139804>)
 
-_Abstract unavailable from the accessible public sources._
+Understanding where and why Graphical User Interface \(GUI\) agents fail is essential for building more reliable systems, yet current evaluation relies on step accuracy, a metric that treats each screen independently and overlooks the underlying structure of GUI environments\. This leads to two critical blind spots: \(1\) functionally equivalent screens are evaluated in isolation, obscuring systematic failure patterns across shared screens; and \(2\) the long\-tailed GUI distribution renders failures on rare but critical screens invisible under standard metrics\. To address these issues, we propose \\textbf\{GUITAR\}, a state\-centric diagnostic framework that performs structured failure analysis over both states and transitions, using a State Transition Graph \(STG\) by mapping visually diverse screens to shared functional states\.  Evaluated with 8 agents across 3 tasks on AndroidControl and 3 tasks on Mind2Web, GUITAR reveals that failures are both structurally concentrated and metrically invisible:  61\.9\\% of failure instances occur in 20\\% states, consistently localizing to a small set of bottleneck states\. Furthermore, leveraging bottleneck states for inference guidance yields \+2\.8\\% performance improvement\.  These findings highlight structure\-aware evaluation as necessary for GUI agent diagnosis, and demonstrate that targeted intervention on bottleneck states offers a practical path to improving reliability\.
 
-## JMed48k: A Multi\-Profession Japanese Medical Licensing Benchmark for Vision\-Language Model Evaluation
+## Less Evidence, Better Answering: Gain\-Aware Minimal Evidence Subset Selection for Medical QA
 
-**Authors:** Yue Xun; Junyu Liu; Qian Niu; Xinyi Wang; Zheng Yuan; Zirui Li; Zequn Zhang; Bowen Zhao; Emma, Shujun Wang; Zihui Li; Kan Hatakeyama\-Sato; Yusuke Iwasawa; Yutaka Matsuo
+**Authors:** Songyue Guo; Zhao CHEN; Caleb C Cao; Lei Chen
 
-**ID:** 139030 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+**ID:** 152857 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=pFkWhEmt1A>) | [PDF](<https://openreview.net/pdf?id=pFkWhEmt1A>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139030>)
+[Paper](<https://openreview.net/forum?id=PsPjtMRFBs>) | [PDF](<https://openreview.net/pdf?id=PsPjtMRFBs>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152857>)
 
-We introduce JMed48k, a multi\-profession Japanese healthcare licensing benchmark for evaluating vision\-language models\. Built from official PDF materials released by the Japanese Ministry of Health, Labour and Welfare, JMed48k contains 48,862 exam questions and 20,142 images from 11 national licensing examinations between 2005 and 2025, with visual content annotated under an 8\-type taxonomy\. From this corpus, we derive JMed48k\-Eval, a recent five\-year evaluation subset with 12,484 scored questions, including 9,905 text\-only questions and 2,579 questions with images\. We evaluate 21 proprietary, open\-source, and medical\-specific models, reporting text\-only and with\-image performance separately\. Because these subsets contain different questions, we further introduce a paired image\-removal audit that evaluates questions with images before and after removing visual content to explore four answer\-transition states\. The audit shows that proprietary and open\-source models gain substantially from images, whereas medical\-specific systems show limited observable use of visual evidence, with many correct answers persisting after image removal\. Even among proprietary models, the net image\-removal effect varies sevenfold across professions, from \+5\.7 points on Physician questions to \+39\.8 points on Public Health Nurse questions\. We release JMed48k to support reproducible, profession\-stratified evaluation of vision\-language models in medical licensing settings\.
+Evidence\-grounded medical question answering requires not only accurate answers, but also precise, verifiable, and clinically trustworthy evidence\. Existing medical RAG systems typically retrieve top\-\\\(k\\\) chunks according to item\-wise relevance\. Although this design improves recall, it does not explicitly optimize whether the selected evidence set is compact, sufficient, and decision\-critical\. In this paper, we study medical evidence\-grounded QA from a different perspective: instead of retrieving evidence without optimization, the evidence\-grounded medical QA system should identify a compact sufficient subset of high\-density evidence snippets\. We propose \*\*MEGA\*\*, a gain\-aware framework for compact supporting medical evidence selection\. MEGA first expands clinical queries into complementary subqueries and performs hybrid retrieval to construct a recall\-oriented candidate evidence pool\. It then introduces hidden\-state \*\*Information Gain Scoring\*\*, which uses a frozen LLM to estimate whether each candidate snippet contributes new answer\-relevant information beyond surface relevance\. Finally, MEGA formulates evidence selection as a budgeted utility maximization problem and proposes an \*\*FPTAS selector\*\* to identify a compact evidence subset under an explicit token budget\. We further construct two evidence\-grounded medical QA benchmarks, CRC\-EvidenceQA and Med\-EvidenceQA, to evaluate both answer quality and evidence grounding\. Across three LLM backbones and five medical RAG baselines, MEGA consistently achieves the best results, improving over the second\-best baseline by \\\(8\.8\\%\\\) on average in answer quality and 38\.8\\% on average in evidence F1\. Ablation studies and blinded clinical expert evaluation further validate its robustness and clinical relevance\.
 
-## CORAL: Learning Amyloid Fibril Ligand Docking with Cooperative Binding Rewards
+## Radial\-Angular Geometry for Reliable Update Diagnosis in Noisy\-Label Learning
 
-**Authors:** Yasheng SUN; Bohan Li; Youqi Tao; Jürgen Schmidhuber
+**Authors:** Ningkang Peng; Jingyang Mao; Xiaoqian Peng; Qu Weiguang; Yanhui Gu
 
-**ID:** 154426 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+**ID:** 154327 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=Dfzv8dmnaf>) | [PDF](<https://openreview.net/pdf?id=Dfzv8dmnaf>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154426>)
+[Paper](<https://openreview.net/forum?id=ERuc5l7i70>) | [PDF](<https://openreview.net/pdf?id=ERuc5l7i70>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154327>)
 
-A hallmark of neurodegenerative diseases such as Alzheimer's and Parkinson's is the aberrant aggregation of proteins into amyloid fibrils, and small molecules that selectively bind to these fibrils hold promise as diagnostics, imaging probes, and therapeutics\. Predicting how such ligands bind to fibril targets, however, presents two fundamental challenges\. First, resolved co\-crystal structures of amyloid–ligand complexes are exceptionally scarce; even with recent advances in cryo\-EM only a handful have been structurally characterized, making supervised training of docking models impractical for this target class\. Second, amyloid fibrils present a binding mode fundamentally different from globular proteins: ligands intercalate into longitudinal cross\-β grooves and stack cooperatively along the fibril axis, a geometry that existing docking models are not designed to capture\. To address these challenges, we present CORAL \(Cooperative Amyloid Ligand docking\), a reinforcement learning framework that trains a generative docking model to produce ligand pose distributions tailored to the cross\-β groove geometry\. Our reward explicitly incorporates cooperative ligand–ligand stacking energy alongside protein–ligand docking affinity, directly capturing the distinctive binding geometry of amyloid fibrils\. We further introduce a curated evaluation set of amyloid–ligand complexes constructed from model\-generated poses validated by domain experts\. Experiments on both experimentally resolved structures and this evaluation set demonstrate improved pose quality and binding affinity correlation over existing docking baselines\.
+Noisy\-label methods often estimate sample reliability from forward\-space signals such as loss, confidence, or entropy\. These signals indicate whether a sample is difficult to predict, but they do not directly test whether its observed label induces a reliable parameter update\. This gap matters because hard clean samples and mislabeled samples can have similar loss while inducing different updates\. We recast reliability estimation as diagnosis of the observed\-label update\. The sample\-wise empirical Fisher trace gives a backward\-space measure of update energy: for the classifier layer, it factorizes into a prediction\-residual term and a feature\-sensitivity term, so it captures information beyond scalar loss\. Trace, however, is still a radial magnitude signal and cannot decide whether a large update is useful or harmful\. We therefore propose Relative Geometric Conflict \(RGC\), which compares the observed\-label gradient with a reference gradient induced by an EMA teacher\. The conflict term helps distinguish large but aligned hard\-clean updates from large conflicting updates caused by corrupted labels\. Across synthetic and real\-world noisy\-label benchmarks, RGC improves hard\-clean preservation and accuracy under our evaluation protocol\.
 
-## Source\-Causal Control of Historical Context in Longitudinal Radiology Report Generation
+## Region\-Normalized DPO for Medical Image Segmentation
 
-**Authors:** Dmitry Lvov; Ilya Pershin
+**Authors:** Hamza Kalisch; Constantin Seibold; Jens Kleesiek; Ken Herrmann; Frederic Jonske
 
-**ID:** 154092 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+**ID:** 153478 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=GHvYdC6tmg>) | [PDF](<https://openreview.net/pdf?id=GHvYdC6tmg>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154092>)
+[Paper](<https://openreview.net/forum?id=L4rTdhTV8w>) | [PDF](<https://openreview.net/pdf?id=L4rTdhTV8w>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153478>)
 
-Longitudinal radiology report generation increasingly conditions on prior images and reports\. This history is clinically valuable, but it creates a source\-validity failure mode: a generator can carry prior\-only findings into the current report\. Weintroduce source\-causal robustness, a stress\-test and control framework that holds the current chest X\-ray fixed while intervening on historical context\. On a full eligible MIMIC\-CXR longitudinal study \(18,716 pairs; 93,580 generations across five source conditions\), historical context consistently trades fewer missed findings for more unsupported positives\. Matched wrong\-history, the key negative control, increases proxy\-defined false positives by \+0\.366 per report while reducing false negatives by −0\.129; random wrong\-history yields an even larger false positive stress signal \(\+0\.465 FP/report\)\. We propose the Source\-Causal Finding Router \(SCFR\), a source\-validity controller trained with within\-evaluation subject exclusion\. Across three held\-out evaluations, SCFR repairs matched wrong\-history false\-positive inflation by −0\.343, −0\.550, and −0\.457 per report, passes Holm corrected primary testing at the bootstrap resolution floor \(Holm\-adjusted p ≤ 0\.0012\), and satisfies fixed current\-only parity margins\. Cross\-generator stress panels with RadInfer and Libra, together with ReXPref\-Prior, RadGraph2, Chest ImaGenome, ablations, and case review, support the mechanism\. These results establish a protocol\-defined state\-of\-the\-art source\-causal robustness/control result for longitudinal radiology report generation under matched wrong\-history stress tests\.
+Direct Preference Optimization \(DPO\) has recently been applied to medical image segmentation, since comparing candidate masks is substantially cheaper than producing new dense pixel\-level annotations, making pairwise preference signals an appealing source of supervision\. However, existing work derives preferences from ground\-truth masks, leaving open whether the approach is sound under the imperfect feedback available in practice\. In our analysis of this reformulation, we identify that candidate masks tend to agree over most of the image and differ only in localized regions, yet standard DPO averages the preference signal over the full spatial domain\. This couples update strength to disagreement area, diluting small correct refinements and amplifying large misranked differences\. Crucially, this bias even degrades performance even under oracle preferences derived from ground truth\. We propose Region\-Normalized DPO \(RN\-DPO\), which normalizes the likelihood ratio over the disagreement region between candidate masks, removing this coupling\. We further provide a systematic empirical study of preference\-based segmentation fine\-tuning under controlled noisy judges, analyzing the effects of mining strategies, judge types, and reliability regimes\. Across two medical segmentation benchmarks, multiple judge configurations, and two backbone architectures, RN\-DPO consistently improves over vanilla DPO and robust DPO variants, with gains persisting under noiseless oracle preferences\.
 
-## Medical LLMs as Medical World Models:  Unified Policy\-Dynamics Learning with Test\-Time Search
+## Symb\-xMIL: Symbolic Explanations for Multiple Instance Learning in Digital Pathology
 
-**Authors:** Yucheng Zhou; Peng Luo; Jianbing Shen
+**Authors:** Yanqing Luo; Julius Hense; Niklas Prenißl; Andreas Mock; Klaus\-Robert Müller; Thomas Schnake; Mina Jamshidi Idaji
 
-**ID:** 148462 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
+**ID:** 152976 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=xdOHRMB63r>) | [PDF](<https://openreview.net/pdf?id=xdOHRMB63r>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148462>)
+[Paper](<https://openreview.net/forum?id=OwuMiUXJ26>) | [PDF](<https://openreview.net/pdf?id=OwuMiUXJ26>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152976>)
 
-_Abstract unavailable from the accessible public sources._
+Explanations of multiple instance learning \(MIL\) models are widely used for validation and discovery in digital histopathology\. Existing methods primarily rely on heatmaps that highlight influential regions but do not explain how evidence from different tissue regions is combined to produce a prediction\. This limits interpretability, especially when decisions depend on interactions between tissue features\. We introduce Symbolic explainable MIL \(Symb\-xMIL\), a post\-hoc explanation framework that quantifies how a MIL model’s behavior aligns with human\-readable decision rules, expressed as logical relationships \(e\.g\., AND, OR, NOT\) between input features\. These alignment scores reveal semantic patterns underlying the model’s predictions\. We evaluate Symb\-xMIL on synthetic and real\-world histopathology datasets\. On synthetic MIL data, Symb\-xMIL reliably recovers ground\-truth logical rules\. In a clinical tumor detection task, the best\-aligned rules uncover heterogeneous decision patterns and expose hidden model errors\. On an HPV\-prediction task on TCGA\-HNSCC, a cohort of head and neck cancer, our framework refines patient survival stratification beyond HPV status with potential clinical relevance\. Overall, Symb\-xMIL extends MIL explainability beyond visual attribution toward structured, rule\-based reasoning, enabling more transparent and semantically grounded interpretation of model predictions\.
 
-## One Loss to Rule Them All: Marked Time\-to\-Event for Structured EHR Foundation Models
+## Reporting Practice Matters: The Impact of Reference Choice on Chest X\-ray Report Evaluation
 
-**Authors:** Zilin Jing; Vincent Jeanselme; Yuta Kobayashi; Simon Lee; Chao Pang; Aparajita Kashyap; Yanwei Li; Xinzhuo Jiang; Shalmali Joshi
+**Authors:** Daniel P Jeong; Charles Q Li; Hossein Hosseiny; Nitya M Bhalla; Fatma U Morency; Pradeep Ravikumar; Zachary Lipton; Michael Oberst
 
-**ID:** 150016 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
+**ID:** 138929 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=lNy0GEHZYE>) | [PDF](<https://openreview.net/pdf?id=lNy0GEHZYE>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150016>)
+[Paper](<https://openreview.net/forum?id=vocvkC0AxO>) | [PDF](<https://openreview.net/pdf?id=vocvkC0AxO>) | [Official poster](<https://neurips.cc/virtual/2026/poster/138929>)
 
-_Abstract unavailable from the accessible public sources._
+Radiologists follow heterogeneous reporting practices\. Two radiologists examining the same image and identifying the same clinical findings might nevertheless compose superficially distinct reports, varying in terminology, shorthand, formatting, and level of detail\. These variations in reporting norms represent an under\-appreciated obstacle in efforts to evaluate AI\-based radiology report generation \(RRG\) models, where machine\-generated reports are typically assessed based on their concordance with human\-generated references\. In this paper, we quantify the sensitivity of established evaluation metrics to variations in reporting practices, revealing impacts significant enough to alter the rankings of models\. We introduce a radiologist\-informed taxonomy of variations in radiology reporting practice and a method \(ReRef\) that rewrites reference reports along the axes of our taxonomy while preserving clinical interpretation\. For instance, when comparing the performance of nine RRG models on MIMIC\-CXR using the GREEN metric, condensing the discussion of normal findings in the reference reports causes Libra to drop from first place to third while CheXOne rises from third to first\. Our results suggest that current metrics may fail to decouple clinical interpretation from conformity to reporting practices and that choosing the "right" references that accurately reflect the desired reporting practices can be important in practice\. To support future research, we release MIMIC\-CXR\-Ext\-ReRef, a radiologist\-validated dataset of 120 \(original, alternative\) reference report pairs derived from MIMIC\-CXR\.
 
-## DoAtlas\-1: A Causal Compilation Paradigm for Clinical AI
+## Remote Photoplethysmography Based on a Skin Reflection Exponential Model
 
-**Authors:** Yulong Li; Jianxu Chen; Xiwei Liu; Chuanyue Suo; Rong Xia; Yichen Li; Xinlin Zhuang; Niranjana A Menon; Jionglong Su; Eran Segal; Imran Razzak
+**Authors:** Jiachen Li; Longzhen Tang; Shisheng Guo; Guolong Cui
 
-**ID:** 152826 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+**ID:** 149070 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=Q7ooeLQ5Xm>) | [PDF](<https://openreview.net/pdf?id=Q7ooeLQ5Xm>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152826>)
+[Paper](<https://openreview.net/forum?id=t5bnpdRy8p>) | [PDF](<https://openreview.net/pdf?id=t5bnpdRy8p>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149070>)
 
-Medical foundation models generate narrative explanations but cannot quantify intervention effects, detect evidence conflicts, or validate literature claims, limiting clinical auditability\. We propose causal compilation, a paradigm that transforms medical evidence from narrative text into executable code\. The paradigm standardizes heterogeneous research evidence into structured estimand objects, each explicitly specifying intervention contrast, effect scale, time horizon, and target population, supporting six executable causal queries: do\-calculus, counterfactual reasoning, temporal trajectories, heterogeneous effects, mechanistic decomposition, and joint interventions\. We instantiate this paradigm in DoAtlas\-1, compiling 1,445 effect kernels from 754 studies through effect standardization, conflict\-aware graph construction, and real\-world validation \(Human Phenotype Project, 10,000 participants\)\. The system achieves 98\.5% canonicalization accuracy, 100% conflict detection recall, and 80\.5% query executability\. This paradigm shifts medical AI from text generation to executable, auditable, and verifiable causal reasoning\.
+Facial video–based remote photoplethysmography \(rPPG\) estimates physiological signals from subtle spatiotemporal variations in facial videos, but remains vulnerable to head motion, illumination changes, and environmental perturbations\. Existing methods mainly distinguish rPPG\-related variations from motion and lighting artifacts at the signal or feature level, while largely neglecting the optical reflection properties of human skin\. In this work, we formulate a skin reflection exponential model to describe the nonlinear relationship among skin reflectance, illumination, motion\-induced variations, and blood\-volume changes\. Guided by this model, we propose a physically inspired rPPG estimation framework that explicitly incorporates skin reflectance priors into signal extraction\. Given a facial video, facial keypoints are first detected and encoded to represent motion dynamics, while illumination\-related features and candidate rPPG representations are jointly modeled under the proposed exponential formulation\. By constraining rPPG estimation with skin\-reflection physics, the framework improves separation of physiological components from motion and illumination disturbances\. Experiments demonstrate improved robustness under challenging conditions\.
 
-## MindGuard: Guardrail Classifiers for Multi\-Turn Mental Health Support
+## Selective Answering for Medical VQA via Parallel Independent Claim Verification
 
-**Authors:** António Farinhas; Nuno M Guerreiro; José Pombal; Pedro Henrique Martins; Laura Melton; Alexandra Conway; Cara Dochat; Maya D&amp;amp;\#x27;Eon; Ricardo Rei
+**Authors:** Donghee Han; Jiwon Jeong; Mun Yi
 
-**ID:** 138950 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
+**ID:** 150272 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=uMIiizxIrQ>) | [PDF](<https://openreview.net/pdf?id=uMIiizxIrQ>) | [Official poster](<https://neurips.cc/virtual/2026/poster/138950>)
+[Paper](<https://openreview.net/forum?id=jPgQvPpJTX>) | [PDF](<https://openreview.net/pdf?id=jPgQvPpJTX>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150272>)
 
-_Abstract unavailable from the accessible public sources._
+Medical visual question answering is a safety\-critical decision problem in which abstaining on inputs the image cannot support matters as much as answer accuracy\. Existing inference\-time agentic methods address hallucination by adding a verification step, but they collapse the final decision at a single language\-model judge that integrates all evidence in one prompt and is systematically biased toward declaring inputs answerable\. We propose PICV \(Parallel Independent Claim Verification\), which reformulates selective medical VQA as independent claim verification with transparent aggregation: the question is decomposed into a small set of typed visual claims, each is verified by an isolated prompt with no access to the other verdicts, and the verdicts are combined by a deterministic rule rather than another model, yielding an answer/abstain decision together with a typed unanswerability reason\. We evaluate PICV efficiently on an automated answerability benchmark we construct over two public radiology datasets via three reproducible corruption procedures, requiring neither heavy VLM judging nor human annotation at evaluation time\. Across four VLM backbones, PICV consistently outperforms strong prompting and agentic baselines; ablations attribute the gains specifically to per\-claim isolation and rule\-based aggregation rather than to agentic decomposition alone\.
 
-## Uncertainty Estimation for Pretrained Medical Image Registration Models via Transformation Equivariance
+## Learning Survival Models with Right\-Censored Reporting Delays
 
-**Authors:** Lin Tian; Xiaoling Hu; Juan Eugenio Iglesias
+**Authors:** Yuta Shikuri; Hironori Fujisawa
 
-**ID:** 148713 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
+**ID:** 152038 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=vcFcWZeEEC>) | [PDF](<https://openreview.net/pdf?id=vcFcWZeEEC>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148713>)
+[Paper](<https://openreview.net/forum?id=W1GKVEnOcP>) | [PDF](<https://openreview.net/pdf?id=W1GKVEnOcP>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152038>)
 
-_Abstract unavailable from the accessible public sources._
+Survival analysis provides statistical methods to model the time until an event occurs\. Reporting delays arise when event times are not observed at their occurrence but are only revealed upon reporting\. This issue is particularly critical for timely risk evaluation when the observation window is short due to administrative censoring\. In this study, we incorporate right\-censored reporting delays by jointly modeling parametric hazards for the event and reporting processes\. We then construct a consistent estimator for the model parameters and develop a Monte Carlo expectation\-maximization algorithm to compute it\. To address the challenges posed by administrative censoring, we leverage these findings and propose a transfer\-learning procedure\. Experimental results demonstrate that our method improves the accuracy of timely risk evaluation under administrative censoring\.
 
-## Experience Makes Skillful: Enabling Generalizable Medical Agent Reasoning via Self\-Evolving Skill Memory
+## Diagnosing and Repairing Visual Collapse in Compact Medical Multimodal LLMs
 
-**Authors:** Haoran Sun; Wenjie Li; Yujie Zhang; Zekai Lin; Fanrui Zhang; Kaitao Chen; Xingqi He; Yichen Li; Mianxin Liu; Lei Liu; Yankai Jiang
+**Authors:** Jinjie Xie; Baihua Li; Qinggang Meng
 
-**ID:** 150444 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
+**ID:** 149438 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=i09nlt9B6r>) | [PDF](<https://openreview.net/pdf?id=i09nlt9B6r>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150444>)
+[Paper](<https://openreview.net/forum?id=q5FAFDMeZq>) | [PDF](<https://openreview.net/pdf?id=q5FAFDMeZq>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149438>)
 
-_Abstract unavailable from the accessible public sources._
+Compact medical multimodal models are the most realistic path to clinical deployment, yet they often produce fluent answers that are not actually grounded in the image\. We show that this failure has a clear internal signature\. In five compact medical backbones and across six medical VQA benchmarks, visual tokens lose their spatial diversity shortly after entering the language backbone, their residual updates are an order of magnitude smaller than text residuals, and attention on them freezes on content free regions of the image\. Zeroing the visual residual stream barely changes the output, while zeroing the text residual stream destroys it\. We give a short analytical account that links the collapse of visual similarity to the residual dominance ratio, and we propose VGrip, a set of three lightweight losses that act on the three failure points without modifying the backbone architecture or the inference procedure\. We also introduce the Visual Dependency Score, a simple and benchmark agnostic measure of how much a model actually uses the image\. On Qwen2\.5\-VL\-7B, VGrip lifts accuracy by 4\.7 points on average across the six benchmarks and more than doubles the Visual Dependency Score over a strong LoRA baseline, with gains that are stable from two to eight billion parameters\.
 
-## RealICU: Do LLM Agents Understand Long\-Context ICU Data? A Benchmark Beyond Behavior Imitation
+## Look Before You Leap: Self\-Evolving Clinical Reasoning with Psychometric Preference Optimization for Radiology Report Generation
 
-**Authors:** Chengzhi Shen; Weixiang Shen; Tobias Susetzky; Chen Chen; Jun Li; Yuyuan Liu; zhang xuepeng; Zhenyu Gong; Daniel Rueckert; Jiazhen Pan
+**Authors:** Qi Wang; Yunfeng Min; Liwei Huang; Zeyu Zhang; Di Gai; Jun Liu
 
-**ID:** 138984 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+**ID:** 154029 | **Topic source:** official | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=sXvJmaafJ2>) | [PDF](<https://openreview.net/pdf?id=sXvJmaafJ2>) | [Official poster](<https://neurips.cc/virtual/2026/poster/138984>)
+[Paper](<https://openreview.net/forum?id=GmZxHeBKTq>) | [PDF](<https://openreview.net/pdf?id=GmZxHeBKTq>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154029>)
 
-Intensive care units \(ICU\) generate dense, evolving streams of clinical information, where physicians must repeatedly reassess patient states under time pressure, underscoring a clear need for reliable AI decision support\. Existing ICU benchmarks typically treat historical clinician actions as ground truth\. However, these actions are made under incomplete information and limited temporal context of the underlying patient state, and may therefore be suboptimal, making it difficult to assess the true reasoning capabilities of AI systems\. We introduce RealICU, a hindsight\-annotated benchmark for evaluating large language models \(LLMs\) under realistic ICU conditions, where labels are created after senior physicians review the full patient trajectory\. We formulate four physician\-motivated tasks: assess \\emph\{Patient Status\}, \\emph\{Acute Problems\}, \\emph\{Recommended Actions\}, and \\emph\{Red Flag\} actions that risk unsafe outcomes\. We partition each trajectory with 30\-min windows and release two datasets: RealICU\-Gold with 930\-window annotations from 94 MIMIC\-IV patients, and RealICU\-Scale with 11,862 windows extended by \\emph\{Oracle\}, a physician\-validated LLM hindsight labeler\. Existing LLMs including memory\-augmented ones performed poorly on RealICU, exposing two failure modes: a recall–safety tradeoff for clinical recommendations, and an anchoring bias to early interpretations of the patient\. We further introduce ICU\-Evo to study structured\-memory agents that improves long\-horizon reasoning but does not eliminate safety failures\. Together, RealICU provides a clinically grounded testbed for measuring and improving AI sequential decision\-support in high\-stakes care\.
+Despite the remarkable progress of large Vision\-Language Models \(VLMs\) in Radiology Report Generation \(RRG\), existing black\-box autoregressive generation paradigms lack intermediate clinical logical reasoning\. This deficiency renders such models prone to generating linguistically fluent reports with erroneous diagnostic findings, which manifest as plausible hallucinations and thereby undermine clinical reliability\. To this end, we propose a novel RRG paradigm termed "Look\-Before\-You\-Leap", aimed at enhancing the clinical logical reasoning capabilities of the model to improve diagnostic accuracy\. Specifically, we first construct a self\-evolving Radiological Skill \(RadSkill\) repository to guide the teacher model in distilling high\-confidence explicit clinical reasoning, and further internalize this reasoning capability into the implicit diagnostic intuition of the RRG baseline\. Building upon this foundation, a novel preference optimization method termed Psychometric Preference Optimization \(PSY\-PO\) is proposed\. Grounded in Item Response Theory \(IRT\) from psychometrics, this method precisely samples clinically misleading dispreferred reports for preference optimization, thereby effectively mitigating plausible hallucinations\. Extensive experimental results demonstrate that our proposed method significantly enhances both the generation quality and trustworthiness of radiology reports\.
 
-## Rethinking Visual Attribution for Chest X\-ray Reasoning in Large Vision Language Models
+## AI and Data Science for Her: Training the Next Generation of High School Girls in Nigeria
 
-**Authors:** Guangzhi Xiong; Qiao Jin; Sanchit Sinha; Zhiyong Lu; Aidong Zhang
+**Authors:** Aderonke Sakpere
 
-**ID:** 151683 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+**ID:** 137879 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** missing
 
-[Paper](<https://openreview.net/forum?id=YoNjeiTDbj>) | [PDF](<https://openreview.net/pdf?id=YoNjeiTDbj>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151683>)
+[Official poster](<https://neurips.cc/virtual/2026/poster/137879>)
 
-Large Vision Language Models \(LVLMs\) show promise in medical applications, but their inability to faithfully ground responses in visual evidence raises serious concerns about clinical trustworthiness\. While visual attribution methods are widely used to explain LVLM predictions, whether these explanations actually reflect the visual evidence underlying the model's decision is largely unverified, since ground\-truth annotations for internal model reasoning are typically unavailable\. We address this question for chest X\-ray \(CXR\) reasoning by developing a causal evaluation framework that retains only CXR\-VQA samples for which the expert\-annotated region is verified, via counterfactual editing, to be causally responsible for the model's prediction\. Using this framework across 11 attribution methods, six open\-source LVLMs, and two output modes \(direct answer and step\-by\-step reasoning\), we find that existing attribution methods often fail to identify the evidence used by LVLMs\. To address this failure, we propose MedFocus, a concept\-based attribution method that localizes clinically meaningful anatomical regions via unbalanced optimal transport and measures their causal effect on model outputs through targeted interventions\. MedFocus produces spatial, concept\-level, and token\-level attributions and substantially outperforms prior methods, taking a step toward more trustworthy attribution for medical LVLMs\.
+This program will train 300 Nigerian high school girls across six geopolitical zones of the country in the fundamentals of AI and data science\. Grounded in published research on how teenage girls engage with technical subjects, the curriculum is deliberately girl\-centered, pairing students with female mentors already working in AI, and connecting technical concepts to capstone projects addressing real challenges in healthcare, agriculture, and education\. AI clubs formed in each participating school will keep the learning going long after the program’s formal end
 
-## EHRNote\-ChatQA: A Benchmark for Evidence\-Grounded Multi\-Turn Clinical Question Answering over Longitudinal Discharge Summaries
+## AI and Data Science for Her: Training the Next Generation of High School Girls in Nigeria
 
-**Authors:** Jiyoun Kim; Muhan Yeo; Eunhye Jang; Jeewon Yang; Hangyul Yoon; Su Ji Lee; Hee J Han; Hee\-Jae Jung; Doyun Kwon; Jun y Lee; Jaehun Lee; Jung\-Oh Lee; Sunjun Kweon; Jong\-Hak Moon; Daseul Kim; Minjae Cho; Edward Choi
+**Authors:** Aderonke Sakpere
 
-**ID:** 139551 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+**ID:** 137873 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** missing
 
-[Paper](<https://openreview.net/forum?id=J8cq4kNTbz>) | [PDF](<https://openreview.net/pdf?id=J8cq4kNTbz>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139551>)
+[Official poster](<https://neurips.cc/virtual/2026/poster/137873>)
 
-Discharge summaries are crucial clinical documents for patient care, containing clinical context of a patient's overall admission, and are routinely reviewed by medical experts during patient readmission, ongoing care, and diagnostic decision\-making\. In practice, medical experts often must synthesize information across multiple lengthy discharge summaries by iteratively obtaining information from the documents, while also verifying the evidence supporting each answer\. Although large language models \(LLMs\) are increasingly explored for clinical document question answering, existing benchmarks do not sufficiently capture this clinical setting: they either evaluate exam\-style medical knowledge or focus on single\-turn question answering with limited evidence\-grounding evaluation\. We introduce \*\*EHRNote\-ChatQA\*\*, the first benchmark for evidence\-grounded multi\-turn clinical question answering over patients' multiple discharge summaries\. Built from de\-identified MIMIC\-IV discharge summaries, EHRNote\-ChatQA contains 967 patient\-level multi\-turn samples spanning one to five notes and 16,072 medical\-expert\-verified QA pairs \(8,036 content questions, each paired with an evidence\-grounding question\) across eight clinical categories\. We construct the benchmark through an expert\-informed pipeline that combines a comprehensive discharge\-summary structuring schema, expert\-curated multi\-turn QA templates, and LLM\-based generation\. Every single QA sample is then reviewed and revised by 11 medical experts over three weeks\. Benchmarking 22 LLMs \(both open and closed\-sourced\) reveals several findings; evidence grounding is consistently harder than content answering, multi\-turn errors compound across turns, and strong performance on existing single\-turn clinical QA benchmarks does not reliably transfer to this setting\. These results establish EHRNote\-ChatQA as a rigorous and practical benchmark for evaluating clinical QA systems\.
+This program will train 300 Nigerian high school girls across six geopolitical zones of the country in the fundamentals of AI and data science\. Grounded in published research on how teenage girls engage with technical subjects, the curriculum is deliberately girl\-centered, pairing students with female mentors already working in AI, and connecting technical concepts to capstone projects addressing real challenges in healthcare, agriculture, and education\. AI clubs formed in each participating school will keep the learning going long after the program’s formal end
 
-## Rethinking Contrastive Targets in Radiology Language\-Image Pretraining
+## Mental Health AI Must Move Beyond Diagnostic Prediction and Chat\-Based Support: Toward Perspective\-Aware, Multisensory Co\-Experience
 
-**Authors:** Yunhe Gao; Ashwin Kumar; Jiaming Liu; Chong Wang; Maya Varma; Fuying Wang; Stefania L Moroianu; Louisa Fay; Sergios Gatidis; Akshay Chaudhari; Curtis Langlotz
+**Authors:** Pinyao Liu; Esen K Tütüncü; Muhammad Arslan Manzoor; Yufang Hou; Chirag Raman
 
-**ID:** 148888 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+**ID:** 140081 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=uRbyMugqG7>) | [PDF](<https://openreview.net/pdf?id=uRbyMugqG7>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148888>)
+[Paper](<https://openreview.net/forum?id=KrjqjWYl47>) | [PDF](<https://openreview.net/pdf?id=KrjqjWYl47>) | [Official poster](<https://neurips.cc/virtual/2026/poster/140081>)
 
-CLIP\-style contrastive image\-\-text pretraining is widely used in radiology data, where each image is paired with one report and every other report in the batch is treated as a negative\. Under this recipe, two failures appear, neither systematically addressed by existing contrastive learning theory: zero\-shot evaluation peaks then degrades while training loss keeps decreasing, and training fails to learn at all at large batches\. We hypothesize the cause is structural rather than radiology\-specific: many unpaired reports share clinical findings with a given image, so CLIP's paired\-identity target is systematically biased, not merely noisy\. To test this, we construct CLEVR\-Radiology, a synthetic testbed that preserves only this overlapping\-fact structure and reproduces both failures\. With evidence that the structure is sufficient to reproduce the failures, we develop a target\-misspecification theory that derives both failures from a single deterministic gradient bias amplified by batch size, and use it to motivate a minimal compatibility\-based correction, CorLIP: a text is treated as positive whenever its clinical assertions agree with the image, with no other change to the training pipeline\. Beyond benchmark improvements, CorLIP removes the post\-peak degradation, makes large\-batch training succeed where it previously collapsed, substantially amplifies the gains from more data, and is the only configuration that remains stable up to B=2048\. The correction also transfers from chest X\-ray to 3D CT modalities\.
+This position paper argues that AI for mental health must move beyond two dominant paradigms\. The first is diagnostic prediction, which frames mental healthcare as symptom detection, diagnosis, and decision\-making\. The second is chat\-based support, which reduces therapeutic interaction to language\-mediated information delivery\. Both approaches neglect what therapeutic research shows to be central to healing: experiential, affective, and embodied processes\. In many therapeutic traditions, insight emerges not through information\-delivery but through emotionally resonant, multisensory experiences that allow individuals to feel, reflect, and reframe their inner world\. We propose an alternative framework: co\-experiential AI systems that identify emotionally salient moments across modalities, modulate sensory experience to facilitate reflection, and adapt over time to a user's evolving responses and interpretations\. Using dreamwork therapy as a stress test for mental health AI, we define three key challenges for AI systems: identifying affective anchors in indeterminate multimodal interactions; modeling user perspective as a situated context; and enabling continual adaptation to individuals without repeated retraining\. We posit that addressing these challenges requires rethinking AI's role not as an expert, but as a perspective\-aware participant in human meaning\-making\.
 
-## Generalized Adaptive Boosting and the Geometry of Mistakes
+## Augmented Equivariant Mesh Networks for Anatomical Segmentation
 
-**Authors:** Marco Bressan; Nataly Brukhim; Nicolò Cesa\-Bianchi; Emmanuel Esposito; Yishay Mansour; Shay Moran; Maximilian Thiessen
+**Authors:** Daniel Saragih
 
-**ID:** 152221 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+**ID:** 153175 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=Uf1pIHYHQJ>) | [PDF](<https://openreview.net/pdf?id=Uf1pIHYHQJ>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152221>)
+[Paper](<https://openreview.net/forum?id=NHNCBuH2mF>) | [PDF](<https://openreview.net/pdf?id=NHNCBuH2mF>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153175>)
 
-Not all mistakes are alike\. For example, in medical diagnosis, false positive and false negative mistakes have a different impact and should not be aggregated\. By revisiting the classical theory of boosting through this lens, we introduce the notion of $Z$\-learner, which returns weak hypotheses achieving joint false\-positive/false\-negative guarantees $\(FP,FN\)$ from some set $Z \\subseteq \[0,1\]^2$\. This formulation generalizes the standard notion of $\\gamma$\-weak learning — recovered by taking $Z=$ \{ $\(z\_1,z\_2\): z\_1\+z\_2&lt;1/2\-\\gamma$ \} — and allows for more flexible notions of weak learnability that account for the impact of the distribution on the achievable learning guarantees\. This raises a natural question: which sets Z are  boostable? We answer this by giving a complete geometric characterization that unifies, as special cases, both the classical boosting dichotomy and the recent multi\-objective extension of Bressan et al\. \(COLT 2025\)\. We also present an adaptive algorithm for boosting $Z$\-learners without relying on the prior knowledge of\~$Z$, generalizing AdaBoost's ability to handle unknown margin parameters\.  Finally, we demonstrate that $Z$\-learners can achieve confidence amplification\. However, the analysis is significantly more involved than in classical boosting and relies on the centerpoint theorem from discrete and computational geometry\.
+Anatomical mesh segmentation requires models that operate directly on irregular surface geometry while remaining robust to arbitrary patient pose and mesh resolution variation\. Existing task\-specific mesh and point\-cloud methods are not equivariant, and can degrade sharply under test\-time perturbation, for example dropping by 25\-26 IoU points on intraoral scan segmentation at 40$\\textdegree\{\}$ tilt\. We present EAMS, an Equivariant Anatomical Mesh Segmentor built on Equivariant Mesh Neural Networks \(EMNN\), and evaluate it across four clinically distinct tasks spanning edge\-, vertex\-, and face\-level supervision\. We combine intrinsic mesh descriptors with anatomy\-aware priors, including PCA\-derived frames for dental arches and liver surfaces, and augment message passing to provide lightweight global context\. Across intracranial aneurysm and intraoral segmentation, EAMS variants are competitive with specialized baselines on unperturbed inputs while remaining stable under geometric perturbations, and on liver surfaces they expose a favorable trade\-off between canonical\-pose accuracy and rotation robustness\. These results show that a lightweight \($&lt;2$M parameters\) equivariant framework can deliver robust anatomical mesh segmentation across diverse supervision types without task\-specific architectures\.
 
-## TrialAgentBench: Evaluating AI Agents for Clinical\-Trial Analysis and Long\-Horizon Drug\-Development Decisions
+## What Transformer FFNs Never See: Theory, Diagnosis, and Lightweight Remediation
 
-**Authors:** Bradley M Segal; William J Bolton; Philip Torr; David Clifton; Lei Clifton
+**Authors:** Tinghe Zhang; Yucheng Xiao; Alex Lamb
 
-**ID:** 139604 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+**ID:** 153020 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=G03rvcN5Fe>) | [PDF](<https://openreview.net/pdf?id=G03rvcN5Fe>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139604>)
+[Paper](<https://openreview.net/forum?id=Oa1iYsgkvE>) | [PDF](<https://openreview.net/pdf?id=Oa1iYsgkvE>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153020>)
 
-Clinical drug development is high stakes\. Small statistical errors propagate into trial design, participant exposure, and stop/advance decisions\. As agents are increasingly used to support analysis and decision\-making, more robust evaluations of their capabilities in clinical domains are needed\. We introduce TrialAgentBench, a public benchmark in which agents must analyse participant\-level evidence, choose defensible estimands and methods, quantify uncertainty, diagnose assumption failures, and carry those analysis decisions into downstream drug\-development decisions\. TrialEvalBench contains 400 patient\-level analysis tasks across design, assumption, and context tiers\. TrialDevBench contains 20 sequential development programmes across five scenario worlds, each starting from a confounded 10,000\-patient observational extract and proceeding through asset nomination, endpoint and sample\-size design, deterministic phase trials, phase analysis, and stop/advance decisions\. The release spans 420 evaluated tasks or programmes, 528,660 simulated subjects, 77\.6 million public tabular records, and 1\.46 billion row\-variable cells\. Agents see only participant\-facing data; grader\-only files contain cell\-appropriate targets, deterministic phase state, and scoring code\. On TrialEvalBench, GPT\-5\.4 completes all 400 items but matches the required estimand/method class \(e\.g\., log\-HR versus RMST or risk\-difference targets\) for only 215/400 and produces an acceptable next\-trial sample\-size plan for 161/400\. On TrialDevBench, GPT\-5\.4 and Claude Opus 4\.7 complete all 60 seeded development programme runs per model, yet frequently nominate the wrong initial asset under confounding and choose evidence\-supported stop/advance timing in fewer than one\-third of programmes\. Together, the two suites make clinical\-trial decision quality measurable\. Current agents can effectively execute familiar analyses, but fail to make the decisions those analyses exist to support\.
+In Transformer attention, distinct weight vectors $\\boldsymbol\{\\alpha\} \\neq \\boldsymbol\{\\alpha\}'$ can produce the same aggregated representation $\\mathbf\{V\}\\boldsymbol\{\\alpha\} = \\mathbf\{V\}\\boldsymbol\{\\alpha\}'$\. When $\\operatorname\{rank\}\(\\mathbf\{V\}\) \\leq n\-2$, configurations with entirely different dominant source tokens collide on a set of positive Lebesgue measure, a condition satisfied in over 97% of attention heads in BERT\-Base\. Such collisions are harmful: the downstream FFN receives identical inputs despite the attention having attended to entirely different source tokens, and must therefore produce identical outputs regardless of which tokens actually dominated, fundamentally limiting any computation that requires sensitivity to attention source, such as multi\-hop reasoning, attribution, or knowledge retrieval\. No increase in depth, width, or data can compensate, because the routing weights are discarded before the FFN is reached\. The routing weights $\\\{\\alpha\_\{ij\}\\\}$, however, are available within the same forward pass and can be retained as a compact side\-channel to restore the missing signal\. We call this structural information loss \*routing non\-identifiability\*\. In BERT\-Base, value\-matrix rank deficiency suppresses $k \\geq 107$ routing dimensions \(over 84% of degrees of freedom\) before any FFN computation\.  To quantify the practical gap, we introduce the Routing Reconstruction Task \(RRT\): standard Transformers achieve 31\.4% source\-identification accuracy while oracle routing statistics reach 94\.6%, a 63\-point gap consistent with an information bottleneck in the FFN input\. We then propose the Route\-Aware FFN \(RA\-FFN\), a drop\-in module that appends four compact routing statistics to each FFN block at under 1\.1% additional parameter cost, recovering over 75% of the oracle gain\. RA\-FFN improves all benchmarks tested: at 110M scale, gains cover multi\-hop reasoning, language modelling, and translation, with multi\-hop gains $6\\times$ larger than single\-hop; at 7B scale on Llama\-2\-7B and Mistral\-7B, gains extend further to mathematics \(GSM8K\) and general reasoning \(MMLU, ARC\-Challenge, HellaSwag\), ordered by routing sensitivity\.
 
-## HandXFM: Semantic\-Structural Distillation for Hand Radiograph Foundation Models
+## Fine\-tuning language encoding models on slow fMRI improves prediction for fast ECoG
 
-**Authors:** Yuxi Long; Ganlin Feng; Lianghong Chen; Liam J O&amp;amp;\#x27;Neil; Carol A Hitchon; Pingzhao Hu
+**Authors:** Aditya Vaidya; Richard Antonello; Alexander Huth
 
-**ID:** 150797 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+**ID:** 153546 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=fKr07Pdg6F>) | [PDF](<https://openreview.net/pdf?id=fKr07Pdg6F>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150797>)
+[Paper](<https://openreview.net/forum?id=KZUkyYypaw>) | [PDF](<https://openreview.net/pdf?id=KZUkyYypaw>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153546>)
 
-Hand radiographs support diverse clinical tasks, including skeletal maturity assessment, rheumatoid arthritis scoring, abnormality screening, and anatomical localization, yet existing models are typically trained separately for each task and dataset\. We present HandXFM, a domain\-specific foundation model that leverages cross\-modality knowledge for comprehensive hand X\-ray understanding\. HandXFM distills semantic priors from BiomedCLIP and structural cues from a chest X\-ray Vision Transformer \(ViT\) through a unified alignment framework, integrating complementary medical knowledge in an interpretable way\. After pretraining, HandXFM can be adapted to a range of musculoskeletal tasks, including bone age estimation, SvH score prediction, abnormality detection, joint localization, bone segmentation, and visual question answering\. It consistently outperforms task\-specific and single\-expert baselines, achieving up to 0\.11 improvement in Pearson correlation coefficient \(PCC\) for bone age prediction and a 12\\% accuracy gain in abnormality classification\. Moreover, HandXFM generalizes to unseen datasets and yields cross\-attention maps linking clinical terms to anatomical regions\. These results demonstrate that multi\-expert distillation effectively unifies semantic and structural supervision within a single pretrained model, establishing HandXFM as an interpretable and generalizable foundation model for hand radiograph analysis\.
+Neuroscientists have recently turned to intracranial brain recording methods, like electrocorticography \(ECoG\), for human experiments because of the fine spatial and temporal resolution that they afford\. Models trained on this data, however, are fundamentally restricted by the patient populations that can receive the implants necessary for recording\. We propose using non\-invasive fMRI to bridge the gap in training data\. Using spoken language representations fine\-tuned on fMRI, we build encoding models of ECoG\. These representations showed improved prediction performance in ECoG, even though the temporal resolution of fMRI is two orders of magnitude worse\. Prediction improved in frequency bands well beyond what is directly measured in fMRI\. Next, to test the procedure's generalization ability, we fine\-tuned models on fMRI responses that were temporally downsampled by a factor of 2\. Despite the loss in resolution, these models were able to predict fMRI and ECoG responses at levels comparable to the original fMRI\-tuned models\. Finally, we showed that ECoG performance steadily scales with the amount of fMRI\-tuning data\. Our results show that "slow" data like fMRI can be a valuable resource for building better models of "fast" brain data like ECoG\. In the future, integrating across multiple recording methods may further improve performance in other applications, like decoding\.
 
-## MedVIGOR: Visual Evidence Internalization for Observation\-Driven Reasoning in Medical VLMs
+## Discrete Neural Interlingua for Ontology\-Agnostic EHR Modeling
 
-**Authors:** Yuan Wu; Jiayu Qian; Sipeng Wu; Songpan Gao; Ruiming Ye; Zongxian Yang; JinYue Li; Qiankun Li; Yang Liu
+**Authors:** Tong Ding; Caiwei Tian; Dongmin Bang; Ming Yang Lu; Sophia J\. Wagner; Andrew Zhang; Rowland Pettit; Long P Le; Faisal Mahmood
 
-**ID:** 150235 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+**ID:** 151383 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=jlwCHX9Sxe>) | [PDF](<https://openreview.net/pdf?id=jlwCHX9Sxe>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150235>)
+[Paper](<https://openreview.net/forum?id=b1dCEA7ccn>) | [PDF](<https://openreview.net/pdf?id=b1dCEA7ccn>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151383>)
 
-Medical image interpretation requires diagnoses grounded in case\-specific visual evidence\. However, medical vision\-language models often produce plausible answers by exploiting clinical language priors and report\-level co\-occurrence patterns rather than faithfully using the input image, leading to Visual De\-anchoring and Spatial\-Semantic Binding Breakdown, where reasoning detaches from visual evidence or binds correct answers to incorrect anatomical support\. In this work, we introduce MedVIGOR, a framework that internalizes visual evidence as an intrinsic constraint on medical VLM reasoning\. MedVIGOR combines visual\-necessity supervision, dual\-pathway visual anchor internalization with MedSAM\-derived spatial support and DINOv2\-derived semantic patterns, and evidence\-consistent reinforcement learning to preserve alignment among visual evidence, intermediate reasoning, and final answers\. We further present MedVIGOR\-Bench, a unified benchmark for evaluating whether medical VLMs are both diagnostically correct and evidentially grounded across concept recognition and visual localization tasks\. Experiments show that MedVIGOR improves diagnostic accuracy and grounding fidelity over strong medical VLM baselines, highlighting the value of internalized visual evidence for trustworthy medical reasoning\.
+EHR foundation models create new opportunities for scalable clinical prediction across health systems, yet their deployment remains constrained by a basic tokenization bottleneck\. The same clinical concept can appear as different ontology codes, local identifiers, synonyms, or free\-text descriptions, while standard EHR tokenizers treat these variants as unrelated symbols\. We introduce MEDIATOR, a discrete ontology\-agnostic medical concept tokenizer that turns EHR harmonization into an open\-form tokenization problem\. Instead of relying on manual mappings, a fixed ontology vocabulary, or continuous event embeddings, MEDIATOR maps any clinical concept expressed as text into a shared vector\-quantized codebook\. MEDIATOR is trained with synonym supervision from paired concept descriptions, and further guided by enriched concept descriptions, empirical code co\-occurrence, and curated relation graphs so that equivalent expressions collapse while non\-equivalent concepts remain organized in a medically meaningful discrete space\. The resulting vocabulary is compact, inspectable, reusable by standard EHR Transformers, and open to previously unseen code descriptions or text strings\. Used as the token interface of an EHR Transformer, MEDIATOR improves mean AUPRC on 20 MIMIC\-III tasks by 4\.0% and improves zero\-shot transfer to 14 eICU tasks by 8\.8%, while supporting transferable attribution across hospitals\.
 
-## MedIGen: Reliable Medical Illustration Generation via Interleaved Introspective Reasoning
+## DiagEval: Trajectory\-Conditioned Diagnosis for Reliable Software Evaluation with GUI Agents
 
-**Authors:** Rongsheng Wang; Hongru Zhou; Ruizhe Zhou; HAOMING CHEN; Zhenyang Cai; Junying Chen; Minghao Wu; Yaofei Duan; Ziyi Zeng; Benyou Wang
+**Authors:** Sirui Hong; Liuzhijie; Tengfei Li; Wei Tao; Yifan Wu; Chenglin Wu
 
-**ID:** 152588 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+**ID:** 151898 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=RyrXhwjZ2I>) | [PDF](<https://openreview.net/pdf?id=RyrXhwjZ2I>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152588>)
+[Paper](<https://openreview.net/forum?id=X7W0twHPBw>) | [PDF](<https://openreview.net/pdf?id=X7W0twHPBw>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151898>)
 
-Medical illustration generation is not merely domain\-specific text\-to\-image \(T2I\) generation, but a high\-constraint visual reasoning problem where visually plausible images can be invalid due to anatomical and structural errors\. Existing T2I models largely rely on one\-pass generation and lack an internal mechanism to inspect and correct such biomedical inconsistencies\. We introduce \*\*MedIGen\*\*, a unified medical illustration generation model that transforms one\-pass synthesis into an \*\*interleaved introspection\-aware refinement\*\* process, coupling generation with self\-reflection and re\-generation through “generate–reflect–refine” cycles\. MedIGen is trained with three progressive stages: \(1\) large\-scale medical illustration pretraining on 1\.21M samples, \(2\) mixture training over generation, reflection, and refinement sub\-skills, and \(3\) reinforcement learning with dual\-level rewards that optimize both reasoning validity and final visual correctness\. We further present \*\*IlluGenBench\*\*, an expert\-aligned, rubric\-driven benchmark with 296 diverse tasks and 9,015 criteria, evaluating scientific accuracy, structural correctness, and semantic alignment beyond coarse visual plausibility\. Experiments show that MedIGen substantially outperforms strong open\-source unified and reasoning\-based baselines, establishing a new open\-source frontier\. All resources will be open\-sourced to facilitate future research\.
+Evaluating LLM\-generated interactive software requires execution in addition to static analysis\. The key difficulty is that correctness is a graph\-level reachability property over latent UI state\-transition graphs, whereas a GUI evaluator observes only a single execution trajectory\. A failed rollout therefore rules out only one realized path, leaving failure attribution ambiguous between evaluator\-side execution error and genuine software defect\. We present DIAGEVAL, a trajectory\-conditioned diagnostic evaluation protocol for post\-failure GUI\-agent evaluation of interactive software\. Rather than blindly retrying from scratch,DIAGEVAL reuses the failed trajectory to choose targeted diagnostic probes and aggregates their outcomes into an internal attribution signal\. The latent\-graph view motivates the diagnostic problem; DIAGEVAL does not reconstruct the graph or estimate calibrated posterior probabilities\. We evaluate DIAGEVALon WebDevJudge\-Unit and RealDevBench across multiple GUI\-agent evaluators and LLM backbones\. On false\-negative cases, DIAGEVAL recovers 45\.6\-\-62\.1\\% of failures that were initially attributed to software defects, outperforming retry\-based baselines with 34\.4\-\-160\.6\\% relative gains\. On the full evaluation sets, this recovery improves accuracy from 69\.9\\% to 78\.3\\% on WebDevJudge\-Unit and from 65\.0\\% to 81\.6\\% on RealDevBench\. These results suggest that reliable GUI\-agent evaluation requires not only stronger execution, but also active failure diagnosis to disambiguate evaluator\-side errors from genuine software defects\.
 
-## Progressive Signal Calibration for Medical Image Segmentation: Diagnosing and Correcting Structural Misalignment in Training Signals
+## Asymmetric Generalization in Deep CTR Models: A Block\-wise Diagnosis
 
-**Authors:** Xinyan Zhao; Haijing Liu; Zhuan Cui; Tian Guan; Yonghong He; Wen Tang; Qiming He
+**Authors:** Ruifan Wu; Haijun Zhao; Ying Jiang
 
-**ID:** 150045 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+**ID:** 149702 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=lClsEZgoUW>) | [PDF](<https://openreview.net/pdf?id=lClsEZgoUW>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150045>)
+[Paper](<https://openreview.net/forum?id=o5soonLsBo>) | [PDF](<https://openreview.net/pdf?id=o5soonLsBo>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149702>)
 
-Training\-signal imbalance in medical image segmentation is commonly diagnosed as a data\-distribution problem, such as class frequency imbalance, foreground sparsity, or domain shift, and addressed through reweighting, sampling, or domain adaptation\. We argue that this diagnosis is incomplete: a more fundamental source is structural misalignment between supervision targets and segmentation objectives\. Weidentify two operative mechanisms underlying this phenomenon: gradient\-mass dilution, where dominant classes consume gradient capacity needed for foreground discrimination, and inter\-class supervision noise, where weak subtype boundaries generate unreliable optimization signals\. On a private renal pathology dataset, four standard segmentation architectures trained under conventional four\-class supervision underperform a foreground\-focused supervision regime \(a one\-line modification of the loss\) by 7\.87–16\.05 fg\-mIoU points\. The same effect replicates on three public datasets, suggesting foreground\-focused supervision as a low\-cost, general\-purpose recipe for any pixel\-imbalanced segmentation task\. Building on this observation, we propose Progressive Signal Calibration \(PSC\), a framework that calibrates training signals at three abstraction levels\. At the annotation level, PSC adaptively selects the supervision granularity that maximizes signal qual ity\. At the architectural level, PSC introduces a boundary\-aware feature gating mechanism for structure\-sensitive feature aggregation\. At the regularization level, PSC employs uncertainty\- and ratio\-aware constraints to stabilize optimization and prevent late\-stage class\-proportion drift\. Importantly, PSC satisfies a con ditional gain monotonicity property: when structural misalignment is weak or absent, its regularization terms naturally attenuate, avoiding systematic degradation\. Across 18 public histopathology benchmarks, PSC achieves statistically significant improvement on six datasets with no statistically significant regression on any benchmark\. On the private renal pathology dataset, PSC reaches 96\.0 fg\-mIoU, ex ceeding the strongest matched\-backbone baseline by \+2\.56 points under identical FG3 supervision—a substantial gain in a regime where the FG3 baseline is already above 93 fg\-mIoU
+Deep click\-through rate \(CTR\) models commonly consist of sparse embedding blocks and feature\-interaction blocks, which jointly learn predictive signals from high\-dimensional categorical features\. This naturally raises the question of whether different blocks in an end\-to\-end trained CTR model play the same role in generalization\. To address this question, we investigate the generalization behavior of deep CTR models from a block\-wise diagnostic perspective\. Specifically, we formulate deep CTR models as two\-block systems comprising an embedding block and a feature\-interaction block, and introduce a retuning\-based diagnostic protocol to separately assess the transferability of different blocks\. Experiments across multiple datasets and architectures reveal a consistent asymmetric generalization pattern: the embedding block exhibits stronger training\-set specificity, whereas the feature\-interaction block preserves comparatively more transferable structure\. Motivated by this diagnosis, we further develop a component\-selective embedding aggregation method that averages multiple independently retuned embedding tables while keeping the feature\-interaction block fixed\. The resulting model retains the original single\-path inference architecture and incurs no additional online inference cost\. Experiments on Avazu, Criteo, and Taobao show that the proposed method improves representative deep CTR models over standard training and retuning baselines\.
 
-## Parametric Meets Non\-parametric: Bridging Dual Prediction Spaces for Semi\-supervised Medical Image Segmentation
+## CycleSpectra: Cyclic Motion Spectra for Phase\-Queryable 4D Cardiac Reconstruction
 
-**Authors:** Zenggui Chen; Jianwei Ma
+**Authors:** Xueming Fu; Xin Li; Lixia Han; Ao Shen; Guangming Lu; Song Luo; S\. Kevin Zhou
 
-**ID:** 152318 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+**ID:** 152695 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=Txi4PjNfS3>) | [PDF](<https://openreview.net/pdf?id=Txi4PjNfS3>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152318>)
+[Paper](<https://openreview.net/forum?id=R6WdWujy5S>) | [PDF](<https://openreview.net/pdf?id=R6WdWujy5S>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152695>)
 
-Semi\-supervised medical image segmentation leverages abundant unlabeled data to reduce the reliance on costly dense annotations, yet its dominant pseudo\-labeling paradigm suffers from inevitable prediction noise, especially under scarce supervision\. In this work, we observe that parametric network predictions and non\-parametric prototype\-based predictions exhibit complementary behaviors under pseudo\-label noise: the former offers high expressiveness in capturing local structures but is sensitive to erroneous supervision, while the latter provides stable semantic guidance by aggregating class\-level statistics but may lack spatial precision\. Motivated by this observation, we propose a simple yet effective complementary learning framework that jointly exploits the parametric prediction space and the non\-parametric prototype space for semi\-supervised segmentation\. Specifically, we introduce a confidence\-aware selection mechanism that identifies reliable voxels from either prediction space, a prototype entropy minimization objective that sharpens the non\-parametric semantic anchors, and a dual\-space semantic alignment objective that encourages mutual enhancement between the two spaces\. The unified objective enables reliability\-aware mutual enhancement, where each space guides the other when confident and noisy alignment is suppressed when both are uncertain\. Extensive experiments on multiple medical image segmentation benchmarks demonstrate that our method consistently outperforms existing approaches under various label\-scarce settings\.
-
-## Explainability matters: The effect of liability rules on the healthcare sector
-
-**Authors:** Jiawen Wei; Elena Verona; Andrea Bertolini; Gianmarco Mengaldo
-
-**ID:** 139994 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=yYJYksvTw5>) | [PDF](<https://openreview.net/pdf?id=yYJYksvTw5>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139994>)
-
-Explainability, the capability of an artificial intelligence system \(AIS\) to explain its outcomes in a manner that is comprehensible to human beings at an acceptable level, has been deemed essential for critical sectors, such as healthcare\.  Is it really the case?  In this perspective, we consider two extreme cases, Oracle \(without explainability\) versus AI Colleague \(with explainability\) for a thorough analysis\. We discuss how the level of automation and explainability of AIS can affect the determination of liability among the medical practitioner/facility and manufacturer of AIS\.  We argue that explainability plays a crucial role in setting a responsibility framework in healthcare, from a legal standpoint, to shape the behavior of all involved parties and mitigate the risk of potential defensive medicine practices\.
-
-## NicheIB: Targeted Spatial Bottlenecks for Predictive Microenvironment Discovery
-
-**Authors:** Chenxi He
-
-**ID:** 153405 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=LaZNrmtjRL>) | [PDF](<https://openreview.net/pdf?id=LaZNrmtjRL>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153405>)
-
-Spatial transcriptomics methods typically cluster spots into coherent tissue domains, but many biological questions are target\-specific: which spatial context predicts a particular cell state, gene program, or clinical phenotype? We propose NicheIB, a Targeted Spatial Bottleneck \(TSB\) that learns which spatial edges matter for a user\-specified target via input\-dependent Hard Concrete edge gates with controllable sparsity budgets\. Training the same model on the same tissue with different targets—cortical\-layer annotations, oligodendrocyte gene programs, excitatory neuron markers—produces distinct edge retention patterns whose correlation mirrors the biological similarity of the targets, confirmed across human cortex, mouse brain, and cancer tissues\. The bottleneck also reveals which programs are spatially structured at a given resolution and which are not, serving as a diagnostic tool for spatial biology\. On mouse brain region prediction, TSB retains only 20% of spatial edges while approaching the full\-graph baseline \($F\_1 = 0\.915$ vs\. $0\.926$\), identifying a minimal informative subgraph from a mostly redundant spatial graph\. External validation confirms that the retained subgraph selectively enhances spatial autocorrelation for target\-relevant genes and is enriched for known ligand–receptor pairs, independently of the model\.
-
-## MedHorizon: Towards Long\-context Medical Video Understanding in the Wild
-
-**Authors:** Bodong Du; Bowen Liu; Yang YU; Xinpeng Ding; Zhiheng Wu; Shuning Wang; Shuo Nie; Naiming Liu; Qifeng Chen; Yangqiu Song; Xiaomeng Li
-
-**ID:** 139391 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=TJgyeENlQ5>) | [PDF](<https://openreview.net/pdf?id=TJgyeENlQ5>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139391>)
-
-Medical multimodal large language models \(MLLMs\) have advanced image understanding and short\-video analysis, but real clinical review often requires full\-procedure video understanding\. Unlike general long videos, medical procedures contain highly redundant anatomical views, while decisive evidence is temporally sparse, spatially subtle, and context dependent\. Existing benchmarks often assume this evidence has already been localized through images, short clips, or pre\-segmented videos, leaving the retrieval\-before\-reasoning problem under\-tested\. We introduce MedHorizon, an in\-the\-wild benchmark for long\-context medical video understanding\. MedHorizon preserves 759 hours of full\-length clinical procedures and provides 1,253 evidence\-grounded multiple\-choice questions that jointly evaluate sparse evidence understanding and multi\-hop clinical reasoning\. Its evidence is extremely sparse, with only 0\.166% evidence frames on average, requiring models to search noisy procedural streams before interpreting and aggregating findings\. We evaluate representative general\-domain, medical\-domain, and long\-video MLLMs\. The best model reaches only 41\.1% accuracy, showing that current systems remain far from robust full\-procedure understanding\. Further analysis yields four key findings: performance does not scale reliably with more frames, evidence retrieval and clinical interpretation remain primary bottlenecks; these bottlenecks are rooted in weak procedural reasoning and attention drift under redundancy, and generic sampling methods only partially balances local detail with global coverage\. MedHorizon provides a rigorous testbed for MLLMs that retrieve sparse evidence and reason over complete clinical workflows\.
-
-## Long\-Term Risks of Risk\-Based Allocation
-
-**Authors:** Jivat Neet Kaur; Jane Lee; Manolis Zampetakis
-
-**ID:** 155991\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 155991
-
-[Paper](<https://openreview.net/forum?id=1LHT6frSus>) | [PDF](<https://openreview.net/pdf?id=1LHT6frSus>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155991>)
-
-Algorithmic risk predictors are increasingly being used to inform resource allocation in healthcare and other high\-stakes domains\. Common in many such settings, the public decision maker delegates service provision to private organizations and compensates them  according to each individual's predicted cost of service\. We show that this common allocation mechanism can fail when organizations engage in \\emph\{favorable selection\}, i\.e\., strategically choosing individuals whose actual costs are below the payment model predictions\. Motivated by health insurance payments in the Medicare Advantage \(MA\) program, we provide a theoretical framework to study the interaction between a decision maker and a strategically selecting service provider\. Our theoretical framework predicts two empirical patterns observed in Medicare Advantage that have become central concerns: enrollment in the private program expands, while government payments rise above the counterfactual cost of direct public provision\. Guided by our theoretical framework, we then propose a reformed payment policy that is implementable under the government's data\-access constraints\. We prove that its equilibria eliminate overpayment while preserving profits for efficient organizations\. We validate the framework in synthetic and semi\-synthetic experiments that illustrate the advantages of our reformed policy, over the status quo\.
-
-## Strategic Feature Selection and Regularization
-
-**Authors:** Jivat Neet Kaur; Pratik Patil; Divya Shanmugam; Emma Pierson; Michael Jordan; Nika Haghtalab; Meena Jagadeesan; Ahmed Alaa; Serena Wang
-
-**ID:** 154371\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 154371
-
-[Paper](<https://openreview.net/forum?id=E5F4jOGdsq>) | [PDF](<https://openreview.net/pdf?id=E5F4jOGdsq>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154371>)
-
-When algorithmic predictors inform resource allocation in high\-stakes domains such as healthcare, these predictors must account for strategic manipulation of input features\. The typical solution is to redesign the predictor itself to explicitly account for strategic interactions\. In practice, however, decision makers are often constrained to adjusting coarser levers within existing prediction pipelines\. For example, healthcare organizations often select which features to exclude based on perceived manipulability, while using standard regularization procedures to shrink the coefficients of retained features\. In this work, we initiate a formal study of strategic classification through \*feature selection\* and its interaction with \*ridge regularization\*\. Our main finding is that excluding features based on manipulability alone is generally suboptimal\. We provide a fine\-grained characterization of the performance of a feature subset under optimal regularization, yielding new insights for policy design\. Motivated by this characterization, we develop a practical algorithm for jointly choosing the feature set and the level of ridge regularization\. Through a real\-world case study on a healthcare payments benchmark, we illustrate how our algorithm can guide the design of coarse policy levers in practice\. Our results provide a principled, practical framework for mitigating the effects of strategic behavior in algorithmic decision\-making systems\.
-
-## How to Train a Surgeon? Benchmarking Generalist Agents in Surgical Scene Understanding
-
-**Authors:** Gengyuan Zhang; Xiao Han; Shijie Zhou; Abdullah Koukash; Ghazal Ghazaei; Jindong Gu; Jingpei Wu; Yuqicheng Zhu; Nassir Navab; Volker Tresp
-
-**ID:** 139078\-\-2 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 139078
-
-[Paper](<https://openreview.net/forum?id=mUEEwbzwMy>) | [PDF](<https://openreview.net/pdf?id=mUEEwbzwMy>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139078>)
-
-Evaluating general\-purpose multimodal large language models \(MLLMs\) for surgical scene understanding remains limited by scarce surgical data and fragmented evaluation protocols\. We address these challenges through a two\-stage evaluation framework for surgical scene understanding\. In Stage I, we introduce SURGKNOWBENCH, a diagnostic benchmark that harmonizes public surgical datasets across procedures and tasks and evaluates proprietary and open\-weight MLLMs to map the boundary of pretrained surgical competence\. SURGKNOWBENCH reveals that current models retain partial visual priors but remain weak on procedural reasoning and workflow assessment\. Building on this failure frontier, and motivated by the scaffolded nature of surgical training, we introduce SURGAGENTGYM, a controlled environment where general\-purpose MLLM agents can use bounded knowledge search over SURGWIKI and general\-purpose visual grounding for surgical tasks\. SURGAGENTGYM evaluates whether generalist agents can improve surgical understanding at inference time through tool\-mediated evidence use, without additional surgical training\. Our results show that agentic inference narrows the gap mainly for perception\-heavy tasks, while fine\-grained localization and expert\-style assessment remain persistent bottlenecks\. This opens a path toward future studies of agentic surgical understanding\. We have released the codebase and artifacts\.
-
-## SheafStain: Sheaf\-Theoretic Schr\\"odinger Bridge for Spatially and Biologically Coherent Virtual Staining
-
-**Authors:** Hyeongyeol Lim; Hongjun Yoon; Eunjin Jang; Daeky Jeong; Won June Cho; HWAMIN LEE
-
-**ID:** 155872\-\-2 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 155872
-
-[Paper](<https://openreview.net/forum?id=2DhyeIm0FC>) | [PDF](<https://openreview.net/pdf?id=2DhyeIm0FC>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155872>)
-
-Current virtual staining approaches offer the potential for time\- and cost\-efficient  biomarker quantification in cancer diagnostics and prognostics\.  However, patch\-wise inference for gigapixel whole slide images \(WSIs\) fails to maintain spatial continuity,  yielding artifacts that cause catastrophic mismatches with ground\-truth images\. Although pathology Vision Foundation Models \(VFMs\) offer rich representations,  their self\-attention causes varying global contexts to produce inconsistent embeddings  for the same physical region\.  We formalize and validate this \`\`context contamination'' as a sheaf\-theoretic problem  where these embeddings form a presheaf that violates the gluing axiom\. To address this, we propose SheafStain, a new approach that reinterprets  VFM features as sheaf\-like sections for spatially and biologically coherent virtual staining\.  Specifically, SheafStain integrates class and patch tokens into a Schr\\"odinger Bridge framework  as sheaf\-like sections\.  While the class token anchors biological consistency, patch tokens form a per\-position spatial map\. A backbone co\-pretrained on Hematoxylin \\&amp; Eosin \(H\\&amp;E\) and Immunohistochemistry \(IHC\) yields  non\-degenerate cross\-stain stalks, so a single VFM feature space supervises  both input conditioning and output stain alignment\. Departing from prior work that evaluates on isolated $256 \\times 256$ patches  and either random\-crops or resizes the $1024 \\times 1024$ ground truth,  we translate at $256 \\times 256$ and evaluate on the stitched $1024 \\times 1024$ outputs  across HER2, ER, PR, and Ki\-67\. SheafStain demonstrates promising results against six prior methods while mitigating patch\-boundary stitching artifacts\. Code will soon be released upon acceptance\.
+Reconstructing patient\-specific cyclic cardiac motion at arbitrary phases is central to dynamic cardiac assessment, underpinning measurements such as ejection fraction, stroke volume, and regional myocardial deformation\. Existing methods\-\-\-pair\-wise registration, time\-conditioned decoders, and coordinate\-based implicit fields\-\-\-share a common implicit assumption: the cardiac cycle is treated as a sequence of discrete phases, with temporal structure stitched together through learned mappings supervised at the observed frames\. Yet the cycle is, by physical fact, a closed periodic process\. We propose \\textbf\{CycleSpectra\}, a spectral motion representation that takes the cyclic structure as a starting point of the representation rather than as a property to be learned\. Given a pair of sparsely sampled phase observations, the model learns the spectral structure of the underlying cyclic cardiac motion in a low\-dimensional latent space, and recovers the displacement at any phase through a fixed analytic synthesis layer\-\-\-time never enters the network as a learnable signal, only as a coordinate the readout takes by construction\. To support evaluation, we collect a thin\-slice phase\-resolved 4D cardiac CT cohort and benchmark under both canonical and non\-canonical input protocols, reporting whole\-cycle motion\-fidelity metrics alongside standard image and anatomical metrics\. Under arbitrary two\-frame input, CycleSpectra achieves the lowest ejection\-fraction error and highest ventricular volume\-\-time curve correlation among recent baselines, while remaining competitive on image fidelity\.  Beyond two\-frame inference, the proposed framework supports test\-time multi\-frame latent fusion for higher accuracy, validated on both the in\-house cohort and a cross\-modality 4D cardiac MR cohort\. Code will be available\.
 
 ## Manifold\-Guided Stereo\-Monocular Refinement for Endoscopic Stereo Disparity Estimation
 
@@ -544,46 +766,6 @@ Flow cytometry is the primary assay for single\-cell immune profiling, yet cross
 
 Multimodal medical AI requires a common visual interface that integrates heterogeneous imaging evidence for patient condition modeling\. However, existing medical visual tokenizers are often tied to a specific dimension and imaging modality, forcing multimodal systems to rely on fragmented and poorly reusable representations\. We introduce MedVTok, a general\-purpose visual tokenizer that maps 2D images and 3D volumes from diverse imaging modalities into a unified token space\. Building such a tokenizer poses two key challenges: preserving anatomical structure across dimensions and capturing clinical semantics across modalities\. To this end, MedVTok introduces \(i\) slice differential regularization, which explicitly models inter\-slice anatomical coherence missing in previous per\-pixel/per\-voxel supervision, and \(ii\) multi\-expert representation alignment, which integrates knowledge from multiple medical expert encoders while retaining modality\-specific complementary knowledge\. Trained on 28M images and 70K volumes across 9 imaging modalities, MedVTok supports classification, retrieval, segmentation, synthesis, visual question answering, and medical report generation through a single tokenizer\. Across 24 benchmarks, MedVTok achieves state\-of\-the\-art performance, demonstrating a scalable token interface that unifies medical image dimension, modality, and task usage\. Code and weights will be released\.
 
-## GlucoFM\-Bench: Benchmarking Time\-Series Foundation Models for Blood Glucose Forecasting
-
-**Authors:** Baiying Lu; Zhaohui Liang; Ryan Pontius; Shengpu Tang; Temiloluwa Prioleau
-
-**ID:** 139533 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=KNGzZNVPZk>) | [PDF](<https://openreview.net/pdf?id=KNGzZNVPZk>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139533>)
-
-Blood glucose forecasting models are foundational for modern diabetes management systems, as reliable short\-term predictions can enable proactive interventions, support automated insulin delivery, and reduce the risk of hypo\- and hyperglycemic events\. From a modeling perspective, glucose forecasting poses unique challenges due to heterogeneous physiological dynamics across different diabetes populations\. Traditional machine learning and deep learning models have been extensively evaluated for glucose prediction\. However, there is significantly less research on evaluating and benchmarking recent time\-series foundation models \(TSFMs\) for blood glucose forecasting\. To bridge this gap, we present GlucoFM\-Bench, a comprehensive benchmark evaluating state\-of\-the\-art TSFMs alongside supervised deep learning models for blood glucose forecasting\. We assess eight representative architectures, including pre\-trained TSFMs, time\-series large language models, and task\-specific deep learning models, across 15 publicly available diabetes\-relevant datasets comprising 1,117 individuals with type 1 diabetes, type 2 diabetes, prediabetes, and no diabetes\. Models are evaluated under zero\-shot, few\-shot, and full\-shot protocols, with systematic variation in context length and prediction horizon\. Across datasets, pre\-trained TSFMs, especially Chronos\-2 and TimesFM, show strong zero\-shot and few\-shot transfer, with the best zero\-shot model performing within 5% of the best full\-shot supervised model\. Yet, when task\-specific data is abundant, a lightweight LSTM remains strongest, outperforming TSFMs by 4\-21% under full\-shot training\. Stratified analyses reveal persistent challenges in T1D cohorts and hypo\-/hyperglycemic ranges, highlighting the need for evaluation beyond aggregate error metrics\. Together, GlucoFM\-Bench provides a standardized and reproducible foundation for evaluating, comparing, and improving foundation models for blood glucose forecasting\. The dataset and code are publicly available at https://huggingface\.co/datasets/glucofmbench/GlucoFM\-Bench and https://anonymous\.4open\.science/r/GlucoseML\_benchmark\-B50C, respectively\.
-
-## Teach\-to\-Reason: Competition\-Guided Reasoning with a Self\-Improving Teacher
-
-**Authors:** Xiao Han; Hao Liu; Zhimin Bao; Jile Jiao; Yue Wang; Hui Guo; Mou X Feng; Yi Xu
-
-**ID:** 150121 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=kWZzaC732G>) | [PDF](<https://openreview.net/pdf?id=kWZzaC732G>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150121>)
-
-Chest X\-ray visual question answering \(CXR VQA\) requires models not only to predict correct answers, but also to produce reliable medical reasoning\. However, existing reinforcement\-learning\-based training typically relies on answer\-level rewards, which are often too coarse to improve chain\-of\-thought \(CoT\) quality and can become ineffective when group\-level advantages collapse to zero\. We propose \\textbf\{Teach\-to\-Reason \(T2R\)\}, a framework that introduces comparison\-based supervision into CoT optimization through a self\-improving \\emph\{Teacher\} and a competition\-guided \\emph\{Reasoner\}\. As the Teacher is iteratively strengthened via self\-competition, the Reasoner is optimized against progressively stronger Teacher\-generated references\. We further introduce a case\-wise reward design that preserves the original reward\-induced positive/negative partition when it is informative, and restores supervision from competition scores when the original reward signal degenerates\. Experiments on multiple CXR open\-ended VQA benchmarks show that T2R consistently outperforms strong baselines, indicating that comparison\-based supervision, when integrated in a controlled and principled manner, provides a more effective training signal for reasoning optimization\.
-
-## REINS: Learning Inertia\-Induced Geometry for Physics\-Consistent Motion Representation in Clinical Gait Phenotyping
-
-**Authors:** Yiran Ding; Yufei Zhang; Zijun Cui
-
-**ID:** 155340 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=6Ku1AhEjKl>) | [PDF](<https://openreview.net/pdf?id=6Ku1AhEjKl>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155340>)
-
-Parkinson's disease and other gait\-related neurological disorders manifest in subtle but biomechanically meaningful changes in how patients move, making computational gait phenotyping a valuable tool for clinical assessment\. Yet existing latent representations of motion are typically learned from data alone and miss the biomechanical structure that gives clinical motion its diagnostic meaning, leaving them vulnerable when training cohorts are small or acquisition sites differ\. We propose REINS \(Riemannian Embedding for INertia\-induced motion Spaces\), an Euler\-Lagrange\-induced motion representation that uses the generalized inertia matrix of articulated systems to define a biomechanically grounded geometry on configuration space\. Because kinetic energy is itself a quadratic form in velocity weighted by the inertia matrix, this metric is a mechanically determined Riemannian structure, and we learn a latent embedding of the resulting structured space\. By defining the representation space itself through rigid\-body dynamics rather than enforcing physics as a post\-hoc penalty, REINS aligns the geometry of motion representation with the same physical laws clinicians rely on to interpret gait\. We apply the framework on Parkinson's disease gait analysis, where deviation from healthy motion is measured as a geodesic distance under the inertia\-induced metric, and report results on healthy\-control vs\.\\ PD discrimination and UPDRS\-gait severity correlation\.
-
-## Flexible Intensities Matter: A comprehensive re\-evaluation of Classical and Neural Temporal Point Processes
-
-**Authors:** Hendrik Alexander Mehrtens; Florian Buettner; Oliver Stegle
-
-**ID:** 139473 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=NoBHtWYMBB>) | [PDF](<https://openreview.net/pdf?id=NoBHtWYMBB>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139473>)
-
-Temporal point processes \(TPPs\) are the canonical framework for event sequence data, with applications spanning seismology, social media, and electronic health records\. Recent neural extensions have been reported to substantially outperform classical baselines such as Hawkes processes, but a systematic comparison across model families and intensity parameterizations is lacking, and large\-scale medical benchmarks — arguably one of the most promising application domains — have not been considered\. Here, we revisit this comparison through a systematic benchmark of neural and non\-neural TPPs on existing datasets and on two large\-scale medical benchmarks derived from UK Biobank disease histories and MIMIC\-IV ICU records\. First, our results show that the previously reported gap between Hawkes processes and neural TPPs largely disappears once Hawkes processes are equipped with flexible and learnable kernels\. Second, we find that the flexibility of the intensity parameterization also limits prior neural TPPs: a transformer with a spline\-based intensity head outperforms prior neural TPP implementations\. Third, our benchmark underscores the value of complex datasets when assessing the performance of TPPs\. In fact, exclusively on the MIMIC\-IV ICU records did we find clear evidence for structures — time\-varying or higher\-order interactions — beyond what pairwise flexible Hawkes process kernels can capture\. Our results guide both future method development and practitioners’ model choice\. Our TPP framework is released as an open\-source package, providing consistent and feature rich implementations of classical and neural TPPs\.
-
 ## OperatorSHAP: Fast and Accurate Shapley Value Estimation for Neural Operators
 
 **Authors:** Joshua Stiller; Santo Thies; Felix Czaja; Eyke Hüllermeier
@@ -603,336 +785,6 @@ Understanding model predictions is essential for physical applications, where ou
 [Paper](<https://openreview.net/forum?id=jsG2UV3YqP>) | [PDF](<https://openreview.net/pdf?id=jsG2UV3YqP>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150218>)
 
 In high\-stakes risk prediction, interval\-valued predictions provide a natural way to represent predictive uncertainty\. However, standard evaluation tools such as the receiver operating characteristic \(ROC\) curve and the area under the curve \(AUC\) are designed for point\-valued predictions and do not capture how uncertainty affects discrimination performance\. To address this gap, we develop an uncertainty\-aware ROC framework and corresponding interval\-based AUC \(iAUC\) metrics for evaluating the performance of interval\-valued risk predictions\. The framework constructs two ROC\-style curves with associated areas $\\mathrm\{AUC\}\_L$ and $\\mathrm\{AUC\}\_U$, and shows that these quantities induce a three\-region decomposition of positive\-negative rankings into confidently correct, ambiguous, and confidently incorrect orderings\. Under valid class\-conditional coverage, $\\mathrm\{AUC\}\_L$ and $\\mathrm\{AUC\}\_U$, together with the pairwise miscoverage rate, provide theoretical bounds on the optimal AUC, linking interval coverage to achievable discrimination\. The framework is compatible with a range of methods for quantifying epistemic uncertainty in risk prediction, including Bayesian, bootstrap, and ensemble\-based procedures, and provides a practical way to compare predictive models and interval\-generation methods\. Experiments on clinical benchmark data and MIMIC\-IV mortality prediction show that models with similar point AUC can have different uncertainty\-aware ranking profiles, and that the proposed decomposition can support risk\-aware model selection and threshold\-based abstention\.
-
-## Dynamic Representation Modeling for Federated Medical Image Domain Generalization
-
-**Authors:** Yuxi Ma; Lin Zhao; Jing Yang; jiacheng wang; Liansheng Wang
-
-**ID:** 154596 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=CPjD7nRUf2>) | [PDF](<https://openreview.net/pdf?id=CPjD7nRUf2>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154596>)
-
-_Abstract unavailable from the accessible public sources._
-
-## Rethinking CT Synthesis through Semantics\-Structure Alignment
-
-**Authors:** Riyu Qiu; Qichao Zhou; jiacheng wang; Liansheng Wang
-
-**ID:** 155079 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=8cb59z0dK9>) | [PDF](<https://openreview.net/pdf?id=8cb59z0dK9>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155079>)
-
-_Abstract unavailable from the accessible public sources._
-
-## Predicting Only from Selected Evidence: A Tempered Product\-of\-Experts Bottleneck for Auditable EEG Diagnosis
-
-**Authors:** Yinghao WANG; Shujian Yu; Duc\-Han LE; Zhikai Yu; Changming Wang; Van\-Tam Nguyen
-
-**ID:** 150685 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=gGPUE5wzpp>) | [PDF](<https://openreview.net/pdf?id=gGPUE5wzpp>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150685>)
-
-_Abstract unavailable from the accessible public sources._
-
-## CardioLens: Revealing the Clinical Reality Gap of MLLMs via Multi\-Sequence Cardiac MRI Evaluations
-
-**Authors:** Zixian Su; Hongkai Zhang; Fan Gao; Encheng Su; Taiping Qu; Jingwei Guo; Zhang Nan; Hui Wang; Zhen Zhou; Kairui Bo; Yan Chen; Yue Ren; Shuai Li; Lei Xu; Henggui Zhang
-
-**ID:** 139679 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=AtO6HYwYrW>) | [PDF](<https://openreview.net/pdf?id=AtO6HYwYrW>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139679>)
-
-_Abstract unavailable from the accessible public sources._
-
-## Dynamic Representation Modeling for Federated Medical Image Domain Generalization
-
-**Authors:** Yuxi Ma; Lin Zhao; Jing Yang; jiacheng wang; Liansheng Wang
-
-**ID:** 154596\-\-2 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 154596
-
-[Paper](<https://openreview.net/forum?id=CPjD7nRUf2>) | [PDF](<https://openreview.net/pdf?id=CPjD7nRUf2>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154596>)
-
-_Abstract unavailable from the accessible public sources._
-
-## Rethinking CT Synthesis through Semantics\-Structure Alignment
-
-**Authors:** Riyu Qiu; Qichao Zhou; jiacheng wang; Liansheng Wang
-
-**ID:** 155079\-\-2 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 155079
-
-[Paper](<https://openreview.net/forum?id=8cb59z0dK9>) | [PDF](<https://openreview.net/pdf?id=8cb59z0dK9>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155079>)
-
-_Abstract unavailable from the accessible public sources._
-
-## Predicting Only from Selected Evidence: A Tempered Product\-of\-Experts Bottleneck for Auditable EEG Diagnosis
-
-**Authors:** Yinghao WANG; Shujian Yu; Duc\-Han LE; Zhikai Yu; Changming Wang; Van\-Tam Nguyen
-
-**ID:** 150685\-\-2 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 150685
-
-[Paper](<https://openreview.net/forum?id=gGPUE5wzpp>) | [PDF](<https://openreview.net/pdf?id=gGPUE5wzpp>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150685>)
-
-_Abstract unavailable from the accessible public sources._
-
-## CardioLens: Revealing the Clinical Reality Gap of MLLMs via Multi\-Sequence Cardiac MRI Evaluations
-
-**Authors:** Zixian Su; Hongkai Zhang; Fan Gao; Encheng Su; Taiping Qu; Jingwei Guo; Zhang Nan; Hui Wang; Zhen Zhou; Kairui Bo; Yan Chen; Yue Ren; Shuai Li; Lei Xu; Henggui Zhang
-
-**ID:** 139679\-\-2 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 139679
-
-[Paper](<https://openreview.net/forum?id=AtO6HYwYrW>) | [PDF](<https://openreview.net/pdf?id=AtO6HYwYrW>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139679>)
-
-_Abstract unavailable from the accessible public sources._
-
-## An Information\-Theoretic Evaluation Framework for Benchmark and Model Diagnosis in Knowledge Tracing
-
-**Authors:** Houru Jiang; Zixi Wang; Tengteng Cheng; Xueyi Li; Mingliang Hou; Jiaqi Zheng; Renqiang Luo; Teng Guo; Zitao Liu
-
-**ID:** 149407 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=qISxwVTG3L>) | [PDF](<https://openreview.net/pdf?id=qISxwVTG3L>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149407>)
-
-Knowledge tracing \(KT\) models are predominantly evaluated using aggregate metrics such as area under the curve \(AUC\) and accuracy\. However, these global scores obscure where the remaining errors originate and fail to indicate whether a benchmark is approaching saturation\. While estimating a global theoretical performance limit is challenging in realistic KT settings, it is possible to quantify local predictability\. To address this, we propose an information\-theoretic evaluation framework for KT benchmark diagnosis\. We utilize Context Tree Weighting \(CTW\) as an operational causal anchor to estimate the Local Irreducible Uncertainty \(LIU\) of each student interaction\. By projecting predictions onto this shared uncertainty coordinate, we evaluate model performance gains across distinct entropy bands rather than only at the global level\.Comprehensive evaluations on NIPS Task 3/4 and Algebra 2005 reveal that model improvements are highly non\-uniform\. While the largest gains achieved by modern KT models consistently occur in high\-entropy regions—suggesting that datasets are not yet exhausted—our framework also identifies instances where models capture inherently random noise\. By surfacing these local modeling failures alongside genuine gains, this approach provides a rigorous diagnostic tool to pinpoint both the potential and the limitations of current KT benchmark and model diagnosis\.
-
-## Less Evidence, Better Answering: Gain\-Aware Minimal Evidence Subset Selection for Medical QA
-
-**Authors:** Songyue Guo; Zhao CHEN; Caleb C Cao; Lei Chen
-
-**ID:** 152857 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=PsPjtMRFBs>) | [PDF](<https://openreview.net/pdf?id=PsPjtMRFBs>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152857>)
-
-Evidence\-grounded medical question answering requires not only accurate answers, but also precise, verifiable, and clinically trustworthy evidence\. Existing medical RAG systems typically retrieve top\-\\\(k\\\) chunks according to item\-wise relevance\. Although this design improves recall, it does not explicitly optimize whether the selected evidence set is compact, sufficient, and decision\-critical\. In this paper, we study medical evidence\-grounded QA from a different perspective: instead of retrieving evidence without optimization, the evidence\-grounded medical QA system should identify a compact sufficient subset of high\-density evidence snippets\. We propose \*\*MEGA\*\*, a gain\-aware framework for compact supporting medical evidence selection\. MEGA first expands clinical queries into complementary subqueries and performs hybrid retrieval to construct a recall\-oriented candidate evidence pool\. It then introduces hidden\-state \*\*Information Gain Scoring\*\*, which uses a frozen LLM to estimate whether each candidate snippet contributes new answer\-relevant information beyond surface relevance\. Finally, MEGA formulates evidence selection as a budgeted utility maximization problem and proposes an \*\*FPTAS selector\*\* to identify a compact evidence subset under an explicit token budget\. We further construct two evidence\-grounded medical QA benchmarks, CRC\-EvidenceQA and Med\-EvidenceQA, to evaluate both answer quality and evidence grounding\. Across three LLM backbones and five medical RAG baselines, MEGA consistently achieves the best results, improving over the second\-best baseline by \\\(8\.8\\%\\\) on average in answer quality and 38\.8\\% on average in evidence F1\. Ablation studies and blinded clinical expert evaluation further validate its robustness and clinical relevance\.
-
-## Radial\-Angular Geometry for Reliable Update Diagnosis in Noisy\-Label Learning
-
-**Authors:** Ningkang Peng; Jingyang Mao; Xiaoqian Peng; Qu Weiguang; Yanhui Gu
-
-**ID:** 154327 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=ERuc5l7i70>) | [PDF](<https://openreview.net/pdf?id=ERuc5l7i70>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154327>)
-
-_Abstract unavailable from the accessible public sources._
-
-## Rethinking Contrastive Targets in Radiology Language\-Image Pretraining
-
-**Authors:** Yunhe Gao; Ashwin Kumar; Jiaming Liu; Chong Wang; Maya Varma; Fuying Wang; Stefania L Moroianu; Louisa Fay; Sergios Gatidis; Akshay Chaudhari; Curtis Langlotz
-
-**ID:** 148888\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 148888
-
-[Paper](<https://openreview.net/forum?id=uRbyMugqG7>) | [PDF](<https://openreview.net/pdf?id=uRbyMugqG7>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148888>)
-
-CLIP\-style contrastive image\-\-text pretraining is widely used in radiology data, where each image is paired with one report and every other report in the batch is treated as a negative\. Under this recipe, two failures appear, neither systematically addressed by existing contrastive learning theory: zero\-shot evaluation peaks then degrades while training loss keeps decreasing, and training fails to learn at all at large batches\. We hypothesize the cause is structural rather than radiology\-specific: many unpaired reports share clinical findings with a given image, so CLIP's paired\-identity target is systematically biased, not merely noisy\. To test this, we construct CLEVR\-Radiology, a synthetic testbed that preserves only this overlapping\-fact structure and reproduces both failures\. With evidence that the structure is sufficient to reproduce the failures, we develop a target\-misspecification theory that derives both failures from a single deterministic gradient bias amplified by batch size, and use it to motivate a minimal compatibility\-based correction, CorLIP: a text is treated as positive whenever its clinical assertions agree with the image, with no other change to the training pipeline\. Beyond benchmark improvements, CorLIP removes the post\-peak degradation, makes large\-batch training succeed where it previously collapsed, substantially amplifies the gains from more data, and is the only configuration that remains stable up to B=2048\. The correction also transfers from chest X\-ray to 3D CT modalities\.
-
-## Region\-Normalized DPO for Medical Image Segmentation
-
-**Authors:** Hamza Kalisch; Constantin Seibold; Jens Kleesiek; Ken Herrmann; Frederic Jonske
-
-**ID:** 153478 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=L4rTdhTV8w>) | [PDF](<https://openreview.net/pdf?id=L4rTdhTV8w>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153478>)
-
-Direct Preference Optimization \(DPO\) has recently been applied to medical image segmentation, since comparing candidate masks is substantially cheaper than producing new dense pixel\-level annotations, making pairwise preference signals an appealing source of supervision\. However, existing work derives preferences from ground\-truth masks, leaving open whether the approach is sound under the imperfect feedback available in practice\. In our analysis of this reformulation, we identify that candidate masks tend to agree over most of the image and differ only in localized regions, yet standard DPO averages the preference signal over the full spatial domain\. This couples update strength to disagreement area, diluting small correct refinements and amplifying large misranked differences\. Crucially, this bias even degrades performance even under oracle preferences derived from ground truth\. We propose Region\-Normalized DPO \(RN\-DPO\), which normalizes the likelihood ratio over the disagreement region between candidate masks, removing this coupling\. We further provide a systematic empirical study of preference\-based segmentation fine\-tuning under controlled noisy judges, analyzing the effects of mining strategies, judge types, and reliability regimes\. Across two medical segmentation benchmarks, multiple judge configurations, and two backbone architectures, RN\-DPO consistently improves over vanilla DPO and robust DPO variants, with gains persisting under noiseless oracle preferences\.
-
-## Symb\-xMIL: Symbolic Explanations for Multiple Instance Learning in Digital Pathology
-
-**Authors:** Yanqing Luo; Julius Hense; Niklas Prenißl; Andreas Mock; Klaus\-Robert Müller; Thomas Schnake; Mina Jamshidi Idaji
-
-**ID:** 152976 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=OwuMiUXJ26>) | [PDF](<https://openreview.net/pdf?id=OwuMiUXJ26>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152976>)
-
-Explanations of multiple instance learning \(MIL\) models are widely used for validation and discovery in digital histopathology\. Existing methods primarily rely on heatmaps that highlight influential regions but do not explain how evidence from different tissue regions is combined to produce a prediction\. This limits interpretability, especially when decisions depend on interactions between tissue features\. We introduce Symbolic explainable MIL \(Symb\-xMIL\), a post\-hoc explanation framework that quantifies how a MIL model’s behavior aligns with human\-readable decision rules, expressed as logical relationships \(e\.g\., AND, OR, NOT\) between input features\. These alignment scores reveal semantic patterns underlying the model’s predictions\. We evaluate Symb\-xMIL on synthetic and real\-world histopathology datasets\. On synthetic MIL data, Symb\-xMIL reliably recovers ground\-truth logical rules\. In a clinical tumor detection task, the best\-aligned rules uncover heterogeneous decision patterns and expose hidden model errors\. On an HPV\-prediction task on TCGA\-HNSCC, a cohort of head and neck cancer, our framework refines patient survival stratification beyond HPV status with potential clinical relevance\. Overall, Symb\-xMIL extends MIL explainability beyond visual attribution toward structured, rule\-based reasoning, enabling more transparent and semantically grounded interpretation of model predictions\.
-
-## NPCBench: A Clinical Apprenticeship Benchmark for Guideline\-Constrained Care\-Pathway Reasoning in Nasopharyngeal Carcinoma
-
-**Authors:** Pengkai Wang; Wei\-Wei Zhang; Yan Li; Min Tang; Zhitian Hou; Zeyu Liu; Guanghao Zhu; Yuanyi Wang; Yanggan Gu; Wenjun Wang; Minheng Ni; Congkai Xie; Zhijie Sang; Jianmin Wu; Ying Sun; Hongxia Yang
-
-**ID:** 139689 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=AVTJEREEah>) | [PDF](<https://openreview.net/pdf?id=AVTJEREEah>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139689>)
-
-Current medical LLM benchmarks typically decompose clinical competence into isolated factual questions, single\-image interpretation, or brief case scenarios\.  This fragmented paradigm primarily measures local correctness but provides limited insight into whether models can progressively integrate subspecialty knowledge, multimodal evidence, and evolving patient states into safe, guideline\-constrained longitudinal reasoning\. To address this gap, we introduce NPCBench, a multimodal clinical apprenticeship benchmark for nasopharyngeal carcinoma \(NPC\)\.  NPCBench operationalizes specialist training as a staged evaluation of \(M\)LLMs across guideline recall, atomic rule application, multimodal evidence grounding, longitudinal care planning, state revision, and expert\-style consultation\.  It comprises 4,077 staged evaluation problems and 25 multimodal full\-care path episodes, covering pathology diagnosis, MRI staging, and 146 downstream clinical decisions\. The benchmark explicitly links stepwise tasks to complete patient\-level care trajectories, enabling systematic evaluation of all clinical pathways\. Beyond isolated precision, NPCBench evaluates whether the models ground decisions in multimodal evidence, maintain temporally consistent patient states, and provide safe expert\-level consultation across complete care trajectories\. Across 30 evaluated models, we observe a persistent composition gap: strong performance in local case\-level tasks does not translate into episode\-level clinical competence required for end\-to\-end patient management\. Overall, NPCBench advances medical AI evaluation from static question answering toward apprenticeship\-style workflow evaluation, providing a rigorous testbed for evidence\-grounded and temporally coherent reasoning in complex oncology care\.
-
-## UniPro: Unified Multi\-Mode Medical Image Segmentation from 2D Images to 3D Volumes via Propagation
-
-**Authors:** Bangwei Guo; Yunhe Gao; Meng Ye; Yang Zhou; Difei Gu; Guoning Zhang; Leon Axel; Dimitris Metaxas
-
-**ID:** 154671 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=BtMBnJkdbp>) | [PDF](<https://openreview.net/pdf?id=BtMBnJkdbp>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154671>)
-
-Medical image segmentation remains fragmented along two axes: segmentation paradigms and data dimensionality\. Existing methods are typically developed separately for semantic, in\-context, and interactive segmentation, and are further specialized to either native 2D images or 3D volumetric data\. In clinical practice, however, segmentation workflows take many forms: a case may be initialized by semantic prediction, reference\-guided segmentation, or user interaction\. Regardless of how it begins, fine\-grained refinement is naturally performed on 2D views; for volumetric scans, such 2D edits must propagate coherently to the rest of the volume\. We present \*\*UniPro\*\*, a \*\*uni\*\*fied model that bridges segmentation paradigms and data dimensionality, using \*\*pro\*\*pagation to extend 2D segmentation to 3D volumes\. Our key insight is that volumetric propagation and in\-context segmentation share the same reference\-conditioned prediction mechanism, differing only in whether the reference image–mask pairs come from other cases or from previously segmented neighboring slices\. Building on this view, UniPro supports semantic, in\-context, interactive, and propagation\-based segmentation within a single slice\-based framework, using class priors, reference exemplars, user clicks, and neighboring\-slice predictions as mode\-specific conditioning inputs\. To improve propagation reliability, UniPro further incorporates bidirectional and 3D supervision to regularize slice\-wise propagation beyond per\-slice losses\. Extensive experiments across diverse modalities and anatomies show that UniPro achieves strong performance across all segmentation settings, enabling annotation\-efficient 3D segmentation from sparse 2D initialization and reducing slice\-by\-slice correction effort\.
-
-## Multi\-site PPG: An In\-the\-Wild Physiological Dataset from Emerging Multi\-Site Wearables
-
-**Authors:** Jiayi Shao; Jiaying Ye; ShengYao Liu; Zachary Englhardt; Girish Narayanswamy; Vikram Iyer; Qiuyue \(Shirley\) Xue
-
-**ID:** 139177 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=gKLv4ForGw>) | [PDF](<https://openreview.net/pdf?id=gKLv4ForGw>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139177>)
-
-Wearables are widely used for mobile health monitoring, and photoplethysmography \(PPG\) is a key sensing modality for heart rate and related physiological measurements\. However, public in\-the\-wild PPG datasets remain largely wrist\-centric or limited to short, controlled studies, constraining research on emerging wearable form factors\. We present Multi\-site PPG, an in\-the\-wild physiological dataset collected from four custom\-developed unobtrusive wearables: a smart earring, ring, watch, and necklace\. Each device records green and infrared reflective PPG, 3\-axis acceleration, and temperature with timestamps for cross\-device alignment, while a Polar H10 chest strap provides reference electrocardiogram \(ECG\)\. Participants wore the devices for one to multiple days during daytime activities while continuing their normal routines\. The dataset contains over 350 hours of raw data and 230–290 hours of preprocessed, modeling\-ready 8\-second windows data per wearable\. We benchmark heuristic, supervised, and self\-supervised heart\-rate estimation methods, showing substantial body\-site differences: the best methods achieve mean absolute errors \(MAEs\) of 2\.30 bpm on the earring, 5\.13 bpm on the ring, 8\.37 bpm on the watch, and 8\.68 bpm on the necklace\. We further analyze motion effects and evaluate multi\-site and PPG–accelerometer fusion, demonstrating the dataset’s value for robust physiological sensing across emerging wearable form factors\.
-
-## Reporting Practice Matters: The Impact of Reference Choice on Chest X\-ray Report Evaluation
-
-**Authors:** Daniel P Jeong; Charles Q Li; Hossein Hosseiny; Nitya M Bhalla; Fatma U Morency; Pradeep Ravikumar; Zachary Lipton; Michael Oberst
-
-**ID:** 138929 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=vocvkC0AxO>) | [PDF](<https://openreview.net/pdf?id=vocvkC0AxO>) | [Official poster](<https://neurips.cc/virtual/2026/poster/138929>)
-
-Radiologists follow heterogeneous reporting practices\. Two radiologists examining the same image and identifying the same clinical findings might nevertheless compose superficially distinct reports, varying in terminology, shorthand, formatting, and level of detail\. These variations in reporting norms represent an under\-appreciated obstacle in efforts to evaluate AI\-based radiology report generation \(RRG\) models, where machine\-generated reports are typically assessed based on their concordance with human\-generated references\. In this paper, we quantify the sensitivity of established evaluation metrics to variations in reporting practices, revealing impacts significant enough to alter the rankings of models\. We introduce a radiologist\-informed taxonomy of variations in radiology reporting practice and a method \(ReRef\) that rewrites reference reports along the axes of our taxonomy while preserving clinical interpretation\. For instance, when comparing the performance of nine RRG models on MIMIC\-CXR using the GREEN metric, condensing the discussion of normal findings in the reference reports causes Libra to drop from first place to third while CheXOne rises from third to first\. Our results suggest that current metrics may fail to decouple clinical interpretation from conformity to reporting practices and that choosing the "right" references that accurately reflect the desired reporting practices can be important in practice\. To support future research, we release MIMIC\-CXR\-Ext\-ReRef, a radiologist\-validated dataset of 120 \(original, alternative\) reference report pairs derived from MIMIC\-CXR\.
-
-## Risk\-Controlled Post\-Processing of Decision Policies
-
-**Authors:** Sunay Joshi; Tao Wang; Hamed Hassani; Edgar Dobriban
-
-**ID:** 154732 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=BRnQhDXD2y>) | [PDF](<https://openreview.net/pdf?id=BRnQhDXD2y>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154732>)
-
-Predictive models are often deployed through existing decision policies that stakeholders are reluctant to change unless a risk constraint requires intervention\. We study risk\-controlled post\-processing: given a deterministic baseline policy, choose a new policy that maximizes agreement with the baseline subject to a chance constraint on a user\-specified loss\. At the population level, we show that the optimal policy has a threshold structure: it follows the baseline except on contexts where switching to the oracle fallback policy yields a large reduction in conditional violation risk\. At the finite\-sample level, given a fitted fallback policy and score, we develop a post\-processing algorithm that uses calibration data to select a threshold\. Leveraging tools from algorithmic stability and stochastic processes, we show that under regularity conditions, in the i\.i\.d\. setting, the expected excess risk of the post\-processed policy is $O\(\\log n/n\)$\. In the special case when an exact\-safe fallback policy is available, the algorithm achieves precise expected risk control under exchangeability\. In this setting, we also give high\-probability near\-optimality guarantees on the post\-processed policy\. Experiments on a COVID\-19 radiograph diagnosis task, an LLM routing problem, and a synthetic multiclass decision task show that targeted post\-processing can meet or nearly meet risk budgets while preserving substantially more agreement with the baseline than score\-blind random mixing\.
-
-## Remote Photoplethysmography Based on a Skin Reflection Exponential Model
-
-**Authors:** Jiachen Li; Longzhen Tang; Shisheng Guo; Guolong Cui
-
-**ID:** 149070 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=t5bnpdRy8p>) | [PDF](<https://openreview.net/pdf?id=t5bnpdRy8p>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149070>)
-
-Facial video–based remote photoplethysmography \(rPPG\) estimates physiological signals from subtle spatiotemporal variations in facial videos, but remains vulnerable to head motion, illumination changes, and environmental perturbations\. Existing methods mainly distinguish rPPG\-related variations from motion and lighting artifacts at the signal or feature level, while largely neglecting the optical reflection properties of human skin\. In this work, we formulate a skin reflection exponential model to describe the nonlinear relationship among skin reflectance, illumination, motion\-induced variations, and blood\-volume changes\. Guided by this model, we propose a physically inspired rPPG estimation framework that explicitly incorporates skin reflectance priors into signal extraction\. Given a facial video, facial keypoints are first detected and encoded to represent motion dynamics, while illumination\-related features and candidate rPPG representations are jointly modeled under the proposed exponential formulation\. By constraining rPPG estimation with skin\-reflection physics, the framework improves separation of physiological components from motion and illumination disturbances\. Experiments demonstrate improved robustness under challenging conditions\.
-
-## DAG\-Biased Graph Learning for Multimodal Survival on EHR
-
-**Authors:** Munib Mesinovic; Tingting Zhu
-
-**ID:** 155436 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=5e6HZ4aFfT>) | [PDF](<https://openreview.net/pdf?id=5e6HZ4aFfT>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155436>)
-
-Existing deep learning architectures for survival prediction from electronic health records \(EHRs\) largely assume unimodality, failing to capture the complex relational structure across diverse clinical modalities\. Graph learning can allow us to robustly adapt to the underlying clinical structure of the data to have more predictive and interpretable representations for time\-to\-event analysis\. However, unconstrained graph learning produces dense, bidirectional adjacencies that overfit\. We introduce M\-CADENCE, a multimodal survival model that integrates structured acyclic priors with attention\-based propagation\. Each modality has its own learnable adjacency, regularised toward acyclicity through a log\-determinant characterisation and toward sparsity through soft thresholding\. A cross\-modal meta\-adjacency keeps the cross\-modal parameter count quadratic in the number of modalities rather than in their feature dimensions\. Propagation is then performed by multi\-head attention biased by the learnt structure\. The propagation step degrades gracefully under sparse or misspecified structure, addressing a known weakness of hard\-routing graph variants\. We evaluate M\-CADENCE on five EHR benchmarks covering intensive\-care mortality, circulatory failure, and emergency\-department competing risks, against multiple survival, graph, and structure learning baselines\. M\-CADENCE achieves the best concordance on all datasets, the best early\-warning AUC on four of five, and competitive precision\-recall against the strongest deep survival baselines\. Removing the DAG bias lowers concordance, as does substitution with a density\-matched random adjacency, which confirms that the specific learnt structure is required\. Discrimination is stable across four orders of magnitude in regularisation strength, and evaluation by a panel of ten language models confirms M\-CADENCE learns clinical edges that are more physiologically plausible than baseline structure\-learning methods\.
-
-## Selective Answering for Medical VQA via Parallel Independent Claim Verification
-
-**Authors:** Donghee Han; Jiwon Jeong; Mun Yi
-
-**ID:** 150272 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=jPgQvPpJTX>) | [PDF](<https://openreview.net/pdf?id=jPgQvPpJTX>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150272>)
-
-Medical visual question answering is a safety\-critical decision problem in which abstaining on inputs the image cannot support matters as much as answer accuracy\. Existing inference\-time agentic methods address hallucination by adding a verification step, but they collapse the final decision at a single language\-model judge that integrates all evidence in one prompt and is systematically biased toward declaring inputs answerable\. We propose PICV \(Parallel Independent Claim Verification\), which reformulates selective medical VQA as independent claim verification with transparent aggregation: the question is decomposed into a small set of typed visual claims, each is verified by an isolated prompt with no access to the other verdicts, and the verdicts are combined by a deterministic rule rather than another model, yielding an answer/abstain decision together with a typed unanswerability reason\. We evaluate PICV efficiently on an automated answerability benchmark we construct over two public radiology datasets via three reproducible corruption procedures, requiring neither heavy VLM judging nor human annotation at evaluation time\. Across four VLM backbones, PICV consistently outperforms strong prompting and agentic baselines; ablations attribute the gains specifically to per\-claim isolation and rule\-based aggregation rather than to agentic decomposition alone\.
-
-## Learning Survival Models with Right\-Censored Reporting Delays
-
-**Authors:** Yuta Shikuri; Hironori Fujisawa
-
-**ID:** 152038 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=W1GKVEnOcP>) | [PDF](<https://openreview.net/pdf?id=W1GKVEnOcP>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152038>)
-
-Survival analysis provides statistical methods to model the time until an event occurs\. Reporting delays arise when event times are not observed at their occurrence but are only revealed upon reporting\. This issue is particularly critical for timely risk evaluation when the observation window is short due to administrative censoring\. In this study, we incorporate right\-censored reporting delays by jointly modeling parametric hazards for the event and reporting processes\. We then construct a consistent estimator for the model parameters and develop a Monte Carlo expectation\-maximization algorithm to compute it\. To address the challenges posed by administrative censoring, we leverage these findings and propose a transfer\-learning procedure\. Experimental results demonstrate that our method improves the accuracy of timely risk evaluation under administrative censoring\.
-
-## Severity\-Controlled Prediction Sets for Medication Recommendation
-
-**Authors:** Yu Gu; Zijun Yu; Chi\-Kuang Yeh; Xinyu Wang; Ziyang Song
-
-**ID:** 148292 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=ywQz91vA0C>) | [PDF](<https://openreview.net/pdf?id=ywQz91vA0C>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148292>)
-
-Medication recommendation is a multi\-label prediction task, yet existing prediction\-set evaluation and calibration methods rely mainly on exact\-overlap metrics and therefore treat all missed medications as equally severe\. However, missing a medication but predicting a therapeutically close drug is less severe than matching it only with distant predictions\. To address this, we introduce \*\*Conformal Severity Control \(CSC\)\*\*, a post\-hoc framework for calibrating medication prediction sets under hierarchy\-aware mismatch severity\. CSC uses the Anatomical Therapeutic Chemical \(ATC\) hierarchy to quantify mismatch severity and controls patient\-level severity without retraining the predictor, supporting both average severity and upper\-quantile severity for the highest\-severity mismatches\. Experiments on MIMIC\-IV show that CSC tracks user\-specified severity tolerances and shifts prediction sets away from distant mismatches toward exact or close matches\.
-
-## Diagnosing and Repairing Visual Collapse in Compact Medical Multimodal LLMs
-
-**Authors:** Jinjie Xie; Baihua Li; Qinggang Meng
-
-**ID:** 149438 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=q5FAFDMeZq>) | [PDF](<https://openreview.net/pdf?id=q5FAFDMeZq>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149438>)
-
-_Abstract unavailable from the accessible public sources._
-
-## Look Before You Leap: Self\-Evolving Clinical Reasoning with Psychometric Preference Optimization for Radiology Report Generation
-
-**Authors:** Qi Wang; Yunfeng Min; Liwei Huang; Zeyu Zhang; Di Gai; Jun Liu
-
-**ID:** 154029 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=GmZxHeBKTq>) | [PDF](<https://openreview.net/pdf?id=GmZxHeBKTq>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154029>)
-
-_Abstract unavailable from the accessible public sources._
-
-## AI and Data Science for Her: Training the Next Generation of High School Girls in Nigeria
-
-**Authors:** Aderonke Sakpere
-
-**ID:** 137855 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** missing
-
-[Official poster](<https://neurips.cc/virtual/2026/poster/137855>)
-
-This program will train 300 Nigerian high school girls across six geopolitical zones of the country in the fundamentals of AI and data science\. Grounded in published research on how teenage girls engage with technical subjects, the curriculum is deliberately girl\-centered, pairing students with female mentors already working in AI, and connecting technical concepts to capstone projects addressing real challenges in healthcare, agriculture, and education\. AI clubs formed in each participating school will keep the learning going long after the program’s formal end
-
-## AI and Data Science for Her: Training the Next Generation of High School Girls in Nigeria
-
-**Authors:** Aderonke Sakpere
-
-**ID:** 137849 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** missing
-
-[Official poster](<https://neurips.cc/virtual/2026/poster/137849>)
-
-This program will train 300 Nigerian high school girls across six geopolitical zones of the country in the fundamentals of AI and data science\. Grounded in published research on how teenage girls engage with technical subjects, the curriculum is deliberately girl\-centered, pairing students with female mentors already working in AI, and connecting technical concepts to capstone projects addressing real challenges in healthcare, agriculture, and education\. AI clubs formed in each participating school will keep the learning going long after the program’s formal end
-
-## Mental Health AI Must Move Beyond Diagnostic Prediction and Chat\-Based Support: Toward Perspective\-Aware, Multisensory Co\-Experience
-
-**Authors:** Pinyao Liu; Esen K Tütüncü; Muhammad Arslan Manzoor; Yufang Hou; Chirag Raman
-
-**ID:** 140081 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=KrjqjWYl47>) | [PDF](<https://openreview.net/pdf?id=KrjqjWYl47>) | [Official poster](<https://neurips.cc/virtual/2026/poster/140081>)
-
-This position paper argues that AI for mental health must move beyond two dominant paradigms\. The first is diagnostic prediction, which frames mental healthcare as symptom detection, diagnosis, and decision\-making\. The second is chat\-based support, which reduces therapeutic interaction to language\-mediated information delivery\. Both approaches neglect what therapeutic research shows to be central to healing: experiential, affective, and embodied processes\. In many therapeutic traditions, insight emerges not through information\-delivery but through emotionally resonant, multisensory experiences that allow individuals to feel, reflect, and reframe their inner world\. We propose an alternative framework: co\-experiential AI systems that identify emotionally salient moments across modalities, modulate sensory experience to facilitate reflection, and adapt over time to a user's evolving responses and interpretations\. Using dreamwork therapy as a stress test for mental health AI, we define three key challenges for AI systems: identifying affective anchors in indeterminate multimodal interactions; modeling user perspective as a situated context; and enabling continual adaptation to individuals without repeated retraining\. We posit that addressing these challenges requires rethinking AI's role not as an expert, but as a perspective\-aware participant in human meaning\-making\.
-
-## Augmented Equivariant Mesh Networks for Anatomical Segmentation
-
-**Authors:** Daniel Saragih
-
-**ID:** 153175 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=NHNCBuH2mF>) | [PDF](<https://openreview.net/pdf?id=NHNCBuH2mF>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153175>)
-
-Anatomical mesh segmentation requires models that operate directly on irregular surface geometry while remaining robust to arbitrary patient pose and mesh resolution variation\. Existing task\-specific mesh and point\-cloud methods are not equivariant, and can degrade sharply under test\-time perturbation, for example dropping by 25\-26 IoU points on intraoral scan segmentation at 40$\\textdegree\{\}$ tilt\. We present EAMS, an Equivariant Anatomical Mesh Segmentor built on Equivariant Mesh Neural Networks \(EMNN\), and evaluate it across four clinically distinct tasks spanning edge\-, vertex\-, and face\-level supervision\. We combine intrinsic mesh descriptors with anatomy\-aware priors, including PCA\-derived frames for dental arches and liver surfaces, and augment message passing to provide lightweight global context\. Across intracranial aneurysm and intraoral segmentation, EAMS variants are competitive with specialized baselines on unperturbed inputs while remaining stable under geometric perturbations, and on liver surfaces they expose a favorable trade\-off between canonical\-pose accuracy and rotation robustness\. These results show that a lightweight \($&lt;2$M parameters\) equivariant framework can deliver robust anatomical mesh segmentation across diverse supervision types without task\-specific architectures\.
-
-## Temporal Island Sparse Autoencoders for Interpreting Clinical Time\-Series Models
-
-**Authors:** Muhan Yeo; Bong Gyun Kang; HyunGi Kim; Sungroh Yoon
-
-**ID:** 151967 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=WSgYALKmGw>) | [PDF](<https://openreview.net/pdf?id=WSgYALKmGw>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151967>)
-
-Deep learning models for electronic health records achieve strong predictive performance but provide little insight into \*what clinical concepts\* they represent internally\. Post\-hoc attribution methods produce per\-cell importance scores that lack temporal coherence, cross\-variable structure, and reusability across patients\. We introduce the \*\*Temporal Island Sparse Autoencoder\*\* \(TI\-SAE\), which learns a backbone\-specific, patient\-shared \*clinical concept dictionary\* from a frozen predictive model’s representations\. Each dictionary entry \(latent\) is defined by learned temporal Gaussian islands—specifying \*when\* the concept is active—and a sparse variable\-composition vector—specifying \*which variables\* are involved\. A decoupled selector then identifies which dictionary entries drive each patient’s prediction, separating representation learning from attribution\. We evaluate TI\-SAE across five backbone architectures spanning different representation strategies on MIMIC\-III and MIMIC\-IV \(three prediction tasks each\)\. TI\-SAE produces structured clinical concepts that go beyond transient attribution heatmaps while achieving strong performance on standard faithfulness benchmarks\.
-
-## What Transformer FFNs Never See: Theory, Diagnosis, and Lightweight Remediation
-
-**Authors:** Tinghe Zhang; Yucheng Xiao; Alex Lamb
-
-**ID:** 153020 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=Oa1iYsgkvE>) | [PDF](<https://openreview.net/pdf?id=Oa1iYsgkvE>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153020>)
-
-In Transformer attention, distinct weight vectors $\\boldsymbol\{\\alpha\} \\neq \\boldsymbol\{\\alpha\}'$ can produce the same aggregated representation $\\mathbf\{V\}\\boldsymbol\{\\alpha\} = \\mathbf\{V\}\\boldsymbol\{\\alpha\}'$\. When $\\operatorname\{rank\}\(\\mathbf\{V\}\) \\leq n\-2$, configurations with entirely different dominant source tokens collide on a set of positive Lebesgue measure, a condition satisfied in over 97% of attention heads in BERT\-Base\. Such collisions are harmful: the downstream FFN receives identical inputs despite the attention having attended to entirely different source tokens, and must therefore produce identical outputs regardless of which tokens actually dominated, fundamentally limiting any computation that requires sensitivity to attention source, such as multi\-hop reasoning, attribution, or knowledge retrieval\. No increase in depth, width, or data can compensate, because the routing weights are discarded before the FFN is reached\. The routing weights $\\\{\\alpha\_\{ij\}\\\}$, however, are available within the same forward pass and can be retained as a compact side\-channel to restore the missing signal\. We call this structural information loss \*routing non\-identifiability\*\. In BERT\-Base, value\-matrix rank deficiency suppresses $k \\geq 107$ routing dimensions \(over 84% of degrees of freedom\) before any FFN computation\.  To quantify the practical gap, we introduce the Routing Reconstruction Task \(RRT\): standard Transformers achieve 31\.4% source\-identification accuracy while oracle routing statistics reach 94\.6%, a 63\-point gap consistent with an information bottleneck in the FFN input\. We then propose the Route\-Aware FFN \(RA\-FFN\), a drop\-in module that appends four compact routing statistics to each FFN block at under 1\.1% additional parameter cost, recovering over 75% of the oracle gain\. RA\-FFN improves all benchmarks tested: at 110M scale, gains cover multi\-hop reasoning, language modelling, and translation, with multi\-hop gains $6\\times$ larger than single\-hop; at 7B scale on Llama\-2\-7B and Mistral\-7B, gains extend further to mathematics \(GSM8K\) and general reasoning \(MMLU, ARC\-Challenge, HellaSwag\), ordered by routing sensitivity\.
 
 ## Can AI Agents Synthesize Scientific Conclusions?
 
@@ -964,172 +816,6 @@ ECG, with mature physiological simulators and public benchmarks, is a useful tes
 
 Segmenting unseen anatomical structures in echocardiographic images is challenging because dense annotations are scarce and ultrasound often presents visually similar textures across different cardiac structures\. Current foundation models remain limited in this setting because they treat anatomical knowledge as independent text prompts, overlooking the spatial topology that clinicians use to localize ambiguous structures from their visible neighbors\. We propose Echo\-SAM, a zero\-shot ultrasound segmentation framework that grounds a structured cardiac knowledge graph in visual space through relation\-conditioned geometric support inference\. Echo\-SAM localizes seen structures as anatomical anchors, propagates relational constraints through a knowledge\-grounded Graph Neural Network, and enhances text prompts with image\-grounded anatomical context\. We further introduce a topology\-to\-geometry mapping that converts graph relations into geometry\-aware support proposal scores, yielding posterior\-guided support estimates for unseen structures\. By treating relation\-specific scale, thickness, and offset as latent geometric variables, Echo\-SAM adapts graph\-derived support proposals to image\-specific anchors without relying on fixed coordinate templates\. Extensive evaluations on zero\-shot echocardiography segmentation benchmarks demonstrate that Echo\-SAM substantially outperforms state\-of\-the\-art foundation models, achieving up to 50\.42\\% absolute improvement in Dice score\. Code will be publicly available\.
 
-## CycleSpectra: Cyclic Motion Spectra for Phase\-Queryable 4D Cardiac Reconstruction
-
-**Authors:** Xueming Fu; Xin Li; Lixia Han; Ao Shen; Guangming Lu; Song Luo; S\. Kevin Zhou
-
-**ID:** 152695 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=R6WdWujy5S>) | [PDF](<https://openreview.net/pdf?id=R6WdWujy5S>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152695>)
-
-Reconstructing patient\-specific cyclic cardiac motion at arbitrary phases is central to dynamic cardiac assessment, underpinning measurements such as ejection fraction, stroke volume, and regional myocardial deformation\. Existing methods\-\-\-pair\-wise registration, time\-conditioned decoders, and coordinate\-based implicit fields\-\-\-share a common implicit assumption: the cardiac cycle is treated as a sequence of discrete phases, with temporal structure stitched together through learned mappings supervised at the observed frames\. Yet the cycle is, by physical fact, a closed periodic process\. We propose \\textbf\{CycleSpectra\}, a spectral motion representation that takes the cyclic structure as a starting point of the representation rather than as a property to be learned\. Given a pair of sparsely sampled phase observations, the model learns the spectral structure of the underlying cyclic cardiac motion in a low\-dimensional latent space, and recovers the displacement at any phase through a fixed analytic synthesis layer\-\-\-time never enters the network as a learnable signal, only as a coordinate the readout takes by construction\. To support evaluation, we collect a thin\-slice phase\-resolved 4D cardiac CT cohort and benchmark under both canonical and non\-canonical input protocols, reporting whole\-cycle motion\-fidelity metrics alongside standard image and anatomical metrics\. Under arbitrary two\-frame input, CycleSpectra achieves the lowest ejection\-fraction error and highest ventricular volume\-\-time curve correlation among recent baselines, while remaining competitive on image fidelity\.  Beyond two\-frame inference, the proposed framework supports test\-time multi\-frame latent fusion for higher accuracy, validated on both the in\-house cohort and a cross\-modality 4D cardiac MR cohort\. Code will be available\.
-
-## Manifold\-Guided Stereo\-Monocular Refinement for Endoscopic Stereo Disparity Estimation
-
-**Authors:** Jiewen Yang; Yi Zhong; Bin Pu; Xingbo Dong; Ming Zheng; Qika Lin; Kai He; Xuechen Zhang
-
-**ID:** 150407\-\-2 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 150407
-
-[Paper](<https://openreview.net/forum?id=iGyOrOrioU>) | [PDF](<https://openreview.net/pdf?id=iGyOrOrioU>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150407>)
-
-Dense stereo disparity estimation provides the geometric basis for 3D perception in computer\-assisted endoscopy\. Endoscopic stereo matching is difficult because reliable tissue correspondences often appear next to weak\-texture, specular, occluded, or deformed regions within the same frame\. Existing stereo and stereo\-monocular methods improve cost aggregation or introduce monocular priors, but they often treat monocular guidance as a global feature source or an independently predicted candidate\. Without evaluating the local support of the current stereo match during refinement, the update can reinforce corrupted correspondences in ambiguous regions or allow monocular priors to override reliable metric matches\. To tackle these problems, we introduce Manifold\-Stereo, a reliability\-gated latent\-flow framework for endoscopic stereo disparity estimation\. The method refines a monocular disparity candidate through a conditional latent residual flow on an image\-aligned correction space induced by stereo cost\-volume geometry, then calibrates the corrected candidate to the current stereo disparity scale\. A geometric consistency gate computed from left\-right feature alignment regulates the candidate contribution during recurrent refinement, preserving stereo estimates in well\-matched regions while supplying monocular context where local matching is ambiguous\. Experiments on in\-domain SCARED and zero\-shot SERV\-CT and Hamlyn show strong average disparity accuracy and competitive thresholded outlier rates against recent stereo and endoscopic baselines\.
-
-## Auditing Correlated Failures in Frozen\-Feature Pretrained\-Encoder Pools for Medical Segmentation
-
-**Authors:** Eunseob Choi; Kyeonghun Kim; Hyuk\-Jae Lee; Nam\-Joon Kim
-
-**ID:** 138982\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 138982
-
-[Paper](<https://openreview.net/forum?id=sgt45cOBtI>) | [PDF](<https://openreview.net/pdf?id=sgt45cOBtI>) | [Official poster](<https://neurips.cc/virtual/2026/poster/138982>)
-
-Cross\-architecture/backbone medical\-segmentation pools are commonly motivated as complementary failure coverage when members make different mistakes; that assumption is rarely tested at the per\-case level\. We audit this assumption for a fixed pool of 11 pretrained\-encoder bundles read out by a deliberately weak $1\\times1$\-convolution decoder \(4 seeds\), and for a small set of decoder\-recipe perturbations on the same bundles\. Across five primary task rows \(Kvasir polyp, ACDC LV, BraTS foreground, RIGA Cup, RIGA Disc\), this 11\-bundle $1\\times1$\-conv readout pool yields per\-case Dice correlation gaps of $\\Delta=0\.261\\text\{\-\-\}0\.638$ between same\-bundle and cross\-bundle pairs after a Dice $\\geq 0\.30$ functional floor; all paired case and hierarchical bootstrap intervals exclude zero\. The result is stable under floor sweeps, ICC\(A,1\), leave\-one\-out, subject aggregation, quality\-controlled pair regression, and cross\-fitted item\-difficulty residualisation\. Decoder\-recipe diagnostics show that richer readouts attenuate the gap \(UNet\-skip; case\-identical nnU\-Net on RIGA Cup: $0\.473\\to 0\.0079$, separate\-split $0\.034\\text\{\-\-\}0\.047$\); the reported magnitudes are recipe\-specific\. Additional probes \(pixel error, joint\-failure lift, same\-architecture\-family ViT, same\-family cross\-checkpoint, same\-backbone\) locate the dependence structure but do not causally separate architecture, pretraining, and recipe\. The claim is scoped to 2D frozen/light\-adaptation encoder pools with this readout family and to retrospective benchmark audits\. We release per\-case Dice traces, summary JSONs, scorer code, hashes, and metadata as the audit artifact\.
-
-## PG\-LRF: Physiology\-Guided Latent Rectified Flow for Electro\-Hemodynamic PPG\-to\-ECG Generation
-
-**Authors:** Xiaoda Wang; Minxiao Wang; Kaiqiao Han; Defu Cao; Ching Chang; Yidan Shi; Runze Yan; Xiao Luo; Yan Liu; Xiao Hu; Yizhou Sun; Wei Wang; Carl Yang
-
-**ID:** 150392\-\-2 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 150392
-
-[Paper](<https://openreview.net/forum?id=iOvXn5DzBr>) | [PDF](<https://openreview.net/pdf?id=iOvXn5DzBr>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150392>)
-
-Electrocardiography \(ECG\) is the clinical standard for cardiac assessment but requires dedicated hardware that does not scale to daily\-life monitoring\. Photoplethysmography \(PPG\) is ubiquitous in wearables but lacks ECG\-specific diagnostic morphology and is corrupted by motion and sensor noise\. PPG\-to\-ECG generation aims to bridge this gap by recovering electrical morphology and timing from peripheral pulse signals\. However, existing methods largely rely on statistical alignment and data\-driven generation\. They fail to explicitly structure the latent space around physiology\-aware electro\-hemodynamic factors and lack constraints from forward physiological dynamics\. To address these challenges, we propose PG\-LRF, a physiology\-guided latent rectified flow framework\. PG\-LRF introduces an electro\-hemodynamic simulator that co\-models ECG and PPG through shared cardiac phase dynamics\. Guided by this simulator, a Physiology\-Aware AutoEncoder learns a structured electro\-hemodynamic latent space\. Then we integrate this simulator guidance into a PPG\-conditioned latent rectified flow, enforcing ECG\-side morphology consistency and ECG\-to\-PPG forward hemodynamic consistency during generative transport\. Experiments on the large\-scale MC\-MED dataset demonstrate that PG\-LRF significantly improves PPG\-to\-ECG generation and downstream cardiovascular disease classification, proving its ability to generate ECGs that are both signal\-faithful and physiologically plausible under the ECG\-to\-PPG hemodynamic pathway
-
-## REAL\-MED: Benchmarking LLM Agents on Real\-World Medical Tasks
-
-**Authors:** Zihan Wang; yifan zhang; Jieqiong Cao; Junxiu Chen; Shanni Chen; ChaoGao; Hao Wang; Shi Feng; Xiaocui Yang; Jinghao Lin; Kai WU; Xiaozhong Ji; Haihua Yang
-
-**ID:** 139773\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 139773
-
-[Paper](<https://openreview.net/forum?id=5cVNXIDXfi>) | [PDF](<https://openreview.net/pdf?id=5cVNXIDXfi>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139773>)
-
-Real\-world medical work extends far beyond answering isolated clinical questions: it often requires clinicians to process complex materials, interact with information systems, and produce structured deliverables\.  As AI systems evolve from medical chatbots into medical agents, evaluation should likewise move beyond \\emph\{answer correctness\} toward the \\emph\{quality of end\-to\-end workflow deliverables\}\.   We introduce \\textsc\{Real\-Med\}, a benchmark for evaluating AI agents on real\-world medical tasks\.  \\textsc\{Real\-Med\} contains 405 expert\-designed tasks across four categories: Clinical Support, Patient Management, Pharmacy Management, and Medical Education \\&amp; Research\.  Each task is grounded in a realistic scenario with concrete materials, tool interfaces, and explicit deliverable requirements, such as clinical documents, medication plans, spreadsheets and review reports\.  To support rigorous evaluation, each task is annotated with fine\-grained expert\-written rubrics, averaging 15\.4 independent rubric items per task, and every task is cross\-validated by at least three medical experts\.  We evaluate 11 strong mainstream models under a unified harness with the same resources, tools, and execution protocol\.  Our results show that current agents can often satisfy surface\-level task requirements, but still struggle with detail\-sensitive medical reasoning, dosage\-calculation traps, shallow research, formatting constraints, and reliable final delivery\.  These findings reveal a substantial gap between medical QA ability and robust execution in realistic medical workflows\. Code is available at \\url\{https://anonymous\.4open\.science/r/REAL\-MED\}\.
-
-## Does Cross\-Panel Pretraining Transfer Under Marker Heterogeneity? A Large\-Scale Empirical Study in Clinical Flow Cytometry
-
-**Authors:** Zixin \(Zora\) Zhuang; Benjamin Mashford; Dan Andrews
-
-**ID:** 153804\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 153804
-
-[Paper](<https://openreview.net/forum?id=IZxWllh1po>) | [PDF](<https://openreview.net/pdf?id=IZxWllh1po>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153804>)
-
-Flow cytometry is the primary assay for single\-cell immune profiling, yet cross\-study modelling remains under\-explored\. The challenge is two\-fold: Studies measure different marker panels, inducing feature\-space inconsistency, while batch effects shift signals even on shared markers, making transfer harder than in vision or language where input spaces are stable\. We conduct a large\-scale empirical study, pretraining an encoder on 89,324 samples from 112 public studies spanning 525 distinct marker panels\. We evaluate it frozen \-\-\- isolating representation quality from task\-specific adaptation, on five clinical tasks under a taxonomy of panel\-overlap conditions, including three panel\-zero\-shot tasks whose marker panels were unseen during pretraining, and one negative control with no expected discriminative signal\. We further characterise transfer across scaling axes and probe robustness to marker removal at test time\. Despite heterogeneity that disrupts direct transfer, the frozen encoder matches or exceeds in\-distribution specialist encoders on 4 of 5 tasks, including all three novel\-panel tasks, and behaves as expected on the negative control\. Scaling analyses reveal saturation in both encoder capacity and random corpus subsampling, and representations degrade gracefully under marker reduction\. These results suggest a pretrained encoder can serve as a general\-purpose feature extractor for clinical cytometry data, without task\-specific retraining\.
-
-## MedVTok: A General\-Purpose Medical Visual Tokenizer
-
-**Authors:** Chenglong Ma; Yuanfeng Ji; Junzhi Ning; Jiyao Liu; Yujie Wei; Shaohao Rui; Chaoyang Zhang; Wenjie Li; Wenhao Tang; Cheng Tang; Wei Li; Shujian Gao; Yujie Zhang; Ying Chen; Zilong Li; Zongyuan Ge; Diping Song; Jin Ye; Ming Hu; Junjun He; Hongming Shan
-
-**ID:** 152136\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 152136
-
-[Paper](<https://openreview.net/forum?id=VGTDLvJS3w>) | [PDF](<https://openreview.net/pdf?id=VGTDLvJS3w>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152136>)
-
-Multimodal medical AI requires a common visual interface that integrates heterogeneous imaging evidence for patient condition modeling\. However, existing medical visual tokenizers are often tied to a specific dimension and imaging modality, forcing multimodal systems to rely on fragmented and poorly reusable representations\. We introduce MedVTok, a general\-purpose visual tokenizer that maps 2D images and 3D volumes from diverse imaging modalities into a unified token space\. Building such a tokenizer poses two key challenges: preserving anatomical structure across dimensions and capturing clinical semantics across modalities\. To this end, MedVTok introduces \(i\) slice differential regularization, which explicitly models inter\-slice anatomical coherence missing in previous per\-pixel/per\-voxel supervision, and \(ii\) multi\-expert representation alignment, which integrates knowledge from multiple medical expert encoders while retaining modality\-specific complementary knowledge\. Trained on 28M images and 70K volumes across 9 imaging modalities, MedVTok supports classification, retrieval, segmentation, synthesis, visual question answering, and medical report generation through a single tokenizer\. Across 24 benchmarks, MedVTok achieves state\-of\-the\-art performance, demonstrating a scalable token interface that unifies medical image dimension, modality, and task usage\. Code and weights will be released\.
-
-## OperatorSHAP: Fast and Accurate Shapley Value Estimation for Neural Operators
-
-**Authors:** Joshua Stiller; Santo Thies; Felix Czaja; Eyke Hüllermeier
-
-**ID:** 154322\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 154322
-
-[Paper](<https://openreview.net/forum?id=EXq2TaPGfM>) | [PDF](<https://openreview.net/pdf?id=EXq2TaPGfM>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154322>)
-
-Understanding model predictions is essential for physical applications, where outputs often inform safety\-critical decisions, such as structural load assessment, weather warnings, and clinical diagnosis\. Shapley values satisfy many desirable properties as an attribution method, but their computational cost during inference hinders their practical use\. Current amortized explainers, such as FastSHAP, are limited to homogeneous inputs, which is problematic for physical applications where data often comes from irregular grids and geometries\. We introduce OperatorSHAP, a grid\-agnostic attribution method and training procedure that allows us to train FastSHAP\-like explainers for neural operators\. We establish a theoretical framework for attributions in function space, connecting to Aumann–Shapley values\. We further show that OperatorSHAP's explanations are consistent with state\-of\-the\-art discrete Shapley values across resolutions and transfer across grid sizes without retraining\.
-
-## Extending ROC Analysis to Uncertainty\-Aware Risk Prediction with an Interval\-Based AUC \(iAUC\)
-
-**Authors:** Yuqi Li; Matthew Engelhard
-
-**ID:** 150218\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 150218
-
-[Paper](<https://openreview.net/forum?id=jsG2UV3YqP>) | [PDF](<https://openreview.net/pdf?id=jsG2UV3YqP>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150218>)
-
-In high\-stakes risk prediction, interval\-valued predictions provide a natural way to represent predictive uncertainty\. However, standard evaluation tools such as the receiver operating characteristic \(ROC\) curve and the area under the curve \(AUC\) are designed for point\-valued predictions and do not capture how uncertainty affects discrimination performance\. To address this gap, we develop an uncertainty\-aware ROC framework and corresponding interval\-based AUC \(iAUC\) metrics for evaluating the performance of interval\-valued risk predictions\. The framework constructs two ROC\-style curves with associated areas $\\mathrm\{AUC\}\_L$ and $\\mathrm\{AUC\}\_U$, and shows that these quantities induce a three\-region decomposition of positive\-negative rankings into confidently correct, ambiguous, and confidently incorrect orderings\. Under valid class\-conditional coverage, $\\mathrm\{AUC\}\_L$ and $\\mathrm\{AUC\}\_U$, together with the pairwise miscoverage rate, provide theoretical bounds on the optimal AUC, linking interval coverage to achievable discrimination\. The framework is compatible with a range of methods for quantifying epistemic uncertainty in risk prediction, including Bayesian, bootstrap, and ensemble\-based procedures, and provides a practical way to compare predictive models and interval\-generation methods\. Experiments on clinical benchmark data and MIMIC\-IV mortality prediction show that models with similar point AUC can have different uncertainty\-aware ranking profiles, and that the proposed decomposition can support risk\-aware model selection and threshold\-based abstention\.
-
-## CODA: Cohort\- and Drift\-aware Foundation Model for Multimodal Clinical Reasoning
-
-**Authors:** Changshuo Liu; Jiaqi Zhu; Wenqiao Zhang; Xiaokui Xiao; Beng Chin Ooi
-
-**ID:** 149608 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=opvU1rQLrM>) | [PDF](<https://openreview.net/pdf?id=opvU1rQLrM>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149608>)
-
-Recent advances in multimodal foundation models have demonstrated strong performance across diverse clinical tasks\. However, existing approaches predominantly operate at the individual sample level and fail to model the interplay between population\-level cohort patterns and patient\-specific variation that underlie real\-world clinical reasoning\. In practice, clinicians routinely reason through patient cohorts sharing similar demographic, physiological, or pathological characteristics, while accounting for patient\-specific deviations from the group prototype\. Motivated by this gap, we propose CODA, a cohort\- and drift\-aware foundation model for multimodal clinical reasoning\. CODA explicitly integrates cohort structure into the modeling pipeline through two complementary mechanisms: cohort\-aware population stratification and drift\-aware individual adaptation\. In particular, we leverage reinforcement learning to discover clinically meaningful patient cohorts and further model each patient’s deviation from cohort prototypes as a structured drift signal encoding fine\-grained individual heterogeneity\. These cohort\- and drift\-aware representations are incorporated into the foundation model to enable reasoning that is simultaneously informed by population\-level patterns and sensitive to individual\-level variation\. Extensive experiments on real\-world electronic health record \(EHR\) benchmarks demonstrate that CODA achieves consistent effectiveness and strong generalizability across diverse clinical tasks, including closed\-QA, open\-QA, and report generation\.
-
-## RAM\-H1200: A Unified Evaluation and Dataset on Hand Radiographs for Rheumatoid Arthritis
-
-**Authors:** Songxiao Yang; Haolin Wang; Yao Fu; Junmu Peng; Lin Fan; Hongruixuan Chen; JIAN SONG; Masayuki Ikebe; Shinya Takamaeda\-Yamazaki; Masatoshi Okutomi; Tamostu Kamishima; yafei ou
-
-**ID:** 139320 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=XXly8RrusQ>) | [PDF](<https://openreview.net/pdf?id=XXly8RrusQ>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139320>)
-
-_Abstract unavailable from the accessible public sources._
-
-## MID: Mask\-Image Distributional Divergence for Evaluating Medical Image Segmentation
-
-**Authors:** Vincenzo Marcianò; XIAOMING ZHANG; Gianluca Guglielmo; Sebastien Ourselin; Michela Antonelli; Maria A Zuluaga
-
-**ID:** 152974 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=Oxe8M9Grah>) | [PDF](<https://openreview.net/pdf?id=Oxe8M9Grah>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152974>)
-
-_Abstract unavailable from the accessible public sources._
-
-## ECG\-Reasoning\-Benchmark: A Benchmark for Evaluating Clinical Reasoning Capabilities in ECG Interpretation
-
-**Authors:** Jungwoo Oh; Hyunseung Chung; Junhee Lee; Min\-Gyu Kim; Hangyul Yoon; Ki Seong Lee; Youngchae Lee; Muhan Yeo; Edward Choi
-
-**ID:** 139595 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=GQObdYuYZB>) | [PDF](<https://openreview.net/pdf?id=GQObdYuYZB>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139595>)
-
-_Abstract unavailable from the accessible public sources._
-
-## Towards Error\-Free EHRs: Reasoning\-Intensive Consistency Verification Between Clinical Notes and Structured Tables in Electronic Health Records
-
-**Authors:** Yeonsu Kwon; Jiho Kim; Junseong Choi; Paloma Rabaey; Minseo Kim; Sujeong Im; Jeewon Yang; Jun\-Min Lee; Sangji Lee; Jiwon Kim; Hangyul Yoon; Hyunwook Kwon; Edward Choi
-
-**ID:** 139021 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=q9O85I1Yqn>) | [PDF](<https://openreview.net/pdf?id=q9O85I1Yqn>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139021>)
-
-_Abstract unavailable from the accessible public sources._
-
-## Teaching LLMs to Recommend and Defer in Underrepresented Epilepsy Care
-
-**Authors:** Shreyas Rajesh; Kartik Sharma; Tonmoy Monsoor; Mehmet Yigit Turali; Richard Idro; Juliana Kayaga; Robert Sebunya; Tracy T Namata; Jessica N Pasqua; vwani Roychowdhury; Rajarshi Mazumder
-
-**ID:** 154539 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=CqLMStITK3>) | [PDF](<https://openreview.net/pdf?id=CqLMStITK3>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154539>)
-
-Specialist epilepsy expertise is scarce in resource\-constrained settings, making LLM\-based decision support attractive for frontline clinicians managing longitudinal treatment\. Such support systems must do more than apply medical knowledge: they must adapt to local prescribing practice and know when to defer\. Public medical AI benchmarks are dominated by high\-income clinical settings, leaving prescribing practices, medication availability, and follow\-up patterns in low\-resource contexts largely unrepresented\. We study this problem through a multidisciplinary collaboration in Ugandan pediatric epilepsy care\. The task is to predict anti\-seizure medication regimens from longitudinal unstructured notes collected by local clinicians across serial visits\. Standard prompting achieves non\-trivial agreement with physician prescriptions, but neurologists' review of model reasoning traces shows that its errors stem from distribution\-miscalibrated prescribing defaults rather than the local care environment\. We introduce Manana, a non\-parametric prompt\-learning framework that learns how to reason about local prescribing decisions from a small patient\-level training set\. Manana turns observed prescription errors into an auditable prompt memory, instantiated in single\-agent and multi\-agent variants, and outperforms classical ML models, direct LLM prompting, and prompt\-optimization baselines across two independently collected Ugandan cohorts\. To make the system uncertainty\-aware, we propose Bayesian prompt averaging \(BPA\), a Bayesian model averaging procedure over the learned prompt trajectory\. This converts a sequence of learned prompts into prescription likelihoods and produces a deferral signal\. On the independently collected held\-out cohort, BPA improves visit\-level top\-3 prescription accuracy by 4\-8 percentage points over the prompt\-optimization baselines\. More consequentially, it enables clinically meaningful selective prediction: the system can auto\-handle the most confident half of cases at 95\\% precision, or the most confident quarter at 99\\% precision, while deferring lower\-confidence cases for specialist review\. These results suggest a path toward locally adapted clinical LLM systems that learn from limited site\-specific data and reserve scarce specialist attention for the cases where uncertainty is highest\.
-
 ## Learning from Disagreement: Multi\-Teacher Distillation for Chinese Spelling Correction
 
 **Authors:** Hongcheng Ding; Xuanze Zhao; Ziping Hu; Hongdan Xiao; Kang Xu; Weiyu Zhang
@@ -1139,26 +825,6 @@ Specialist epilepsy expertise is scarce in resource\-constrained settings, makin
 [Paper](<https://openreview.net/forum?id=celqEfIjq2>) | [PDF](<https://openreview.net/pdf?id=celqEfIjq2>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151148>)
 
 Chinese Spelling Correction \(CSC\) is hard precisely because a single misspelling can originate from any of four loosely coupled dimensions \(glyph, phonetic, syntactic, or semantic confusion\), yet existing systems treat the four as a flat fusion target\. Multimodal pre\-training and fixed\-weight gating let evidence from each dimension co\-exist, but never arbitrate: when a phonetic\-plausible candidate contradicts a syntactic\-plausible one, the model averages them, and learning effort is spent uniformly on cases where every dimension already agrees\. Our diagnosis is that the bottleneck is no longer representation but \\emph\{decision\}: the cases where dimensions disagree are exactly the cases worth specializing for, and dimension\-specific teachers expose this disagreement as a usable signal rather than as noise to be smoothed away\. We instantiate this view as SEMTD \(Self\-Evolving Multi\-Teacher Distillation\), a 4B\-parameter student trained from four single\-dimension experts \(glyph / phonetic / syntactic / semantic\) under three coupled objectives: multi\-teacher distillation with input\-dependent expert selection, self\-evolving learning that turns disagreement into a composite reward, and reflective path optimization that replays high\-disagreement decisions\. Across four benchmarks the student reaches Cor\-F1 of $83\.8$ on SIGHAN15, $62\.3$ on LEMON \(7\-domain average\), $98\.2$ on ECSpell \(3\-domain average\), and $73\.0$ on CSCD\-NS, matching or surpassing 14B LLM\-based correctors at $3\.5\{\\times\}$ fewer parameters\. The takeaway is methodological: in CSC, treating teacher disagreement as the supervision target, rather than a residual to be averaged out, reopens headroom that flat fusion has saturated\.
-
-## Explanations over Graphs: An Agent Architecture for IT Enterprise Diagnostic Tasks
-
-**Authors:** Saurabh Jha; Rohan R\. Arora; Bhavya Bhavya; Noah Zheutlin; Paulina Toro Isaza; Laura Shwartz; Yu Deng; Daby Sow; Ruchir Puri
-
-**ID:** 151711 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=YcWFCquBYo>) | [PDF](<https://openreview.net/pdf?id=YcWFCquBYo>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151711>)
-
-LLM agents excel when environments are mostly static and their required information fits in a model’s context window, but they struggle with IT enterprise diagnostic tasks—such as incident management, IT vulnerability analysis, and FinOps anomaly explanation—where operators iteratively mine massive observability data over a curated resource graph to identify the origins that explain observed symptoms, enabling correct remediation\. The data in these domains inherently has hidden dependency structure: entities interact, signals co\-vary, and the importance of a fact may only become clear after other evidence is discovered\. To cope with bounded context windows, agents must summarize intermediate findings before their significance is known, increasing the risk of discarding key evidence\. ReAct\-style agents are especially brittle in this regime\. Their retrieve\-summarize\-reason loop makes conclusions sensitive to exploration order and introduces run\-to\-run non\-determinism, producing a reliability gap where Pass\-at\-k may be high but Majority\-at\-k remains low\. Simply sampling more roll\-outs or generating longer reasoning traces does not reliably stabilize results, since verifying a diagnosis requires remediation actions that carry operational risk\-\-\-demanding consistent correctness, not occasional success\-\-\-and ReAct provides no mechanism for belief revision as evidence accumulates\. In addition, ReAct entangles semantic reasoning with controller duties such as tool orchestration and state tracking; execution errors and plan drift degrade reasoning while consuming scarce context\. We address these issues by formulating the investigation as abductive reasoning over a dependency graph and proposing EoG \(Explanations over Graphs\), a disaggregated framework where an LLM performs bounded local evidence mining and labeling \(cause vs symptom\) while a deterministic controller manages traversal, state, and belief propagation to compute a minimal explanatory frontier\. On representative ITBench diagnostics tasks, EoG improves accuracy and run\-to\-run consistency over ReAct baselines, including a 7x average gain in Majority\-at\-k F1 score\.
-
-## Alignment Is Not Enough for Safe Medical LLM Evaluation
-
-**Authors:** Zhiwen You; Yikun Han; Jana Diesner; Yue Guo
-
-**ID:** 140065 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=Tju86JH3mo>) | [PDF](<https://openreview.net/pdf?id=Tju86JH3mo>) | [Official poster](<https://neurips.cc/virtual/2026/poster/140065>)
-
-LLMs\-as\-judges \(LLJs\) are increasingly used to reduce the cost of expert review in medical evaluation\. However, high alignment with clinicians does not by itself establish validity or safety\. This position paper argues that current reporting practices for medical LLJs are insufficient: LLJ\-clinician alignment should not be reported as standalone evidence that a judge is reliable, clinically grounded, or safe for downstream use\. We identify four risks: unstable evaluations across prompts, runs, and judge models; opaque scores that hide clinically meaningful errors; weak validity under clinical uncertainty and limited clinician agreement; and downstream safety or data contamination risks when flawed scores influence model selection or synthetic data filtering\. By re\-examining LLJ evaluation setups used in prior medical studies, we show that judges treated as practical evaluators in the literature can still reject clinically equivalent diagnoses, overrate incomplete or unsafe answers, reward unsupported clinical notes, and penalize appropriate treatment plans\. We propose a protocol for medical LLJ evaluation that requires task\-specific codebooks, expert\-annotated validation sets, codebook\-derived prompts, robustness testing, clinical error analysis, uncertainty reporting, and transparent disclosure before LLJ scores are used for medical benchmarking or decision support\.
 
 ## SafeDrug: A Benchmark Dataset for Safety\-Critical Pharmacological Reasoning in LLMs
 
@@ -1170,16 +836,6 @@ LLMs\-as\-judges \(LLJs\) are increasingly used to reduce the cost of expert rev
 
 Large language models \(LLMs\) have shown strong performance on biomedical tasks, yet evaluating their reasoning in safety\-critical pharmacological contexts requires large\-scale, structured datasets\. We present SafeDrug, a benchmark dataset for systematic evaluation of pharmacological reasoning across multiple task dimensions\. SafeDrug integrates heterogeneous sources, including adverse drug event records, drug–drug interaction knowledge, literature\-derived evidence, and population\-specific information such as child, adult, and older adult groups, into a unified reasoning\-oriented QA format\. The benchmark comprises two complementary subsets\. \\textbf\{SafeDrug\-large\} provides broad coverage at scale, while \\textbf\{SafeDrug\-small\} is a high\-quality human\-annotated subset for precise evaluation\. It supports tasks such as prediction, risk assessment, mechanism explanation, evidence\-grounded QA, and drug replacement across both single\-drug and multi\-drug settings\. Our evaluation shows that LLMs capture outcome\-level associations but struggle with mechanistic reasoning, evidence alignment, and population\-aware predictions\. SafeDrug provides a foundation for reproducible benchmarking and advances research on evidence\-grounded and population\-aware pharmacological reasoning in LLMs\.
 
-## DeepArrhythmia: Segment\-Contextualized ECG Arrhythmia Classification via Selective Evidence Acquisition
-
-**Authors:** Jiahui Li; Ruili Fang; Zishuai Liu; WenZhan Song; Jin Lu; Fei Dou
-
-**ID:** 150425 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=i8JkJYOjY6>) | [PDF](<https://openreview.net/pdf?id=i8JkJYOjY6>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150425>)
-
-Beat\-level Electrocardiography \(ECG\) arrhythmia detection aims to assign an arrhythmia class to each beat in a recording, yet many existing systems treat beats as isolated local instances\. This is limiting because beat labels often depend on multi\-beat rhythm context, including timing, compensatory pauses, and beat\-to\-beat morphological consistency\. We present $\\textbf\{DeepArrhythmia\}$, a tool\-grounded multimodal framework for segment\-contextualized beat\-level ECG arrhythmia classification\. Given a multi\-beat ECG segment, DeepArrhythmia combines the raw ECG signal and a rendered waveform image, localizes R peaks to identify beat instances, and produces structured beat\-level predictions\. The framework decouples physiological measurement from evidence integration using specialized tools for beat localization, numerical rhythm\-\-morphology extraction, and morphology\-focused textual analysis\. DeepArrhythmia uses segment\-level confidence to route between minimal and rich evidence states, since richer physiological evidence is not uniformly useful\. This agentic design integrates rhythm context, explicit physiological grounding, and selective evidence acquisition for decision making\.
-
 ## NNCoxKL: Risk\-Set Distillation from Probability\-Free Prognostic Teachers for Deep Cox Models
 
 **Authors:** Lingfeng Luo; Jeremy M Taylor; Di Wang; Feiyang Deng; Yubo Shao; Kevin He
@@ -1189,16 +845,6 @@ Beat\-level Electrocardiography \(ECG\) arrhythmia detection aims to assign an a
 [Paper](<https://openreview.net/forum?id=FaX4fXye5X>) | [PDF](<https://openreview.net/pdf?id=FaX4fXye5X>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154182>)
 
 Survival models are often trained at target clinical sites where outcomes are limited and censored, while patient\-level data from external cohorts may be unavailable because of institutional data\-sharing constraints\. In many applications, the  transferable knowledge is not a dataset, a calibrated survival curve, or estimated regression coefficients, but a probability\-free prognostic artifact such as a clinician\-defined scorecard, guideline\-based staging rule, registry\-derived risk index, or coarse clinical risk group\.  These weak teachers may encode human expertise or evidence from prior cohorts, yet they often have only ordinal meaning and need not share a numerical scale with the target model\. We propose NNCoxKL, a transfer\-learning framework that trains a deep Cox model on target time\-to\-event data while distilling such human\- or model\-derived prognostic signals through Cox risk sets\. For each event risk set, NNCoxKL converts both the external signal and the neural Cox risk score into Plackett\-\-Luce distributions and regularizes the Cox partial likelihood through a temperature\-scaled KL alignment term\. This transforms clinical knowledge into a censoring\-aware ranking prior over who is most likely to fail next, rather than treating the external score as a covariate or requiring it to represent calibrated survival probabilities\. The external signal enters only through this risk\-set regularizer, allowing the model to learn nonlinear target\-cohort effects while borrowing relative\-risk information from external clinical knowledge\. Experiments on independent clinical transfer tasks and controlled survival benchmarks show that NNCoxKL improves discrimination and calibration\-sensitive prediction over internal\-only deep Cox models and common score\-transfer baselines\.
-
-## MedExAgent: Training LLM Agents to Ask, Examine, and Diagnose in Noisy Clinical Environments
-
-**Authors:** Yicheng Gao; Xiaolin Zhou; Yahan Li; Yue Zhao; Ruishan Liu
-
-**ID:** 149616 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=olngQeJA7J>) | [PDF](<https://openreview.net/pdf?id=olngQeJA7J>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149616>)
-
-Real\-world clinical diagnosis is a complex process in which the doctor is required to obtain information from both interaction with the patient and conducting medical exams\. Additionally, the doctor needs to adapt to different patient personas, as well as noisy and incomplete information that can happen at any time during the process\. However, existing benchmarks for medical LLMs and methods for automatic diagnosis largely simplify this process by reducing it to single\-turn question answering, noise\-free conversations, or sequential exam making, etc\., ignoring the interactive and uncertain nature of clinical diagnosis\. In this paper, we aim to address this gap by formalizing clinical diagnosis as a Partially Observable Markov Decision Process \(POMDP\) with three action types: questioning the patient, ordering medical exams as tool calls, and issuing a diagnosis\. We also introduce a systematic noise model comprising seven patient noise types and three exam noise types\. Using our proposed environment, we train an effective diagnosis agent, \\textbf\{MedExAgent\}, through a two\-stage pipeline that first performs supervised finetuning on synthetic conversations structured after the Calgary\-Cambridge model for clinical interviews, and then applies DAPO to optimize a composite reward capturing diagnostic accuracy, tool call quality, and exam cost including financial cost and patient discomfort\. Through extensive experiments and ablation studies, we demonstrate that MedExAgent achieves diagnostic performance comparable to larger models while maintaining cost\-efficient examination strategies\.
 
 ## Gaussian Mixture Models in Hilbert Spaces via Kernel Methods
 
@@ -1214,181 +860,53 @@ Modern datasets across many disciplines increasingly consist of time\-evolving, 
 
 **Authors:** Zhan Qu; Michael Färber
 
-**ID:** 154851 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
+**ID:** 154851 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
 [Paper](<https://openreview.net/forum?id=AQvN9jkmVc>) | [PDF](<https://openreview.net/pdf?id=AQvN9jkmVc>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154851>)
 
-_Abstract unavailable from the accessible public sources._
+Predicting future clinical events from longitudinal electronic health records \(EHRs\) requires selecting plausible outcomes from a large and structured event space under sparse observations\. While clinical coding systems provide hierarchical organization of events, cross\-modal and temporal relationships are not explicitly specified and must instead be inferred from data, making prediction difficult for weakly observed longitudinal transitions\. We introduce Risk Horizons, a geometry\-aware framework for constructing patient\-specific candidate spaces for multi\-modal next\-visit prediction\. Risk Horizons combines deterministic coding hierarchies with data\-driven lagged cross\-modal associations, embeds the resulting clinical graph in hyperbolic space, and retrieves candidate futures using directional risk cones\. This reframes longitudinal prediction as ranking within a compact, clinically coherent hypothesis space rather than scoring an unconstrained vocabulary\. Experiments on MIMIC\-IV and eICU demonstrate competitive next\-visit prediction performance, with consistently improved hierarchy consistency across diagnoses, procedures, and medications\. Further analysis suggests that hyperbolic structured candidate retrieval is the primary driver of performance, while LLMs are effective as constrained inference\-time rerankers operating over clinically grounded candidate sets\.
 
 ## ProbMedTOD: A Bayesian Network Guided Task\-Oriented Dialogue System for Patient History Taking
 
 **Authors:** Vishal Saley; Bhavesh Gurnani; Dinesh Raghu; Mausam
 
-**ID:** 154360 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
+**ID:** 154360 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
 
 [Paper](<https://openreview.net/forum?id=E9x9Hty6Qa>) | [PDF](<https://openreview.net/pdf?id=E9x9Hty6Qa>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154360>)
 
-_Abstract unavailable from the accessible public sources._
+Patient history taking is a strategic, multi\-turn process that refines diagnostic hypotheses through iterative questioning, mirroring clinical reasoning where each inquiry updates beliefs over candidate diagnoses\. Deploying AI in this setting is constrained by privacy, cost, and latency, making Small Language Models \(SLMs\) a more desirable backbone compared to larger LLMs\. However, SLMs capture only the fast, intuitive "System 1" side of this process and lack explicit mechanisms for the deliberative "System 2'' reasoning needed to maintain and update diagnostic uncertainty over time\. Bayesian Networks \(BayesNets\) offer a natural complement, providing an interpretable framework for auditable probabilistic belief tracking\. Yet, clinical BayesNets are difficult to construct due to reliance on expert\-curated structure, dependencies, and parameters\. We introduce ProbMedTOD, that automatically synthesizes a clinical BayesNet from a small number of clinical notes in three stages: ontology building, structure prediction, and parameter estimation\. ProbMedTOD then integrates the resulting BayesNet with SLMs enabling probabilistic reasoning in multi\-turn dialogues\. A BayesNet Agent maintains real\-time posterior distributions over diagnoses, while a Policy Agent picks the diagnostically informative questions\. Experiments on DDXPlus and MIMIC\-IV Notes show that ProbMedTOD outperforms LLM\-only and retrieval\-based baselines, with especially strong gains for smaller models\.
 
-## CLR\-voyance : Reinforcing Open\-Ended Reasoning for Inpatient Clinical Decision Support with Outcome\-Aware Rubrics
+## Extending Pretrained 10\-Second ECG Foundation Models to Longer Horizons
 
-**Authors:** Aishik Nagar; Arun\-Kumar Kaliya\-Perumal; Yu\-Hsuan Han; Andrew Sheng\-Han Huang; Kristen Kee; Yushi Cao; Yiming Chen; Hongchao Jiang
+**Authors:** Wei Tang; Jinpei Han; Kangning Cui; Mattia Carletti; Fredrik K\. Gustafsson; Shreyank Gowda; Patitapaban Palo; Anshul Thakur; Lei Clifton; Jean\-michel Morel; Raymond H Chan; David Clifton; Xiao Gu
 
-**ID:** 150688 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
+**ID:** 150095 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=gFCYsqy2Py>) | [PDF](<https://openreview.net/pdf?id=gFCYsqy2Py>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150688>)
+[Paper](<https://openreview.net/forum?id=kk9jN1duEy>) | [PDF](<https://openreview.net/pdf?id=kk9jN1duEy>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150095>)
 
-_Abstract unavailable from the accessible public sources._
+Electrocardiogram \(ECG\) foundation models pretrained on typical diagnostic 10\-second ECG segments, have demonstrated strong transferability across a range of clinical applications\. However, many real\-world applications produce recordings that are typically longer, and are varied in duration during inference time\. These 10\-second models have no built\-in way to combine information across time\. Extending them to longer horizons introduces two challenges: \_structural\_ incompatibilities arising from input\-length disparities, and \_semantic\_ challenges that limit meaningful temporal aggregation\. We propose a parameter\-efficient framework that extends pretrained ECG foundation models to longer and variable\-length ECGs without retraining the backbone\. Guided by a frozen pretrained 10\-second model, we introduce a lightweight plug\-in module that extends the model in two complementary ways: \(i\) structurally compatible long\-sequence processing and \(ii\) semantically informed temporal modeling\. Experiments on multiple long\-horizon ECG tasks, datasets, and foundation model backbones demonstrate that our method enables robust long\-horizon extension from pretrained snapshot models, consistently outperforming sliding\-window and pooling\-based baselines with strong parameter efficiency\.
 
-## ER\-Reason: A Benchmark Dataset for LLM Clinical Reasoning in the Emergency Room
+## Subject\-Relative Micro\-Motion and Sleep Dynamics for Near\-Infrared Video Sleep Staging
 
-**Authors:** Nikita Mehandru; Niloufar Golchini; Namrata Garg; Kathy T LeSaint; Christopher J Nash; Anu Ramachandran; Travis Zack; Liam Greg McCoy; Adam Rodman; David Bamman; Melanie Molina; Ahmed Alaa
+**Authors:** Kunmin Jang; Yourim Choi; Hun Heo; Dongik Park; Suahn Bae; Heonjun Lee; Hyun\-Woo Shin; Hyung\-Sin Kim
 
-**ID:** 138971 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
+**ID:** 155448 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=tI6dUEC7KR>) | [PDF](<https://openreview.net/pdf?id=tI6dUEC7KR>) | [Official poster](<https://neurips.cc/virtual/2026/poster/138971>)
+[Paper](<https://openreview.net/forum?id=5WH6aA0LYO>) | [PDF](<https://openreview.net/pdf?id=5WH6aA0LYO>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155448>)
 
-_Abstract unavailable from the accessible public sources._
+Near\-infrared \(NIR\) video is a promising modality for contactless sleep monitoring, but recent video\-based sleep staging methods often use it as a route to reconstructed respiratory/cardiac proxies or cross\-modal physiological representations\. We study video\-only sleep staging under labels defined by polysomnography \(PSG\), where the model infers sleep stages from NIR video alone without explicit physiological proxy reconstruction or auxiliary physiological supervision\. This tests whether NIR video itself can provide informative sleep\-stage evidence, rather than only serving as an input for recovering physiological proxies\. We propose ViNUSS \(Video\-Native Unmediated Sleep Staging\), a framework that combines subject\-relative micro\-motion learning with full\-night sleep dynamics modeling\. Spatially anchored pre\-spatial micro\-motion encoding preserves localized temporal variation together with its spatial context\. Within\-subject stage contrast learns stage cues with respect to each subject's night\-specific baseline\. Two\-scale sleep dynamics modeling captures within\-epoch motion evolution and organizes epoch\-level evidence into a coherent full\-night sleep\-stage trajectory\. On 475 overnight NIR recordings \(\~3,250 hours\), ViNUSS achieves 0\.80 accuracy and 0\.78 macro\-F1 for four\-class sleep staging\. Interpretability analysis suggests attention to thoraco\-abdominal periodic motion and gross body movements associated with arousals and position changes\. These results support NIR video as an independently informative and complementary modality for PSG\-defined sleep\-stage estimation\.
 
-## SMI: Semantic Medical ID for Hierarchy\-Aware Concept Representation
+## What Gets Measured Gets Managed: Sign\-aware Recommendation Needs Sign\-aware Evaluation
 
-**Authors:** Ziyang Song; Lia Shen; Yixuan Li; Qincheng Lu; Weihao Li; Haoran Xu; Mike He Zhu; Xinyu Wang; Yue Li
+**Authors:** Minchan Kim; Jungmin Hwang; Hyunwoo Park
 
-**ID:** 154857 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
+**ID:** 139717 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=AMCfPRZTPu>) | [PDF](<https://openreview.net/pdf?id=AMCfPRZTPu>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154857>)
+[Paper](<https://openreview.net/forum?id=8heSqfIF6F>) | [PDF](<https://openreview.net/pdf?id=8heSqfIF6F>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139717>)
 
-_Abstract unavailable from the accessible public sources._
+Sign\-aware recommender systems have recently been developed to leverage negative feedback for a deeper understanding of user preferences\. However, our empirical diagnosis reveals that state\-of\-the\-art graph\-based sign\-aware recommender systems are paradoxically \*valence\-blind\*\. Even though they explicitly incorporate sign information during training, they consistently fail to differentiate liked items from disliked ones at the ranking stage, frequently infiltrating top\-$K$ recommendations with disliked content\. Through linear probing, we show that while valence information exists in the learned embeddings, it remains inaccessible to the inner\-product scoring function\. This widespread failure remains entirely undetected because conventional evaluation metrics, such as Recall, HR, and NDCG, assign a uniform utility of zero to both negative and unobserved items, creating a systematic evaluation blind spot\. To bridge this gap, we propose a family of signed metrics, Signed Recall, Signed HR, and Signed NDCG, that explicitly penalize the recommendation of disliked content\. Systematic re\-evaluation under our proposed metrics fundamentally reshapes the established performance landscape, revealing that methods ranked highly under conventional metrics often fail to protect users from disliked content\. Finally, through a proof\-of\-concept auxiliary loss, we confirm that the proposed metrics provide actionable training signals, guiding models toward valence\-aware behavior without sacrificing conventional relevance\. For transparency, our source code is available at: https://anonymous\.4open\.science/r/signed\-rec\-benchmark\-07E4
 
-## Proposing Better Rollouts for On\-Policy Distillation
-
-**Authors:** Sirui Chen; Yunzhe Qi; Haobo Xu; Jiaru Zou; Mengting Ai; Zihao Li; Jingrui He
-
-**ID:** 155190 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=7b0JDZvzTQ>) | [PDF](<https://openreview.net/pdf?id=7b0JDZvzTQ>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155190>)
-
-On\-policy distillation \(OPD\) improves language\-model post\-training by letting the student learn from its own sampled trajectories under teacher supervision, aligning the training process with inference\-time behavior\. However, the rollout policy in OPD is usually treated as fixed: each round samples directly from the current student\. We show that this choice can create a compounding teacher\-student mismatch, because it requires the teacher to provide effective supervision on whichever trajectories the student samples, including ones less reachable by the teacher itself\. On such trajectories, teacher supervision can become noisy or even misleading, leading to undesirable student patterns such as repetition\. Moreover, since the updated student in turn defines the rollout policy of subsequent rounds, these patterns persist and potentially amplify over training\.  This failure mode suggests that improving OPD requires treating the rollout policy itself as an optimization target, rather than only modifying the distillation objective\. We propose \*Mixture Proposal On\-Policy Distillation\* \(MPOPD\), which derives a student\-anchored, teacher\-guided rollout distribution from a local trust\-region objective based on relative teacher support\.  The resulting target is a geometric mixture of the student and teacher policies, and we introduce a proposal policy that approximates this mixture, enabling rollout generation in a single forward pass\.  Experiments on 16 math, knowledge, and medical reasoning benchmarks show consistent gains over OPD and recent variants\. On math reasoning, our method improves average accuracy by 6\.91 over OPD on Qwen3\-4B\-Base while reducing average generation length by 41\\%, suggesting that rollout policy design provides an effective way to improve OPD\.
-
-## CoMMa: Contribution\-Aware Medical Multi\-Agents for Decentralized Oncology Decision Support
-
-**Authors:** Yichen WU; Yujin Oh; Sangjoon Park; Kailong Fan; Yuhan Liu; Zhiyi Shi; Sekeun Kim; Dania Daye; Hana Farzaneh; Wei Liu; Xiang Li; Raul N Uppot; Quanzheng Li
-
-**ID:** 153350 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=M1eBc5lFuT>) | [PDF](<https://openreview.net/pdf?id=M1eBc5lFuT>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153350>)
-
-Recent multi\-agent frameworks have shown promise for oncology decision support, yet most assume centralized data access and rely on prompt\-based assignment, limiting their applicability in privacy\-sensitive clinical settings\. We propose Contribution\-Aware Medical Multi\-Agents \(CoMMa\), a decentralized LLM\-agent framework where specialists operate on partitioned clinical data streams\. Unlike prior approaches that share inputs across agents, CoMMa enforces data decentralization to include stronger role specialization and further enhances this via agent\-specific finetuning\. To enable reliable and interpretable coordination, we introduce a contribution\-aware aggregation mechanism that replaces stochastic, narrative\-based reasoning with deterministic embedding projections to approximate each agent's marginal utility\. This yields explicit credit assignment over agents, providing a stable and interpretable decision pathway aligned with clinical requirements\. We evaluate CoMMa on multiple oncology benchmarks, including real\-world multidisciplinary tumor board datasets from large academic hospitals in North America and East Asia, as well as public datasets, demonstrating strong performance and generalization across heterogeneous clinical settings\.
-
-## GlucoFM\-Bench: Benchmarking Time\-Series Foundation Models for Blood Glucose Forecasting
-
-**Authors:** Baiying Lu; Zhaohui Liang; Ryan Pontius; Shengpu Tang; Temiloluwa Prioleau
-
-**ID:** 139533\-\-2 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 139533
-
-[Paper](<https://openreview.net/forum?id=KNGzZNVPZk>) | [PDF](<https://openreview.net/pdf?id=KNGzZNVPZk>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139533>)
-
-Blood glucose forecasting models are foundational for modern diabetes management systems, as reliable short\-term predictions can enable proactive interventions, support automated insulin delivery, and reduce the risk of hypo\- and hyperglycemic events\. From a modeling perspective, glucose forecasting poses unique challenges due to heterogeneous physiological dynamics across different diabetes populations\. Traditional machine learning and deep learning models have been extensively evaluated for glucose prediction\. However, there is significantly less research on evaluating and benchmarking recent time\-series foundation models \(TSFMs\) for blood glucose forecasting\. To bridge this gap, we present GlucoFM\-Bench, a comprehensive benchmark evaluating state\-of\-the\-art TSFMs alongside supervised deep learning models for blood glucose forecasting\. We assess eight representative architectures, including pre\-trained TSFMs, time\-series large language models, and task\-specific deep learning models, across 15 publicly available diabetes\-relevant datasets comprising 1,117 individuals with type 1 diabetes, type 2 diabetes, prediabetes, and no diabetes\. Models are evaluated under zero\-shot, few\-shot, and full\-shot protocols, with systematic variation in context length and prediction horizon\. Across datasets, pre\-trained TSFMs, especially Chronos\-2 and TimesFM, show strong zero\-shot and few\-shot transfer, with the best zero\-shot model performing within 5% of the best full\-shot supervised model\. Yet, when task\-specific data is abundant, a lightweight LSTM remains strongest, outperforming TSFMs by 4\-21% under full\-shot training\. Stratified analyses reveal persistent challenges in T1D cohorts and hypo\-/hyperglycemic ranges, highlighting the need for evaluation beyond aggregate error metrics\. Together, GlucoFM\-Bench provides a standardized and reproducible foundation for evaluating, comparing, and improving foundation models for blood glucose forecasting\. The dataset and code are publicly available at https://huggingface\.co/datasets/glucofmbench/GlucoFM\-Bench and https://anonymous\.4open\.science/r/GlucoseML\_benchmark\-B50C, respectively\.
-
-## Extending ROC Analysis to Uncertainty\-Aware Risk Prediction with an Interval\-Based AUC \(iAUC\)
-
-**Authors:** Yuqi Li; Matthew Engelhard
-
-**ID:** 150218\-\-3 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 150218
-
-[Paper](<https://openreview.net/forum?id=jsG2UV3YqP>) | [PDF](<https://openreview.net/pdf?id=jsG2UV3YqP>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150218>)
-
-In high\-stakes risk prediction, interval\-valued predictions provide a natural way to represent predictive uncertainty\. However, standard evaluation tools such as the receiver operating characteristic \(ROC\) curve and the area under the curve \(AUC\) are designed for point\-valued predictions and do not capture how uncertainty affects discrimination performance\. To address this gap, we develop an uncertainty\-aware ROC framework and corresponding interval\-based AUC \(iAUC\) metrics for evaluating the performance of interval\-valued risk predictions\. The framework constructs two ROC\-style curves with associated areas $\\mathrm\{AUC\}\_L$ and $\\mathrm\{AUC\}\_U$, and shows that these quantities induce a three\-region decomposition of positive\-negative rankings into confidently correct, ambiguous, and confidently incorrect orderings\. Under valid class\-conditional coverage, $\\mathrm\{AUC\}\_L$ and $\\mathrm\{AUC\}\_U$, together with the pairwise miscoverage rate, provide theoretical bounds on the optimal AUC, linking interval coverage to achievable discrimination\. The framework is compatible with a range of methods for quantifying epistemic uncertainty in risk prediction, including Bayesian, bootstrap, and ensemble\-based procedures, and provides a practical way to compare predictive models and interval\-generation methods\. Experiments on clinical benchmark data and MIMIC\-IV mortality prediction show that models with similar point AUC can have different uncertainty\-aware ranking profiles, and that the proposed decomposition can support risk\-aware model selection and threshold\-based abstention\.
-
-## Can AI Agents Synthesize Scientific Conclusions?
-
-**Authors:** Hayoung Jung; Pedro V Diniz; José R Roveda; Abner F da Silva; Haeun Jung; Enoch Tsai; Aleksandra Korolova; Manoel Ribeiro
-
-**ID:** 139077\-\-2 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 139077
-
-[Paper](<https://openreview.net/forum?id=mWOGkdnMZp>) | [PDF](<https://openreview.net/pdf?id=mWOGkdnMZp>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139077>)
-
-Scientific AI agents increasingly retrieve evidence, reason across sources, and synthesize conclusions used in consequential decisions\. Yet, their ability to do so in high\-stakes domains such as health remains unclear\. We introduce SciConBench, a large\-scale live benchmark of 9\.11K questions and expert\-written conclusions from systematic reviews to evaluate open\-domain scientific conclusion synthesis\. The benchmark draws on an expert\-validated automated evaluation pipeline that decomposes conclusions into atomic facts and measures correctness and comprehensiveness via factual precision and recall\. To mitigate data leakage, we further introduce SciConHarness, a clean\-room evaluation harness that equips agents with controlled web interaction to ensure valid measurement\. Evaluating 8 frontier models and deep research agents, we find that factual quality remains low: under clean\-room settings, the best agent achieves only a factual F1 of 0\.337\. Our clean\-room setting consistently reduces performance relative to unconstrained evaluation, suggesting that leakage inflates estimates of models' true synthesis capabilities\. Finally, we audit consumer\-facing agents \(e\.g\., Google AI Overview, OpenEvidence\) and find they frequently generate incomplete and sometimes contradictory conclusions, even when the ground\-truth answer is available\. Overall, our results show that reliable synthesis of scientific conclusions remains an open challenge, and that clean\-room evaluation is essential for assessing open\-domain AI agents\.
-
-## Evaluating Synthetic ECG Pretraining: When Can Patient\-Free Simulators Substitute for Real ECG Data?
-
-**Authors:** Naoki Nonaka; Jun Seita
-
-**ID:** 139147\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 139147
-
-[Paper](<https://openreview.net/forum?id=iJc0X3nEby>) | [PDF](<https://openreview.net/pdf?id=iJc0X3nEby>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139147>)
-
-ECG, with mature physiological simulators and public benchmarks, is a useful testbed for evaluating what synthetic pretraining supports\. We introduce a reusable framework for ECG representation learning that compares patient\-free physiological simulators, patient\-derived real ECGs, and learned synthetic ECGs from real\-ECG\-trained generators\. Holding the encoder and MAE objective fixed, we study three matched settings\. Transfer\-protocol analysis compares abnormal\-inclusive real ECGs, normal\-only real ECGs, and simulator pretraining under frozen probing and full fine\-tuning on 26 abnormal\-ECG tasks from PTB\-XL, G12EC, and CPSC2018 using a single\-lead\-II pipeline\. Compute\-normalized PTB\-XL scaling tests whether simulator pretraining matches real\-data pretraining under equal processed\-sample budgets\. A fixed 100k\-sample generator\-class comparison evaluates VAE, DCGAN, SSSD\-ECG diffusion variants with and without labels, and two simulators, SimECG\-M and SimECG\-N\. The transfer analysis shows that protocol determines the supported claim: abnormal\-inclusive real ECG pretraining yields more linearly separable pathology features under frozen probing, whereas full fine\-tuning narrows the gap and can reverse it when the simulator corpus is sufficiently scaled\. Under the fixed\-100k protocol, task\-wise F1 averaged over five runs ranks SimECG\-N first on 22/26 tasks; no evaluated learned generator ranks first under this fixed\-100k protocol; and SimECG\-N obtains higher mean F1 than both diffusion variants on all 26 tasks\. These results delineate where abnormal\-inclusive real exposure remains beneficial and where patient\-free physiological simulation can serve as an effective, protocol\-bound substitute under the evaluated single\-lead\-II MAE pretraining and full\-fine\-tuning setting\. We release pretraining corpora, splits, and code to support reproducible evaluation of synthetic ECG pretraining sources\.
-
-## Echo\-SAM: Zero\-Shot Learning of Unseen Structures via Medical Knowledge Graph Grounding
-
-**Authors:** Jiewen Yang; Xiaomeng Li
-
-**ID:** 152656\-\-2 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 152656
-
-[Paper](<https://openreview.net/forum?id=RNvUsEyQua>) | [PDF](<https://openreview.net/pdf?id=RNvUsEyQua>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152656>)
-
-Segmenting unseen anatomical structures in echocardiographic images is challenging because dense annotations are scarce and ultrasound often presents visually similar textures across different cardiac structures\. Current foundation models remain limited in this setting because they treat anatomical knowledge as independent text prompts, overlooking the spatial topology that clinicians use to localize ambiguous structures from their visible neighbors\. We propose Echo\-SAM, a zero\-shot ultrasound segmentation framework that grounds a structured cardiac knowledge graph in visual space through relation\-conditioned geometric support inference\. Echo\-SAM localizes seen structures as anatomical anchors, propagates relational constraints through a knowledge\-grounded Graph Neural Network, and enhances text prompts with image\-grounded anatomical context\. We further introduce a topology\-to\-geometry mapping that converts graph relations into geometry\-aware support proposal scores, yielding posterior\-guided support estimates for unseen structures\. By treating relation\-specific scale, thickness, and offset as latent geometric variables, Echo\-SAM adapts graph\-derived support proposals to image\-specific anchors without relying on fixed coordinate templates\. Extensive evaluations on zero\-shot echocardiography segmentation benchmarks demonstrate that Echo\-SAM substantially outperforms state\-of\-the\-art foundation models, achieving up to 50\.42\\% absolute improvement in Dice score\. Code will be publicly available\.
-
-## Rethinking Contrastive Targets in Radiology Language\-Image Pretraining
-
-**Authors:** Yunhe Gao; Ashwin Kumar; Jiaming Liu; Chong Wang; Maya Varma; Fuying Wang; Stefania L Moroianu; Louisa Fay; Sergios Gatidis; Akshay Chaudhari; Curtis Langlotz
-
-**ID:** 148888\-\-3 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 148888
-
-[Paper](<https://openreview.net/forum?id=uRbyMugqG7>) | [PDF](<https://openreview.net/pdf?id=uRbyMugqG7>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148888>)
-
-CLIP\-style contrastive image\-\-text pretraining is widely used in radiology data, where each image is paired with one report and every other report in the batch is treated as a negative\. Under this recipe, two failures appear, neither systematically addressed by existing contrastive learning theory: zero\-shot evaluation peaks then degrades while training loss keeps decreasing, and training fails to learn at all at large batches\. We hypothesize the cause is structural rather than radiology\-specific: many unpaired reports share clinical findings with a given image, so CLIP's paired\-identity target is systematically biased, not merely noisy\. To test this, we construct CLEVR\-Radiology, a synthetic testbed that preserves only this overlapping\-fact structure and reproduces both failures\. With evidence that the structure is sufficient to reproduce the failures, we develop a target\-misspecification theory that derives both failures from a single deterministic gradient bias amplified by batch size, and use it to motivate a minimal compatibility\-based correction, CorLIP: a text is treated as positive whenever its clinical assertions agree with the image, with no other change to the training pipeline\. Beyond benchmark improvements, CorLIP removes the post\-peak degradation, makes large\-batch training succeed where it previously collapsed, substantially amplifies the gains from more data, and is the only configuration that remains stable up to B=2048\. The correction also transfers from chest X\-ray to 3D CT modalities\.
-
-## REAL\-MED: Benchmarking LLM Agents on Real\-World Medical Tasks
-
-**Authors:** Zihan Wang; yifan zhang; Jieqiong Cao; Junxiu Chen; Shanni Chen; ChaoGao; Hao Wang; Shi Feng; Xiaocui Yang; Jinghao Lin; Kai WU; Xiaozhong Ji; Haihua Yang
-
-**ID:** 139773\-\-3 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 139773
-
-[Paper](<https://openreview.net/forum?id=5cVNXIDXfi>) | [PDF](<https://openreview.net/pdf?id=5cVNXIDXfi>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139773>)
-
-Real\-world medical work extends far beyond answering isolated clinical questions: it often requires clinicians to process complex materials, interact with information systems, and produce structured deliverables\.  As AI systems evolve from medical chatbots into medical agents, evaluation should likewise move beyond \\emph\{answer correctness\} toward the \\emph\{quality of end\-to\-end workflow deliverables\}\.   We introduce \\textsc\{Real\-Med\}, a benchmark for evaluating AI agents on real\-world medical tasks\.  \\textsc\{Real\-Med\} contains 405 expert\-designed tasks across four categories: Clinical Support, Patient Management, Pharmacy Management, and Medical Education \\&amp; Research\.  Each task is grounded in a realistic scenario with concrete materials, tool interfaces, and explicit deliverable requirements, such as clinical documents, medication plans, spreadsheets and review reports\.  To support rigorous evaluation, each task is annotated with fine\-grained expert\-written rubrics, averaging 15\.4 independent rubric items per task, and every task is cross\-validated by at least three medical experts\.  We evaluate 11 strong mainstream models under a unified harness with the same resources, tools, and execution protocol\.  Our results show that current agents can often satisfy surface\-level task requirements, but still struggle with detail\-sensitive medical reasoning, dosage\-calculation traps, shallow research, formatting constraints, and reliable final delivery\.  These findings reveal a substantial gap between medical QA ability and robust execution in realistic medical workflows\. Code is available at \\url\{https://anonymous\.4open\.science/r/REAL\-MED\}\.
-
-## Does Cross\-Panel Pretraining Transfer Under Marker Heterogeneity? A Large\-Scale Empirical Study in Clinical Flow Cytometry
-
-**Authors:** Zixin \(Zora\) Zhuang; Benjamin Mashford; Dan Andrews
-
-**ID:** 153804\-\-3 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 153804
-
-[Paper](<https://openreview.net/forum?id=IZxWllh1po>) | [PDF](<https://openreview.net/pdf?id=IZxWllh1po>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153804>)
-
-Flow cytometry is the primary assay for single\-cell immune profiling, yet cross\-study modelling remains under\-explored\. The challenge is two\-fold: Studies measure different marker panels, inducing feature\-space inconsistency, while batch effects shift signals even on shared markers, making transfer harder than in vision or language where input spaces are stable\. We conduct a large\-scale empirical study, pretraining an encoder on 89,324 samples from 112 public studies spanning 525 distinct marker panels\. We evaluate it frozen \-\-\- isolating representation quality from task\-specific adaptation, on five clinical tasks under a taxonomy of panel\-overlap conditions, including three panel\-zero\-shot tasks whose marker panels were unseen during pretraining, and one negative control with no expected discriminative signal\. We further characterise transfer across scaling axes and probe robustness to marker removal at test time\. Despite heterogeneity that disrupts direct transfer, the frozen encoder matches or exceeds in\-distribution specialist encoders on 4 of 5 tasks, including all three novel\-panel tasks, and behaves as expected on the negative control\. Scaling analyses reveal saturation in both encoder capacity and random corpus subsampling, and representations degrade gracefully under marker reduction\. These results suggest a pretrained encoder can serve as a general\-purpose feature extractor for clinical cytometry data, without task\-specific retraining\.
-
-## MedVTok: A General\-Purpose Medical Visual Tokenizer
-
-**Authors:** Chenglong Ma; Yuanfeng Ji; Junzhi Ning; Jiyao Liu; Yujie Wei; Shaohao Rui; Chaoyang Zhang; Wenjie Li; Wenhao Tang; Cheng Tang; Wei Li; Shujian Gao; Yujie Zhang; Ying Chen; Zilong Li; Zongyuan Ge; Diping Song; Jin Ye; Ming Hu; Junjun He; Hongming Shan
-
-**ID:** 152136\-\-3 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 152136
-
-[Paper](<https://openreview.net/forum?id=VGTDLvJS3w>) | [PDF](<https://openreview.net/pdf?id=VGTDLvJS3w>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152136>)
-
-Multimodal medical AI requires a common visual interface that integrates heterogeneous imaging evidence for patient condition modeling\. However, existing medical visual tokenizers are often tied to a specific dimension and imaging modality, forcing multimodal systems to rely on fragmented and poorly reusable representations\. We introduce MedVTok, a general\-purpose visual tokenizer that maps 2D images and 3D volumes from diverse imaging modalities into a unified token space\. Building such a tokenizer poses two key challenges: preserving anatomical structure across dimensions and capturing clinical semantics across modalities\. To this end, MedVTok introduces \(i\) slice differential regularization, which explicitly models inter\-slice anatomical coherence missing in previous per\-pixel/per\-voxel supervision, and \(ii\) multi\-expert representation alignment, which integrates knowledge from multiple medical expert encoders while retaining modality\-specific complementary knowledge\. Trained on 28M images and 70K volumes across 9 imaging modalities, MedVTok supports classification, retrieval, segmentation, synthesis, visual question answering, and medical report generation through a single tokenizer\. Across 24 benchmarks, MedVTok achieves state\-of\-the\-art performance, demonstrating a scalable token interface that unifies medical image dimension, modality, and task usage\. Code and weights will be released\.
-
-## VecDBLens: A Modular Framework for Diagnosing Vector Databases  Retrieval Pipelines
+## VecDBLens: A Modular Framework for Diagnosing Vector Databases Retrieval Pipelines
 
 **Authors:** Yutong Zhou; Guoxin Kang; Wenxin Zhou; Haoyu He; Yuedong Zhu; Lei Wang; Wanling Gao; Fanda Fan; Jianfeng Zhan
 
@@ -1398,147 +916,125 @@ Multimodal medical AI requires a common visual interface that integrates heterog
 
 Vector databases are increasingly deployed as retrieval pipelines in which representation, indexing, and query\-time execution jointly determine accuracy, throughput, and cost\. Existing vector database evaluations primarily focus on indexing while treating embeddings as fixed inputs and ignoring the role of query\-time execution, making it difficult to decide whether a bottleneck should be addressed by changing the embedding model, the index, or the query\-processing stages\. To address the above limitation, we introduce \\textbf\{VecDBLens\}, a modular attribution framework that treats the component under diagnosis as an \\emph\{evaluated object\} and all remaining dataset, workload, parameter, and runtime factors as matched \\emph\{evaluation conditions\}\. VecDBLens reports stratified marginal effects, paired matched\-condition differences, Flat\-relative retention, and monotonicity audits, thereby turning vector database benchmarking from leaderboard ranking into a reproducible diagnostic procedure\. VecDBLens reveals two key insights\. First, retrieval performance is fundamentally upper\-bounded by embedding quality, revealing that many apparent indexing failures are therefore representation\-side limitations\. Second, stronger index parameterization is not always beneficial: overly aggressive configurations can reshape neighborhood topology and cause recall regression\. These results challenge the common practice of evaluating vector databases primarily through indexing and show that real\-world limitations emerge from stage\-wise constraints rather than any single module alone\. VecDBLens provides a principled basis for identifying the true performance drivers of vector databases and for guiding their design in practical applications\. The code is available at \\url\{https://anonymous\.4open\.science/r/VecDBLens\-83A4\}\.
 
-## Can Bits Seal Language?
-
-**Authors:** Jia Xu
-
-**ID:** 153783 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=IgPTYfH7nv>) | [PDF](<https://openreview.net/pdf?id=IgPTYfH7nv>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153783>)
-
-We present an encoding method that maps each input token to a randomized  sequence of binary values \(0s and 1s\)\. By operating at the finest representational  granularity and applying compression, this approach reduces the effective  vocabulary to just two symbols, yielding a compact, task\-agnostic representation\.  Across eleven main tasks spanning six modalities \(human text, genetic/clinical  data, programming code, system logs, biological signals, and tabular medical data\),  it achieves up to two orders of magnitude stronger privacy guarantees under six  gradient\-based attack settings compared to seven encoder baselines and four  defense baselines, including up to 549× improvement on FILM and 62× on TAG\. At  the same time, it reduces embedding model size by up to 98%, while maintaining  competitive accuracy and computational efficiency\. It also improves multilingual  generalization, achieving up to a 4× increase in accuracy in low\-resource settings\.
-
 ## MedMemoryBench: Benchmarking Agent Memory in Personalized Healthcare
 
 **Authors:** Yihao Wang; Haoran Xu; Renjie Gu; Yixuan Ye; Xinyi Chen; Xinyu Mu; Yuan Gao; guo chunxiao; Peng Wei; Jinjie GU; Huan Li; Ke Chen; Lidan Shou
 
-**ID:** 139145\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 139145
+**ID:** 139145 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
 [Paper](<https://openreview.net/forum?id=iL37bwRpOg>) | [PDF](<https://openreview.net/pdf?id=iL37bwRpOg>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139145>)
 
 The large\-scale deployment of personalized healthcare agents demands memory mechanisms that are exceptionally precise, safe, and capable of long\-term clinical tracking\. However, existing benchmarks primarily focus on daily open\-domain conversations, failing to capture the high\-stakes complexity of real\-world medical applications\. Motivated by the stringent production requirements of an industry\-leading health management agent serving tens of millions of active users, we introduce \*\*MedMemoryBench\*\*\. We develop a human\-agent collaborative pipeline to synthesize highly realistic, long\-horizon medical trajectories based on clinically grounded, synthetic patient archetypes\. This process yields a massive, expertly validated dataset comprising approximately 2,000 sessions and 16,000 interaction turns\. Crucially, MedMemoryBench departs from traditional static evaluations by pioneering an \*evaluate\-while\-constructing\* streaming assessment protocol, which precisely mirrors dynamic memory accumulation in production environments\. Furthermore, we formalize and systematically investigate the critical phenomenon of memory saturation, where sustained information influx actively degrades retrieval and reasoning robustness\. Comprehensive benchmarking reveals severe bottlenecks in mainstream architectures, particularly concerning complex medical reasoning and noise resilience\. By exposing these fundamental flaws, MedMemoryBench establishes a vital foundation for developing robust, production\-ready medical agents\. Our dataset and benchmark are publicly available at: \.
 
-## pyCD: A Unified Benchmark for Reliable Evaluation of Cognitive Diagnosis Models
-
-**Authors:** Youheng Bai; Xueyi Li; Tengteng Cheng; Mingliang Hou; Teng Guo; Jiaqi Zheng; Zitao Liu
-
-**ID:** 139115\-\-2 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 139115
-
-[Paper](<https://openreview.net/forum?id=kGok2e0ST7>) | [PDF](<https://openreview.net/pdf?id=kGok2e0ST7>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139115>)
-
-_Abstract unavailable from the accessible public sources._
-
-## MathCD: A Benchmark Dataset for Cognitive Diagnosis with Semantic Information
-
-**Authors:** Xueyi Li; Youheng Bai; Tengteng Cheng; Mingliang Hou; Teng Guo; Jiaqi Zheng; Yongdong WU; Zitao Liu
-
-**ID:** 139318\-\-2 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 139318
-
-[Paper](<https://openreview.net/forum?id=XhTjbnmlac>) | [PDF](<https://openreview.net/pdf?id=XhTjbnmlac>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139318>)
-
-_Abstract unavailable from the accessible public sources._
-
 ## Prototype\-Aligned Multi\-View Graph Learning for EHR Prediction
 
 **Authors:** Jong\-Hoon Park; Young\-Rae Cho
 
-**ID:** 148619\-\-2 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 148619
+**ID:** 148619 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
 [Paper](<https://openreview.net/forum?id=wOyvN1QBWX>) | [PDF](<https://openreview.net/pdf?id=wOyvN1QBWX>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148619>)
 
 Electronic health records \(EHRs\) are a valuable resource for clinical prediction because they capture rich longitudinal information about patient care\. Existing graph\-based EHR models often learn relations at the cohort level, but do not clearly distinguish between global event associations and the subset of interactions actually instantiated within an individual visit\. To address this limitation, we propose MVP\-EHR, a multi\-view prototype learning framework for EHR prediction with shared type\-aware prototype alignment\. MVP\-EHR combines three key ideas: \(i\) a lift\-thresholded global knowledge graph that captures cohort\-level event associations, \(ii\) a visit\-induced local knowledge graph that preserves only the observed events and supported event\-event relations within each visit, and \(iii\) shared type\-aware prototypes that align local and global event representations before post\-event multi\-view fusion and temporal prediction\. Experiments on MIMIC\-IV show that MVP\-EHR achieves strong and consistent performance across multiple clinical prediction tasks, including 0\.9339 AUROC and 0\.1706 AUPRC for mortality prediction, the best AUROC on readmission prediction, the best overall performance on phenotype prediction, and a strong AUPRC/F1 tradeoff on drug recommendation among the compared baselines\. Ablation results further show that separating global prior from visit\-instantiated evidence, together with shared prototype alignment, is critical for robust performance\.
 
-## Symb\-xMIL: Symbolic Explanations for Multiple Instance Learning in Digital Pathology
+## Hyperbolic Concept Embedding Model for Interpretable Medical Image Diagnosis
 
-**Authors:** Yanqing Luo; Julius Hense; Niklas Prenißl; Andreas Mock; Klaus\-Robert Müller; Thomas Schnake; Mina Jamshidi Idaji
+**Authors:** Qihao Xu; Yadong Liu; Yong Xu; Xiaoling Luo; Chengliang Liu
 
-**ID:** 152976\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+**ID:** 150377 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-**Repeated source row:** 152976
+[Paper](<https://openreview.net/forum?id=iXV1pqk7ar>) | [PDF](<https://openreview.net/pdf?id=iXV1pqk7ar>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150377>)
 
-[Paper](<https://openreview.net/forum?id=OwuMiUXJ26>) | [PDF](<https://openreview.net/pdf?id=OwuMiUXJ26>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152976>)
+Although deep neural networks \(DNNs\) have demonstrated strong performance in medical classification, their opaque reasoning undermines the trustworthiness of clinical diagnoses due to limited interpretability\. Concept bottleneck models \(CBMs\) introduce an intermediate concept layer, decomposing black\-box prediction into an explicit reasoning path: image → concept → disease\. However, concepts and their corresponding diagnostic results in medical image diagnosis are often hierarchical, inclusive, and semantically unevenly distributed\. Most concept\-based methods represent concepts in Euclidean space and treat them as isolated entities, which hinders the modeling of their structural relationships and thereby reduces diagnostic transparency\. To address this, we introduce a hyperbolic concept embedding model \(HCEM\) that maps medical concepts into a hyperbolic space better suited for hierarchical representation, enabling explicit modeling of complex concept relationships and their semantic associations with diseases\. In this model, we regularize the hyperbolic concept embedding space using a positive–negative concept contrastive loss and a concept entailment cone loss\. Furthermore, we employ an intervention\-aware disease concept hyperbolic embedding regularization to learn their dynamic relationships\. It avoids rigid rule priors while improving diagnostic consistency and flexibility under concept interventions\. Extensive experiments on four medical datasets validate that our HCEM provides high accuracy in both concept and disease classification, as well as superior interpretability and intervenability\. The code will be released soon\.
 
-Explanations of multiple instance learning \(MIL\) models are widely used for validation and discovery in digital histopathology\. Existing methods primarily rely on heatmaps that highlight influential regions but do not explain how evidence from different tissue regions is combined to produce a prediction\. This limits interpretability, especially when decisions depend on interactions between tissue features\. We introduce Symbolic explainable MIL \(Symb\-xMIL\), a post\-hoc explanation framework that quantifies how a MIL model’s behavior aligns with human\-readable decision rules, expressed as logical relationships \(e\.g\., AND, OR, NOT\) between input features\. These alignment scores reveal semantic patterns underlying the model’s predictions\. We evaluate Symb\-xMIL on synthetic and real\-world histopathology datasets\. On synthetic MIL data, Symb\-xMIL reliably recovers ground\-truth logical rules\. In a clinical tumor detection task, the best\-aligned rules uncover heterogeneous decision patterns and expose hidden model errors\. On an HPV\-prediction task on TCGA\-HNSCC, a cohort of head and neck cancer, our framework refines patient survival stratification beyond HPV status with potential clinical relevance\. Overall, Symb\-xMIL extends MIL explainability beyond visual attribution toward structured, rule\-based reasoning, enabling more transparent and semantically grounded interpretation of model predictions\.
+## Cite What You Explore: Budget\-Aware LLM Reasoning over Medical KGs with Verifiable Evidence
+
+**Authors:** Chen Chen; Dongjie Wang; Mei Liu; Zijun Yao
+
+**ID:** 153952 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=HKqJQcqfEb>) | [PDF](<https://openreview.net/pdf?id=HKqJQcqfEb>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153952>)
+
+Post\-discharge risk prediction from electronic health records \(EHRs\) is difficult because many dependencies that link discharge\-time observations to downstream complications, such as comorbidity cascades and drug\-disease interactions, are absent from the record\. External medical knowledge graphs \(KGs\) can supply these missing dependencies, but tracing them demands three properties: KG exploration must remain cost\-bounded, retrieved evidence must be differentiated by source quality, and the resulting rationale must be citable for retrospective review\. Large language models \(LLMs\) can plan and verify over structured evidence, making them natural candidates for KG reasoning, but existing LLM\-based methods do not satisfy these three properties jointly\. In this paper, we propose BAR, a Budget\-Aware LLM Reasoning framework over medical KGs with three components\. First, BAR refines the raw KG into disease\-specific evidence graphs whose edges carry support scores and provenance records, turning the KG into a quality\-annotated reasoning space rather than a static feature source\. Second, an LLM then reasons over this graph through a plan\-navigate\-verify loop that decomposes the question into steps, retrieves evidence under a patient\-specific budget, and revises when verification fails\. Third, a reasoning policy is trained with a reward that compares predictions with and without acquired evidence, combined with acquisition cost and citation\-integrity terms\. Across 8 diseases and 3 prediction horizons on MIMIC\-III and MIMIC\-IV, BAR improves AUPRC by 3\.4 points over the strongest baseline, raises citation precision from 59\.8\\% to 77\.9\\%, and consumes only 62\-65\\% of the budget cap\. The code is available at https://anonymous\.4open\.science/r/BAR/\.
+
+## SANEval: Open\-Vocabulary Compositional Benchmarks with Failure\-mode Diagnosis
+
+**Authors:** Rishav Pramanik; Ian Nielsen; Jeffrey Smith; Saurav Pandit; Ravi P Ramachandran; Zhaozheng Yin
+
+**ID:** 139185 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=frX29me8bk>) | [PDF](<https://openreview.net/pdf?id=frX29me8bk>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139185>)
+
+Text\-to\-image \(T2I\) models still fail on compositional prompts that require multiple objects, correctly bound attributes, accurate counts, or specific spatial relations, yet the benchmarks used to measure this progress are themselves limited: they rely on fixed\-vocabulary detectors \(typically the \*\*80\*\* MS\-COCO classes\), produce a single opaque score, and are rarely validated against human judgment\. We introduce \*\*SANEval\*\* \(Spatial, Attribute, and Numeracy Evaluation\), an open\-vocabulary compositional benchmark with two contributions: \(i\) a public dataset of $\\sim$\*\*5,250\*\* prompts paired with images from six state\-of\-the\-art T2I models, partitioned into a Simple split \(algorithmically generated, human\-validated\) and a Hard split \(fully human\-written\), and labeled by compositional task type \(spatial, numeracy, color, shape, texture\), and \(ii\) a modular evaluation pipeline that combines an LLM\-based prompt parser, an open\-vocabulary detector with LLM\-driven synonym expansion and mapping, and three scorers for attribute binding, spatial relations, and numeracy\. Each scorer emits both a numerical score and structured diagnostic feedback identifying what is missing, extra, or mis\-bound\. We validate SANEval against human ratings \($n=500$, \*\*4\*\* annotators, \*\*5\*\* categories\): SANEval achieves a positive Pearson correlation with humans in every category \(avg $r=0\.222$\), with \*\*4\*\* of \*\*5\*\* category\-level correlations significantly above zero \(Fisher \*\*95%\*\* CIs excluding \*\*0\*\*\); the strongest prior compositional benchmark averages near zero \($r=\-0\.016$\), with \*\*4\*\* of \*\*5\*\* category CIs spanning zero\. SANEval is, to our knowledge, the only compositional T2I benchmark whose correlation sign agrees with humans on every axis\. A manual audit of \*\*10,040\*\* detections decomposes the pipeline into a perception stage and an LLM/VLM verification stage and measures end\-to\-end precision at \*\*96\.6%\*\*; the verification stage \(synonym mapping plus VLM\-as\-judge attribute reading\) contributes only \*\*1\.05%\*\* of audited false positives, while removing it collapses scores by \*\*43–76%\*\* in ablation — substantial detection work at modest precision cost\. The dataset is publicly released at \[https://huggingface\.co/datasets/saneval\-ann/saneval\-release\]\(https://huggingface\.co/datasets/saneval\-ann/saneval\-release\) and the evaluation pipeline at \[https://anonymous\.4open\.science/r/saneval\-anon\]\(https://anonymous\.4open\.science/r/saneval\-anon\)\.
+
+## CODA: Cohort\- and Drift\-aware Foundation Model for Multimodal Clinical Reasoning
+
+**Authors:** Changshuo Liu; Jiaqi Zhu; Wenqiao Zhang; Xiaokui Xiao; Beng Chin Ooi
+
+**ID:** 149608 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=opvU1rQLrM>) | [PDF](<https://openreview.net/pdf?id=opvU1rQLrM>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149608>)
+
+Recent advances in multimodal foundation models have demonstrated strong performance across diverse clinical tasks\. However, existing approaches predominantly operate at the individual sample level and fail to model the interplay between population\-level cohort patterns and patient\-specific variation that underlie real\-world clinical reasoning\. In practice, clinicians routinely reason through patient cohorts sharing similar demographic, physiological, or pathological characteristics, while accounting for patient\-specific deviations from the group prototype\. Motivated by this gap, we propose CODA, a cohort\- and drift\-aware foundation model for multimodal clinical reasoning\. CODA explicitly integrates cohort structure into the modeling pipeline through two complementary mechanisms: cohort\-aware population stratification and drift\-aware individual adaptation\. In particular, we leverage reinforcement learning to discover clinically meaningful patient cohorts and further model each patient’s deviation from cohort prototypes as a structured drift signal encoding fine\-grained individual heterogeneity\. These cohort\- and drift\-aware representations are incorporated into the foundation model to enable reasoning that is simultaneously informed by population\-level patterns and sensitive to individual\-level variation\. Extensive experiments on real\-world electronic health record \(EHR\) benchmarks demonstrate that CODA achieves consistent effectiveness and strong generalizability across diverse clinical tasks, including closed\-QA, open\-QA, and report generation\.
 
 ## NPCBench: A Clinical Apprenticeship Benchmark for Guideline\-Constrained Care\-Pathway Reasoning in Nasopharyngeal Carcinoma
 
 **Authors:** Pengkai Wang; Wei\-Wei Zhang; Yan Li; Min Tang; Zhitian Hou; Zeyu Liu; Guanghao Zhu; Yuanyi Wang; Yanggan Gu; Wenjun Wang; Minheng Ni; Congkai Xie; Zhijie Sang; Jianmin Wu; Ying Sun; Hongxia Yang
 
-**ID:** 139689\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 139689
+**ID:** 139689 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
 [Paper](<https://openreview.net/forum?id=AVTJEREEah>) | [PDF](<https://openreview.net/pdf?id=AVTJEREEah>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139689>)
 
 Current medical LLM benchmarks typically decompose clinical competence into isolated factual questions, single\-image interpretation, or brief case scenarios\.  This fragmented paradigm primarily measures local correctness but provides limited insight into whether models can progressively integrate subspecialty knowledge, multimodal evidence, and evolving patient states into safe, guideline\-constrained longitudinal reasoning\. To address this gap, we introduce NPCBench, a multimodal clinical apprenticeship benchmark for nasopharyngeal carcinoma \(NPC\)\.  NPCBench operationalizes specialist training as a staged evaluation of \(M\)LLMs across guideline recall, atomic rule application, multimodal evidence grounding, longitudinal care planning, state revision, and expert\-style consultation\.  It comprises 4,077 staged evaluation problems and 25 multimodal full\-care path episodes, covering pathology diagnosis, MRI staging, and 146 downstream clinical decisions\. The benchmark explicitly links stepwise tasks to complete patient\-level care trajectories, enabling systematic evaluation of all clinical pathways\. Beyond isolated precision, NPCBench evaluates whether the models ground decisions in multimodal evidence, maintain temporally consistent patient states, and provide safe expert\-level consultation across complete care trajectories\. Across 30 evaluated models, we observe a persistent composition gap: strong performance in local case\-level tasks does not translate into episode\-level clinical competence required for end\-to\-end patient management\. Overall, NPCBench advances medical AI evaluation from static question answering toward apprenticeship\-style workflow evaluation, providing a rigorous testbed for evidence\-grounded and temporally coherent reasoning in complex oncology care\.
 
-## UniPro: Unified Multi\-Mode Medical Image Segmentation from 2D Images to 3D Volumes via Propagation
+## RAM\-H1200: A Unified Evaluation and Dataset on Hand Radiographs for Rheumatoid Arthritis
 
-**Authors:** Bangwei Guo; Yunhe Gao; Meng Ye; Yang Zhou; Difei Gu; Guoning Zhang; Leon Axel; Dimitris Metaxas
+**Authors:** Songxiao Yang; Haolin Wang; Yao Fu; Junmu Peng; Lin Fan; Hongruixuan Chen; JIAN SONG; Masayuki Ikebe; Shinya Takamaeda\-Yamazaki; Masatoshi Okutomi; Tamostu Kamishima; yafei ou
 
-**ID:** 154671\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+**ID:** 139320 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-**Repeated source row:** 154671
+[Paper](<https://openreview.net/forum?id=XXly8RrusQ>) | [PDF](<https://openreview.net/pdf?id=XXly8RrusQ>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139320>)
 
-[Paper](<https://openreview.net/forum?id=BtMBnJkdbp>) | [PDF](<https://openreview.net/pdf?id=BtMBnJkdbp>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154671>)
+Rheumatoid arthritis \(RA\) assessment from hand radiographs requires multi\-level analysis and modeling of anatomical structures and fine\-grained local pathological changes\. However, existing public resources do not support such multi\-level analysis, often lacking full\-hand coverage, fine\-grained annotations, and consistent integration with clinical scoring systems\. In particular, annotations that enable quantitative analysis of bone erosion \(BE\) remain scarce\. RAM\-H1200 contains 1,200 hand radiographs from a regional, multi\-institutional Japanese cohort collected across six medical centers in the Sapporo region, with multi\-level annotations including \(i\) whole\-hand bone structure instance segmentation, \(ii\) pixel\-level BE masks, \(iii\) Sharp/van der Heijde \(SvdH\)\-defined joint regions of interest, and \(iv\) joint\-level SvdH scores for both BE and joint space narrowing \(JSN\)\. It provides a common evaluation resource covering anatomical structure modeling, localized erosive pathology analysis, and clinically standardized RA severity assessment from the same radiographs\. The proposed BE masks enable, for the first time, quantitative BE analysis beyond coarse categorical grading by providing explicit spatial supervision for lesion extent and morphology\. To our knowledge, RAM\-H1200 is the first public benchmark resource providing whole\-hand bone structure instance segmentation, pixel\-level BE delineation, and clinically grounded joint\-level SvdH scoring for both BE and JSN\. Results across benchmark tasks show that anatomical modeling is substantially more mature than quantitative BE analysis: whole\-hand bone segmentation achieves strong performance, whereas BE segmentation remains a major open challenge\. By providing multi\-level annotations spanning anatomical structure modeling, quantitative lesion analysis, and clinically grounded SvdH scoring, RAM\-H1200 provides a comprehensive benchmark resource for RA analysis on hand radiographs\.   Benchmark \\&amp; Code: https://github\.com/YSongxiao/RAM\-H1200   Dataset Repository: https://huggingface\.co/datasets/TokyoTechMagicYang/RAM\-H1200\-v1
 
-Medical image segmentation remains fragmented along two axes: segmentation paradigms and data dimensionality\. Existing methods are typically developed separately for semantic, in\-context, and interactive segmentation, and are further specialized to either native 2D images or 3D volumetric data\. In clinical practice, however, segmentation workflows take many forms: a case may be initialized by semantic prediction, reference\-guided segmentation, or user interaction\. Regardless of how it begins, fine\-grained refinement is naturally performed on 2D views; for volumetric scans, such 2D edits must propagate coherently to the rest of the volume\. We present \*\*UniPro\*\*, a \*\*uni\*\*fied model that bridges segmentation paradigms and data dimensionality, using \*\*pro\*\*pagation to extend 2D segmentation to 3D volumes\. Our key insight is that volumetric propagation and in\-context segmentation share the same reference\-conditioned prediction mechanism, differing only in whether the reference image–mask pairs come from other cases or from previously segmented neighboring slices\. Building on this view, UniPro supports semantic, in\-context, interactive, and propagation\-based segmentation within a single slice\-based framework, using class priors, reference exemplars, user clicks, and neighboring\-slice predictions as mode\-specific conditioning inputs\. To improve propagation reliability, UniPro further incorporates bidirectional and 3D supervision to regularize slice\-wise propagation beyond per\-slice losses\. Extensive experiments across diverse modalities and anatomies show that UniPro achieves strong performance across all segmentation settings, enabling annotation\-efficient 3D segmentation from sparse 2D initialization and reducing slice\-by\-slice correction effort\.
+## ECG\-Reasoning\-Benchmark: A Benchmark for Evaluating Clinical Reasoning Capabilities in ECG Interpretation
 
-## Multi\-site PPG: An In\-the\-Wild Physiological Dataset from Emerging Multi\-Site Wearables
+**Authors:** Jungwoo Oh; Hyunseung Chung; Junhee Lee; Min\-Gyu Kim; Hangyul Yoon; Ki Seong Lee; Youngchae Lee; Muhan Yeo; Edward Choi
 
-**Authors:** Jiayi Shao; Jiaying Ye; ShengYao Liu; Zachary Englhardt; Girish Narayanswamy; Vikram Iyer; Qiuyue \(Shirley\) Xue
+**ID:** 139595 | **Topic source:** official | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
 
-**ID:** 139177\-\-2 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+[Paper](<https://openreview.net/forum?id=GQObdYuYZB>) | [PDF](<https://openreview.net/pdf?id=GQObdYuYZB>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139595>)
 
-**Repeated source row:** 139177
+While Multimodal Large Language Models \(MLLMs\) show promising performance in automated electrocardiogram interpretation, it remains unclear whether they perform actual step\-by\-step reasoning or just rely on superficial visual cues\. To investigate this, we introduce ECG\-Reasoning\-Benchmark , a novel multi\-turn evaluation framework comprising over 6,400 samples to systematically assess step\-by\-step reasoning across 17 core ECG diagnoses\. Our comprehensive evaluation of state\-of\-the\-art models reveals a systematic shortfall in executing multi\-step logical deduction\. Although models possess the medical knowledge to retrieve clinical criteria for a diagnosis, they exhibit consistently low success rates in maintaining a complete reasoning chain, primarily failing to ground the corresponding ECG findings to the actual visual evidence in the ECG signal\. These results demonstrate that current MLLMs bypass actual visual interpretation, highlighting a limitation in their visual grounding capabilities and motivating robust, reasoning\-centric medical AI\. The code and data are available at https://anonymous\.4open\.science/r/ecg\-reasoning\-benchmark\-anonymized\-BB3C\.
 
-[Paper](<https://openreview.net/forum?id=gKLv4ForGw>) | [PDF](<https://openreview.net/pdf?id=gKLv4ForGw>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139177>)
+## Towards Error\-Free EHRs: Reasoning\-Intensive Consistency Verification Between Clinical Notes and Structured Tables in Electronic Health Records
 
-Wearables are widely used for mobile health monitoring, and photoplethysmography \(PPG\) is a key sensing modality for heart rate and related physiological measurements\. However, public in\-the\-wild PPG datasets remain largely wrist\-centric or limited to short, controlled studies, constraining research on emerging wearable form factors\. We present Multi\-site PPG, an in\-the\-wild physiological dataset collected from four custom\-developed unobtrusive wearables: a smart earring, ring, watch, and necklace\. Each device records green and infrared reflective PPG, 3\-axis acceleration, and temperature with timestamps for cross\-device alignment, while a Polar H10 chest strap provides reference electrocardiogram \(ECG\)\. Participants wore the devices for one to multiple days during daytime activities while continuing their normal routines\. The dataset contains over 350 hours of raw data and 230–290 hours of preprocessed, modeling\-ready 8\-second windows data per wearable\. We benchmark heuristic, supervised, and self\-supervised heart\-rate estimation methods, showing substantial body\-site differences: the best methods achieve mean absolute errors \(MAEs\) of 2\.30 bpm on the earring, 5\.13 bpm on the ring, 8\.37 bpm on the watch, and 8\.68 bpm on the necklace\. We further analyze motion effects and evaluate multi\-site and PPG–accelerometer fusion, demonstrating the dataset’s value for robust physiological sensing across emerging wearable form factors\.
+**Authors:** Yeonsu Kwon; Jiho Kim; Junseong Choi; Paloma Rabaey; Minseo Kim; Sujeong Im; Jeewon Yang; Jun\-Min Lee; Sangji Lee; Jiwon Kim; Hangyul Yoon; Hyunwook Kwon; Edward Choi
 
-## Reporting Practice Matters: The Impact of Reference Choice on Chest X\-ray Report Evaluation
+**ID:** 139021 | **Topic source:** official | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
 
-**Authors:** Daniel P Jeong; Charles Q Li; Hossein Hosseiny; Nitya M Bhalla; Fatma U Morency; Pradeep Ravikumar; Zachary Lipton; Michael Oberst
+[Paper](<https://openreview.net/forum?id=q9O85I1Yqn>) | [PDF](<https://openreview.net/pdf?id=q9O85I1Yqn>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139021>)
 
-**ID:** 138929\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+Data consistency between unstructured clinical notes and structured tables in Electronic Health Records \(EHRs\) is essential for patient safety and clinical decision\-making\. However, existing work on note\-table consistency verification mainly relies on surface\-level matching of numeric values or simple events\. Such approaches fail to capture the reasoning underlying real\-world EHR documentation, including clinical interpretation, event relations, and temporal changes\. To address this gap, we introduce EHR\-ReasonCon, a reasoning\-intensive benchmark for note\-table consistency verification\. Built on MIMIC\-III with expert\-guided annotations, it comprises 8,048 entities derived from clinical notes and provides high\-quality ground\-truth labels\. The annotation protocol is supported by specialized table\-exploration tools to ensure systematic evidence retrieval and reliable consistency assessment\. We also propose EHR\-INSPECTOR, an LLM\-based framework that segments notes, extracts anchor entities and temporal references, and uses table\-exploration tools to verify consistency against structured tables\. Evaluated using expert\-validated LLM\-as\-a\-judge metrics under harsh and lenient criteria, EHR\-INSPECTOR achieves state\-of\-the\-art performance across multiple model backbones\. Analyses further demonstrate the effectiveness of its components and highlight differences from human verification\. The code is available at https://anonymous\.4open\.science/r/EHR\-ReasonCon\-1A54/\.
 
-**Repeated source row:** 138929
+## RadOmni: Advancing Foundation Model for Non\-contrast CT with Omni Radiology Knowledge
 
-[Paper](<https://openreview.net/forum?id=vocvkC0AxO>) | [PDF](<https://openreview.net/pdf?id=vocvkC0AxO>) | [Official poster](<https://neurips.cc/virtual/2026/poster/138929>)
+**Authors:** Fenghe Tang; Weiwei Cao; Wenxin \(Wendy\) Ma; Kai Cao; Huanhuan Liu; Ling Zhang; S\. Kevin Zhou; Jianpeng Zhang
 
-Radiologists follow heterogeneous reporting practices\. Two radiologists examining the same image and identifying the same clinical findings might nevertheless compose superficially distinct reports, varying in terminology, shorthand, formatting, and level of detail\. These variations in reporting norms represent an under\-appreciated obstacle in efforts to evaluate AI\-based radiology report generation \(RRG\) models, where machine\-generated reports are typically assessed based on their concordance with human\-generated references\. In this paper, we quantify the sensitivity of established evaluation metrics to variations in reporting practices, revealing impacts significant enough to alter the rankings of models\. We introduce a radiologist\-informed taxonomy of variations in radiology reporting practice and a method \(ReRef\) that rewrites reference reports along the axes of our taxonomy while preserving clinical interpretation\. For instance, when comparing the performance of nine RRG models on MIMIC\-CXR using the GREEN metric, condensing the discussion of normal findings in the reference reports causes Libra to drop from first place to third while CheXOne rises from third to first\. Our results suggest that current metrics may fail to decouple clinical interpretation from conformity to reporting practices and that choosing the "right" references that accurately reflect the desired reporting practices can be important in practice\. To support future research, we release MIMIC\-CXR\-Ext\-ReRef, a radiologist\-validated dataset of 120 \(original, alternative\) reference report pairs derived from MIMIC\-CXR\.
+**ID:** 149480 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=poblb4YHlr>) | [PDF](<https://openreview.net/pdf?id=poblb4YHlr>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149480>)
+
+Non\-contrast CT \(NCCT\) is widely used in clinical practice, yet its limited soft\-tissue contrast often renders visual information insufficient for accurate diagnosis\. In routine radiology workflows, NCCT is commonly accompanied by contrast\-enhanced CT, radiology reports, and pathology reports, which provide complementary knowledge at different levels, from structural and morpho\-functional cues to semantic findings and pathological evidence\. However, existing pretraining paradigms address this challenge only partially, each introducing complementary but still limited constraints on NCCT representations\. To address this limitation, we propose RadOmni, a unified omni\-pretraining framework that injects multimodal radiology knowledge into representation learning for non\-contrast CT\. RadOmni formulates a curriculum consolidation learning strategy, in which knowledge is progressively injected according to optimization difficulty and knowledge level through four stages: masked image modeling on non\-contrast CT, cross\-phase transfer of anatomical structures and enhanced patterns from contrast\-enhanced CT, report\-guided semantic learning, and pathology\-informed diagnostic enhancement\. To mitigate optimization conflicts across heterogeneous objectives and reduce knowledge forgetting, each stage retains and jointly optimizes the objectives from preceding stages, while early encoder layers are selectively frozen to preserve generic representations\. To enable such multi\-source pretraining, we curate Omni\-CT10K, a large\-scale CT dataset with more than 10K NCCT scans featuring clinically co\-occurring multimodal supervision\. Extensive experiments on Omni\-CT10K, two in\-house benchmarks from different centers, and the public MSD benchmark show that RadOmni consistently achieves strong performance across classification, segmentation, pathological TNM staging, and radiology report generation tasks\. Further analyses demonstrate favorable scaling behavior, robust cross\-center generalization, and transferable representations\.
 
 ## Risk\-Controlled Post\-Processing of Decision Policies
 
 **Authors:** Sunay Joshi; Tao Wang; Hamed Hassani; Edgar Dobriban
 
-**ID:** 154732\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 154732
+**ID:** 154732 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
 [Paper](<https://openreview.net/forum?id=BRnQhDXD2y>) | [PDF](<https://openreview.net/pdf?id=BRnQhDXD2y>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154732>)
 
 Predictive models are often deployed through existing decision policies that stakeholders are reluctant to change unless a risk constraint requires intervention\. We study risk\-controlled post\-processing: given a deterministic baseline policy, choose a new policy that maximizes agreement with the baseline subject to a chance constraint on a user\-specified loss\. At the population level, we show that the optimal policy has a threshold structure: it follows the baseline except on contexts where switching to the oracle fallback policy yields a large reduction in conditional violation risk\. At the finite\-sample level, given a fitted fallback policy and score, we develop a post\-processing algorithm that uses calibration data to select a threshold\. Leveraging tools from algorithmic stability and stochastic processes, we show that under regularity conditions, in the i\.i\.d\. setting, the expected excess risk of the post\-processed policy is $O\(\\log n/n\)$\. In the special case when an exact\-safe fallback policy is available, the algorithm achieves precise expected risk control under exchangeability\. In this setting, we also give high\-probability near\-optimality guarantees on the post\-processed policy\. Experiments on a COVID\-19 radiograph diagnosis task, an LLM routing problem, and a synthetic multiclass decision task show that targeted post\-processing can meet or nearly meet risk budgets while preserving substantially more agreement with the baseline than score\-blind random mixing\.
-
-## NicheIB: Targeted Spatial Bottlenecks for Predictive Microenvironment Discovery
-
-**Authors:** Chenxi He
-
-**ID:** 153405\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 153405
-
-[Paper](<https://openreview.net/forum?id=LaZNrmtjRL>) | [PDF](<https://openreview.net/pdf?id=LaZNrmtjRL>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153405>)
-
-Spatial transcriptomics methods typically cluster spots into coherent tissue domains, but many biological questions are target\-specific: which spatial context predicts a particular cell state, gene program, or clinical phenotype? We propose NicheIB, a Targeted Spatial Bottleneck \(TSB\) that learns which spatial edges matter for a user\-specified target via input\-dependent Hard Concrete edge gates with controllable sparsity budgets\. Training the same model on the same tissue with different targets—cortical\-layer annotations, oligodendrocyte gene programs, excitatory neuron markers—produces distinct edge retention patterns whose correlation mirrors the biological similarity of the targets, confirmed across human cortex, mouse brain, and cancer tissues\. The bottleneck also reveals which programs are spatially structured at a given resolution and which are not, serving as a diagnostic tool for spatial biology\. On mouse brain region prediction, TSB retains only 20% of spatial edges while approaching the full\-graph baseline \($F\_1 = 0\.915$ vs\. $0\.926$\), identifying a minimal informative subgraph from a mostly redundant spatial graph\. External validation confirms that the retained subgraph selectively enhances spatial autocorrelation for target\-relevant genes and is enriched for known ligand–receptor pairs, independently of the model\.
 
 ## Survival Transformers for Longitudinal Data Analysis: Application to Atrial Fibrillation Risk from ECG
 
@@ -1560,111 +1056,45 @@ Atrial fibrillation \(AFib\) is the most common sustained cardiac arrhythmia and
 
 Electromagnetic inverse scattering \(EIS\), which aims to recover object permittivity from measured scattered fields, is central to a wide range of applications, from medical diagnostics to security screening\. However, it is a highly nonlinear and ill\-posed problem\.  Despite substantial progress, existing approaches face a fundamental trade\-off between physical fidelity, efficiency, and generalization: data\-driven methods are fast but tied to training geometries and sensor setups, while physics\-based optimization is accurate but computationally expensive\. We introduce a Gaussian\-Galerkin \(GauGal\) method that reformulates EIS from a dense point\-wise field reconstruction to a compact, primitive\-level physical solving\. Rather than using Gaussian primitive merely as a material representation, GauGal take it as the computational units for wave scattering\. By projecting the continuous EIS scattering equation into a Gaussian primitive space, the material modulation, Green propagation, source excitation, and receiver observation are all realized as primitive\-level operators\. This yields a compact differentiable forward solver for physics\-consistent reconstruction\. Our method achieves state\-of\-the\-art accuracy on synthetic and real benchmarks while reducing runtime from over 30 minutes by leading physics\-driven baselines to under 10 seconds\. It also generalizes significantly better to unseen geometries and sensor configurations than leading data\-driven baselines\.  Overall, this framework establishes an accurate, efficient, and generalizable paradigm for electromagnetic inverse imaging, enabling fast, physics\-consistent imaging in practical settings\.
 
-## RAM\-H1200: A Unified Evaluation and Dataset on Hand Radiographs for Rheumatoid Arthritis
+## SynTeX\-FL: Cross\-Modal Text Transfer in Federated Learning for Medical Visual Question Answering
 
-**Authors:** Songxiao Yang; Haolin Wang; Yao Fu; Junmu Peng; Lin Fan; Hongruixuan Chen; JIAN SONG; Masayuki Ikebe; Shinya Takamaeda\-Yamazaki; Masatoshi Okutomi; Tamostu Kamishima; yafei ou
+**Authors:** Min Hyuk Kim; Do Hyun Ki; Seokbong Yoo
 
-**ID:** 139320\-\-2 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
+**ID:** 152446 | **Topic source:** official | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
 
-**Repeated source row:** 139320
+[Paper](<https://openreview.net/forum?id=T36NgpIPiT>) | [PDF](<https://openreview.net/pdf?id=T36NgpIPiT>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152446>)
 
-[Paper](<https://openreview.net/forum?id=XXly8RrusQ>) | [PDF](<https://openreview.net/pdf?id=XXly8RrusQ>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139320>)
+Medical visual question answering \(VQA\) and federated learning \(FL\) have gained prominence as critical methods for clinical artificial intelligence, with VQA supporting image\-based diagnostic reasoning and FL allowing institutions to train models jointly without sharing sensitive patient data\. However, existing approaches face substantial challenges in cross\-modal vertical FL settings, where each participating institution possesses unimodal, modality\-specific textual data without access to paired multimodal samples\. To address this limitation, we introduce SynTeX\-FL, a federated framework designed to enable cross\-modal text transfer for medical VQA without sharing raw data\. Moreover, SynTeX\-FL applies a reconstruction\-based text synthesis model that extracts clinically relevant semantics from medical images to generate cross\-modal textual representations\. Furthermore, the proposed method incorporates modality\-specialized low\-rank adaptation \(LoRA\) modules to enhance modality\-aware representations for each imaging domain\. During aggregation, the central server employs discriminator\-based quality scores and source\-aware weighting strategies to integrate heterogeneous client contributions\. Extensive experiments on multimodal medical VQA benchmarks demonstrate that SynTeX\-FL significantly outperforms current FL baselines, providing a robust and efficient solution for cross\-modal reasoning in decentralized clinical environments\.
 
-_Abstract unavailable from the accessible public sources._
+## RxDiff: Discrete Diffusion for Medication Recommendation with Inference\-Time Safety Control
 
-## MID: Mask\-Image Distributional Divergence for Evaluating Medical Image Segmentation
+**Authors:** Jinke Feng; Wenjie Du; Xuchang Zhong; Yang Wang
 
-**Authors:** Vincenzo Marcianò; XIAOMING ZHANG; Gianluca Guglielmo; Sebastien Ourselin; Michela Antonelli; Maria A Zuluaga
+**ID:** 151020 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-**ID:** 152974\-\-2 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
+[Paper](<https://openreview.net/forum?id=dZ1BldSaSA>) | [PDF](<https://openreview.net/pdf?id=dZ1BldSaSA>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151020>)
 
-**Repeated source row:** 152974
-
-[Paper](<https://openreview.net/forum?id=Oxe8M9Grah>) | [PDF](<https://openreview.net/pdf?id=Oxe8M9Grah>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152974>)
-
-_Abstract unavailable from the accessible public sources._
-
-## ECG\-Reasoning\-Benchmark: A Benchmark for Evaluating Clinical Reasoning Capabilities in ECG Interpretation
-
-**Authors:** Jungwoo Oh; Hyunseung Chung; Junhee Lee; Min\-Gyu Kim; Hangyul Yoon; Ki Seong Lee; Youngchae Lee; Muhan Yeo; Edward Choi
-
-**ID:** 139595\-\-2 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 139595
-
-[Paper](<https://openreview.net/forum?id=GQObdYuYZB>) | [PDF](<https://openreview.net/pdf?id=GQObdYuYZB>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139595>)
-
-_Abstract unavailable from the accessible public sources._
-
-## Towards Error\-Free EHRs: Reasoning\-Intensive Consistency Verification Between Clinical Notes and Structured Tables in Electronic Health Records
-
-**Authors:** Yeonsu Kwon; Jiho Kim; Junseong Choi; Paloma Rabaey; Minseo Kim; Sujeong Im; Jeewon Yang; Jun\-Min Lee; Sangji Lee; Jiwon Kim; Hangyul Yoon; Hyunwook Kwon; Edward Choi
-
-**ID:** 139021\-\-2 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 139021
-
-[Paper](<https://openreview.net/forum?id=q9O85I1Yqn>) | [PDF](<https://openreview.net/pdf?id=q9O85I1Yqn>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139021>)
-
-_Abstract unavailable from the accessible public sources._
-
-## Proposing Better Rollouts for On\-Policy Distillation
-
-**Authors:** Sirui Chen; Yunzhe Qi; Haobo Xu; Jiaru Zou; Mengting Ai; Zihao Li; Jingrui He
-
-**ID:** 155190\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 155190
-
-[Paper](<https://openreview.net/forum?id=7b0JDZvzTQ>) | [PDF](<https://openreview.net/pdf?id=7b0JDZvzTQ>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155190>)
-
-On\-policy distillation \(OPD\) improves language\-model post\-training by letting the student learn from its own sampled trajectories under teacher supervision, aligning the training process with inference\-time behavior\. However, the rollout policy in OPD is usually treated as fixed: each round samples directly from the current student\. We show that this choice can create a compounding teacher\-student mismatch, because it requires the teacher to provide effective supervision on whichever trajectories the student samples, including ones less reachable by the teacher itself\. On such trajectories, teacher supervision can become noisy or even misleading, leading to undesirable student patterns such as repetition\. Moreover, since the updated student in turn defines the rollout policy of subsequent rounds, these patterns persist and potentially amplify over training\.  This failure mode suggests that improving OPD requires treating the rollout policy itself as an optimization target, rather than only modifying the distillation objective\. We propose \*Mixture Proposal On\-Policy Distillation\* \(MPOPD\), which derives a student\-anchored, teacher\-guided rollout distribution from a local trust\-region objective based on relative teacher support\.  The resulting target is a geometric mixture of the student and teacher policies, and we introduce a proposal policy that approximates this mixture, enabling rollout generation in a single forward pass\.  Experiments on 16 math, knowledge, and medical reasoning benchmarks show consistent gains over OPD and recent variants\. On math reasoning, our method improves average accuracy by 6\.91 over OPD on Qwen3\-4B\-Base while reducing average generation length by 41\\%, suggesting that rollout policy design provides an effective way to improve OPD\.
-
-## CoMMa: Contribution\-Aware Medical Multi\-Agents for Decentralized Oncology Decision Support
-
-**Authors:** Yichen WU; Yujin Oh; Sangjoon Park; Kailong Fan; Yuhan Liu; Zhiyi Shi; Sekeun Kim; Dania Daye; Hana Farzaneh; Wei Liu; Xiang Li; Raul N Uppot; Quanzheng Li
-
-**ID:** 153350\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 153350
-
-[Paper](<https://openreview.net/forum?id=M1eBc5lFuT>) | [PDF](<https://openreview.net/pdf?id=M1eBc5lFuT>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153350>)
-
-Recent multi\-agent frameworks have shown promise for oncology decision support, yet most assume centralized data access and rely on prompt\-based assignment, limiting their applicability in privacy\-sensitive clinical settings\. We propose Contribution\-Aware Medical Multi\-Agents \(CoMMa\), a decentralized LLM\-agent framework where specialists operate on partitioned clinical data streams\. Unlike prior approaches that share inputs across agents, CoMMa enforces data decentralization to include stronger role specialization and further enhances this via agent\-specific finetuning\. To enable reliable and interpretable coordination, we introduce a contribution\-aware aggregation mechanism that replaces stochastic, narrative\-based reasoning with deterministic embedding projections to approximate each agent's marginal utility\. This yields explicit credit assignment over agents, providing a stable and interpretable decision pathway aligned with clinical requirements\. We evaluate CoMMa on multiple oncology benchmarks, including real\-world multidisciplinary tumor board datasets from large academic hospitals in North America and East Asia, as well as public datasets, demonstrating strong performance and generalization across heterogeneous clinical settings\.
-
-## GlucoFM\-Bench: Benchmarking Time\-Series Foundation Models for Blood Glucose Forecasting
-
-**Authors:** Baiying Lu; Zhaohui Liang; Ryan Pontius; Shengpu Tang; Temiloluwa Prioleau
-
-**ID:** 139533\-\-3 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 139533
-
-[Paper](<https://openreview.net/forum?id=KNGzZNVPZk>) | [PDF](<https://openreview.net/pdf?id=KNGzZNVPZk>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139533>)
-
-Blood glucose forecasting models are foundational for modern diabetes management systems, as reliable short\-term predictions can enable proactive interventions, support automated insulin delivery, and reduce the risk of hypo\- and hyperglycemic events\. From a modeling perspective, glucose forecasting poses unique challenges due to heterogeneous physiological dynamics across different diabetes populations\. Traditional machine learning and deep learning models have been extensively evaluated for glucose prediction\. However, there is significantly less research on evaluating and benchmarking recent time\-series foundation models \(TSFMs\) for blood glucose forecasting\. To bridge this gap, we present GlucoFM\-Bench, a comprehensive benchmark evaluating state\-of\-the\-art TSFMs alongside supervised deep learning models for blood glucose forecasting\. We assess eight representative architectures, including pre\-trained TSFMs, time\-series large language models, and task\-specific deep learning models, across 15 publicly available diabetes\-relevant datasets comprising 1,117 individuals with type 1 diabetes, type 2 diabetes, prediabetes, and no diabetes\. Models are evaluated under zero\-shot, few\-shot, and full\-shot protocols, with systematic variation in context length and prediction horizon\. Across datasets, pre\-trained TSFMs, especially Chronos\-2 and TimesFM, show strong zero\-shot and few\-shot transfer, with the best zero\-shot model performing within 5% of the best full\-shot supervised model\. Yet, when task\-specific data is abundant, a lightweight LSTM remains strongest, outperforming TSFMs by 4\-21% under full\-shot training\. Stratified analyses reveal persistent challenges in T1D cohorts and hypo\-/hyperglycemic ranges, highlighting the need for evaluation beyond aggregate error metrics\. Together, GlucoFM\-Bench provides a standardized and reproducible foundation for evaluating, comparing, and improving foundation models for blood glucose forecasting\. The dataset and code are publicly available at https://huggingface\.co/datasets/glucofmbench/GlucoFM\-Bench and https://anonymous\.4open\.science/r/GlucoseML\_benchmark\-B50C, respectively\.
+Medication recommendation requires generating drug combinations that are therapeutically effective while minimizing harmful drug\-drug interactions \(DDIs\)\. Both objectives are rooted in the combinatorial nature of prescriptions\. Existing discriminative methods predict drugs independently, neglecting inter\-drug dependencies; autoregressive methods introduce sequential dependencies but impose arbitrary generation orders and accumulate errors\. Both paradigms confine DDI mitigation to training\-time penalties, offering limited capacity to regulate interactions during inference for individual prescriptions\. We reformulate medication recommendation as a discrete diffusion process and propose RxDiff, which leverages iterative denoising for bidirectional and revisable generation and provides a natural interface for dynamic DDI regulation at each step\. A clinically grounded dual\-guided forward process and an inference\-time  interaction\-aware modulation mechanism are designed to jointly enable RxDiff to achieve consistent accuracy improvements, lower and more individually controlled DDI rates, and robustness to evolving DDI knowledge across MIMIC\-III, MIMIC\-IV, and a real\-world inpatient dataset\. Code is available at https://anonymous\.4open\.science/r/RxDiff\-9157\.
 
 ## Revisiting Incremental Learning: A Three\-Interface Diagnosis of Stability and Plasticity
 
 **Authors:** Keuntae Kim; Beomseok Lee; Hyunwoo Kim; Yong Suk Choi
 
-**ID:** 150119\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 150119
+**ID:** 150119 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
 [Paper](<https://openreview.net/forum?id=kX9Kbog4s6>) | [PDF](<https://openreview.net/pdf?id=kX9Kbog4s6>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150119>)
 
 Incremental learning is usually evaluated through the final classifier or LM head, but this interface does not indicate where forgetting occurs\. A drop in accuracy may reflect representation degradation in the backbone, readout mismatch in the head, or both\. We argue that BWT and FWT should therefore be interpreted as interface\-dependent quantities rather than as single model\-level properties\. We study three evaluation interfaces: the sequentially trained head, a newly optimized probing classifier, and a classifier\-free backbone separability diagnostic based on clustering\. These interfaces answer different questions: deployed performance, recoverable information under a new readout, and representation\-level separability\. Across CIL experiments with encoder and decoder language backbones, plus discriminative\-backbone TIL sanity checks, we find that qualitative conclusions about forgetting and plasticity change substantially with the evaluation interface\. Standard heads often indicate severe forgetting, probes often suggest near\-complete recoverability, and backbone diagnostics suggest intermediate representation changes and a stability\-\-plasticity pattern\. This pattern is consistent across five clustering algorithms and three clustering metrics, suggesting that it is not an artifact of a single diagnostic choice\. Finally, we use Just LM\-Head Tuning \(JLT\) as a head\-only intervention to quantify recoverable performance on a fixed incrementally trained backbone\. The large gap between standard and head\-realigned performance suggests that many failures attributed to catastrophic forgetting are better understood as head\-\-backbone mismatch plus partial representation drift\. Our results call for reporting where forgetting is measured, not only how much forgetting is observed\.
 
-## M4Bench: Evaluating Procedural Specification for Clinical EHR Derivation Agents
+## GOLD: Geometric Optimized Latent Diffusion for Structure\-Aware RNA Inverse Folding
 
-**Authors:** Hannes Ill; Rafi Al Attrach; Rajna Fani; Ahram Han; Ryohei Yamamoto; Marlene L Moerig; Dukyong Yoon; Leo Anthony Celi
+**Authors:** Qi Si; Xuyang Liu; Penglei Wang; Shuo Su; LIMEI HAN; Mengzhu Li; Xin Guo; Yuan Qi; Yuan Cheng
 
-**ID:** 139625 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+**ID:** 153434 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=EgGGRnoyTG>) | [PDF](<https://openreview.net/pdf?id=EgGGRnoyTG>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139625>)
+[Paper](<https://openreview.net/forum?id=LMJ8tizxt5>) | [PDF](<https://openreview.net/pdf?id=LMJ8tizxt5>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153434>)
 
-Clinical research over electronic health records depends on derived variables whose definitions sit outside the schema, in item codes, time windows, missingness rules, and output\-grain choices that change cohorts and downstream conclusions\. We introduce M4Bench, 28 clinical derivation tasks across 15 task families on MIMIC\-IV and eICU, with controls that decompose the value of procedural context for AI coding agents into specification completeness, delivery format, and schema familiarity\. A Docker\-isolated Codex campaign isolates specification completeness as the primary driver: an operational spec over the schema\-only baseline yields \+0\.162 \[0\.072, 0\.260\] on eight sentinel tasks, while clinician\-reviewed skills add only \+0\.024 \[\-0\.034, 0\.099\] on top, and the combined targeted\-skill effect over no\-skill is \+0\.136 \[0\.085, 0\.191\] across all 28 tasks \(26/28 improving\)\. Only 87/760 primary runs pass all strict diagnostics, with failures dominated by output\-grain and temporal\-boundary errors, and key F1 moves only \+0\.003 task\-balanced, so the gain is partial reference agreement on matched keys, not autonomous task completion or row\-grain repair\. Schema restructuring preserves 0\.704 of the with\-skill gain on gpt\-5\.4\-mini over the 26 MIMIC\-IV tasks, bounding schema\-name memorization at ≤ 29\.6% of the effect; decoy\-skill and raw\-SQL controls further rule out generic\-context and reference\-code\-structure\-only explanations\. Skills are released as a versioned, clinician\-reviewable markdown delivery format, one packaging among several, with task\-level reference\-validity audit and per\-run egress logs\. M4Bench releases tasks, skills, evaluation code, and per\-run audit logs as a fully open\-source benchmark object designed for extension and reuse\.
+Designing RNA sequences that fold into specific 3D structures is a fundamental challenge in therapeutics\. Current RNA inverse folding methods typically condition on 3D backbone coordinates but the generation is limited to 1D discrete sequences\. This ignores the continuous side\-chain orientations, which are essential for overall structural stability\. To address this issue, we explicitly introduce side\-chain geometry into the RNA generative process\. Unlike co\-design frameworks that diffuse across separate raw spaces, we propose Geometric Optimized Latent Diffusion \(\\textbf\{GOLD\}\), which project sequence and structure into a unified latent manifold\. GOLD employs a novel GeoVAE to elegantly integrate discrete RNA sequences with continuous side\-chain angles\. By mapping these modalities into a single, smooth latent manifold, GOLD naturally facilitates a synergistic co\-diffusion process\. To enhance structural validity, we further introduce a training\-free, gradient\-guided sampling mechanism\. By decoding the generated sequence probabilities and side\-chain geometries into structures during the sampling process, we compute analytical gradients from physical constraints\. This dynamic feedback actively guides the generated sequence to a physically stable state\. Extensive experiments validate the superiority of GOLD, achieving state\-of\-the\-art performance across sequence recovery, secondary structure validity, and 3D foldability metrics\.
 
 ## Serialization Tax in Shared\-Latent Exchangeable Decisions
 
@@ -1680,103 +1110,611 @@ Itemwise calibration does not guarantee calibration of the decision it feeds\. M
 
 **Authors:** Dmitry Lvov; Ilya Pershin
 
-**ID:** 154092\-\-2 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 154092
+**ID:** 154092 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
 [Paper](<https://openreview.net/forum?id=GHvYdC6tmg>) | [PDF](<https://openreview.net/pdf?id=GHvYdC6tmg>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154092>)
 
 Longitudinal radiology report generation increasingly conditions on prior images and reports\. This history is clinically valuable, but it creates a source\-validity failure mode: a generator can carry prior\-only findings into the current report\. Weintroduce source\-causal robustness, a stress\-test and control framework that holds the current chest X\-ray fixed while intervening on historical context\. On a full eligible MIMIC\-CXR longitudinal study \(18,716 pairs; 93,580 generations across five source conditions\), historical context consistently trades fewer missed findings for more unsupported positives\. Matched wrong\-history, the key negative control, increases proxy\-defined false positives by \+0\.366 per report while reducing false negatives by −0\.129; random wrong\-history yields an even larger false positive stress signal \(\+0\.465 FP/report\)\. We propose the Source\-Causal Finding Router \(SCFR\), a source\-validity controller trained with within\-evaluation subject exclusion\. Across three held\-out evaluations, SCFR repairs matched wrong\-history false\-positive inflation by −0\.343, −0\.550, and −0\.457 per report, passes Holm corrected primary testing at the bootstrap resolution floor \(Holm\-adjusted p ≤ 0\.0012\), and satisfies fixed current\-only parity margins\. Cross\-generator stress panels with RadInfer and Libra, together with ReXPref\-Prior, RadGraph2, Chest ImaGenome, ablations, and case review, support the mechanism\. These results establish a protocol\-defined state\-of\-the\-art source\-causal robustness/control result for longitudinal radiology report generation under matched wrong\-history stress tests\.
 
-## Medical LLMs as Medical World Models:  Unified Policy\-Dynamics Learning with Test\-Time Search
+## Medical LLMs as Medical World Models: Unified Policy\-Dynamics Learning with Test\-Time Search
 
 **Authors:** Yucheng Zhou; Peng Luo; Jianbing Shen
 
-**ID:** 148462\-\-2 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 148462
+**ID:** 148462 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
 [Paper](<https://openreview.net/forum?id=xdOHRMB63r>) | [PDF](<https://openreview.net/pdf?id=xdOHRMB63r>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148462>)
 
-_Abstract unavailable from the accessible public sources._
+Clinical decision\-making is intrinsically sequential: a clinician must propose a diagnosis and treatment plan from the pre\-treatment state and anticipate the post\-treatment outcome in order to revise the plan\. Existing medical world models address this loop only partially, through image\-to\-image dynamics with separate diagnostic and scoring modules, text\-only trajectory models without multimodal input, or reflection agents without a world model\. We propose \\textbf\{MedWM\}, a unified multimodal LLM in which policy and dynamics are two modes of a single autoregressive backbone with fully shared parameters; the dynamics mode emits a text\-only \\emph\{structured\} post\-treatment state, free\-text clinical description plus standardized key\-value outcomes \(pCR, RECIST, labs, survival\), that admits objective evaluation without perceptual metrics\. We post\-train this backbone with joint policy\-dynamics supervision and dynamics\-grounded reinforcement learning, then wrap it in an inference\-time agent harness that combines breadth\-depth \($N \\times K$\) search using the model's own dynamics as an internal verifier with a self\-evolving case memory\. On MIMIC\-IV, BreastDCEDL\-ISPY2 and HCC\-TACE\-SEG, MedWM consistently improves over same\-backbone controls, matches or surpasses a specialized three\-module image\-based world model, and outperforms reflection\-only, multi\-agent, and larger closed\-source LLM baselines; a blinded clinician study corroborates the quantitative gains\.
 
 ## One Loss to Rule Them All: Marked Time\-to\-Event for Structured EHR Foundation Models
 
 **Authors:** Zilin Jing; Vincent Jeanselme; Yuta Kobayashi; Simon Lee; Chao Pang; Aparajita Kashyap; Yanwei Li; Xinzhuo Jiang; Shalmali Joshi
 
-**ID:** 150016\-\-2 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 150016
+**ID:** 150016 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
 [Paper](<https://openreview.net/forum?id=lNy0GEHZYE>) | [PDF](<https://openreview.net/pdf?id=lNy0GEHZYE>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150016>)
 
-_Abstract unavailable from the accessible public sources._
+Clinical events captured in Electronic Health Records \(EHR\) are irregularly sampled and may consist of a mixture of discrete events and numerical measurements, such as laboratory values or treatment dosages\. The sequential nature of EHR, analogous to natural language, has motivated the use of next\-token prediction to train prior EHR Foundation Models \(FMs\) over events\. However, this training fails to capture the full structure of EHR\. When a given event occurs must be captured, but the event value \(abnormal lab\)  also modulates the likelihood of other clinical events\. Most existing EHR FMs do not jointly model this likelihood and are unable to capture the full observation process, impacting downstream capabilities\. We propose ORA, a marked time\-to\-event pretraining objective that jointly models event timing and associated measurements\. Across multiple datasets, downstream tasks, and model architectures, this objective consistently yields more generalizable representations than next\-token prediction and pretraining losses that ignore continuous measurements\. Importantly, the proposed objective yields improvements beyond traditional classification evaluation, including better regression and time\-to\-event prediction\. Beyond introducing a new family of FMs, our ablations suggest a broader takeaway: pretraining objectives that account for EHR structure are critical for expanding downstream capabilities and generalizability\.
 
-## DoAtlas\-1: A Causal Compilation Paradigm for Clinical AI
+## StainNFT: Curriculum\-Gated Multi\-Reward Post\-Training for Pathology\-Faithful Virtual Staining
 
-**Authors:** Yulong Li; Jianxu Chen; Xiwei Liu; Chuanyue Suo; Rong Xia; Yichen Li; Xinlin Zhuang; Niranjana A Menon; Jionglong Su; Eran Segal; Imran Razzak
+**Authors:** shurong yang; Dong Wei; Qiong Peng; Xian Wu; Yefeng Zheng; Liansheng Wang
 
-**ID:** 152826\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+**ID:** 155130 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-**Repeated source row:** 152826
+[Paper](<https://openreview.net/forum?id=8Ci5Hrd4ph>) | [PDF](<https://openreview.net/pdf?id=8Ci5Hrd4ph>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155130>)
 
-[Paper](<https://openreview.net/forum?id=Q7ooeLQ5Xm>) | [PDF](<https://openreview.net/pdf?id=Q7ooeLQ5Xm>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152826>)
+Immunohistochemical \(IHC\) staining encodes molecular protein expression critical for clinical diagnosis, yet its chemical procedures are costly and time\-consuming\. Virtual staining offers a compelling alternative by digitally synthesizing IHC images from hematoxylin\-eosin \(H\\&amp;E\) stained slides\. Despite remarkable progress in diffusion\- and flow\-matching\-based virtual staining, supervised fine\-tuning \(SFT\) remains fundamentally limited in pathological fidelity due to its coarse, spatially averaged supervision signal that starves sparse DAB\-positive regions of effective gradients\. Reinforcement learning \(RL\) can exploit inter\-rollout variance for outcome\-level pathological supervision, but naively applying DAB\-based rewards triggers severe reward hacking that collapses the image distribution and degrades perceptual quality\. This paper presents StainNFT, a flow matching RL post\-training framework built on a curriculum reward strategy that gates fine\-grained optical density supervision on per\-sample DAB mask IoU\. To enhance fine\-grained pathological fidelity, we introduce expression\-aware reweighting, multi\-scale block supervision, and a closed\-loop implicit pathological semantic reward derived from pathology foundation model priors\. Extensive experiments on seven benchmarks demonstrate that StainNFT consistently outperforms existing methods in both perceptual quality and pathological fidelity for H\\&amp;E\-to\-IHC virtual staining\. Ablation studies confirm the effectiveness of each proposed component\. Our code and trained models will be released\.
 
-Medical foundation models generate narrative explanations but cannot quantify intervention effects, detect evidence conflicts, or validate literature claims, limiting clinical auditability\. We propose causal compilation, a paradigm that transforms medical evidence from narrative text into executable code\. The paradigm standardizes heterogeneous research evidence into structured estimand objects, each explicitly specifying intervention contrast, effect scale, time horizon, and target population, supporting six executable causal queries: do\-calculus, counterfactual reasoning, temporal trajectories, heterogeneous effects, mechanistic decomposition, and joint interventions\. We instantiate this paradigm in DoAtlas\-1, compiling 1,445 effect kernels from 754 studies through effect standardization, conflict\-aware graph construction, and real\-world validation \(Human Phenotype Project, 10,000 participants\)\. The system achieves 98\.5% canonicalization accuracy, 100% conflict detection recall, and 80\.5% query executability\. This paradigm shifts medical AI from text generation to executable, auditable, and verifiable causal reasoning\.
+## CLEF: EEG Foundation Models for Learning Clinical Semantics
 
-## Revisiting Incremental Learning: A Three\-Interface Diagnosis of Stability and Plasticity
+**Authors:** Peng Cao; Ali Mirzazadeh; Jong W Lee; Aleksandar Videnovic; Dina Katabi
 
-**Authors:** Keuntae Kim; Beomseok Lee; Hyunwoo Kim; Yong Suk Choi
+**ID:** 148625 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-**ID:** 150119\-\-3 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+[Paper](<https://openreview.net/forum?id=wMcJWB6pBK>) | [PDF](<https://openreview.net/pdf?id=wMcJWB6pBK>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148625>)
 
-**Repeated source row:** 150119
+Clinical EEG interpretation requires reasoning over full EEG sessions and integrating signal patterns with clinical context\. Existing EEG foundation models are largely designed for short\-window decoding and do not incorporate clinical context\. We introduce CLEF, a clinically grounded long\-context EEG foundation model\. CLEF represents EEG sessions as 3D multitaper spectrogram tokens, enabling tractable Transformer modeling at session scale, and aligns embeddings with neurologist reports and structured EHR data through contrastive objectives\. We evaluate CLEF on a new 234\-task benchmark spanning disease phenotypes, medication exposures, and EEG findings, with more than 260k EEG sessions from over 108k patients\. CLEF outperforms prior EEG foundation models on 229 of 234 tasks, improving mean AUROC from 0\.65 to 0\.74\. Reconstruction\-only pretraining surpasses prior EEG foundation models, while report and EHR alignment yields further gains\. Held\-out concept and external\-cohort experiments suggest that these representations transfer beyond observed alignment targets\. These results support session\-scale, clinically grounded representation learning as a promising foundation\-model paradigm for clinical EEG\.
 
-[Paper](<https://openreview.net/forum?id=kX9Kbog4s6>) | [PDF](<https://openreview.net/pdf?id=kX9Kbog4s6>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150119>)
+## RadarFlowPose: Vision\-Inspired Coarse\-to\-Fine Skeleton Refinement with Flow Matching
 
-Incremental learning is usually evaluated through the final classifier or LM head, but this interface does not indicate where forgetting occurs\. A drop in accuracy may reflect representation degradation in the backbone, readout mismatch in the head, or both\. We argue that BWT and FWT should therefore be interpreted as interface\-dependent quantities rather than as single model\-level properties\. We study three evaluation interfaces: the sequentially trained head, a newly optimized probing classifier, and a classifier\-free backbone separability diagnostic based on clustering\. These interfaces answer different questions: deployed performance, recoverable information under a new readout, and representation\-level separability\. Across CIL experiments with encoder and decoder language backbones, plus discriminative\-backbone TIL sanity checks, we find that qualitative conclusions about forgetting and plasticity change substantially with the evaluation interface\. Standard heads often indicate severe forgetting, probes often suggest near\-complete recoverability, and backbone diagnostics suggest intermediate representation changes and a stability\-\-plasticity pattern\. This pattern is consistent across five clustering algorithms and three clustering metrics, suggesting that it is not an artifact of a single diagnostic choice\. Finally, we use Just LM\-Head Tuning \(JLT\) as a head\-only intervention to quantify recoverable performance on a fixed incrementally trained backbone\. The large gap between standard and head\-realigned performance suggests that many failures attributed to catastrophic forgetting are better understood as head\-\-backbone mismatch plus partial representation drift\. Our results call for reporting where forgetting is measured, not only how much forgetting is observed\.
+**Authors:** Kailu Guo; Akram Alomainy; Khalid Z Rajab
 
-## M4Bench: Evaluating Procedural Specification for Clinical EHR Derivation Agents
+**ID:** 148337 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-**Authors:** Hannes Ill; Rafi Al Attrach; Rajna Fani; Ahram Han; Ryohei Yamamoto; Marlene L Moerig; Dukyong Yoon; Leo Anthony Celi
+[Paper](<https://openreview.net/forum?id=ybHRPMy5zD>) | [PDF](<https://openreview.net/pdf?id=ybHRPMy5zD>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148337>)
 
-**ID:** 139625\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+Radar\-based human pose estimation is a promising alternative to camera\-based perception, but remains challenging due to sparse observations, noisy measurements, and severe pose ambiguity\. Existing methods infer both global skeletal structure and flexible peripheral joints from sparse radar observations, often compromising structural plausibility and fine\-grained local accuracy\. Motivated by the coarse\-to\-fine nature of human visual perception, we propose RadarFlowPose, a framework that decomposes radar\-based human pose estimation into coarse pose prior generation and flow\-based refinement\. The coarse model first produces a structurally plausible and temporally coherent pose prior from sparse radar observations, providing a global initialization for subsequent refinement\. Instead of estimating the full pose from scratch, the refinement stage focuses on correcting the remaining local ambiguities and motion\-induced errors\. By incorporating localised Doppler motion cues into the flow\-matching process, the model performs motion\-aware residual refinement around the coarse prior, leading to more accurate and anatomically consistent pose estimates\. Experiments on three benchmark radar pose datasets show consistent effectiveness, especially in motion\-sensitive and fine\-grained joint\-level evaluation\.
 
-**Repeated source row:** 139625
+## An Information\-Theoretic Evaluation Framework for Benchmark and Model Diagnosis in Knowledge Tracing
 
-[Paper](<https://openreview.net/forum?id=EgGGRnoyTG>) | [PDF](<https://openreview.net/pdf?id=EgGGRnoyTG>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139625>)
+**Authors:** Houru Jiang; Zixi Wang; Tengteng Cheng; Xueyi Li; Mingliang Hou; Jiaqi Zheng; Renqiang Luo; Teng Guo; Zitao Liu
 
-Clinical research over electronic health records depends on derived variables whose definitions sit outside the schema, in item codes, time windows, missingness rules, and output\-grain choices that change cohorts and downstream conclusions\. We introduce M4Bench, 28 clinical derivation tasks across 15 task families on MIMIC\-IV and eICU, with controls that decompose the value of procedural context for AI coding agents into specification completeness, delivery format, and schema familiarity\. A Docker\-isolated Codex campaign isolates specification completeness as the primary driver: an operational spec over the schema\-only baseline yields \+0\.162 \[0\.072, 0\.260\] on eight sentinel tasks, while clinician\-reviewed skills add only \+0\.024 \[\-0\.034, 0\.099\] on top, and the combined targeted\-skill effect over no\-skill is \+0\.136 \[0\.085, 0\.191\] across all 28 tasks \(26/28 improving\)\. Only 87/760 primary runs pass all strict diagnostics, with failures dominated by output\-grain and temporal\-boundary errors, and key F1 moves only \+0\.003 task\-balanced, so the gain is partial reference agreement on matched keys, not autonomous task completion or row\-grain repair\. Schema restructuring preserves 0\.704 of the with\-skill gain on gpt\-5\.4\-mini over the 26 MIMIC\-IV tasks, bounding schema\-name memorization at ≤ 29\.6% of the effect; decoy\-skill and raw\-SQL controls further rule out generic\-context and reference\-code\-structure\-only explanations\. Skills are released as a versioned, clinician\-reviewable markdown delivery format, one packaging among several, with task\-level reference\-validity audit and per\-run egress logs\. M4Bench releases tasks, skills, evaluation code, and per\-run audit logs as a fully open\-source benchmark object designed for extension and reuse\.
+**ID:** 149407 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-## PhysicianBench: Evaluating LLM Agents in Real\-World EHR Environments
+[Paper](<https://openreview.net/forum?id=qISxwVTG3L>) | [PDF](<https://openreview.net/pdf?id=qISxwVTG3L>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149407>)
 
-**Authors:** Ruoqi Liu; Imran Mohiuddin; Austin J Schoeffler; Kavita Renduchintala; Ashwin Nayak; Prasantha L Vemu; Shivam Vedak; Kameron C Black; John L Havlik; Isaac Ogunmola; Stephen P\.; Roopa Dhatt; Jonathan H Chen
+Knowledge tracing \(KT\) models are predominantly evaluated using aggregate metrics such as area under the curve \(AUC\) and accuracy\. However, these global scores obscure where the remaining errors originate and fail to indicate whether a benchmark is approaching saturation\. While estimating a global theoretical performance limit is challenging in realistic KT settings, it is possible to quantify local predictability\. To address this, we propose an information\-theoretic evaluation framework for KT benchmark diagnosis\. We utilize Context Tree Weighting \(CTW\) as an operational causal anchor to estimate the Local Irreducible Uncertainty \(LIU\) of each student interaction\. By projecting predictions onto this shared uncertainty coordinate, we evaluate model performance gains across distinct entropy bands rather than only at the global level\.Comprehensive evaluations on NIPS Task 3/4 and Algebra 2005 reveal that model improvements are highly non\-uniform\. While the largest gains achieved by modern KT models consistently occur in high\-entropy regions—suggesting that datasets are not yet exhausted—our framework also identifies instances where models capture inherently random noise\. By surfacing these local modeling failures alongside genuine gains, this approach provides a rigorous diagnostic tool to pinpoint both the potential and the limitations of current KT benchmark and model diagnosis\.
 
-**ID:** 139788 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
+## Coherent Hierarchical Multi\-Label Learning to Defer for Medical Imaging
 
-[Paper](<https://openreview.net/forum?id=4tHKkW6AK0>) | [PDF](<https://openreview.net/pdf?id=4tHKkW6AK0>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139788>)
+**Authors:** Joshua Strong; Pramit Saha; Emma Sun; Helen Higham; Alison Noble
 
-_Abstract unavailable from the accessible public sources._
+**ID:** 149553 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=pH5jlmaXga>) | [PDF](<https://openreview.net/pdf?id=pH5jlmaXga>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149553>)
+
+Learning to Defer \(L2D\) enables a model to predict autonomously or defer to an expert, but prior work largely assumes flat label spaces\. We study the first L2D setting with hierarchical multi\-label decisions, motivated by medical\-imaging workflows in which findings are organised by clinical taxonomies\. In this setting, deferral is a delegation action rather than a label assignment, so treating it as an independent per\-label decision can produce \\emph\{deferral incoherence\}, including taxonomic contradictions, delegation violations, and deferrals of labels already implied by the model's own assertions\. We formalise coherent hierarchical deferral under a Selective\-Exclusion handoff contract, characterise the Bayes\-optimal coherent deferral rule, and show that even nodewise Bayes L2D can be action\-incoherent\. We then propose two remedies: exact coherent projection, a dynamic\-programming decoder over the coherent action set, and Taxonomic Belief Propagation \(TBP\) with Recursive Policy Optimisation \(RPO\), a contract\-aware joint action model trained through the same recursion used at inference\. Across real\-reader and controlled\-expert medical\-imaging benchmarks, naïve binary\-relevance L2D exhibits non\-trivial incoherence\. Projection removes it exactly, and fast TBP\+RPO drives incoherence near zero while retaining strong utility\.
+
+## Dataset Collections: Challenges of Large\-Scale Data Aggregation in 3D Medical Image Datasets
+
+**Authors:** Yannick Kirchhoff; Saikat Roy; Elisa Stegmeier; Hamideh Haghiri; Constantin Ulrich; Maximilian R\. Rokuss; Tassilo Wald; Karol Gotkowski; Benjamin Hamm; Raphael Stock; Nico Disch; Michael Baumgartner; Dimitrios Bounias; Anand Deshpande; Stefan Dinkelacker; Stefan Dvoretskii; Katharina Eckstein; Selen Erkan; Jessica Kächele; Kim\-Celine Kahl; Balint Kovacs; Lucas Kulla; Moritz Langenberg; Philipp Schader; Stephen Schaumann; Darya Trofimova; Shuhan Xiao; Sebastian Ziegler; David Zimmerer; Marco Nolden; Fabian Isensee; Klaus Maier\-Hein; Ralf Floca
+
+**ID:** 139023 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=pv8FxEsBFY>) | [PDF](<https://openreview.net/pdf?id=pv8FxEsBFY>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139023>)
+
+The development of deep learning\-based medical AI depends on high\-quality annotated data\. Yet, dataset creation remains constrained by the need for expert radiologist annotations, limiting curated datasets to relatively small cohorts\. To overcome this limitation, recent efforts increasingly aggregate disparate public datasets into large\-scale dataset collections\. However, combining datasets at scale often obscures data provenance, introducing significant risks of reuse propagation, unintended leakage, bias amplification and distorted data distributions\. In this work, we study these problems on a massive collection of 760k 3D radiological images across 1069 public datasets and provide practical resources to address it\. Firstly, we formalize dataset collections as a distinct paradigm in medical image analysis and characterize their structural challenges, including reuse propagation, duplication, and provenance fragmentation\. Secondly, we perform one of the first large\-scale empirical studies of duplication on medical image collections and demonstrate extensive exact and near\-duplicate reuse across public datasets via perceptual hashing and manual tracing on our 760k 3D radiological images across 1069 public datasets, with 118k near or exact duplicates\. We make these hashes publicly available, thereby providing a standardized reference for identifying potential overlaps and shared provenance for researchers\. Thirdly, owing to the insufficient robustness of hashing in isolation, we introduce MAP \(Metadata for Aggregation and Provenance\), a lightweight, portable metadata profile for documenting provenance, known overlaps, and deduplication decisions in dataset collections\. Our contributions enable dataset collections to shift from coarse aggregations to reliable and provenance\-aware data scaling mechanisms in medical image analysis\. A webtool supporting our work is made available here:
+
+## Scaling Generative Foundation Models for Chest Radiography with Rectified Flow Transformers
+
+**Authors:** Fabio De Sousa Ribeiro; Emma A\.M\. Stanley; Charles Jones; Tian Xia; Dominic C Marshall; Laurent R Triché; Christopher V Cosgriff; Panagiotis Dimitrakopoulos; Sotirios Tsaftaris; Ben Glocker
+
+**ID:** 154104 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=GDtwvgMFLg>) | [PDF](<https://openreview.net/pdf?id=GDtwvgMFLg>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154104>)
+
+We introduce the first generative foundation model for chest radiograph synthesis trained from scratch at the billion\-parameter scale\. Existing radiographic AI models often suffer from poor generalisation across patient subpopulations, institutions, and acquisition settings, resulting in limited clinical utility\. Controlled, high\-fidelity synthesis of chest radiographs is a promising path toward diversifying clinical datasets and evaluating the robustness of diagnostic models\. Therefore, we present the largest specialist generative foundation model for chest radiographs to date, with over 1\.3B parameters, trained for 1\.6T tokens on a curated, heterogeneous dataset comprising 1\.2M radiographs and clinical expert\-guided metadata\. Our model supports controllable radiograph generation and editing across multiple demographic subgroups, acquisition views, and a dozen pathologies\. Moreover, we significantly advance the state of the art in radiograph synthesis fidelity, producing images that are indistinguishable from real radiographs to expert pulmonologists\.
+
+## The Structural Bias of $\\ell\_2$\-Regularized Cross\-Entropy Heads in Class\-Incremental Learning: Characterization, Limits, and a Gauge\-Anchoring Fix
+
+**Authors:** Milad Khademi Nori; Guanghui Wang
+
+**ID:** 148482 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=xULFTd3ead>) | [PDF](<https://openreview.net/pdf?id=xULFTd3ead>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148482>)
+
+Class\-incremental learning systems trained with $\\ell\_2$\-regularized cross\-entropy and within\-task softmax exhibit a structural bias on cross\-task discriminators that no amount of data or regularization tuning can remove\. We characterize this bias in closed form: at the population optimum, the cross\-task discriminator under sequential within\-task training differs from the joint\-optimal by exactly $\\Sigma^\{\-1\}\(\\bar\\mu^\{\(j\)\} \- \\bar\\mu^\{\(i\)\}\)$, an offset arising from the per\-task gauge fix imposed by within\-task softmax, identical for all $C^2$ class pairs in a task block\-\-\-this invariance, not the closed form alone, is what makes the diagnosis falsifiable and the correction one\-line\. Under a separation condition \($\\kappa &gt; 1$, cross\-class distances exceeding inter\-task distances\) we prove a margin\-based bound on task confusion at rate $\\exp\(\-\(\\kappa \- 1\)^2 \\gamma\_\{ij\}/8\)$\. By explicit construction we show this bound cannot be uniform: when separation fails, cross\-task misclassification remains $\\Omega\(1\)$ regardless of inter\-task margin, and on configurations with extreme within\-task class\-norm asymmetry it converges to $1$\. We propose \\emph\{post\-hoc de\-centering\}, an evaluation\-time correction that adds the per\-task offset $\\Sigma^\{\-1\}\\bar\\mu^\{\(t\)\}$ to each weight and a corresponding scalar to each threshold; it recovers the Bayes\-optimal cross\-task discriminator at the population exactly and yields a bound on task confusion that does not require the separation condition\. The same operation appears in shared\-covariance LDA\-style heads \(SLDA, FeCAM, NCM\); our contribution is the gauge\-theoretic derivation identifying it as the unique per\-task affine correction to the structural bias of within\-task cross\-entropy training, the falsifiable empirical diagnostic across five published CIL methods, and the finite\-sample analysis\. Experiments on CIFAR\-100, ImageNet\-100, ImageNet\-1K, ImageNet\-R, and DomainNet across five frozen backbones show post\-hoc de\-centering recovers $82$\-\-$94\\%$ of the joint\-\-sequential gap \(mean $90\.5\\%$\)\.
+
+## Generalized Adaptive Boosting and the Geometry of Mistakes
+
+**Authors:** Marco Bressan; Nataly Brukhim; Nicolò Cesa\-Bianchi; Emmanuel Esposito; Yishay Mansour; Shay Moran; Maximilian Thiessen
+
+**ID:** 152221 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=Uf1pIHYHQJ>) | [PDF](<https://openreview.net/pdf?id=Uf1pIHYHQJ>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152221>)
+
+Not all mistakes are alike\. For example, in medical diagnosis, false positive and false negative mistakes have a different impact and should not be aggregated\. By revisiting the classical theory of boosting through this lens, we introduce the notion of $Z$\-learner, which returns weak hypotheses achieving joint false\-positive/false\-negative guarantees $\(FP,FN\)$ from some set $Z \\subseteq \[0,1\]^2$\. This formulation generalizes the standard notion of $\\gamma$\-weak learning — recovered by taking $Z=$ \{ $\(z\_1,z\_2\): z\_1\+z\_2&lt;1/2\-\\gamma$ \} — and allows for more flexible notions of weak learnability that account for the impact of the distribution on the achievable learning guarantees\. This raises a natural question: which sets Z are  boostable? We answer this by giving a complete geometric characterization that unifies, as special cases, both the classical boosting dichotomy and the recent multi\-objective extension of Bressan et al\. \(COLT 2025\)\. We also present an adaptive algorithm for boosting $Z$\-learners without relying on the prior knowledge of\~$Z$, generalizing AdaBoost's ability to handle unknown margin parameters\.  Finally, we demonstrate that $Z$\-learners can achieve confidence amplification\. However, the analysis is significantly more involved than in classical boosting and relies on the centerpoint theorem from discrete and computational geometry\.
+
+## TrialAgentBench: Evaluating AI Agents for Clinical\-Trial Analysis and Long\-Horizon Drug\-Development Decisions
+
+**Authors:** Bradley M Segal; William J Bolton; Philip Torr; David Clifton; Lei Clifton
+
+**ID:** 139604 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=G03rvcN5Fe>) | [PDF](<https://openreview.net/pdf?id=G03rvcN5Fe>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139604>)
+
+Clinical drug development is high stakes\. Small statistical errors propagate into trial design, participant exposure, and stop/advance decisions\. As agents are increasingly used to support analysis and decision\-making, more robust evaluations of their capabilities in clinical domains are needed\. We introduce TrialAgentBench, a public benchmark in which agents must analyse participant\-level evidence, choose defensible estimands and methods, quantify uncertainty, diagnose assumption failures, and carry those analysis decisions into downstream drug\-development decisions\. TrialEvalBench contains 400 patient\-level analysis tasks across design, assumption, and context tiers\. TrialDevBench contains 20 sequential development programmes across five scenario worlds, each starting from a confounded 10,000\-patient observational extract and proceeding through asset nomination, endpoint and sample\-size design, deterministic phase trials, phase analysis, and stop/advance decisions\. The release spans 420 evaluated tasks or programmes, 528,660 simulated subjects, 77\.6 million public tabular records, and 1\.46 billion row\-variable cells\. Agents see only participant\-facing data; grader\-only files contain cell\-appropriate targets, deterministic phase state, and scoring code\. On TrialEvalBench, GPT\-5\.4 completes all 400 items but matches the required estimand/method class \(e\.g\., log\-HR versus RMST or risk\-difference targets\) for only 215/400 and produces an acceptable next\-trial sample\-size plan for 161/400\. On TrialDevBench, GPT\-5\.4 and Claude Opus 4\.7 complete all 60 seeded development programme runs per model, yet frequently nominate the wrong initial asset under confounding and choose evidence\-supported stop/advance timing in fewer than one\-third of programmes\. Together, the two suites make clinical\-trial decision quality measurable\. Current agents can effectively execute familiar analyses, but fail to make the decisions those analyses exist to support\.
+
+## Progressive Signal Calibration for Medical Image Segmentation: Diagnosing and Correcting Structural Misalignment in Training Signals
+
+**Authors:** Xinyan Zhao; Haijing Liu; Zhuan Cui; Tian Guan; Yonghong He; Wen Tang; Qiming He
+
+**ID:** 150045 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=lClsEZgoUW>) | [PDF](<https://openreview.net/pdf?id=lClsEZgoUW>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150045>)
+
+Training\-signal imbalance in medical image segmentation is commonly diagnosed as a data\-distribution problem, such as class frequency imbalance, foreground sparsity, or domain shift, and addressed through reweighting, sampling, or domain adaptation\. We argue that this diagnosis is incomplete: a more fundamental source is structural misalignment between supervision targets and segmentation objectives\. Weidentify two operative mechanisms underlying this phenomenon: gradient\-mass dilution, where dominant classes consume gradient capacity needed for foreground discrimination, and inter\-class supervision noise, where weak subtype boundaries generate unreliable optimization signals\. On a private renal pathology dataset, four standard segmentation architectures trained under conventional four\-class supervision underperform a foreground\-focused supervision regime \(a one\-line modification of the loss\) by 7\.87–16\.05 fg\-mIoU points\. The same effect replicates on three public datasets, suggesting foreground\-focused supervision as a low\-cost, general\-purpose recipe for any pixel\-imbalanced segmentation task\. Building on this observation, we propose Progressive Signal Calibration \(PSC\), a framework that calibrates training signals at three abstraction levels\. At the annotation level, PSC adaptively selects the supervision granularity that maximizes signal qual ity\. At the architectural level, PSC introduces a boundary\-aware feature gating mechanism for structure\-sensitive feature aggregation\. At the regularization level, PSC employs uncertainty\- and ratio\-aware constraints to stabilize optimization and prevent late\-stage class\-proportion drift\. Importantly, PSC satisfies a con ditional gain monotonicity property: when structural misalignment is weak or absent, its regularization terms naturally attenuate, avoiding systematic degradation\. Across 18 public histopathology benchmarks, PSC achieves statistically significant improvement on six datasets with no statistically significant regression on any benchmark\. On the private renal pathology dataset, PSC reaches 96\.0 fg\-mIoU, ex ceeding the strongest matched\-backbone baseline by \+2\.56 points under identical FG3 supervision—a substantial gain in a regime where the FG3 baseline is already above 93 fg\-mIoU
+
+## Parametric Meets Non\-parametric: Bridging Dual Prediction Spaces for Semi\-supervised Medical Image Segmentation
+
+**Authors:** Zenggui Chen; Jianwei Ma
+
+**ID:** 152318 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=Txi4PjNfS3>) | [PDF](<https://openreview.net/pdf?id=Txi4PjNfS3>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152318>)
+
+Semi\-supervised medical image segmentation leverages abundant unlabeled data to reduce the reliance on costly dense annotations, yet its dominant pseudo\-labeling paradigm suffers from inevitable prediction noise, especially under scarce supervision\. In this work, we observe that parametric network predictions and non\-parametric prototype\-based predictions exhibit complementary behaviors under pseudo\-label noise: the former offers high expressiveness in capturing local structures but is sensitive to erroneous supervision, while the latter provides stable semantic guidance by aggregating class\-level statistics but may lack spatial precision\. Motivated by this observation, we propose a simple yet effective complementary learning framework that jointly exploits the parametric prediction space and the non\-parametric prototype space for semi\-supervised segmentation\. Specifically, we introduce a confidence\-aware selection mechanism that identifies reliable voxels from either prediction space, a prototype entropy minimization objective that sharpens the non\-parametric semantic anchors, and a dual\-space semantic alignment objective that encourages mutual enhancement between the two spaces\. The unified objective enables reliability\-aware mutual enhancement, where each space guides the other when confident and noisy alignment is suppressed when both are uncertain\. Extensive experiments on multiple medical image segmentation benchmarks demonstrate that our method consistently outperforms existing approaches under various label\-scarce settings\.
+
+## NicheIB: Targeted Spatial Bottlenecks for Predictive Microenvironment Discovery
+
+**Authors:** Chenxi He
+
+**ID:** 153405 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=LaZNrmtjRL>) | [PDF](<https://openreview.net/pdf?id=LaZNrmtjRL>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153405>)
+
+Spatial transcriptomics methods typically cluster spots into coherent tissue domains, but many biological questions are target\-specific: which spatial context predicts a particular cell state, gene program, or clinical phenotype? We propose NicheIB, a Targeted Spatial Bottleneck \(TSB\) that learns which spatial edges matter for a user\-specified target via input\-dependent Hard Concrete edge gates with controllable sparsity budgets\. Training the same model on the same tissue with different targets—cortical\-layer annotations, oligodendrocyte gene programs, excitatory neuron markers—produces distinct edge retention patterns whose correlation mirrors the biological similarity of the targets, confirmed across human cortex, mouse brain, and cancer tissues\. The bottleneck also reveals which programs are spatially structured at a given resolution and which are not, serving as a diagnostic tool for spatial biology\. On mouse brain region prediction, TSB retains only 20% of spatial edges while approaching the full\-graph baseline \($F\_1 = 0\.915$ vs\. $0\.926$\), identifying a minimal informative subgraph from a mostly redundant spatial graph\. External validation confirms that the retained subgraph selectively enhances spatial autocorrelation for target\-relevant genes and is enriched for known ligand–receptor pairs, independently of the model\.
+
+## Flexible Intensities Matter: A comprehensive re\-evaluation of Classical and Neural Temporal Point Processes
+
+**Authors:** Hendrik Alexander Mehrtens; Florian Buettner; Oliver Stegle
+
+**ID:** 139473 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=NoBHtWYMBB>) | [PDF](<https://openreview.net/pdf?id=NoBHtWYMBB>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139473>)
+
+Temporal point processes \(TPPs\) are the canonical framework for event sequence data, with applications spanning seismology, social media, and electronic health records\. Recent neural extensions have been reported to substantially outperform classical baselines such as Hawkes processes, but a systematic comparison across model families and intensity parameterizations is lacking, and large\-scale medical benchmarks — arguably one of the most promising application domains — have not been considered\. Here, we revisit this comparison through a systematic benchmark of neural and non\-neural TPPs on existing datasets and on two large\-scale medical benchmarks derived from UK Biobank disease histories and MIMIC\-IV ICU records\. First, our results show that the previously reported gap between Hawkes processes and neural TPPs largely disappears once Hawkes processes are equipped with flexible and learnable kernels\. Second, we find that the flexibility of the intensity parameterization also limits prior neural TPPs: a transformer with a spline\-based intensity head outperforms prior neural TPP implementations\. Third, our benchmark underscores the value of complex datasets when assessing the performance of TPPs\. In fact, exclusively on the MIMIC\-IV ICU records did we find clear evidence for structures — time\-varying or higher\-order interactions — beyond what pairwise flexible Hawkes process kernels can capture\. Our results guide both future method development and practitioners’ model choice\. Our TPP framework is released as an open\-source package, providing consistent and feature rich implementations of classical and neural TPPs\.
 
 ## REFORM\-3D: A Representation\-Centric Evaluation Framework for 3D Medical Vision Foundation Models
 
 **Authors:** Maregu Assefa; Muhammad Muzammal Naseer; Divya Velayudhan; Gedamu Kumie; Naoufel Werghi
 
-**ID:** 139603 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
+**ID:** 139603 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
 [Paper](<https://openreview.net/forum?id=G0jVZhQ2NL>) | [PDF](<https://openreview.net/pdf?id=G0jVZhQ2NL>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139603>)
 
-_Abstract unavailable from the accessible public sources._
+Evaluation of 3D medical foundation models is still dominated by downstream task scores, which entangle representation quality with adaptation choices\. This is especially critical in medical imaging, where spacing and anisotropy can substantially alter image statistics while the anatomy itself remains unchanged\. We introduce \\textbf\{REFORM\-3D\}, a \\textbf\{R\}epresentation\-centric \\textbf\{E\}valuation \\textbf\{F\}ramew\\textbf\{OR\}k for benchmarking frozen 3D medical vision foundation \\textbf\{M\}odels across three questions: Acquisition Robustness, asking whether features remain stable when spacing varies while anatomy is fixed; Cross\-Modal Anatomical Alignment, asking whether same\-organ CT\-MR pairs remain recoverable under balanced bidirectional retrieval; and Anatomical Generalization, asking whether limited adaptation recovers held\-out organ signals beyond a frozen\-feature baseline under case\-disjoint evaluation\. These are also pretraining questions, because what a 3D encoder learns depends on how volumes are geometrically presented during self\-supervised pretraining\. We therefore employ REFORM\-3D to evaluate encoders pretrained on 62K unlabeled multimodal 3D volumes spanning diverse anatomical structures across MR, CT, PET, CTA, and CBCT under three explicit geometric assumptions: isotropic sampling, voxel\-relative sampling, and spacing\-aware resampling\. By exposing the encoder to acquisition geometry during pretraining rather than treating geometry only as a downstream issue, REFORM\-3D evaluates whether learned representations preserve stable anatomical structures or remain sensitive to acquisition and modality shortcuts\.
 
-## GUITAR: Structured Failure Diagnosis of GUI Agents via State Transitions
+## Competing Event Models: Next Event Prediction Under Interventions
 
-**Authors:** Shaoqing Zhang; Kehai Chen; Xuefeng Bai; Zhuosheng Zhang; Pengfei Zhang; Yang Xiang; Min zhang
+**Authors:** Yoav Wald; Xiang Gao; Sumit Chopra; Juho Lee; Rajesh Ranganath
 
-**ID:** 139804 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
+**ID:** 150873 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=3bg3fAhQJU>) | [PDF](<https://openreview.net/pdf?id=3bg3fAhQJU>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139804>)
+[Paper](<https://openreview.net/forum?id=ekD79mlpR7>) | [PDF](<https://openreview.net/pdf?id=ekD79mlpR7>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150873>)
 
-_Abstract unavailable from the accessible public sources._
+Modeling interventions that include timing is an important task in many domains, such as treatments in healthcare, transactions in finance, and others\. However, estimating these interventional distributions is challenging because standard next\-token predictors, typically implemented using transformers, do not naturally support altering the timing of specific future events\. We develop \\emph\{Competing Event Models\} \(CEMs\), an autoregressive generative approach that simplifies the estimation of interventions on both what interventions are applied and \\emph\{when\}\. Drawing from the competing risks literature, CEMs model independent probability distributions for latent times of each event type, where the earliest realized time determines the next event\. We show that this framework enables straightforward interventions on event timing and efficient sampling, and, through careful design choices, can also model concurrent events\. We evaluate CEMs on a cancer tumor volume simulator and on prediction tasks using the MIMIC\-IV dataset\. Our results show that CEMs accurately recover causal effects of sequential treatments in simulations while surpassing standard transformer baselines in predictive performance on 3 out of 4 real\-world medical data tasks\.
+
+## MedZERO: Self\-Evolving Agents for Open\-Ended Medical Reasoning Through Controlled Knowledge Accumulation
+
+**Authors:** Xilin Dang; Weilin Ruan; Xue Yang; Jinghao Wang; Xiaowei Hu; Jinpeng Li; Pheng\-Ann Heng
+
+**ID:** 155563 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=4etiuttH7Y>) | [PDF](<https://openreview.net/pdf?id=4etiuttH7Y>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155563>)
+
+Large language models \(LLMs\) have shown promise in medical question answering and clinical reasoning, yet their improvement remains constrained by static parametric knowledge and costly expert supervision\. Self\-evolving agents offer a promising alternative by enabling models to improve through iterative task generation and problem\-solving\. However, most existing self\-evolving methods are designed for easily verifiable domains such as mathematics and coding, where solutions can be checked by exact answers or executable programs\. Medical reasoning is fundamentally different: it is open\-ended, knowledge\-intensive, and often only partially verifiable\. We present \\textbf\{MedZERO\}, a self\-evolving framework for open\-ended medical reasoning\. MedZERO couples an \\textit\{Examiner\} that generates frontier medical question\-option pairs with a \\textit\{Reasoner\} that solves them through evidence\-grounded multi\-turn reasoning with external knowledge tools\. To support reliable, continual improvement, MedZERO introduces controlled knowledge accumulation, which maintains temporary exploratory knowledge and curated persistent knowledge in reasoning\. We evaluate MedZERO on five public medical reasoning benchmarks using 4B\- and 8B\-scale base models under open\-ended evaluation\. Across all settings, MedZERO consistently outperforms the underlying base models and prior self\-evolving baselines, achieving up to 13\.7 average accuracy\-point gains over the next\-best self\-evolving baseline\.
+
+## Data\-Driven Soft Labeling Scales DNA Read Classification to Whole\-Body Cell\-Type Deconvolution
+
+**Authors:** Dmytro Rizdvanetskyi; Nathan Roos; Pavlo Lutsik
+
+**ID:** 150257 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=jY2nvX28FP>) | [PDF](<https://openreview.net/pdf?id=jY2nvX28FP>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150257>)
+
+Cell\-type deconvolution, the task of estimating the proportions of constituent cell types in a heterogeneous biological sample, is a core problem in computational biology\. Methods that rely on epigenetic marks such as DNA methylation typically operate on aggregated methylation estimates, discarding the pattern\-level information carried by individual DNA reads\. Existing read\-level approaches that exploit this information are scarce, and all remain restricted to few\-class settings; scaling them further is an open problem because, at scale, non\-discriminative reads dominate and hard labels conflict with the many\-to\-many mapping between methylation patterns and cell types, preventing classifier convergence\. To overcome this, we propose data\-driven soft labels that estimate the conditional cell\-type distribution for each read, and integrate this scheme into \*Syto\*, a new modular framework for read\-level classification\-based deconvolution\. On a whole\-body atlas of 39 human cell types, \*Syto\* reduces MSE by $2\.56\\times$ over SoTA, with gains transferring to an out\-of\-distribution dataset spanning 16 tissues\. \*Syto\* lays the foundation for modeling increasingly large cell\-type panels, with improved applications in biology and healthcare\. The proposed soft\-labeling scheme is further translatable to any setting with a many\-to\-many signal\-to\-label mapping\.
+
+## MID: Mask\-Image Distributional Divergence for Evaluating Medical Image Segmentation
+
+**Authors:** Vincenzo Marcianò; XIAOMING ZHANG; Gianluca Guglielmo; Sebastien Ourselin; Michela Antonelli; Maria A Zuluaga
+
+**ID:** 152974 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=Oxe8M9Grah>) | [PDF](<https://openreview.net/pdf?id=Oxe8M9Grah>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152974>)
+
+Current evaluation protocols for medical image segmentation remain largely anchored in sample\-wise comparisons, e\.g\., Dice and Hausdorff distance, which require each prediction to be paired with a ground\-truth mask\. Yet two limitations arise in practice: they are inapplicable when predictions are made on unlabeled data; and even when annotations are available, they cannot assess whether a collection of predictions matches the distributional structure of the ground\-truth population\. We introduce MID \(Mask–Image Distributional Divergence\), a distribution\-level evaluation metric for medical image segmentation\. MID builds upon the observation that segmentation quality is a property of the joint image\-mask distribution: a mask may be anatomically plausible in isolation yet incorrect for the image it accompanies\. MID compares the joint distribution of images and masks between a reference set and a set of predictions, without requiring sample\-wise correspondence\. This captures both mask realism and image\-mask consistency\. We evaluate MID across 13 publicly available datasets spanning CT, MRI, and MRA\. Under anatomically realistic corruptions across 56 organ groups, MID tracks mean Dice and Hausdorff distance without per\-sample ground\-truth pairing\. MID also detects distributional shifts across modalities and anatomies, identifies image\-mask misalignment through controlled shuffling experiments, and produces reliable model rankings across real segmentation models\.
+
+## DAG\-Biased Graph Learning for Multimodal Survival on EHR
+
+**Authors:** Munib Mesinovic; Tingting Zhu
+
+**ID:** 155436 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=5e6HZ4aFfT>) | [PDF](<https://openreview.net/pdf?id=5e6HZ4aFfT>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155436>)
+
+Existing deep learning architectures for survival prediction from electronic health records \(EHRs\) largely assume unimodality, failing to capture the complex relational structure across diverse clinical modalities\. Graph learning can allow us to robustly adapt to the underlying clinical structure of the data to have more predictive and interpretable representations for time\-to\-event analysis\. However, unconstrained graph learning produces dense, bidirectional adjacencies that overfit\. We introduce M\-CADENCE, a multimodal survival model that integrates structured acyclic priors with attention\-based propagation\. Each modality has its own learnable adjacency, regularised toward acyclicity through a log\-determinant characterisation and toward sparsity through soft thresholding\. A cross\-modal meta\-adjacency keeps the cross\-modal parameter count quadratic in the number of modalities rather than in their feature dimensions\. Propagation is then performed by multi\-head attention biased by the learnt structure\. The propagation step degrades gracefully under sparse or misspecified structure, addressing a known weakness of hard\-routing graph variants\. We evaluate M\-CADENCE on five EHR benchmarks covering intensive\-care mortality, circulatory failure, and emergency\-department competing risks, against multiple survival, graph, and structure learning baselines\. M\-CADENCE achieves the best concordance on all datasets, the best early\-warning AUC on four of five, and competitive precision\-recall against the strongest deep survival baselines\. Removing the DAG bias lowers concordance, as does substitution with a density\-matched random adjacency, which confirms that the specific learnt structure is required\. Discrimination is stable across four orders of magnitude in regularisation strength, and evaluation by a panel of ten language models confirms M\-CADENCE learns clinical edges that are more physiologically plausible than baseline structure\-learning methods\.
+
+## M4Bench: Evaluating Procedural Specification for Clinical EHR Derivation Agents
+
+**Authors:** Hannes Ill; Rafi Al Attrach; Rajna Fani; Ahram Han; Ryohei Yamamoto; Marlene L Moerig; Dukyong Yoon; Leo Anthony Celi
+
+**ID:** 139625 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=EgGGRnoyTG>) | [PDF](<https://openreview.net/pdf?id=EgGGRnoyTG>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139625>)
+
+Clinical research over electronic health records depends on derived variables whose definitions sit outside the schema, in item codes, time windows, missingness rules, and output\-grain choices that change cohorts and downstream conclusions\. We introduce M4Bench, 28 clinical derivation tasks across 15 task families on MIMIC\-IV and eICU, with controls that decompose the value of procedural context for AI coding agents into specification completeness, delivery format, and schema familiarity\. A Docker\-isolated Codex campaign isolates specification completeness as the primary driver: an operational spec over the schema\-only baseline yields \+0\.162 \[0\.072, 0\.260\] on eight sentinel tasks, while clinician\-reviewed skills add only \+0\.024 \[\-0\.034, 0\.099\] on top, and the combined targeted\-skill effect over no\-skill is \+0\.136 \[0\.085, 0\.191\] across all 28 tasks \(26/28 improving\)\. Only 87/760 primary runs pass all strict diagnostics, with failures dominated by output\-grain and temporal\-boundary errors, and key F1 moves only \+0\.003 task\-balanced, so the gain is partial reference agreement on matched keys, not autonomous task completion or row\-grain repair\. Schema restructuring preserves 0\.704 of the with\-skill gain on gpt\-5\.4\-mini over the 26 MIMIC\-IV tasks, bounding schema\-name memorization at ≤ 29\.6% of the effect; decoy\-skill and raw\-SQL controls further rule out generic\-context and reference\-code\-structure\-only explanations\. Skills are released as a versioned, clinician\-reviewable markdown delivery format, one packaging among several, with task\-level reference\-validity audit and per\-run egress logs\. M4Bench releases tasks, skills, evaluation code, and per\-run audit logs as a fully open\-source benchmark object designed for extension and reuse\.
+
+## AI and Data Science for Her: Training the Next Generation of High School Girls in Nigeria
+
+**Authors:** Aderonke Sakpere
+
+**ID:** 137831 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** missing
+
+[Official poster](<https://neurips.cc/virtual/2026/poster/137831>)
+
+This program will train 300 Nigerian high school girls across six geopolitical zones of the country in the fundamentals of AI and data science\. Grounded in published research on how teenage girls engage with technical subjects, the curriculum is deliberately girl\-centered, pairing students with female mentors already working in AI, and connecting technical concepts to capstone projects addressing real challenges in healthcare, agriculture, and education\. AI clubs formed in each participating school will keep the learning going long after the program’s formal end
+
+## AI and Data Science for Her: Training the Next Generation of High School Girls in Nigeria
+
+**Authors:** Aderonke Sakpere
+
+**ID:** 137825 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** missing
+
+[Official poster](<https://neurips.cc/virtual/2026/poster/137825>)
+
+This program will train 300 Nigerian high school girls across six geopolitical zones of the country in the fundamentals of AI and data science\. Grounded in published research on how teenage girls engage with technical subjects, the curriculum is deliberately girl\-centered, pairing students with female mentors already working in AI, and connecting technical concepts to capstone projects addressing real challenges in healthcare, agriculture, and education\. AI clubs formed in each participating school will keep the learning going long after the program’s formal end
+
+## Prior Text\-Informed Gate Attention Framework for Multimodal Psychiatric Disorder Diagnosis
+
+**Authors:** Wensheng Zhai; Kaizhong Zheng; Difei Mei; Badong Chen; Liangjun Chen
+
+**ID:** 148532 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=xCFwXgjyV8>) | [PDF](<https://openreview.net/pdf?id=xCFwXgjyV8>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148532>)
+
+Diagnosis of psychiatric disorders from functional magnetic resonance imaging \(fMRI\) is hindered by low\-resource phenotypes, high inter\-subject variability, and weakly interpretable multimodal fusion\. We propose a prior text\-informed gated attention framework \(PTGA\) that converts region\-of\-interest \(ROI\) level neuroimaging measures into statistically grounded textual priors via percentile\-based soft binning\. PTGA combines hemodynamic response function \(HRF\) aware spatiotemporal encoding with static graph topology modeling, and unifies variable\-length fMRI time series through masked global temporal aggregation\. It further uses text semantics as an inductive bias for prior\-guided gated fusion, improving robustness under cross\-modal noise\. We compare PTGA with eight strong graph and multimodal baselines under a unified protocol\. PTGA achieves up to 10\.46\\% and 8\.01\\% absolute improvements in  autism spectrum disorder \(ASD\) and major depressive disorder \(MDD\) diagnosis, respectively, outperforming SOTA baselines\. The learned gating also provides biologically plausible evidence: MDD related signals are concentrated in sensorimotor/visual/default\-mode systems, while ASD related evidence is centered on the cerebellar network with joint contributions from default\-mode, limbic, and dorsal\-attention networks\.
+
+## $\\chi$\-Bench: Can AI Agents Automate End\-to\-End, Long\-Horizon, Policy\-Rich Healthcare Workflows?
+
+**Authors:** Haolin Chen; Deon Metelski; Leon Qi; Tao Xia; Joonyul Lee; Steve Brown; Kevin Riley; Frank Wang; T\. Y Liu; Hank Capps; Zeyu Tang; Xiangchen Song; Lingjing Kong; Fan Feng; Tianyi Zeng; Zhiwei Liu; Zixian Ma; Hang Jiang; Fangli Geng; Yuan Yuan; Chenyu You; Qingsong Wen; Hua Wei; Yanjie Fu; Yue Zhao; Carl Yang; Biwei Huang; Kun Zhang; Caiming Xiong; Sanmi Koyejo; Eric Xing; Philip S Yu; Weiran Yao
+
+**ID:** 139361 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=UgC5P05iuV>) | [PDF](<https://openreview.net/pdf?id=UgC5P05iuV>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139361>)
+
+End\-to\-end automation of realistic healthcare operations stresses three capabilities underrepresented in current benchmarks: \*policy density\*, decisions must be grounded in a large library of medical, insurance, and operational rules; Multi\-role \*composition\*: a single task requires the agent to play multiple roles with handoffs; and \*multilateral interaction\*: intermediate workflow steps are multi\-turn dialogs, such as peer\-to\-peer review and patient outreach\. We introduce $\\chi$\-Bench, a benchmark of long\-horizon healthcare workflows across three domains: provider prior authorization, payer utilization management, and care management\. Each task hands the agent a clinical case in a high\-fidelity simulator of 20 healthcare apps exposed via 87 MCP tools, which it must drive to a terminal status through tool calls and writing the role's artifacts, guided by a 1,290\+ document \*managed\-care operations handbook\* skill\. Across 30 agent harness/models configurations, the best agent resolves only \*\*28\.0%\*\* of tasks, no agent clears \*\*20%\*\* on strict pass^3, and executing all tasks in a single session slumps the performance to \*\*3\.8%\*\*\. These results raise the hypothesis that similar gaps are likely to surface in other policy\-dense, role\-composed, irreversible enterprise domains\.
+
+## PM1: A Multimodal Foundation Model for Genomes, Phenotypes, and Images at Biobank Scale
+
+**Authors:** Christophe Thomassin; Marçal Comajoan Cara; Margarita Geleta; David Bonet; Benet O Sabat; Daniel Mas Montserrat; Alexander Ioannidis
+
+**ID:** 153008 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=Of5xLFFgUA>) | [PDF](<https://openreview.net/pdf?id=Of5xLFFgUA>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153008>)
+
+Precision medicine relies on integrating diverse patient data, including genetic variants, clinical phenotypes, and medical imaging, to inform personalized prevention, diagnosis, and treatment\. However, learning general patient\-level representations from these heterogeneous modalities remains challenging due to their high dimensionality and pervasive missingness\. We propose PM1, a multimodal foundation model that learns meaningful patient\-level representations across genetic, clinical, and imaging data from 337,129 individuals in the UK Biobank, with a focus on retinal imaging and ophthalmic traits\. To address modality dimensionality, PM1 adopts an intermediate fusion architecture with modality\-specific encoders and a shared Transformer backbone, where a novel pathway\-based genotype encoder enables the incorporation of over 600,000 genetic variants by reducing dimensionality while preserving trait\-relevant variation\. In addition, a contrastive loss invariant to modality missingness allows PM1 to learn robust patient\-level representations despite only 6\\% of UK Biobank participants having complete modality coverage\. By partitioning modalities into interpretable tokens, PM1 enables interpretability methods to investigate known and potentially novel associations across genetic, clinical, and imaging features, and their interactions\. Evaluated across downstream tasks, including phenotype prediction, conditioned image generation, and attribution analyses, PM1 demonstrates the value of multimodal patient representations, improving predictive performance over unimodal baselines and competing methods while enabling interpretable analyses in settings with heterogeneous and incomplete patient data\.
+
+## Rethinking Visual Attribution for Chest X\-ray Reasoning in Large Vision Language Models
+
+**Authors:** Guangzhi Xiong; Qiao Jin; Sanchit Sinha; Zhiyong Lu; Aidong Zhang
+
+**ID:** 151683 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=YoNjeiTDbj>) | [PDF](<https://openreview.net/pdf?id=YoNjeiTDbj>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151683>)
+
+Large Vision Language Models \(LVLMs\) show promise in medical applications, but their inability to faithfully ground responses in visual evidence raises serious concerns about clinical trustworthiness\. While visual attribution methods are widely used to explain LVLM predictions, whether these explanations actually reflect the visual evidence underlying the model's decision is largely unverified, since ground\-truth annotations for internal model reasoning are typically unavailable\. We address this question for chest X\-ray \(CXR\) reasoning by developing a causal evaluation framework that retains only CXR\-VQA samples for which the expert\-annotated region is verified, via counterfactual editing, to be causally responsible for the model's prediction\. Using this framework across 11 attribution methods, six open\-source LVLMs, and two output modes \(direct answer and step\-by\-step reasoning\), we find that existing attribution methods often fail to identify the evidence used by LVLMs\. To address this failure, we propose MedFocus, a concept\-based attribution method that localizes clinically meaningful anatomical regions via unbalanced optimal transport and measures their causal effect on model outputs through targeted interventions\. MedFocus produces spatial, concept\-level, and token\-level attributions and substantially outperforms prior methods, taking a step toward more trustworthy attribution for medical LVLMs\.
+
+## ASSET: Acquisition\-Sensitive Subspace Estimation for Test\-Time Adaptation of Medical VLMs
+
+**Authors:** Mohan Zhang; Zhen Tan; Songyuan Sui; Tianlong Chen
+
+**ID:** 153026 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=OZI1vf23wm>) | [PDF](<https://openreview.net/pdf?id=OZI1vf23wm>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153026>)
+
+Medical vision\-language models are often adapted under high\-quality acquisition conditions\. At target deployment, the same model may face lower\-quality scanners, protocols, reconstructions, or artifacts\. These shifts change the visual evidence, while the intended clinical question remains unchanged\. As a result, a source\-adapted model can fail under this acquisition shift\. Methods are proposed to solve this problem\. Medical acquisition\-shift correction mainly targets image\-only predictors, leaving the multimodal model underexplored\. Robust training depends on anticipated degradations, and generic test\-time tuning can easily overfit the small target training set, leaving unknown acquisition shifts insufficiently corrected\. In this paper, we hypothesize that acquisition\-like augmentations of target examples can expose parameter directions responsible for acquisition\-shift failures\. Based on it, we propose \\textsc\{ASSET\}, an \\emph\{Acquisition\-Sensitive Subspace Estimation\} method for test\-time adaptation\. ASSET estimates an acquisition\-sensitive parameter subspace from prediction and gradient changes under these augmentations\. It then adapts the model within this subspace through iterative estimate\-and\-update rounds\. Comprehensive experiments show the advantages of ASSET\. For example, ASSET consistently improves target accuracy under acquisition\-quality shift across datasets and backbones by 2\.62\\% on average, while preserving performance when no shift is present\. Under the strongest acquisition\-quality shift, ASSET even improves target accuracy by 4\.12\\%, showing that the correction generalizes to severe shifts\.
+
+## Learning What Evaluators Value: A Reliable Approach to Modeling Evaluator Preferences
+
+**Authors:** Madeline Kitch; Nihar Shah
+
+**ID:** 154896 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=A7ffZI8Yma>) | [PDF](<https://openreview.net/pdf?id=A7ffZI8Yma>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154896>)
+
+In many machine learning applications, human and LLM evaluators use assessments of relevant criteria to create an overall evaluation for an item or individual\. In applications like admissions, committees assess candidates on attributes such as test scores, GPA, and research experience to evaluate their overall fit for the program\. In medical care, clinicians use patient reports of symptoms to consider preliminary diagnoses and assess risks\. Each case involves mapping measurable criteria to an overall evaluation—a process that reflects the evaluator's underlying preferences\. We focus on the fundamental issue of learning these preferences\. Many applications of this problem make specific modeling assumptions on evaluator preferences that may be substantially violated in the real world\. We make the minimal assumption that the preference function is coordinate\-wise non\-decreasing, which is reasonable in a large number of evaluation settings\. We theoretically characterize the severity of model mismatch for many common assumptions and show that it can lead to catastrophic effects for learning evaluator preferences and other important downstream tasks\. We then present an algorithm for learning evaluators' preferences that is robust to model mismatch\. We prove theoretically that our algorithm can learn any monotonic preference function without sacrificing performance when the linearity assumption holds\. Evaluations of our algorithm with synthetic simulations and real\-world data confirm its ability to learn preferences robustly and illustrate key aspects of LLM and human preferences\.
+
+## Topology\-Reinforced Swin Transformer for Medical Image Analysis
+
+**Authors:** Pengfei Gu; Huimin Li; Guangyu Meng; Hao Zheng; Haoteng Tang; Bin Fu; Danny Z Chen
+
+**ID:** 154830 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=AcOoZ44WpN>) | [PDF](<https://openreview.net/pdf?id=AcOoZ44WpN>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154830>)
+
+Topological patterns in medical images, such as connected components and loops, across multiple spatial scales carry critical structural information, from microaneurysm\-scale lesions to organ\-level boundaries\. Despite the success of hierarchical Vision Transformers  \(e\.g\., Swin Transformer\) in medical image analysis, existing methods lack an explicit architectural scheme to represent and incorporate multi\-scale topological structures through the Transformer hierarchy\. In this paper, we propose \\emph\{Topology\-Reinforced Swin Transformer \(TRiST\)\}, a new Swin Transformer model family for medical image analysis, which reinforces multi\-scale hierarchical topology into the hierarchical Transformer architecture\. Instead of treating topology as an auxiliary descriptor or post hoc fusion cues, TRiST takes topology as a native part of representation construction, refinement, and token interaction\. First, because topology does not compose hierarchically through pooling or interpolation, we develop a Hierarchical Multi\-Scale Topology Representation algorithm that computes 2D persistent homology \($H\_0$ and $H\_1$ on image patches\) at each native scale of Swin Transformer, constructing four topological representations aligned 1\-to\-1 with the Swin token grid\. Second, since the persistence axis has an intrinsic semantic structure \(i\.e\., short\-lifetime features mainly capture noise and fine texture, whereas long\-lifetime features capture stable anatomical structures\), we design a Band\-Aware $H\_0/H\_1$ Residual Refinement module that independently adapts six persistence sub\-bands using dedicated gated residual MLPs\. Third, to make topology take part in token interaction inside the Transformer, we introduce a Persistence\-Band Progressive Attention Bias that injects stage\-corresponding topology as an additive key\-highlighting prior into shifted\-window self\-attention\. Based on these strategies, we instantiate two task\-specific models: Topo\-SwinV2\-B for classification and Topo\-Swin\-UNet for segmentation\. Both models retain the original Swin\-based backbone structure while equipping it with native multi\-scale topological features\. Experiments on five medical image datasets show consistent improvements over strong Swin\-based baselines and competitive performance as existing topology\-augmented methods\.
+
+## OmniMechanism Design for Human\-AI Collaboration with Impressionable Minds
+
+**Authors:** Tianwei Gao; Yifei Pang; Lunjia Hu; Kate Donahue; Lihua Lei; Vahid Tarokh; Zhun Deng
+
+**ID:** 154211 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=FLnfOfsR2X>) | [PDF](<https://openreview.net/pdf?id=FLnfOfsR2X>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154211>)
+
+As AI systems are increasingly deployed in high\-stakes domains such as healthcare, effectively integrating human expertise with AI outputs is critical for reliable decision\-making\. A substantial body of theoretical work studies optimal mechanisms for human\-AI collaboration \(HAC\), focusing on when to involve humans and how to combine their expertise with AI predictions\. However, these approaches largely overlook a key factor highlighted by empirical evidence: human judgments are impressionable and can vary depending on how AI outputs are presented\. For example, when AI systems defer decisions to humans, revealing or withholding the AI prediction can significantly influence human judgments\. Moreover, existing work neglects deployment\-time variability, where conditions, particularly the cost of eliciting human input, may differ substantially from those observed during training\. To address these challenges, we introduce a rigorous and theoretically grounded framework for human\-AI collaboration, termed \\emph\{collaborative omnimechanism design\}, based on a novel and computationally efficient contextual bandit variant of boosting for outcome indistinguishability\. In particular, we reduce a calibration\-type outcome indistinguishability condition to projected smooth calibration, providing novel time\-efficiency result, bypassing the high\-dimension curse induced by complicated collaboration methods\. Our framework provides a principled characterization of human impressionability and introduces a unified optimization scheme that enables robust and adaptable decision\-making across diverse query costs and evaluation objectives without retraining\.  We further validate our theoretical results through comprehensive experiments\.
+
+## Proposing Better Rollouts for On\-Policy Distillation
+
+**Authors:** Sirui Chen; Yunzhe Qi; Haobo Xu; Jiaru Zou; Mengting Ai; Zihao Li; Jingrui He
+
+**ID:** 155190 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=7b0JDZvzTQ>) | [PDF](<https://openreview.net/pdf?id=7b0JDZvzTQ>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155190>)
+
+On\-policy distillation \(OPD\) improves language\-model post\-training by letting the student learn from its own sampled trajectories under teacher supervision, aligning the training process with inference\-time behavior\. However, the rollout policy in OPD is usually treated as fixed: each round samples directly from the current student\. We show that this choice can create a compounding teacher\-student mismatch, because it requires the teacher to provide effective supervision on whichever trajectories the student samples, including ones less reachable by the teacher itself\. On such trajectories, teacher supervision can become noisy or even misleading, leading to undesirable student patterns such as repetition\. Moreover, since the updated student in turn defines the rollout policy of subsequent rounds, these patterns persist and potentially amplify over training\.  This failure mode suggests that improving OPD requires treating the rollout policy itself as an optimization target, rather than only modifying the distillation objective\. We propose \*Mixture Proposal On\-Policy Distillation\* \(MPOPD\), which derives a student\-anchored, teacher\-guided rollout distribution from a local trust\-region objective based on relative teacher support\.  The resulting target is a geometric mixture of the student and teacher policies, and we introduce a proposal policy that approximates this mixture, enabling rollout generation in a single forward pass\.  Experiments on 16 math, knowledge, and medical reasoning benchmarks show consistent gains over OPD and recent variants\. On math reasoning, our method improves average accuracy by 6\.91 over OPD on Qwen3\-4B\-Base while reducing average generation length by 41\\%, suggesting that rollout policy design provides an effective way to improve OPD\.
+
+## CoMMa: Contribution\-Aware Medical Multi\-Agents for Decentralized Oncology Decision Support
+
+**Authors:** Yichen WU; Yujin Oh; Sangjoon Park; Kailong Fan; Yuhan Liu; Zhiyi Shi; Sekeun Kim; Dania Daye; Hana Farzaneh; Wei Liu; Xiang Li; Raul N Uppot; Quanzheng Li
+
+**ID:** 153350 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=M1eBc5lFuT>) | [PDF](<https://openreview.net/pdf?id=M1eBc5lFuT>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153350>)
+
+Recent multi\-agent frameworks have shown promise for oncology decision support, yet most assume centralized data access and rely on prompt\-based assignment, limiting their applicability in privacy\-sensitive clinical settings\. We propose Contribution\-Aware Medical Multi\-Agents \(CoMMa\), a decentralized LLM\-agent framework where specialists operate on partitioned clinical data streams\. Unlike prior approaches that share inputs across agents, CoMMa enforces data decentralization to include stronger role specialization and further enhances this via agent\-specific finetuning\. To enable reliable and interpretable coordination, we introduce a contribution\-aware aggregation mechanism that replaces stochastic, narrative\-based reasoning with deterministic embedding projections to approximate each agent's marginal utility\. This yields explicit credit assignment over agents, providing a stable and interpretable decision pathway aligned with clinical requirements\. We evaluate CoMMa on multiple oncology benchmarks, including real\-world multidisciplinary tumor board datasets from large academic hospitals in North America and East Asia, as well as public datasets, demonstrating strong performance and generalization across heterogeneous clinical settings\.
+
+## REINS: Learning Inertia\-Induced Geometry for Physics\-Consistent Motion Representation in Clinical Gait Phenotyping
+
+**Authors:** Yiran Ding; Yufei Zhang; Zijun Cui
+
+**ID:** 155340 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=6Ku1AhEjKl>) | [PDF](<https://openreview.net/pdf?id=6Ku1AhEjKl>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155340>)
+
+Parkinson's disease and other gait\-related neurological disorders manifest in subtle but biomechanically meaningful changes in how patients move, making computational gait phenotyping a valuable tool for clinical assessment\. Yet existing latent representations of motion are typically learned from data alone and miss the biomechanical structure that gives clinical motion its diagnostic meaning, leaving them vulnerable when training cohorts are small or acquisition sites differ\. We propose REINS \(Riemannian Embedding for INertia\-induced motion Spaces\), an Euler\-Lagrange\-induced motion representation that uses the generalized inertia matrix of articulated systems to define a biomechanically grounded geometry on configuration space\. Because kinetic energy is itself a quadratic form in velocity weighted by the inertia matrix, this metric is a mechanically determined Riemannian structure, and we learn a latent embedding of the resulting structured space\. By defining the representation space itself through rigid\-body dynamics rather than enforcing physics as a post\-hoc penalty, REINS aligns the geometry of motion representation with the same physical laws clinicians rely on to interpret gait\. We apply the framework on Parkinson's disease gait analysis, where deviation from healthy motion is measured as a geodesic distance under the inertia\-induced metric, and report results on healthy\-control vs\.\\ PD discrimination and UPDRS\-gait severity correlation\.
+
+## Pan\-FM: A Pan\-Organ Foundation Model with Saliency\-Guided Masking for Missing Robustness
+
+**Authors:** Qiangqiang Wu; Grace McIlvain; Zhou Yu; Junhao Wen
+
+**ID:** 154817 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=AjS1p0GxuG>) | [PDF](<https://openreview.net/pdf?id=AjS1p0GxuG>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154817>)
+
+Foundation models \(FMs\) have shown great promise in medical imaging, but most FMs are trained on unimodal data within isolated domains, such as brain MRI alone\. Human aging and disease arise through coordinated biological processes across organs, therefore motivating multimodal FMs that learn whole\-body representations\. A key challenge, however, is that real\-world multimodal biomedical data are often missing not at random, which can reduce power, limit generalizability, and introduce bias\. We propose Pan\-FM, a pan\-organ foundation model pre\-trained on imaging from seven organs \(Brain, Heart, Adipose, Liver, Kidney, Spleen, and Pancreas\) under realistic missing\-organ scenarios\. Pan\-FM uses a unified backbone that handles organ missingness during both training and inference, and is pre\-trained with masking\-based self\-distillation\. We find that naive multimodal pre\-training leads to dominant\-organ shortcut learning bias, with the model over\-relying on dominant organs such as adipose and heart\. To address this, we introduce Saliency\-Guided Masking \(SGM\), which uses the model attention distribution to adaptively mask dominant organs during pre\-training, thus encouraging more balanced cross\-organ, whole\-body learning\. Notably, SGM introduces negligible computational overhead and can be seamlessly integrated into existing self\-supervised learning frameworks to improve multi\-organ representation learning\. On the UK Biobank, Pan\-FM achieves stronger prediction across 13 disease categories and 14 single disease entities than single\-organ and multi\-organ baselines, with improved robustness under missing\-organ settings\. Pan\-FM serves as a scalable solution to realistic modality\-missingness in multimodal learning in system neuroscience and as a step toward more generalizable whole\-body FMs\.
+
+## PhysicianBench: Evaluating LLM Agents in Real\-World EHR Environments
+
+**Authors:** Ruoqi Liu; Imran Mohiuddin; Austin J Schoeffler; Kavita Renduchintala; Ashwin Nayak; Prasantha L Vemu; Shivam Vedak; Kameron C Black; John L Havlik; Isaac Ogunmola; Stephen P\.; Roopa Dhatt; Jonathan H Chen
+
+**ID:** 139788 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=4tHKkW6AK0>) | [PDF](<https://openreview.net/pdf?id=4tHKkW6AK0>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139788>)
+
+We introduce PhysicianBench, a benchmark for evaluating LLM agents on physician tasks grounded in real clinical setting within electronic health record \(EHR\) environments\. Existing medical agent benchmarks primarily focus on static knowledge recall, single\-step atomic actions, or action intent without verifiable execution against the environment\. As a result, they fail to capture the long\-horizon, composite workflows that characterize real clinical systems\. PhysicianBench comprises 100 long\-horizon tasks adapted from real consultation cases between primary care physicians and specialists, with each task independently reviewed by a separate panel of physicians\. Tasks are instantiated in an EHR environment with real patient records and accessed through the same standard APIs used by commercial EHR vendors\. Tasks span 21 specialties \(e\.g\., cardiology, endocrinology, oncology, psychiatry\) and diverse workflow types \(e\.g\., diagnosis interpretation, medication prescribing, treatment planning\), requiring an average of 27 tool calls per task\. Solving each task requires retrieving data across encounters, reasoning over heterogeneous clinical information, executing consequential clinical actions, and producing clinical documentation\. Each task is decomposed into structured checkpoints \(670 in total across the benchmark\) capturing distinct stages of completion graded by task\-specific scripts with execution\-grounded verification\. Across 12 proprietary and open\-source LLM agents, the best\-performing model achieves only 46% success rate \(pass@1\), while open\-source models reach at most 19%, revealing a substantial gap between current agent capabilities and the demands of real\-world clinical workflows\. PhysicianBench provides a realistic and execution\-grounded benchmark for measuring progress toward autonomous clinical agents\.
+
+## Rethinking Contrastive Targets in Radiology Language\-Image Pretraining
+
+**Authors:** Yunhe Gao; Ashwin Kumar; Jiaming Liu; Chong Wang; Maya Varma; Fuying Wang; Stefania L Moroianu; Louisa Fay; Sergios Gatidis; Akshay Chaudhari; Curtis Langlotz
+
+**ID:** 148888 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=uRbyMugqG7>) | [PDF](<https://openreview.net/pdf?id=uRbyMugqG7>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148888>)
+
+CLIP\-style contrastive image\-\-text pretraining is widely used in radiology data, where each image is paired with one report and every other report in the batch is treated as a negative\. Under this recipe, two failures appear, neither systematically addressed by existing contrastive learning theory: zero\-shot evaluation peaks then degrades while training loss keeps decreasing, and training fails to learn at all at large batches\. We hypothesize the cause is structural rather than radiology\-specific: many unpaired reports share clinical findings with a given image, so CLIP's paired\-identity target is systematically biased, not merely noisy\. To test this, we construct CLEVR\-Radiology, a synthetic testbed that preserves only this overlapping\-fact structure and reproduces both failures\. With evidence that the structure is sufficient to reproduce the failures, we develop a target\-misspecification theory that derives both failures from a single deterministic gradient bias amplified by batch size, and use it to motivate a minimal compatibility\-based correction, CorLIP: a text is treated as positive whenever its clinical assertions agree with the image, with no other change to the training pipeline\. Beyond benchmark improvements, CorLIP removes the post\-peak degradation, makes large\-batch training succeed where it previously collapsed, substantially amplifies the gains from more data, and is the only configuration that remains stable up to B=2048\. The correction also transfers from chest X\-ray to 3D CT modalities\.
+
+## UniPro: Unified Multi\-Mode Medical Image Segmentation from 2D Images to 3D Volumes via Propagation
+
+**Authors:** Bangwei Guo; Yunhe Gao; Meng Ye; Yang Zhou; Difei Gu; Guoning Zhang; Leon Axel; Dimitris Metaxas
+
+**ID:** 154671 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=BtMBnJkdbp>) | [PDF](<https://openreview.net/pdf?id=BtMBnJkdbp>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154671>)
+
+Medical image segmentation remains fragmented along two axes: segmentation paradigms and data dimensionality\. Existing methods are typically developed separately for semantic, in\-context, and interactive segmentation, and are further specialized to either native 2D images or 3D volumetric data\. In clinical practice, however, segmentation workflows take many forms: a case may be initialized by semantic prediction, reference\-guided segmentation, or user interaction\. Regardless of how it begins, fine\-grained refinement is naturally performed on 2D views; for volumetric scans, such 2D edits must propagate coherently to the rest of the volume\. We present \*\*UniPro\*\*, a \*\*uni\*\*fied model that bridges segmentation paradigms and data dimensionality, using \*\*pro\*\*pagation to extend 2D segmentation to 3D volumes\. Our key insight is that volumetric propagation and in\-context segmentation share the same reference\-conditioned prediction mechanism, differing only in whether the reference image–mask pairs come from other cases or from previously segmented neighboring slices\. Building on this view, UniPro supports semantic, in\-context, interactive, and propagation\-based segmentation within a single slice\-based framework, using class priors, reference exemplars, user clicks, and neighboring\-slice predictions as mode\-specific conditioning inputs\. To improve propagation reliability, UniPro further incorporates bidirectional and 3D supervision to regularize slice\-wise propagation beyond per\-slice losses\. Extensive experiments across diverse modalities and anatomies show that UniPro achieves strong performance across all segmentation settings, enabling annotation\-efficient 3D segmentation from sparse 2D initialization and reducing slice\-by\-slice correction effort\.
+
+## Multi\-site PPG: An In\-the\-Wild Physiological Dataset from Emerging Multi\-Site Wearables
+
+**Authors:** Jiayi Shao; Jiaying Ye; ShengYao Liu; Zachary Englhardt; Girish Narayanswamy; Vikram Iyer; Qiuyue \(Shirley\) Xue
+
+**ID:** 139177 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=gKLv4ForGw>) | [PDF](<https://openreview.net/pdf?id=gKLv4ForGw>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139177>)
+
+Wearables are widely used for mobile health monitoring, and photoplethysmography \(PPG\) is a key sensing modality for heart rate and related physiological measurements\. However, public in\-the\-wild PPG datasets remain largely wrist\-centric or limited to short, controlled studies, constraining research on emerging wearable form factors\. We present Multi\-site PPG, an in\-the\-wild physiological dataset collected from four custom\-developed unobtrusive wearables: a smart earring, ring, watch, and necklace\. Each device records green and infrared reflective PPG, 3\-axis acceleration, and temperature with timestamps for cross\-device alignment, while a Polar H10 chest strap provides reference electrocardiogram \(ECG\)\. Participants wore the devices for one to multiple days during daytime activities while continuing their normal routines\. The dataset contains over 350 hours of raw data and 230–290 hours of preprocessed, modeling\-ready 8\-second windows data per wearable\. We benchmark heuristic, supervised, and self\-supervised heart\-rate estimation methods, showing substantial body\-site differences: the best methods achieve mean absolute errors \(MAEs\) of 2\.30 bpm on the earring, 5\.13 bpm on the ring, 8\.37 bpm on the watch, and 8\.68 bpm on the necklace\. We further analyze motion effects and evaluate multi\-site and PPG–accelerometer fusion, demonstrating the dataset’s value for robust physiological sensing across emerging wearable form factors\.
+
+## Severity\-Controlled Prediction Sets for Medication Recommendation
+
+**Authors:** Yu Gu; Zijun Yu; Chi\-Kuang Yeh; Xinyu Wang; Ziyang Song
+
+**ID:** 148292 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=ywQz91vA0C>) | [PDF](<https://openreview.net/pdf?id=ywQz91vA0C>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148292>)
+
+Medication recommendation is a multi\-label prediction task, yet existing prediction\-set evaluation and calibration methods rely mainly on exact\-overlap metrics and therefore treat all missed medications as equally severe\. However, missing a medication but predicting a therapeutically close drug is less severe than matching it only with distant predictions\. To address this, we introduce \*\*Conformal Severity Control \(CSC\)\*\*, a post\-hoc framework for calibrating medication prediction sets under hierarchy\-aware mismatch severity\. CSC uses the Anatomical Therapeutic Chemical \(ATC\) hierarchy to quantify mismatch severity and controls patient\-level severity without retraining the predictor, supporting both average severity and upper\-quantile severity for the highest\-severity mismatches\. Experiments on MIMIC\-IV show that CSC tracks user\-specified severity tolerances and shifts prediction sets away from distant mismatches toward exact or close matches\.
+
+## AI and Data Science for Her: Training the Next Generation of High School Girls in Nigeria
+
+**Authors:** Aderonke Sakpere
+
+**ID:** 137855 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** missing
+
+[Official poster](<https://neurips.cc/virtual/2026/poster/137855>)
+
+This program will train 300 Nigerian high school girls across six geopolitical zones of the country in the fundamentals of AI and data science\. Grounded in published research on how teenage girls engage with technical subjects, the curriculum is deliberately girl\-centered, pairing students with female mentors already working in AI, and connecting technical concepts to capstone projects addressing real challenges in healthcare, agriculture, and education\. AI clubs formed in each participating school will keep the learning going long after the program’s formal end
+
+## AI and Data Science for Her: Training the Next Generation of High School Girls in Nigeria
+
+**Authors:** Aderonke Sakpere
+
+**ID:** 137849 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** missing
+
+[Official poster](<https://neurips.cc/virtual/2026/poster/137849>)
+
+This program will train 300 Nigerian high school girls across six geopolitical zones of the country in the fundamentals of AI and data science\. Grounded in published research on how teenage girls engage with technical subjects, the curriculum is deliberately girl\-centered, pairing students with female mentors already working in AI, and connecting technical concepts to capstone projects addressing real challenges in healthcare, agriculture, and education\. AI clubs formed in each participating school will keep the learning going long after the program’s formal end
+
+## Temporal Island Sparse Autoencoders for Interpreting Clinical Time\-Series Models
+
+**Authors:** Muhan Yeo; Bong Gyun Kang; HyunGi Kim; Sungroh Yoon
+
+**ID:** 151967 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=WSgYALKmGw>) | [PDF](<https://openreview.net/pdf?id=WSgYALKmGw>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151967>)
+
+Deep learning models for electronic health records achieve strong predictive performance but provide little insight into \*what clinical concepts\* they represent internally\. Post\-hoc attribution methods produce per\-cell importance scores that lack temporal coherence, cross\-variable structure, and reusability across patients\. We introduce the \*\*Temporal Island Sparse Autoencoder\*\* \(TI\-SAE\), which learns a backbone\-specific, patient\-shared \*clinical concept dictionary\* from a frozen predictive model’s representations\. Each dictionary entry \(latent\) is defined by learned temporal Gaussian islands—specifying \*when\* the concept is active—and a sparse variable\-composition vector—specifying \*which variables\* are involved\. A decoupled selector then identifies which dictionary entries drive each patient’s prediction, separating representation learning from attribution\. We evaluate TI\-SAE across five backbone architectures spanning different representation strategies on MIMIC\-III and MIMIC\-IV \(three prediction tasks each\)\. TI\-SAE produces structured clinical concepts that go beyond transient attribution heatmaps while achieving strong performance on standard faithfulness benchmarks\.
+
+## Teaching LLMs to Recommend and Defer in Underrepresented Epilepsy Care
+
+**Authors:** Shreyas Rajesh; Kartik Sharma; Tonmoy Monsoor; Mehmet Yigit Turali; Richard Idro; Juliana Kayaga; Robert Sebunya; Tracy T Namata; Jessica N Pasqua; vwani Roychowdhury; Rajarshi Mazumder
+
+**ID:** 154539 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=CqLMStITK3>) | [PDF](<https://openreview.net/pdf?id=CqLMStITK3>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154539>)
+
+Specialist epilepsy expertise is scarce in resource\-constrained settings, making LLM\-based decision support attractive for frontline clinicians managing longitudinal treatment\. Such support systems must do more than apply medical knowledge: they must adapt to local prescribing practice and know when to defer\. Public medical AI benchmarks are dominated by high\-income clinical settings, leaving prescribing practices, medication availability, and follow\-up patterns in low\-resource contexts largely unrepresented\. We study this problem through a multidisciplinary collaboration in Ugandan pediatric epilepsy care\. The task is to predict anti\-seizure medication regimens from longitudinal unstructured notes collected by local clinicians across serial visits\. Standard prompting achieves non\-trivial agreement with physician prescriptions, but neurologists' review of model reasoning traces shows that its errors stem from distribution\-miscalibrated prescribing defaults rather than the local care environment\. We introduce Manana, a non\-parametric prompt\-learning framework that learns how to reason about local prescribing decisions from a small patient\-level training set\. Manana turns observed prescription errors into an auditable prompt memory, instantiated in single\-agent and multi\-agent variants, and outperforms classical ML models, direct LLM prompting, and prompt\-optimization baselines across two independently collected Ugandan cohorts\. To make the system uncertainty\-aware, we propose Bayesian prompt averaging \(BPA\), a Bayesian model averaging procedure over the learned prompt trajectory\. This converts a sequence of learned prompts into prescription likelihoods and produces a deferral signal\. On the independently collected held\-out cohort, BPA improves visit\-level top\-3 prescription accuracy by 4\-8 percentage points over the prompt\-optimization baselines\. More consequentially, it enables clinically meaningful selective prediction: the system can auto\-handle the most confident half of cases at 95\\% precision, or the most confident quarter at 99\\% precision, while deferring lower\-confidence cases for specialist review\. These results suggest a path toward locally adapted clinical LLM systems that learn from limited site\-specific data and reserve scarce specialist attention for the cases where uncertainty is highest\.
+
+## Explanations over Graphs: An Agent Architecture for IT Enterprise Diagnostic Tasks
+
+**Authors:** Saurabh Jha; Rohan R\. Arora; Bhavya Bhavya; Noah Zheutlin; Paulina Toro Isaza; Laura Shwartz; Yu Deng; Daby Sow; Ruchir Puri
+
+**ID:** 151711 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=YcWFCquBYo>) | [PDF](<https://openreview.net/pdf?id=YcWFCquBYo>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151711>)
+
+LLM agents excel when environments are mostly static and their required information fits in a model’s context window, but they struggle with IT enterprise diagnostic tasks—such as incident management, IT vulnerability analysis, and FinOps anomaly explanation—where operators iteratively mine massive observability data over a curated resource graph to identify the origins that explain observed symptoms, enabling correct remediation\. The data in these domains inherently has hidden dependency structure: entities interact, signals co\-vary, and the importance of a fact may only become clear after other evidence is discovered\. To cope with bounded context windows, agents must summarize intermediate findings before their significance is known, increasing the risk of discarding key evidence\. ReAct\-style agents are especially brittle in this regime\. Their retrieve\-summarize\-reason loop makes conclusions sensitive to exploration order and introduces run\-to\-run non\-determinism, producing a reliability gap where Pass\-at\-k may be high but Majority\-at\-k remains low\. Simply sampling more roll\-outs or generating longer reasoning traces does not reliably stabilize results, since verifying a diagnosis requires remediation actions that carry operational risk\-\-\-demanding consistent correctness, not occasional success\-\-\-and ReAct provides no mechanism for belief revision as evidence accumulates\. In addition, ReAct entangles semantic reasoning with controller duties such as tool orchestration and state tracking; execution errors and plan drift degrade reasoning while consuming scarce context\. We address these issues by formulating the investigation as abductive reasoning over a dependency graph and proposing EoG \(Explanations over Graphs\), a disaggregated framework where an LLM performs bounded local evidence mining and labeling \(cause vs symptom\) while a deterministic controller manages traversal, state, and belief propagation to compute a minimal explanatory frontier\. On representative ITBench diagnostics tasks, EoG improves accuracy and run\-to\-run consistency over ReAct baselines, including a 7x average gain in Majority\-at\-k F1 score\.
+
+## Alignment Is Not Enough for Safe Medical LLM Evaluation
+
+**Authors:** Zhiwen You; Yikun Han; Jana Diesner; Yue Guo
+
+**ID:** 140065 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=Tju86JH3mo>) | [PDF](<https://openreview.net/pdf?id=Tju86JH3mo>) | [Official poster](<https://neurips.cc/virtual/2026/poster/140065>)
+
+LLMs\-as\-judges \(LLJs\) are increasingly used to reduce the cost of expert review in medical evaluation\. However, high alignment with clinicians does not by itself establish validity or safety\. This position paper argues that current reporting practices for medical LLJs are insufficient: LLJ\-clinician alignment should not be reported as standalone evidence that a judge is reliable, clinically grounded, or safe for downstream use\. We identify four risks: unstable evaluations across prompts, runs, and judge models; opaque scores that hide clinically meaningful errors; weak validity under clinical uncertainty and limited clinician agreement; and downstream safety or data contamination risks when flawed scores influence model selection or synthetic data filtering\. By re\-examining LLJ evaluation setups used in prior medical studies, we show that judges treated as practical evaluators in the literature can still reject clinically equivalent diagnoses, overrate incomplete or unsafe answers, reward unsupported clinical notes, and penalize appropriate treatment plans\. We propose a protocol for medical LLJ evaluation that requires task\-specific codebooks, expert\-annotated validation sets, codebook\-derived prompts, robustness testing, clinical error analysis, uncertainty reporting, and transparent disclosure before LLJ scores are used for medical benchmarking or decision support\.
+
+## MedExAgent: Training LLM Agents to Ask, Examine, and Diagnose in Noisy Clinical Environments
+
+**Authors:** Yicheng Gao; Xiaolin Zhou; Yahan Li; Yue Zhao; Ruishan Liu
+
+**ID:** 149616 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=olngQeJA7J>) | [PDF](<https://openreview.net/pdf?id=olngQeJA7J>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149616>)
+
+Real\-world clinical diagnosis is a complex process in which the doctor is required to obtain information from both interaction with the patient and conducting medical exams\. Additionally, the doctor needs to adapt to different patient personas, as well as noisy and incomplete information that can happen at any time during the process\. However, existing benchmarks for medical LLMs and methods for automatic diagnosis largely simplify this process by reducing it to single\-turn question answering, noise\-free conversations, or sequential exam making, etc\., ignoring the interactive and uncertain nature of clinical diagnosis\. In this paper, we aim to address this gap by formalizing clinical diagnosis as a Partially Observable Markov Decision Process \(POMDP\) with three action types: questioning the patient, ordering medical exams as tool calls, and issuing a diagnosis\. We also introduce a systematic noise model comprising seven patient noise types and three exam noise types\. Using our proposed environment, we train an effective diagnosis agent, \\textbf\{MedExAgent\}, through a two\-stage pipeline that first performs supervised finetuning on synthetic conversations structured after the Calgary\-Cambridge model for clinical interviews, and then applies DAPO to optimize a composite reward capturing diagnostic accuracy, tool call quality, and exam cost including financial cost and patient discomfort\. Through extensive experiments and ablation studies, we demonstrate that MedExAgent achieves diagnostic performance comparable to larger models while maintaining cost\-efficient examination strategies\.
+
+## CLR\-voyance : Reinforcing Open\-Ended Reasoning for Inpatient Clinical Decision Support with Outcome\-Aware Rubrics
+
+**Authors:** Aishik Nagar; Arun\-Kumar Kaliya\-Perumal; Yu\-Hsuan Han; Andrew Sheng\-Han Huang; Kristen Kee; Yushi Cao; Yiming Chen; Hongchao Jiang
+
+**ID:** 150688 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=gFCYsqy2Py>) | [PDF](<https://openreview.net/pdf?id=gFCYsqy2Py>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150688>)
+
+Inpatient clinical reasoning is a sequential decision under partial observability: the clinician sees the admission so far and must choose the next action whose downstream consequences are not yet visible\. Existing clinical\-LLM evaluations and reinforcement\-learning \(RL\) rewards collapse this structure into closed\-form retrieval, full clinical journey leakage, or unanchored LLM\-as\-judge scoring\. Here, we introduce CLR\-voyance, an end\-to\-end framework that reformulates inpatient reasoning as a Partially Observable Markov Decision Process \(POMDP\) and supervises it with rewards that are simultaneously outcome\-grounded and clinician\-validated\. We instantiate the formulation as CLR\-POMDP, which partitions successful patient journeys into a policy\-visible past and an oracle\-only future\. Using the past information, an oracle LLM generates a case\-specific query\-answer pair, and the first adaptive rubric for clinical reasoning which is verifiable in the future of the patient journey\. These rubrics are used for both RL post\-training and evaluation of models for inpatient clinical reasoning\. CLR\-voyance post\-trains Qwen3\-8B and MedGemma\-4B with GRPO followed by model merging, yielding state\-of\-the\-art inpatient clinical reasoning while retaining generalist capabilities\. CLR\-voyance\-8B achieves 84\.91% on CLR\-POMDP, ahead of frontier medical reasoning models like GPT\-5 \(77\.83%\) and MedGemma\-27B \(66\.66%\) and has comparable or better performance on existing medical benchmarks\. To ensure that our setting is clinically meaningful, we conduct a large\-scale clinician alignment study, where physicians curate per\-case rubrics, grade candidate responses against them, and provide blinded pairwise preferences of model reasoning\. This study provides insights on clinical LLM\-as\-a\-judge and clinical preference\-model selection, which can inform the community at large\. CLR\-voyance has been deployed for 6\+ months at a partner public hospital, drafting thousands of reasoning\-heavy inpatient notes and 1\.03T\+ tokens processed to date\.
+
+## SMI: Semantic Medical ID for Hierarchy\-Aware Concept Representation
+
+**Authors:** Ziyang Song; Lia Shen; Yixuan Li; Qincheng Lu; Weihao Li; Haoran Xu; Mike He Zhu; Xinyu Wang; Yue Li
+
+**ID:** 154857 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=AMCfPRZTPu>) | [PDF](<https://openreview.net/pdf?id=AMCfPRZTPu>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154857>)
+
+While biomedical language models \(LMs\) achieve strong performance on various clinical tasks, they often fail to capture the structured relationships among medical concepts\. Because LMs rely on data\-driven text learning and fail to learn meaningful patterns from long\-tailed distributed medical concepts\. We introduce \*\*Semantic Medical Identifier \(SMI\)\*\*, a simple but effective representation framework that integrates expert\-curated medical ontologies with LMs to generate hierarchy\-aware concept embeddings\. For each clinical code, SMI aggregates embeddings across hierarchical levels, leading to a representation that preserves hierarchical semantics from coarse to fine\-grained clinical concepts\. Our theoretical analysis shows that SMI yields a strictly higher signal\-to\-noise ratio than hierarchy\-agnostic LM embeddings, particularly improving the representation of infrequent fine\-grained concepts\. Experimental results show that SMI learns interpretable geometry, improves concept relation discrimination and clinical prediction, and is robust to distribution shifts\.
+
+## TraceDx: Criticality\-Weighted Atomic Facts as a Training Signal for Sequential Clinical Diagnosis
+
+**Authors:** Jiayi Li; Sunny Chung; Don C Codipilly; George Marek; Varan Perananthan; Dennis L\. Shung; Bradly Stadie
+
+**ID:** 149401 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=qKyDusXpKG>) | [PDF](<https://openreview.net/pdf?id=qKyDusXpKG>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149401>)
+
+In clinical decision\-making, success depends on taking the right action to obtain the evidence that matters\. One targeted clinical workup can identify a diagnosis that a battery of nonspecific tests missed\. Large language models have shown considerable promise in clinical diagnosis, but most current approaches assume that all relevant patient information is available upfront, which does not reflect how diagnostic evidence is gathered in practice\. Even when models gather evidence iteratively, challenges arise in determining which action to take, as they receive no feedback on which findings are diagnostically decisive\. To solve this problem, we introduce TraceDx, a reinforcement learning framework for sequential clinical diagnosis\. TraceDx is built on the idea that unstructured clinical records can be decomposed into atomic clinical findings, each scored by its diagnostic value\. This signal rewards agents for discovering decisive evidence in addition to reaching the correct diagnosis\. Consistent with this design, a case\-level analysis shows that recovery of critical evidence is the only statistically significant predictor of diagnostic success\. Direct case comparisons further show that TraceDx uncovers more diagnostically important evidence, and uses it to resolve the key diagnostic uncertainty\. TraceDx\-trained open\-weight models outperform multiple frontier baselines on both MIMIC\-CDM and a rare gastrointestinal disease dataset\.
+
+## TACT\-KV: Tri\-Axis Cosine Transform for Compressing Volumetric KV Caches in Medical VLMs
+
+**Authors:** Chongyu Qu; Ritchie Zhao; Yufan He; Dong Yang; Zhengyi Lu; Junchao Zhu; Tianyuan Yao; Juming Xiong; Junlin Guo; Yanfan Zhu; Yuechen Yang; Daguang Xu; Bennett Landman; Yucheng Tang; Yuankai Huo
+
+**ID:** 153041 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=OU6bVNsqd3>) | [PDF](<https://openreview.net/pdf?id=OU6bVNsqd3>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153041>)
+
+Vision\-language models \(VLMs\) applied to 3D medical scans face a structural memory wall\. A single CT or MRI volume produces tens of thousands of vision tokens, and the resulting key\-value \(KV\) cache scales linearly with both batch and context\. Existing KV compression methods operate on the cache's feature or token statistics, or apply 1D and 2D transforms, leaving the three\-axis spatial structure in the cache unexploited\. We propose TACT\-KV \(Tri\-Axis Cosine Transform\), a calibration\-free KV compression method that exploits strong spatial correlations in visual KV states along all three anatomical axes of 3D scans\. This correlation concentrates the KV cache energy under a frequency\-domain transform\. TACT\-KV applies a separable 3D discrete cosine transform to the KV cache, allocates a per\-layer bit budget across frequency bins via reverse water\-filling \(more bits to high\-energy components\), and quantizes each bin with a fixed scalar codebook\. We derive a close\-form relation: the distortion reduction from adaptive bit allocation is dominated by the spectral concentration of the transformed cache\. Across six medical VLMs and two 3D CT benchmarks, TACT\-KV maintains near\-lossless prediction fidelity at 1\-bit\. The same advantage reproduces on four general\-purpose VLMs evaluated on video tasks, indicating that the benefit of exploiting three\-axis structure generalizes beyond medical imaging\. At equal high\-bandwidth memory \(HBM\), TACT\-KV scales the decoding batch size on a single GPU by up to $8\\times$\.
+
+## MedVIGIL: Evaluating Trustworthy Medical VLMs Under Broken Visual Evidence
+
+**Authors:** Hanqi Jiang; Junhao Chen; Yi Pan; Lifeng Chen; Weihang You; Haozhen Gong; Ruiyu Yan; Jinglei Lv; Lin Zhao; Hui Ren; Quanzheng Li; Tianming Liu; Xiang Li
+
+**ID:** 139346 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=VSlJ79obBe>) | [PDF](<https://openreview.net/pdf?id=VSlJ79obBe>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139346>)
+
+Medical vision–language models \(VLMs\) are usually evaluated on intact image–question pairs, but trustworthy clinical use requires a stronger property: a model must recognise when the evidential basis for an answer has failed\. We study this through silent failures under perturbed evidence, where a vision\-required medical question is paired with a false premise, wording perturbation, knowledge\-only rewrite, or ROI\-corrupted image, yet the model returns a fluent non\-refusal answer\. We introduce MedVIGIL, a 300\-case evaluation suite drawn from four public medical VQA sources, supervised end to end by four board\-certified radiologists: every gold answer, refusal option, candidate\-answer set, paraphrase, false\-premise trap, ROI box, and clinical risk tier is clinician\-authored\. Two attending radiologists annotate every case in parallel, a senior radiologist consolidates the released manifest, and a separate fourth radiologist independent of construction answers every probe to provide the human reference baseline\. The release contains 2,556 MCQ probes, 240 counterfactual triplets, physician\-adjudicated risk\-tier and answerability flags, ROI boxes, and a paired open\-ended variant\. We report seven correctness\-conditioned audit metrics that summarise into the MedVIGIL Composite Score \(MCS\), and audit 16 vision\-capable models plus two text\-only baselines\. The independent radiologist scores MCS 83\.3 at silent\-failure rate 5\.8%, leaving a 14\.1\-point composite headroom above the strongest audited model \(Claude Opus 4\.7 at 69\.2\)\. The benchmark and evaluation harness are publicly released\.
+
+## Can Bits Seal Language?
+
+**Authors:** Jia Xu
+
+**ID:** 153783 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=IgPTYfH7nv>) | [PDF](<https://openreview.net/pdf?id=IgPTYfH7nv>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153783>)
+
+We present an encoding method that maps each input token to a randomized  sequence of binary values \(0s and 1s\)\. By operating at the finest representational  granularity and applying compression, this approach reduces the effective  vocabulary to just two symbols, yielding a compact, task\-agnostic representation\.  Across eleven main tasks spanning six modalities \(human text, genetic/clinical  data, programming code, system logs, biological signals, and tabular medical data\),  it achieves up to two orders of magnitude stronger privacy guarantees under six  gradient\-based attack settings compared to seven encoder baselines and four  defense baselines, including up to 549× improvement on FILM and 62× on TAG\. At  the same time, it reduces embedding model size by up to 98%, while maintaining  competitive accuracy and computational efficiency\. It also improves multilingual  generalization, achieving up to a 4× increase in accuracy in low\-resource settings\.
+
+## On\-Policy Hindsight Distillation for Early Risk Prediction
+
+**Authors:** Qiannan Zhang; Fei Wang
+
+**ID:** 153484 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=L26pEowauj>) | [PDF](<https://openreview.net/pdf?id=L26pEowauj>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153484>)
+
+Early prediction of chronic disease risk from electronic health records \(EHRs\) is challenging because early clinical signals are often sparse, noisy, and indirectly related to future outcomes\. Existing methods typically learn from prediction\-time records and final outcome labels alone, which provides limited supervision for identifying weak early signals from heterogeneous and confounded clinical records\. LLM\-generated rationales offer an intermediate form of prediction\-time reasoning, but rationales derived from early EHR may still miss weak signals whose relevance becomes clearer only in later records\. We therefore use follow\-up EHR observed after the prediction time but before outcome assessment as training\-time hindsight and propose On\-Policy Hindsight Distillation \(OPHD\), a self\-distillation framework that converts follow\-up EHR into training signals for LLM\-generated prediction\-time rationales\. Specifically, OPHD first uses an LLM to generate a rationale from prediction\-time EHR alone, then re\-evaluates the same rationale under privileged follow\-up views to derive token\-level signals that are distilled back to the prediction\-time policy\. To handle noisy follow\-up records, OPHD emphasizes hindsight signals that are stable across perturbed privileged views\. A task\-grounded scorer further prioritizes rationales that improve downstream risk discrimination\. Experiments on multiple real\-world neurodegenerative disease cohorts show that OPHD achieves the best long\-horizon prediction performance compared with a variety of baselines\.
+
+## GlucoFM\-Bench: Benchmarking Time\-Series Foundation Models for Blood Glucose Forecasting
+
+**Authors:** Baiying Lu; Zhaohui Liang; Ryan Pontius; Shengpu Tang; Temiloluwa Prioleau
+
+**ID:** 139533 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=KNGzZNVPZk>) | [PDF](<https://openreview.net/pdf?id=KNGzZNVPZk>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139533>)
+
+Blood glucose forecasting models are foundational for modern diabetes management systems, as reliable short\-term predictions can enable proactive interventions, support automated insulin delivery, and reduce the risk of hypo\- and hyperglycemic events\. From a modeling perspective, glucose forecasting poses unique challenges due to heterogeneous physiological dynamics across different diabetes populations\. Traditional machine learning and deep learning models have been extensively evaluated for glucose prediction\. However, there is significantly less research on evaluating and benchmarking recent time\-series foundation models \(TSFMs\) for blood glucose forecasting\. To bridge this gap, we present GlucoFM\-Bench, a comprehensive benchmark evaluating state\-of\-the\-art TSFMs alongside supervised deep learning models for blood glucose forecasting\. We assess eight representative architectures, including pre\-trained TSFMs, time\-series large language models, and task\-specific deep learning models, across 15 publicly available diabetes\-relevant datasets comprising 1,117 individuals with type 1 diabetes, type 2 diabetes, prediabetes, and no diabetes\. Models are evaluated under zero\-shot, few\-shot, and full\-shot protocols, with systematic variation in context length and prediction horizon\. Across datasets, pre\-trained TSFMs, especially Chronos\-2 and TimesFM, show strong zero\-shot and few\-shot transfer, with the best zero\-shot model performing within 5% of the best full\-shot supervised model\. Yet, when task\-specific data is abundant, a lightweight LSTM remains strongest, outperforming TSFMs by 4\-21% under full\-shot training\. Stratified analyses reveal persistent challenges in T1D cohorts and hypo\-/hyperglycemic ranges, highlighting the need for evaluation beyond aggregate error metrics\. Together, GlucoFM\-Bench provides a standardized and reproducible foundation for evaluating, comparing, and improving foundation models for blood glucose forecasting\. The dataset and code are publicly available at https://huggingface\.co/datasets/glucofmbench/GlucoFM\-Bench and https://anonymous\.4open\.science/r/GlucoseML\_benchmark\-B50C, respectively\.
+
+## ShadowTransfer: A Geographic Transfer Benchmark for Overhead Shadow Detection
+
+**Authors:** Shagun Mittal; Raymond A\. Yeh; Satish Ukkusuri
+
+**ID:** 139054 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=nsoesUF2ic>) | [PDF](<https://openreview.net/pdf?id=nsoesUF2ic>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139054>)
+
+Overhead aerial imagery feeds dense\-prediction pipelines that are routinely trained in one geographic region and deployed in another, yet no benchmark measures how shadow detection models transfer across regions\. Existing overhead shadow datasets either lack a geographic transfer protocol or rely on automatically generated labels\. We introduce \\shadow, a benchmark of $4\{,\}500$ human\-verified shadow masks across three U\.S\.\\ cities at two native resolutions, paired with a leave\-one\-city\-out evaluation protocol\. Across three architectures and seven adaptation methods, all adaptation methods degrade under geographic transfer\. We propose a three\-probe framework that diagnoses where and how the transfer breaks: the failure operates in feature space \(not pixel space\), shows up as a confidence collapse on shadow pixels while background confidence stays intact, and is recoverable by retraining different architectural components depending on the model: encoder for some, decoder for others\. These findings replicate on INRIA building footprint extraction under the same protocol, suggesting they describe geographic transfer broadly rather than something specific to shadows\. Guided by the diagnosis, we build Spectral Information Bottleneck \(SIB\), a plug\-in module with one component per finding\. Across the $9$ \(architecture, held\-out\-city\) cells, \\sib\{\} attains the highest mean mIoU \($70\.92$\) and the smallest worst\-case gap to the within\-city upper bound \($7\.18$ mIoU\)\. The benchmark, LOCO protocol, code, and trained models are released to support reproducible evaluation of geographic transfer in overhead dense prediction\.
+
+## Reinforcement learning enhanced flow matching for reference\-based tumor generation on unpaired CT images
+
+**Authors:** Xiaoxuan Gong; Zhilin Zheng; Tiancheng Lin; Qinji Yu; Jianpeng Zhang; Shaoteng Zhang; Kai Cao; Xiaoli Yin; Yu Shi; Jie Ma; Ling Zhang; Yingda Xia
+
+**ID:** 148223 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=zSCkPewf7l>) | [PDF](<https://openreview.net/pdf?id=zSCkPewf7l>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148223>)
+
+The success of deep learning in medical image analysis is often hindered by the long\-tail distribution of disease cases, where rare or early\-stage tumors are critically under\-represented\. While controllable synthesis offers a potential solution, existing methods suffer from a \\textit\{specification bottleneck\}, as low\-dimensional signals like text or binary masks fail to capture complex textures and morphological variations\. In this paper, we propose an exemplar\-driven synthesis framework that utilizes real tumor samples as high\-dimensional templates to enable precise, case\-specific generation\. To the best of our knowledge, this is the first work to introduce reinforcement learning \(RL\) into the field of 3D medical image generation, called \*\*MedGRPO\*\*\. We formulate the unpaired tumor synthesis task as a constrained trajectory optimization problem and leverage Flow\-GRPO to find an optimal generation path\. By designing a multi\-objective reward system encompassing texture, shape, and semantic consistency, our model effectively balances pathological fidelity with anatomical coherence without requiring paired supervision\. Rigorous evaluations across four major tumor types and the external AbdomenAtlas 2\.0 dataset demonstrate that our method produces high\-fidelity synthetic data that significantly enhances the performance of downstream diagnostic models\.
+
+## DeepArrhythmia: Segment\-Contextualized ECG Arrhythmia Classification via Selective Evidence Acquisition
+
+**Authors:** Jiahui Li; Ruili Fang; Zishuai Liu; WenZhan Song; Jin Lu; Fei Dou
+
+**ID:** 150425 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=i8JkJYOjY6>) | [PDF](<https://openreview.net/pdf?id=i8JkJYOjY6>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150425>)
+
+Beat\-level Electrocardiography \(ECG\) arrhythmia detection aims to assign an arrhythmia class to each beat in a recording, yet many existing systems treat beats as isolated local instances\. This is limiting because beat labels often depend on multi\-beat rhythm context, including timing, compensatory pauses, and beat\-to\-beat morphological consistency\. We present $\\textbf\{DeepArrhythmia\}$, a tool\-grounded multimodal framework for segment\-contextualized beat\-level ECG arrhythmia classification\. Given a multi\-beat ECG segment, DeepArrhythmia combines the raw ECG signal and a rendered waveform image, localizes R peaks to identify beat instances, and produces structured beat\-level predictions\. The framework decouples physiological measurement from evidence integration using specialized tools for beat localization, numerical rhythm\-\-morphology extraction, and morphology\-focused textual analysis\. DeepArrhythmia uses segment\-level confidence to route between minimal and rich evidence states, since richer physiological evidence is not uniformly useful\. This agentic design integrates rhythm context, explicit physiological grounding, and selective evidence acquisition for decision making\.
 
 ## Urgency\-Aware Autoregressive VLMs for Unanticipated Healthcare Occurrences
 

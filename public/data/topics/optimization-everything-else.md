@@ -2,9 +2,49 @@
 
 优化 / 其他优化
 
-12 source poster records. Repeated source event IDs are retained and explicitly marked.
+8 source poster records. Repeated source event IDs are retained and explicitly marked.
 
 Topic labels marked inferred are keyword-based, not official conference labels. PDF links marked derived are unverified. Missing abstracts are left empty in the JSON and CSV exports.
+
+## Mixture of Activations: Token\-Adaptive Mixing for Expressive Feedforward Layers
+
+**Authors:** Mingze Wang; Jinbo Wang; Yikuan Xia; Shen Kai; Mingwu Zheng
+
+**ID:** 155502 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=55epurix4x>) | [PDF](<https://openreview.net/pdf?id=55epurix4x>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155502>)
+
+Feedforward network \(FFN\) layers account for a large fraction of parameters and nonlinear expressivity in Transformer\-based large language models \(LLMs\)\.  Despite the evolution from ReLU and GELU to gated variants such as SwiGLU, most FFN designs still use a single fixed activation function, applying the same nonlinear transformation to all tokens\.  In this work, we propose \*Mixture of Activations\* \(MoA\), a token\-adaptive FFN design that mixes a dictionary of activation functions using lightweight input\-dependent gates while sharing the same linear projections\.  As an input\-independent counterpart, we also introduce learnable activations \(LA\), which form linear combinations of activation functions for both ReLU\-type and SwiGLU\-type FFNs\.  \*Theoretically\*, we establish strict finite\-width expressive separations among fixed\-activation FFNs, LA, and MoA: LA strictly contains fixed\-activation FFNs, while MoA strictly contains LA, with the additional expressivity arising from input\-dependent nonlinear hybridization\.  \*Empirically\*, we evaluate MoA through extensive pre\-training experiments on dense and MoE language models ranging from 0\.12B to 2B parameters under different token budgets, optimizers, and learning rate schedules\.  MoA consistently achieves lower terminal loss and exhibits more favorable scaling behavior than well\-tuned baselines, with minimal parameter and computational overhead\. These results suggest that token\-adaptive activation mixing is a simple and effective mechanism for improving FFN expressivity in LLMs\.
+
+## Improving the Optimization Landscape of Matrix Completion with $\\epsilon$\-close Surrogates
+
+**Authors:** Ziye Ma
+
+**ID:** 151753 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=YJGa7iqmAu>) | [PDF](<https://openreview.net/pdf?id=YJGa7iqmAu>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151753>)
+
+Non\-convex optimization is central to machine learning and AI, yet unlike its convex counterpart, it still lacks a general and principled framework\. In this work, we try to highlight the importance of combining noisy perturbations with over\-parametrization mathematically under the classic setting of matrix completion \(MC\)\. Matrix completion is an important non\-convex recovery problem in which only a subset of a matrix’s entries is observed, and the remaining entries must be recovered using low\-rank constraints\. This problem is notoriously difficult because observations are limited\. However, we show that by injecting $\\epsilon$\-level perturbations into the nullspace of the observation mask, we can construct noisy matrix sensing surrogates whose solutions remain $\\mathcal\{O\}\(\\epsilon\)$\-close to the ground truth with valid restricted isometry property \(RIP\) constants\. The existence of RIP further enables powerful tensor frameworks to be applied with theoretical guarantees\. This approach reflects a broader empirical trend in which stochasticity or noise improves the curvature of the optimization landscape, allowing over\-parameterized \(a\.k\.a large\) models to better separate signal from noise\. Assuming each matrix entry is observed independently, we establish quantitative recovery guarantees without explicit requirements on sampling rate or incoherence, and discuss how such assumptions can further strengthen our results\.
+
+## SPA\-Q: Structure\-Preserving Adaptive Post\-Training Quantization for Monocular Depth Estimation
+
+**Authors:** Jaemin Choi; Jincheol Yang; Nahyun Lim; Yun\-Seong Jeong; Matti Zinke; Hyunwoo Yu; Suk\-Ju Kang
+
+**ID:** 155959 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=1YMesFGTP0>) | [PDF](<https://openreview.net/pdf?id=1YMesFGTP0>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155959>)
+
+Monocular depth estimation \(MDE\) has advanced rapidly with the emergence of foundation models such as Depth Anything\.  Their transformer\-based architectures provide strong generalization across diverse scenes and domains, but also incur high computational and memory cost, making efficient deployment challenging\. Post\-Training Quantization \(PTQ\) provides an efficient and practical solution for model compression, yet low\-bit PTQ remains challenging for MDE models\. When applying PTQ to Depth Anything, we identify two key challenges: \(i\) independently minimizing the quantization error of the query and key projections fails to preserve the attention maps induced by their interaction, and \(ii\) quantization errors accumulate across layers, resulting in intermediate feature distribution shifts\. To address these issues, we propose SPA\-Q, a Structure\-Preserving Adaptive PTQ framework for MDE, consisting of two main components\. First, Attention\-Preserving Calibration \(APC\) determines query and key quantization parameters by matching the full\-precision attention distribution\. Second, Channel\-Wise Distribution Alignment \(CWDA\) learns channel\-wise affine transformations to mitigate quantization\-induced distribution shifts, and the learned parameters are absorbed into the weights after training\. Experimental results show that SPA\-Q consistently outperforms existing PTQ methods under 4\-bit quantization, achieving an average 25\.9\\% reduction in AbsRel and a 17\.3\\% improvement in $\\delta\_1$ across NYUv2 and KITTI datasets\.
+
+## Post\-Training Quantization with Gradient\-Projected Fisher Approximation for Vision Transformers
+
+**Authors:** Jincheol Yang; Jaemin Choi; Nahyun Lim; Yun\-Seong Jeong; Matti Zinke; Hyunwoo Yu; Bongjoon Hyun; Kyomin Sohn; Suk\-Ju Kang
+
+**ID:** 151584 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=ZWDJy4JaBH>) | [PDF](<https://openreview.net/pdf?id=ZWDJy4JaBH>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151584>)
+
+Vision Transformers \(ViTs\) demonstrate strong performance, but their substantial memory footprint and computational overhead necessitate efficient compression techniques such as post\-training quantization \(PTQ\)\. However, pushing ViTs to low\-bit precision incurs significant accuracy degradation\. Recent PTQ methods adopt block reconstruction\-based optimization with curvature\-aware objectives, typically implemented using Fisher\-based approximations\. These approaches rely on explicit curvature modeling based on diagonal or structured approximations, which still fail to capture cross\-dimensional interactions\.  Moreover, they often involve matrix inversion, leading to numerical instability under ill\-conditioned settings\. To address these limitations, we propose Gradient\-Projected Fisher Approximation for Quantization \(GPFA\-Q\), a block reconstruction\-based PTQ framework that avoids explicit curvature matrix construction while capturing off\-diagonal interactions\. First, we introduce Gradient\-Projected Reconstruction \(GPR\), a reconstruction objective that captures cross\-dimensional interactions without explicitly constructing curvature matrices\.  To further support GPR, we integrate Soft Grid Rounding \(SGR\), which reduces the mismatch between continuous reconstruction and discrete inference\. Extensive experiments demonstrate that our GPFA\-Q achieves the state\-of\-the\-art performance in low\-bit quantization across diverse vision tasks\.
 
 ## Difference of Convex Programming in the Wasserstein Space with Applications to MMD Optimization
 
@@ -26,6 +66,16 @@ Optimizing functionals over the space of probability measures is now ubiquitous 
 
 We present the Multi\-Block DC \(BDC\) class, a rich class of structured nonconvex functions that admit a DC \(\`\`difference\-of\-convex''\) decomposition across parameter blocks\. This multi\-block class not only subsumes the usual DC programming, but also turns out to be provably more powerful\. Specifically, we demonstrate how standard models \(e\.g\., polynomials and tensor factorization\) must have DC decompositions of exponential size, while their BDC formulation is polynomial\. This separation in complexity also underscores another key aspect: unlike DC formulations, obtaining BDC formulations for problems is vastly easier and constructive\. We illustrate this aspect by presenting explicit BDC formulations for modern tasks such as deep ReLU networks, a result with no known equivalent in the DC class\. Moreover, we complement the theory by developing algorithms with non\-asymptotic convergence theory, including both batch and stochastic settings, and demonstrate the broad applicability of our method through several applications\.
 
+## Certified Policy Optimisation for Nested Causal Bandits via PAC\-Bayes Risk
+
+**Authors:** Tim Woydt; Paul\-David Zuercher
+
+**ID:** 148390 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=yCGQfWxC94>) | [PDF](<https://openreview.net/pdf?id=yCGQfWxC94>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148390>)
+
+Critical sequential decisions are rarely single\-timescale: a strategic decision causally shapes the context in which every subsequent tactical choice is made; standard bandit and reinforcement\-learning theory does not capture this causal coupling between timescales\. We formalise the problem class as \*Nested Contextual Causal Bandits\* \(NCCBs\), a hierarchical SCM where each level's action sets the next level's context distribution, and propose \*Nested Causal Thompson Sampling\* \(NCTS\), which draws one mechanism\-factorised belief per episode and acts recursively under it\. Our main theoretical result is a causal PAC\-Bayesian excess\-risk bound that certifies any candidate deployment policy from historic data alone, off\-policy and anytime, answering the deployment question: \*can we trust this agent here, and at what risk?\* Experiments on a hierarchical SCM show that, against a matched RFF\-GP joint regression on the same function class, the factorised SCM\-mechanism posterior transfers \*significantly\* better zero\-shot under exogenous distribution shifts, the recursive meta\-to\-inner commit \*significantly\* dominates the joint\-commit alternative in distribution, and the certificate \*significantly\* contracts as offline data accumulates\. Combining these results, we establish \*progressive certified handover\*, a safe\-deployment method: each timescale flips from a legacy controller to NCTS when gains can be certified, independently of the others\.
+
 ## A Locality\-Aware Surrogate for Natural\-Gradient Descent in Quantum Optimization
 
 **Authors:** Md Mobasshir Arshed Naved; Wenbo Xie; Wojciech Szpankowski; Ananth Grama
@@ -35,106 +85,4 @@ We present the Multi\-Block DC \(BDC\) class, a rich class of structured nonconv
 [Paper](<https://openreview.net/forum?id=5qbHr87u5d>) | [PDF](<https://openreview.net/pdf?id=5qbHr87u5d>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155416>)
 
 Variational quantum algorithms \(VQAs\) rely on gradient\-based optimization over parameterized circuits whose loss landscape lives on a manifold of quantum states\. Quantum natural gradient \(QNG\) accounts for this geometry through the quantum Fisher information matrix \(QFIM\)\. However, estimating the full QFIM is prohibitively expensive within practical quantum circuit shot budgets\. Existing tractable approximations either discard inter\-block couplings, as in block\-diagonal QNG, or replace the QFIM with a measurement\-induced classical Fisher surrogate, as in random natural gradient \(RNG\)\. We propose a locality\-aware surrogate that targets the QFIM through its covariance representation in terms of propagated generators, retaining a structured subset of informative cross\-parameter couplings while remaining practical to estimate under finite\-shot budgets\. Our construction combines three ingredients: weight\-$k$ Pauli truncation to control estimation variance, support\-overlap masking to exploit sparsity, and single\-dataset classical\-shadow estimation that reuses the same shadow dataset across all retained metric entries\. Truncation level $k$ provides a bias\-\-variance tradeoff: larger $k$ captures more of the propagated\-generator structure but increases estimation cost, making it a budget\-constrained design choice\. Circuit parameters whose truncated generators remain nonzero form an active set receiving surrogate\-QNG updates, while the rest follow standard gradient descent\. We provide finite\-shot concentration bounds for the shadow\-estimated surrogate and convergence guarantees to a stationary neighborhood under standard smoothness assumptions\. Experiments on variational quantum eigensolver \(VQE\) instances with local ans\\"atze for Heisenberg and Ising spin chains show improved convergence per cumulative shot relative to SGD, Adam, block\-diagonal QNG, and RNG baselines under finite\-shot budgets, including on systems up to 16 qubits\.
-
-## Improving the Optimization Landscape of Matrix Completion with $\\epsilon$\-close Surrogates
-
-**Authors:** Ziye Ma
-
-**ID:** 151753 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=YJGa7iqmAu>) | [PDF](<https://openreview.net/pdf?id=YJGa7iqmAu>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151753>)
-
-_Abstract unavailable from the accessible public sources._
-
-## Difference of Convex Programming in the Wasserstein Space with Applications to MMD Optimization
-
-**Authors:** Clément Bonet; Pierre\-Cyril Aubin\-Frankowski; Youssef Mroueh
-
-**ID:** 148506\-\-2 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 148506
-
-[Paper](<https://openreview.net/forum?id=xKLfU6Cqa2>) | [PDF](<https://openreview.net/pdf?id=xKLfU6Cqa2>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148506>)
-
-Optimizing functionals over the space of probability measures is now ubiquitous in machine learning\. A widely used approach is to perform the optimization directly over the Wasserstein space, but many objective functionals of practical interest are non\-convex along Wasserstein geodesics, making the analysis of standard first\-order methods challenging\. In this work, we study a class of objectives over the Wasserstein space that admit a difference\-of\-convex \(DC\) decomposition  and we lift the classical convex\-concave procedure \(CCCP\) to this setting\. Under smoothness and strong convexity assumptions on the convex components of the decomposition, we prove almost stationarity along the iterates of the resulting algorithm\. Our main focus is on the Maximum Mean Discrepancy \(MMD\) and the Energy Distance \(ED\) functionals, for which we develop explicit Wasserstein DC decompositions, and establish local convergence of the scheme under mild assumptions\. Empirically, we show that well\-chosen DC decompositions yield faster and more stable convergence than Wasserstein gradient descent on these MMD objectives\.
-
-## The Multi\-Block DC Function Class: Theory, Algorithms, and Applications
-
-**Authors:** Sayedpouria Fatemi; Hoomaan Maskan; Alp Yurtsever; Suvrit Sra
-
-**ID:** 150842\-\-2 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 150842
-
-[Paper](<https://openreview.net/forum?id=evRzz7MREH>) | [PDF](<https://openreview.net/pdf?id=evRzz7MREH>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150842>)
-
-We present the Multi\-Block DC \(BDC\) class, a rich class of structured nonconvex functions that admit a DC \(\`\`difference\-of\-convex''\) decomposition across parameter blocks\. This multi\-block class not only subsumes the usual DC programming, but also turns out to be provably more powerful\. Specifically, we demonstrate how standard models \(e\.g\., polynomials and tensor factorization\) must have DC decompositions of exponential size, while their BDC formulation is polynomial\. This separation in complexity also underscores another key aspect: unlike DC formulations, obtaining BDC formulations for problems is vastly easier and constructive\. We illustrate this aspect by presenting explicit BDC formulations for modern tasks such as deep ReLU networks, a result with no known equivalent in the DC class\. Moreover, we complement the theory by developing algorithms with non\-asymptotic convergence theory, including both batch and stochastic settings, and demonstrate the broad applicability of our method through several applications\.
-
-## Post\-Training Quantization with Gradient\-Projected Fisher Approximation for Vision Transformers
-
-**Authors:** Jincheol Yang; Jaemin Choi; Nahyun Lim; Yun\-Seong Jeong; Matti Zinke; Hyunwoo Yu; Bongjoon Hyun; Kyomin Sohn; Suk\-Ju Kang
-
-**ID:** 151584 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=ZWDJy4JaBH>) | [PDF](<https://openreview.net/pdf?id=ZWDJy4JaBH>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151584>)
-
-_Abstract unavailable from the accessible public sources._
-
-## Difference of Convex Programming in the Wasserstein Space with Applications to MMD Optimization
-
-**Authors:** Clément Bonet; Pierre\-Cyril Aubin\-Frankowski; Youssef Mroueh
-
-**ID:** 148506\-\-3 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 148506
-
-[Paper](<https://openreview.net/forum?id=xKLfU6Cqa2>) | [PDF](<https://openreview.net/pdf?id=xKLfU6Cqa2>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148506>)
-
-Optimizing functionals over the space of probability measures is now ubiquitous in machine learning\. A widely used approach is to perform the optimization directly over the Wasserstein space, but many objective functionals of practical interest are non\-convex along Wasserstein geodesics, making the analysis of standard first\-order methods challenging\. In this work, we study a class of objectives over the Wasserstein space that admit a difference\-of\-convex \(DC\) decomposition  and we lift the classical convex\-concave procedure \(CCCP\) to this setting\. Under smoothness and strong convexity assumptions on the convex components of the decomposition, we prove almost stationarity along the iterates of the resulting algorithm\. Our main focus is on the Maximum Mean Discrepancy \(MMD\) and the Energy Distance \(ED\) functionals, for which we develop explicit Wasserstein DC decompositions, and establish local convergence of the scheme under mild assumptions\. Empirically, we show that well\-chosen DC decompositions yield faster and more stable convergence than Wasserstein gradient descent on these MMD objectives\.
-
-## The Multi\-Block DC Function Class: Theory, Algorithms, and Applications
-
-**Authors:** Sayedpouria Fatemi; Hoomaan Maskan; Alp Yurtsever; Suvrit Sra
-
-**ID:** 150842\-\-3 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 150842
-
-[Paper](<https://openreview.net/forum?id=evRzz7MREH>) | [PDF](<https://openreview.net/pdf?id=evRzz7MREH>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150842>)
-
-We present the Multi\-Block DC \(BDC\) class, a rich class of structured nonconvex functions that admit a DC \(\`\`difference\-of\-convex''\) decomposition across parameter blocks\. This multi\-block class not only subsumes the usual DC programming, but also turns out to be provably more powerful\. Specifically, we demonstrate how standard models \(e\.g\., polynomials and tensor factorization\) must have DC decompositions of exponential size, while their BDC formulation is polynomial\. This separation in complexity also underscores another key aspect: unlike DC formulations, obtaining BDC formulations for problems is vastly easier and constructive\. We illustrate this aspect by presenting explicit BDC formulations for modern tasks such as deep ReLU networks, a result with no known equivalent in the DC class\. Moreover, we complement the theory by developing algorithms with non\-asymptotic convergence theory, including both batch and stochastic settings, and demonstrate the broad applicability of our method through several applications\.
-
-## SPA\-Q: Structure\-Preserving Adaptive Post\-Training Quantization for Monocular Depth Estimation
-
-**Authors:** Jaemin Choi; Jincheol Yang; Nahyun Lim; Yun\-Seong Jeong; Matti Zinke; Hyunwoo Yu; Suk\-Ju Kang
-
-**ID:** 155959 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=1YMesFGTP0>) | [PDF](<https://openreview.net/pdf?id=1YMesFGTP0>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155959>)
-
-Monocular depth estimation \(MDE\) has advanced rapidly with the emergence of foundation models such as Depth Anything\.  Their transformer\-based architectures provide strong generalization across diverse scenes and domains, but also incur high computational and memory cost, making efficient deployment challenging\. Post\-Training Quantization \(PTQ\) provides an efficient and practical solution for model compression, yet low\-bit PTQ remains challenging for MDE models\. When applying PTQ to Depth Anything, we identify two key challenges: \(i\) independently minimizing the quantization error of the query and key projections fails to preserve the attention maps induced by their interaction, and \(ii\) quantization errors accumulate across layers, resulting in intermediate feature distribution shifts\. To address these issues, we propose SPA\-Q, a Structure\-Preserving Adaptive PTQ framework for MDE, consisting of two main components\. First, Attention\-Preserving Calibration \(APC\) determines query and key quantization parameters by matching the full\-precision attention distribution\. Second, Channel\-Wise Distribution Alignment \(CWDA\) learns channel\-wise affine transformations to mitigate quantization\-induced distribution shifts, and the learned parameters are absorbed into the weights after training\. Experimental results show that SPA\-Q consistently outperforms existing PTQ methods under 4\-bit quantization, achieving an average 25\.9\\% reduction in AbsRel and a 17\.3\\% improvement in $\\delta\_1$ across NYUv2 and KITTI datasets\.
-
-## Post\-Training Quantization with Gradient\-Projected Fisher Approximation for Vision Transformers
-
-**Authors:** Jincheol Yang; Jaemin Choi; Nahyun Lim; Yun\-Seong Jeong; Matti Zinke; Hyunwoo Yu; Bongjoon Hyun; Kyomin Sohn; Suk\-Ju Kang
-
-**ID:** 151584\-\-2 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 151584
-
-[Paper](<https://openreview.net/forum?id=ZWDJy4JaBH>) | [PDF](<https://openreview.net/pdf?id=ZWDJy4JaBH>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151584>)
-
-_Abstract unavailable from the accessible public sources._
-
-## Improving the Optimization Landscape of Matrix Completion with $\\epsilon$\-close Surrogates
-
-**Authors:** Ziye Ma
-
-**ID:** 151753\-\-2 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 151753
-
-[Paper](<https://openreview.net/forum?id=YJGa7iqmAu>) | [PDF](<https://openreview.net/pdf?id=YJGa7iqmAu>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151753>)
-
-_Abstract unavailable from the accessible public sources._
 

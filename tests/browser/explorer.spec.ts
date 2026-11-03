@@ -3,7 +3,8 @@ import { readFileSync } from 'node:fs';
 
 const manifest = JSON.parse(readFileSync('public/data/manifest.json', 'utf8'));
 const { papers } = JSON.parse(readFileSync('public/data/papers.json', 'utf8'));
-const first = papers.find((paper: { duplicateOf: string | null; abstract: string }) => !paper.duplicateOf && paper.abstract);
+const first = papers.find((paper: { abstract: string }) => paper.abstract);
+const searchTerm = first.title.split(':')[0].slice(0, 40);
 const comma = (value: number) => value.toLocaleString('en-US');
 
 async function ready(page: import('@playwright/test').Page) {
@@ -11,13 +12,13 @@ async function ready(page: import('@playwright/test').Page) {
   await expect(page.locator('.paper-row')).toHaveCount(30);
 }
 
-test('loads real dataset, deduplicates counts, and renders responsive screenshots', async ({ page }, testInfo) => {
+test('loads the rebuilt dataset with full abstracts and renders responsive screenshots', async ({ page }, testInfo) => {
   const errors: string[] = [];
   page.on('pageerror', error => errors.push(error.message));
   await ready(page);
-  await expect(page.locator('.stat').first()).toContainText(comma(manifest.uniqueOfficialEventIds));
-  await expect(page.locator('.data-notice').first()).toContainText(comma(manifest.totalPapers));
-  await expect(page.locator('.result-summary')).toContainText(comma(manifest.uniqueOfficialEventIds));
+  await expect(page.locator('.stat').first()).toContainText(comma(manifest.totalPapers));
+  await expect(page.locator('.data-notice').first()).toContainText(comma(manifest.requestedSourceRecordCount));
+  await expect(page.locator('.result-summary')).toContainText(comma(manifest.totalPapers));
   if (testInfo.project.name === 'mobile') await page.getByRole('button', { name: /研究领域分布/ }).click();
   await expect(page.locator('.distribution-item')).toHaveCount(12);
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBeTruthy();
@@ -38,9 +39,9 @@ test('searches full text, filters categories, paginates, and supports browser hi
   await expect(page).toHaveURL(/category=/);
   await page.goBack();
   await expect(page).not.toHaveURL(/category=/);
-  await page.getByRole('searchbox').fill('DepthGraft');
-  await expect(page).toHaveURL(/q=DepthGraft/);
-  await expect(page.locator('.paper-row h3').first()).toContainText('DepthGraft');
+  await page.getByRole('searchbox').fill(searchTerm);
+  await expect(page).toHaveURL(/q=/);
+  await expect(page.locator('.paper-row h3').first()).toContainText(searchTerm);
   await expect(page.locator('.paper-row')).toHaveCount(1);
 });
 
@@ -77,7 +78,7 @@ test('bookmarks survive reload and the saved-paper view works', async ({ page },
 
 test('exports selected results as actual JSON and switches language', async ({ page }) => {
   await ready(page);
-  await page.getByRole('searchbox').fill('DepthGraft');
+  await page.getByRole('searchbox').fill(searchTerm);
   await expect(page.locator('.paper-row')).toHaveCount(1);
   const downloadPromise = page.waitForEvent('download');
   await page.getByRole('button', { name: 'JSON', exact: true }).click();
@@ -85,21 +86,22 @@ test('exports selected results as actual JSON and switches language', async ({ p
   const file = await download.path();
   const exported = JSON.parse(readFileSync(file!, 'utf8'));
   expect(exported.count).toBe(1);
-  expect(exported.papers[0].title).toContain('DepthGraft');
+  expect(exported.papers[0].title).toContain(searchTerm);
   await page.locator('.language-button').click();
   await expect(page.getByRole('searchbox')).toHaveAttribute('placeholder', 'Search titles, authors, abstracts, keywords…');
   await expect(page.locator('html')).toHaveAttribute('lang', 'en');
 });
 
-test('source-row toggle and original-abstract filter use correct counts', async ({ page }) => {
+test('classification and abstract filters use the rebuilt counts', async ({ page }) => {
   await ready(page);
   await page.getByRole('button', { name: '筛选', exact: true }).click();
-  await page.getByRole('checkbox', { name: '包含重复源记录' }).check();
-  await expect(page.locator('.result-summary')).toContainText(comma(manifest.totalPapers));
   await page.getByRole('checkbox', { name: '仅显示有公开摘要的论文' }).check();
   await expect(page.locator('.result-summary')).toContainText(comma(manifest.abstractsAvailable));
-  await page.getByRole('checkbox', { name: '包含重复源记录' }).uncheck();
-  await expect(page.locator('.result-summary')).toContainText(comma(manifest.uniqueEventsWithAbstracts));
+  const classification = page.locator('.filter-panel select');
+  await classification.selectOption('official');
+  await expect(page.locator('.result-summary')).toContainText(comma(manifest.officialTopicCount));
+  await classification.selectOption('inferred');
+  await expect(page.locator('.result-summary')).toContainText(comma(manifest.inferredTopicCount));
 });
 
 test('failed data fetch has retry recovery', async ({ page }) => {
@@ -115,7 +117,7 @@ test('failed data fetch has retry recovery', async ({ page }) => {
 test('static hosts without Content-Encoding load the precompressed data correctly', async ({ page }) => {
   await page.route('**/data/papers.json.gz', route => route.fulfill({ status: 200, contentType: 'application/gzip', body: readFileSync('public/data/papers.json.gz') }));
   await ready(page);
-  await expect(page.locator('.result-summary')).toContainText(comma(manifest.uniqueOfficialEventIds));
+  await expect(page.locator('.result-summary')).toContainText(comma(manifest.totalPapers));
 });
 
 test('browsers without streaming decompression can load the original JSON', async ({ page }) => {

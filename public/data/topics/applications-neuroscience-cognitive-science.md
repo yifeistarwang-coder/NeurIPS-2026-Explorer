@@ -2,331 +2,159 @@
 
 应用 / 神经科学与认知科学
 
-151 source poster records. Repeated source event IDs are retained and explicitly marked.
+141 source poster records. Repeated source event IDs are retained and explicitly marked.
 
 Topic labels marked inferred are keyword-based, not official conference labels. PDF links marked derived are unverified. Missing abstracts are left empty in the JSON and CSV exports.
 
-## EEG\-X: Toward Device\-Agnostic and Noise\-Robust Foundation Models for EEG
+## See, Read, Compare: Candidate\-Aware Verification for Agent Test\-Time Scaling
 
-**Authors:** Navid Mohammadi Foumani; Soheila Ghane; Nam Nguyen; Mahsa Salehi; Geoffrey Webb; Geoffrey Mackellar
+**Authors:** Xinyu Ye; Yongliang Wu; Xingyu Zhu; Peng Xia; Huaijin Wu; Rui Ye; Yehui Tang; Hao Xiong; Junchi Yan; Huaxiu Yao
 
-**ID:** 152276 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+**ID:** 152566 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=UHwOAjPtEg>) | [PDF](<https://openreview.net/pdf?id=UHwOAjPtEg>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152276>)
+[Paper](<https://openreview.net/forum?id=SBCpjDSgYq>) | [PDF](<https://openreview.net/pdf?id=SBCpjDSgYq>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152566>)
 
-Foundation models for EEG analysis are still in their infancy, limited by two key challenges: \(1\) variability across datasets caused by differences in recording devices and electrode configurations, and \(2\) the low signal\-to\-noise ratio \(SNR\) of EEG, where neural activity is often buried under artifacts and non\-brain sources\. To address these challenges, we present \\textit\{EEG\-X\}, a device\-agnostic and noise\-robust foundation model for EEG representation learning\. EEG\-X introduces a location\-based channel embedding that enables robust transfer across heterogeneous EEG devices and electrode layouts\. To improve robustness against noise, EEG\-X employs a novel noise\-aware masking\-reconstruction strategy that reconstructs artifact\-cleaned signals rather than raw noisy EEG and introduces a novel Dictionary\-based Convolutional Transformation \(DiCT\) that improves reconstruction\-based pretraining by comparing signals in a structured feature space instead of directly in the raw signal space\. Experiments across datasets collected from diverse EEG devices show that EEG\-X consistently outperforms state\-of\-the\-art methods across multiple downstream tasks and demonstrates strong cross\-domain generalization when pretraining and downstream datasets differ in electrode layouts and recording configurations paving the way towards foundation models\. The models and code are available at :https://anonymous\.4open\.science/r/EEG\-X\-CEDE/README\.md
+Test\-time scaling \(TTS\) improves LLM agent performance by sampling $K$ independent rollouts and selecting one with a verifier\. In open\-ended software engineering \(SWE\) agent settings, verification typically relies on code execution to obtain a direct correctness signal, but incurs substantial setup and testing cost\. By contrast, execution\-free verifiers offer a more scalable alternative that chooses from the submission alone\. However, existing execution\-free verifiers are largely submission\-isolated: they fix rubrics before seeing the candidate batch, underuse the trajectory evidence already produced during agent rollouts, and rely on poorly calibrated pointwise scores for the final decision\. As a result, they often miss the right candidate even when it lies within the pool\. To address this gap, we propose a training\-free and execution\-free verifier for agent test\-time scaling based on a See, Read, Compare \(SRC\) protocol, which treats the $K$ candidates as mutual context rather than independent inputs\. The See stage combines task understanding with cross\-candidate contrast to induce an instance\-specific rubric\. The Read stage extracts structured behavioral features, and compresses each trajectory into an evidence\-grounded summary along several cognitive dimensions: localization, hypotheses, interventions, and validation\. The Compare stage performs rubric\-guided pairwise selection through a two\-phase hybrid tournament, preserving relative judgment with only linear complexity calls\. Experiments show that SRC outperforms all compared execution\-free baselines across SWE\-bench Verified generator pools and generalizes to heterogeneous model pools and Terminal\-Bench 2\.
 
-## SPERA: Spherical Prior EEG Foundation Model with Geometry\- and Frequency\-Aware Latent Prediction
+## What do EEG Foundation Models Capture from Human Brain Signals?
 
-**Authors:** Minsu Kim; Ye\-Sung Kim; Hyeseong Jeon; Wooseok Hyung; Joshua Lee; Chang\-Hwan Im
+**Authors:** Ling Tang; Qian Chen; Jilin Mei; Houshi Xu; Quanshi Zhang; Jing Shao; Na Zou; Xia Hu; Dongrui Liu
 
-**ID:** 155259 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+**ID:** 150770 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=71zbNNbFKV>) | [PDF](<https://openreview.net/pdf?id=71zbNNbFKV>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155259>)
+[Paper](<https://openreview.net/forum?id=fUj6SZpI7V>) | [PDF](<https://openreview.net/pdf?id=fUj6SZpI7V>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150770>)
 
-Electroencephalography \(EEG\) provides a non\-invasive measure of ongoing neural activity, but building general\-purpose EEG models remains challenging due to the heterogeneity of subjects, devices, and electrode montages\. Existing EEG foundation models predominantly rely on input\-space reconstruction, which can bias the encoder toward memorizing noise and artifacts\. We introduce SPERA \(Spherical Prior EEG Representation Architecture\), an EEG foundation model that predicts in latent space following the joint\-embedding predictive architecture \(JEPA\)\. SPERA combines three components tailored to EEG: \(i\) a hybrid attention backbone that interleaves factorized temporal and spatial attention with periodic full\-attention layers, \(ii\) a Legendre\-polynomial spatial prior incorporated into attention to encode varying scalp electrode geometries, and \(iii\) a relational spectral regularizer that aligns latent similarity structure with spectral views, inducing frequency\-aware latent representations\. Pretrained on approximately 90,213 hours of EEG from 31,771 subjects across 106 datasets, SPERA achieves the highest average performance across nine downstream tasks spanning clinical, cognitive, and BCI applications\. SPERA further exhibits strong parameter efficiency and robustness across varying recording conditions, suggesting its potential as a general\-purpose backbone for diverse EEG analyses\.
+Clinical electroencephalogram \(EEG\) analysis rests on a hand\-crafted feature catalog refined over decades, \*e\.g\.,\* band power, connectivity, complexity, and more\. Modern EEG foundation models bypass this catalog, learn directly from raw signals via self\-supervised pretraining, and match or outperform feature\-engineered baselines on most clinical benchmarks\. Whether the two representations align is an open question, which we decompose into three sub\-questions: \*what does the model learn\*, \*what does the model use\*, and \*how much can be explained\*\. We answer them with layer\-wise ridge probing, LEACE\-style cross\-covariance subspace erasure, and a transparent classifier benchmarked against a random\-feature baseline\. The audit covers three foundation models \(CSBrain, CBraMod, LaBraM\), five clinical tasks \(MDD, Stress, ISRUC\-Sleep, TUSL, Siena\), and a 6\-family 63\-feature lexicon\. Of the $945$ \(model, task, feature\) units, $648$ \($68\.6\\%$\) are representation\-causal and $199$ \($21\.1\\%$\) are encoded\-only\. Across tasks, $50$ features qualify as universal candidates with strong support \(all three architectures RC\) in two or more tasks\. Frequency\-domain features dominate, but the other five families each contribute substantial causal mass\. Confirmed features recover, on average, $79\.3\\%$ of the foundation model's advantage over the random baseline, with a clean task gradient \(MDD $\\approx 0\.99$ down to Stress $\\approx 0\.56$\): tasks near ceiling are almost fully recovered by the lexicon, while harder tasks leave a non\-trivial residual that pinpoints a concrete target for future concept discovery\.
 
-## Sparse Multimodal Switching State\-Space Models for Regime\-Dependent Neural Connectivity under Partial Observations
+## Beyond DSA: Conjugacy\-based Comparison of Dynamical Systems
 
-**Authors:** Rahul K Sharma; Feng Liu; Xiaochen Xian
+**Authors:** Prakhar Godara; Pang S Tay; Marcelo G Mattar
 
-**ID:** 151057 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+**ID:** 152248 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=dJy3Ipz0tx>) | [PDF](<https://openreview.net/pdf?id=dJy3Ipz0tx>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151057>)
+[Paper](<https://openreview.net/forum?id=UUFDG6BQLR>) | [PDF](<https://openreview.net/pdf?id=UUFDG6BQLR>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152248>)
 
-Multimodal electrophysiological recordings provide noisy, partially observed measurements of latent neural dynamics critical for tasks like brain state estimation and neurological diagnosis\. In joint EEG\-intracranial EEG \(iEEG\) recordings, scalp EEG offers broad but spatially mixed coverage, whereas iEEG provides high\-fidelity but spatially sparse measurements\. This creates a partial\-observation problem: directed source\-level interactions must be inferred from heterogeneous sensors with incomplete coverage\. A second challenge is nonstationarity: latent neural dynamics and directed interactions among brain regions can change abruptly across distinct regimes \(e\.g\., pre\-seizure, ictal, and post\-seizure states\)\. The third challenge is sparsity of significant source\-level interactions compared to the high\-dimensionality of the brain networks\. Standard models that assume single\-mode, fully observed, or stationary may therefore fail to capture regime\-specific activity or spurious couplings\. We propose the Sparse Multimodal Switching State\-Space Model \(S$^4$M$^3$\), which fuses EEG and iEEG as complementary observations of a shared source\-space latent process\. Dynamics switch between regimes governed by separate sparse directed transition matrices, jointly addressing multimodal fusion, nonstationarity, and sparse network estimation\. The estimation of the model uses the expectation\-maximization \(EM\) algorithm, where the E\-step applies the Kim filter\-RTS smoother to estimate latent states and regime probabilities, and the M\-step imposes elastic\-net penalization on off\-diagonal elements, promoting sparse inter\-regional couplings while preserving self\-dynamics\. The learned transition matrices facilitates the assessment of regime\-dependent edge changes\. To address the estimation bias of elastic\-net sparsity penalty, we separate edge selection from edge assessment: selected edges are refit by regime\-weighted least squares, followed by Wald tests with Benjamini\-Hochberg correction\. On synthetic benchmarks, S$^4$M$^3$ improves Edge F1 by approximately 25\\% over the strongest stationary baseline and 64\\% over two\-stage source\-connectivity pipelines\. On a real EEG\-iEEG epilepsy case study, S$^4$M$^3$ identifies sparse hippocampal and parahippocampal outgoing pathways concordant with the clinician\-confirmed seizure\-onset zone, without using clinical labels\.
+Comparing whether two dynamical systems implement the same computation despite differences in coordinates or measurements is a central problem in neuroscience and machine learning\. Dynamical Similarity Analysis \[DSA; Ostrow et al\., 2023\] addresses this problem by aligning finite\-dimensional Koopman approximations of the two systems through an orthogonal similarity transformation\. Here we show that orthogonal alignment is neither necessary nor sufficient for topological conjugacy: genuinely conjugate systems may be related by a non\-orthogonal basis\-transfer matrix that DSA cannot capture, while non\-conjugate systems may have orthogonally equivalent Koopman operators that DSA will fail to distinguish\. We then use this observation to formulate \\emph\{Conjugacy\-based Similarity Analysis\} \(CSA\), which restricts alignments to those induced by candidate state\-space bijections rather than arbitrary orthogonal matrices\. We prove that CSA's fitted alignment is the finite\-data projection of the composition operator associated with the candidate bijection, and use controlled examples to show why this distinction matters when observable dictionaries are chosen explicitly or implicitly from data\. Together, these results clarify what Koopman\-based similarity measures must ensure to support claims of identifying conjugacies between computational systems\.
 
-## What Is Worth Representing? Representational Empowerment for Continual Model Construction
+## Reason to Play: Behavioral and Brain Alignment Between Frontier LRMs and Human Game Learners
 
-**Authors:** Fei Dai; Hanqi Zhou; Alison Gopnik; Charley M Wu
+**Authors:** Botos Csaba; Sreejan Kumar; Austin T D Andrews; Laurence T Hunt; Josh Tenenbaum; Christopher Summerfield; Rui Costa; Marcelo G Mattar; Momchil Tomov
 
-**ID:** 149925 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
+**ID:** 151783 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=m9oKQZGDlw>) | [PDF](<https://openreview.net/pdf?id=m9oKQZGDlw>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149925>)
+[Paper](<https://openreview.net/forum?id=Y1oX1yuaWM>) | [PDF](<https://openreview.net/pdf?id=Y1oX1yuaWM>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151783>)
 
-_Abstract unavailable from the accessible public sources._
+Humans rapidly learn abstract knowledge when encountering novel environments and flexibly deploy this knowledge to guide efficient and intelligent action\. Can modern AI systems learn and plan in a similar way? We study this question using a dataset of complex human gameplay with concurrent fMRI recordings, in which participants learn novel video games that require rule discovery, hypothesis revision, and multi\-step planning\. We jointly evaluate models by their ability to play the games, match human learning behavior, and predict brain activity during the same task, comparing a suite of frontier Large Reasoning Models \(LRMs\) against model\-free and model\-based deep reinforcement learning agents and a Bayesian theory\-based agent\. We find that frontier LRMs most closely match human behavioral patterns during game discovery and predict brain activity an order of magnitude better than both reinforcement learning alternatives across cortical and subcortical regions, with effects robust to permutation controls\. Through targeted manipulations, we further show that brain alignment reflects the model's in\-context representation of the game state rather than its downstream planning or reasoning\.  Our results establish LRMs as compelling computational accounts of human learning and decision making in complex, naturalistic environments\.
 
-## Neural Structural Reasoner: A Brain\-inspired Architecture for Reasoning over Structured Knowledge
+## MyoChallenge 2025: A New Benchmark for Human Athletic Intelligence
 
-**Authors:** Zixing Jia; Yuhang Pan; Ni Ji
+**Authors:** Cheryl Wang; Chun Kwang Tan; Balint Hodossy; Shirui Lyu; Jun Guo; Wentao Zhao; Huaping Liu; Chengkun Li; Merkourios Simos; Bianca Ziliotto; Alexander Mathis; Siyuan Liu; Jiahao Chen; Shanlin Zhong; Bo Jiang; Ci Song; Yaoye Zhu; Chenhui Zuo; Yanan Sui; Irfan Refai; Massimo Sartori; Guillaume Durandau; Vikash Kumar; Vittorio Caggiano
 
-**ID:** 149065 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+**ID:** 138899 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=t8iDmsYS6X>) | [PDF](<https://openreview.net/pdf?id=t8iDmsYS6X>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149065>)
+[Paper](<https://openreview.net/forum?id=y6tEsjJnyb>) | [PDF](<https://openreview.net/pdf?id=y6tEsjJnyb>) | [Official poster](<https://neurips.cc/virtual/2026/poster/138899>)
 
-Structural reasoning, the ability to recognize and make inference over the relational structure between objects and concepts, is a hallmark of human cognition, yet prevailing methods often collapse relational topology into flat embeddings, cannot discover hidden structure and lack interpretability\. We introduce Neural Structural Reasoner \(NSR\), a brain\-inspired network that preserves relational structure directly in the connectivity and dynamics of coupled neuronal populations\. NSR draws inspiration from three biological mechanisms: multi\-layered architecture for encoding hierarchical knowledge, stable representation of entity and concepts, and path integration for input\-driven state inference\. At query time, NSR parallelizes computation over candidate relational structures and leverages confidence\-weighted scores to perform link prediction\. On standard knowledge\-graph benchmarks, NSR matches strong embedding and rule\-mining baselines with superior training efficiency\. Because reasoning is implemented through sequences of human\-readable neuron activations, NSR affords native interpretability by tracking intermediate inference steps\. The model further extracts latent relational hierarchies and compositional rules, demonstrating the brain\-inspired architecture as an effective, efficient, and highly interpretable substrate for structural reasoning\.
+Athletic performance represents the pinnacle of human motor intelligence, demanding rapid choices, precise control, agility, and coordinated physical execution\. Replicating this seamless combination of capabilities remains elusive in current artificial intelligence and robotic systems\. Concurrently, understanding the biological mastery of these movements is hindered because complex muscle coordination is rarely measured in vivo due to the limitations of physical equipment\. To bridge this fundamental gap in understanding, $\\textit\{MyoChallenge\}$ at NeurIPS 2025 established a pioneering benchmark for motor control intelligence in sports, leveraging high\-fidelity musculoskeletal models within physics simulation combined with machine learning\-driven algorithms\. The competition introduces two distinct tracks emphasizing either upper or lower limbs control: a table tennis rally task utilizing a biomechanic upper limb composed of an arm with a hand \(MyoArm\) and a trunk \(MyoTorso\); and a soccer penalty kick using a biomechanic model of legs \(MyoLeg\) and a trunk \(MyoTorso\)\. Marking the fourth iteration of the MyoChallenge series, this event attracted almost 70 teams and over 560 submissions globally, uniting a diverse community ranging from physicians and neuroscientists to machine learning experts\. The competition facilitated the development of several state\-of\-the\-art control algorithms for a musculoskeletal system capable of sports agility, leveraging techniques such as physics\-based motion planners, on\-policy behaviour cloning, hierarchical planning, and muscle synergies that significantly surpassed our provided baseline performance\. By integrating standardized tasks and physiologically realistic models into the open\-source framework of MyoSuite, MyoChallenge'25 serves as a reproducible and reusable testbed to accelerate interdisciplinary research across machine learning, biomechanics, sports science, and neuroscience\. Project page: https://www\.myosuite\.org//myochallenge/myochallenge\-2025
 
-## ConnectomeBench2: A Unified Benchmark for Automated Connectomic Proofreading
+## Inverse Modeling of Neural Recordings via Differentiable Biophysical Simulation
 
-**Authors:** Jeff Brown; Tim Farkas; Gleb Razgar; Edward Boyden
+**Authors:** Frithjof Gressmann; Ngoc H Pham; Lawrence Rauchwerger
 
-**ID:** 139242 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+**ID:** 153595 | **Topic source:** official | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=ceOs8fK1Ev>) | [PDF](<https://openreview.net/pdf?id=ceOs8fK1Ev>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139242>)
+[Paper](<https://openreview.net/forum?id=KFA1usL2kP>) | [PDF](<https://openreview.net/pdf?id=KFA1usL2kP>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153595>)
 
-Proofreading—correcting segmentation errors in 3D brain reconstructions—is the rate\-limiting step in synapse\-resolution connectomics\. We release ConnectomeBench2, a unified multi\-species dataset of over 302,401 expert\-labeled proofreading decisions with &gt;2,000,000 associated images spanning four major open connectomes \(mouse, human, zebrafish, fly\), spanning both split and merge error correction\. Trained on this dataset, a single Vision Transformer with shared encoders for mesh geometry and electron microscopy reaches human\-level accuracy across species for split error correction and merge error identification; with performance scaling with data size and improving with species diversity\. Beyond accuracy, we show that the model is well\-calibrated within distribution, that measures of distribution distance predict where calibration and accuracy will degrade on unseen data, and that connectomics\-specific pretraining and active learning\-based sample selection show potential to substantially reduce the labeling effort needed to extend to new species and brain regions\. The benchmark provides the infrastructure to train and evaluate increasingly capable vision models for connectomic proofreading\.
-
-## MindVLM: Neural\-Grounded Visual Captioning via Subject\-Aware Semantic Evidence Selection
-
-**Authors:** Zixiang Yin; Yu\-Ping Wang; Zhengming Ding
-
-**ID:** 154514 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=D1By8Wvrqy>) | [PDF](<https://openreview.net/pdf?id=D1By8Wvrqy>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154514>)
-
-Translating visual brain activity into natural language offers a powerful window into human cognition and neural semantic representation\. Most prior brain\-captioning approaches project fMRI signals into language space using paired supervision\. However, the widely used Natural Scenes Dataset \(NSD\) was built based only on image\-fMRI pairs, while existing methods rely on MS\-COCO captions as indirect textual supervision\. Critically, during fMRI acquisition, participants observe only cropped image regions, whereas the associated MS\-COCO captions describe full scenes\. This mismatch creates a fundamental gap between neural representations and textual supervision, introducing an inherent \*\*semantic loss\*\* in NSD\-based brain captioning\. To mitigate this limitation, we reformulate brain captioning as \*\*Neural\-Grounded Visual Captioning\*\*, where language is generated directly from visually grounded neural evidence rather than text supervision\. We propose \*\*MindVLM\*\*, a framework that maps fMRI signals into subject\-aware visual tokens and leverages a frozen vision language model \(VLM\) to produce interpretable and personalized descriptions\. Instead of point\-wise regression, MindVLM focuses on extracting semantically relevant visual cues from neural activity, naturally accommodating partial observability and inter\-subject variability\. Extensive experiments on NSD show that MindVLM consistently improves caption quality across multiple VLM backbones, including LLaVA\-v1\.5, Qwen2\.5\-VL, and Gemma3, beyond intrinsic model priors\. Despite requiring neither text supervision nor an LLM during training and operating under an image\-grounded inference paradigm distinct from conventional captioning methods, MindVLM remains competitive with supervised approaches, suggesting that subject\-specific neural grounding provides an efficient, scalable, and interpretable path toward faithful brain\-to\-language generation\.
-
-## Meta\-Cognitive Memory Policy Optimization for Long\-Horizon LLM Agents
-
-**Authors:** Ziyan Liu; Zhezheng Hao; Yeqiu Chen; Hong Wang; JingRen Hou; Ruiyi Ding; Yongkang Yang; Wence Ji; Wei Xia; Feng Liu
-
-**ID:** 155887 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=26CTl3jZo9>) | [PDF](<https://openreview.net/pdf?id=26CTl3jZo9>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155887>)
-
-_Abstract unavailable from the accessible public sources._
-
-## RABBiT: Rapidly adaptive BOLD foundation model via brain\-tuning for accurate zero\-shot and few\-shot prediction of speech\-elicited responses in the brain
-
-**Authors:** Omer Moussa; Mariya Toneva
-
-**ID:** 148160 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=zqBwrok09Z>) | [PDF](<https://openreview.net/pdf?id=zqBwrok09Z>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148160>)
-
-Language understanding in the brain is context\-dependent, varying across experimental stimuli and individuals, which makes it difficult to build computational models that generalize across both\. This calls for a foundation model of language\-evoked brain activity that can capture shared structure while adapting efficiently to new participants and inputs\. We introduce RABBiT \(Rapidly Adaptive BOLD foundation model via BraIn\-Tuning\), a compact audio\-to\-fMRI encoder designed for accurate zero\- and few\-shot prediction\. A comprehensive evaluation on 324 participants across multiple unseen fMRI datasets shows that RABBiT enables accurate zero\-shot prediction of fMRI responses to natural speech across auditory and language\-selective regions, surpassing the SOTA foundation model for fMRI and predictions based on group averages\. With as little as 10 minutes of participant\-specific data, RABBiT further improves performance via parameter\-efficient tuning, substantially outperforming per\-participant linear models\. RABBiT's performance is driven by two key innovations: \(1\) learned region\-specific attention, and \(2\) a decomposition of brain responses into shared and subject\-specific components, combined with a brain\-tuned speech backbone\. In addition to supporting strong predictive accuracy, the structured, region\-specific representations that RABBiT learns enable interpretability\. By eliminating the need for extensive per\-participant data and model fitting, RABBiT enables scalable population\-level analyses of language in the human brain\.
-
-## Paradoxical noise preference in RNNs
-
-**Authors:** Noah Eckstein; Manoj Srinivasan
-
-**ID:** 156748 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/pdf?id=gqxTZRzI35>) | [PDF](<https://openreview.net/pdf?id=gqxTZRzI35>) | [Official poster](<https://neurips.cc/virtual/2026/poster/156748>)
-
-In recurrent neural networks \(RNNs\) used to model biological neural networks, noise is typically introduced during training to emulate biological variability and regularize learning\. The expectation is that removing the noise at test time should preserve or improve performance\. Contrary to this intuition, we find that continuous\-time recurrent neural networks \(CTRNNs\) often perform best at a nonzero noise level, often approximately the same level used during training\. This noise preference typically arises when noise is injected inside the neural activation function; networks trained with noise injected outside the activation function perform best with zero noise\. The phenomenon arises robustly in diverse tasks for large enough training noise including function approximation, maze navigation, 2D path integration, and a multi\-task suite from cognitive neuroscience; we also show the phenomenon arising in feedforward neural networks, not just in RNNs\. Through analyses of simple function\-approximation and single\-neuron regulator tasks, we show that the phenomenon stems from noise\-induced shifts of fixed points \(stationary distributions\) in the underlying stochastic dynamics of the RNNs, thereby providing some  mechanistic interpretability of the phenomenon\. These fixed point shifts are noise\-level dependent and bias the network outputs when the noise is removed, degrading performance\. Analytical and numerical results show that the bias arises when neural states operate near activation\-function nonlinearities, where noise is asymmetrically attenuated, and that performance optimization incentivizes operation near these nonlinearities; such performance incentives exist for networks with noise inside the activation function, but not for networks with noise outside the activation function, explaining why only noise\-in networks show preference\.  Thus, networks can overfit to the stochastic training environment itself rather than just to the input–output data\.  The phenomenon is distinct from stochastic resonance, wherein nonzero noise enhances signal processing\. Our findings reveal that training noise can become an integral part of the computation learned by recurrent networks, with implications for understanding neural population dynamics and for the design of robust artificial RNNs\.
-
-## Unifying Partner and Environment Diversity to Improve Human\-AI Coordination
-
-**Authors:** Patrick Q Zhang; Yancheng Liang; Adrienne Fairhall; Natasha Jaques
-
-**ID:** 151901 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=X66IYOVa2D>) | [PDF](<https://openreview.net/pdf?id=X66IYOVa2D>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151901>)
-
-Real\-world applications of modern AI systems require generalization to both unseen environments and novel human users\. The field of zero\-shot coordination \(ZSC\) focused primarily on deploying AI to novel partners in otherwise familiar environments seen in the training\. The popular population\-based methods enable partner generalization by training the agent on a diversity of simulated human users \(serving as training\-time partners\) in a fixed environment, aiming to cover the diverse behaviors of novel human users\. Such a paradigm does not consider the more challenging realistic scenarios where both the users and the environment are unseen during training\. Recently, training across environments has been explored in training a single self\-play agent, which shows better generalization on both novel human users and unseen environments\. In this work, we ask whether jointly modeling partner diversity and environment diversity yields stronger coordination with novel partners in novel environments\. We introduce Cross Environment Co\-Play \(CECP\), a two\-stage framework that first trains a population of self\-play agents across a distribution of procedurally generated environments, and then trains a cooperator policy against this partner population\. To further couple social and environmental reasoning, we add a next\-state prediction module that encourages representations to encode both partner behavior and task structure, and validate the design choice with ablation studies\. We evaluate CECP on both a neuroscience\-inspired cooperative foraging task, and the population ZSC benchmark Overcooked, under held\-out partner and held\-out environment conditions\. CECP achieves the strongest performance among the compared baselines and attains state\-of\-the\-art results under our evaluation protocol for human\-AI collaboration\. We provide further analysis using the model's latent representation encoded by the next\-state prediction module, showing it can not only improve the performance of the cooperative AI, but also provide more interpretable latents, which demonstrate the inference of partner skill levels\.
-
-## Categorical Bayes filtering for computational phenotyping in adaptive learning
-
-**Authors:** Junxi Chen; Payam Piray
-
-**ID:** 153212 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=N0qn9jBOCR>) | [PDF](<https://openreview.net/pdf?id=N0qn9jBOCR>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153212>)
-
-Adaptive learning requires distinguishing environmental volatility from observation stochasticity, two sources of uncertainty that demand opposite adjustments to the learning rate but inflate experienced variance similarly\. Disentangling them is computationally difficult with no tractable closed\-form solution\. Particle\-filter methods are the natural tool for this kind of joint inference, but their stochastic likelihoods and non\-differentiable objectives force derivative\-free fitting protocols and discourage the individual\-difference analyses central to cognitive modeling, where small effect sizes leave little room for additional estimator noise\. We introduce the Categorical Bayes Filter \(CBF\), a deterministic alternative that preserves the conditional structure of recent particle\-filter accounts but replaces the stochastic outer layer with a categorical distribution on a quantile grid parameterized through differentiable Beta quantile functions\. The procedure performs evidence maximization with an exact, deterministic marginal likelihood that is fully differentiable in the grid parameters\. In a volatility\-stochasticity task with N = 643 participants, fitted CBF dispersion parameters reveal a cross\-over phenotyping pattern between volatility\-blind and stochasticity\-blind subjects that is not recoverable from particle\-filter parameters fit to the same data under a state\-of\-the\-art protocol\. The deterministic structure also yields a trial\-by\-trial ambiguity signal that predicts response times not used in fitting\. More broadly, the approach opens individual\-level analyses in cognitive modeling and computational psychiatry that stochastic methods have effectively foreclosed\.
-
-## EEG Benchmarking Needs a Task Specification Layer: NeuroDoc for Rulebook\-Guided, Executable Benchmark Construction
-
-**Authors:** Chengxuan Qin; 致格 陈; Pengshu; Rui Yang; JiPing Cui; Yikai Dong; Jun Li; Liu Peng; Zhida Shang; Mingze Tang; KC Tan; Jibin Wu
-
-**ID:** 139164 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=hRuXRJvc4A>) | [PDF](<https://openreview.net/pdf?id=hRuXRJvc4A>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139164>)
-
-Electroencephalography \(EEG\) foundation models increasingly rely on multi\-dataset training and evaluation, yet public EEG datasets still lack a shared task specification layer that can turn heterogeneous recordings into reusable benchmark units\. Existing standards organize files, metadata, and provenance, but they do not specify EEG tasks under a common language and rulebook, leaving critical task semantics scattered across papers, code, and manual interpretation\. We investigate whether heterogeneous public EEG datasets can be standardized through a structured task specification language paired with a shared rulebook\. Our methodology represents each benchmark entry as a task document synchronized with an executable task kernel, with the rulebook defining task fields, evidence requirements, document\-kernel alignment, review states, and machine\-checkable constraints\. Using this methodology, we release a community\-reviewed EEG benchmark corpus centered on 53 completed and reviewed entries with 245 task definitions spanning diverse paradigms, and we introduce NeuroDoc and NeuroAudit as the operational support layer for rulebook\-guided drafting, upgrading, review, amendment, and release management\. We further examine whether the resulting benchmark units can be instantiated in a shared downstream setting across four EEG foundation model backbones, providing execution\-based evidence for reusable, auditable, and executable EEG benchmarking infrastructure\. Project resources are available at https://anonymous\.4open\.science/r/anonymous\_reviewe\_neurodoc\.
-
-## Sparse Reward Subsystem in Large Language Models
-
-**Authors:** Guowei Xu; Mert Yuksekgonul; James Zou
-
-**ID:** 155694 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=3dZL4FURuU>) | [PDF](<https://openreview.net/pdf?id=3dZL4FURuU>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155694>)
-
-Recent studies show that LLM hidden states encode reward\-related information, such as answer correctness and model confidence\. However, existing approaches typically fit black\-box probes on the full hidden states, offering little insight into how this information is structured across neurons\. In this paper, we show that reward\-related information is concentrated in a sparse subset of neurons\. Using simple probing, we identify two types of neurons: value neurons, whose activations predict state value, and dopamine neurons, whose activations encode step\-level temporal difference \(TD\) errors\. Together, these neurons form a sparse reward subsystem within LLM hidden states\. These names are drawn by analogy with neuroscience, where value neurons and dopamine neurons in the biological reward subsystem also encode value and reward prediction errors, respectively\. We demonstrate that value neurons are robust and transferable across diverse datasets and models, and provide causal evidence that they encode reward\-related information\. Finally, we show applications of the reward subsystem: value neurons serve as effective predictors of model confidence, and dopamine neurons can function as a process reward model \(PRM\) to guide inference\-time search\.
-
-## LibriBrain100: One Hundred Hours of Broad and Deep MEG Data for Neural Speech Decoding at Scale
-
-**Authors:** Francesco Mantegna; Dulhan Jayalath; Gereon Elvers; Tasha Kim; Benjamin Ballyk; SungJun Cho; Teyun Kwon; Luisa Kurth; Miran Özdogan; Gilad Landau; Pratik Somaiya; Natalie Voets; Mark Woolrich; Oiwi Parker Jones
-
-**ID:** 139616 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=FDNgl8GYEN>) | [PDF](<https://openreview.net/pdf?id=FDNgl8GYEN>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139616>)
-
-_Abstract unavailable from the accessible public sources._
-
-## Sparse Reward Subsystem in Large Language Models
-
-**Authors:** Guowei Xu; Mert Yuksekgonul; James Zou
-
-**ID:** 155694\-\-2 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 155694
-
-[Paper](<https://openreview.net/forum?id=3dZL4FURuU>) | [PDF](<https://openreview.net/pdf?id=3dZL4FURuU>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155694>)
-
-Recent studies show that LLM hidden states encode reward\-related information, such as answer correctness and model confidence\. However, existing approaches typically fit black\-box probes on the full hidden states, offering little insight into how this information is structured across neurons\. In this paper, we show that reward\-related information is concentrated in a sparse subset of neurons\. Using simple probing, we identify two types of neurons: value neurons, whose activations predict state value, and dopamine neurons, whose activations encode step\-level temporal difference \(TD\) errors\. Together, these neurons form a sparse reward subsystem within LLM hidden states\. These names are drawn by analogy with neuroscience, where value neurons and dopamine neurons in the biological reward subsystem also encode value and reward prediction errors, respectively\. We demonstrate that value neurons are robust and transferable across diverse datasets and models, and provide causal evidence that they encode reward\-related information\. Finally, we show applications of the reward subsystem: value neurons serve as effective predictors of model confidence, and dopamine neurons can function as a process reward model \(PRM\) to guide inference\-time search\.
-
-## BRIDGE: Brain\-Vision Representation Integration through Depth and Granularity Encoding
-
-**Authors:** Chenyuan Hong; Binghao Ye; Yufei Guo; Guoqi Li
-
-**ID:** 155233 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=7GEZxlwjaN>) | [PDF](<https://openreview.net/pdf?id=7GEZxlwjaN>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155233>)
-
-Decoding visual content from non\-invasive brain signals remains challenging because neural responses evolve over time whereas images are typically static\. Most existing methods align an entire neural response window to a single final visual embedding, this overlook a fundamental representational mismatch: brain signals reflect both early perceptual and later integrative representations, whereas the final visual embedding is biased toward high\-level semantics\. Therefore, we propose BRIDGE, a brain\-vision representation integration framework that aligns two modalities through Visual Depth Encoding and Brain Granularity Encoding\. On the visual side, BRIDGE extracts and fuses CLIP representations from multiple depths, producing an alignment target that preserves low\-level and high\-level information\. On the brain side, instead of treating the whole temporal window as homogeneous and obscuring temporally heterogeneity, BRIDGE explicitly partitions stimulus\-evoked EEG/MEG responses into a small number of temporally ordered stages and adaptively pools them\. The resulting brain and visual embeddings are trained in a shared latent space by contrastive learning and can further support brain\-to\-image generation through a pretrained diffusion prior\. Experiments on THINGS\-EEG and THINGS\-MEG demonstrate that BRIDGE achieves strong retrieval and generation performance\. Ablation studies further confirm the complementary benefits of depth\-wise visual aggregation and temporal brain factorization\.
-
-## FETTUCCINE: Fast and efficient brain\-to\-text decoding on mobile devices
-
-**Authors:** Jonathan McCart; Pranav Deevi; Mehdi Azabou; Nanda H Krishna; Caleb A McKinney; Nicholas S Card; Sergey D Stavisky; Chethan Pandarinath
-
-**ID:** 150728 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=fqsWkQnA9w>) | [PDF](<https://openreview.net/pdf?id=fqsWkQnA9w>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150728>)
-
-Recent advances in speech neuroprostheses have enabled new communication avenues for people who have lost the ability to speak due to neurological illness or injury\. These systems can decode neural activity during attempted speech into text by relying on language priors to achieve high decoding accuracy\. This performance currently comes at the cost of using a compute\-intensive language modeling stack, presenting a major bottleneck for real\-world use\. Further, current language models incur highly variable and disruptive inference latencies, limiting communication throughput and preventing users from reliably participating in natural conversation\. We introduce FETTUCCINE, an end\-to\-end brain\-to\-text framework that leverages the speed and portability of automatic speech recognition \(ASR\) models to address the aforementioned practical challenges, while achieving usable \(&lt;10%\) word error rates \(WER\), efficient adaptation to neural non\-stationarities, and reliable performance on mobile devices\. When evaluated using publicly available data from an intracortical speech neuroprosthesis user, FETTUCCINE outperforms previous end\-to\-end methods, achieving as low as 4\.39% WER\. Most notably, our models successfully run on a commercially\-available mobile device with throughput reaching up to 370x real\-time, providing the first demonstration of brain\-to\-text decoding on a mobile device\. We also show that our models can be successfully finetuned to extend usable performance to future days\. Beyond performance, our approach enables localization of the neural features most relevant for decoding via gradient\-based salience maps, which we show align with well\-established physiological priors across different ASR model families\. Taken together, our results show that FETTUCCINE overcomes core infrastructural and computational barriers, yielding a new class of portable brain\-to\-text communication\.
-
-## Vibe\-Spike: An Energy\-Preserving EEG Foundation Model Through the Landscape of Neural Coherence
-
-**Authors:** Jun Ye; yuting li; Tingting Dan; Guorong Wu
-
-**ID:** 154655 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=C1hqOzVwCn>) | [PDF](<https://openreview.net/pdf?id=C1hqOzVwCn>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154655>)
-
-Current foundation models of electroencephalography \(EEG\) sought to characterize the fluctuations in neural signals, yet this objective stands fundamentally at odds with the intrinsic physiological mechanisms governing brain activity\. As with their LLM predecessors, these models pack millions of neurons, even those contributing negligibly small weights, yielding a computational footprint incompatible with resource\-constrained portable brain\-computer interfaces \(BCIs\)\. To overcome these challenges, we propose \*Vibe\-Spike\*, an energy\-preserving and biologically\-realistic EEG foundation model operating in the regime of oscillatory neural synchronization\. Drawing on principles from cognitive neuroscience, our foundation model is designed to recover the masked EEG signals through the transient spikes of spatially coupled neurons, from which self\-organized cortical synchronization \(aka\. \*brain rhythms\*\) emerges to reciprocally modulate ongoing neural firings\. Under the hood, we introduce a macro\-micro learning mechanism that bridges two scales of neural computation: lower layers capture neural oscillations via a spiking neural network \(SNN\), while upper layers model oscillatory synchronization across large neuronal populations, with cross\-scale interactions learned end\-to\-end\. Taken together, our \*Vibe\-Spike\* sheds new light on learning intrinsic representation of functional neural fluctuations\. We pre\-train the model to reconstruct segmented EEG signals directly from the synchronized spiking representations using a purely self\-supervised objective on a diverse corpus of \*\*75\*\* public datasets\. To demonstrate its universal representational power, we conduct massive\-scale evaluations across ten heterogeneous downstream datasets, including clinical pathology, sleep staging, and cognitive assessment\. \*Vibe\-Spike\* not only facilitates deployment on portable edge devices through its lightweight architecture and energy\-preserving inference, but also provides profound neuroscience insights\. By further capturing pre\- and post\-synaptic firing, \*Vibe\-Spike\* unlocks a new pathway for characterizing effective connectivity and the oscillatory synchronization that underpins cognition\.
-
-## Direct Conditioning of Audio Diffusion Transformers on fMRI Reveals Cortical Contributions to Sound Reconstruction
-
-**Authors:** Matteo Ciferri; Tonio Weidler; Matteo Ferrante; Nicola Toschi; Elia Formisano
-
-**ID:** 152995 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=OlCa72ym7P>) | [PDF](<https://openreview.net/pdf?id=OlCa72ym7P>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152995>)
-
-Reconstructing audio from brain activity remains challenging\. A key limitation lies in current audio diffusion models, which are primarily designed for text\-based conditioning and lack mechanisms to incorporate non\-linguistic continuous signals such as neural responses\. While recent work in the visual domain has explored direct conditioning on brain activity, this approach has not yet been extended to audio diffusion models\. We introduce a framework that directly guides a latent audio diffusion model with fMRI signals, avoiding intermediate feature prediction for the conditioning stage\. Central to our approach is a transformer\-compatible adapter that enables the integration of non\-linguistic representations into the cross\-attention layers of diffusion transformers \(DiTs\)\. Although motivated by neural decoding, this adapter provides a general mechanism for conditioning audio diffusion models on arbitrary continuous inputs, not inherently limited to neural signals\. We demonstrate consistent improvements over baselines, including two\-stage fMRI\-to\-latent conditioning, across both acoustic and semantic evaluation metrics\. In addition, we introduce a fidelity metric grounded in a computational model of auditory neural processing, which allows us to quantify the contribution of individual auditory cortical regions to reconstructed audio representations\.
-
-## Emergent representations of graphical structure in mechanistic neural models of causal judgment
-
-**Authors:** Marcus Triplett; Kenneth Kay
-
-**ID:** 152452 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=T1VpyAm5Or>) | [PDF](<https://openreview.net/pdf?id=T1VpyAm5Or>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152452>)
-
-_Abstract unavailable from the accessible public sources._
-
-## Representing Part\-Whole Hierarchy with Nested Neuronal Coherence
-
-**Authors:** Hao Zheng; Hui Lin; Rong Zhao
-
-**ID:** 150391 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=iPNj9AYpKu>) | [PDF](<https://openreview.net/pdf?id=iPNj9AYpKu>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150391>)
-
-Human vision flexibly extracts part\-whole hierarchies from visual scenes, but representing such structures remains a key challenge for neural networks\. Inspired by the neural syntax hypothesis in neuroscience, we propose a framework for representing hierarchical part\-whole relationships through nested neuronal coherence, characterized by its continuous and distributed nature\. Nested neuronal coherence refers to dynamical states where distributed activations are temporally correlated to form cell assembly sequences across timescales, argued to represent neural syntax\. Building on this framework, we develop a cortical\-inspired hybrid model, Composer, which dynamically achieves emergent nestedness when given images\. To evaluate the emergent hierarchy, we create four synthetic datasets and three quantitative metrics, demonstrating the model’s ability to parse scenes of varying complexity\. Overall, our work advances a systematic paradigm spanning representation, implementation, and evaluation toward building human\-like vision in neural networks\.
-
-## FracEncoder: Towards Adaptive Cognitive Trajectories via Fractional\-Order Context Encoding
-
-**Authors:** Lulu Wang; Shengling Wang; Anlin Chen; Ke Chao; Weicheng Wang
-
-**ID:** 148356 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=yUT3YSeo8K>) | [PDF](<https://openreview.net/pdf?id=yUT3YSeo8K>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148356>)
-
-_Abstract unavailable from the accessible public sources._
-
-## Prototypes of the Mind: A Unified Framework for Probing the Visual Brain
-
-**Authors:** Shi Chen; Seoyoung Ahn; Doris Tsao
-
-**ID:** 153745 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=J3DGy43GZZ>) | [PDF](<https://openreview.net/pdf?id=J3DGy43GZZ>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153745>)
-
-_Abstract unavailable from the accessible public sources._
-
-## Predictive Representation Learning for Partially Observed Neural Dynamics
-
-**Authors:** Xinyi Li; Zhichao Liang; Hongjun Jiang; Yian Zhu; Guanyi Zhao; Xuejian Yang; Xiaoqi Chen; Kexin Lou; Quanying Liu
-
-**ID:** 151732 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=YVQoWXsmt9>) | [PDF](<https://openreview.net/pdf?id=YVQoWXsmt9>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151732>)
-
-In long\-term multi\-session neural recordings, the same latent population dynamics are often observed through changing subsets of neural channels due to electrode drift, signal instability, or session\-dependent recording variability\. This creates a partially observed system\-identification problem: each session provides only an incomplete view of a shared dynamical system, and missing channels are not merely absent inputs but unobserved variables coupled to the same latent dynamics\. Existing approaches often rely on observation\-pattern\-specific mapping, which treats missing channels passively and leaves the shared latent dynamics weakly constrained\. We propose CHAMA \(CHannel\-Aware Masked Attention\), a mask\-conditioned predictive representation learning framework for identifying shared neural dynamics under heterogeneous channel availability\. CHAMA introduces a single global observation interface conditioned on channel\-availability masks, allowing observed and unobserved channels to jointly constrain latent dynamics\. The key idea is bidirectional: missing channels impose structural constraints on the latent representation, while the learned latent dynamics enable principled recovery of missing activity\. To improve identifiability under sparse observations, CHAMA aggregates causal temporal windows, effectively trading temporal context for missing spatial information\. Across synthetic dynamical systems and real multi\-session neural recordings, CHAMA improves missing\-channel completion, forecasting, latent dynamical fidelity, and downstream behavioral decoding over conditional adapter, zero\-padding, and masked\-autoencoding baselines\. These results show that dynamics\-aware recovery preserves globally consistent and behaviorally relevant structure beyond point\-wise reconstruction accuracy\. The source code is available at: \\url\{https://anonymous\.4open\.science/r/CHAMA\-D691\}\.
+Inferring the latent processes that generate observable neural activity is a central challenge in neuroscience, with direct implications for brain\-machine interfaces and neural engineering\. Existing inverse approaches typically summarize the recording into low\-dimensional features or learn black\-box latents that lack a direct biophysical interpretation\. A promising alternative is to fit a differentiable biophysical simulator end\-to\-end against the full extracellular signal, using direct and scalable gradient optimization\. In practice, however, recovering a per\-neuron input via backpropagation through neuronal dynamics is difficult because the loss landscape is nearly flat in the subthreshold regime and jumps sharply at spike threshold, leaving gradient descent without a useful signal\. We observe that per\-neuron spike times, routinely available from spike sorting, expose discrete millisecond\-scale anchors at which the loss does carry information\. Gradients from these anchors flow back in time through the differentiable simulator and shape the subthreshold drive that produced each spike\. Building on this, we present a fully differentiable pipeline coupling biophysical membrane dynamics to a volume conductor model of the multi\-electrode array\. For each neuron in a recorded population, the method jointly recovers a time\-varying latent input current and a probe\-relative position consistent with both the extracellular trace and the observed spike times\. No explicit likelihood or posterior estimation is required, and every fitted latent corresponds to a named biophysical quantity\. On paired patch\-clamp / Neuropixels SPE\-1 data, the model localizes the patched neuron to within $40 \\mu m$ on average across cells, while reproducing observed spatio\-temporal activity patterns under realistic noise\. These results position scalable differentiable biophysical simulation as a practical route to mechanistic, gradient\-based analysis of high\-density neural recordings\.
 
 ## Learning Transferable Cross\-Day Representations for Few\-Shot Neural Decoding
 
 **Authors:** Yue Chen; Menghan Li; Tatsuo S Okubo
 
-**ID:** 149445 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
+**ID:** 149445 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
 [Paper](<https://openreview.net/forum?id=q1LJcYNOB7>) | [PDF](<https://openreview.net/pdf?id=q1LJcYNOB7>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149445>)
 
-_Abstract unavailable from the accessible public sources._
+Intracortical brain–computer interfaces \(iBCIs\) can restore movement and communication, but neural drift can degrade performance across recording sessions\. Because recalibration adds user burden, there is a need for decoders that adapt from minimal calibration data\. Although session\-specific input layers are a common way to handle cross\-session drift, they can underperform in the extreme few\-shot regime because the shared decoder is trained downstream of well\-estimated session\-specific layers, but must rely at deployment on a new\-session layer fit from only a few calibration trials\. To avoid this dependence, we propose a two\-stage approach: first, train a single GRU decoder on pooled held\-in sessions without session\-specific input layers, encouraging the backbone to handle cross\-session variability directly; second, freeze this backbone and meta\-learn a lightweight alignment layer for rapid calibration\. We evaluate on FALCON H2, an official human handwriting iBCI benchmark designed for few\-shot cross\-session decoding, and achieve 7\.41\\% word error rate using only three released calibration sentences per held\-out session\. These results suggest that, under extreme calibration limits, learning a transferable backbone before adding session\-specific adaptation can be more effective than jointly training flexible session\-specific layers\.
 
-## Beyond High and Low: Evaluating Graded Cognitive Diversity in LLM Persona Simulations
+## Position: AI Development Should Prioritize Cognitive Security
 
-**Authors:** Sion Weatherhead; Ben R Newell; Aaron Belbasis; Flora Salim
+**Authors:** Batu El; Shiye Su; Aneesh Pappu; Peggy Yin; Julie Heng; Eric Heng; Ryan Z Wang; Andreas Haupt; James Zou
 
-**ID:** 138966 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
+**ID:** 140057 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=tY7NV2RNkm>) | [PDF](<https://openreview.net/pdf?id=tY7NV2RNkm>) | [Official poster](<https://neurips.cc/virtual/2026/poster/138966>)
+[Paper](<https://openreview.net/forum?id=WJ6PzoECZO>) | [PDF](<https://openreview.net/pdf?id=WJ6PzoECZO>) | [Official poster](<https://neurips.cc/virtual/2026/poster/140057>)
 
-_Abstract unavailable from the accessible public sources._
+Generative AI systems designed to influence human beliefs and actions are becoming increasingly pervasive, raising concerns about cognitive security \-\- the protection of human cognitive processes from hazardous influence\. Recent advances have only amplified the cognitive risks of AI technologies, leading institutions worldwide to identify cognitive security as an emerging and urgent governance challenge\. However, there currently exists no framework for integrating scattered research efforts on the applied cognitive effects of AI systems\. In this paper, we argue that cognitive security must be prioritized in AI development and outline a roadmap to do so\. First, we track and categorize state\-of\-the\-art capabilities for cognitive influence in generative AI systems\. Then, we propose attack and defense mechanisms to formalize threat models, expose vulnerabilities, and evaluate countermeasures\. Finally, we define metrics to unify research efforts on the cognitive impacts of AI systems\.
 
-## AuGhostmentation: The Eyes Never Stand Still—$\\textit\{Why Should CNNs?\}$
+## Delay\-Embedded Representations for Robust Saccade Classification in Noisy Oculographic Signals
 
-**Authors:** Emirhan Inan; Suayb Arslan
+**Authors:** Vladimir Antipov; Artem Badarin; Alexander Khramov
 
-**ID:** 152194 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+**ID:** 150466 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=UrYjjK6We7>) | [PDF](<https://openreview.net/pdf?id=UrYjjK6We7>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152194>)
+[Paper](<https://openreview.net/forum?id=hpVPOORw3w>) | [PDF](<https://openreview.net/pdf?id=hpVPOORw3w>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150466>)
 
-Convolutional Neural Networks \(CNNs\) draw broad inspiration from the primate visual system yet prove notoriously brittle under common image corruptions, whereas the latter suffers little from such degradations\. Extending beyond this initial inspiration, architectures incorporating quantifiable biological priors that enhance network resilience are increasingly gaining traction\. Nevertheless, most of these approaches have so far been confined to emulating the higher visual areas, seldom utilizing the upstream retinal stages that constitute the very basis of $\\textit\{seeing\}$\. At its core, primate vision relies on photons captured by retinal photoreceptors, the signals of whose conversion are then relayed through the Lateral Geniculate Nucleus \(LGN\) to primary visual cortex \(V1\) and further downstream for additional processing\. Because cone photoreceptors are densest at the center of the retina \(fovea\), the eyes must be repositioned continuously \(saccade\) to direct the high\-acuity macula toward objects of interest \(fixation\)\. Furthermore, the resultant rapid eye movements induce intra\-saccadic motion streaks that putatively aid in the spatiotemporal processing of inputs and provision of translation\-invariant object correspondence across frames\. Motivated by this mechanism, we propose $\\texttt\{AuGhostmentation\}$, a portmanteau of $\\textit\{augmentation\}$ and $\\textit\{ghosting\}$, which delivers the intra\-saccadic retinal smear as a frontend transform\. Superimposing the $\\textit\{ghosted\}$ images—fainter counterparts—atop the original, based on human oculomotor statistics, the resultant datum elicits $\\textit\{retinal persistence\}$ by integrating varied recompositions of the scene in a single representation, closely mimicking the foveal exploration scheme intrinsic to dynamic primate vision\. When prepended to ResNet\-18 trained on Tiny ImageNet, $\\texttt\{AuGhostmentation\}$ retains 98% validation accuracy while delivering a striking 60% relative gain in robustness on Tiny ImageNet\-C\. Applied to VOneNet, it likewise preserves 98% classification accuracy and yields a substantial 25% relative increase in compounded robustness\. For ImageNet\-100, the introduced $\\textit\{ghosts\}$ not only improve the corruption accuracy relative to the ResNet\-50 baseline by 23%, but the clean accuracy by 4%, also\. Building on these resilience gains, $\\texttt\{AuGhostmentation\}$ outpaces competing augmentations by up to 18% and baseline ResNet\-50 by up to 37% on stylized tests, suggesting that retinal priors naturally foster shape\-biased processing and thereby provide greater alignment with human object recognition\.
+We introduce ACMA \(Delay\-Augmented Clustering and Model Approximation\), a noise\-robust pipeline for saccade detection in oculographic signals that couples delay\-embedded clustering with physiologically grounded parametric refinement\. Existing detectors face a recurring trade\-off: velocity\-thresholding methods are simple and interpretable but degrade catastrophically as recording noise grows, adaptive event\-based detectors recover part of this gap at moderate noise but lose reliability at high noise, and recent deep models are sensitive to noise distributions unseen during training\. ACMA addresses this trade\-off in two stages\. First, a sliding\-window two\-cluster decomposition with time\-delay embedding identifies candidate saccades while remaining stable across noise regimes\. Second, a parametric saccade waveform constrained by priors on amplitude, duration, and the saccadic main sequence validates and characterizes each event\. We evaluate ACMA on a saccade\-detection benchmark spanning a wide range of noise levels and nine representative baselines, including a leading deep\-learning detector \(U'n'Eye\), adaptive methods \(NH, REMoDNaV, Engbert\), clustering\-based I2MC, and classical velocity\-thresholding methods \(IVT, IVVT, IDT, IDVT\)\. ACMA delivers consistent F1 gains in moderate\-to\-high noise regimes, where competing detectors degrade sharply, while additionally returning physically meaningful per\-event metrics \(amplitude, duration, peak velocity\) for downstream neurological assessment, fatigue monitoring, and brain\-computer interface applications\.
 
-## Multimodal Foundation Agents Should Use Brain Data as Privileged Supervision
+## Emergent representations of graphical structure in mechanistic neural models of causal judgment
 
-**Authors:** Richard Csaky
+**Authors:** Marcus Triplett; Kenneth Kay
 
-**ID:** 140083 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+**ID:** 152452 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=JK1yUpvQxe>) | [PDF](<https://openreview.net/pdf?id=JK1yUpvQxe>) | [Official poster](<https://neurips.cc/virtual/2026/poster/140083>)
+[Paper](<https://openreview.net/forum?id=T1VpyAm5Or>) | [PDF](<https://openreview.net/pdf?id=T1VpyAm5Or>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152452>)
 
-This position paper argues that multimodal foundation models should use brain recordings as privileged internal\-state supervision during training\. External behavior alone leaves human\-like cognition, robustness, and reasoning weakly constrained\. Neural recordings can serve as a training\-time modality that shapes representations, latent\-state dynamics, private computation policies such as reasoning tokens, and robustness before distillation into agents that operate from ordinary sensory, language, and action streams\. We develop this position through Foundational Human Modeling \(FHM\), a program centered on scaling generative brain models, aligning heterogeneous neural modalities through shared latent geometry, inserting brain tokens into unified multimodal token streams, and testing whether the privileged channel improves distilled agents after removal\. The argument is grounded in privileged\-information theory and prior work showing that neural or human\-derived targets can improve robustness, semantic transfer, data efficiency, and behavioral similarity after auxiliary signals are removed\.
+Humans have a remarkable ability to judge causal relationships from a limited number of unreliable observations\. Past work on causal cognition has largely focused on normative accounts of human behavior, leaving unknown how biologically plausible neural systems could learn causal relationships from observations and update their representations of causal structure with additional evidence\. Here, we leverage task\-optimized recurrent neural networks to discover candidate implementation\-level neural mechanisms of causal judgment\. We propose a novel cognitive task in which a subject observes stochastic samples from an unknown causal structure \(e\.g\. among variables A, B, and C with unknown causal relationships\), and must judge whether a specific causal relationship is present given a query \(e\.g\. "does A cause C?"\)\. We found that, after training, recurrent neural networks perform the task with high accuracy, adopt strategies that incorporate the behavior of non\-queried variables to form their judgments, and, despite being trained only on pairwise queries \("does A cause B?", "does C cause A?", etc\), form implicit beliefs about the complete graphical structure underlying the observations\. Lastly, we use dynamical systems analysis to identify a set of low\-level neural mechanisms that implement causal judgment and representation of causal graphical structure\. Together, these findings lay the groundwork for a "bottom\-up" approach to causal cognition, providing a potential basis for subsequent experimental study in the brain\.
 
-## Decomposing the modulation of interactions between neuronal populations
+## Decide Before You Record: Heterogeneity\-Guided Pre\-Acquisition Stimulus Selection for Cross\-Day Neuroprostheses
 
-**Authors:** Marco Celotto; J\. S Sooter; Sofie Ährlund\-Richter; Kyle R Jenks; Mriganka Sur; Stefano Panzeri
+**Authors:** Di Wu; Binglun Huang; Chengxi Xie; Zhenxi Song; Zhiguo Zhang
 
-**ID:** 152282 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+**ID:** 149170 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=UFTQ6XUIb3>) | [PDF](<https://openreview.net/pdf?id=UFTQ6XUIb3>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152282>)
+[Paper](<https://openreview.net/forum?id=sM47HO1iDP>) | [PDF](<https://openreview.net/pdf?id=sM47HO1iDP>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149170>)
 
-Identifying subpopulations of neurons that interact with each other from simultaneous recordings of populations of many neurons is key for understanding across\-brain communication with cellular resolution\. Recent work identified communication subspaces, which capture additive interactions between pairs of high\-dimensional neural populations through a small number of source and target activity patterns\. However, no current method captures how a third, potentially multivariate variable \- such as behavioral state or the activity of a third population \- modulates these interactions\. Here we extend the communication subspace framework by parameterizing modulation as a low\-rank tensor\. This identifies multiplicative interaction channels \(MICs\), defined as triplets of source, target, and modulator activity patterns, in which the modulator pattern gates the source\-target interaction\. We derive MICs as a bilinear perturbation of reduced\-rank regression\. We develop a hierarchical fitting pipeline and provide a closed\-form decomposition that quantifies whether modulation reshapes the modulator\-averaged baseline interaction, recruits private dimensions of one population, or opens new interactions\. In simulations, MICs reliably recover the presence and geometry of ground\-truth modulation even in the high\-dimensional, low\-sample regime\. Applying MICs to simultaneous calcium imaging of prefrontal axons and interneurons in the visual cortex revealed that behavioral state asymmetrically modulates top\-down interactions, reconfiguring the patterns of prefrontal projections that interact with a stable set of visual interneuron activity patterns\. By providing an efficient and compact characterization of modulatory interactions, MICs enable asking new questions about how potentially high\-dimensional variables shape interactions between neural populations\.
+Decoding language intentions from intracranial electroencephalography signals enables direct communication for patients with severe speech impairments\. However, practical deployment remains severely limited by cross\-day performance degradation caused by physiological and instrumental heterogeneity, requiring patients to record extensive calibration data daily to maintain decoding performance\. Here we introduce \\textbf\{He\}terogeneity\-Guided \\textbf\{D\}ata \\textbf\{A\}cquisition and \\textbf\{A\}daptation \(\\textbf\{HeDA\\textsuperscript\{2\}\}\), a novel calibration paradigm that \\textbf\{determines which stimuli to record\} for optimal calibration \\textbf\{before any neural data are acquired\}, fundamentally departing from existing methods that passively adapt to whatever data happen to be available\. HeDA\\textsuperscript\{2\} operates through three stages: it first quantifies cross\-day neural heterogeneity with a proposed \\textbf\{S\}entence\-level \\textbf\{H\}eterogeneity via \\textbf\{A\}lignment \\textbf\{P\}ath \\textbf\{E\}ntropy that captures how different phonetic phenomena exhibit varying degrees of heterogeneity; second, an estimator learns to predict this heterogeneity from historical patterns, enabling strategic selection of calibration sentences before any neural recording occurs; third, heterogeneity\-aware adaptation updates the decoder using minimal acquired data\. Extensive experiments on intracranial recordings across diverse recalibration settings demonstrate that, with merely 20\\% of conventionally required calibration data, HeDA\\textsuperscript\{2\} achieves comparable or superior decoding accuracy, representing a critical step toward clinically viable speech prosthesis\.
 
-## Efficient Training of Deep Spiking Neural Networks with Input\-Driven Derivative\-Free Updates
+## Inferring how internal brain state shapes neural responses with state\-dependent diffusion models
 
-**Authors:** Yongbo Zhang; Xinzhe Li; Katsuma Inoue; Mitsumasa Nakajima; Toshikazu Hashimoto; Yasuo Kuniyoshi; Kohei Nakajima
+**Authors:** Kaiwen Sheng; Yiqi Jiang; Yuyang Song; Gaurav Tyagi; Haotian Ye; Fangzhao Zhang; Ruiming Du; Pengxiao Wang; Stefano Ermon; Karl Deisseroth; Anish Mitra
 
-**ID:** 152821 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+**ID:** 149640 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=Q8vwmOQdzh>) | [PDF](<https://openreview.net/pdf?id=Q8vwmOQdzh>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152821>)
+[Paper](<https://openreview.net/forum?id=oaGzFBAs66>) | [PDF](<https://openreview.net/pdf?id=oaGzFBAs66>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149640>)
 
-Spiking neural networks \(SNNs\) are a promising paradigm for efficient neuromorphic computing, yet their training remains challenging due to the non\-differentiability nature of spike firing\. Backpropagation through time \(BPTT\) with surrogate gradients \(SG\) has become a mainstream approach due to its superior performance\. However, this method incurs high computational and memory demands during training, while its update rule depends on specific neuronal dynamics\. Furthermore, when targeting neuromorphic hardware implementation, the temporal error\-propagation process and the full membrane\-potential access required by SG are difficult to realize; these can introduce additional readout overhead, measurement noise, or perturbations to the system dynamics\. To address these issues, we propose the input\-driven derivative\-free training \(IDDFT\) method\. Rather than relying on membrane\-potential\-based surrogate derivatives, IDDFT constructs derivative\-free error signals by applying a relaxed nonlinearity to the inputs, thereby avoiding the temporal error\-propagation process and reducing the dependence of the update rule on specific neuronal dynamics\. By eliminating access to internal membrane\-potential states, our method reduces computational and memory costs, enhances compatibility with neuromorphic hardware, and enables training of black\-box SNN models\. We validate the IDDFT method through theoretical analysis and systematic experiments, demonstrating its effectiveness as an input\-driven, derivative\-free mechanism for constructing update signals\. When integrated with a biologically inspired training strategy, IDDFT maintains comparable performance while substantially enhancing robustness to the choice of relaxed nonlinearities\. Based on the resulting bio\-inspired combined framework, we conduct evaluations on CIFAR\-10, CIFAR\-100, CIFAR10\-DVS, and Tiny\-ImageNet\. Experimental results demonstrate that our method achieves performance comparable to BPTT and state\-of\-the\-art methods, while exhibiting remarkable robustness under adversarial attacks\.
+Neural responses to the same stimulus can vary dramatically with fluctuations in the brain's internal state and the organism's behavioral state\. Yet studying how brain state shapes neural responses is difficult: limited experimental recordings sparsely sample this joint space, leaving many biologically valid state\-stimulus pairings unobserved\. Existing methods either capture state\-dependent modulation with restricted model assumptions or synthesize neural activity without explicitly controlling internal brain state\. We introduce BrainStateDiff , a conditional diffusion framework that models the spatiotemporal distribution of future neural activity and behavior given external stimuli and recent brain states\. Motivated by two gaps in finite recordings, missing state\-stimulus combinations and limited repeats of observed conditions, BrainStateDiff introduces two state\-aware sampling strategies: cross\-state sampling , which recombines observed states and stimuli to synthesize plausible neural responses from unobserved pairings, and matched\-state sampling , which resamples from observed pairings to capture local trial\-to\-trial variability\. We evaluate BrainStateDiff on our newly collected wide\-field calcium imaging data in mouse V1, electrophysiology data in monkey V4, and two\-photon calcium imaging data in mouse striatum\. Our results show that BrainStateDiff generates biologically meaningful samples that preserve the state\-dependent structure of real recordings and expand neural response space coverage beyond the original recordings\. BrainStateDiff establishes state\-conditioned generative modeling as a practical framework for studying how internal brain state shapes neural responses beyond the state\-stimulus combinations directly observed in the experiments\.
 
-## Neural population tuning statistics as priors for multitask generalization
+## SENSE: Semantic Neural Speech Synthesis from Brain Dynamics via Spatial Graph Encoding
 
-**Authors:** Zach Cohen; Jan Drugowitsch
+**Authors:** Jisoo Park; Seonghak Lee; Hyojin Park; Junseok Kwon
 
-**ID:** 153194 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+**ID:** 152876 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=N8F8d2c171>) | [PDF](<https://openreview.net/pdf?id=N8F8d2c171>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153194>)
+[Paper](<https://openreview.net/forum?id=PhzfusK5sR>) | [PDF](<https://openreview.net/pdf?id=PhzfusK5sR>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152876>)
 
-Neural populations exhibit heterogeneous tuning: Neurons differ in their selectivity, gain, and in how their preferred inputs are distributed across stimulus or latent\-variable space\. While this heterogeneity has been studied extensively in the context of encoding precision, its implications for learning and generalization are less well\-understood\. Here, we develop a probabilistic theory that links a neural population's tuning statistics to its inductive bias: in large populations, the tuning statistics induce a kernel and, equivalently, a prior of a generative model over functions\. This prior in turn predicts the population's ability to  generalize across a distribution of related tasks\. Our theory determines the population tuning statistics that minimize the generalization error over a distribution of functions\. We further present a normative account of tuning adaptation inspired by our probabilistic approach, showing that tuning changes that maximize the marginal likelihood of observed data systematically reduce generalization error relative to non\-adapting populations\. Applied to the adaptation of hippocampal spatial representations in a reward learning task, we found that our theory could explain the over\-representation of rewarding locations through experience in an environment with a localized reward\. We further demonstrate how different components of the population's generative model differentially impact the speed and magnitude of tuning adaptation\. Overall, our work proposes a novel connection between tuning variability and a population's ability to learn and to generalize across tasks and develops a Bayesian theory of tuning adaptation in neural populations during learning\.
+Reconstructing speech from non\-invasive brain signals offers a promising pathway for restoring communication in individuals who are cognitively intact but unable to speak\. Existing EEG\-to\-speech approaches formulate this task as \\emph\{acoustic reconstruction\}, optimizing waveform fidelity while ignoring whether the generated speech preserves high\-level semantic content\. In this work, we revisit this formulation and argue that EEG signals carry not only acoustic but also semantic information\. We identify two key limitations of prior methods: \(1\) the neglect of spatial relationships between EEG electrodes, and \(2\) the failure to exploit the semantic structure of the N400 paradigm, where congruent and incongruent trials reflect distinct semantic processing\. We propose \\textbf\{SENSE\} \(\\textbf\{S\}emantic\-\\textbf\{E\}EG \\textbf\{N\}eural \\textbf\{S\}peech Synth\\textbf\{E\}sis\), which combines a graph\-based EEG encoder over electrode geometry with EEG Semantic Conditioning \(ESC\), aligning EEG to a pretrained semantic space using only congruent trials\. On the N400 dataset, SENSE consistently outperforms prior methods on both acoustic and semantic metrics, and model\-internal channel attribution suggests distributed reliance on auditory, sensorimotor, and centro\-parietal regions, consistent with known speech\-perception neuroscience\. In the unseen\-subject setting, SENSE trained on only two subjects already surpasses the strongest baseline trained on all eighteen subjects in word error rate, and matches it on acoustic metrics with as few as eight subjects\.
+
+## LibriBrain100: One Hundred Hours of Broad and Deep MEG Data for Neural Speech Decoding at Scale
+
+**Authors:** Francesco Mantegna; Dulhan Jayalath; Gereon Elvers; Tasha Kim; Benjamin Ballyk; SungJun Cho; Teyun Kwon; Luisa Kurth; Miran Özdogan; Gilad Landau; Pratik Somaiya; Natalie Voets; Mark Woolrich; Oiwi Parker Jones
+
+**ID:** 139616 | **Topic source:** official | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=FDNgl8GYEN>) | [PDF](<https://openreview.net/pdf?id=FDNgl8GYEN>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139616>)
+
+We introduce LibriBrain100, a large\-scale MEG dataset for speech decoding designed from the ground up for reproducible, standardised evaluation\. LibriBrain100 more than doubles the size of the original LibriBrain release, resulting in over 100 hours of high\-quality MEG acquired while subjects listened to naturalistic continuous speech\. With \~80 hours from a single subject, LibriBrain100 sets a new record for ‘deep’, within\-subject neural data \(8x more than the next comparable dataset and roughly 80x more than other datasets\)\. To demonstrate the payoff of this depth\-first design, we evaluate on a word\-classification benchmark—an increasingly well\-established stepping stone towards the open challenge of non\-invasive brain\-to\-text decoding\. Using an existing decoding model, we achieve state\-of\-the\-art performance—validating both the quality of the recordings and the value of within\-subject data at scale\. Because collecting 80 hours of data per user is impractical for real\-world applications, we also collected \~40 minutes of additional data from each of 32 subjects\. Using the same word\-classification benchmark, we demonstrate the value of ’broad’ multi\-subject data: supervised fine\-tuning of a pre\-trained model can substantially compensate for limited per\-subject data\. We provide standard train, validation, and test splits, all reproducible through an open\-sourced Python library that supports easy downloading, optional preprocessing, and data loading for common deep learning frameworks\. In addition, the dataset and evaluation infrastructure are being released alongside an open machine\-learning competition with a public leaderboard for standardised benchmarking\. Ultimately, our hope is that LibriBrain100 will accelerate progress towards practical non\-invasive brain\-computer interfaces, capable of restoring communication to people living with severe paralysis\.
+
+## Platonic Representations in the Human Brain: Unsupervised Recovery of Universal Geometry
+
+**Authors:** Pablo Marcos Manchón; Rishi Jha; Lluís Fuentemilla
+
+**ID:** 148860 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=udfnSh2EHl>) | [PDF](<https://openreview.net/pdf?id=udfnSh2EHl>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148860>)
+
+The Strong Platonic Representation Hypothesis suggests that representational convergence in artificial neural networks can be harnessed constructively: embeddings can be translated across models through a universal latent space without paired data\. We ask whether an analogous geometry can be recovered across human brains\. Using fMRI data from the Natural Scenes Dataset, we propose a self\-supervised encoder that learns subject\-specific embeddings from brain data alone by exploiting repeated stimulus presentations\. We show that these independently learned spaces can be translated across subjects using unsupervised orthogonal rotations, without paired cross\-subject samples or intermediate model representations\. Synchronizing pairwise rotations into a single shared latent space further improves cross\-subject retrieval, indicating that subject\-specific spaces are mutually compatible with a common coordinate system\. These results provide evidence for a shared neural geometry in the human visual cortex: subject\-specific fMRI representations are approximately isometric across individuals and can be translated through purely geometric transformations\.
 
 ## MIRAGE: Adaptive Multimodal Gating for Whole\-Brain fMRI Encoding
 
@@ -388,26 +216,6 @@ Large EEG foundation models are pretrained on heterogeneous corpora, but two cha
 
 Understanding how neural activity encodes behavioral and sensory variables is a key challenge in systems neuroscience\. This requires models that go beyond predicting activity from labels and instead support source\-conditioned counterfactual editing: given a recorded source response, we should be able to edit one behavioral or stimulus variable and predict how neural activity would change while preserving other observed factors and source\-specific variability not explained by the labels\. Here, we introduce \*\*Neural\-DISCO\*\*, a disentangled representation learning framework for counterfactual modeling of neural activity\. Neural\-DISCO partitions the latent space into label\-specific components, each associated with an observed behavioral or stimulus variable, together with a residual latent that captures variability not supplied through observed labels\. Across simulated and real neural recording datasets, we show that this structure enables selective manipulation of individual labels to generate counterfactual neural responses while preserving the remaining content of the original activity\. Further, to gain insight into how behavioral and stimulus variables are encoded at single\-neuron resolution, we pair this disentangled framework with feature attribution methods that identify which neurons are most important for each label\. We find that disentanglement enhances the recovery of known functional cell roles in both synthetic and real data\. Together, these results support Neural\-DISCO as a framework for controlled counterfactual modeling of neural activity and provide a practical interface for probing how neural populations encode behavior and sensory information\.
 
-## Accuracy of Noise Ceiling Estimators for Brain Scores
-
-**Authors:** Aude Maier; Lucas Gruaz; Martin Schrimpf; Johanni Brea
-
-**ID:** 154840 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=AWvO8s9XuP>) | [PDF](<https://openreview.net/pdf?id=AWvO8s9XuP>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154840>)
-
-The internal activations of modern machine learning models align surprisingly well with the activities recorded in real brains\. In the last five years, the alignment between encoding models and brain activities, often called brain scores, has steadily increased\. Because brain recordings are noisy, there exists an upper bound to the brain scores that any model can achieve\. This bound, called the noise ceiling, is crucial for two reasons: it determines whether further improvements in model performance are possible, and it enables meaningful comparisons of brain scores across benchmarks\. The field has developed multiple approaches to estimate noise ceilings, but the statistical properties of existing estimators remain poorly understood, leaving it unclear in which experimental settings they provide reliable estimates\. Here, we introduce a unified mathematical framework for brain recordings, use it to derive closed\-form expressions for four commonly used noise ceiling estimators, and provide theoretical predictions for the behavior of each estimator\. We validate the theoretical predictions with simulations that we compare to noise ceiling estimates in existing fMRI datasets\. We find that the existing methods underestimate the true noise ceiling in many settings\. We conclude with recommendations for best practice in different situations\.
-
-## Cephalonauts One: A deep fMRI dataset for decoding naturalistic speech in the human brain
-
-**Authors:** Antoine Collas; Louis Jalouzot; Géraud Ilinca; Corentin Caris; Romain Valabregue; Ahmed Hassayoune; David Gonçalves; Madeleine Hueber; Thaddée Delebarre; Savatovsky Julien; Clara Fonteneau; Charles Maussion; Bertrand Thirion; Alexis Thual
-
-**ID:** 139123 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=jqqDfxmqO5>) | [PDF](<https://openreview.net/pdf?id=jqqDfxmqO5>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139123>)
-
-Cephalonauts One is a whole\-brain 3 Tesla \(3T\) functional magnetic resonance imaging \(fMRI\) dataset recorded while subjects listened to audio podcasts\. Three healthy subjects underwent multiple scanning sessions, each consisting of five 15\-minute runs, while listening to podcasts in their native language\. The current release contains 14, 20, and 17 hours of fMRI data per subject, respectively, making it one of the deepest per\-subject fMRI datasets with naturalistic speech stimuli available\. The dataset pairs brain activity with the corresponding podcast audio, transcript annotations, and derived stimulus embeddings\. Furthermore, we introduce a brain decoding benchmark formulated as audio segment retrieval: given fMRI activity from a held\-out session, the decoder must identify the corresponding time\-aligned podcast audio segment among candidate segments\. We provide standardized splits, evaluation metrics, and baseline decoders for this task\. Finally, a scaling analysis shows that decoding performance improves continuously with the amount of training data per subject\.      Data &amp; code: https://huggingface\.co/datasets/karavela/cephalonauts\_one
-
 ## What, Where, and Boundary: Hierarchical Cognitive Decomposition for Echocardiography Video Segmentation
 
 **Authors:** Long Zheng; Zhi Li; Weidong Wang; Chenxi Zhu; Zhenyu Dai; Minyi Guo
@@ -418,113 +226,55 @@ Cephalonauts One is a whole\-brain 3 Tesla \(3T\) functional magnetic resonance 
 
 Segmenting the left ventricle in echocardiographic videos remains difficult because the target undergoes continuous deformation and rapid displacement across the cardiac cycle, while low tissue contrast further obscures its endocardial boundaries\. Expert echocardiographers navigate these challenges through a hierarchical cognitive workflow, sequentially addressing three fundamental questions:What is the target? Where is it now? Where does the boundary lie? Yet existing methods predict masks end\-to\-end from temporal features without explicitly modeling this cognitive process\. We propose Hierarchical Cognitive Decomposition \(HCD\), which decomposes the segmentation task into three stages that emulate this expert interpretation workflow\. To capture invariant target identity amid changing appearances, Static Identity Anchoring \(SIA\) anchors the first annotated frame as a semantic reference, enabling stable recognition across the cardiac cycle\. To maintain spatial focus despite inter\-frame motion, Adaptive Gaze Prior \(AGP\) converts the previous frame's prediction into a spatial attention prior that localizes the current target position\. To resolve boundary ambiguity under low tissue contrast, Structural Boundary Perception \(SBP\) extracts multi\-scale boundary cues within the localized region\. On the CAMUS and EchoNet\-Dynamic benchmarks, HCD achieves state\-of\-the\-art performance with only 1\.35M trainable parameters \(out of 35\.2M total\) at 68 FPS, demonstrating that explicitly encoding clinical cognitive priors into network design yields both effective and efficient segmentation\.
 
-## Cognitive constraints and thalamocortical architecture explain systematic biases and neural signatures in human hierarchical decision\-making
-
-**Authors:** Mien B Wang; Liu Mengxing; Kai Hwang; Michael Halassa
-
-**ID:** 155926 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=1lsYyvQ1i2>) | [PDF](<https://openreview.net/pdf?id=1lsYyvQ1i2>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155926>)
-
-Human cognition operates under capacity limitations, requiring computational adaptations for solving complex tasks\. Although such adaptations have been described algorithmically, their neural substrates and mechanistic implementations remain poorly understood\. Here, we study a hierarchical decision\-making task in which subjects must simultaneously infer latent rule changes and resolve sensory uncertainty\. By comparing human behavior with Bayesian observer models, we identify three systematic deviations: humans make decisions hierarchically, persist in the previous context after a context switch, and preferentially explore a new context within the same sensory modality\. We argue that these deviations are jointly explained by a cognitive\-constraint perspective in which hierarchical decisions are less cognitively demanding and switching context or modality incurs additional cost\. Incorporating these constraints substantially improves behavioral fits and reveals correlated subject\-level context and modality stickiness parameters, suggesting a shared underlying cost mechanism\. We then asked how neural representations support hierarchical decisions\. Because hierarchical decisions require selecting a latent context before choosing an action, context representations provide a natural substrate for reducing the effective decision space\. Neuroimaging data revealed that context information is represented in mediodorsal thalamus, consistent with a role for thalamus in task\-state compression\. Motivated by the context signal in thalamus, we trained a thalamocortical recurrent neural network in which a thalamic module and faster corticothalamic plasticity provided an inductive bias for task compression, while switch\-dependent working\-memory noise instantiated switching costs\. These constrained networks better matched human behaviorial bias than standard task\-optimized networks and reproduced key neural signatures observed in the data, including context encoding in mediodorsal thalamus and cue/rule representations in prefrontal cortex\. Together, these results suggest that structured biases in hierarchical decision\-making arise from cognitive constraints and identify thalamocortical dynamics as a candidate mechanism for efficient task\-state inference\.
-
-## On Observation Time for Recovering Latent Hawkes Networks
-
-**Authors:** Jonas Linkerhägner; Michele Bortolasi; Lorenzo Baldassari; Maarten V\. de Hoop; Ivan Dokmanić
-
-**ID:** 148999 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=tZwHSbbaof>) | [PDF](<https://openreview.net/pdf?id=tZwHSbbaof>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148999>)
-
-Dynamics of interacting systems in engineering, society, and nature often evolve over latent networks that govern which entities can interact\. We study the problem of inferring these networks from event\-based observations, which arise naturally in finance, seismology, and neuroscience\. While there is substantial algorithmic work addressing this important problem, theoretical results are scarce\. In this paper we ask the following fundamental question: what is the minimum time that one must observe the dynamics in order to exactly recover the underlying network, as a function of the number $d$ of interacting entities? For a class of stationary Hawkes processes with sparse, weak interactions, we prove that an observation time of order $\\log d$ is sufficient and necessary\. For the upper bound we construct a two\-stage estimator that uses clipped and binned event data for screening, followed by a least\-squares refinement, and apply concentration bounds derived from the Poisson cluster representation\. For the lower bound we combine Fano’s inequality with Jacod’s Girsanov formula for point processes on a suitable subclass of networks\.
-
-## Neuro\-Inspired Inverse Learning for Planning and Control
-
-**Authors:** Maryna Kapitonova; Tonio Ball
-
-**ID:** 154231 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=FF1dzX9agi>) | [PDF](<https://openreview.net/pdf?id=FF1dzX9agi>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154231>)
-
-We present a neuro\-inspired framework for embodied planning and control\. Building on three principles that enable fast and highly effective goal\-directed behavior in the mammalian brain — paired forward/inverse internal models, open\-loop multi\-step motor commands, and sequential organization of action — our \*Inverter\* framework combines analytic and trained components, the latter trained end\-to\-end through \*Inverse Learning\* \(IL\), a paradigm we formalize and delineate from supervised, reinforcement, and imitation learning\. IL bridges RL\-style amortization, which runs in a single forward pass but emits one action at a time, and optimal\-control\-style sequence reasoning, which plans whole trajectories but with iterative test\-time computation\. Single Inverters or hierarchical n=2 Inverter stacks match or improve over comparable offline\-RL and diffusion\-planner baselines on all 3 \`maze2d\-v1\` and 6 \`antmaze\-v2\` D4RL variants by an average of $\+24\.2\\%$ \(range $\-1\.9\\%$ to $\+78\.2\\%$\), at one\-to\-two orders of magnitude less inference compute\. As one mechanism behind this effectiveness, we show that Inverters can learn control policies closer to the analytic optimum than the data\-generating policy itself\. We also identify a failure mode of IL: forward\-model hacking under narrow training\-data coverage, which we mitigate by using \*random\* training data with broader coverage\. As an application example, a Pulse Inverter synthesizes arbitrary single\-qubit quantum gates with fidelity matching the standard iterative numerical baseline \(GRAPE\), at more than $1000\\times$ lower per\-gate compute\. We propose deeper hierarchical, probabilistic, and latent extensions of the Inverter framework as a differentiable world\-interface, especially for latency\- and compute\-critical embodied AI\.
-
-## Meta\-Cognitive Memory Policy Optimization for Long\-Horizon LLM Agents
-
-**Authors:** Ziyan Liu; Zhezheng Hao; Yeqiu Chen; Hong Wang; JingRen Hou; Ruiyi Ding; Yongkang Yang; Wence Ji; Wei Xia; Feng Liu
-
-**ID:** 155887\-\-2 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 155887
-
-[Paper](<https://openreview.net/forum?id=26CTl3jZo9>) | [PDF](<https://openreview.net/pdf?id=26CTl3jZo9>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155887>)
-
-_Abstract unavailable from the accessible public sources._
-
 ## RABBiT: Rapidly adaptive BOLD foundation model via brain\-tuning for accurate zero\-shot and few\-shot prediction of speech\-elicited responses in the brain
 
 **Authors:** Omer Moussa; Mariya Toneva
 
-**ID:** 148160\-\-2 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 148160
+**ID:** 148160 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
 [Paper](<https://openreview.net/forum?id=zqBwrok09Z>) | [PDF](<https://openreview.net/pdf?id=zqBwrok09Z>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148160>)
 
 Language understanding in the brain is context\-dependent, varying across experimental stimuli and individuals, which makes it difficult to build computational models that generalize across both\. This calls for a foundation model of language\-evoked brain activity that can capture shared structure while adapting efficiently to new participants and inputs\. We introduce RABBiT \(Rapidly Adaptive BOLD foundation model via BraIn\-Tuning\), a compact audio\-to\-fMRI encoder designed for accurate zero\- and few\-shot prediction\. A comprehensive evaluation on 324 participants across multiple unseen fMRI datasets shows that RABBiT enables accurate zero\-shot prediction of fMRI responses to natural speech across auditory and language\-selective regions, surpassing the SOTA foundation model for fMRI and predictions based on group averages\. With as little as 10 minutes of participant\-specific data, RABBiT further improves performance via parameter\-efficient tuning, substantially outperforming per\-participant linear models\. RABBiT's performance is driven by two key innovations: \(1\) learned region\-specific attention, and \(2\) a decomposition of brain responses into shared and subject\-specific components, combined with a brain\-tuned speech backbone\. In addition to supporting strong predictive accuracy, the structured, region\-specific representations that RABBiT learns enable interpretability\. By eliminating the need for extensive per\-participant data and model fitting, RABBiT enables scalable population\-level analyses of language in the human brain\.
 
-## Paradoxical noise preference in RNNs
-
-**Authors:** Noah Eckstein; Manoj Srinivasan
-
-**ID:** 156748\-\-2 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 156748
-
-[Paper](<https://openreview.net/pdf?id=gqxTZRzI35>) | [PDF](<https://openreview.net/pdf?id=gqxTZRzI35>) | [Official poster](<https://neurips.cc/virtual/2026/poster/156748>)
-
-In recurrent neural networks \(RNNs\) used to model biological neural networks, noise is typically introduced during training to emulate biological variability and regularize learning\. The expectation is that removing the noise at test time should preserve or improve performance\. Contrary to this intuition, we find that continuous\-time recurrent neural networks \(CTRNNs\) often perform best at a nonzero noise level, often approximately the same level used during training\. This noise preference typically arises when noise is injected inside the neural activation function; networks trained with noise injected outside the activation function perform best with zero noise\. The phenomenon arises robustly in diverse tasks for large enough training noise including function approximation, maze navigation, 2D path integration, and a multi\-task suite from cognitive neuroscience; we also show the phenomenon arising in feedforward neural networks, not just in RNNs\. Through analyses of simple function\-approximation and single\-neuron regulator tasks, we show that the phenomenon stems from noise\-induced shifts of fixed points \(stationary distributions\) in the underlying stochastic dynamics of the RNNs, thereby providing some  mechanistic interpretability of the phenomenon\. These fixed point shifts are noise\-level dependent and bias the network outputs when the noise is removed, degrading performance\. Analytical and numerical results show that the bias arises when neural states operate near activation\-function nonlinearities, where noise is asymmetrically attenuated, and that performance optimization incentivizes operation near these nonlinearities; such performance incentives exist for networks with noise inside the activation function, but not for networks with noise outside the activation function, explaining why only noise\-in networks show preference\.  Thus, networks can overfit to the stochastic training environment itself rather than just to the input–output data\.  The phenomenon is distinct from stochastic resonance, wherein nonzero noise enhances signal processing\. Our findings reveal that training noise can become an integral part of the computation learned by recurrent networks, with implications for understanding neural population dynamics and for the design of robust artificial RNNs\.
-
 ## Unifying Partner and Environment Diversity to Improve Human\-AI Coordination
 
 **Authors:** Patrick Q Zhang; Yancheng Liang; Adrienne Fairhall; Natasha Jaques
 
-**ID:** 151901\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 151901
+**ID:** 151901 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
 [Paper](<https://openreview.net/forum?id=X66IYOVa2D>) | [PDF](<https://openreview.net/pdf?id=X66IYOVa2D>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151901>)
 
 Real\-world applications of modern AI systems require generalization to both unseen environments and novel human users\. The field of zero\-shot coordination \(ZSC\) focused primarily on deploying AI to novel partners in otherwise familiar environments seen in the training\. The popular population\-based methods enable partner generalization by training the agent on a diversity of simulated human users \(serving as training\-time partners\) in a fixed environment, aiming to cover the diverse behaviors of novel human users\. Such a paradigm does not consider the more challenging realistic scenarios where both the users and the environment are unseen during training\. Recently, training across environments has been explored in training a single self\-play agent, which shows better generalization on both novel human users and unseen environments\. In this work, we ask whether jointly modeling partner diversity and environment diversity yields stronger coordination with novel partners in novel environments\. We introduce Cross Environment Co\-Play \(CECP\), a two\-stage framework that first trains a population of self\-play agents across a distribution of procedurally generated environments, and then trains a cooperator policy against this partner population\. To further couple social and environmental reasoning, we add a next\-state prediction module that encourages representations to encode both partner behavior and task structure, and validate the design choice with ablation studies\. We evaluate CECP on both a neuroscience\-inspired cooperative foraging task, and the population ZSC benchmark Overcooked, under held\-out partner and held\-out environment conditions\. CECP achieves the strongest performance among the compared baselines and attains state\-of\-the\-art results under our evaluation protocol for human\-AI collaboration\. We provide further analysis using the model's latent representation encoded by the next\-state prediction module, showing it can not only improve the performance of the cooperative AI, but also provide more interpretable latents, which demonstrate the inference of partner skill levels\.
 
-## WASP: Weakly Aligned Spatiotemporal Pairs for Fetal Brain MRI\-Ultrasound Learning
+## EEG Benchmarking Needs a Task Specification Layer: NeuroDoc for Rulebook\-Guided, Executable Benchmark Construction
 
-**Authors:** Francesco Correnti; Gabriele Magrini; Marco Mistretta; Niccolò Biondi; Pietro Pala; Alessandro Ramalli; simona fiori; Andrew Bagdanov; Matteo Lenge
+**Authors:** Chengxuan Qin; 致格 陈; Pengshu; Rui Yang; JiPing Cui; Yikai Dong; Jun Li; Liu Peng; Zhida Shang; Mingze Tang; KC Tan; Jibin Wu
 
-**ID:** 151594 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+**ID:** 139164 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=ZOMRRwH1Md>) | [PDF](<https://openreview.net/pdf?id=ZOMRRwH1Md>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151594>)
+[Paper](<https://openreview.net/forum?id=hRuXRJvc4A>) | [PDF](<https://openreview.net/pdf?id=hRuXRJvc4A>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139164>)
 
-Magnetic Resonance Imaging \(MRI\) is widely regarded as the optimal sensor for fetal brain analysis due to its superior soft tissue contrast and anatomical detail\. However, its high cost and operational burden make it invasive and difficult to obtain at scale\. Ultrasound \(US\), in contrast, is cheap, safe, and routinely acquired, and as a result it has produced substantially larger datasets and a growing ecosystem of pretrained models\. This asymmetry raises a natural question: Can we teach a US\-only model to understand fetal MRI from only a limited set of examples? The standard recipe, training a foundation model on subject\-to\-subject paired MRI\-US scans, is not viable since no such paired fetal dataset is publicly available\. In this paper we address this gap with Weakly Aligned Spatiotemporal Pairs \(WASP\), a framework that formulates cross\-modal correspondence as an entropic Optimal Transport problem driven by clinical metadata — in particular, Gestational Age \(GA\) and diagnostic planes — enabling the fitting of a lightweight alignment head that lifts MRI representations into the US latent space, without fine\-tuning the backbone\. Empirically, WASP yields its largest gains when MRI is unseen by the model during pretraining \(on USFM, GA estimation error drops from $21\.9$ to $16\.3$ days and standard plane classification accuracy climbs from 61\.9\\% to 74\.5\\%\), while still providing refining improvements for backbones pretrained on both modalities \(e\.g\., BioMedParse GA estimation error from $6\.5$ to $5\.6$ days and SAM\-Med2d plane accuracy from $83\.3$\\% to $88\.1$\\%\)\.
+Electroencephalography \(EEG\) foundation models increasingly rely on multi\-dataset training and evaluation, yet public EEG datasets still lack a shared task specification layer that can turn heterogeneous recordings into reusable benchmark units\. Existing standards organize files, metadata, and provenance, but they do not specify EEG tasks under a common language and rulebook, leaving critical task semantics scattered across papers, code, and manual interpretation\. We investigate whether heterogeneous public EEG datasets can be standardized through a structured task specification language paired with a shared rulebook\. Our methodology represents each benchmark entry as a task document synchronized with an executable task kernel, with the rulebook defining task fields, evidence requirements, document\-kernel alignment, review states, and machine\-checkable constraints\. Using this methodology, we release a community\-reviewed EEG benchmark corpus centered on 53 completed and reviewed entries with 245 task definitions spanning diverse paradigms, and we introduce NeuroDoc and NeuroAudit as the operational support layer for rulebook\-guided drafting, upgrading, review, amendment, and release management\. We further examine whether the resulting benchmark units can be instantiated in a shared downstream setting across four EEG foundation model backbones, providing execution\-based evidence for reusable, auditable, and executable EEG benchmarking infrastructure\. Project resources are available at https://anonymous\.4open\.science/r/anonymous\_reviewe\_neurodoc\.
 
-## Orthogonal Sparse Subgraph Alignment for Structure\-Function Coupling in Brain Networks
+## VeriTrip: A Verifiable Benchmark for Travel Planning Agents over Unstructured Web Corpora
 
-**Authors:** Haonan Gao; Daeyoung Ham; Yifei Zhang; Xinyuan Tian; Shengxian DING; Zhao; Tianxi Li
+**Authors:** Yuting Xu; Jiayi Tian; Jian Liang; Xin Xiong; Hang Zhang; Mu Xu; Xiao\-Yu Zhang
 
-**ID:** 155965 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+**ID:** 139167 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=1VRjEYWcHX>) | [PDF](<https://openreview.net/pdf?id=1VRjEYWcHX>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155965>)
+[Paper](<https://openreview.net/forum?id=hFIKn7BCcY>) | [PDF](<https://openreview.net/pdf?id=hFIKn7BCcY>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139167>)
 
-Characterizing the relationship between brain anatomical wiring and functional coordination remains a fundamental challenge in computational neuroscience\. This difficulty primarily arises because structure\-function coupling in the human brain is spatially heterogeneous, often localized to subnetworks, and inherently difficult to align across disparate representational modalities\. To address this methodological gap, we introduce $\\textbf\{O\}$rthogonal $\\textbf\{S\}$parse $\\textbf\{S\}$ubgraph $\\textbf\{A\}$lignment \($\\textbf\{Ossa\}$\), a principled and interpretable framework designed to identify compact structural cliques that exhibit maximal concordance with functional connectivity \(FC\) across subjects\. Within each FC\-derived community, $\\textbf\{Ossa\}$ optimizes an alignment objective over an orthogonal transformation, which absorbs coordinate mismatch between the two connectivity modalities, and a sparse node\-selection vector, which identifies the induced structural connectivity \(SC\) subgraph\. Furthermore, we establish theoretical properties for the $\\textbf\{Ossa\}$ estimator, demonstrating its statistical consistency in recovering the true underlying SC clique within each functional community\. Extensive empirical evaluations on simulated data, alongside analyses of the Adolescent Brain Cognitive Development \(ABCD\) baseline and longitudinal cohorts, demonstrate that $\\textbf\{Ossa\}$ successfully recovers aligned structural cliques under latent cross\-modal rotations\. Ultimately, the proposed methodology significantly improves out\-of\-sample SC\-FC alignment over size\-matched baselines and robustly identifies stable, single\-core topological structures within human brain networks\.
+Existing benchmarks have laid the foundation for travel planning agents by establishing API\-centric paradigms\. However, as the capabilities of Autonomous Agents continue to advance, their evaluation must evolve beyond simple tool execution toward handling the inherent complexities of the open web\. Current benchmarks bypass core cognitive hurdles: they fail to account for information noise, ignore multi\-source factual contradictions, and overlook the necessity of grounding visual perception into logical planning\. We introduce VeriTrip, a verifiable benchmark designed to meet the increasing demands for agent robustness and reliability\. VeriTrip shifts the evaluation focus to evidence\-grounded reasoning over unstructured multimodal web corpora\. It establishes a Multimodal Retrieval Base \(MRB\) derived from real\-world sources, forcing agents to autonomously orchestrate queries across heterogeneous data\. A synchronized Verifiable Knowledge Base \(VKB\) enables a cell\-wise verification protocol that precisely quantifies factual reliability, distinguishing systematic reasoning failures from parametric hallucinations\. Our evaluations across leading MLLMs reveal a critical \\textit\{retrieval\-reasoning trade\-off\}: the cognitive load of autonomous retrieval significantly erodes instruction retention\. VeriTrip provides the rigorous foundation necessary for the next generation of planning agents capable of operating in unconstrained, multimodal environments\.
 
-## Handwriting decoding as a challenging motor task for EEG Foundation Models
+## A Scientific Claim Stability Framework for Evaluating MRI Morphometry Pipelines
 
-**Authors:** Srinivas Ravishankar; Ishayu Ghosh; Nora Zajzon; Teng \(Simon\) Fei; Virginia de Sa
+**Authors:** Duy\-Cat Can; Dang\-Duat Tran; Anh\-Khang Nguyen; Bao Tran; Trung\-Hieu Do; Van T Nguyen; Duy\-Thanh VU; Oliver Y Chén; Hoang\-Quynh Le
 
-**ID:** 139358 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+**ID:** 139330 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=UmBkSWTw9t>) | [PDF](<https://openreview.net/pdf?id=UmBkSWTw9t>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139358>)
+[Paper](<https://openreview.net/forum?id=WgIesR9ByR>) | [PDF](<https://openreview.net/pdf?id=WgIesR9ByR>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139330>)
 
-Recent attempts at creating  Foundation Models \(FMs\) for Electroencephalography \(EEG\) have achieved state\-of\-the\-art performance on multiple tasks including Motor Imagery \(MI\)\. These MI tasks have typically involved coarse classification between imagined limb movements\. However, the development of foundation models necessitates diverse datasets, both for pretraining and evaluating the progress of these models\. In this work, we propose handwriting decoding as a challenging motor task for FMs\. We show that several existing datasets are affected by confounds, and introduce a dataset that more rigorously evaluates models\. On this dataset, we find that current FMs, despite showing SOTA performance in multiple MI datasets are outperformed by smaller task\-specific models\. We also highlight challenges specific to EEG\-based handwriting decoding to inform future work\. In our 4\-letter classification task, we show that  \(a\) Knowledge of movement\-onset is crucial to reported decoding performance in prior works, with average performance across subjects dropping from $41\.3\\%$ to $32\.4\\%$\. \(b\) Increasing test\-time signal quality provides significant performance improvements \($45\\%$ to $78\\%$ in our best subject\) compared to scaling training data with single\-trial EEG\.  \(c\) While scaling training data steadily improves decoding performance, existing FMs do not outperform specialist models in handwriting decoding\. We make our code and dataset available at https://anonymous\.4open\.science/r/EEG\-Handwriting\-BCI\-DFCD
+MRI morphometry pipelines are often evaluated by measurement agreement or downstream accuracy, yet their scientific value depends on the conclusions they support\. This creates a gap: two pipelines may look similar at the feature level while supporting different conclusions about aging, cognitive decline, or neurodegeneration\. To bridge this disparity, here we propose Scientific Claim Stability \(SCS\), a reusable claim\-centric evaluation framework that converts region\-of\-interest \(ROI\) morphometry tables into interpretable claim cards and tests whether each claim remains supported under realistic perturbations\. To demonstrate the efficacy of SCS, we evaluate it on 10,370 MRI scans from three datasets and five cohorts, generating 2,783 claim cards and evaluating 89 claim\-family pairs across dataset, pipeline, atlas, feature\-family, and target shifts\. SCS identifies claims that are stable, transferable, or fragile, and reveals high\-concordance fragile\-support cases where evidence vectors remain similar while supporting regions change\. To assess claim plausibility, clarity, faithfulness, usefulness, and caution level, we further implement and compare an expert \(including geriatrics, neuroscience, and radiology\) review workflow and an LLM \(including ChatGPT and Gemini\) review workflow\. Our results suggest claim\-level evaluation as a practical standard for auditing MRI morphometry pipelines without requiring a universal gold standard\.
 
 ## Mind the Parameters: Lightweight and Efficient Brain Visual Decoding with Shared Tensor Cores
 
@@ -550,31 +300,11 @@ Continuous episodic memory is a core capability for autonomous agents operating 
 
 **Authors:** Mo WANG; Wenhao Ye; Zihan Ning; Jiayu Zuo; Junfeng XIA; Hongkai Wen; Quanying Liu
 
-**ID:** 152015 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
+**ID:** 152015 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
 [Paper](<https://openreview.net/forum?id=W9QQrE5T3h>) | [PDF](<https://openreview.net/pdf?id=W9QQrE5T3h>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152015>)
 
-_Abstract unavailable from the accessible public sources._
-
-## A Hebbian Recurrent Neural Network Explains the Hierarchical Geometry of Sequence Memory
-
-**Authors:** Zhitao FENG; Bo Ho; Huan Luo; xiaolong zou; Yuanyuan Mi
-
-**ID:** 149363 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=qb2jbK0rwi>) | [PDF](<https://openreview.net/pdf?id=qb2jbK0rwi>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149363>)
-
-Temporal sequences in working memory are hierarchically organized to support flexible behavior\. Recent neural recordings suggest that this organization relies on a 1D\-to\-2D neural geometrical folding in working memory, whereby ordinal positions are re\-encoded within an orthogonal scaffold, with two dimensions indexing global \(chunk\-level rank\) and local ranks \(within\-chunk position\), respectively\. This findings implicate an important structural  principle for memory, yet the computational mechanisms underlying this geometry remain unclear\. Here, we study this question using a recurrent neural network with fast Hebbian plasticity \(Hebb\-RNN\)\. When meta\-trained on rank recalling tasks, the Hebb\-RNN generalizes to novel item–rank bindings and hierarchical sequences, outperforming control models\. Mechanistic analysis reveals that the network develops an orthogonal ordinal geometry consistent with empirical findings\. This geometry transforms temporal inputs into abstract ordinal ranks that provide a memory scaffold, while Hebbian plasticity supports rapid conjunctive binding of item content to this structure\. Furthermore, the pre\-learned geometric scaffold significantly accelerates learning in novel tasks, supporting efficient transfer\. By incorporating a predictive module, our model extends to real\-world encodings and acquires hierarchical geometry without explicit chunking signals\. Together, our results provide a biologically plausible framework for hierarchical sequence representation, offering new insights into structured memory organization for both neuroscience and machine learning\.
-
-## Beyond Task Success: Probing Cognitive Primitives in Web Agents
-
-**Authors:** Xunjian Yin; Tianchen Guan; Jinao Wang; Weili Cao; Royce Cheng\-Yue; Daisy Lin; Keagan Long; Kyle Wong; Bhuwan Dhingra; XJ Wang; Shuyan Zhou
-
-**ID:** 139465 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=O8gCSB4In6>) | [PDF](<https://openreview.net/pdf?id=O8gCSB4In6>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139465>)
-
-Cognitive primitives such as planning, exploration, and backtracking are widely regarded as core to competent web agents\. Yet existing studies are largely retrospective: agents are evaluated on domain\-based tasks, and trajectories are inspected post hoc for evidence of these behaviors\. Because such tasks are not designed to require specific primitives, observed behaviors do not reliably reflect true capability demands\. This raises a key question: Can we design realistic tasks where success provably depends on a chosen cognitive primitive? WEBSTRESS addresses this by casting capability evaluation as a controlled comparison\. For each task, we construct a paired variant in which a target capability becomes necessary \(e\.g\., transforming a direct path into an obstructed one requiring exploration\)\. The performance gap between the pair measures the agent’s reliance on that capability\. Across seven environments and seven capabilities, this yields 519 paired tasks\. Evaluating six frontier agents reveals consistent weaknesses: all suffer 18\-28\\% drops on capability\-demanding variants, with 75\\% of failures being belief failures, where agents incorrectly declare success\. In contrast, humans exhibit only a 5\.7\\% performance drop under the same paired evaluation\. These results highlight that, despite strong overall performance, substantial gaps remain between human and agent cognitive behavior, and that our approach provides a principled way to measure them\.
+Recent fMRI foundation models differ substantially in the spatial scale at which they represent brain activity\.  ROI\- and connectivity\-based models are efficient but coarse, whereas voxel\-level models preserve fine\-grained spatial structure but require specialized architectures and costly fMRI\-specific pretraining\.  We ask whether part of this performance gap reflects the importance of preserving cortical geometry\.  Motivated by evidence that macroscale brain activity is strongly constrained by brain geometry, we introduce FlatClip, a training\-free surface\-level baseline that renders cortical activity as geometry\-aware flatmap sequences and reuses a frozen SigLIP2 image encoder with only a lightweight downstream probe\.  Because FlatClip is not pretrained on fMRI, it provides an out\-of\-domain reference for evaluating how much information can be recovered from cortical geometry without relying on fMRI\-specific pretraining data\.  Across resting\-state and visual\-fMRI benchmarks, FlatClip outperforms ROI/FC\-style controls and several general\-purpose fMRI foundation baselines, while voxel\-level models remain a strong upper comparison\.  Geometry\-control experiments show that disrupting cortical topology reduces performance, whereas mapping ROI\-level signals back into atlas\-defined 4D volumes partially recovers performance but remains below full voxel inputs\.  Together, these results position cortical geometry as a key factor in fMRI representation learning and establish surface\-level flatmap sequences as a practical middle\-ground baseline between ROI and voxel models\.
 
 ## Joint EM Image Super\-Resolution and Segmentation with Semantic and Structural Priors
 
@@ -586,85 +316,15 @@ Cognitive primitives such as planning, exploration, and backtracking are widely 
 
 Reconstructing the connectome of the brain is a central goal of modern neuroscience, but the required electron microscopy \(EM\) imaging is extremely time\-consuming\. EM image super\-resolution \(SR\) accelerates this acquisition for downstream neuron segmentation, yet existing methods do not adequately couple SR with segmentation for EM: SR lacks segmentation guidance, and segmentation cannot adapt to super\-resolved features\. In this work, we propose a joint SR and segmentation framework specifically designed for EM images\. In the super\-resolution part, we introduce segmentation as an auxiliary task via a shared encoder with task\-specific decoders to provide a semantic prior, improving reconstruction fidelity\. In the segmentation part, we introduce a lightweight partial diffusion model that initializes denoising from a partially noised SR embedding, producing a structural prior that closely approximates real HR features and enhances segmentation accuracy on super\-resolved EM images\. Extensive experiments across multiple datasets and degradation settings demonstrate the superior performance of our framework\.
 
-## BrainVista: Modeling Naturalistic Brain Dynamics as Multimodal Next\-Token Prediction
+## AVID: A 5T fMRI Dataset for Benchmarking Auditory\-induced Visual Mental Imagery Decoding
 
-**Authors:** Xuanhua Yin; Ted Zhao; Lina Yao; Weidong Cai
+**Authors:** Shiqi Shen; Shurui Li; Yuanning Li; Xilin Zhang
 
-**ID:** 153166 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
+**ID:** 139564 | **Topic source:** official | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=NNRWeXb2aF>) | [PDF](<https://openreview.net/pdf?id=NNRWeXb2aF>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153166>)
+[Paper](<https://openreview.net/forum?id=IIKVWwmtSM>) | [PDF](<https://openreview.net/pdf?id=IIKVWwmtSM>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139564>)
 
-_Abstract unavailable from the accessible public sources._
-
-## FAST\-Brain: A Flow\-Aligned Spatio\-Temporal Surrogate Brain Model
-
-**Authors:** Shucheng Liu; Chengchun Shi; Kai Zhang; Hongtu Zhu
-
-**ID:** 149330 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=qu1GlOKsSN>) | [PDF](<https://openreview.net/pdf?id=qu1GlOKsSN>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149330>)
-
-Modeling resting\-state functional magnetic resonance imaging \(rs\-fMRI\) data is crucial for understanding brain\-wide neural activity\. However, traditional methods struggle to capture complex temporal dynamics over long horizons, to account for the brain's anatomical spatial structure, and to model high\-dimensional ambient signals that lie on a low\-dimensional intrinsic subspace\. We propose FAST\-Brain, a unified flow\-aligned spatio\-temporal surrogate brain model that addresses all three challenges\. At its core is a flow\-aligned generative framework that directly predicts the clean blood\-oxygen\-level\-dependent \(BOLD\) signal, paired with a graph convolutional network that captures spatial structural constraints and a Transformer that models long\-range temporal dependencies\. Theoretically, we show that under a low\-dimensional subspace assumption,  the approximation error of our model scales with the intrinsic dimension rather than the ambient dimension, which justifies our direct modeling of the BOLD signal\. Extensive experiments on synthetic and Human Connectome Project datasets demonstrate that FAST\-Brain achieves state\-of\-the\-art performance in recovering functional connectivity, effective connectivity, and the implicit low\-dimensional signal subspace\.
-
-## CutAttn: Discovering Cognitive Transition Layers for Efficient Long\-Context Prefilling
-
-**Authors:** Wentao Liu; Xiabao Wu; Yongchao Liu; Haitao Zhang; Jiajun Zheng; Ruiting Zhou
-
-**ID:** 148257 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=zCmAsPM9EI>) | [PDF](<https://openreview.net/pdf?id=zCmAsPM9EI>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148257>)
-
-Long\-context LLM inference is fundamentally a retrieval process, transitioning from diffuse to sharply focused attention at a few architecture\-determined \(CTLs\)\.  Existing acceleration methods leave significant costs unaddressed: sparse attention ignores FFNs, KV cache compression neglects prefill, and hidden\-state pruning relies on fixed, heuristic rules\.  We introduce CutAttn, a training\-free framework that exploits CTLs via inter\-layer Jensen\-\-Shannon divergence, pruning redundant context at chunk granularity while dynamically gated by a normalized\-entropy criterion\.  Operating at the hidden\-state level, CutAttn reduces both attention and FFN costs, composing orthogonally with existing acceleration techniques\.  Evaluated on RULER, InfiniteBench, and LongBench, CutAttn preserves full\-attention accuracy while achieving up to a $2\.02\\times$ prefill speedup on 128K sequences \(and $2\.81\\times$ when composed with sparse attention\)\. Furthermore, our theoretical analysis provides approximation bounds, an entropy\-compression limit justifying the gating, and a closed\-form speedup ratio\.
-
-## Peer Review of Applied Machine Learning Papers Must Include Code Execution
-
-**Authors:** Lisa\-Marie Vortmann
-
-**ID:** 140067 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=S58vxHCoNU>) | [PDF](<https://openreview.net/pdf?id=S58vxHCoNU>) | [Official poster](<https://neurips.cc/virtual/2026/poster/140067>)
-
-This position paper argues that peer review of applied machine learning papers must include the execution and verification of submitted code\. Reproducibility failures in ML are widespread, with documented cases spanning at least 17 scientific fields and hundreds of published studies\. The current review system relies on a combination of voluntary code submission and self\-reported checklists, leading to necessary post\-publication correction and many wasted research hours\. I support this argument with two case studies drawn from the EEG\-based brain\-computer interface literature, one in which the published claim is physically implausible and one in which available code runs cleanly but does not reproduce the reported numbers\. I propose a structural change: a dedicated reproducibility reviewer with access to a containerized submission pipeline, applied uniformly to papers making empirical claims on real data\.
-
-## AI Agents Push Humans Out of the Loop
-
-**Authors:** Margaret Mitchell; Avijit Ghosh; Samir Passi
-
-**ID:** 140100 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=Cx5Oy2il67>) | [PDF](<https://openreview.net/pdf?id=Cx5Oy2il67>) | [Official poster](<https://neurips.cc/virtual/2026/poster/140100>)
-
-AI agents pose significant risks as they are granted increasing autonomy\. A commonly proposed solution is human oversight and keeping a \`\`human in the loop”, but this is not a simple solution: Not only do current approaches to AI agent design impede effective human oversight, but the cognitive capacities required for it are also themselves degraded by extended use of AI systems\. This position paper argues that \*\*current approaches to the development and deployment of AI agent systems do not support effective human oversight \-\- they contribute to its degradation\*\*\. To address this, a top priority in the advancement of AI agents should be supporting the situated goals and cognitive requirements of effective human oversight, treating the human needs of overseers at the same level of importance as AI agent capability\. To put this idea into practice, we connect work on automation and human\-computer interaction to AI agent processes, outlining design\-level affordances and organizational protocols that \(1\) support overseers in exercising critical judgement and \(2\) counteract the skill atrophy that arises from extended use of automation\. We urge developers and deployers to adopt these or similar approaches\. Without explicit support for the cognitive demands of effective human\-agent interaction, AI agent systems will continue to passively incentivize
-
-## Echo learning enables biologically plausible temporal credit assignment
-
-**Authors:** Alice S\. Dauphin; Guillaume Pourcel
-
-**ID:** 155692 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=3ew4yPTGyN>) | [PDF](<https://openreview.net/pdf?id=3ew4yPTGyN>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155692>)
-
-Biologically plausible learning requires temporal credit assignment without backpropagation through time \(BPTT\)\. Hamiltonian Echo Learning \(HEL\) achieves this by running a neural system twice \-\-\- an \\emph\{inference\} phase then a time\-reversed \\emph\{echo\} phase \-\-\- recovering exact BPTT gradients\. We identify spatio\-temporal sum\-separability of the Hamiltonian as the structural condition making HEL's learning rule both spatially and temporally local, and exploit it to extend HEL beyond diagonal recurrences: a Hopfield\-inspired oscillatory RNN with dense recurrent connectivity yields a contrastive Hebbian rule with constant memory and only two forward passes\. This rule matches full BPTT and outperforms e\-prop and truncated BPTT on time\-series classification and regression\. We then relax HEL's Hamiltonian\-reversibility constraint \-\-\- which forces unbiological connectivity and activation patterns \-\-\- and derive \\emph\{Echo Learning\} \(EL\), exact for arbitrary smooth dynamics whenever the network is reversible and self\-adjoint with respect to a readout involution\. Both conditions are enforced by a spatio\-temporally local homeostatic loss, recovering near\-BPTT gradient quality without architectural constraints\.
-
-## Rethink Action Chunking in VLA Through Human Motor Control
-
-**Authors:** Wenxi Chen; Yuejiang Liu; Zijian He; Shaoshuai Mou; Yan Gu
-
-**ID:** 140113 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=5qqjBkZMmL>) | [PDF](<https://openreview.net/pdf?id=5qqjBkZMmL>) | [Official poster](<https://neurips.cc/virtual/2026/poster/140113>)
-
-Action chunking is widely used in recent vision–language–action \(VLA\) systems to mitigate inference latency and improve temporal consistency\. Yet, open\-loop execution can reduce reactivity and precision, and cross\-chunk coherence remains difficult to guarantee\. We revisit action chunking through its neurobiological origins and organize current shortcomings around three axes: VLA architecture, representations of sequential actions, and mechanisms for sampling and executing chunks\. A case study further illustrates the coherence–reactivity trade\-off across representative sampling and execution choices\. Building on these observations, we outline brain\-inspired directions to improve the reactivity, coherence, and safety of chunking\-based VLAs in dynamic and complex tasks beyond quasi\-static tabletop manipulation\. This position paper aims to broaden how the community thinks about action chunking and to motivate redesigns better aligned with future physical intelligence\.
-
-## DEFT: Disentanglement\-Enhanced Fine\-Tuning for EEG Foundation Models
-
-**Authors:** Yuqiu Deng; Muyun Jiang; Zongpeng Zhang; Mingqing Xiao; Yansen Wang; Peiliang Gong; XINLIANG ZHOU; Yi Ding; Ziyu Jia; Cuntai Guan; Chenyu Liu
-
-**ID:** 149268 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=raum5BFSpu>) | [PDF](<https://openreview.net/pdf?id=raum5BFSpu>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149268>)
-
-EEG foundation models \(EFMs\) have improved EEG representation learning by transferring knowledge from large\-scale multi\-subject pretraining to downstream tasks\. However, their pretrained embeddings often retain substantial subject\-related variation, placing an additional burden on the downstream classifier, especially in cross\-subject settings\. To address this issue, we propose DISENTANGLED EFM FINE\-TUNING \(DEFT\), a plug\-and\-play adapter for EFM fine\-tuning\. DEFT encourages branch disentanglement of pretrained tokens into task\-oriented content and subject\-consistent style, then performs downstream prediction from the content branch\. It instantiates this factorize\-before\-classify design with recursive Gaussian refinement, temporal\-variance regularization, subject\-aware contrastive learning, and reconstruction\. Experiments across multiple EEG datasets and four EFM backbones show that DEFT improves matched fine\-tuning baselines\. Further ablations and analyses support the intended content/style branch organization\.
+Visual mental imagery \(VMI\) decoding uses brain activity to reconstruct internally generated visual scenes, providing a potential pathway for externalizing internal experiences and developing neuroprosthetic communication interfaces\. However, progress in this field is limited by the lack of dedicated, training\-scale VMI datasets\. Current VMI paradigms often rely on visual prompts or short\-term memory images, introducing visual and mnemonic confounds that make it difficult to disentangle neural activity associated with endogenous image construction from signals driven by prior or concurrent visual input\. Furthermore, existing VMI datasets offer limited descriptive control over individual visual attributes, making it difficult to systematically assess fine grained visual details\. To address these gaps, we introduce AVID, the first dedicated training\-scale 5\.0 Tesla functional magnetic resonance imaging \(fMRI\) resource for auditory\-induced VMI decoding\. We further define a benchmark around AVID with fixed splits, predefined neural inputs, and a standardized evaluation protocol\. Acquired with high\-field 5T fMRI, AVID comprises approximately 67 hours of dense recordings from nine participants\. The dataset is uniquely structured into two complementary splits: a scene\-level complex split using naturalistic Mandarin descriptions and a controlled simple split with explicitly specified visual attributes\. We further formalize a standardized evaluation protocol that decouples source\-image consistency from semantic alignment, allowing for a more nuanced assessment of imagery reconstruction\. Baseline qualitative and quantitative results show that current reconstruction pipelines remain limited on AVID, although the most successful reconstructions preserve recognizable scene level semantics from spoken descriptions\. By combining dedicated training\-scale neural recordings and standardized evaluation resources, AVID provides both a data foundation for imagery\-specific model development and a benchmark for evaluating VMI decoding with substantially reduced sensory contamination\.
 
 ## Rest\-Tuning: Data\-Efficient Adaptation of EEG Foundation Models to Individuals via Resting\-State Signals
 
@@ -676,25 +336,11 @@ EEG foundation models \(EFMs\) have improved EEG representation learning by tran
 
 EEG foundation models \(FMs\) offer strong population\-level priors but degrade on individual subjects due to anatomy\-driven distribution shifts\. We propose Rest\-Tuning, a task\-agnostic calibration framework that personalizes a population FM using just 1–3 minutes of unlabeled resting\-state EEG\. Rest\-Tuning employs masked teacher\-student alignment to produce a subject\-calibrated backbone, reused as initialization across multiple tasks from the same subject\. Across two multi\-subject datasets and four EEG FMs, Rest\-Tuning outperforms task\-only adaptation, with up to 13\.3% absolute gain in downstream task accuracy and over 40% average reduction in labeled task data\. Calibration saturates quickly and requires under 3 minutes of compute per subject\. Representation analyses show reduced subject\-to\-population distance and smoother LoRA adapter interpolation paths, indicating improved compatibility between rest\- and task\-adapted solutions\. These results establish resting\-state EEG as a practical, fast, and reusable calibration interface, enabling population EEG FMs to function as reliable, subject\-specific BCIs and serve as reusable initialization for downstream task adaptation\.
 
-## Multimodal Foundation Agents Should Use Brain Data as Privileged Supervision
-
-**Authors:** Richard Csaky
-
-**ID:** 140083\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 140083
-
-[Paper](<https://openreview.net/forum?id=JK1yUpvQxe>) | [PDF](<https://openreview.net/pdf?id=JK1yUpvQxe>) | [Official poster](<https://neurips.cc/virtual/2026/poster/140083>)
-
-This position paper argues that multimodal foundation models should use brain recordings as privileged internal\-state supervision during training\. External behavior alone leaves human\-like cognition, robustness, and reasoning weakly constrained\. Neural recordings can serve as a training\-time modality that shapes representations, latent\-state dynamics, private computation policies such as reasoning tokens, and robustness before distillation into agents that operate from ordinary sensory, language, and action streams\. We develop this position through Foundational Human Modeling \(FHM\), a program centered on scaling generative brain models, aligning heterogeneous neural modalities through shared latent geometry, inserting brain tokens into unified multimodal token streams, and testing whether the privileged channel improves distilled agents after removal\. The argument is grounded in privileged\-information theory and prior work showing that neural or human\-derived targets can improve robustness, semantic transfer, data efficiency, and behavioral similarity after auxiliary signals are removed\.
-
 ## Decomposing the modulation of interactions between neuronal populations
 
 **Authors:** Marco Celotto; J\. S Sooter; Sofie Ährlund\-Richter; Kyle R Jenks; Mriganka Sur; Stefano Panzeri
 
-**ID:** 152282\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 152282
+**ID:** 152282 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
 [Paper](<https://openreview.net/forum?id=UFTQ6XUIb3>) | [PDF](<https://openreview.net/pdf?id=UFTQ6XUIb3>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152282>)
 
@@ -704,9 +350,7 @@ Identifying subpopulations of neurons that interact with each other from simulta
 
 **Authors:** Yongbo Zhang; Xinzhe Li; Katsuma Inoue; Mitsumasa Nakajima; Toshikazu Hashimoto; Yasuo Kuniyoshi; Kohei Nakajima
 
-**ID:** 152821\-\-2 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 152821
+**ID:** 152821 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
 [Paper](<https://openreview.net/forum?id=Q8vwmOQdzh>) | [PDF](<https://openreview.net/pdf?id=Q8vwmOQdzh>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152821>)
 
@@ -716,9 +360,7 @@ Spiking neural networks \(SNNs\) are a promising paradigm for efficient neuromor
 
 **Authors:** Zach Cohen; Jan Drugowitsch
 
-**ID:** 153194\-\-2 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 153194
+**ID:** 153194 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
 [Paper](<https://openreview.net/forum?id=N8F8d2c171>) | [PDF](<https://openreview.net/pdf?id=N8F8d2c171>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153194>)
 
@@ -728,11 +370,11 @@ Neural populations exhibit heterogeneous tuning: Neurons differ in their selecti
 
 **Authors:** Micky C Nnamdi; Matthew Chen; Benoit Marteau; Shaun Q\. Y\. Tan; J\. Ben Tamo; May Dongmei Wang
 
-**ID:** 149502 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
+**ID:** 149502 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
 
 [Paper](<https://openreview.net/forum?id=pf1CbF5JeQ>) | [PDF](<https://openreview.net/pdf?id=pf1CbF5JeQ>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149502>)
 
-_Abstract unavailable from the accessible public sources._
+Foundation models for electroencephalography \(EEG\) have shown promise in learning transferable representations, but existing approaches treat EEG as a generic time series, ignoring the Riemannian geometry of spatial covariance structure that is fundamental to neural signal analysis\. We propose MENDR \(Manifold\-Embedded Neural Data Representations\), the first EEG foundation model that builds this geometry directly into its architecture \(via the matrix logarithm and Log\-Euclidean tangent space\) rather than learning it from data\. MENDR embeds windowed covariance matrices into the Log\-Euclidean tangent space via differentiable matrix logarithm, where standard transformer operations become geometrically equivalent to Riemannian operations\. A channel\-agnostic spatial projection based on Perceiver\-style cross\-attention enables seamless transfer across electrode configurations ranging from 6 to 64 channels\. Pretrained on the Temple University Hospital EEG Corpus \(4,000\+ hours, 14,987 subjects\) using a masked autoencoder objective in the tangent space, MENDR achieves state\-of\-the\-art results on 3 of 6 downstream benchmarks \(TUAB abnormality, TUEV event, CHB\-MIT seizure\) with only 1\.2M parameters, up to $42\\times$ fewer than competing foundation models\.
 
 ## Scaling Neural Motor Decoding via Decoupled Behavioral Pretraining
 
@@ -758,41 +400,31 @@ Learning in neural systems arises from synaptic changes that reshape the represe
 
 **Authors:** Peng Jiang; Xiaoxuan Jia
 
-**ID:** 154599 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
+**ID:** 154599 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
 [Paper](<https://openreview.net/forum?id=COuiDiirTQ>) | [PDF](<https://openreview.net/pdf?id=COuiDiirTQ>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154599>)
 
-_Abstract unavailable from the accessible public sources._
+Forward prediction of neural population activity is a prerequisite for closed\-loop brain\-computer interfaces and a stringent test of learned neural dynamics\. Unlike neural decoding or masked reconstruction, this task requires a model to forecast future spiking activity from neural history alone and to remain stable when its own predictions become part of the conditioning context\. We introduce NeuroHorizon, an encoder\-decoder architecture that combines event\-level tokenization of spike trains with an autoregressive causal decoder for population\-level firing\-rate prediction\. The decoder uses a hierarchical tail\+segment memory to retain recent predictions at high resolution while compressing longer prediction history, and scheduled sampling reduces the mismatch between teacher\-forced training and autoregressive rollout\. Evaluated on a multi\-horizon motor\-cortex benchmark with additional motor\- and visual\-cortex datasets for scaling and cross\-population transfer, NeuroHorizon consistently outperforms strong baselines and remains stable under multi\-step rollout where prior approaches collapse\. These results show that long\-horizon neural forecasting becomes feasible when models are explicitly trained and evaluated under autoregressive rollout, providing a foundation for closed\-loop BCI and multi\-step neural\-state prediction\.
 
 ## Neural‑Visual Decoding via Cognitive‑guided Adaptive Blurring and Information‑Constrained Alignment
 
 **Authors:** Fan Yin; Chuhang Zheng; Peiliang Gong; Donghai Guan; Qi Zhu
 
-**ID:** 154463 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
+**ID:** 154463 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
 [Paper](<https://openreview.net/forum?id=DP5UdHKCti>) | [PDF](<https://openreview.net/pdf?id=DP5UdHKCti>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154463>)
 
-_Abstract unavailable from the accessible public sources._
-
-## Human\-Inspired, Task\-Dimension\-Guided Exploration for Efficient Learning and Transfer in High Dimensions
-
-**Authors:** Fanyu Zhu; Jiahui An; Ni Ji
-
-**ID:** 150298 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=jBYBXwoZOr>) | [PDF](<https://openreview.net/pdf?id=jBYBXwoZOr>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150298>)
-
-_Abstract unavailable from the accessible public sources._
+EEG\-based visual decoding aims to establish a mapping between neural signals and visual semantics\. However, it remains constrained by the dual challenges of severe information granularity mismatch and the low signal\-to\-noise ratio \(SNR\) of EEG signals\. Existing approaches typically treat static visual features, ignoring the dynamic selectivity of human vision and the frequency specificity of neural oscillations\. To bridge this gap, we propose \\textbf\{CAIA\}, a Cognitive\-guided Adaptive blurring with Information\-Constrained Alignment framework for Neural\-Visual decoding\. On the visual side, it simulates selective attention to adaptively reduce redundancy\. Meanwhile, on the EEG side, it leverages neural oscillation priors and the information bottleneck mechanism to enhance SNR\. Specifically, we devise a cognitive\-dynamics\-based adaptive blurring mechanism that dynamically integrates center\-biased and saliency\-guided visual cues via cross\-modal attention\. Furthermore, we introduce a distribution\-aware boundary calibration loss to robustly rectify alignment bias caused by outlier samples\. Moreover, a cognitively\-guided information\-screening method is proposed to select task\-relevant EEG oscillations\. Extensive experiments demonstrate that CAIA improves both subject\-dependent and subject\-independent average Top\-1 and Top\-5 accuracy in zero\-shot brain\-to\-image retrieval, significantly outperforming prior methods\. Our work validates that optimizing visual information density to match neural granularity offers a more interpretable and robust pathway for neural decoding\. Code is available at https://anonymous\.4open\.science/r/CAIA\-0DA2\.
 
 ## Fine\-Tuning Language Models to Know What They Know
 
 **Authors:** Sangjun Park; Elliot Meyerson; Xin Qiu; Risto Miikkulainen
 
-**ID:** 149889 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
+**ID:** 149889 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
 [Paper](<https://openreview.net/forum?id=mTpoDbfFvY>) | [PDF](<https://openreview.net/pdf?id=mTpoDbfFvY>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149889>)
 
-_Abstract unavailable from the accessible public sources._
+Evaluating true metacognition in Large Language Models \(LLMs\) is difficult due to biases and heuristics\. This paper presents a framework to measure and enhance LLM metacognition while controlling for these biases\. A measurement method using the $d\_\{\\rm\{type2\}\}'$ metric is systematized to isolate metacognitive ability\. The Evolution Strategy for Metacognitive Alignment \(ESMA\) is proposed, demonstrating robust generalization across unseen datasets, languages, and newly acquired knowledge\. Finally, parameter analysis reveals that these improvements are driven by a sparse set of parameters, offering new pathways for targeted metacognitive optimization\.
 
 ## Cortically\-Resolved Recurrent Architecture for fMRI
 
@@ -814,47 +446,21 @@ Decoding cognitive functions and brain diseases from functional magnetic resonan
 
 Quantifying variability in a target population relative to a reference population is central to many scientific and clinical problems \(e\.g\., diseased vs\. healthy\)\. Yet, without paired data and in the presence of heterogeneous target variation, existing methods struggle to separate multiple modes of target\-specific variation\. We propose CASL\-VAE, a deep contrastive latent variable model that learns structured latent generative factors from unpaired data\. CASL\-VAE factorizes variation into continuous common latent factors shared across populations and  hierarchical salient latent factors that model target\-specific heterogeneity as discrete subtypes and continuous within\-subtype variation\. Using variational inference, we show how approximate joint likelihood optimization over reference and target domains can be performed using unpaired data, providing a principled basis for paired\-sample generation and cross\-domain analysis\. We validate CASL\-VAE on semi\-synthetic neuroimaging data, demonstrating improved subtype recovery  and paired\-sample generation compared to baseline clustering and generative models\. We also validate its ability to reveal biologically plausible heterogeneity in Alzheimer's disease\. Code will be released upon acceptance\.
 
-## Learning Actionable Information Landscapes for Multimodal Active Sensing in Hawkmoths
+## Evaluating Neural Data Tokenizers: A Framework for Assessing Learned Representations of Spiking Activity
 
-**Authors:** Abdo Sharafeldin; Yaqing Wang; Simon Sponberg; Hannah Choi
+**Authors:** Federico D'Agostino; Alex Gilbert; Susanne Keller; Jaivardhan Kapoor; Nicolas Reategui; Vedang Lad; Matthias Kümmerer; Jai Bhagat; Emin Orhan; Hasan A Bedel; Nikos Karantzas; Fabian Sinz; Surya Ganguli; Jakob H Macke; Sophia Sanborn; Alexander Ecker; Katrin Franke; Matthias Bethge; Andreas Tolias; Konstantin Willeke
 
-**ID:** 155592 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+**ID:** 139125 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=4RHseRnmZo>) | [PDF](<https://openreview.net/pdf?id=4RHseRnmZo>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155592>)
+[Paper](<https://openreview.net/forum?id=jYb8X9iFPY>) | [PDF](<https://openreview.net/pdf?id=jYb8X9iFPY>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139125>)
 
-Animals integrate information across sensory modalities to guide exploration, suggesting that they maintain internal estimates of where actions are expected to reduce uncertainty\. However, how such action\-conditioned information maps are learned from multimodal sensory experience remains unclear, as previous studies have been largely confined to unimodal sensing frameworks\. We introduce a multimodal predictive\-coding framework for learning uncertainty\-reduction maps from visual and mechanosensory observations in hawkmoth flower interaction tasks\. A variational generative model trained on simulated environments recovers modality\-specific information landscapes over the action space, capturing how visual patterns, surface geometry, and mechanosensory cues shape the value of exploratory actions\. These learned maps account for several features of hawkmoth behavior, including angled offsets during flower tracking, probing along visual patterns, and geometry\-dependent changes in exploration\. Applying the model to behavioral data from flower tracking and nectary search, we find that natural trajectories tend to occupy regions of high uncertainty reduction in these learned maps\. Building on these observations, we develop an uncertainty\-gated lexicographic algorithm that switches between information gathering and reward exploitation based on perceptual uncertainty\. Across downstream reward\-learning tasks, this policy learns faster, is more sample\-efficient, and generalizes better to unseen environmental conditions than exploitation\-only policies, $\\epsilon$\-greedy exploration, and non\-lexicographic baselines\. Together, these results suggest that multimodal generative perception models can learn actionable information landscapes that explain biological sensing and support exploration in embodied decision\-making\.
-
-## FAST\-Brain: A Flow\-Aligned Spatio\-Temporal Surrogate Brain Model
-
-**Authors:** Shucheng Liu; Chengchun Shi; Kai Zhang; Hongtu Zhu
-
-**ID:** 149330\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 149330
-
-[Paper](<https://openreview.net/forum?id=qu1GlOKsSN>) | [PDF](<https://openreview.net/pdf?id=qu1GlOKsSN>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149330>)
-
-Modeling resting\-state functional magnetic resonance imaging \(rs\-fMRI\) data is crucial for understanding brain\-wide neural activity\. However, traditional methods struggle to capture complex temporal dynamics over long horizons, to account for the brain's anatomical spatial structure, and to model high\-dimensional ambient signals that lie on a low\-dimensional intrinsic subspace\. We propose FAST\-Brain, a unified flow\-aligned spatio\-temporal surrogate brain model that addresses all three challenges\. At its core is a flow\-aligned generative framework that directly predicts the clean blood\-oxygen\-level\-dependent \(BOLD\) signal, paired with a graph convolutional network that captures spatial structural constraints and a Transformer that models long\-range temporal dependencies\. Theoretically, we show that under a low\-dimensional subspace assumption,  the approximation error of our model scales with the intrinsic dimension rather than the ambient dimension, which justifies our direct modeling of the BOLD signal\. Extensive experiments on synthetic and Human Connectome Project datasets demonstrate that FAST\-Brain achieves state\-of\-the\-art performance in recovering functional connectivity, effective connectivity, and the implicit low\-dimensional signal subspace\.
-
-## CutAttn: Discovering Cognitive Transition Layers for Efficient Long\-Context Prefilling
-
-**Authors:** Wentao Liu; Xiabao Wu; Yongchao Liu; Haitao Zhang; Jiajun Zheng; Ruiting Zhou
-
-**ID:** 148257\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 148257
-
-[Paper](<https://openreview.net/forum?id=zCmAsPM9EI>) | [PDF](<https://openreview.net/pdf?id=zCmAsPM9EI>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148257>)
-
-Long\-context LLM inference is fundamentally a retrieval process, transitioning from diffuse to sharply focused attention at a few architecture\-determined \(CTLs\)\.  Existing acceleration methods leave significant costs unaddressed: sparse attention ignores FFNs, KV cache compression neglects prefill, and hidden\-state pruning relies on fixed, heuristic rules\.  We introduce CutAttn, a training\-free framework that exploits CTLs via inter\-layer Jensen\-\-Shannon divergence, pruning redundant context at chunk granularity while dynamically gated by a normalized\-entropy criterion\.  Operating at the hidden\-state level, CutAttn reduces both attention and FFN costs, composing orthogonally with existing acceleration techniques\.  Evaluated on RULER, InfiniteBench, and LongBench, CutAttn preserves full\-attention accuracy while achieving up to a $2\.02\\times$ prefill speedup on 128K sequences \(and $2\.81\\times$ when composed with sparse attention\)\. Furthermore, our theoretical analysis provides approximation bounds, an entropy\-compression limit justifying the gating, and a closed\-form speedup ratio\.
+Foundation models of brain activity aim to learn representations from large\-scale neural recordings that generalize across sessions, subjects, species, and downstream tasks\. Transformer\-based models have emerged as a promising architecture for this goal and begin all with the same first step \-\-\- tokenization: transforming sparse binary events into vector representations that downstream networks can consume\. In other areas of machine learning, tokenization is its own design problem, distinct from the downstream foundation model\. Several mostly implicit tokenization approaches dominate the literature, but their impact on downstream performance has not been systematically evaluated\. We propose four explicit desiderata for a neural tokenizer\-\-\-reconstruction fidelity, downstream utility, cross\-instance generalization, and compression\-\-\-and a framework of metrics spanning seven dimensions, including firing statistics, encoding and decoding, and latent structure and robustness\. We assemble a benchmark of ten datasets spanning species, brain areas, recording technologies, and behavioral paradigms, and evaluate a representative set of discrete and continuous tokenizers, both single\-neuron and population variants\. Across the strategies evaluated, we show how tokenizers trained only on reconstruction can support downstream tasks\. Yet reconstruction alone is misleading: reconstruction quality and downstream utility can be sharply dissociated\. Our multi\-axis framework is a response to this failure mode\. These findings highlight tokenization as a critical and underexplored design axis in brain foundation models, and suggest that further progress will require continued systematic study of tokenization strategies\.
 
 ## WASP: Weakly Aligned Spatiotemporal Pairs for Fetal Brain MRI\-Ultrasound Learning
 
 **Authors:** Francesco Correnti; Gabriele Magrini; Marco Mistretta; Niccolò Biondi; Pietro Pala; Alessandro Ramalli; simona fiori; Andrew Bagdanov; Matteo Lenge
 
-**ID:** 151594\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 151594
+**ID:** 151594 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
 [Paper](<https://openreview.net/forum?id=ZOMRRwH1Md>) | [PDF](<https://openreview.net/pdf?id=ZOMRRwH1Md>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151594>)
 
@@ -864,105 +470,51 @@ Magnetic Resonance Imaging \(MRI\) is widely regarded as the optimal sensor for 
 
 **Authors:** Haonan Gao; Daeyoung Ham; Yifei Zhang; Xinyuan Tian; Shengxian DING; Zhao; Tianxi Li
 
-**ID:** 155965\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 155965
+**ID:** 155965 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
 [Paper](<https://openreview.net/forum?id=1VRjEYWcHX>) | [PDF](<https://openreview.net/pdf?id=1VRjEYWcHX>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155965>)
 
 Characterizing the relationship between brain anatomical wiring and functional coordination remains a fundamental challenge in computational neuroscience\. This difficulty primarily arises because structure\-function coupling in the human brain is spatially heterogeneous, often localized to subnetworks, and inherently difficult to align across disparate representational modalities\. To address this methodological gap, we introduce $\\textbf\{O\}$rthogonal $\\textbf\{S\}$parse $\\textbf\{S\}$ubgraph $\\textbf\{A\}$lignment \($\\textbf\{Ossa\}$\), a principled and interpretable framework designed to identify compact structural cliques that exhibit maximal concordance with functional connectivity \(FC\) across subjects\. Within each FC\-derived community, $\\textbf\{Ossa\}$ optimizes an alignment objective over an orthogonal transformation, which absorbs coordinate mismatch between the two connectivity modalities, and a sparse node\-selection vector, which identifies the induced structural connectivity \(SC\) subgraph\. Furthermore, we establish theoretical properties for the $\\textbf\{Ossa\}$ estimator, demonstrating its statistical consistency in recovering the true underlying SC clique within each functional community\. Extensive empirical evaluations on simulated data, alongside analyses of the Adolescent Brain Cognitive Development \(ABCD\) baseline and longitudinal cohorts, demonstrate that $\\textbf\{Ossa\}$ successfully recovers aligned structural cliques under latent cross\-modal rotations\. Ultimately, the proposed methodology significantly improves out\-of\-sample SC\-FC alignment over size\-matched baselines and robustly identifies stable, single\-core topological structures within human brain networks\.
 
-## Memory flows: geometry and dynamics of sequential retrieval in input\-driven Hopfield networks
-
-**Authors:** Simone Betteti; Matteo Martin; Morten G Pedersen; Sandro Zampieri; Giacomo Baggio
-
-**ID:** 150585 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=h5XfkJCHcA>) | [PDF](<https://openreview.net/pdf?id=h5XfkJCHcA>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150585>)
-
-_Abstract unavailable from the accessible public sources._
-
 ## Growing a Neural Network in Breadth, Depth, and Time
 
 **Authors:** Eivinas Butkus; Kedar Garzón Gupta; Nikolaus Kriegeskorte
 
-**ID:** 148445 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
+**ID:** 148445 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
 [Paper](<https://openreview.net/forum?id=xl72oIaJ4k>) | [PDF](<https://openreview.net/pdf?id=xl72oIaJ4k>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148445>)
 
-_Abstract unavailable from the accessible public sources._
-
-## Learning When Visual Context Matters for Mouse Behavior Analysis
-
-**Authors:** Weihan Li; Jingyang Ke; Qinheng Pu; Yule Wang; Chengrui Li; Anqi Wu
-
-**ID:** 151213 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=c7qXkgNCJB>) | [PDF](<https://openreview.net/pdf?id=c7qXkgNCJB>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151213>)
-
-_Abstract unavailable from the accessible public sources._
+Spatial and temporal resource constraints are critical for both biological and artificial intelligent systems\. Here we define differentiable cost terms for breadth, depth, and time within a recurrent convolutional neural network conceived as a finite subset of an infinite lattice architecture\. We optimize these costs jointly with task errors via backpropagation, and efficient computational graphs emerge organically through training\. We find that breadth, depth, and time can be traded off against each other to achieve a given level of performance\. Networks grow in all three dimensions with task complexity and spontaneously take more recurrent steps when inputs are occluded\. Surprisingly, time used by the model correlates with human reaction times in an object recognition task\. Our framework provides a normative account of how resource constraints shape neural architectures, connecting to questions about brain design in neuroscience, and may help illuminate the diversity of neural solutions found in nature\.
 
 ## BrainVista: Modeling Naturalistic Brain Dynamics as Multimodal Next\-Token Prediction
 
 **Authors:** Xuanhua Yin; Ted Zhao; Lina Yao; Weidong Cai
 
-**ID:** 153166\-\-2 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 153166
+**ID:** 153166 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
 [Paper](<https://openreview.net/forum?id=NNRWeXb2aF>) | [PDF](<https://openreview.net/pdf?id=NNRWeXb2aF>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153166>)
 
-_Abstract unavailable from the accessible public sources._
+Naturalistic fMRI offers a time\-resolved window into cortical dynamics during continuous multimodal experience, where future brain states are jointly governed by endogenous neural context and exogenous sensory drive\. Forecasting such dynamics, however, remains challenging because fast\-changing stimulus streams must be reconciled with the sluggish hemodynamic BOLD response, while cortical activity is organized across functionally heterogeneous brain networks\. To address these challenges, we introduce BrainVista, a multimodal autoregressive framework for observed\-stimulus conditional brain\-state forecasting\. BrainVista predicts future fMRI states from the history of brain activity and stimulus tokens temporally aligned to each prediction query, enabling autoregressive prediction without access to future ground\-truth fMRI states\. This design supports causal, temporally consistent modeling of naturalistic brain dynamics under realistic sensory stimulation\. Specifically, we design Network\-wise Tokenizers for functionally structured brain representations, a Spatial Mixer Head for cross\-network interaction refinement, and Stimulus\-to\-Brain masking to preserve temporally causal stimulus–brain conditioning while preventing future brain\-state leakage and stimulus look\-ahead\. We evaluate BrainVista on Algonauts 2025, CineBrain, and HAD, three large\-scale naturalistic fMRI benchmarks, under long\-horizon conditional autoregressive forecasting\. BrainVista consistently outperforms baselines, improving pattern correlation by 10\.8\\% and 9\.4\\% relative to the strongest baseline on Algonauts 2025 and CineBrain, respectively\.
 
-## fNIRSAtlas: A Large\-Scale Benchmark for Functional Near\-Infrared Spectroscopy Classification
+## FAST\-Brain: A Flow\-Aligned Spatio\-Temporal Surrogate Brain Model
 
-**Authors:** Kalle Mäkelä; Tuukka Ruotsalo
+**Authors:** Shucheng Liu; Chengchun Shi; Kai Zhang; Hongtu Zhu
 
-**ID:** 139300 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+**ID:** 149330 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=YbtGpIOTFA>) | [PDF](<https://openreview.net/pdf?id=YbtGpIOTFA>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139300>)
+[Paper](<https://openreview.net/forum?id=qu1GlOKsSN>) | [PDF](<https://openreview.net/pdf?id=qu1GlOKsSN>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149330>)
 
-Functional near\-infrared spectroscopy \(fNIRS\) is a promising modality for brain\-computer interfaces and cognitive state decoding, but progress in machine learning for fNIRS has been limited by small, isolated datasets and inconsistent evaluation protocols\. We introduce fNIRSAtlas, the largest open benchmark for fNIRS classification to date, comprising 23 public datasets spanning diverse experimental paradigms, including motor execution, motor imagery, mental arithmetic, working memory, and emotion recognition\. fNIRSAtlas provides a fully automated pipeline from raw data to evaluation and defines standardized benchmark tasks for both cross\-subject and within\-subject classification, ensuring reproducible comparison of methods\. We evaluate a variety of baseline models from fNIRS and related neuroimaging and time\-series machine learning literature on the benchmark\. Our results demonstrate that performance varies substantially across datasets and that methods validated on limited data \-\- especially deep learning approaches \-\- often fail to generalize beyond their original evaluation\. fNIRSAtlas serves as an extensible, open, and reproducible benchmark to support more robust and cumulative progress in machine learning for fNIRS data\. Our code and data can be found at https://anonymous\.4open\.science/r/fNIRSAtlas\-8842\.
+Modeling resting\-state functional magnetic resonance imaging \(rs\-fMRI\) data is crucial for understanding brain\-wide neural activity\. However, traditional methods struggle to capture complex temporal dynamics over long horizons, to account for the brain's anatomical spatial structure, and to model high\-dimensional ambient signals that lie on a low\-dimensional intrinsic subspace\. We propose FAST\-Brain, a unified flow\-aligned spatio\-temporal surrogate brain model that addresses all three challenges\. At its core is a flow\-aligned generative framework that directly predicts the clean blood\-oxygen\-level\-dependent \(BOLD\) signal, paired with a graph convolutional network that captures spatial structural constraints and a Transformer that models long\-range temporal dependencies\. Theoretically, we show that under a low\-dimensional subspace assumption,  the approximation error of our model scales with the intrinsic dimension rather than the ambient dimension, which justifies our direct modeling of the BOLD signal\. Extensive experiments on synthetic and Human Connectome Project datasets demonstrate that FAST\-Brain achieves state\-of\-the\-art performance in recovering functional connectivity, effective connectivity, and the implicit low\-dimensional signal subspace\.
 
-## EEGFaceSem: An EEG Benchmark with Paired Generative Latents for Semantic Visual Modeling
+## CutAttn: Discovering Cognitive Transition Layers for Efficient Long\-Context Prefilling
 
-**Authors:** Jun Ma; Michiel Spape; Keith M Davis; Tuukka Ruotsalo
+**Authors:** Wentao Liu; Xiabao Wu; Yongchao Liu; Haitao Zhang; Jiajun Zheng; Ruiting Zhou
 
-**ID:** 138993 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+**ID:** 148257 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=s6avH9sqCU>) | [PDF](<https://openreview.net/pdf?id=s6avH9sqCU>) | [Official poster](<https://neurips.cc/virtual/2026/poster/138993>)
+[Paper](<https://openreview.net/forum?id=zCmAsPM9EI>) | [PDF](<https://openreview.net/pdf?id=zCmAsPM9EI>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148257>)
 
-Electroencephalography \(EEG\) is widely used to measure brain activity for brain\-computer interface applications for its non\-invasive nature and high temporal resolution\. However, progress in modeling the neural responses to visual semantics has been limited by a reliance on static, real\-world image datasets that lack the fine\-grained control needed to isolate fine\-grained changes in visual features and their relation to perception\. In this work, we present EEGFaceSem, a large\-scale dataset pairing high\-quality EEG with photorealistic face images synthesized from a generative model\. We provide the generative latent vector for each stimulus, enabling research into the continuous mapping between a visual latent space and neural representations\. Each participant's brain responses were recorded while they attended to specific semantic features \(e\.g\., smiling, hair color\) in a rapid serial visual presentation paradigm\. The dataset contains EEG signals from 30 participants, totaling 67,200 time\-locked EEG recordings\. We present benchmarks for single\-trial semantic classification under single\-subject, cross\-subject, and subject\-adapted settings, as well as for cross\-subject voting that aggregates per\-stimulus predictions across participants\. We further demonstrate the dataset's unique utility with two complementary applications: deriving semantic directions in the latent space for brain\-supervised image editing, and conditioning a generative model on brain\-decoded labels for brain\-supervised image generation\. Our dataset paves the way for advancing brain\-computer interface \(BCI\) devices for semantic\-level visual saliency detection and brain\-supervised generative modeling\. Our dataset and code are openly released at OSF https://osf\.io/2guk3/ and at HuggingFace https://huggingface\.co/datasets/yefllower/EEGFaceSem\.
-
-## Brain2voice 2\.0: High\-performance voice synthesis brain\-computer interface
-
-**Authors:** Maitreyee Wairagkar; Aparna Srinivasan; Nicholas S Card; Tyler Singer\-Clark; Xianda Hou; Carrina Iacobacci; Lee Miller; Leigh Hochberg; David Brandman; Sergey D Stavisky
-
-**ID:** 148803 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=v1KHSSdzcM>) | [PDF](<https://openreview.net/pdf?id=v1KHSSdzcM>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148803>)
-
-_Abstract unavailable from the accessible public sources._
-
-## Scaling Laws and Tradeoffs in Recurrent Networks of Expressive Neurons
-
-**Authors:** Aaron Spieler; Georg Martius; Anna Levina
-
-**ID:** 148161 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=zpewdRsVpA>) | [PDF](<https://openreview.net/pdf?id=zpewdRsVpA>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148161>)
-
-_Abstract unavailable from the accessible public sources._
-
-## Control Under the Wrong Model Is Better Than Under the Correct One
-
-**Authors:** Francesco Damiani; Ruben Moreno Bote
-
-**ID:** 149917 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=mErAv9CVnq>) | [PDF](<https://openreview.net/pdf?id=mErAv9CVnq>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149917>)
-
-Building an optimal controller requires solving two coupled problems: \(1\) computing beliefs about the state by filtering observations, and \(2\) designing a control signal based on those beliefs to minimize a cost function\. Ideally, these two problems can be solved independently: first, a filter is computed to estimate the state; then, a controller is built on top of that estimate\. When exact inference is tractable, this approach is optimal and applies to the prominent Linear\-Quadratic\-Gaussian stochastic control problem\. However, perfect inference is generally intractable, and filtering and control are closely intertwined problems\. The question, then, is whether the commonly used first\-filter\-then\-control approach remains optimal, and whether optimal control strategies should generally rely on internal representations that mirror the dynamics of the external world\. We show that this is not the case: even in a simple setting with linear dynamics, multiplicative noise, and internal noise, the optimal linear controller is characterized by internal forward dynamics that do not match the forward dynamics of the external state\. Instead, the optimal controller relies on internal representations that mix estimation and control, and this mismatch becomes more pronounced as internal noise increases\. Our work challenges standard approaches that prioritize external world modeling over control\.
+Long\-context LLM inference is fundamentally a retrieval process, transitioning from diffuse to sharply focused attention at a few architecture\-determined \(CTLs\)\.  Existing acceleration methods leave significant costs unaddressed: sparse attention ignores FFNs, KV cache compression neglects prefill, and hidden\-state pruning relies on fixed, heuristic rules\.  We introduce CutAttn, a training\-free framework that exploits CTLs via inter\-layer Jensen\-\-Shannon divergence, pruning redundant context at chunk granularity while dynamically gated by a normalized\-entropy criterion\.  Operating at the hidden\-state level, CutAttn reduces both attention and FFN costs, composing orthogonally with existing acceleration techniques\.  Evaluated on RULER, InfiniteBench, and LongBench, CutAttn preserves full\-attention accuracy while achieving up to a $2\.02\\times$ prefill speedup on 128K sequences \(and $2\.81\\times$ when composed with sparse attention\)\. Furthermore, our theoretical analysis provides approximation bounds, an entropy\-compression limit justifying the gating, and a closed\-form speedup ratio\.
 
 ## Neural Signals Generate Clinical Notes in the Wild
 
@@ -988,41 +540,471 @@ Brain foundation models have achieved remarkable advances across a wide range of
 
 **Authors:** Sejeung Choi; Minji Jung; Jinyeong Park; Taek D Chung
 
-**ID:** 152484 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
+**ID:** 152484 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
 [Paper](<https://openreview.net/forum?id=SkTqNkpAlZ>) | [PDF](<https://openreview.net/pdf?id=SkTqNkpAlZ>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152484>)
 
-_Abstract unavailable from the accessible public sources._
+Biological recurrent circuits can reuse a common substrate by changing its operating regime rather than replacing the circuit itself\. This principle is difficult to isolate in fully adaptive neural models, where recurrence, controllers, readouts, and internal representations can all absorb task structure\. As a result, successful multi\-context behavior does not reveal which route made the computation possible\. We introduce Constrained Modulatory Reservoirs \(CMR\), a fixed\-substrate framework for studying such reconfiguration with the main bypasses removed\. The primary dynamics and low\-rank perturbation basis are fixed, and the readout is denied direct access to the cue, forcing input\-dependent adaptation to act through a limited set of recurrent connectivity changes\. In transient\-cue channel\-selection tasks, this restriction makes a capacity transition visible\. Low\-loss behavior appears only when the available perturbation directions are sufficient, the selected change is retained across the cue\-to\-signal gap, and the primary dynamics express it during the response window\. Controls show that this effect is not explained by low\-dimensional cue representation alone\. Allowing the substrate to learn hides the bottleneck, while activity\- and gain\-level alternatives fail to reproduce the same regime\. CMR therefore reframes flexible recurrent computation as a question of where adaptive influence is allowed to enter a fixed dynamical system, making capacity, memory, and expression experimentally separable\.
+
+## A multi\-scale information geometry reveals the structure of mutual information in neural populations
+
+**Authors:** Simone Azeglio; Steeve Laquitaine; Ulisse Ferrari; Matthew Chalk
+
+**ID:** 154781 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=B1fQuBGYFx>) | [PDF](<https://openreview.net/pdf?id=B1fQuBGYFx>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154781>)
+
+Understanding how neural population responses represent sensory information is a central problem in systems neuroscience\. One approach is to define a representational geometry on stimulus space in which distances reflect how reliably stimuli can be distinguished from neural activity\. However, different constructions of these distances can lead to qualitatively different conclusions about the neural code\. Here, we show that a unique Riemannian representational geometry emerges from first principles governing how distances contract as stimulus resolution is lost through coarse\-graining\. This results in a multi\-scale extension of the Fisher information metric, capturing encoding structure from fine stimulus details to coarse global distinctions\. The resulting geometry is exactly related to the mutual information encoded by the population: well encoded stimulus directions \-\- those contributing more to mutual information \-\- are expanded, whereas poorly encoded directions are contracted\. The metric tensor can be estimated using diffusion models, making the framework practical for large neural populations and high\-dimensional stimuli\. Applied to visual cortical responses to natural images, the eigenvectors of the metric tensor identify stimulus variations that contribute most to information transmission, yielding interpretable features that are robust to modelling choices\. Together, these results provide a principled, information\-theoretic framework for characterising neural population codes\.
 
 ## Capturing Membrane Dynamics and Spike Timing of Human Neurons at Scale using Neural Operators
 
 **Authors:** Luca Ghafourpour; Cindy Zhao; Valentin Duruisseaux; Bahareh Tolooshams; Philip Wong; Costas Anastassiou; Animashree Anandkumar
 
-**ID:** 149091 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
+**ID:** 149091 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
 [Paper](<https://openreview.net/forum?id=sxhx4suoIl>) | [PDF](<https://openreview.net/pdf?id=sxhx4suoIl>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149091>)
 
-_Abstract unavailable from the accessible public sources._
-
-## Brain Economy\-Aligned Graph Transformers
-
-**Authors:** Stefano Vannoni; Inês W Sampaio; Eleonora Maggioni; Islem Rekik
-
-**ID:** 153903 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=HqOJ2E0PU0>) | [PDF](<https://openreview.net/pdf?id=HqOJ2E0PU0>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153903>)
-
-_Abstract unavailable from the accessible public sources._
+Characterizing the properties of neuronal cell types is central to understanding brain function\. Yet, biophysically realistic neuron models remain difficult to scale to large populations while preserving the richness of cellular dynamics and within\-cell\-type variability\. We present a cell\-type\-specific neural\-operator framework for scalable neuronal population modeling\. Rather than training separate surrogate models for individual neurons, the proposed framework learns a shared operator across multiple modeled neurons from the same cell type, conditioned on biologically interpretable electrophysiological features\. This enables efficient generation of large ensembles of somatic voltage responses while preserving variability across cells and model configurations\. We evaluate the approach using membrane dynamics metrics, action potential waveform metrics, spike timing accuracy, input\-output firing relationships, and electrophysiological feature distributions\. Our framework reproduces subthreshold membrane dynamics, spike waveforms, and firing\-rate responses across major cortical inhibitory neuron types, while accurately preserving spike timing despite the sensitivity of threshold\-crossing dynamics\. The predicted electrophysiological feature distributions show strong agreement with detailed simulator outputs and human experimental recordings, including high explained variability in properties such as inter\-spike intervals, firing frequency, action\-potential shape, and post\-spike recovery\. By enabling fast ensemble simulation of cell\-type\-specific neuronal responses, the proposed framework provides a scalable tool for studying cellular diversity, probing variability near functional thresholds, and generating synthetic but biophysically grounded neuronal populations\.
 
 ## $\\mathrm\{Bounded\\mbox\{\-\}RS\}$: A Bounded Evaluation Protocol and Testbed for Representational Systematicity
 
 **Authors:** Boyu Cao; Wenshuo Wang
 
-**ID:** 139441 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
+**ID:** 139441 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
 [Paper](<https://openreview.net/forum?id=PfEXf8s5ps>) | [PDF](<https://openreview.net/pdf?id=PfEXf8s5ps>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139441>)
 
-_Abstract unavailable from the accessible public sources._
+Systematicity is the capacity to generalize compositionally\. Existing benchmarks primarily test behavioral systematicity, while representation\-level analyses often leave open whether recovered signals are merely decodable or causally used during generation\. We therefore introduce $\\mathrm\{Bounded\\mbox\{\-\}RS\}$, an evaluation artifact and protocol for adjudicating these possibilities under bounded hypotheses: unsupported, present\-only, causal\-use, or underdetermined\. The artifact is a controlled semantic\-parsing setting with matched recombination tests, exact intervention pairs, and evidence routines for recoverability, interchange, necessity, and repair during generation\. We apply $\\mathrm\{Bounded\\mbox\{\-\}RS\}$ to the two prominent representation\-level explanations of systematic generalization, binding and geometry\. Within the family instantiations evaluated here, and under the same behavioral anchor and state semantics, the binding family satisfies the criteria for $\\mathit\{Causal\\mbox\{\-\}use\}$, whereas the geometry family is adjudicated as $\\mathit\{Unsupported\}$ under its frozen closure basis\. Detector\-truthfulness tests do not validate a geometry detector, so the geometry conclusion remains a claim about the tested family rather than about all possible geometric mechanisms\. $\\mathrm\{Bounded\\mbox\{\-\}RS\}$ thus provides a reusable way to make disciplined representational claims from behavioral systematicity tests\.
+
+## Brain Economy\-Aligned Graph Transformers
+
+**Authors:** Stefano Vannoni; Inês W Sampaio; Eleonora Maggioni; Islem Rekik
+
+**ID:** 153903 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=HqOJ2E0PU0>) | [PDF](<https://openreview.net/pdf?id=HqOJ2E0PU0>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153903>)
+
+Graph neural networks for brain connectomics treat every connection as topologically equivalent, ignoring the brain\-economy trade\-off between the metabolic cost of maintaining a connection and the topological value it delivers to the network\. We argue that this trade\-off is a property of the channel \(i\.e\., edge\) between two brain regions, not of the regions themselves, and should therefore shape how regions interact during attention computation rather than being appended as a node feature or auxiliary loss\. We introduce the ecospace, a two\-dimensional coordinate system that characterizes each brain connection by its economy—the trade\-off between connectivity strength and anatomical cost—and uses it to guide how brain regions attend to one another\.  We further introduce EcoSpace Rotary Encoding \(ESRE\), an attention mechanism that injects the ecospace dimensions through asymmetric rotations of the query\-key subspace, guaranteeing by mathematical identity that the attention score between two brain regions depends on the economy of the edge connecting them\. Together, these two contributions form the Brain Graph Transformer with EcoSpace Rotary Encoding \(BGT\-ESRE\)\. On brain graph classification, BGT\-ESRE outperforms classical, general\-purpose, and brain\-graph\-specific baselines by a substantial margin in both accuracy and AUC\. Ablations confirm that the rotary mechanism and the brain economy\-aligned transformation each contribute independently, and that asymmetric rotary injection is superior to additive bias injection of the same economy measure\.
+
+## LEAF: Language\-EEG Aligned Foundation Model for Brain\-Computer Interfaces
+
+**Authors:** Muyun Jiang; Shuailei Zhang; Zhenjie Yang; Wu Mengjun; Wei Zhang; Weibang Jiang; Chenyu Liu; Zhiwei Guo; Rui Liu; Shangen Zhang; Yong Li; Yi Ding; Cuntai Guan
+
+**ID:** 154809 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=Ao4vGWr7BX>) | [PDF](<https://openreview.net/pdf?id=Ao4vGWr7BX>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154809>)
+
+Electroencephalography \(EEG\) foundation models learn transferable representations for brain\-\-computer interfaces, but existing approaches treat tasks and labels as discrete targets and fail to use the semantic structure of natural\-language task instructions to guide representation learning\. We present \\textbf\{LEAF\}, a foundation model for \\textbf\{EEG\-\-Language Alignment with Semantic Task Instruction and Querying\}\. LEAF integrates task\-aware semantic guidance to produce structured and linguistically aligned EEG embeddings, thereby enhancing decoding robustness and transferability\. In the EEG pretraining stage, we introduce a joint \\textbf\{Spectral\-\-Temporal Reconstruction \(STR\)\} framework that captures the coupled spectral rhythms and temporal dynamics of EEG signals\. STR applies randomized spectral perturbation to enhance frequency robustness and uses two complementary temporal objectives to learn both contextual and sequential structure\. In the EEG\-Language alignment stage, we propose the \\textbf\{Instruction\-conditioned Q\-Former \(IQF\)\}\. This query\-based cross\-attention transformer injects instruction embeddings into EEG tokens and achieves semantic alignment with textual label embeddings through learnable queries\. We evaluate LEAF on 16 downstream datasets spanning motor imagery, emotion recognition, steady\-state visual evoked potentials, covert speech, and healthcare tasks\. LEAF achieves state\-of\-the\-art performance on 12 of the 16 datasets and obtains the best average results across all five task categories\. Importantly, our analyses reveal for the first time that explicit task instructions serve as semantic priors guiding EEG embeddings into coherent and linguistically grounded spaces\. Code is available at \\url\{https://anonymous\.4open\.science/r/LEAF\-Model\}
+
+## Neuronal Identity as an Organizational Basis for Analyzing Neural Population Dynamics
+
+**Authors:** Seungjae Han; Joshua Y You; Soi Kim; Minho Eom; Jinho Park; Seunghee Park; Byeongwook Lee; Young\-Gyu Yoon
+
+**ID:** 155788 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=2tTSvYZ2iL>) | [PDF](<https://openreview.net/pdf?id=2tTSvYZ2iL>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155788>)
+
+Individual neurons exhibit diverse molecular, morphological, and electrophysiological properties that shape their distinct roles in neural circuits\. While these multimodal features are largely shared across individuals, they remain an underutilized source of information in analyzing neural population dynamics\. We posit that these shared biological profiles provide a common reference for relating neural dynamics across subjects and recording sessions\. Our framework leverages this structure by routing neurons into latent groups based on their biological profiles and analyzing population dynamics through group\-level representations\. Because these assignments are anchored in biological properties that are consistent across subjects, the learned organization supports transfer to unseen animals without retraining or neuron\-wise correspondence\. We evaluate our framework on whole\-brain calcium imaging in larval zebrafish and large\-scale electrophysiology in the mouse visual cortex\. Across both species and recording modalities, the framework delivers state\-of\-the\-art performance in both neural decoding and manifold analysis: it achieves superior decoding of behavior and stimulus labels while better preserving the temporal consistency and local geometric structure of latent trajectories on unseen data\. Our experiments demonstrate that not only does providing biological features improve baseline performance, but our proposed framework achieves even stronger results by using these properties to explicitly structure the population rather than treating them as auxiliary inputs\. Together, these results suggest that organizing neural populations by their multimodal biological features offers a promising framework for generalizing population dynamics across subjects and recording sessions\.
+
+## B\[FM\]$^2$: Brain Foundation Model via Flow Matching with SplitUNet
+
+**Authors:** Jaedong Hwang; Kathleen Zhang; David Dai; Konstantinos Kontras; Maarten De Vos; Ila Fiete; Paul Liang
+
+**ID:** 148190 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=zdfQqwhwe7>) | [PDF](<https://openreview.net/pdf?id=zdfQqwhwe7>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148190>)
+
+EEG foundation models can learn generalizable representations from large\-scale EEG corpora to enable single\-backbone transfer across diverse clinical and brain\-computer interface tasks\. Existing models typically discretize the continuous multi\-channel EEG waveform into patches or codebook tokens and train a transformer with masked self\-supervision\.  Recognizing that this discretization fragments continuous brain rhythms and obscures fine\-grained temporal dynamics, we present B\[FM\]$^2$ \(Brain Foundation Model via Flow Matching\), which drops discretization and pretrains directly on the raw signal using continuous\-time flow matching without patches, tokenization, or masking\. However, multi\-channel EEG signals pose an architectural challenge for flow matching: time is densely sampled and highly autocorrelated \(thousands of timepoints\), while the electrode axis is short \(tens of channels\) at distinct scalp positions\. To address this time\-electrode asymmetry, we introduce SplitUNet, a velocity network that factorizes each block into separate 1D temporal and 1D electrode convolutions and downsamples only along time, preserving electrode topology throughout the hierarchy\. B\[FM\]$^2$ sets a new state of the art on $7$ of $9$ standard downstream EEG classification tasks, using a pretraining budget of only $36\{,\}895$ segments \($\\approx 307$\\,h\), a fraction \($\\approx 3\.3$\\%\) of that required by existing EEG foundation models\. It also produces synthetic EEGs that two board\-certified neurologists cannot distinguish from real EEGs \(Cohen's $\\kappa = \-0\.096$\)\.
+
+## Geometry\-Aware Similarity Metrics for Neural Representations on Riemannian and Statistical Manifolds
+
+**Authors:** N Alex Cayco Gajic; Arthur Pellegrino
+
+**ID:** 150840 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=evbVz4WWXN>) | [PDF](<https://openreview.net/pdf?id=evbVz4WWXN>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150840>)
+
+Similarity measures such as canonical correlation analysis \(CCA\), representational similarity analysis \(RSA\) and center kernel alignment \(CKA\), are widely used to compare the representational geometries used by different neural networks to solve the same task\. Yet, because existing methods compare the \*extrinsic geometry\* of neural representations in state space, rather than their \*intrinsic geometry\*, they may fail to capture subtle yet crucial distinctions between fundamentally different computations performed by biological and artificial neural networks\. Here, we introduce metric similarity analysis \(MSA\), a novel method which leverages tools from Riemannian geometry to compare the intrinsic geometry of neural manifolds\. Within our mathematical framework, we derive several properties of MSA, including coordinate, scale and rotation invariances\. We show that MSA can be used to i\) disentangle neural computations of deep networks in rich vs\. lazy learning regimes, ii\) compare the computation\-through\-dynamics of recurrent neural networks and state\-space models during neuroscience working memory tasks, and iii\) investigate the statistical manifolds of diffusion models\. Overall, we introduce a mathematically grounded and broadly applicable framework to understand the mechanisms behind neural computations by contrasting their Riemannian geometries, with broad applicability to both neuroscience and machine learning\.
+
+## Neural Circuit Architectural Priors for Rat Locomotion
+
+**Authors:** Nikhil Bhattasali; Jaron Cui; Lerrel Pinto; Grace Lindsay
+
+**ID:** 149313 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=r74w29XNw7>) | [PDF](<https://openreview.net/pdf?id=r74w29XNw7>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149313>)
+
+Animals generate behavior through continuous interactions between their neural circuits, bodies, and environment\. Embodied simulations provide a means to study these interactions by testing neural circuit models in biologically realistic settings\. Recent efforts have developed embodied simulations of diverse animals, and emerging work on biologically grounded neural architectures has begun to integrate circuit connectivity and single\-unit dynamics from experimental data into artificial neural networks, introducing stronger inductive biases and closer mechanistic alignment with biology\. How can we develop embodied simulations that enable the study of increasingly complex bodies and neural circuits? In this work, we address the challenge through coordinated advances in the simulated body, neural architecture, and training algorithm\. We introduce \*Rat v2\*, a biomechanical model that provides an efficient and flexible tool for simulating rat behavior\. To control this body, we develop \*Rat NCAP\*, a biologically grounded neural architecture for locomotion based on mammalian spinal circuits that incorporates cell\-type\-specific connectivity and a novel flexor\-extensor neuromechanical interface\. To optimize circuit parameters, we refine an evolutionary algorithm to support reliable and efficient training\. The integrated system learns to locomote at different speeds without imitation learning, producing locomotion statistics and gaits that match experimental data\. Systematic analyses reveal that neuromechanical interface choice substantially affects trainability and gait quality, and that specific neural populations play distinct roles in gait generation\. Together, these findings support the view that embodied simulations at an intermediate level of abstraction can simultaneously reproduce complex behavior and yield mechanistic insights into the neural circuits that generate it\.
+
+## A Matter of Interest: Understanding Interestingness Judgments of Math Problems in Humans and Language Models
+
+**Authors:** Shubhra Mishra; Yuka Machino; Gabriel Poesia; Albert Q\. Jiang; Joy Hsu; Adrian Weller; Challenger Mishra; David Broman; Josh Tenenbaum; Mateja Jamnik; Cedegao \(Ced\) Zhang; Katie Collins
+
+**ID:** 153251 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=MdhVFMmtwx>) | [PDF](<https://openreview.net/pdf?id=MdhVFMmtwx>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153251>)
+
+The evolution of mathematics is shaped importantly by interestingness: researchers choose which problems to pursue, and students choose which problems to engage with, based on expectations of interest and challenge\. As AI systems, particularly large language models \(LLMs\) that operate flexibly over natural language and formal mathematics, are increasingly used in mathematics research and education, it becomes crucial to characterize how closely their judgments align with people from different mathematical backgrounds\. We study whether LLMs align with human interestingness judgments by comparing LLM ratings with those of two populations, crowdsourced participants with college math experience and International Math Olympiad competitors\. Although many LLMs broadly agree with human notions of interestingness, they largely fail to match the distribution of human judgments\. They also weakly align with why humans find problems interesting, with low correlation to human\-selected rationales\. Finally, we evaluate LLMs’ ability to generate interesting problems and find that, after filtering for validity, LLMs are able to generate engaging problems\. We conclude with takeaways, including the need for multi\-LLM human\-AI collaborative systems, that highlight both the promise and current limits of LLMs as partners in mathematical reasoning\.
+
+## CORAL: A Benchmark for Structure\-aware and Brain\-wide Neuron Reconstruction in Light Microscopy
+
+**Authors:** Zekang Yang; Jiamin Li; Zhenghua Li; Jiaqi Fan; Zengcai V Guo; Xiaolin Hu
+
+**ID:** 139515 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=LFD4mDTd1s>) | [PDF](<https://openreview.net/pdf?id=LFD4mDTd1s>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139515>)
+
+Automatic neuron reconstruction from light microscopy images is a central problem in computational neuroanatomy\. While recent methods have achieved encouraging results on local image blocks, it remains unclear whether such progress translates to reconstruction that is both structurally accurate and scalable to the whole\-brain scale\. We present CORAL, the first benchmark for structure\-aware evaluation of automatic neuron reconstruction from light microscopy images at both local and whole\-brain scales\. Built on a high\-quality whole\-brain fMOST dataset with carefully curated annotations, CORAL establishes two progressive tasks: block\-level reconstruction, which evaluates reconstruction methods under limited spatial context, and brain\-wide reconstruction, which assesses complete neuron reconstruction at the whole\-brain scale\. To account for topological correctness beyond geometric distance similarity, we introduce a structure\-aware metric based on fiber prediction\. To further achieve complete neuron reconstruction across the entire brain, we develop a brain\-wide neuron tracing framework that extends arbitrary local reconstruction methods to the whole\-brain scale through an iterative local\-to\-global process\. Using this benchmark, we provide the first structure\-aware comparison of mainstream methods for local neuron reconstruction and further evaluate their performance in brain\-wide reconstruction\. Our results underscore the importance of structure\-aware evaluation and the need for more robust methods for complete neuron reconstruction\. All datasets and code are available at https://github\.com/yang\-ze\-kang/CORAL\.
+
+## Implicit Value Probing: Inferring Human Value Preferences via Strategic Multi\-Turn Conversations
+
+**Authors:** Tan Wenxin; pring wong; Shuo Chen
+
+**ID:** 150324 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=iyDgxaZOp9>) | [PDF](<https://openreview.net/pdf?id=iyDgxaZOp9>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150324>)
+
+Recognizing human value preferences is crucial for building reliable AI agents in user\-centric fields like psychological counseling and strategic negotiation\. Existing benchmarks rely on explicit questionnaires, assuming \(1\) users are always cooperative and willing to self\-report; \(2\) value preferences remain static\. However, humans may conceal true preferences if they feel probed, and may adopt distinct value preferences depending on the context\. Consequently, explicit queries are insufficient for predicting value preferences reliably\. To address this, we introduce Implicit Value Probing \(IVP\), a benchmark simulating realistic scenarios where agents implicitly infer value preferences through strategic, multi\-turn conversations\. IVP grounds these interactions using a diverse set of Persona Agents, covering a wide spectrum of personalities and values\. We evaluate mainstream LLMs on IVP, including Qwen3, DeepSeek, Doubao, and GPT\-5, observing substantial performance gaps\. We further develop Value\-Prober\-8B, a specialized model internalizing structured cognitive reasoning via distillation\. It employs strategic questioning to elicit concealed value preferences\. Experimental results demonstrate that Value\-Prober\-8B can effectively balance probing accuracy with social acceptability, achieving capabilities comparable to frontier models\.
+
+## CORTEG: Foundation Models Enable Cross\-Modality Representation Transfer from Scalp to Intracranial Brain Recordings
+
+**Authors:** Liuyin Yang; Qiang Sun; Bob Van Dyck; Eva C Merino; Marc M Van Hulle
+
+**ID:** 154557 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=ChfliH0uB0>) | [PDF](<https://openreview.net/pdf?id=ChfliH0uB0>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154557>)
+
+Intracranial electrocorticography \(ECoG\) offers high–signal\-to\-noise access to cortical activity for brain–computer interfaces, yet limited per\-patient data has led most prior work to rely on small, subject\-specific decoders that neglect information shared across patients\. We investigate whether large pretrained scalp\-EEG foundation models \(EEG FMs\) can be adapted to ECoG, enabling cross\-patient learning and competitive decoding performance while calibrating to a held\-out patient in $10$\-\-$30$ minutes on a single GPU\. We introduce CORTEG, a cross\-modality transfer framework that combines a pretrained EEG FM backbone, an electrode\-aware KNNSoftFourier spatial adapter, a dual\-stream tokenizer for low\-frequency and high\-gamma activity, and a leave\-one\-subject\-out fine\-tuning strategy\. We evaluate CORTEG on two challenging regression tasks: public finger trajectory regression \(n=9\) and private audio envelope regression \(n=16\)\. CORTEG matches or exceeds the strongest task\-specific baselines on both tasks: it reaches the highest mean correlation among compared methods on the public finger benchmark \(gain not statistically significant on $n\{=\}9$ subjects\), with larger and statistically significant gains on the audio task and in low\-data per\-patient calibration\. Feature analyses align with neurophysiology, and latent manifolds capture low\-dimensional finger\-movement structure\. CORTEG provides systematic evidence that scalp\-EEG pretraining can be repurposed for ECoG decoding, enabling data\-efficient intracranial BCIs that can adapt to new patients\.
+
+## Attention\-based Routing for Interpretable Multimodal Brain Encoding
+
+**Authors:** Pinyuan Feng; Hossein Adeli; Richard Antonello; Ethan Hwang; Nikolaus Kriegeskorte
+
+**ID:** 152519 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=SWM0cCjlXg>) | [PDF](<https://openreview.net/pdf?id=SWM0cCjlXg>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152519>)
+
+Understanding how the brain integrates information across sensory modalities under naturalistic settings remains a central challenge in cognitive computational neuroscience\. Despite recent progress in multimodal brain encoding driven by the advancement of deep learning, many existing approaches combine representations from pretrained modality\-specific models using static aggregation or linear readouts, and therefore do not explicitly capture how information is selectively integrated across cortical regions\. Here, we introduce Multimodal Transformer Brain Encoder \(M\-TBEn\), a neural encoding framework that models multimodal integration as a routing problem\. M\-TBEn extends prior vision\-based brain encoding approaches by introducing a cross\-attention mechanism for multimodality, in which learnable parcel\-level queries dynamically select and aggregate modality\-specific representations from visual, auditory, and linguistic inputs\. This design is not only parameter\-efficient but also yields parcel\-specific multimodal representations that support a flexible linear readout for predicting brain responses at various spatial resolutions\. We evaluate M\-TBEn on naturalistic video\-viewing data, including both in\-distribution and out\-of\-distribution stimulus conditions\. The model is able to accurately predict parcel\-level and voxel\-level fMRI responses and generalizes across stimulus distributions\. Furthermore, the learned attention patterns provide a structured descriptive basis for analyzing modality integration across cortical parcels, enabling a connection between parcel\-specific routing profiles and established functional brain networks\. Together, these results suggest that attention–based routing offers a principled computational framework for modeling multimodal integration in the human brain\.
+
+## L\-FAME: Longitudinal Focused Attention Meditation EEG Dataset and Benchmark
+
+**Authors:** Angqi Li; Basit R Syed; Hamzeh Alzweri; Taosheng Liu; Barry H Cohen; Saiprasad Ravishankar
+
+**ID:** 139264 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=b6X6sen3bu>) | [PDF](<https://openreview.net/pdf?id=b6X6sen3bu>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139264>)
+
+We introduce a novel Longitudinal Focused Attention Meditation Electroencephalography \(L\-FAME\) dataset and an accompanying benchmark, designed to foster research into the neural effects of various meditation practices and the evolution of these effects over a six\-week training period\. The dataset contains EEG recordings and psychological assessments from 74 healthy college participants, collected at two distinct time points: pre\-intervention and post\-intervention\. Participants were randomly assigned to one of three distinct meditation groups: two mantra\-based techniques \(SA\-TA\-NA\-MA and Hare Krishna\) and one Breath Focus practice\. Leveraging this unique longitudinal and comparative dataset, we propose a benchmark suite comprising three distinct classification tasks: \(1\) cognitive state decoding to distinguish between resting and meditation states, \(2\) fine\-grained classification of the specific meditation techniques, and \(3\) cross\-session adaptation to evaluate model generalization across the longitudinal time gap\. We provide comprehensive baseline results for these tasks utilizing a range of classical machine learning algorithms and deep learning architectures\. The complete dataset, preprocessing pipelines, and benchmark evaluation code will be publicly released, offering a valuable resource and a standardized framework for the development and comparison of new analytical methods in computational meditation research and EEG\-based machine learning\.
+
+## EEG\-X: Toward Device\-Agnostic and Noise\-Robust Foundation Models for EEG
+
+**Authors:** Navid Mohammadi Foumani; Soheila Ghane; Nam Nguyen; Mahsa Salehi; Geoffrey Webb; Geoffrey Mackellar
+
+**ID:** 152276 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=UHwOAjPtEg>) | [PDF](<https://openreview.net/pdf?id=UHwOAjPtEg>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152276>)
+
+Foundation models for EEG analysis are still in their infancy, limited by two key challenges: \(1\) variability across datasets caused by differences in recording devices and electrode configurations, and \(2\) the low signal\-to\-noise ratio \(SNR\) of EEG, where neural activity is often buried under artifacts and non\-brain sources\. To address these challenges, we present \\textit\{EEG\-X\}, a device\-agnostic and noise\-robust foundation model for EEG representation learning\. EEG\-X introduces a location\-based channel embedding that enables robust transfer across heterogeneous EEG devices and electrode layouts\. To improve robustness against noise, EEG\-X employs a novel noise\-aware masking\-reconstruction strategy that reconstructs artifact\-cleaned signals rather than raw noisy EEG and introduces a novel Dictionary\-based Convolutional Transformation \(DiCT\) that improves reconstruction\-based pretraining by comparing signals in a structured feature space instead of directly in the raw signal space\. Experiments across datasets collected from diverse EEG devices show that EEG\-X consistently outperforms state\-of\-the\-art methods across multiple downstream tasks and demonstrates strong cross\-domain generalization when pretraining and downstream datasets differ in electrode layouts and recording configurations paving the way towards foundation models\. The models and code are available at :https://anonymous\.4open\.science/r/EEG\-X\-CEDE/README\.md
+
+## SPERA: Spherical Prior EEG Foundation Model with Geometry\- and Frequency\-Aware Latent Prediction
+
+**Authors:** Minsu Kim; Ye\-Sung Kim; Hyeseong Jeon; Wooseok Hyung; Joshua Lee; Chang\-Hwan Im
+
+**ID:** 155259 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=71zbNNbFKV>) | [PDF](<https://openreview.net/pdf?id=71zbNNbFKV>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155259>)
+
+Electroencephalography \(EEG\) provides a non\-invasive measure of ongoing neural activity, but building general\-purpose EEG models remains challenging due to the heterogeneity of subjects, devices, and electrode montages\. Existing EEG foundation models predominantly rely on input\-space reconstruction, which can bias the encoder toward memorizing noise and artifacts\. We introduce SPERA \(Spherical Prior EEG Representation Architecture\), an EEG foundation model that predicts in latent space following the joint\-embedding predictive architecture \(JEPA\)\. SPERA combines three components tailored to EEG: \(i\) a hybrid attention backbone that interleaves factorized temporal and spatial attention with periodic full\-attention layers, \(ii\) a Legendre\-polynomial spatial prior incorporated into attention to encode varying scalp electrode geometries, and \(iii\) a relational spectral regularizer that aligns latent similarity structure with spectral views, inducing frequency\-aware latent representations\. Pretrained on approximately 90,213 hours of EEG from 31,771 subjects across 106 datasets, SPERA achieves the highest average performance across nine downstream tasks spanning clinical, cognitive, and BCI applications\. SPERA further exhibits strong parameter efficiency and robustness across varying recording conditions, suggesting its potential as a general\-purpose backbone for diverse EEG analyses\.
+
+## What Is Worth Representing? Representational Empowerment for Continual Model Construction
+
+**Authors:** Fei Dai; Hanqi Zhou; Alison Gopnik; Charley M Wu
+
+**ID:** 149925 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=m9oKQZGDlw>) | [PDF](<https://openreview.net/pdf?id=m9oKQZGDlw>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149925>)
+
+The first problem of modeling the world is not just estimating the right parameters or causal structure, but deciding \*what should be represented at all\*\.  We frame this as \*continual model construction\*: an agent maintains an environment\-specific model $M$ of an inaccessible world $W$ and curates a persistent library $\\mathcal\{L\}$ of reusable representational elements across environments\.  We propose \*Representational Empowerment\* \($\\operatorname\{RepEmp\}$\) to score candidate elements by how much they expand the agent's future capacity to model and plan\-\-\-a counterpart to classical environmental empowerment, redirected from control over external states to control over internal representations\.  We realize the framework as a hierarchical Actor\-Curator architecture and test it across three experiments\.  In a finite\-vocabulary causal\-learning task, human participants construct causal models at varying abstraction levels to maximize goal reachability rather than fidelity to the world\-\-\-a signature better predicted by $\\operatorname\{RepEmp\}$ over information\-gain or novelty alternatives\.  Matched simulations reveal $\\operatorname\{RepEmp\}$\-guided construction, not exploration, to be the driver of sufficient structure recovery and cross\-task transfer\. Finally, in an open\-vocabulary planning domain, an LLM\-augmented Curator builds more compact symbolic libraries, which also generalize better than baselines\. Ablating $\\operatorname\{RepEmp\}$ eliminates these benefits\.  Together, these results identify $\\operatorname\{RepEmp\}$ as a potential principle for continual model construction: deciding what to build, retain, and reuse under bounded resources\.
+
+## Neural Structural Reasoner: A Brain\-inspired Architecture for Reasoning over Structured Knowledge
+
+**Authors:** Zixing Jia; Yuhang Pan; Ni Ji
+
+**ID:** 149065 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=t8iDmsYS6X>) | [PDF](<https://openreview.net/pdf?id=t8iDmsYS6X>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149065>)
+
+Structural reasoning, the ability to recognize and make inference over the relational structure between objects and concepts, is a hallmark of human cognition, yet prevailing methods often collapse relational topology into flat embeddings, cannot discover hidden structure and lack interpretability\. We introduce Neural Structural Reasoner \(NSR\), a brain\-inspired network that preserves relational structure directly in the connectivity and dynamics of coupled neuronal populations\. NSR draws inspiration from three biological mechanisms: multi\-layered architecture for encoding hierarchical knowledge, stable representation of entity and concepts, and path integration for input\-driven state inference\. At query time, NSR parallelizes computation over candidate relational structures and leverages confidence\-weighted scores to perform link prediction\. On standard knowledge\-graph benchmarks, NSR matches strong embedding and rule\-mining baselines with superior training efficiency\. Because reasoning is implemented through sequences of human\-readable neuron activations, NSR affords native interpretability by tracking intermediate inference steps\. The model further extracts latent relational hierarchies and compositional rules, demonstrating the brain\-inspired architecture as an effective, efficient, and highly interpretable substrate for structural reasoning\.
+
+## Aligning MLLMs with the Latent Structure of Human Cognition via Behavior\-Derived Semantic Dimensions
+
+**Authors:** Ning E; Changde Du; Yizhuo Lu; Huiguang He
+
+**ID:** 152778 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=QPV6HxIK35>) | [PDF](<https://openreview.net/pdf?id=QPV6HxIK35>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152778>)
+
+Multimodal Large Language Models \(MLLMs\) have achieved impressive performance across a wide range of reasoning tasks, yet it remains unclear whether their internal representations and decision criteria align with the latent structure of human cognition\. In this work, we propose a novel framework to align MLLMs with the multidimensional mental representations underlying human similarity judgements\. We build on a previously established behavior\-derived semantic embedding space, in which objects are represented along 66 interpretable dimensions derived from 4\.70 million human Odd\-One\-Out \(O1O\) judgements\. For each triplet, we infer the most salient decision dimension and convert it into a dimension\-grounded linguistic rationale\. This enables MLLMs to learn both the final choice and a justification consistent with the inferred behavioral criterion\. Experimental results demonstrate that our approach improves model consistency with human similarity judgements while retaining competitive performance on standard multimodal benchmarks\. Furthermore, using searchlight Representational Similarity Analysis \(RSA\) on an independent fMRI Natural Scenes Dataset \(NSD\), we observe increased representational alignment between model and human\. Ultimately, our findings point to a data\-driven route for incorporating human cognitive structure into MLLMs alignment\.
+
+## ConnectomeBench2: A Unified Benchmark for Automated Connectomic Proofreading
+
+**Authors:** Jeff Brown; Tim Farkas; Gleb Razgar; Edward Boyden
+
+**ID:** 139242 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=ceOs8fK1Ev>) | [PDF](<https://openreview.net/pdf?id=ceOs8fK1Ev>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139242>)
+
+Proofreading—correcting segmentation errors in 3D brain reconstructions—is the rate\-limiting step in synapse\-resolution connectomics\. We release ConnectomeBench2, a unified multi\-species dataset of over 302,401 expert\-labeled proofreading decisions with &gt;2,000,000 associated images spanning four major open connectomes \(mouse, human, zebrafish, fly\), spanning both split and merge error correction\. Trained on this dataset, a single Vision Transformer with shared encoders for mesh geometry and electron microscopy reaches human\-level accuracy across species for split error correction and merge error identification; with performance scaling with data size and improving with species diversity\. Beyond accuracy, we show that the model is well\-calibrated within distribution, that measures of distribution distance predict where calibration and accuracy will degrade on unseen data, and that connectomics\-specific pretraining and active learning\-based sample selection show potential to substantially reduce the labeling effort needed to extend to new species and brain regions\. The benchmark provides the infrastructure to train and evaluate increasingly capable vision models for connectomic proofreading\.
+
+## NeuroRVQ: Multi\-Scale Biosignal Tokenization for Generative Foundation Models
+
+**Authors:** Konstantinos Barmpas; Na Lee; Dimitrios Chalatsis; William Raftery; Yannis Panagakis; Dimitrios Adamos; N Laskaris; Alexandros Koliousis; Dario Farina; Stefanos Zafeiriou
+
+**ID:** 149661 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=oOiBcvA4rm>) | [PDF](<https://openreview.net/pdf?id=oOiBcvA4rm>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149661>)
+
+Biosignals such as electroencephalography \(EEG\), electrocardiography \(ECG\), and electromyography \(EMG\) encode physiological activity across multiple temporal and spectral scales, yielding representations that are rich but challenging for machine learning\. Foundation models trained to predict masked signal tokens have shown promise in learning generalizable biosignal representations, yet their performance depends on the tokenizer's ability to preserve high\-frequency dynamics and reconstruct signals with high fidelity\. We introduce NeuroRVQ, a modality\-adaptive biosignal tokenizer family designed for high\-fidelity signal reconstruction\. To capture the full frequency spectrum, NeuroRVQ decomposes biosignals into frequency\-specific representations via multi\-scale temporal convolutions, each encoded into hierarchical RVQ codebooks to preserve high\-frequency detail, combined with a novel phase\-aware training loss that respects the circular topology of Fourier phase\. By tuning the temporal resolution, number and size of temporal kernels and RVQ depth, this design adapts to the spectro\-temporal characteristics of each biosignal modality\. To validate that tokenizer quality drives downstream performance, we train a simple masked\-token foundation model for each modality \(NeuroRVQ\-FM\) using the corresponding NeuroRVQ tokenizer\. The NeuroRVQ\-FM family achieves competitive or superior downstream performance compared to existing modality\-specific foundation models, demonstrating that high\-fidelity tokenization is a critical factor for effective biosignal modeling\.
+
+## fNIRSAtlas: A Large\-Scale Benchmark for Functional Near\-Infrared Spectroscopy Classification
+
+**Authors:** Kalle Mäkelä; Tuukka Ruotsalo
+
+**ID:** 139300 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=YbtGpIOTFA>) | [PDF](<https://openreview.net/pdf?id=YbtGpIOTFA>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139300>)
+
+Functional near\-infrared spectroscopy \(fNIRS\) is a promising modality for brain\-computer interfaces and cognitive state decoding, but progress in machine learning for fNIRS has been limited by small, isolated datasets and inconsistent evaluation protocols\. We introduce fNIRSAtlas, the largest open benchmark for fNIRS classification to date, comprising 23 public datasets spanning diverse experimental paradigms, including motor execution, motor imagery, mental arithmetic, working memory, and emotion recognition\. fNIRSAtlas provides a fully automated pipeline from raw data to evaluation and defines standardized benchmark tasks for both cross\-subject and within\-subject classification, ensuring reproducible comparison of methods\. We evaluate a variety of baseline models from fNIRS and related neuroimaging and time\-series machine learning literature on the benchmark\. Our results demonstrate that performance varies substantially across datasets and that methods validated on limited data \-\- especially deep learning approaches \-\- often fail to generalize beyond their original evaluation\. fNIRSAtlas serves as an extensible, open, and reproducible benchmark to support more robust and cumulative progress in machine learning for fNIRS data\. Our code and data can be found at https://anonymous\.4open\.science/r/fNIRSAtlas\-8842\.
+
+## Brain2voice 2\.0: High\-performance voice synthesis brain\-computer interface
+
+**Authors:** Maitreyee Wairagkar; Aparna Srinivasan; Nicholas S Card; Tyler Singer\-Clark; Xianda Hou; Carrina Iacobacci; Lee Miller; Leigh Hochberg; David Brandman; Sergey D Stavisky
+
+**ID:** 148803 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=v1KHSSdzcM>) | [PDF](<https://openreview.net/pdf?id=v1KHSSdzcM>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148803>)
+
+Brain\-computer interfaces \(BCIs\) offer a promising solution to speech loss due to neurological injury by decoding intended speech directly from brain activity\. While recent BCIs have restored high\-accuracy text\-based communication, they fail to provide instantaneous voice output essential for the natural flow of conversation\. Brain\-to\-voice BCIs address this gap by decoding voice directly from neural signals\. However, even the state\-of\-the\-art \(SOTA\) BCI\-synthesized voice is not yet intelligible enough for real\-world adoption\. We introduce brain2voice 2\.0, a new multimodal Transformer\-based BCI decoder architecture capable of synthesizing intelligible voice from intracortical neural signals in real\-time\. Brain2voice 2\.0 is trained on continuous and custom\-tokenized acoustic targets and phoneme targets, leveraging their complementary speech information\. We use self\-supervised and adversarial training objectives that enhance acoustic feature quality and improve synthesis intelligibility\. At each 10 ms timestep, the model causally outputs continuous and tokenized acoustic features for real\-time voice synthesis as well as time\-aligned phoneme predictions \(raw phoneme error rate: 7\\%, comparable to the latest brain\-to\-text models\)\. We evaluated this new approach on the publicly available SOTA intracortical brain\-to\-voice benchmark dataset\. Naïve human listeners transcribed brain2voice 2\.0 synthesized voice with a word error rate of 5\.24\\%—an 8$\\times$ improvement in intelligibility over previous results \(43\.75\\%\)\. Brain2voice 2\.0 demonstrates that highly intelligible real\-time voice synthesis from neural signals is achievable, for the first time crossing the intelligibility threshold necessary for clinically viable brain\-to\-voice BCIs for people with paralysis\.
+
+## Scaling Laws and Tradeoffs in Recurrent Networks of Expressive Neurons
+
+**Authors:** Aaron Spieler; Georg Martius; Anna Levina
+
+**ID:** 148161 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=zpewdRsVpA>) | [PDF](<https://openreview.net/pdf?id=zpewdRsVpA>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148161>)
+
+Cortical neurons are complex, multi\-timescale processors wired into recurrent circuits, shaped by long evolutionary pressure under stringent biological constraints\. Mainstream machine learning, by contrast, predominantly builds models from extremely simple units, a default inherited from early neural\-network theory\. We treat this as a normative architectural question\. How should one split a fixed parameter budget $P$ between the number of units $N$, per\-unit effective complexity $k\_e$, and per\-unit connectivity $k\_c$? What controls the optimal allocation? This calls for a model in which per\-unit complexity can be tuned independently of width and connectivity\.  Accordingly, we introduce the ELM Network, whose recurrent layer is built from Expressive Leaky Memory \(ELM\) neurons, chosen to mirror functional components of cortical neurons: multi\-timescale memory, structured synaptic integration, and nonlinear internal computation\. The architecture allows for individually adjusting $N$, $k\_e$, and $k\_c$ and trains stably across orders of magnitude in scale\. We evaluate the model on two qualitatively different sequence benchmarks: the neuromorphic SHD\-Adding task and Enwik8 character\-level language modeling\.  Performance improves monotonically along each of the three axes individually\. Under a fixed budget, a clear non\-trivial optimum emerges in their tradeoff, and larger budgets favor both more \*and\* more complex neurons\. A closed\-form information\-theoretic model captures these tradeoffs and attributes the diminishing returns at two ends to: per\-neuron signal\-to\-noise saturation and across\-neuron redundancy\. Connectivity enters as a related mechanism that helps neurons learn distinct signals\. A hyperparameter sweep spanning three orders of magnitude in trainable parameters traces a near\-Pareto\-frontier scaling law consistent with the framework, mapping the budget\-constrained tradeoff surface between unit count, unit complexity, and connectivity\. This suggests that the simple\-unit default in ML is not obviously optimal once this surface is probed, and offers a normative lens on cortex's reliance on complex spatio\-temporal integrators\.
+
+## Standing on the Shoulders of Giants: Rethinking EEG Foundation Model Pretraining via Multi\-Teacher Distillation
+
+**Authors:** Chenqi Li; Yu Liu; Shuo Zhang; Timothy Denison; Tingting Zhu
+
+**ID:** 150310 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=j4s4yXToW0>) | [PDF](<https://openreview.net/pdf?id=j4s4yXToW0>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150310>)
+
+Pretraining for electroencephalogram \(EEG\) foundation models has predominantly relied on self\-supervised masked reconstruction, a paradigm largely adapted from and inspired by the success of vision and language foundation models\. However, unlike images and text, EEG datasets are notoriously expensive to collect and characterized by low signal\-to\-noise ratio\. These challenges introduce difficulties in scaling the EEG foundation models and capturing the underlying neural semantics through reconstruction\. In this work, we ask the question: can we stand on the shoulders of well\-established foundation models from well\-represented modalities to bootstrap the pretraining of EEG foundation models? We first demonstrate that mainstream foundation models, such as those from vision and time series, transfer surprisingly well to EEG domain\. Motivated by this observation, we propose the multi\-teacher distillation pretraining \(MTDP\) framework for pretraining EEG foundation models via two\-stage multi\-teacher distillation\. In the first stage, we introduce a learnable gating network to fuse representations from diverse teachers \(e\.g\., DINOv3 and Chronos\) via a masked latent denoising objective\. In the second stage, we distill the fused representation into an EEG foundation model\. Extensive evaluations across 2 backbone architectures, 9 downstream tasks and 12 datasets demonstrate that multi\-teacher distillation pretraining consistently outperforms self\-supervised pretraining for EEG foundation model and remains competitive even when the pretraining data is reduced to 25%\.
+
+## A Hebbian Recurrent Neural Network Explains the Hierarchical Geometry of Sequence Memory
+
+**Authors:** Zhitao FENG; Bo Ho; Huan Luo; xiaolong zou; Yuanyuan Mi
+
+**ID:** 149363 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=qb2jbK0rwi>) | [PDF](<https://openreview.net/pdf?id=qb2jbK0rwi>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149363>)
+
+Temporal sequences in working memory are hierarchically organized to support flexible behavior\. Recent neural recordings suggest that this organization relies on a 1D\-to\-2D neural geometrical folding in working memory, whereby ordinal positions are re\-encoded within an orthogonal scaffold, with two dimensions indexing global \(chunk\-level rank\) and local ranks \(within\-chunk position\), respectively\. This findings implicate an important structural  principle for memory, yet the computational mechanisms underlying this geometry remain unclear\. Here, we study this question using a recurrent neural network with fast Hebbian plasticity \(Hebb\-RNN\)\. When meta\-trained on rank recalling tasks, the Hebb\-RNN generalizes to novel item–rank bindings and hierarchical sequences, outperforming control models\. Mechanistic analysis reveals that the network develops an orthogonal ordinal geometry consistent with empirical findings\. This geometry transforms temporal inputs into abstract ordinal ranks that provide a memory scaffold, while Hebbian plasticity supports rapid conjunctive binding of item content to this structure\. Furthermore, the pre\-learned geometric scaffold significantly accelerates learning in novel tasks, supporting efficient transfer\. By incorporating a predictive module, our model extends to real\-world encodings and acquires hierarchical geometry without explicit chunking signals\. Together, our results provide a biologically plausible framework for hierarchical sequence representation, offering new insights into structured memory organization for both neuroscience and machine learning\.
+
+## One\-Time Soft Alignment Enables Resilient Learning without Weight Transport
+
+**Authors:** Jeonghwan Cheon; Jaehyuk Bae; Se\-Bum Paik
+
+**ID:** 154791 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=AvMF6ujTNu>) | [PDF](<https://openreview.net/pdf?id=AvMF6ujTNu>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154791>)
+
+Backpropagation is the cornerstone of deep learning, but its reliance on symmetric weight transport and global synchronization makes it computationally expensive and biologically implausible\. Feedback alignment offers a promising alternative by approximating error gradients through fixed random feedback, thereby avoiding symmetric weight transport\. However, this approach often struggles with poor learning performance and instability, especially in deep networks\. Here, we show that a one\-time soft alignment between forward and feedback weights at initialization enables deep networks to achieve performance comparable to backpropagation, without requiring weight transport during learning\. This simple initialization condition guides stable error minimization in the loss landscape, improving network trainability\. Spectral analyses further reveal that initial alignment promotes smoother gradient flow and convergence to flatter minima, resulting in better generalization and robustness\. Notably, we also find that allowing moderate deviations from exact weight symmetry can improve adversarial robustness compared to standard backpropagation\. These findings demonstrate that a simple initialization strategy can enable robust and effective learning in deep networks without dynamic weight transport, providing a resource\-efficient alternative to standard backpropagation\.
+
+## A latent control model for realistic rodent motion
+
+**Authors:** Aidan Sirbu; Charles Y Zhang; Yuanjia Yang; Bence Olveczky; Talmo Pereira; Blake Richards
+
+**ID:** 148187 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=zebI1xXFB1>) | [PDF](<https://openreview.net/pdf?id=zebI1xXFB1>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148187>)
+
+The development of embodied models of animal behavior is a major goal of the neuro\-AI community\. Embodied models will enhance our ability to make direct comparisons between biological and artificial agents\. To make such comparisons effective, though, we need embodied models that actually move like animals\. Previous work has developed virtual animal bodies and techniques for training realistic motion through imitation\. However, to\-date, there is no system for embodied animal modeling that produces natural movements both during trained, goal\-directed behavior, and during exploration driven by random generation\. Here, we introduce Simulated Control via Augmented Motor Priors for Embodied Reinforcement learning \(SCAMPER\), a system for training an embodied virtual rat model, enabling natural movements during both goal\-directed behavior and random exploration\. SCAMPER uses a variational architecture with two distinct priors, a motion prior for control and a behavior prior for exploration\. We show that combining both of these priors allows SCAMPER to generate realistic behavior during exploration and exploit the task structure effectively\. As well, SCAMPER can learn from sparse rewards as a result of the diverse movements induced by the behavior prior, allowing the system to model realistic sparse reward tasks from experimental neuroscience\. Altogether, SCAMPER provides the neuro\-AI community with an effective new system for training embodied models of rodents on realistic tasks\.
+
+## Pixels over Symbols: Sensory Realism Improves Behavioral Alignment in Models of Cognition
+
+**Authors:** Mark Bai; Xiaoxuan Lei; Zihan Weng; MOTAHAREH POURRAHIMI; Lucas Gomez; Pouya Bashivan
+
+**ID:** 153571 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=KPqWTVFc4d>) | [PDF](<https://openreview.net/pdf?id=KPqWTVFc4d>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153571>)
+
+Computational models of cognition have traditionally relied on abstract symbolic inputs that approximate sensory experiences with simplified vector representations\. This simplification reflects historical computational constraints and a long\-held assumption that the details of sensory realism are incidental to the study of cognitive processes\. Recent advances have enabled the development of sensory\-realistic models capable of performing diverse cognitive tasks, yet whether sensory realism meaningfully shapes cognition has not been formally established\. We directly address this gap through a large\-scale empirical comparison of abstract and sensory\-realistic neural network models trained on a battery of memory\-dependent decision\-making tasks\. Our results show that sensory\-realistic models mirror human behavioral response patterns significantly more accurately than their abstract counterparts, though a substantial gap to human internal behavioral consistency remains even for the best tested models\. By analyzing the internal dynamics of these systems, we demonstrate that the recurrent dynamics in abstract models is not inherently divergent from that in natural models\. In fact, frozen abstract\-trained weights can efficiently solve cognitive tasks from sensory\-realistic inputs, however, at the cost of diverging the dynamics from their original configuration\. Together, our findings argue that sensory realism is a primary determinant of human\-like behavior in artificial systems, suggesting that findings obtained from abstract task models in neuroscience should be more carefully interpreted in light of their potential behavioral limitations\.
+
+## NEvo: Neural\-Guided Evolutionary Video Synthesis for Dynamic Visual Selectivity
+
+**Authors:** Yingtian Tang; Sogand Salehi; Ming Zhou; Amir Zamir; Leyla Isik; Martin Schrimpf
+
+**ID:** 148984 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=tfCRRsKi3E>) | [PDF](<https://openreview.net/pdf?id=tfCRRsKi3E>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148984>)
+
+The human brain processes dynamic visual input through hierarchically organized, functionally specialized regions\. While recent in silico brain encoding models can synthesize optimal stimuli to probe selectivity in different brain regions, prior work has been largely limited to static images, leaving dynamic visual processing underexplored\. We introduce a novel neural\-guided video synthesis framework that generates stimuli optimized for target brain regions across visual cortex\. Our method performs evolutionary search over a structured prompt space, guided by a dynamic encoding model that predicts voxel\-level responses to video inputs\. By maximizing predicted activity for a target ROI, the framework efficiently discovers hyper\-activating dynamic stimuli that consistently surpass handcrafted localizer videos\. The synthesized videos recover known selectivities across ventral, dorsal, and lateral pathways, and further reveal systematic differences in sensitivity to temporal dynamics\. A searchlight analysis provides new insight into the progression toward increasingly complex social\-dynamic features along the lateral stream, further supported by probing with synthesized abstract, non\-naturalistic stimuli\. Taken together, our framework enables in silico exploration of dynamic visual selectivity, with new predictions for in vivo experiments\.
+
+## BRIDGE: Brain\-Vision Representation Integration through Depth and Granularity Encoding
+
+**Authors:** Chenyuan Hong; Binghao Ye; Yufei Guo; Guoqi Li
+
+**ID:** 155233 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=7GEZxlwjaN>) | [PDF](<https://openreview.net/pdf?id=7GEZxlwjaN>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155233>)
+
+Decoding visual content from non\-invasive brain signals remains challenging because neural responses evolve over time whereas images are typically static\. Most existing methods align an entire neural response window to a single final visual embedding, this overlook a fundamental representational mismatch: brain signals reflect both early perceptual and later integrative representations, whereas the final visual embedding is biased toward high\-level semantics\. Therefore, we propose BRIDGE, a brain\-vision representation integration framework that aligns two modalities through Visual Depth Encoding and Brain Granularity Encoding\. On the visual side, BRIDGE extracts and fuses CLIP representations from multiple depths, producing an alignment target that preserves low\-level and high\-level information\. On the brain side, instead of treating the whole temporal window as homogeneous and obscuring temporally heterogeneity, BRIDGE explicitly partitions stimulus\-evoked EEG/MEG responses into a small number of temporally ordered stages and adaptively pools them\. The resulting brain and visual embeddings are trained in a shared latent space by contrastive learning and can further support brain\-to\-image generation through a pretrained diffusion prior\. Experiments on THINGS\-EEG and THINGS\-MEG demonstrate that BRIDGE achieves strong retrieval and generation performance\. Ablation studies further confirm the complementary benefits of depth\-wise visual aggregation and temporal brain factorization\.
+
+## FETTUCCINE: Fast and efficient brain\-to\-text decoding on mobile devices
+
+**Authors:** Jonathan McCart; Pranav Deevi; Mehdi Azabou; Nanda H Krishna; Caleb A McKinney; Nicholas S Card; Sergey D Stavisky; Chethan Pandarinath
+
+**ID:** 150728 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=fqsWkQnA9w>) | [PDF](<https://openreview.net/pdf?id=fqsWkQnA9w>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150728>)
+
+Recent advances in speech neuroprostheses have enabled new communication avenues for people who have lost the ability to speak due to neurological illness or injury\. These systems can decode neural activity during attempted speech into text by relying on language priors to achieve high decoding accuracy\. This performance currently comes at the cost of using a compute\-intensive language modeling stack, presenting a major bottleneck for real\-world use\. Further, current language models incur highly variable and disruptive inference latencies, limiting communication throughput and preventing users from reliably participating in natural conversation\. We introduce FETTUCCINE, an end\-to\-end brain\-to\-text framework that leverages the speed and portability of automatic speech recognition \(ASR\) models to address the aforementioned practical challenges, while achieving usable \(&lt;10%\) word error rates \(WER\), efficient adaptation to neural non\-stationarities, and reliable performance on mobile devices\. When evaluated using publicly available data from an intracortical speech neuroprosthesis user, FETTUCCINE outperforms previous end\-to\-end methods, achieving as low as 4\.39% WER\. Most notably, our models successfully run on a commercially\-available mobile device with throughput reaching up to 370x real\-time, providing the first demonstration of brain\-to\-text decoding on a mobile device\. We also show that our models can be successfully finetuned to extend usable performance to future days\. Beyond performance, our approach enables localization of the neural features most relevant for decoding via gradient\-based salience maps, which we show align with well\-established physiological priors across different ASR model families\. Taken together, our results show that FETTUCCINE overcomes core infrastructural and computational barriers, yielding a new class of portable brain\-to\-text communication\.
+
+## Direct Conditioning of Audio Diffusion Transformers on fMRI Reveals Cortical Contributions to Sound Reconstruction
+
+**Authors:** Matteo Ciferri; Tonio Weidler; Matteo Ferrante; Nicola Toschi; Elia Formisano
+
+**ID:** 152995 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=OlCa72ym7P>) | [PDF](<https://openreview.net/pdf?id=OlCa72ym7P>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152995>)
+
+Reconstructing audio from brain activity remains challenging\. A key limitation lies in current audio diffusion models, which are primarily designed for text\-based conditioning and lack mechanisms to incorporate non\-linguistic continuous signals such as neural responses\. While recent work in the visual domain has explored direct conditioning on brain activity, this approach has not yet been extended to audio diffusion models\. We introduce a framework that directly guides a latent audio diffusion model with fMRI signals, avoiding intermediate feature prediction for the conditioning stage\. Central to our approach is a transformer\-compatible adapter that enables the integration of non\-linguistic representations into the cross\-attention layers of diffusion transformers \(DiTs\)\. Although motivated by neural decoding, this adapter provides a general mechanism for conditioning audio diffusion models on arbitrary continuous inputs, not inherently limited to neural signals\. We demonstrate consistent improvements over baselines, including two\-stage fMRI\-to\-latent conditioning, across both acoustic and semantic evaluation metrics\. In addition, we introduce a fidelity metric grounded in a computational model of auditory neural processing, which allows us to quantify the contribution of individual auditory cortical regions to reconstructed audio representations\.
+
+## FracEncoder: Towards Adaptive Cognitive Trajectories via Fractional\-Order Context Encoding
+
+**Authors:** Lulu Wang; Shengling Wang; Anlin Chen; Ke Chao; Weicheng Wang
+
+**ID:** 148356 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=yUT3YSeo8K>) | [PDF](<https://openreview.net/pdf?id=yUT3YSeo8K>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148356>)
+
+In real\-world tasks such as robotic control and autonomous driving, agents often face non\-Markovian environments due to incomplete observations\. Solving such information\-impoverished decision tasks requires reconstructing the context from history\. However, existing recurrent encoders have two fundamental limitations: First, the model suffers from a Markovian compression bottleneck, i\.e\., it only processes observation history as input but neglects thought process history\. This leads to the loss of deep semantic cues from early interactions, which are easily overwritten by noise over time due to recursion\. Second, it lacks the adaptive capability to adjust the memory span for different tasks\. To address these limitations, we propose FracEncoder, a context encoder based on fractional\-order neural differential equations\.  First, FracEncoder leverages the nonlocal property of the fractional\-order derivative and uses a power\-law kernel to directly incorporate the trajectory of the thought process into the evolution of the current state, effectively overcoming the temporal locality limitations of traditional models\. Second, the fractional order $\\alpha$ is set as an end\-to\-end learnable parameter\. It explicitly characterizes how strongly the system anchors to its history, so the model can discover a suitable memory span for each task\. We evaluate FracEncoder on more than ten benchmarks across three settings, namely partially observable tasks, meta reinforcement learning, and delayed\-observation control\. FracEncoder consistently matches or outperforms representative baselines, including GPIDE, GRU\-ODE, ReSeL, and LRU\. On the challenging 8\-step delayed\-observation task, it reaches average returns of $\-511\.5 \\pm 7\.9$ on Pendulum and $732\.1 \\pm 152\.7$ on Hopper\. As a plug\-in module, FracEncoder also yields stable gains across different reinforcement learning algorithms\. Ablation studies further show that the learned $\\alpha$ aligns with the intrinsic memory demand of each task, providing an interpretable physical measure of the cognitive complexity of non\-Markovian tasks\. The code is available at https://anonymous\.4open\.science/r/FracEncoder\-60BA\.
+
+## Predictive Representation Learning for Partially Observed Neural Dynamics
+
+**Authors:** Xinyi Li; Zhichao Liang; Hongjun Jiang; Yian Zhu; Guanyi Zhao; Xuejian Yang; Xiaoqi Chen; Kexin Lou; Quanying Liu
+
+**ID:** 151732 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=YVQoWXsmt9>) | [PDF](<https://openreview.net/pdf?id=YVQoWXsmt9>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151732>)
+
+In long\-term multi\-session neural recordings, the same latent population dynamics are often observed through changing subsets of neural channels due to electrode drift, signal instability, or session\-dependent recording variability\. This creates a partially observed system\-identification problem: each session provides only an incomplete view of a shared dynamical system, and missing channels are not merely absent inputs but unobserved variables coupled to the same latent dynamics\. Existing approaches often rely on observation\-pattern\-specific mapping, which treats missing channels passively and leaves the shared latent dynamics weakly constrained\. We propose CHAMA \(CHannel\-Aware Masked Attention\), a mask\-conditioned predictive representation learning framework for identifying shared neural dynamics under heterogeneous channel availability\. CHAMA introduces a single global observation interface conditioned on channel\-availability masks, allowing observed and unobserved channels to jointly constrain latent dynamics\. The key idea is bidirectional: missing channels impose structural constraints on the latent representation, while the learned latent dynamics enable principled recovery of missing activity\. To improve identifiability under sparse observations, CHAMA aggregates causal temporal windows, effectively trading temporal context for missing spatial information\. Across synthetic dynamical systems and real multi\-session neural recordings, CHAMA improves missing\-channel completion, forecasting, latent dynamical fidelity, and downstream behavioral decoding over conditional adapter, zero\-padding, and masked\-autoencoding baselines\. These results show that dynamics\-aware recovery preserves globally consistent and behaviorally relevant structure beyond point\-wise reconstruction accuracy\. The source code is available at: \\url\{https://anonymous\.4open\.science/r/CHAMA\-D691\}\.
+
+## Neuro\-KE: Knowledge\-Guided Interfaces for Semantically Grounded EEG Foundation Models
+
+**Authors:** 涵睿 陈; Xiang Chen; Haotian Deng; Kexin Lou; Shinan Wang; Chen Wei; Quanying Liu
+
+**ID:** 153319 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=MCJdyjyfDw>) | [PDF](<https://openreview.net/pdf?id=MCJdyjyfDw>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153319>)
+
+Foundation Models for Electroencephalography \(EEG\) are trained with masked reconstruction, contrastive alignment, and language\-model interfaces, yet their learned representations remain difficult to inspect: raw EEG lacks canonical token semantics, and models may preserve waveform detail while discarding physiologically meaningful structure\. We introduce Neuro\-KE \(Neuro\-Knowledge Engine\), a knowledge interface that computes EEG descriptors without additional human annotation and renders them as paradigm\-specific supervision for semantic grounding\. Rather than using handcrafted features as standalone classifiers, Neuro\-KE converts the same domain knowledge into numeric prediction targets, feature\-state text anchors, and feature\-grounded instruction answers\. Across three interfaces, Neuro\-KE improves aggregate grounding and transfer metrics, with task\-dependent exceptions: it improves balanced accuracy \(BAcc\) by 2\.60 points over reconstruction\-only masked pretraining across 12 datasets and three backbones, improves six\-dataset EEG\-\-text validation BAcc by 2\.23 points over label\-only anchors, and improves EEG\-MLLM feature\-grounded generation to ROUGE\-L F1 0\.607 and BERTScore F1 0\.929\. These results suggest that established EEG descriptors can serve as reusable grounding signals for inspecting and supervising EEG foundation\-model interfaces\.
+
+## Emotion\-Trained Vision Models Do Not Necessarily Learn EEG\-Aligned Facial Dynamics
+
+**Authors:** Mariem Ben Slimen; Hamza Abdelhedi; Vanessa Hadid; Karim Jerbi
+
+**ID:** 150276 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=jMlzffZ5UW>) | [PDF](<https://openreview.net/pdf?id=jMlzffZ5UW>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150276>)
+
+Facial expressions are one of the main ways humans communicate affect, but they are not static signals\. In natural vision, expressions evolve over time, with facial movements emerging, intensifying, and changing as emotion is expressed\. Prior model\-brain studies based on static images suggest that vision models can capture aspects of face\-related neural representations, but it remains unclear whether artificial vision models capture the temporal EEG dynamics of facial emotion perception\. We test the hypothesis that models trained for facial emotion recognition, especially video\-based or temporally structured models, should show stronger alignment with human EEG dynamics than randomly initialized controls\. We do so by aligning model representations with time\-resolved EEG representational geometry from 25 participants viewing one\-second dynamic facial\-expression videos\. We compare six models spanning static\-image, video\-based, self\-supervised, and vision\-language representations: ResNet18, VGGFace, CNN2D, CNN3D, DINOv2\-temporal, and Qwen2\.5\-VL\. Contrary to this hypothesis, supervised facial\-emotion training does not consistently increase alignment with human EEG dynamics\. In particular, video\-trained and temporally structured emotion models align less with fear\-related EEG geometry than the same architectures with randomly initialized weights, whereas static\-image emotion models show trained\-versus\-random differences close to zero\. These results are robust to stricter noise\-ceiling thresholds and are not explained by actor identity or raw pixel similarity\. Exploratory analyses further suggest that peak alignment is often localized to the first or last sampled video frames, and that fear alignment varies across scalp ROIs by training regime\. Overall, our results challenge the assumption that video\-based emotion supervision automatically yields more brain\-like dynamic representations of facial emotion\.
+
+## MAGE: Towards Generalizable Multi\-timescale EEG Representations
+
+**Authors:** Tuan\-Kiet Doan; Van Chien Nguyen; Trung\-Hieu Tran; Quang Hung Pham; Ngoc\-Son Vu; Huy Phan; Phi Le Nguyen; Duc\-Han LE; Nikola Simidjievski; Van\-Tam Nguyen
+
+**ID:** 151203 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=cBtjuprKBt>) | [PDF](<https://openreview.net/pdf?id=cBtjuprKBt>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151203>)
+
+Electroencephalography \(EEG\) data plays an important role in understanding human brain activity, with various major applications\. While current approaches, which largely build on EEG foundation models, have demonstrated strong performance across datasets and tasks, they typically rely on a fixed temporal scale\. This design choice limits their ability to capture characteristics of neural dynamic behavior, often spanning across multiple timescales, which are naturally captured in EEG recordings\. To address this limitation, we propose MAGE \( Multi\-timescale Adaptive Generalization for EEG \), a foundation model that dynamically adapts to capture and integrate information across different timescales\. Specifically, MAGE combines two key mechanisms: \(i\) a novel multi\-timescale attention mechanism, capable of learning representations across multiple temporal scales, and \(ii\) a trainable aggregation module that dynamically identifies and adapts to the most informative timescale of the input signal\. Experimental results across seven datasets demonstrate that MAGE consistently outperforms existing EEG foundation models while using substantially fewer parameters\. Moreover, our results support the hypothesis that different downstream tasks benefit from distinct temporal scales\. All source code will be released\.
+
+## LAtte: Hyperbolic Lorentz Attention for Joint\-Subject EEG Classification
+
+**Authors:** Ahmad Bdeir; Johannes Burchert; Tom Hanika; Lars Schmidt\-Thieme; Niels Landwehr
+
+**ID:** 148511 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=xJmDiWStRz>) | [PDF](<https://openreview.net/pdf?id=xJmDiWStRz>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148511>)
+
+Electroencephalogram \(EEG\) classification plays a key role in medical diagnosis and brain–computer interfaces, but remains challenging due to low signal\-to\-noise ratios and high inter\-subject variability\. As a result, many existing approaches rely on subject\-specific models, which fail to exploit shared structure in neural signals and do not generalize to unseen subjects\. To address these limitations, we propose LAtte, a framework that combines Lorentz attention with a hyperbolic InceptionTime\-based encoder to improve cross\-subject generalization in EEG classification\. The model explicitly decomposes EEG signals into a learned baseline component and task\-relevant deviations, enabling more structured representation learning\. To further improve robustness and adaptability, we incorporate subject\-specific low\-rank adaptation \(LoRA\) modules at both encoder and decoder levels, augmented with a Lorentz boost–based LoRA mechanism and hyperbolic projection layers to reduce overfitting in geometric representations\. We evaluate LAtte with and without finetuning in three settings: subject\-specific, subject\-conditional, and leave\-one\-subject\-out \(LOSO\) on five established EEG datasets, achieving a consistent improvement in performance over current state\-of\-the\-art methods for smaller datasets and maintaining performance for larger datasets\.
+
+## AuGhostmentation: The Eyes Never Stand Still—$\\textit\{Why Should CNNs?\}$
+
+**Authors:** Emirhan Inan; Suayb Arslan
+
+**ID:** 152194 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=UrYjjK6We7>) | [PDF](<https://openreview.net/pdf?id=UrYjjK6We7>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152194>)
+
+Convolutional Neural Networks \(CNNs\) draw broad inspiration from the primate visual system yet prove notoriously brittle under common image corruptions, whereas the latter suffers little from such degradations\. Extending beyond this initial inspiration, architectures incorporating quantifiable biological priors that enhance network resilience are increasingly gaining traction\. Nevertheless, most of these approaches have so far been confined to emulating the higher visual areas, seldom utilizing the upstream retinal stages that constitute the very basis of $\\textit\{seeing\}$\. At its core, primate vision relies on photons captured by retinal photoreceptors, the signals of whose conversion are then relayed through the Lateral Geniculate Nucleus \(LGN\) to primary visual cortex \(V1\) and further downstream for additional processing\. Because cone photoreceptors are densest at the center of the retina \(fovea\), the eyes must be repositioned continuously \(saccade\) to direct the high\-acuity macula toward objects of interest \(fixation\)\. Furthermore, the resultant rapid eye movements induce intra\-saccadic motion streaks that putatively aid in the spatiotemporal processing of inputs and provision of translation\-invariant object correspondence across frames\. Motivated by this mechanism, we propose $\\texttt\{AuGhostmentation\}$, a portmanteau of $\\textit\{augmentation\}$ and $\\textit\{ghosting\}$, which delivers the intra\-saccadic retinal smear as a frontend transform\. Superimposing the $\\textit\{ghosted\}$ images—fainter counterparts—atop the original, based on human oculomotor statistics, the resultant datum elicits $\\textit\{retinal persistence\}$ by integrating varied recompositions of the scene in a single representation, closely mimicking the foveal exploration scheme intrinsic to dynamic primate vision\. When prepended to ResNet\-18 trained on Tiny ImageNet, $\\texttt\{AuGhostmentation\}$ retains 98% validation accuracy while delivering a striking 60% relative gain in robustness on Tiny ImageNet\-C\. Applied to VOneNet, it likewise preserves 98% classification accuracy and yields a substantial 25% relative increase in compounded robustness\. For ImageNet\-100, the introduced $\\textit\{ghosts\}$ not only improve the corruption accuracy relative to the ResNet\-50 baseline by 23%, but the clean accuracy by 4%, also\. Building on these resilience gains, $\\texttt\{AuGhostmentation\}$ outpaces competing augmentations by up to 18% and baseline ResNet\-50 by up to 37% on stylized tests, suggesting that retinal priors naturally foster shape\-biased processing and thereby provide greater alignment with human object recognition\.
+
+## Accuracy of Noise Ceiling Estimators for Brain Scores
+
+**Authors:** Aude Maier; Lucas Gruaz; Martin Schrimpf; Johanni Brea
+
+**ID:** 154840 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=AWvO8s9XuP>) | [PDF](<https://openreview.net/pdf?id=AWvO8s9XuP>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154840>)
+
+The internal activations of modern machine learning models align surprisingly well with the activities recorded in real brains\. In the last five years, the alignment between encoding models and brain activities, often called brain scores, has steadily increased\. Because brain recordings are noisy, there exists an upper bound to the brain scores that any model can achieve\. This bound, called the noise ceiling, is crucial for two reasons: it determines whether further improvements in model performance are possible, and it enables meaningful comparisons of brain scores across benchmarks\. The field has developed multiple approaches to estimate noise ceilings, but the statistical properties of existing estimators remain poorly understood, leaving it unclear in which experimental settings they provide reliable estimates\. Here, we introduce a unified mathematical framework for brain recordings, use it to derive closed\-form expressions for four commonly used noise ceiling estimators, and provide theoretical predictions for the behavior of each estimator\. We validate the theoretical predictions with simulations that we compare to noise ceiling estimates in existing fMRI datasets\. We find that the existing methods underestimate the true noise ceiling in many settings\. We conclude with recommendations for best practice in different situations\.
+
+## Cephalonauts One: A deep fMRI dataset for decoding naturalistic speech in the human brain
+
+**Authors:** Antoine Collas; Louis Jalouzot; Géraud Ilinca; Corentin Caris; Romain Valabregue; Ahmed Hassayoune; David Gonçalves; Madeleine Hueber; Thaddée Delebarre; Savatovsky Julien; Clara Fonteneau; Charles Maussion; Bertrand Thirion; Alexis Thual
+
+**ID:** 139123 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=jqqDfxmqO5>) | [PDF](<https://openreview.net/pdf?id=jqqDfxmqO5>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139123>)
+
+Cephalonauts One is a whole\-brain 3 Tesla \(3T\) functional magnetic resonance imaging \(fMRI\) dataset recorded while subjects listened to audio podcasts\. Three healthy subjects underwent multiple scanning sessions, each consisting of five 15\-minute runs, while listening to podcasts in their native language\. The current release contains 14, 20, and 17 hours of fMRI data per subject, respectively, making it one of the deepest per\-subject fMRI datasets with naturalistic speech stimuli available\. The dataset pairs brain activity with the corresponding podcast audio, transcript annotations, and derived stimulus embeddings\. Furthermore, we introduce a brain decoding benchmark formulated as audio segment retrieval: given fMRI activity from a held\-out session, the decoder must identify the corresponding time\-aligned podcast audio segment among candidate segments\. We provide standardized splits, evaluation metrics, and baseline decoders for this task\. Finally, a scaling analysis shows that decoding performance improves continuously with the amount of training data per subject\.      Data &amp; code: https://huggingface\.co/datasets/karavela/cephalonauts\_one
+
+## On Observation Time for Recovering Latent Hawkes Networks
+
+**Authors:** Jonas Linkerhägner; Michele Bortolasi; Lorenzo Baldassari; Maarten V\. de Hoop; Ivan Dokmanić
+
+**ID:** 148999 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=tZwHSbbaof>) | [PDF](<https://openreview.net/pdf?id=tZwHSbbaof>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148999>)
+
+Dynamics of interacting systems in engineering, society, and nature often evolve over latent networks that govern which entities can interact\. We study the problem of inferring these networks from event\-based observations, which arise naturally in finance, seismology, and neuroscience\. While there is substantial algorithmic work addressing this important problem, theoretical results are scarce\. In this paper we ask the following fundamental question: what is the minimum time that one must observe the dynamics in order to exactly recover the underlying network, as a function of the number $d$ of interacting entities? For a class of stationary Hawkes processes with sparse, weak interactions, we prove that an observation time of order $\\log d$ is sufficient and necessary\. For the upper bound we construct a two\-stage estimator that uses clipped and binned event data for screening, followed by a least\-squares refinement, and apply concentration bounds derived from the Poisson cluster representation\. For the lower bound we combine Fano’s inequality with Jacod’s Girsanov formula for point processes on a suitable subclass of networks\.
+
+## Neuro\-Inspired Inverse Learning for Planning and Control
+
+**Authors:** Maryna Kapitonova; Tonio Ball
+
+**ID:** 154231 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=FF1dzX9agi>) | [PDF](<https://openreview.net/pdf?id=FF1dzX9agi>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154231>)
+
+We present a neuro\-inspired framework for embodied planning and control\. Building on three principles that enable fast and highly effective goal\-directed behavior in the mammalian brain — paired forward/inverse internal models, open\-loop multi\-step motor commands, and sequential organization of action — our \*Inverter\* framework combines analytic and trained components, the latter trained end\-to\-end through \*Inverse Learning\* \(IL\), a paradigm we formalize and delineate from supervised, reinforcement, and imitation learning\. IL bridges RL\-style amortization, which runs in a single forward pass but emits one action at a time, and optimal\-control\-style sequence reasoning, which plans whole trajectories but with iterative test\-time computation\. Single Inverters or hierarchical n=2 Inverter stacks match or improve over comparable offline\-RL and diffusion\-planner baselines on all 3 \`maze2d\-v1\` and 6 \`antmaze\-v2\` D4RL variants by an average of $\+24\.2\\%$ \(range $\-1\.9\\%$ to $\+78\.2\\%$\), at one\-to\-two orders of magnitude less inference compute\. As one mechanism behind this effectiveness, we show that Inverters can learn control policies closer to the analytic optimum than the data\-generating policy itself\. We also identify a failure mode of IL: forward\-model hacking under narrow training\-data coverage, which we mitigate by using \*random\* training data with broader coverage\. As an application example, a Pulse Inverter synthesizes arbitrary single\-qubit quantum gates with fidelity matching the standard iterative numerical baseline \(GRAPE\), at more than $1000\\times$ lower per\-gate compute\. We propose deeper hierarchical, probabilistic, and latent extensions of the Inverter framework as a differentiable world\-interface, especially for latency\- and compute\-critical embodied AI\.
+
+## Training a Predictive Coding Network on ImageNet using Equilibrium Propagation
+
+**Authors:** Tugdual Kerjan; Rasmus Høier; Benjamin Scellier
+
+**ID:** 155056 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=8nLDF6mZEp>) | [PDF](<https://openreview.net/pdf?id=8nLDF6mZEp>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155056>)
+
+Equilibrium Propagation \(EP\) is a training framework for energy\-based models \(EBMs\) that has attracted interest in the context of neuromorphic computing platforms such as continuous Hopfield networks, nonlinear resistive networks and coupled phase oscillators\. However, EP's practical applications have so far remained limited to relatively small\-scale problems\. Predictive coding networks \(PCNs\), another class of EBMs rooted in computational neuroscience, are typically trained with a specialized algorithm and have likewise not yet been demonstrated at large scale\. In this work, we develop a more effective training method for PCNs which combines the centered variant of EP with a novel equilibration scheme for PCNs\. Using this approach, we train a 10\-layer convolutional PCN \(VGG10\) on full\-size ImageNet, achieving 13\.23% test error rate on the top\-5 classification task, close to the 12\.2% backpropagation baseline\. To our knowledge, this is the first demonstration of both PCNs and EP\-based training at ImageNet scale\. These results significantly extend the scalability of both approaches and suggest that the primary challenges in scaling EP in other EBMs may not be attributed to inherent limitations of the EP framework\.
 
 ## From sequences to schemas: low\-rank recurrent dynamics underlie abstract relational representations
 
@@ -1054,147 +1036,85 @@ Perceptual decisions unfold in time: noisy evidence is integrated until a commit
 
 Emotion understanding is a core capability for LLMs to interact effectively with humans, yet existing evaluation paradigms rely on discrete emotion label prediction and fail to capture the cognitive processes underlying emotion generation\. Grounded in appraisal theory, we introduce CAREBench, the first benchmark with complete inferential chain annotations from both first\- and third\-person perspectives on real\-world narratives, spanning appraisal reasoning, appraisal ratings, and multi\-label emotion annotation\. We propose a process\-level evaluation framework and conduct systematic experiments across six LLMs organized around four research questions\. We find that stronger models match or surpass human observers on certain tasks, yet fall short on appraisal reasoning and positive emotion recognition; performance across chain steps and sensitivity to appraisal interventions exhibit dissociations across models; and current models have not internalized the mechanisms needed to capture human subjective heterogeneity\. These findings suggest that downstream emotion prediction metrics may overestimate LLMs' true emotion understanding, and CAREBench provides a foundation for more diagnostically informative evaluation of LLMs' affective cognitive capabilities\.
 
-## A Scientific Claim Stability Framework for Evaluating MRI Morphometry Pipelines
+## Predicting Only from Selected Evidence: A Tempered Product\-of\-Experts Bottleneck for Auditable EEG Diagnosis
 
-**Authors:** Duy\-Cat Can; Dang\-Duat Tran; Anh\-Khang Nguyen; Bao Tran; Trung\-Hieu Do; Van T Nguyen; Duy\-Thanh VU; Oliver Y Chén; Hoang\-Quynh Le
+**Authors:** Yinghao WANG; Shujian Yu; Duc\-Han LE; Zhikai Yu; Changming Wang; Van\-Tam Nguyen
 
-**ID:** 139330 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+**ID:** 150685 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=WgIesR9ByR>) | [PDF](<https://openreview.net/pdf?id=WgIesR9ByR>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139330>)
+[Paper](<https://openreview.net/forum?id=gGPUE5wzpp>) | [PDF](<https://openreview.net/pdf?id=gGPUE5wzpp>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150685>)
 
-MRI morphometry pipelines are often evaluated by measurement agreement or downstream accuracy, yet their scientific value depends on the conclusions they support\. This creates a gap: two pipelines may look similar at the feature level while supporting different conclusions about aging, cognitive decline, or neurodegeneration\. To bridge this disparity, here we propose Scientific Claim Stability \(SCS\), a reusable claim\-centric evaluation framework that converts region\-of\-interest \(ROI\) morphometry tables into interpretable claim cards and tests whether each claim remains supported under realistic perturbations\. To demonstrate the efficacy of SCS, we evaluate it on 10,370 MRI scans from three datasets and five cohorts, generating 2,783 claim cards and evaluating 89 claim\-family pairs across dataset, pipeline, atlas, feature\-family, and target shifts\. SCS identifies claims that are stable, transferable, or fragile, and reveals high\-concordance fragile\-support cases where evidence vectors remain similar while supporting regions change\. To assess claim plausibility, clarity, faithfulness, usefulness, and caution level, we further implement and compare an expert \(including geriatrics, neuroscience, and radiology\) review workflow and an LLM \(including ChatGPT and Gemini\) review workflow\. Our results suggest claim\-level evaluation as a practical standard for auditing MRI morphometry pipelines without requiring a universal gold standard\.
+Pretrained EEG backbones improve transfer performance, but downstream diagnostic heads remain difficult to audit: predictions are typically computed from unconstrained hidden representations, while explanations are often generated only post hoc\. We introduce tPoE\-EIB, an $\\textit\{evidence\-information bottleneck\}$ head for adapting EEG backbones under an evidence\-only prediction constraint\. tPoE\-EIB selects temporal and channel\-specific evidence, maps the resulting summaries to Gaussian experts over a shared latent variable, and fuses them via a tempered product\-of\-experts posterior\. The classifier conditions exclusively on this latent variable, yielding an explicit decision pathway whose information flow is constrained by the expected posterior KL divergence\. This formulation induces a tractable supervised objective with an information\-rate penalty, while the closed\-form tempered posterior mitigates overconfident aggregation of correlated evidence sources\. We evaluate tPoE\-EIB on pretrained EEG foundation model backbones across six diagnostic tasks: event\-type classification, abnormality detection, seizure detection, cognitive decline staging, depression screening, and cerebrovascular disease classification\. The evaluation spans public benchmarks and in\-house clinical cohorts, covering both binary screening and fine\-grained staging, as well as sparse and dense electrode montages\. tPoE\-EIB maintains competitive balanced accuracy while outperforming representative post\-hoc explanation methods on selection\-faithfulness audits, including insertion–deletion and gate\-causality tests\. Its structured posterior further supports integration\-faithfulness evaluations, including expert\-drop, posterior\-reliance, and expert\-disagreement tests\. Overall, these results suggest that evidence\-only, rate\-limited fusion is a practical approach to building auditable diagnostic models on top of frozen EEG foundation backbones\.
 
-## FAST\-Brain: A Flow\-Aligned Spatio\-Temporal Surrogate Brain Model
+## Solving Stochastic Control under Multiplicative and Internal Noise via Constrained Optimization
 
-**Authors:** Shucheng Liu; Chengchun Shi; Kai Zhang; Hongtu Zhu
+**Authors:** Ruben Moreno Bote; Francesco Damiani; Dmytro Grytskyy
 
-**ID:** 149330\-\-3 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+**ID:** 148806 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-**Repeated source row:** 149330
+[Paper](<https://openreview.net/forum?id=uzMEs1gPQ6>) | [PDF](<https://openreview.net/pdf?id=uzMEs1gPQ6>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148806>)
 
-[Paper](<https://openreview.net/forum?id=qu1GlOKsSN>) | [PDF](<https://openreview.net/pdf?id=qu1GlOKsSN>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149330>)
+Multiplicative motor and observation noise, along with internal noise corrupting computation, are central features of the sensorimotor system in biological and robotic agents\. Yet, analytical solutions for stochastic optimal control are largely restricted to additive noise models and neglect internal noise\. Here, we consider the problem of finding optimal control and filter laws for partially observable stochastic linear systems under quadratic costs with multiplicative control and observation noise, as well as internal noise\.  We provide an efficient, analytically derived coordinate\-descent algorithm that computes mutually optimal linear control and filter laws by reformulating the problem as a constrained optimization\. Our method provably guarantees monotonic decrease of the expected cost and convergence to a critical point, and overcomes the suboptimality and incompleteness of prior analytical approaches\. Compared to state\-of\-the\-art numerical methods, it achieves orders\-of\-magnitude computational speedups\. Our solution also proves instrumental in revealing novel internal\-noise\-dependent, task\-structured control strategies in a redundant arm control task\.
 
-Modeling resting\-state functional magnetic resonance imaging \(rs\-fMRI\) data is crucial for understanding brain\-wide neural activity\. However, traditional methods struggle to capture complex temporal dynamics over long horizons, to account for the brain's anatomical spatial structure, and to model high\-dimensional ambient signals that lie on a low\-dimensional intrinsic subspace\. We propose FAST\-Brain, a unified flow\-aligned spatio\-temporal surrogate brain model that addresses all three challenges\. At its core is a flow\-aligned generative framework that directly predicts the clean blood\-oxygen\-level\-dependent \(BOLD\) signal, paired with a graph convolutional network that captures spatial structural constraints and a Transformer that models long\-range temporal dependencies\. Theoretically, we show that under a low\-dimensional subspace assumption,  the approximation error of our model scales with the intrinsic dimension rather than the ambient dimension, which justifies our direct modeling of the BOLD signal\. Extensive experiments on synthetic and Human Connectome Project datasets demonstrate that FAST\-Brain achieves state\-of\-the\-art performance in recovering functional connectivity, effective connectivity, and the implicit low\-dimensional signal subspace\.
+## Peer Review of Applied Machine Learning Papers Must Include Code Execution
 
-## CutAttn: Discovering Cognitive Transition Layers for Efficient Long\-Context Prefilling
+**Authors:** Lisa\-Marie Vortmann
 
-**Authors:** Wentao Liu; Xiabao Wu; Yongchao Liu; Haitao Zhang; Jiajun Zheng; Ruiting Zhou
+**ID:** 140067 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-**ID:** 148257\-\-3 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+[Paper](<https://openreview.net/forum?id=S58vxHCoNU>) | [PDF](<https://openreview.net/pdf?id=S58vxHCoNU>) | [Official poster](<https://neurips.cc/virtual/2026/poster/140067>)
 
-**Repeated source row:** 148257
+This position paper argues that peer review of applied machine learning papers must include the execution and verification of submitted code\. Reproducibility failures in ML are widespread, with documented cases spanning at least 17 scientific fields and hundreds of published studies\. The current review system relies on a combination of voluntary code submission and self\-reported checklists, leading to necessary post\-publication correction and many wasted research hours\. I support this argument with two case studies drawn from the EEG\-based brain\-computer interface literature, one in which the published claim is physically implausible and one in which available code runs cleanly but does not reproduce the reported numbers\. I propose a structural change: a dedicated reproducibility reviewer with access to a containerized submission pipeline, applied uniformly to papers making empirical claims on real data\.
 
-[Paper](<https://openreview.net/forum?id=zCmAsPM9EI>) | [PDF](<https://openreview.net/pdf?id=zCmAsPM9EI>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148257>)
+## Echo learning enables biologically plausible temporal credit assignment
 
-Long\-context LLM inference is fundamentally a retrieval process, transitioning from diffuse to sharply focused attention at a few architecture\-determined \(CTLs\)\.  Existing acceleration methods leave significant costs unaddressed: sparse attention ignores FFNs, KV cache compression neglects prefill, and hidden\-state pruning relies on fixed, heuristic rules\.  We introduce CutAttn, a training\-free framework that exploits CTLs via inter\-layer Jensen\-\-Shannon divergence, pruning redundant context at chunk granularity while dynamically gated by a normalized\-entropy criterion\.  Operating at the hidden\-state level, CutAttn reduces both attention and FFN costs, composing orthogonally with existing acceleration techniques\.  Evaluated on RULER, InfiniteBench, and LongBench, CutAttn preserves full\-attention accuracy while achieving up to a $2\.02\\times$ prefill speedup on 128K sequences \(and $2\.81\\times$ when composed with sparse attention\)\. Furthermore, our theoretical analysis provides approximation bounds, an entropy\-compression limit justifying the gating, and a closed\-form speedup ratio\.
+**Authors:** Alice S\. Dauphin; Guillaume Pourcel
 
-## Rest\-Tuning: Data\-Efficient Adaptation of EEG Foundation Models to Individuals via Resting\-State Signals
+**ID:** 155692 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-**Authors:** Yinuo Zhang; Xinyu Fu; Qing Wang; Yinte Zhang; Junjie Yu; Kexin Lou; Quanying Liu
+[Paper](<https://openreview.net/forum?id=3ew4yPTGyN>) | [PDF](<https://openreview.net/pdf?id=3ew4yPTGyN>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155692>)
 
-**ID:** 153812\-\-2 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 153812
-
-[Paper](<https://openreview.net/forum?id=IWqyUkyULe>) | [PDF](<https://openreview.net/pdf?id=IWqyUkyULe>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153812>)
-
-EEG foundation models \(FMs\) offer strong population\-level priors but degrade on individual subjects due to anatomy\-driven distribution shifts\. We propose Rest\-Tuning, a task\-agnostic calibration framework that personalizes a population FM using just 1–3 minutes of unlabeled resting\-state EEG\. Rest\-Tuning employs masked teacher\-student alignment to produce a subject\-calibrated backbone, reused as initialization across multiple tasks from the same subject\. Across two multi\-subject datasets and four EEG FMs, Rest\-Tuning outperforms task\-only adaptation, with up to 13\.3% absolute gain in downstream task accuracy and over 40% average reduction in labeled task data\. Calibration saturates quickly and requires under 3 minutes of compute per subject\. Representation analyses show reduced subject\-to\-population distance and smoother LoRA adapter interpolation paths, indicating improved compatibility between rest\- and task\-adapted solutions\. These results establish resting\-state EEG as a practical, fast, and reusable calibration interface, enabling population EEG FMs to function as reliable, subject\-specific BCIs and serve as reusable initialization for downstream task adaptation\.
+Biologically plausible learning requires temporal credit assignment without backpropagation through time \(BPTT\)\. Hamiltonian Echo Learning \(HEL\) achieves this by running a neural system twice \-\-\- an \\emph\{inference\} phase then a time\-reversed \\emph\{echo\} phase \-\-\- recovering exact BPTT gradients\. We identify spatio\-temporal sum\-separability of the Hamiltonian as the structural condition making HEL's learning rule both spatially and temporally local, and exploit it to extend HEL beyond diagonal recurrences: a Hopfield\-inspired oscillatory RNN with dense recurrent connectivity yields a contrastive Hebbian rule with constant memory and only two forward passes\. This rule matches full BPTT and outperforms e\-prop and truncated BPTT on time\-series classification and regression\. We then relax HEL's Hamiltonian\-reversibility constraint \-\-\- which forces unbiological connectivity and activation patterns \-\-\- and derive \\emph\{Echo Learning\} \(EL\), exact for arbitrary smooth dynamics whenever the network is reversible and self\-adjoint with respect to a readout involution\. Both conditions are enforced by a spatio\-temporally local homeostatic loss, recovering near\-BPTT gradient quality without architectural constraints\.
 
 ## Multimodal Foundation Agents Should Use Brain Data as Privileged Supervision
 
 **Authors:** Richard Csaky
 
-**ID:** 140083\-\-3 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 140083
+**ID:** 140083 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
 [Paper](<https://openreview.net/forum?id=JK1yUpvQxe>) | [PDF](<https://openreview.net/pdf?id=JK1yUpvQxe>) | [Official poster](<https://neurips.cc/virtual/2026/poster/140083>)
 
 This position paper argues that multimodal foundation models should use brain recordings as privileged internal\-state supervision during training\. External behavior alone leaves human\-like cognition, robustness, and reasoning weakly constrained\. Neural recordings can serve as a training\-time modality that shapes representations, latent\-state dynamics, private computation policies such as reasoning tokens, and robustness before distillation into agents that operate from ordinary sensory, language, and action streams\. We develop this position through Foundational Human Modeling \(FHM\), a program centered on scaling generative brain models, aligning heterogeneous neural modalities through shared latent geometry, inserting brain tokens into unified multimodal token streams, and testing whether the privileged channel improves distilled agents after removal\. The argument is grounded in privileged\-information theory and prior work showing that neural or human\-derived targets can improve robustness, semantic transfer, data efficiency, and behavioral similarity after auxiliary signals are removed\.
 
-## Decomposing the modulation of interactions between neuronal populations
+## Human\-Inspired, Task\-Dimension\-Guided Exploration for Efficient Learning and Transfer in High Dimensions
 
-**Authors:** Marco Celotto; J\. S Sooter; Sofie Ährlund\-Richter; Kyle R Jenks; Mriganka Sur; Stefano Panzeri
+**Authors:** Fanyu Zhu; Jiahui An; Ni Ji
 
-**ID:** 152282\-\-3 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+**ID:** 150298 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-**Repeated source row:** 152282
+[Paper](<https://openreview.net/forum?id=jBYBXwoZOr>) | [PDF](<https://openreview.net/pdf?id=jBYBXwoZOr>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150298>)
 
-[Paper](<https://openreview.net/forum?id=UFTQ6XUIb3>) | [PDF](<https://openreview.net/pdf?id=UFTQ6XUIb3>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152282>)
-
-Identifying subpopulations of neurons that interact with each other from simultaneous recordings of populations of many neurons is key for understanding across\-brain communication with cellular resolution\. Recent work identified communication subspaces, which capture additive interactions between pairs of high\-dimensional neural populations through a small number of source and target activity patterns\. However, no current method captures how a third, potentially multivariate variable \- such as behavioral state or the activity of a third population \- modulates these interactions\. Here we extend the communication subspace framework by parameterizing modulation as a low\-rank tensor\. This identifies multiplicative interaction channels \(MICs\), defined as triplets of source, target, and modulator activity patterns, in which the modulator pattern gates the source\-target interaction\. We derive MICs as a bilinear perturbation of reduced\-rank regression\. We develop a hierarchical fitting pipeline and provide a closed\-form decomposition that quantifies whether modulation reshapes the modulator\-averaged baseline interaction, recruits private dimensions of one population, or opens new interactions\. In simulations, MICs reliably recover the presence and geometry of ground\-truth modulation even in the high\-dimensional, low\-sample regime\. Applying MICs to simultaneous calcium imaging of prefrontal axons and interneurons in the visual cortex revealed that behavioral state asymmetrically modulates top\-down interactions, reconfiguring the patterns of prefrontal projections that interact with a stable set of visual interneuron activity patterns\. By providing an efficient and compact characterization of modulatory interactions, MICs enable asking new questions about how potentially high\-dimensional variables shape interactions between neural populations\.
-
-## Efficient Training of Deep Spiking Neural Networks with Input\-Driven Derivative\-Free Updates
-
-**Authors:** Yongbo Zhang; Xinzhe Li; Katsuma Inoue; Mitsumasa Nakajima; Toshikazu Hashimoto; Yasuo Kuniyoshi; Kohei Nakajima
-
-**ID:** 152821\-\-3 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 152821
-
-[Paper](<https://openreview.net/forum?id=Q8vwmOQdzh>) | [PDF](<https://openreview.net/pdf?id=Q8vwmOQdzh>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152821>)
-
-Spiking neural networks \(SNNs\) are a promising paradigm for efficient neuromorphic computing, yet their training remains challenging due to the non\-differentiability nature of spike firing\. Backpropagation through time \(BPTT\) with surrogate gradients \(SG\) has become a mainstream approach due to its superior performance\. However, this method incurs high computational and memory demands during training, while its update rule depends on specific neuronal dynamics\. Furthermore, when targeting neuromorphic hardware implementation, the temporal error\-propagation process and the full membrane\-potential access required by SG are difficult to realize; these can introduce additional readout overhead, measurement noise, or perturbations to the system dynamics\. To address these issues, we propose the input\-driven derivative\-free training \(IDDFT\) method\. Rather than relying on membrane\-potential\-based surrogate derivatives, IDDFT constructs derivative\-free error signals by applying a relaxed nonlinearity to the inputs, thereby avoiding the temporal error\-propagation process and reducing the dependence of the update rule on specific neuronal dynamics\. By eliminating access to internal membrane\-potential states, our method reduces computational and memory costs, enhances compatibility with neuromorphic hardware, and enables training of black\-box SNN models\. We validate the IDDFT method through theoretical analysis and systematic experiments, demonstrating its effectiveness as an input\-driven, derivative\-free mechanism for constructing update signals\. When integrated with a biologically inspired training strategy, IDDFT maintains comparable performance while substantially enhancing robustness to the choice of relaxed nonlinearities\. Based on the resulting bio\-inspired combined framework, we conduct evaluations on CIFAR\-10, CIFAR\-100, CIFAR10\-DVS, and Tiny\-ImageNet\. Experimental results demonstrate that our method achieves performance comparable to BPTT and state\-of\-the\-art methods, while exhibiting remarkable robustness under adversarial attacks\.
-
-## Neural population tuning statistics as priors for multitask generalization
-
-**Authors:** Zach Cohen; Jan Drugowitsch
-
-**ID:** 153194\-\-3 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 153194
-
-[Paper](<https://openreview.net/forum?id=N8F8d2c171>) | [PDF](<https://openreview.net/pdf?id=N8F8d2c171>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153194>)
-
-Neural populations exhibit heterogeneous tuning: Neurons differ in their selectivity, gain, and in how their preferred inputs are distributed across stimulus or latent\-variable space\. While this heterogeneity has been studied extensively in the context of encoding precision, its implications for learning and generalization are less well\-understood\. Here, we develop a probabilistic theory that links a neural population's tuning statistics to its inductive bias: in large populations, the tuning statistics induce a kernel and, equivalently, a prior of a generative model over functions\. This prior in turn predicts the population's ability to  generalize across a distribution of related tasks\. Our theory determines the population tuning statistics that minimize the generalization error over a distribution of functions\. We further present a normative account of tuning adaptation inspired by our probabilistic approach, showing that tuning changes that maximize the marginal likelihood of observed data systematically reduce generalization error relative to non\-adapting populations\. Applied to the adaptation of hippocampal spatial representations in a reward learning task, we found that our theory could explain the over\-representation of rewarding locations through experience in an environment with a localized reward\. We further demonstrate how different components of the population's generative model differentially impact the speed and magnitude of tuning adaptation\. Overall, our work proposes a novel connection between tuning variability and a population's ability to learn and to generalize across tasks and develops a Bayesian theory of tuning adaptation in neural populations during learning\.
-
-## Orthogonal Sparse Subgraph Alignment for Structure\-Function Coupling in Brain Networks
-
-**Authors:** Haonan Gao; Daeyoung Ham; Yifei Zhang; Xinyuan Tian; Shengxian DING; Zhao; Tianxi Li
-
-**ID:** 155965\-\-3 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 155965
-
-[Paper](<https://openreview.net/forum?id=1VRjEYWcHX>) | [PDF](<https://openreview.net/pdf?id=1VRjEYWcHX>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155965>)
-
-Characterizing the relationship between brain anatomical wiring and functional coordination remains a fundamental challenge in computational neuroscience\. This difficulty primarily arises because structure\-function coupling in the human brain is spatially heterogeneous, often localized to subnetworks, and inherently difficult to align across disparate representational modalities\. To address this methodological gap, we introduce $\\textbf\{O\}$rthogonal $\\textbf\{S\}$parse $\\textbf\{S\}$ubgraph $\\textbf\{A\}$lignment \($\\textbf\{Ossa\}$\), a principled and interpretable framework designed to identify compact structural cliques that exhibit maximal concordance with functional connectivity \(FC\) across subjects\. Within each FC\-derived community, $\\textbf\{Ossa\}$ optimizes an alignment objective over an orthogonal transformation, which absorbs coordinate mismatch between the two connectivity modalities, and a sparse node\-selection vector, which identifies the induced structural connectivity \(SC\) subgraph\. Furthermore, we establish theoretical properties for the $\\textbf\{Ossa\}$ estimator, demonstrating its statistical consistency in recovering the true underlying SC clique within each functional community\. Extensive empirical evaluations on simulated data, alongside analyses of the Adolescent Brain Cognitive Development \(ABCD\) baseline and longitudinal cohorts, demonstrate that $\\textbf\{Ossa\}$ successfully recovers aligned structural cliques under latent cross\-modal rotations\. Ultimately, the proposed methodology significantly improves out\-of\-sample SC\-FC alignment over size\-matched baselines and robustly identifies stable, single\-core topological structures within human brain networks\.
+Efficient exploration in high\-dimensional decision spaces remains a central challenge for decision\-making systems\. Humans, in contrast, can navigate large decision spaces with remarkable efficiency\. Recent behavioral studies suggest that humans actively reduce dimensionality when facing large decision spaces: they probe candidate feature dimensions, rapidly identify reward\-relevant ones, and use them to restrict the effective decision space\. Inspired by this mechanism, we propose TDGE \(Task\-Dimension\-Guided Exploration\), a human\-inspired exploration algorithm, and evaluate its performance in recommendation tasks with contextual bandit backbones\. TDGE follows a top\-down exploration strategy: it first selects task\-relevant feature dimensions, then identifies informative features within those dimensions, and finally recommends concrete items based on the selected features\. Experiments on three real\-world recommendation datasets, MovieLens\-20M, Last\.fm, and Amazon, show that TDGE substantially improves exploration efficiency and cold\-start adaptation over baseline algorithms\. We further provide visualizations of recommendation trajectories showing that TDGE exhibits a human\-like dimension\-guided exploration process during learning\. Code is available at https://anonymous\.4open\.science/r/Human\-inspired\-Task\-Dimension\-Guided\-Exploration\-for\-Efficient\-Learning\-984B\.
 
 ## Memory flows: geometry and dynamics of sequential retrieval in input\-driven Hopfield networks
 
 **Authors:** Simone Betteti; Matteo Martin; Morten G Pedersen; Sandro Zampieri; Giacomo Baggio
 
-**ID:** 150585\-\-2 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 150585
+**ID:** 150585 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
 [Paper](<https://openreview.net/forum?id=h5XfkJCHcA>) | [PDF](<https://openreview.net/pdf?id=h5XfkJCHcA>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150585>)
 
-_Abstract unavailable from the accessible public sources._
+Associative memory models classically describe retrieval as convergence to stored patterns, but the theory of sequential retrieval remains comparatively limited\. We develop a two\-timescale input\-driven Hopfield network in which fast associative retrieval is modulated by a slow feedback variable evolving over a prescribed memory\-transition graph\. This yields autonomous, graph\-constrained transitions while preserving analytical tractability\. Using slow\-fast and geometric singular perturbation theory, we characterize memory fixation via memory manifolds and identify the geometric regions that govern stability loss and escape from retrieved memories\. We further derive reduced slow dynamics and explicit criteria for transition onset, self\-sustained retrieval, and collapse, expressed through escape times, gain thresholds, and fixed points\. Together, these results provide a tractable framework for analyzing feedback\-driven sequential retrieval in Hopfield networks\.
 
-## Growing a Neural Network in Breadth, Depth, and Time
+## Control Under the Wrong Model Is Better Than Under the Correct One
 
-**Authors:** Eivinas Butkus; Kedar Garzón Gupta; Nikolaus Kriegeskorte
+**Authors:** Francesco Damiani; Ruben Moreno Bote
 
-**ID:** 148445\-\-2 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
+**ID:** 149917 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-**Repeated source row:** 148445
+[Paper](<https://openreview.net/forum?id=mErAv9CVnq>) | [PDF](<https://openreview.net/pdf?id=mErAv9CVnq>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149917>)
 
-[Paper](<https://openreview.net/forum?id=xl72oIaJ4k>) | [PDF](<https://openreview.net/pdf?id=xl72oIaJ4k>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148445>)
-
-_Abstract unavailable from the accessible public sources._
-
-## Learning When Visual Context Matters for Mouse Behavior Analysis
-
-**Authors:** Weihan Li; Jingyang Ke; Qinheng Pu; Yule Wang; Chengrui Li; Anqi Wu
-
-**ID:** 151213\-\-2 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 151213
-
-[Paper](<https://openreview.net/forum?id=c7qXkgNCJB>) | [PDF](<https://openreview.net/pdf?id=c7qXkgNCJB>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151213>)
-
-_Abstract unavailable from the accessible public sources._
+Building an optimal controller requires solving two coupled problems: \(1\) computing beliefs about the state by filtering observations, and \(2\) designing a control signal based on those beliefs to minimize a cost function\. Ideally, these two problems can be solved independently: first, a filter is computed to estimate the state; then, a controller is built on top of that estimate\. When exact inference is tractable, this approach is optimal and applies to the prominent Linear\-Quadratic\-Gaussian stochastic control problem\. However, perfect inference is generally intractable, and filtering and control are closely intertwined problems\. The question, then, is whether the commonly used first\-filter\-then\-control approach remains optimal, and whether optimal control strategies should generally rely on internal representations that mirror the dynamics of the external world\. We show that this is not the case: even in a simple setting with linear dynamics, multiplicative noise, and internal noise, the optimal linear controller is characterized by internal forward dynamics that do not match the forward dynamics of the external state\. Instead, the optimal controller relies on internal representations that mix estimation and control, and this mismatch becomes more pronounced as internal noise increases\. Our work challenges standard approaches that prioritize external world modeling over control\.
 
 ## On Length Bias in EEG\-to\-Text Decoding
 
@@ -1206,111 +1126,225 @@ _Abstract unavailable from the accessible public sources._
 
 Sentence\-level EEG\-to\-text decoding models typically pad variable\-duration neural signals to a fixed\-length window, creating a structural confound where segment duration correlates with sentence identity independently of neural content, a problem we term length bias\. Despite being acknowledged in prior work, the prevalence, magnitude, and architectural dependence of this effect have never been systematically quantified\. We introduce length\-matched noise baselines that isolate this confound by replacing only the true signal region with Gaussian noise while preserving zero\-padding, and apply them across three English listening EEG datasets under a strict subject\-held\-out protocol\. Evaluating ten sentence classifiers and three generation models based on the current state\-of\-the\-art, we show that reported decoding scores are substantially inflated by length cues across datasets, with the degree of inflation varying markedly by architecture\. Among classifiers, BIOT alone is unaffected by length\-matched noise\. A systematic decomposition of its components identifies Short\-Fourier\-Transform \(STFT\) tokenisation as the bigger source of this invariance\. We transfer this finding into two new generation variants that largely eliminate encoder\-side length bias, enabling a controlled analysis of where residual bias originates\. A classification\-to\-generation evaluation further reveals that leading generation models operate largely as sentence retrieval systems, with a linear classifier recovering nearly all of their reported BLEU\-4 scores\. Together, these results establish that length bias is a pervasive and previously unquantified failure mode in EEG\-to\-text evaluation, and provide both diagnostic tools and architectural directions for future work\.
 
-## L\-FAME: Longitudinal Focused Attention Meditation EEG Dataset and Benchmark
+## The Window for Preventive Action Before AI Saturates Most Cognitive Benchmarks is Closing
 
-**Authors:** Angqi Li; Basit R Syed; Hamzeh Alzweri; Taosheng Liu; Barry H Cohen; Saiprasad Ravishankar
+**Authors:** Jérémy Andréoletti; Antoine Maier; Laura Domenech; Tom David
 
-**ID:** 139264 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+**ID:** 140041 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=b6X6sen3bu>) | [PDF](<https://openreview.net/pdf?id=b6X6sen3bu>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139264>)
+[Paper](<https://openreview.net/forum?id=cs7f8WAg7q>) | [PDF](<https://openreview.net/pdf?id=cs7f8WAg7q>) | [Official poster](<https://neurips.cc/virtual/2026/poster/140041>)
 
-We introduce a novel Longitudinal Focused Attention Meditation Electroencephalography \(L\-FAME\) dataset and an accompanying benchmark, designed to foster research into the neural effects of various meditation practices and the evolution of these effects over a six\-week training period\. The dataset contains EEG recordings and psychological assessments from 74 healthy college participants, collected at two distinct time points: pre\-intervention and post\-intervention\. Participants were randomly assigned to one of three distinct meditation groups: two mantra\-based techniques \(SA\-TA\-NA\-MA and Hare Krishna\) and one Breath Focus practice\. Leveraging this unique longitudinal and comparative dataset, we propose a benchmark suite comprising three distinct classification tasks: \(1\) cognitive state decoding to distinguish between resting and meditation states, \(2\) fine\-grained classification of the specific meditation techniques, and \(3\) cross\-session adaptation to evaluate model generalization across the longitudinal time gap\. We provide comprehensive baseline results for these tasks utilizing a range of classical machine learning algorithms and deep learning architectures\. The complete dataset, preprocessing pipelines, and benchmark evaluation code will be publicly released, offering a valuable resource and a standardized framework for the development and comparison of new analytical methods in computational meditation research and EEG\-based machine learning\.
+This position paper argues that without coordinated intervention, AI systems will by default saturate most existing cognitive benchmarks by 2030, approaching or exceeding human expert performance across a broad range of measurable tasks\. Using a joint hierarchical Bayesian model, we forecast frontier performance trajectories across 63 benchmarks spanning reasoning, mathematics, coding, scientific knowledge, and agentic capabilities\. We find that nearly all current benchmarks \(97% in our set, 80% CI: 95\-100%\) are on track to saturate within four years\. This finding is robust to modeling choices: sensitivity analyses across 8 model variants and three saturation thresholds show that altering key assumptions yields qualitatively similar conclusions\. Security\-critical benchmarks \(cybersecurity, autonomous AI R&amp;D, biology, chemistry\) show even faster trajectories, saturating before 2028\. While benchmark saturation does not equate to artificial general intelligence, these findings add to a converging body of evidence indicating that superhuman performance on cognitive tasks is approaching faster than commonly assumed\. Acknowledging that we neither understand nor control the behavior of current GPAI models, this timeline leaves limited runway before irreversible impacts\. We outline implications for global governance and international coordination, AI safety research, and evaluation practices\.
 
-## EEG\-X: Toward Device\-Agnostic and Noise\-Robust Foundation Models for EEG
+## EEGFaceSem: An EEG Benchmark with Paired Generative Latents for Semantic Visual Modeling
 
-**Authors:** Navid Mohammadi Foumani; Soheila Ghane; Nam Nguyen; Mahsa Salehi; Geoffrey Webb; Geoffrey Mackellar
+**Authors:** Jun Ma; Michiel Spape; Keith M Davis; Tuukka Ruotsalo
 
-**ID:** 152276\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+**ID:** 138993 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-**Repeated source row:** 152276
+[Paper](<https://openreview.net/forum?id=s6avH9sqCU>) | [PDF](<https://openreview.net/pdf?id=s6avH9sqCU>) | [Official poster](<https://neurips.cc/virtual/2026/poster/138993>)
 
-[Paper](<https://openreview.net/forum?id=UHwOAjPtEg>) | [PDF](<https://openreview.net/pdf?id=UHwOAjPtEg>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152276>)
+Electroencephalography \(EEG\) is widely used to measure brain activity for brain\-computer interface applications for its non\-invasive nature and high temporal resolution\. However, progress in modeling the neural responses to visual semantics has been limited by a reliance on static, real\-world image datasets that lack the fine\-grained control needed to isolate fine\-grained changes in visual features and their relation to perception\. In this work, we present EEGFaceSem, a large\-scale dataset pairing high\-quality EEG with photorealistic face images synthesized from a generative model\. We provide the generative latent vector for each stimulus, enabling research into the continuous mapping between a visual latent space and neural representations\. Each participant's brain responses were recorded while they attended to specific semantic features \(e\.g\., smiling, hair color\) in a rapid serial visual presentation paradigm\. The dataset contains EEG signals from 30 participants, totaling 67,200 time\-locked EEG recordings\. We present benchmarks for single\-trial semantic classification under single\-subject, cross\-subject, and subject\-adapted settings, as well as for cross\-subject voting that aggregates per\-stimulus predictions across participants\. We further demonstrate the dataset's unique utility with two complementary applications: deriving semantic directions in the latent space for brain\-supervised image editing, and conditioning a generative model on brain\-decoded labels for brain\-supervised image generation\. Our dataset paves the way for advancing brain\-computer interface \(BCI\) devices for semantic\-level visual saliency detection and brain\-supervised generative modeling\. Our dataset and code are openly released at OSF https://osf\.io/2guk3/ and at HuggingFace https://huggingface\.co/datasets/yefllower/EEGFaceSem\.
 
-Foundation models for EEG analysis are still in their infancy, limited by two key challenges: \(1\) variability across datasets caused by differences in recording devices and electrode configurations, and \(2\) the low signal\-to\-noise ratio \(SNR\) of EEG, where neural activity is often buried under artifacts and non\-brain sources\. To address these challenges, we present \\textit\{EEG\-X\}, a device\-agnostic and noise\-robust foundation model for EEG representation learning\. EEG\-X introduces a location\-based channel embedding that enables robust transfer across heterogeneous EEG devices and electrode layouts\. To improve robustness against noise, EEG\-X employs a novel noise\-aware masking\-reconstruction strategy that reconstructs artifact\-cleaned signals rather than raw noisy EEG and introduces a novel Dictionary\-based Convolutional Transformation \(DiCT\) that improves reconstruction\-based pretraining by comparing signals in a structured feature space instead of directly in the raw signal space\. Experiments across datasets collected from diverse EEG devices show that EEG\-X consistently outperforms state\-of\-the\-art methods across multiple downstream tasks and demonstrates strong cross\-domain generalization when pretraining and downstream datasets differ in electrode layouts and recording configurations paving the way towards foundation models\. The models and code are available at :https://anonymous\.4open\.science/r/EEG\-X\-CEDE/README\.md
+## The Agentic Oversight Tax: Human Supervision of AI Agents Has a Cost that Must be Accounted For
 
-## SPERA: Spherical Prior EEG Foundation Model with Geometry\- and Frequency\-Aware Latent Prediction
+**Authors:** Olivier Oullier
 
-**Authors:** Minsu Kim; Ye\-Sung Kim; Hyeseong Jeon; Wooseok Hyung; Joshua Lee; Chang\-Hwan Im
+**ID:** 140110 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-**ID:** 155259\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+[Paper](<https://openreview.net/forum?id=7Y4hAbPn1J>) | [PDF](<https://openreview.net/pdf?id=7Y4hAbPn1J>) | [Official poster](<https://neurips.cc/virtual/2026/poster/140110>)
 
-**Repeated source row:** 155259
+This position paper argues that human supervision of AI agents imposes a composite cognitive, affective and organizational cost that no existing framework jointly captures\. We introduce the Agentic Oversight Tax \(AOT\): the aggregate burden imposed on a human supervisor by the structural mismatch between the operating characteristics of one or more AI agents and the finite neurocognitive capacities of human oversight\. AOT decomposes into four measurable pillars: \(i\) monitoring time, \(ii\) handoff repair events, \(iii\) audit production effort and \(iv\) recovery effort under staged failures\. We anchor each pillar in documented supervision failures from 2024 to 2026 and cross\-validate against the MAST taxonomy of 1,600 multi\-agent system breakdowns\. We establish discriminant validity against 5 adjacent frameworks by identifying three phenomena all five structurally exclude: attribution burden, accountability gap and skill atrophy\. Three falsifiable predictions distinguish AOT from these constructs\. A three\-tier measurement architecture \(telemetry, self\-report, neurophysiological sensing\) specifies how the pillars can be assessed\. We show that agentic AI architectures modeled on Kahneman’s System 1/System 2 metaphor generate an attribution bias that AOT instruments must control for\. A pre\-registered meta\-analysis of 100\+ human\-AI experiments shows that the net negative utility threshold AOT defines is already crossed on average in decision\-making tasks\. Governance frameworks mandating human oversight without measuring its cost cannot verify whether that oversight remains effective\.
 
-[Paper](<https://openreview.net/forum?id=71zbNNbFKV>) | [PDF](<https://openreview.net/pdf?id=71zbNNbFKV>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155259>)
+## Preferential dynamic modeling with forward\-backward smoothing
 
-Electroencephalography \(EEG\) provides a non\-invasive measure of ongoing neural activity, but building general\-purpose EEG models remains challenging due to the heterogeneity of subjects, devices, and electrode montages\. Existing EEG foundation models predominantly rely on input\-space reconstruction, which can bias the encoder toward memorizing noise and artifacts\. We introduce SPERA \(Spherical Prior EEG Representation Architecture\), an EEG foundation model that predicts in latent space following the joint\-embedding predictive architecture \(JEPA\)\. SPERA combines three components tailored to EEG: \(i\) a hybrid attention backbone that interleaves factorized temporal and spatial attention with periodic full\-attention layers, \(ii\) a Legendre\-polynomial spatial prior incorporated into attention to encode varying scalp electrode geometries, and \(iii\) a relational spectral regularizer that aligns latent similarity structure with spectral views, inducing frequency\-aware latent representations\. Pretrained on approximately 90,213 hours of EEG from 31,771 subjects across 106 datasets, SPERA achieves the highest average performance across nine downstream tasks spanning clinical, cognitive, and BCI applications\. SPERA further exhibits strong parameter efficiency and robustness across varying recording conditions, suggesting its potential as a general\-purpose backbone for diverse EEG analyses\.
+**Authors:** Omid G\. Sani; Trisha Jha; Mohammad Hosseini; Maryam Shanechi
 
-## Sparse Multimodal Switching State\-Space Models for Regime\-Dependent Neural Connectivity under Partial Observations
+**ID:** 148760 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
 
-**Authors:** Rahul K Sharma; Feng Liu; Xiaochen Xian
+[Paper](<https://openreview.net/forum?id=vFZhylvjKq>) | [PDF](<https://openreview.net/pdf?id=vFZhylvjKq>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148760>)
 
-**ID:** 151057\-\-2 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+Estimating a secondary signal \(e\.g\., behavior\) from neural activity over time is central to both causal online decoding and non\-causal offline inference in neuroscience, yet existing two\-signal latent state\-space models rarely support both\. In this work, we provide an analytical extension of a linear method \(PSID\) beyond causal prediction to also support non\-causal inference\. We provide theoretical derivations extending PSID to enable optimal filtering and optimal smoothing of the secondary signal\. We show that, in the PSID setting, the presence of a secondary signal increases identifiability\. This allows us to uniquely learn the quantities needed for the optimal Kalman update via a reduced\-rank regression step, yielding our first contribution, PSID with filtering \. We next design a forward\-backward construction for smoothing, yielding our second contribution, PSID with smoothing \. In simulations, we validate that both PSID with filtering and smoothing reach ideal performance\. In non\-human primate motor cortex data, PSID with smoothing consistently improves over PSID with filtering, which improves over one\-step\-ahead prediction with standard PSID\. Finally, we show that the connection between PSID and an existing nonlinear two\-signal model, DPAD, extends naturally to the smoothing setting: applying our forward\-backward formulation to DPAD yields DPAD with smoothing , which achieves competitive performance with leading methods on the Neural Latents Benchmark \(NLB\) in behavior decoding and held\-out neural prediction across three datasets\. Together, this work provides a theoretical foundation for prediction, filtering, and smoothing in the two\-signal setting, spanning causal online decoding to offline inference, in both linear and nonlinear settings\.
 
-**Repeated source row:** 151057
+## OpenBrain: An Auditable Generated\-Label Release for Whole\-Brain MRI Parcellation
 
-[Paper](<https://openreview.net/forum?id=dJy3Ipz0tx>) | [PDF](<https://openreview.net/pdf?id=dJy3Ipz0tx>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151057>)
+**Authors:** Qizhen Lan; Yu\-Chun Hsu; YUXIANG WEI; Lijing Zhu; Zenan Sun; Liang He; Lishan Yu; Xiaoqian Jiang
 
-Multimodal electrophysiological recordings provide noisy, partially observed measurements of latent neural dynamics critical for tasks like brain state estimation and neurological diagnosis\. In joint EEG\-intracranial EEG \(iEEG\) recordings, scalp EEG offers broad but spatially mixed coverage, whereas iEEG provides high\-fidelity but spatially sparse measurements\. This creates a partial\-observation problem: directed source\-level interactions must be inferred from heterogeneous sensors with incomplete coverage\. A second challenge is nonstationarity: latent neural dynamics and directed interactions among brain regions can change abruptly across distinct regimes \(e\.g\., pre\-seizure, ictal, and post\-seizure states\)\. The third challenge is sparsity of significant source\-level interactions compared to the high\-dimensionality of the brain networks\. Standard models that assume single\-mode, fully observed, or stationary may therefore fail to capture regime\-specific activity or spurious couplings\. We propose the Sparse Multimodal Switching State\-Space Model \(S$^4$M$^3$\), which fuses EEG and iEEG as complementary observations of a shared source\-space latent process\. Dynamics switch between regimes governed by separate sparse directed transition matrices, jointly addressing multimodal fusion, nonstationarity, and sparse network estimation\. The estimation of the model uses the expectation\-maximization \(EM\) algorithm, where the E\-step applies the Kim filter\-RTS smoother to estimate latent states and regime probabilities, and the M\-step imposes elastic\-net penalization on off\-diagonal elements, promoting sparse inter\-regional couplings while preserving self\-dynamics\. The learned transition matrices facilitates the assessment of regime\-dependent edge changes\. To address the estimation bias of elastic\-net sparsity penalty, we separate edge selection from edge assessment: selected edges are refit by regime\-weighted least squares, followed by Wald tests with Benjamini\-Hochberg correction\. On synthetic benchmarks, S$^4$M$^3$ improves Edge F1 by approximately 25\\% over the strongest stationary baseline and 64\\% over two\-stage source\-connectivity pipelines\. On a real EEG\-iEEG epilepsy case study, S$^4$M$^3$ identifies sparse hippocampal and parahippocampal outgoing pathways concordant with the clinician\-confirmed seizure\-onset zone, without using clinical labels\.
+**ID:** 139232 | **Topic source:** inferred | **Abstract source:** official-poster-page | **PDF source:** derived-openreview (unverified)
 
-## What Is Worth Representing? Representational Empowerment for Continual Model Construction
+[Paper](<https://openreview.net/forum?id=dR9OMtUEEC>) | [PDF](<https://openreview.net/pdf?id=dR9OMtUEEC>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139232>)
 
-**Authors:** Fei Dai; Hanqi Zhou; Alison Gopnik; Charley M Wu
-
-**ID:** 149925\-\-2 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 149925
-
-[Paper](<https://openreview.net/forum?id=m9oKQZGDlw>) | [PDF](<https://openreview.net/pdf?id=m9oKQZGDlw>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149925>)
-
-_Abstract unavailable from the accessible public sources._
-
-## MENDR: Manifold\-Embedded Neural Data Representations for Channel\-Agnostic EEG Foundation Modeling
-
-**Authors:** Micky C Nnamdi; Matthew Chen; Benoit Marteau; Shaun Q\. Y\. Tan; J\. Ben Tamo; May Dongmei Wang
-
-**ID:** 149502\-\-2 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 149502
-
-[Paper](<https://openreview.net/forum?id=pf1CbF5JeQ>) | [PDF](<https://openreview.net/pdf?id=pf1CbF5JeQ>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149502>)
-
-_Abstract unavailable from the accessible public sources._
-
-## What, Where, and Boundary: Hierarchical Cognitive Decomposition for Echocardiography Video Segmentation
-
-**Authors:** Long Zheng; Zhi Li; Weidong Wang; Chenxi Zhu; Zhenyu Dai; Minyi Guo
-
-**ID:** 151545\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 151545
-
-[Paper](<https://openreview.net/forum?id=Zpjtkfd60y>) | [PDF](<https://openreview.net/pdf?id=Zpjtkfd60y>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151545>)
-
-Segmenting the left ventricle in echocardiographic videos remains difficult because the target undergoes continuous deformation and rapid displacement across the cardiac cycle, while low tissue contrast further obscures its endocardial boundaries\. Expert echocardiographers navigate these challenges through a hierarchical cognitive workflow, sequentially addressing three fundamental questions:What is the target? Where is it now? Where does the boundary lie? Yet existing methods predict masks end\-to\-end from temporal features without explicitly modeling this cognitive process\. We propose Hierarchical Cognitive Decomposition \(HCD\), which decomposes the segmentation task into three stages that emulate this expert interpretation workflow\. To capture invariant target identity amid changing appearances, Static Identity Anchoring \(SIA\) anchors the first annotated frame as a semantic reference, enabling stable recognition across the cardiac cycle\. To maintain spatial focus despite inter\-frame motion, Adaptive Gaze Prior \(AGP\) converts the previous frame's prediction into a spatial attention prior that localizes the current target position\. To resolve boundary ambiguity under low tissue contrast, Structural Boundary Perception \(SBP\) extracts multi\-scale boundary cues within the localized region\. On the CAMUS and EchoNet\-Dynamic benchmarks, HCD achieves state\-of\-the\-art performance with only 1\.35M trainable parameters \(out of 35\.2M total\) at 68 FPS, demonstrating that explicitly encoding clinical cognitive priors into network design yields both effective and efficient segmentation\.
+Automatic tools can now generate whole\-brain MRI parcellations at cohort scale, but generated\-label releases often provide little evidence about which cases are reliable enough to reuse\. We introduce OpenBrain, a confidence\-aware release of 35\{,\}838 provenance\-verified OpenNeuro T1w cases from 607 source datasets\. OpenBrain is organized as an auditable case\-record release rather than a directory of standalone segmentation files: each record links a primary parcellation, two committee parcellations, source/license provenance, raw QC\-7 measurements, source\-local percentile risks, a combined risk score R, and a confidence tier\. QC\-7 is a reference\-free reliability panel over label geometry, image\-label consistency, and committee disagreement, so users can filter, weight, audit, or re\-threshold generated labels without rerunning inference\. We evaluate this released evidence under a frozen protocol\. Across external cohorts, lower QC\-7 risk corresponds to higher generated\-label quality; in fixed\-budget training, lower\-risk selections improve paired macro Dice over random selection by \+$3\.2$ to $\+3\.7$ percentage points and substantially outperform high\-risk\-tail selection\. OpenBrain also exposes raw axes, committee outputs, provenance, and datasheet documentation, so confidence claims remain inspectable after download\. It does not turn generated labels into manual annotations or clinical\-grade segmentations\. Its contribution is a large open generated\-parcellation substrate, a reusable case\-level risk\-evidence layer, and an external validation protocol for release\-time QC\.
 
 ## Cognitive constraints and thalamocortical architecture explain systematic biases and neural signatures in human hierarchical decision\-making
 
 **Authors:** Mien B Wang; Liu Mengxing; Kai Hwang; Michael Halassa
 
-**ID:** 155926\-\-2 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 155926
+**ID:** 155926 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
 [Paper](<https://openreview.net/forum?id=1lsYyvQ1i2>) | [PDF](<https://openreview.net/pdf?id=1lsYyvQ1i2>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155926>)
 
 Human cognition operates under capacity limitations, requiring computational adaptations for solving complex tasks\. Although such adaptations have been described algorithmically, their neural substrates and mechanistic implementations remain poorly understood\. Here, we study a hierarchical decision\-making task in which subjects must simultaneously infer latent rule changes and resolve sensory uncertainty\. By comparing human behavior with Bayesian observer models, we identify three systematic deviations: humans make decisions hierarchically, persist in the previous context after a context switch, and preferentially explore a new context within the same sensory modality\. We argue that these deviations are jointly explained by a cognitive\-constraint perspective in which hierarchical decisions are less cognitively demanding and switching context or modality incurs additional cost\. Incorporating these constraints substantially improves behavioral fits and reveals correlated subject\-level context and modality stickiness parameters, suggesting a shared underlying cost mechanism\. We then asked how neural representations support hierarchical decisions\. Because hierarchical decisions require selecting a latent context before choosing an action, context representations provide a natural substrate for reducing the effective decision space\. Neuroimaging data revealed that context information is represented in mediodorsal thalamus, consistent with a role for thalamus in task\-state compression\. Motivated by the context signal in thalamus, we trained a thalamocortical recurrent neural network in which a thalamic module and faster corticothalamic plasticity provided an inductive bias for task compression, while switch\-dependent working\-memory noise instantiated switching costs\. These constrained networks better matched human behaviorial bias than standard task\-optimized networks and reproduced key neural signatures observed in the data, including context encoding in mediodorsal thalamus and cue/rule representations in prefrontal cortex\. Together, these results suggest that structured biases in hierarchical decision\-making arise from cognitive constraints and identify thalamocortical dynamics as a candidate mechanism for efficient task\-state inference\.
 
-## On Observation Time for Recovering Latent Hawkes Networks
+## Paradoxical noise preference in RNNs
 
-**Authors:** Jonas Linkerhägner; Michele Bortolasi; Lorenzo Baldassari; Maarten V\. de Hoop; Ivan Dokmanić
+**Authors:** Noah Eckstein; Manoj Srinivasan
 
-**ID:** 148999\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+**ID:** 156748 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** missing
 
-**Repeated source row:** 148999
+[Official poster](<https://neurips.cc/virtual/2026/poster/156748>)
 
-[Paper](<https://openreview.net/forum?id=tZwHSbbaof>) | [PDF](<https://openreview.net/pdf?id=tZwHSbbaof>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148999>)
+In recurrent neural networks \(RNNs\) used to model biological neural networks, noise is typically introduced during training to emulate biological variability and regularize learning\. The expectation is that removing the noise at test time should preserve or improve performance\. Contrary to this intuition, we find that continuous\-time recurrent neural networks \(CTRNNs\) often perform best at a nonzero noise level, often approximately the same level used during training\. This noise preference typically arises when noise is injected inside the neural activation function; networks trained with noise injected outside the activation function perform best with zero noise\. The phenomenon arises robustly in diverse tasks for large enough training noise including function approximation, maze navigation, 2D path integration, and a multi\-task suite from cognitive neuroscience; we also show the phenomenon arising in feedforward neural networks, not just in RNNs\. Through analyses of simple function\-approximation and single\-neuron regulator tasks, we show that the phenomenon stems from noise\-induced shifts of fixed points \(stationary distributions\) in the underlying stochastic dynamics of the RNNs, thereby providing some  mechanistic interpretability of the phenomenon\. These fixed point shifts are noise\-level dependent and bias the network outputs when the noise is removed, degrading performance\. Analytical and numerical results show that the bias arises when neural states operate near activation\-function nonlinearities, where noise is asymmetrically attenuated, and that performance optimization incentivizes operation near these nonlinearities; such performance incentives exist for networks with noise inside the activation function, but not for networks with noise outside the activation function, explaining why only noise\-in networks show preference\.  Thus, networks can overfit to the stochastic training environment itself rather than just to the input–output data\.  The phenomenon is distinct from stochastic resonance, wherein nonzero noise enhances signal processing\. Our findings reveal that training noise can become an integral part of the computation learned by recurrent networks, with implications for understanding neural population dynamics and for the design of robust artificial RNNs\.
 
-Dynamics of interacting systems in engineering, society, and nature often evolve over latent networks that govern which entities can interact\. We study the problem of inferring these networks from event\-based observations, which arise naturally in finance, seismology, and neuroscience\. While there is substantial algorithmic work addressing this important problem, theoretical results are scarce\. In this paper we ask the following fundamental question: what is the minimum time that one must observe the dynamics in order to exactly recover the underlying network, as a function of the number $d$ of interacting entities? For a class of stationary Hawkes processes with sparse, weak interactions, we prove that an observation time of order $\\log d$ is sufficient and necessary\. For the upper bound we construct a two\-stage estimator that uses clipped and binned event data for screening, followed by a least\-squares refinement, and apply concentration bounds derived from the Poisson cluster representation\. For the lower bound we combine Fano’s inequality with Jacod’s Girsanov formula for point processes on a suitable subclass of networks\.
+## Categorical Bayes filtering for computational phenotyping in adaptive learning
+
+**Authors:** Junxi Chen; Payam Piray
+
+**ID:** 153212 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=N0qn9jBOCR>) | [PDF](<https://openreview.net/pdf?id=N0qn9jBOCR>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153212>)
+
+Adaptive learning requires distinguishing environmental volatility from observation stochasticity, two sources of uncertainty that demand opposite adjustments to the learning rate but inflate experienced variance similarly\. Disentangling them is computationally difficult with no tractable closed\-form solution\. Particle\-filter methods are the natural tool for this kind of joint inference, but their stochastic likelihoods and non\-differentiable objectives force derivative\-free fitting protocols and discourage the individual\-difference analyses central to cognitive modeling, where small effect sizes leave little room for additional estimator noise\. We introduce the Categorical Bayes Filter \(CBF\), a deterministic alternative that preserves the conditional structure of recent particle\-filter accounts but replaces the stochastic outer layer with a categorical distribution on a quantile grid parameterized through differentiable Beta quantile functions\. The procedure performs evidence maximization with an exact, deterministic marginal likelihood that is fully differentiable in the grid parameters\. In a volatility\-stochasticity task with N = 643 participants, fitted CBF dispersion parameters reveal a cross\-over phenotyping pattern between volatility\-blind and stochasticity\-blind subjects that is not recoverable from particle\-filter parameters fit to the same data under a state\-of\-the\-art protocol\. The deterministic structure also yields a trial\-by\-trial ambiguity signal that predicts response times not used in fitting\. More broadly, the approach opens individual\-level analyses in cognitive modeling and computational psychiatry that stochastic methods have effectively foreclosed\.
+
+## Handwriting decoding as a challenging motor task for EEG Foundation Models
+
+**Authors:** Srinivas Ravishankar; Ishayu Ghosh; Nora Zajzon; Teng \(Simon\) Fei; Virginia de Sa
+
+**ID:** 139358 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=UmBkSWTw9t>) | [PDF](<https://openreview.net/pdf?id=UmBkSWTw9t>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139358>)
+
+Recent attempts at creating  Foundation Models \(FMs\) for Electroencephalography \(EEG\) have achieved state\-of\-the\-art performance on multiple tasks including Motor Imagery \(MI\)\. These MI tasks have typically involved coarse classification between imagined limb movements\. However, the development of foundation models necessitates diverse datasets, both for pretraining and evaluating the progress of these models\. In this work, we propose handwriting decoding as a challenging motor task for FMs\. We show that several existing datasets are affected by confounds, and introduce a dataset that more rigorously evaluates models\. On this dataset, we find that current FMs, despite showing SOTA performance in multiple MI datasets are outperformed by smaller task\-specific models\. We also highlight challenges specific to EEG\-based handwriting decoding to inform future work\. In our 4\-letter classification task, we show that  \(a\) Knowledge of movement\-onset is crucial to reported decoding performance in prior works, with average performance across subjects dropping from $41\.3\\%$ to $32\.4\\%$\. \(b\) Increasing test\-time signal quality provides significant performance improvements \($45\\%$ to $78\\%$ in our best subject\) compared to scaling training data with single\-trial EEG\.  \(c\) While scaling training data steadily improves decoding performance, existing FMs do not outperform specialist models in handwriting decoding\. We make our code and dataset available at https://anonymous\.4open\.science/r/EEG\-Handwriting\-BCI\-DFCD
+
+## Scale\-mixture Langevin sampling in the subspaces of recurrent cortical circuit dynamics
+
+**Authors:** Zimei Chen; Yi Ren; Wen\-Hao Zhang
+
+**ID:** 155315 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=6WH4HKUrJn>) | [PDF](<https://openreview.net/pdf?id=6WH4HKUrJn>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155315>)
+
+Recurrent cortical circuits are hypothesized to perform Bayesian posterior sampling through their stochastic dynamics\. Yet identifying \\textit\{which\} sampling algorithm a circuit intrinsically implements, as opposed to mapping manually designing algorithms into circuits, requires rigorous theoretical analysis of the biological circuit dynamics, and remains a fundamental open challenge because of the analytical intractability of nonlinear recurrent dynamics\. Here, we tackle this challenge through comprehensive theoretical analysis of an analytically tractable nonlinear recurrent circuit dynamics used in neuroscience research\-\-\- the continuous attractor network \(CAN\)\. Surprisingly, we find that the circuits, without any non\-Gaussian components in its connectivity or internal variability, intrinsically emerges heavy\-tailed subspaces dynamics described as scale\-mixture Langevin posterior sampling\. The mechanism emerges from the circuit's own nonlinear dynamics: divisive normalization renders the overall population activation Gamma\-distributed which multiplicatively modulates the time constant of the Langevin sampling in the stimulus feature subspace\. Eventually, this scale\-mixture structure produces a heavy\-tailed \(Student\-$t$\) sampling step size distribution, significantly accelerating the sampling speed\. Moreover, the scale\-mixture Langevin sampling approaches L\\'\{e\}vy\-like regime in the weak input limit\. Our results analytically identify an intrinsic circuit algorithm embedded in subspaces of nonlinear recurrent dynamics, and establish a minimal circuit mechanism for endogenous heavy\-tail statistics without any explicit non\-Gaussian components\.
+
+## Developmental Visual Experience Scaffolds Grounded Concept Acquisition in Vision\-Language Models
+
+**Authors:** Jeonghwan Cheon; Marin Vogelsang; Lukas Vogelsang; Pawan Sinha
+
+**ID:** 148931 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=uA7IWRdKRA>) | [PDF](<https://openreview.net/pdf?id=uA7IWRdKRA>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148931>)
+
+While vision\-language models now achieve impressive image–text alignment, they often rely on surface\-level associations rather than grounded conceptual representations that generalize across instances, support abstraction, and align with human semantic structure\. Inspired by human visual development, in which infants begin life with limited acuity and chromatic sensitivity that gradually mature, we ask whether developmentally structured perceptual input can serve as an inductive bias for grounded concept acquisition\. We trained vision\-language contrastive learning models under two regimens: a standard regimen using clear images throughout, and a biomimetic regimen in which initially blurred and grayscale inputs gradually transition to clear images\. Although both models achieve comparable caption\-level alignment, the biomimetic model exhibits substantially stronger alignment at basic\-level and superordinate category levels\. Moreover, sparse autoencoder analyses reveal more compatible latent codes across modalities, and learning trajectories exhibit a clear coarse\-to\-fine progression, with broad distinctions acquired earlier in training and finer distinctions emerging later\. Biomimetic representations also better match taxonomic structure and human behavioral similarity judgments\. Taken together, these findings suggest that early perceptual limitations are not merely developmental obstacles but serve as adaptive inductive biases that scaffold structured, hierarchical, and human\-aligned multimodal concept learning\.
+
+## Spectral Stratification of Semantic Abstraction in Vision\-Language Models
+
+**Authors:** Jeonghwan Cheon; Marin Vogelsang; Lukas Vogelsang; Pawan Sinha
+
+**ID:** 154946 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=9k4pNHw5Wo>) | [PDF](<https://openreview.net/pdf?id=9k4pNHw5Wo>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154946>)
+
+Vision\-language models now serve as general\-purpose semantic embedding spaces, but how conceptual abstraction is organized within such spaces remains poorly understood\. Here, we show that abstraction in these embeddings is spectrally stratified\. Specifically, low\-rank principal\-component subspaces encode broad conceptual structure, while higher\-rank components carry progressively finer\-grained distinctions\. This pattern holds across multiple contrastive vision\-language models and taxonomic datasets\. Consistent with this stratification, rank\-based modulation produces predictable behavioral shifts: retaining only the leading components preserves coarse retrieval but degrades fine\-grained retrieval, while removing them selectively disrupts abstract category structure\. Furthermore, rank\-selective routing improves retrieval when the selected subspace matches the target level of abstraction\. Notably, compact spectral subspaces, which preserve taxonomic structure while truncating high\-rank residuals, exhibit substantially better alignment with human abstraction behavior than the full\-rank model\. Together, these results reveal that vision\-language embeddings are not semantically homogeneous\. Instead, hierarchical abstraction is stratified along the spectral geometry, and the structure most aligned with human cognition is concentrated in a compact subspace, suggesting that human\-aligned semantics are a recoverable substructure of, rather than a property of, the full embedding\.
+
+## Language Model Goal Selection Differs from Humans' in a Self\-Directed Learning Task
+
+**Authors:** Gaia Molinaro; Dave August; Danielle Perszyk; Anne Collins
+
+**ID:** 152099 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=VXGZ2512rF>) | [PDF](<https://openreview.net/pdf?id=VXGZ2512rF>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152099>)
+
+Whether in agentic workflows, social studies, or chat settings, large language models \(LLMs\) are increasingly being asked to replace humans in choosing which goals to pursue, rather than completing predefined tasks\. However, the assumption that LLMs accurately reflect human preferences for goal setting remains largely untested\. We assess the validity of LLMs as proxies for human goal selection in a controlled, self\-directed learning task borrowed from cognitive science\. Across five models \(GPT\-5, Gemini 2\.5 Pro, Claude Sonnet 4\.5, Qwen3 32B, and Centaur\), we find substantial divergence from human behavior\. While people gradually explore and learn to achieve goals with diversity across individuals, most models exploit a single identified solution or show surprisingly low performance, with distinct patterns across models and little variability across instances of the same model\. Chain\-of\-thought reasoning and persona steering provide limited improvements, and our conclusions hold across experimental settings\. While they await confirmation in applied settings, these findings highlight the uniqueness of human goal selection and caution against its replacement with current models\.
+
+## AI Agents Push Humans Out of the Loop
+
+**Authors:** Margaret Mitchell; Avijit Ghosh; Samir Passi
+
+**ID:** 140100 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=Cx5Oy2il67>) | [PDF](<https://openreview.net/pdf?id=Cx5Oy2il67>) | [Official poster](<https://neurips.cc/virtual/2026/poster/140100>)
+
+AI agents pose significant risks as they are granted increasing autonomy\. A commonly proposed solution is human oversight and keeping a \`\`human in the loop”, but this is not a simple solution: Not only do current approaches to AI agent design impede effective human oversight, but the cognitive capacities required for it are also themselves degraded by extended use of AI systems\. This position paper argues that \*\*current approaches to the development and deployment of AI agent systems do not support effective human oversight \-\- they contribute to its degradation\*\*\. To address this, a top priority in the advancement of AI agents should be supporting the situated goals and cognitive requirements of effective human oversight, treating the human needs of overseers at the same level of importance as AI agent capability\. To put this idea into practice, we connect work on automation and human\-computer interaction to AI agent processes, outlining design\-level affordances and organizational protocols that \(1\) support overseers in exercising critical judgement and \(2\) counteract the skill atrophy that arises from extended use of automation\. We urge developers and deployers to adopt these or similar approaches\. Without explicit support for the cognitive demands of effective human\-agent interaction, AI agent systems will continue to passively incentivize
+
+## Rethink Action Chunking in VLA Through Human Motor Control
+
+**Authors:** Wenxi Chen; Yuejiang Liu; Zijian He; Shaoshuai Mou; Yan Gu
+
+**ID:** 140113 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=5qqjBkZMmL>) | [PDF](<https://openreview.net/pdf?id=5qqjBkZMmL>) | [Official poster](<https://neurips.cc/virtual/2026/poster/140113>)
+
+Action chunking is widely used in recent vision–language–action \(VLA\) systems to mitigate inference latency and improve temporal consistency\. Yet, open\-loop execution can reduce reactivity and precision, and cross\-chunk coherence remains difficult to guarantee\. We revisit action chunking through its neurobiological origins and organize current shortcomings around three axes: VLA architecture, representations of sequential actions, and mechanisms for sampling and executing chunks\. A case study further illustrates the coherence–reactivity trade\-off across representative sampling and execution choices\. Building on these observations, we outline brain\-inspired directions to improve the reactivity, coherence, and safety of chunking\-based VLAs in dynamic and complex tasks beyond quasi\-static tabletop manipulation\. This position paper aims to broaden how the community thinks about action chunking and to motivate redesigns better aligned with future physical intelligence\.
+
+## DEFT: Disentanglement\-Enhanced Fine\-Tuning for EEG Foundation Models
+
+**Authors:** Yuqiu Deng; Muyun Jiang; Zongpeng Zhang; Mingqing Xiao; Yansen Wang; Peiliang Gong; XINLIANG ZHOU; Yi Ding; Ziyu Jia; Cuntai Guan; Chenyu Liu
+
+**ID:** 149268 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=raum5BFSpu>) | [PDF](<https://openreview.net/pdf?id=raum5BFSpu>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149268>)
+
+EEG foundation models \(EFMs\) have improved EEG representation learning by transferring knowledge from large\-scale multi\-subject pretraining to downstream tasks\. However, their pretrained embeddings often retain substantial subject\-related variation, placing an additional burden on the downstream classifier, especially in cross\-subject settings\. To address this issue, we propose DISENTANGLED EFM FINE\-TUNING \(DEFT\), a plug\-and\-play adapter for EFM fine\-tuning\. DEFT encourages branch disentanglement of pretrained tokens into task\-oriented content and subject\-consistent style, then performs downstream prediction from the content branch\. It instantiates this factorize\-before\-classify design with recursive Gaussian refinement, temporal\-variance regularization, subject\-aware contrastive learning, and reconstruction\. Experiments across multiple EEG datasets and four EFM backbones show that DEFT improves matched fine\-tuning baselines\. Further ablations and analyses support the intended content/style branch organization\.
+
+## Learning Actionable Information Landscapes for Multimodal Active Sensing in Hawkmoths
+
+**Authors:** Abdo Sharafeldin; Yaqing Wang; Simon Sponberg; Hannah Choi
+
+**ID:** 155592 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=4RHseRnmZo>) | [PDF](<https://openreview.net/pdf?id=4RHseRnmZo>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155592>)
+
+Animals integrate information across sensory modalities to guide exploration, suggesting that they maintain internal estimates of where actions are expected to reduce uncertainty\. However, how such action\-conditioned information maps are learned from multimodal sensory experience remains unclear, as previous studies have been largely confined to unimodal sensing frameworks\. We introduce a multimodal predictive\-coding framework for learning uncertainty\-reduction maps from visual and mechanosensory observations in hawkmoth flower interaction tasks\. A variational generative model trained on simulated environments recovers modality\-specific information landscapes over the action space, capturing how visual patterns, surface geometry, and mechanosensory cues shape the value of exploratory actions\. These learned maps account for several features of hawkmoth behavior, including angled offsets during flower tracking, probing along visual patterns, and geometry\-dependent changes in exploration\. Applying the model to behavioral data from flower tracking and nectary search, we find that natural trajectories tend to occupy regions of high uncertainty reduction in these learned maps\. Building on these observations, we develop an uncertainty\-gated lexicographic algorithm that switches between information gathering and reward exploitation based on perceptual uncertainty\. Across downstream reward\-learning tasks, this policy learns faster, is more sample\-efficient, and generalizes better to unseen environmental conditions than exploitation\-only policies, $\\epsilon$\-greedy exploration, and non\-lexicographic baselines\. Together, these results suggest that multimodal generative perception models can learn actionable information landscapes that explain biological sensing and support exploration in embodied decision\-making\.
+
+## Learning When Visual Context Matters for Mouse Behavior Analysis
+
+**Authors:** Weihan Li; Jingyang Ke; Qinheng Pu; Yule Wang; Chengrui Li; Anqi Wu
+
+**ID:** 151213 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=c7qXkgNCJB>) | [PDF](<https://openreview.net/pdf?id=c7qXkgNCJB>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151213>)
+
+Understanding mouse behavior at scale is a foundational problem in neuroscience, with two core tasks: classifying frames into known behaviors and segmenting recordings into recurring patterns without labels\. Pose\-based methods are the standard approach but face fundamental limitations: pose coordinates capture only skeletal information, discard environmental context, and degrade under frequent occlusions in social scenarios\. Mouse videos can provide the visual context that pose lacks, yet not all frames benefit equally, and adding visual features uniformly to every frame is suboptimal\. We find that a pose\-based motion encoder, trained with auxiliary supervision from videos, can identify where it struggles: with a discrete representation, the encoder learns a codebook of recurring patterns, and frames whose motion does not fit this codebook produce large quantization residuals\. We show that these high\-residual frames are where visual context tends to help most: residual\-guided frame selection consistently outperforms uniform selection across budgets, and often exceeds dense visual processing\. We therefore propose ResiFuse, a framework that pretrains a motion encoder on pose with an auxiliary cross\-modal loss and integrates vision context only on high\-residual frames at fine\-tuning time\. We evaluate ResiFuse on three mouse behavior datasets and show improvements over pose\- and video\-based baselines on most tasks, with the largest gains on the most socially complex dataset\.
+
+## AUTOMEM: Automated Learning of Memory as a Cognitive Skill
+
+**Authors:** Shengguang Wu; Hao Zhu; Yuhui Zhang; Xiaohan Wang; Serena Yeung\-Levy
+
+**ID:** 150660 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=gOtWoYZuUo>) | [PDF](<https://openreview.net/pdf?id=gOtWoYZuUo>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150660>)
+
+Memory expertise is a learned skill: knowing what to encode, when to retrieve, and how to organize knowledge\-\-\-a capacity known in cognitive science as metamemory\. We bring this perspective to LLMs by treating memory management as a trainable skill\. We promote file\-system operations to first\-class memory actions alongside task actions, letting the model itself decide how to manage its memory\. This memory skill improves along two axes: the structure that supports it \(prompts, file schemas, action vocabulary\), and the proficiency of the model exercising it\. Both axes resist manual optimization: episodes in long\-horizon tasks run for thousands of steps, and a single memory mistake can hide long before it surfaces, making human review of full trajectories impractical\. We introduce AUTOMEM, a framework that automates both axes\. In the first loop, a strong LLM reviews complete agent trajectories and iteratively revises the memory structure that shapes how the agent interacts with its memory files\. In the second loop, the agent's own good memory decisions are identified from many episodes and used as training signal to sharpen the model's memory proficiency directly\. Across three procedurally generated long\-horizon games \(Crafter, MiniHack, and NetHack\), optimizing memory alone\-\-\-without modifying the model's task\-action behavior\-\-\-improved the base agent's performance 2x\-\-4x, bringing a 32B open\-weight model competitive with frontier systems such as Claude Opus 4\.5 and Gemini 3\.1 Pro\. Our results show that memory management is an independently learnable skill, and a high\-leverage objective yielding large gains on long\-horizon tasks\.
+
+## Escaping the Cognitive Well: Efficient Competition Math with Off\-the\-Shelf Models
+
+**Authors:** Xingyu Dang; Rohit Agarwal; Rodrigo Porto; Anirudh Goyal; Liam Fowl; Sanjeev Arora
+
+**ID:** 150429 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=i6Ojls5BRt>) | [PDF](<https://openreview.net/pdf?id=i6Ojls5BRt>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150429>)
+
+In the past year, custom and unreleased math reasoning models reached gold medal performance on the International Mathematical Olympiad \(IMO\)\. Similar performance was then reported using  large\-scale inference on publicly available models but at prohibitive costs \(e\.g\., 3000 per problem\)\. In this work, we present an inference pipeline that attains best\-in\-class performance on IMO\-style math problems at an average inference cost orders of magnitude below competing methods while using only general\-purpose off\-the\-shelf models\. Our method relies on insights about grader failure in solver\-grader pipelines, which we call the Cognitive Well \(iterative refinement converging to a wrong solution that the solver as well as the pipeline's internal grader consider to be basically correct\)\. Our pipeline addresses these failure modes through conjecture extraction, wherein candidate lemmas are isolated from generated solutions and independently verified alongside their negations in a fresh environment \(context detachment\)\. On IMO\-ProofBench Advanced \(PB\-Adv\), our pipeline achieves 67\.1\\% performance using Gemini 3\.0 Pro with an average cost per question of $\\sim$ \\$31\. This surpasses the performance of the DeepThink IMO gold\-winning model, and more than doubles the success rate of the next best publicly accessible pipeline, all at a fraction of the cost\.
+
+## Sparse Multimodal Switching State\-Space Models for Regime\-Dependent Neural Connectivity under Partial Observations
+
+**Authors:** Rahul K Sharma; Feng Liu; Xiaochen Xian
+
+**ID:** 151057 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=dJy3Ipz0tx>) | [PDF](<https://openreview.net/pdf?id=dJy3Ipz0tx>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151057>)
+
+Multimodal electrophysiological recordings provide noisy, partially observed measurements of latent neural dynamics critical for tasks like brain state estimation and neurological diagnosis\. In joint EEG\-intracranial EEG \(iEEG\) recordings, scalp EEG offers broad but spatially mixed coverage, whereas iEEG provides high\-fidelity but spatially sparse measurements\. This creates a partial\-observation problem: directed source\-level interactions must be inferred from heterogeneous sensors with incomplete coverage\. A second challenge is nonstationarity: latent neural dynamics and directed interactions among brain regions can change abruptly across distinct regimes \(e\.g\., pre\-seizure, ictal, and post\-seizure states\)\. The third challenge is sparsity of significant source\-level interactions compared to the high\-dimensionality of the brain networks\. Standard models that assume single\-mode, fully observed, or stationary may therefore fail to capture regime\-specific activity or spurious couplings\. We propose the Sparse Multimodal Switching State\-Space Model \(S$^4$M$^3$\), which fuses EEG and iEEG as complementary observations of a shared source\-space latent process\. Dynamics switch between regimes governed by separate sparse directed transition matrices, jointly addressing multimodal fusion, nonstationarity, and sparse network estimation\. The estimation of the model uses the expectation\-maximization \(EM\) algorithm, where the E\-step applies the Kim filter\-RTS smoother to estimate latent states and regime probabilities, and the M\-step imposes elastic\-net penalization on off\-diagonal elements, promoting sparse inter\-regional couplings while preserving self\-dynamics\. The learned transition matrices facilitates the assessment of regime\-dependent edge changes\. To address the estimation bias of elastic\-net sparsity penalty, we separate edge selection from edge assessment: selected edges are refit by regime\-weighted least squares, followed by Wald tests with Benjamini\-Hochberg correction\. On synthetic benchmarks, S$^4$M$^3$ improves Edge F1 by approximately 25\\% over the strongest stationary baseline and 64\\% over two\-stage source\-connectivity pipelines\. On a real EEG\-iEEG epilepsy case study, S$^4$M$^3$ identifies sparse hippocampal and parahippocampal outgoing pathways concordant with the clinician\-confirmed seizure\-onset zone, without using clinical labels\.
+
+## MindVLM: Neural\-Grounded Visual Captioning via Subject\-Aware Semantic Evidence Selection
+
+**Authors:** Zixiang Yin; Yu\-Ping Wang; Zhengming Ding
+
+**ID:** 154514 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=D1By8Wvrqy>) | [PDF](<https://openreview.net/pdf?id=D1By8Wvrqy>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154514>)
+
+Translating visual brain activity into natural language offers a powerful window into human cognition and neural semantic representation\. Most prior brain\-captioning approaches project fMRI signals into language space using paired supervision\. However, the widely used Natural Scenes Dataset \(NSD\) was built based only on image\-fMRI pairs, while existing methods rely on MS\-COCO captions as indirect textual supervision\. Critically, during fMRI acquisition, participants observe only cropped image regions, whereas the associated MS\-COCO captions describe full scenes\. This mismatch creates a fundamental gap between neural representations and textual supervision, introducing an inherent \*\*semantic loss\*\* in NSD\-based brain captioning\. To mitigate this limitation, we reformulate brain captioning as \*\*Neural\-Grounded Visual Captioning\*\*, where language is generated directly from visually grounded neural evidence rather than text supervision\. We propose \*\*MindVLM\*\*, a framework that maps fMRI signals into subject\-aware visual tokens and leverages a frozen vision language model \(VLM\) to produce interpretable and personalized descriptions\. Instead of point\-wise regression, MindVLM focuses on extracting semantically relevant visual cues from neural activity, naturally accommodating partial observability and inter\-subject variability\. Extensive experiments on NSD show that MindVLM consistently improves caption quality across multiple VLM backbones, including LLaVA\-v1\.5, Qwen2\.5\-VL, and Gemma3, beyond intrinsic model priors\. Despite requiring neither text supervision nor an LLM during training and operating under an image\-grounded inference paradigm distinct from conventional captioning methods, MindVLM remains competitive with supervised approaches, suggesting that subject\-specific neural grounding provides an efficient, scalable, and interpretable path toward faithful brain\-to\-language generation\.
 
 ## AnaDiffusion: Anatomically Compositional Latent Diffusion for Controllable 3D Brain MRI Generation
 
@@ -1322,283 +1356,55 @@ Dynamics of interacting systems in engineering, society, and nature often evolve
 
 3D brain MRI generation has made significant advances for medical imaging, simulation, and controllable anatomical analysis\. However, existing generative models typically synthesize 3D volumes monolithically, often overlooking regional anatomical structures and limiting local controllability\. To address these limitations, we introduce AnaDiffusion, an anatomically compositional latent diffusion framework that factorizes the generation process into distinct, anatomically meaningful regions followed by part\-to\-whole assembly and global refinement\. Our approach trains part diffusion models first to capture local structural priors\. Then, we inject assembled anatomical composite of parts into whole\-brain latent and continue denoising\. This mechanism enables the model to resolve global context while preserving the injected anatomy\. As a result, AnaDiffusion outputs both explicit part assets and a globally coherent volume, enabling controllable part editing without requiring additional dense segmentation masks at inference time while maintaining coherent part\-to\-whole brain structure\. On ADNI, AnaDiffusion achieves the lowest FID across the whole brain, left/right hemispheres, cerebellar\-brainstem complex, and seam regions, while also reducing Cohen's d for ventricles, cerebellum, and brainstem\. In localized editing experiments, paired MS\-SSIM shows high target transfer and off\-target preservation, supporting controllable part replacement with limited non\-target anatomical drift\.
 
-## One\-Time Soft Alignment Enables Resilient Learning without Weight Transport
+## Beyond Task Success: Probing Cognitive Primitives in Web Agents
 
-**Authors:** Jeonghwan Cheon; Jaehyuk Bae; Se\-Bum Paik
+**Authors:** Xunjian Yin; Tianchen Guan; Jinao Wang; Weili Cao; Royce Cheng\-Yue; Daisy Lin; Keagan Long; Kyle Wong; Bhuwan Dhingra; XJ Wang; Shuyan Zhou
 
-**ID:** 154791 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+**ID:** 139465 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=AvMF6ujTNu>) | [PDF](<https://openreview.net/pdf?id=AvMF6ujTNu>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154791>)
+[Paper](<https://openreview.net/forum?id=O8gCSB4In6>) | [PDF](<https://openreview.net/pdf?id=O8gCSB4In6>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139465>)
 
-Backpropagation is the cornerstone of deep learning, but its reliance on symmetric weight transport and global synchronization makes it computationally expensive and biologically implausible\. Feedback alignment offers a promising alternative by approximating error gradients through fixed random feedback, thereby avoiding symmetric weight transport\. However, this approach often struggles with poor learning performance and instability, especially in deep networks\. Here, we show that a one\-time soft alignment between forward and feedback weights at initialization enables deep networks to achieve performance comparable to backpropagation, without requiring weight transport during learning\. This simple initialization condition guides stable error minimization in the loss landscape, improving network trainability\. Spectral analyses further reveal that initial alignment promotes smoother gradient flow and convergence to flatter minima, resulting in better generalization and robustness\. Notably, we also find that allowing moderate deviations from exact weight symmetry can improve adversarial robustness compared to standard backpropagation\. These findings demonstrate that a simple initialization strategy can enable robust and effective learning in deep networks without dynamic weight transport, providing a resource\-efficient alternative to standard backpropagation\.
+Cognitive primitives such as planning, exploration, and backtracking are widely regarded as core to competent web agents\. Yet existing studies are largely retrospective: agents are evaluated on domain\-based tasks, and trajectories are inspected post hoc for evidence of these behaviors\. Because such tasks are not designed to require specific primitives, observed behaviors do not reliably reflect true capability demands\. This raises a key question: Can we design realistic tasks where success provably depends on a chosen cognitive primitive? WEBSTRESS addresses this by casting capability evaluation as a controlled comparison\. For each task, we construct a paired variant in which a target capability becomes necessary \(e\.g\., transforming a direct path into an obstructed one requiring exploration\)\. The performance gap between the pair measures the agent’s reliance on that capability\. Across seven environments and seven capabilities, this yields 519 paired tasks\. Evaluating six frontier agents reveals consistent weaknesses: all suffer 18\-28\\% drops on capability\-demanding variants, with 75\\% of failures being belief failures, where agents incorrectly declare success\. In contrast, humans exhibit only a 5\.7\\% performance drop under the same paired evaluation\. These results highlight that, despite strong overall performance, substantial gaps remain between human and agent cognitive behavior, and that our approach provides a principled way to measure them\.
 
-## A latent control model for realistic rodent motion
+## Sparse Reward Subsystem in Large Language Models
 
-**Authors:** Aidan Sirbu; Charles Y Zhang; Yuanjia Yang; Bence Olveczky; Talmo Pereira; Blake Richards
+**Authors:** Guowei Xu; Mert Yuksekgonul; James Zou
 
-**ID:** 148187 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+**ID:** 155694 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-[Paper](<https://openreview.net/forum?id=zebI1xXFB1>) | [PDF](<https://openreview.net/pdf?id=zebI1xXFB1>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148187>)
+[Paper](<https://openreview.net/forum?id=3dZL4FURuU>) | [PDF](<https://openreview.net/pdf?id=3dZL4FURuU>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155694>)
 
-The development of embodied models of animal behavior is a major goal of the neuro\-AI community\. Embodied models will enhance our ability to make direct comparisons between biological and artificial agents\. To make such comparisons effective, though, we need embodied models that actually move like animals\. Previous work has developed virtual animal bodies and techniques for training realistic motion through imitation\. However, to\-date, there is no system for embodied animal modeling that produces natural movements both during trained, goal\-directed behavior, and during exploration driven by random generation\. Here, we introduce Simulated Control via Augmented Motor Priors for Embodied Reinforcement learning \(SCAMPER\), a system for training an embodied virtual rat model, enabling natural movements during both goal\-directed behavior and random exploration\. SCAMPER uses a variational architecture with two distinct priors, a motion prior for control and a behavior prior for exploration\. We show that combining both of these priors allows SCAMPER to generate realistic behavior during exploration and exploit the task structure effectively\. As well, SCAMPER can learn from sparse rewards as a result of the diverse movements induced by the behavior prior, allowing the system to model realistic sparse reward tasks from experimental neuroscience\. Altogether, SCAMPER provides the neuro\-AI community with an effective new system for training embodied models of rodents on realistic tasks\.
-
-## The Agentic Oversight Tax:  Human Supervision of AI Agents Has a Cost that Must be Accounted For
-
-**Authors:** Olivier Oullier
-
-**ID:** 140110 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=7Y4hAbPn1J>) | [PDF](<https://openreview.net/pdf?id=7Y4hAbPn1J>) | [Official poster](<https://neurips.cc/virtual/2026/poster/140110>)
-
-This position paper argues that human supervision of AI agents imposes a composite cognitive, affective and organizational cost that no existing framework jointly captures\. We introduce the Agentic Oversight Tax \(AOT\): the aggregate burden imposed on a human supervisor by the structural mismatch between the operating characteristics of one or more AI agents and the finite neurocognitive capacities of human oversight\. AOT decomposes into four measurable pillars: \(i\) monitoring time, \(ii\) handoff repair events, \(iii\) audit production effort and \(iv\) recovery effort under staged failures\. We anchor each pillar in documented supervision failures from 2024 to 2026 and cross\-validate against the MAST taxonomy of 1,600 multi\-agent system breakdowns\. We establish discriminant validity against 5 adjacent frameworks by identifying three phenomena all five structurally exclude: attribution burden, accountability gap and skill atrophy\. Three falsifiable predictions distinguish AOT from these constructs\. A three\-tier measurement architecture \(telemetry, self\-report, neurophysiological sensing\) specifies how the pillars can be assessed\. We show that agentic AI architectures modeled on Kahneman’s System 1/System 2 metaphor generate an attribution bias that AOT instruments must control for\. A pre\-registered meta\-analysis of 100\+ human\-AI experiments shows that the net negative utility threshold AOT defines is already crossed on average in decision\-making tasks\. Governance frameworks mandating human oversight without measuring its cost cannot verify whether that oversight remains effective\.
-
-## Brain2voice 2\.0: High\-performance voice synthesis brain\-computer interface
-
-**Authors:** Maitreyee Wairagkar; Aparna Srinivasan; Nicholas S Card; Tyler Singer\-Clark; Xianda Hou; Carrina Iacobacci; Lee Miller; Leigh Hochberg; David Brandman; Sergey D Stavisky
-
-**ID:** 148803\-\-2 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 148803
-
-[Paper](<https://openreview.net/forum?id=v1KHSSdzcM>) | [PDF](<https://openreview.net/pdf?id=v1KHSSdzcM>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148803>)
-
-_Abstract unavailable from the accessible public sources._
-
-## Scaling Laws and Tradeoffs in Recurrent Networks of Expressive Neurons
-
-**Authors:** Aaron Spieler; Georg Martius; Anna Levina
-
-**ID:** 148161\-\-2 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 148161
-
-[Paper](<https://openreview.net/forum?id=zpewdRsVpA>) | [PDF](<https://openreview.net/pdf?id=zpewdRsVpA>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148161>)
-
-_Abstract unavailable from the accessible public sources._
-
-## Standing on the Shoulders of Giants: Rethinking EEG Foundation Model Pretraining via Multi\-Teacher Distillation
-
-**Authors:** Chenqi Li; Yu Liu; Shuo Zhang; Timothy Denison; Tingting Zhu
-
-**ID:** 150310 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=j4s4yXToW0>) | [PDF](<https://openreview.net/pdf?id=j4s4yXToW0>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150310>)
-
-Pretraining for electroencephalogram \(EEG\) foundation models has predominantly relied on self\-supervised masked reconstruction, a paradigm largely adapted from and inspired by the success of vision and language foundation models\. However, unlike images and text, EEG datasets are notoriously expensive to collect and characterized by low signal\-to\-noise ratio\. These challenges introduce difficulties in scaling the EEG foundation models and capturing the underlying neural semantics through reconstruction\. In this work, we ask the question: can we stand on the shoulders of well\-established foundation models from well\-represented modalities to bootstrap the pretraining of EEG foundation models? We first demonstrate that mainstream foundation models, such as those from vision and time series, transfer surprisingly well to EEG domain\. Motivated by this observation, we propose the multi\-teacher distillation pretraining \(MTDP\) framework for pretraining EEG foundation models via two\-stage multi\-teacher distillation\. In the first stage, we introduce a learnable gating network to fuse representations from diverse teachers \(e\.g\., DINOv3 and Chronos\) via a masked latent denoising objective\. In the second stage, we distill the fused representation into an EEG foundation model\. Extensive evaluations across 2 backbone architectures, 9 downstream tasks and 12 datasets demonstrate that multi\-teacher distillation pretraining consistently outperforms self\-supervised pretraining for EEG foundation model and remains competitive even when the pretraining data is reduced to 25%\.
-
-## From sequences to schemas: low\-rank recurrent dynamics underlie abstract relational representations
-
-**Authors:** Vezha Boboeva; Alberto Pezzotta; George Dimitriadis; Athena Akrami
-
-**ID:** 155707\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 155707
-
-[Paper](<https://openreview.net/forum?id=3XO2JXx10F>) | [PDF](<https://openreview.net/pdf?id=3XO2JXx10F>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155707>)
-
-A hallmark of intelligent behavior is the ability to extract abstract relational structure from temporal sequences \-\- recognizing, for instance, that aab, ccd, and eef all follow the same underlying pattern, regardless of the specific elements involved\. This capacity, observed across species and sensory modalities, is thought to underlie the formation of cognitive schemas: compressed internal models that support rapid generalization to novel experiences\. Yet the neural circuit mechanisms by which such abstract, identity\-independent representations emerge from sequential experience remain largely unknown\. Here, we investigate this question using Recurrent Neural Networks \(RNNs\) as mechanistic models of neural circuits, trained to classify sequences based on their latent algebraic patterns \(e\.g\., aab, aad $\\to$ AAB; aba, aca $\\to$ ABA\) without supervision on intermediate transitions\. We demonstrate that RNNs learn low\-dimensional representations that mirror the hierarchical generative structure of the sequences, and that this abstraction is mechanistically supported by the emergence of low\-rank recurrent connectivity\. The leading singular component of the recurrent weights integrates relational transition information \-\- whether consecutive tokens are the same or different \-\- across time, driving the formation of a structured, tree\-like geometry in the population state space\. Through singular vector ablation, we establish a causal role for this component: removing it selectively erases memory for earlier transitions while leaving local, single\-step sensitivity intact\. Finally, while RNNs trained on next\-token prediction do not acquire these abstract representations, transferring the low\-rank scaffold learned from classification significantly accelerates learning and improves generalization \-\- an effect specific to the abstract structure of the scaffold rather than generic statistical pretraining\. These findings offer a computational account of how task demands shape recurrent connectivity to support temporal abstraction, with implications for schema formation in biological brains\.
-
-## The Neural Race Model
-
-**Authors:** Omar Ghezzi; Alessandro D’Amelio; Vittorio Cuculo; Rita Cucchiara; Giuseppe Boccignone
-
-**ID:** 152312\-\-2 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 152312
-
-[Paper](<https://openreview.net/forum?id=U280pm3mcR>) | [PDF](<https://openreview.net/pdf?id=U280pm3mcR>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152312>)
-
-Perceptual decisions unfold in time: noisy evidence is integrated until a commitment threshold is reached, jointly producing a choice and a reaction time\. Classical race models capture this mechanism through simple parametric drift and diffusion, but cannot represent how rich, high\-dimensional stimuli shape accumulation on individual trials\. We introduce the $\\textbf\{Neural Race Model\}$ \(NRM\), a stimulus\-conditional neural stochastic differential equation in which one accumulator per alternative races towards a learnable, stimulus\-dependent threshold\. Drift, diffusion, and threshold are parameterised by neural networks conditioned on a stimulus embedding, allowing both accumulation dynamics and decision urgency to vary across trials\. The model is trained end\-to\-end on the joint reaction\-time\-and\-choice likelihood via a smooth surrogate for the discontinuous first\-passage event, combined with Monte Carlo trajectory averaging and gradient propagation through the stochastic adjoint\. The surrogate recovers the classical hard threshold in the appropriate limit and is removed at test time\. Each component admits a natural correspondence with elements of the primate decision\-making circuit, preserving the mechanistic interpretability of classical models\. We evaluate the NRM on multiple perceptual decision\-making benchmarks against classical sequential\-sampling and image\-computable reaction\-time models\. Across tasks and metrics, the NRM tracks the human noise ceiling more closely than all baselines, demonstrating that stimulus\-conditional stochastic accumulation and end\-to\-end differentiability can be achieved within a single, principled framework\. Code will be publicly released\.
-
-## CAREBench: Evaluating LLMs' Emotion Understanding by Assessing Cognitive Appraisal Reasoning
-
-**Authors:** ZHAOYUE SUN; Hainiu Xu; Andero Uusberg; James Gross; Petr Slovak; Yulan He
-
-**ID:** 139329\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 139329
-
-[Paper](<https://openreview.net/forum?id=WwTZWhjAvk>) | [PDF](<https://openreview.net/pdf?id=WwTZWhjAvk>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139329>)
-
-Emotion understanding is a core capability for LLMs to interact effectively with humans, yet existing evaluation paradigms rely on discrete emotion label prediction and fail to capture the cognitive processes underlying emotion generation\. Grounded in appraisal theory, we introduce CAREBench, the first benchmark with complete inferential chain annotations from both first\- and third\-person perspectives on real\-world narratives, spanning appraisal reasoning, appraisal ratings, and multi\-label emotion annotation\. We propose a process\-level evaluation framework and conduct systematic experiments across six LLMs organized around four research questions\. We find that stronger models match or surpass human observers on certain tasks, yet fall short on appraisal reasoning and positive emotion recognition; performance across chain steps and sensitivity to appraisal interventions exhibit dissociations across models; and current models have not internalized the mechanisms needed to capture human subjective heterogeneity\. These findings suggest that downstream emotion prediction metrics may overestimate LLMs' true emotion understanding, and CAREBench provides a foundation for more diagnostically informative evaluation of LLMs' affective cognitive capabilities\.
-
-## A Scientific Claim Stability Framework for Evaluating MRI Morphometry Pipelines
-
-**Authors:** Duy\-Cat Can; Dang\-Duat Tran; Anh\-Khang Nguyen; Bao Tran; Trung\-Hieu Do; Van T Nguyen; Duy\-Thanh VU; Oliver Y Chén; Hoang\-Quynh Le
-
-**ID:** 139330\-\-2 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 139330
-
-[Paper](<https://openreview.net/forum?id=WgIesR9ByR>) | [PDF](<https://openreview.net/pdf?id=WgIesR9ByR>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139330>)
-
-MRI morphometry pipelines are often evaluated by measurement agreement or downstream accuracy, yet their scientific value depends on the conclusions they support\. This creates a gap: two pipelines may look similar at the feature level while supporting different conclusions about aging, cognitive decline, or neurodegeneration\. To bridge this disparity, here we propose Scientific Claim Stability \(SCS\), a reusable claim\-centric evaluation framework that converts region\-of\-interest \(ROI\) morphometry tables into interpretable claim cards and tests whether each claim remains supported under realistic perturbations\. To demonstrate the efficacy of SCS, we evaluate it on 10,370 MRI scans from three datasets and five cohorts, generating 2,783 claim cards and evaluating 89 claim\-family pairs across dataset, pipeline, atlas, feature\-family, and target shifts\. SCS identifies claims that are stable, transferable, or fragile, and reveals high\-concordance fragile\-support cases where evidence vectors remain similar while supporting regions change\. To assess claim plausibility, clarity, faithfulness, usefulness, and caution level, we further implement and compare an expert \(including geriatrics, neuroscience, and radiology\) review workflow and an LLM \(including ChatGPT and Gemini\) review workflow\. Our results suggest claim\-level evaluation as a practical standard for auditing MRI morphometry pipelines without requiring a universal gold standard\.
-
-## Handwriting decoding as a challenging motor task for EEG Foundation Models
-
-**Authors:** Srinivas Ravishankar; Ishayu Ghosh; Nora Zajzon; Teng \(Simon\) Fei; Virginia de Sa
-
-**ID:** 139358\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 139358
-
-[Paper](<https://openreview.net/forum?id=UmBkSWTw9t>) | [PDF](<https://openreview.net/pdf?id=UmBkSWTw9t>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139358>)
-
-Recent attempts at creating  Foundation Models \(FMs\) for Electroencephalography \(EEG\) have achieved state\-of\-the\-art performance on multiple tasks including Motor Imagery \(MI\)\. These MI tasks have typically involved coarse classification between imagined limb movements\. However, the development of foundation models necessitates diverse datasets, both for pretraining and evaluating the progress of these models\. In this work, we propose handwriting decoding as a challenging motor task for FMs\. We show that several existing datasets are affected by confounds, and introduce a dataset that more rigorously evaluates models\. On this dataset, we find that current FMs, despite showing SOTA performance in multiple MI datasets are outperformed by smaller task\-specific models\. We also highlight challenges specific to EEG\-based handwriting decoding to inform future work\. In our 4\-letter classification task, we show that  \(a\) Knowledge of movement\-onset is crucial to reported decoding performance in prior works, with average performance across subjects dropping from $41\.3\\%$ to $32\.4\\%$\. \(b\) Increasing test\-time signal quality provides significant performance improvements \($45\\%$ to $78\\%$ in our best subject\) compared to scaling training data with single\-trial EEG\.  \(c\) While scaling training data steadily improves decoding performance, existing FMs do not outperform specialist models in handwriting decoding\. We make our code and dataset available at https://anonymous\.4open\.science/r/EEG\-Handwriting\-BCI\-DFCD
-
-## Mind the Parameters: Lightweight and Efficient Brain Visual Decoding with Shared Tensor Cores
-
-**Authors:** Haodong Jing; Panqi Yang; Rongchao Zhang; Junhao Jia; Hoi Leong Lee; Zhipeng Liu; Yongqiang Ma; Nanning Zheng
-
-**ID:** 154012\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 154012
-
-[Paper](<https://openreview.net/forum?id=Gs4DaL9e6C>) | [PDF](<https://openreview.net/pdf?id=Gs4DaL9e6C>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154012>)
-
-Linking brain activity to computational representations of visual perception is a central goal at the intersection of neuroscience and machine learning\. However, cross\-subject decoding from fMRI remains challenging because neural responses vary substantially across individuals, while existing methods often rely on subject\-specific fine\-tuning or parameter\-heavy decoders\. This limits generalization to unseen subjects and hinders efficient deployment\. We propose BrainTC\-\-Brain Tensor Cores, a lightweight framework for cross\-subject brain visual decoding based on shared tensor decomposition\. BrainTC separates shared functional structure from subject\-specific variation through a shared tensor\-core alignment module that maps ROI\-wise responses into a common functional space with shared tensor bases and residual subject factors\. This supports both zero\-shot decoding for unseen subjects and few\-shot adaptation by updating only residual parameters\. We then develop a Brain Tensor\-Transformer with tensorized attention to compactly model inter\-ROI dependencies, together with a hierarchical neural\-to\-visual mapping module for multi\-level visual prediction\. Experiments show that BrainTC achieves competitive cross\-subject decoding performance with substantially improved parameter efficiency, particularly in zero\-shot generalization to unseen subjects\.
-
-## EgoStream: A Diagnostic Benchmark for Streaming Episodic Memory in Egocentric Vision
-
-**Authors:** Rosario Forte; Giuseppe Lando; Antonino Furnari
-
-**ID:** 139373\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 139373
-
-[Paper](<https://openreview.net/forum?id=UDecnw8V7B>) | [PDF](<https://openreview.net/pdf?id=UDecnw8V7B>) | [Official poster](<https://neurips.cc/virtual/2026/poster/139373>)
-
-Continuous episodic memory is a core capability for autonomous agents operating in dynamic, real\-world environments, yet current streaming video benchmarks provide limited tools for diagnosing what models remember and for how long\. We introduce Egostream, a diagnostic benchmark for streaming episodic memory evaluation in egocentric vision\. \\egostream organizes 2,250 curated questions along seven cognitive dimensions: detail, spatial, temporal, event, social, causal, and prospective memory\. We introduce the Answer Validity Window \(AVW\), which specifies the temporal span an answer remains valid as the observed scene evolves\. This allows us to expand the questions into 8,528 recall\-conditioned evaluations, enabling controlled testing from instant to ultra\-long\-term recall while separating genuine model forgetting from natural world\-state changes\. We rigorously establish baseline performance through a unified streaming MLLM framework that compares several state\-of\-the\-art memory\-management mechanisms, covering sliding windows, attention sinks, KV\-cache pruning, merging, and offloading\.   Experiments within a unified Qwen3\-VL backbone reveal that comparable aggregate accuracies mask starkly different memory profiles\. For instance, token pruning preserves fine\-grained details and temporal structure significantly better than token merging, while quantized offloading rescues ultra\-long\-term recall\. Ultimately, all mechanisms operate well below real\-time \(&gt;1s per frame\), and top performing methods ceil at about 45\\% accuracy, exposing critical gaps in current architectures\. Egostream provides the diagnostic testbed needed to close these gaps\.
+Recent studies show that LLM hidden states encode reward\-related information, such as answer correctness and model confidence\. However, existing approaches typically fit black\-box probes on the full hidden states, offering little insight into how this information is structured across neurons\. In this paper, we show that reward\-related information is concentrated in a sparse subset of neurons\. Using simple probing, we identify two types of neurons: value neurons, whose activations predict state value, and dopamine neurons, whose activations encode step\-level temporal difference \(TD\) errors\. Together, these neurons form a sparse reward subsystem within LLM hidden states\. These names are drawn by analogy with neuroscience, where value neurons and dopamine neurons in the biological reward subsystem also encode value and reward prediction errors, respectively\. We demonstrate that value neurons are robust and transferable across diverse datasets and models, and provide causal evidence that they encode reward\-related information\. Finally, we show applications of the reward subsystem: value neurons serve as effective predictors of model confidence, and dopamine neurons can function as a process reward model \(PRM\) to guide inference\-time search\.
 
 ## Vibe\-Spike: An Energy\-Preserving EEG Foundation Model Through the Landscape of Neural Coherence
 
 **Authors:** Jun Ye; yuting li; Tingting Dan; Guorong Wu
 
-**ID:** 154655\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 154655
+**ID:** 154655 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
 [Paper](<https://openreview.net/forum?id=C1hqOzVwCn>) | [PDF](<https://openreview.net/pdf?id=C1hqOzVwCn>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154655>)
 
 Current foundation models of electroencephalography \(EEG\) sought to characterize the fluctuations in neural signals, yet this objective stands fundamentally at odds with the intrinsic physiological mechanisms governing brain activity\. As with their LLM predecessors, these models pack millions of neurons, even those contributing negligibly small weights, yielding a computational footprint incompatible with resource\-constrained portable brain\-computer interfaces \(BCIs\)\. To overcome these challenges, we propose \*Vibe\-Spike\*, an energy\-preserving and biologically\-realistic EEG foundation model operating in the regime of oscillatory neural synchronization\. Drawing on principles from cognitive neuroscience, our foundation model is designed to recover the masked EEG signals through the transient spikes of spatially coupled neurons, from which self\-organized cortical synchronization \(aka\. \*brain rhythms\*\) emerges to reciprocally modulate ongoing neural firings\. Under the hood, we introduce a macro\-micro learning mechanism that bridges two scales of neural computation: lower layers capture neural oscillations via a spiking neural network \(SNN\), while upper layers model oscillatory synchronization across large neuronal populations, with cross\-scale interactions learned end\-to\-end\. Taken together, our \*Vibe\-Spike\* sheds new light on learning intrinsic representation of functional neural fluctuations\. We pre\-train the model to reconstruct segmented EEG signals directly from the synchronized spiking representations using a purely self\-supervised objective on a diverse corpus of \*\*75\*\* public datasets\. To demonstrate its universal representational power, we conduct massive\-scale evaluations across ten heterogeneous downstream datasets, including clinical pathology, sleep staging, and cognitive assessment\. \*Vibe\-Spike\* not only facilitates deployment on portable edge devices through its lightweight architecture and energy\-preserving inference, but also provides profound neuroscience insights\. By further capturing pre\- and post\-synaptic firing, \*Vibe\-Spike\* unlocks a new pathway for characterizing effective connectivity and the oscillatory synchronization that underpins cognition\.
-
-## Direct Conditioning of Audio Diffusion Transformers on fMRI Reveals Cortical Contributions to Sound Reconstruction
-
-**Authors:** Matteo Ciferri; Tonio Weidler; Matteo Ferrante; Nicola Toschi; Elia Formisano
-
-**ID:** 152995\-\-2 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 152995
-
-[Paper](<https://openreview.net/forum?id=OlCa72ym7P>) | [PDF](<https://openreview.net/pdf?id=OlCa72ym7P>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152995>)
-
-Reconstructing audio from brain activity remains challenging\. A key limitation lies in current audio diffusion models, which are primarily designed for text\-based conditioning and lack mechanisms to incorporate non\-linguistic continuous signals such as neural responses\. While recent work in the visual domain has explored direct conditioning on brain activity, this approach has not yet been extended to audio diffusion models\. We introduce a framework that directly guides a latent audio diffusion model with fMRI signals, avoiding intermediate feature prediction for the conditioning stage\. Central to our approach is a transformer\-compatible adapter that enables the integration of non\-linguistic representations into the cross\-attention layers of diffusion transformers \(DiTs\)\. Although motivated by neural decoding, this adapter provides a general mechanism for conditioning audio diffusion models on arbitrary continuous inputs, not inherently limited to neural signals\. We demonstrate consistent improvements over baselines, including two\-stage fMRI\-to\-latent conditioning, across both acoustic and semantic evaluation metrics\. In addition, we introduce a fidelity metric grounded in a computational model of auditory neural processing, which allows us to quantify the contribution of individual auditory cortical regions to reconstructed audio representations\.
 
 ## Representing Part\-Whole Hierarchy with Nested Neuronal Coherence
 
 **Authors:** Hao Zheng; Hui Lin; Rong Zhao
 
-**ID:** 150391\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 150391
+**ID:** 150391 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
 [Paper](<https://openreview.net/forum?id=iPNj9AYpKu>) | [PDF](<https://openreview.net/pdf?id=iPNj9AYpKu>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150391>)
 
 Human vision flexibly extracts part\-whole hierarchies from visual scenes, but representing such structures remains a key challenge for neural networks\. Inspired by the neural syntax hypothesis in neuroscience, we propose a framework for representing hierarchical part\-whole relationships through nested neuronal coherence, characterized by its continuous and distributed nature\. Nested neuronal coherence refers to dynamical states where distributed activations are temporally correlated to form cell assembly sequences across timescales, argued to represent neural syntax\. Building on this framework, we develop a cortical\-inspired hybrid model, Composer, which dynamically achieves emergent nestedness when given images\. To evaluate the emergent hierarchy, we create four synthetic datasets and three quantitative metrics, demonstrating the model’s ability to parse scenes of varying complexity\. Overall, our work advances a systematic paradigm spanning representation, implementation, and evaluation toward building human\-like vision in neural networks\.
 
-## FracEncoder: Towards Adaptive Cognitive Trajectories via Fractional\-Order Context Encoding
-
-**Authors:** Lulu Wang; Shengling Wang; Anlin Chen; Ke Chao; Weicheng Wang
-
-**ID:** 148356\-\-2 | **Topic source:** inferred | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 148356
-
-[Paper](<https://openreview.net/forum?id=yUT3YSeo8K>) | [PDF](<https://openreview.net/pdf?id=yUT3YSeo8K>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148356>)
-
-_Abstract unavailable from the accessible public sources._
-
 ## Prototypes of the Mind: A Unified Framework for Probing the Visual Brain
 
 **Authors:** Shi Chen; Seoyoung Ahn; Doris Tsao
 
-**ID:** 153745\-\-2 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 153745
+**ID:** 153745 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
 [Paper](<https://openreview.net/forum?id=J3DGy43GZZ>) | [PDF](<https://openreview.net/pdf?id=J3DGy43GZZ>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153745>)
 
-_Abstract unavailable from the accessible public sources._
-
-## Predictive Representation Learning for Partially Observed Neural Dynamics
-
-**Authors:** Xinyi Li; Zhichao Liang; Hongjun Jiang; Yian Zhu; Guanyi Zhao; Xuejian Yang; Xiaoqi Chen; Kexin Lou; Quanying Liu
-
-**ID:** 151732\-\-2 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 151732
-
-[Paper](<https://openreview.net/forum?id=YVQoWXsmt9>) | [PDF](<https://openreview.net/pdf?id=YVQoWXsmt9>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151732>)
-
-In long\-term multi\-session neural recordings, the same latent population dynamics are often observed through changing subsets of neural channels due to electrode drift, signal instability, or session\-dependent recording variability\. This creates a partially observed system\-identification problem: each session provides only an incomplete view of a shared dynamical system, and missing channels are not merely absent inputs but unobserved variables coupled to the same latent dynamics\. Existing approaches often rely on observation\-pattern\-specific mapping, which treats missing channels passively and leaves the shared latent dynamics weakly constrained\. We propose CHAMA \(CHannel\-Aware Masked Attention\), a mask\-conditioned predictive representation learning framework for identifying shared neural dynamics under heterogeneous channel availability\. CHAMA introduces a single global observation interface conditioned on channel\-availability masks, allowing observed and unobserved channels to jointly constrain latent dynamics\. The key idea is bidirectional: missing channels impose structural constraints on the latent representation, while the learned latent dynamics enable principled recovery of missing activity\. To improve identifiability under sparse observations, CHAMA aggregates causal temporal windows, effectively trading temporal context for missing spatial information\. Across synthetic dynamical systems and real multi\-session neural recordings, CHAMA improves missing\-channel completion, forecasting, latent dynamical fidelity, and downstream behavioral decoding over conditional adapter, zero\-padding, and masked\-autoencoding baselines\. These results show that dynamics\-aware recovery preserves globally consistent and behaviorally relevant structure beyond point\-wise reconstruction accuracy\. The source code is available at: \\url\{https://anonymous\.4open\.science/r/CHAMA\-D691\}\.
-
-## BRIDGE: Brain\-Vision Representation Integration through Depth and Granularity Encoding
-
-**Authors:** Chenyuan Hong; Binghao Ye; Yufei Guo; Guoqi Li
-
-**ID:** 155233\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 155233
-
-[Paper](<https://openreview.net/forum?id=7GEZxlwjaN>) | [PDF](<https://openreview.net/pdf?id=7GEZxlwjaN>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155233>)
-
-Decoding visual content from non\-invasive brain signals remains challenging because neural responses evolve over time whereas images are typically static\. Most existing methods align an entire neural response window to a single final visual embedding, this overlook a fundamental representational mismatch: brain signals reflect both early perceptual and later integrative representations, whereas the final visual embedding is biased toward high\-level semantics\. Therefore, we propose BRIDGE, a brain\-vision representation integration framework that aligns two modalities through Visual Depth Encoding and Brain Granularity Encoding\. On the visual side, BRIDGE extracts and fuses CLIP representations from multiple depths, producing an alignment target that preserves low\-level and high\-level information\. On the brain side, instead of treating the whole temporal window as homogeneous and obscuring temporally heterogeneity, BRIDGE explicitly partitions stimulus\-evoked EEG/MEG responses into a small number of temporally ordered stages and adaptively pools them\. The resulting brain and visual embeddings are trained in a shared latent space by contrastive learning and can further support brain\-to\-image generation through a pretrained diffusion prior\. Experiments on THINGS\-EEG and THINGS\-MEG demonstrate that BRIDGE achieves strong retrieval and generation performance\. Ablation studies further confirm the complementary benefits of depth\-wise visual aggregation and temporal brain factorization\.
-
-## FETTUCCINE: Fast and efficient brain\-to\-text decoding on mobile devices
-
-**Authors:** Jonathan McCart; Pranav Deevi; Mehdi Azabou; Nanda H Krishna; Caleb A McKinney; Nicholas S Card; Sergey D Stavisky; Chethan Pandarinath
-
-**ID:** 150728\-\-2 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 150728
-
-[Paper](<https://openreview.net/forum?id=fqsWkQnA9w>) | [PDF](<https://openreview.net/pdf?id=fqsWkQnA9w>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150728>)
-
-Recent advances in speech neuroprostheses have enabled new communication avenues for people who have lost the ability to speak due to neurological illness or injury\. These systems can decode neural activity during attempted speech into text by relying on language priors to achieve high decoding accuracy\. This performance currently comes at the cost of using a compute\-intensive language modeling stack, presenting a major bottleneck for real\-world use\. Further, current language models incur highly variable and disruptive inference latencies, limiting communication throughput and preventing users from reliably participating in natural conversation\. We introduce FETTUCCINE, an end\-to\-end brain\-to\-text framework that leverages the speed and portability of automatic speech recognition \(ASR\) models to address the aforementioned practical challenges, while achieving usable \(&lt;10%\) word error rates \(WER\), efficient adaptation to neural non\-stationarities, and reliable performance on mobile devices\. When evaluated using publicly available data from an intracortical speech neuroprosthesis user, FETTUCCINE outperforms previous end\-to\-end methods, achieving as low as 4\.39% WER\. Most notably, our models successfully run on a commercially\-available mobile device with throughput reaching up to 370x real\-time, providing the first demonstration of brain\-to\-text decoding on a mobile device\. We also show that our models can be successfully finetuned to extend usable performance to future days\. Beyond performance, our approach enables localization of the neural features most relevant for decoding via gradient\-based salience maps, which we show align with well\-established physiological priors across different ASR model families\. Taken together, our results show that FETTUCCINE overcomes core infrastructural and computational barriers, yielding a new class of portable brain\-to\-text communication\.
-
-## Vibe\-Spike: An Energy\-Preserving EEG Foundation Model Through the Landscape of Neural Coherence
-
-**Authors:** Jun Ye; yuting li; Tingting Dan; Guorong Wu
-
-**ID:** 154655\-\-3 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 154655
-
-[Paper](<https://openreview.net/forum?id=C1hqOzVwCn>) | [PDF](<https://openreview.net/pdf?id=C1hqOzVwCn>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154655>)
-
-Current foundation models of electroencephalography \(EEG\) sought to characterize the fluctuations in neural signals, yet this objective stands fundamentally at odds with the intrinsic physiological mechanisms governing brain activity\. As with their LLM predecessors, these models pack millions of neurons, even those contributing negligibly small weights, yielding a computational footprint incompatible with resource\-constrained portable brain\-computer interfaces \(BCIs\)\. To overcome these challenges, we propose \*Vibe\-Spike\*, an energy\-preserving and biologically\-realistic EEG foundation model operating in the regime of oscillatory neural synchronization\. Drawing on principles from cognitive neuroscience, our foundation model is designed to recover the masked EEG signals through the transient spikes of spatially coupled neurons, from which self\-organized cortical synchronization \(aka\. \*brain rhythms\*\) emerges to reciprocally modulate ongoing neural firings\. Under the hood, we introduce a macro\-micro learning mechanism that bridges two scales of neural computation: lower layers capture neural oscillations via a spiking neural network \(SNN\), while upper layers model oscillatory synchronization across large neuronal populations, with cross\-scale interactions learned end\-to\-end\. Taken together, our \*Vibe\-Spike\* sheds new light on learning intrinsic representation of functional neural fluctuations\. We pre\-train the model to reconstruct segmented EEG signals directly from the synchronized spiking representations using a purely self\-supervised objective on a diverse corpus of \*\*75\*\* public datasets\. To demonstrate its universal representational power, we conduct massive\-scale evaluations across ten heterogeneous downstream datasets, including clinical pathology, sleep staging, and cognitive assessment\. \*Vibe\-Spike\* not only facilitates deployment on portable edge devices through its lightweight architecture and energy\-preserving inference, but also provides profound neuroscience insights\. By further capturing pre\- and post\-synaptic firing, \*Vibe\-Spike\* unlocks a new pathway for characterizing effective connectivity and the oscillatory synchronization that underpins cognition\.
-
-## Direct Conditioning of Audio Diffusion Transformers on fMRI Reveals Cortical Contributions to Sound Reconstruction
-
-**Authors:** Matteo Ciferri; Tonio Weidler; Matteo Ferrante; Nicola Toschi; Elia Formisano
-
-**ID:** 152995\-\-3 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 152995
-
-[Paper](<https://openreview.net/forum?id=OlCa72ym7P>) | [PDF](<https://openreview.net/pdf?id=OlCa72ym7P>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152995>)
-
-Reconstructing audio from brain activity remains challenging\. A key limitation lies in current audio diffusion models, which are primarily designed for text\-based conditioning and lack mechanisms to incorporate non\-linguistic continuous signals such as neural responses\. While recent work in the visual domain has explored direct conditioning on brain activity, this approach has not yet been extended to audio diffusion models\. We introduce a framework that directly guides a latent audio diffusion model with fMRI signals, avoiding intermediate feature prediction for the conditioning stage\. Central to our approach is a transformer\-compatible adapter that enables the integration of non\-linguistic representations into the cross\-attention layers of diffusion transformers \(DiTs\)\. Although motivated by neural decoding, this adapter provides a general mechanism for conditioning audio diffusion models on arbitrary continuous inputs, not inherently limited to neural signals\. We demonstrate consistent improvements over baselines, including two\-stage fMRI\-to\-latent conditioning, across both acoustic and semantic evaluation metrics\. In addition, we introduce a fidelity metric grounded in a computational model of auditory neural processing, which allows us to quantify the contribution of individual auditory cortical regions to reconstructed audio representations\.
-
-## Solving Stochastic Control under Multiplicative and Internal Noise via Constrained Optimization
-
-**Authors:** Ruben Moreno Bote; Francesco Damiani; Dmytro Grytskyy
-
-**ID:** 148806 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=uzMEs1gPQ6>) | [PDF](<https://openreview.net/pdf?id=uzMEs1gPQ6>) | [Official poster](<https://neurips.cc/virtual/2026/poster/148806>)
-
-_Abstract unavailable from the accessible public sources._
+Deep learning has driven substantial progress in modeling fMRI responses, yet most existing approaches are optimized for a single objective\-\-\-such as neural encoding, stimulus decoding, or post hoc interpretation\-\-\-making it difficult to obtain a coherent account of neural representations\. We introduce a unified framework that connects vision foundation models to brain activity while supporting neural analysis from multiple complementary perspectives\. Our approach replaces black\-box features with a sparse, interpretable representation composed of visual prototypes, and links these prototypes to voxel responses through a linear readout\. This design makes the model transparent at both levels: prototype activations expose the visual concepts present in the stimulus, while the learned linear weights characterize each voxel's selectivity\. Using this interface, we identify which visual concepts drive neural responses and where they appear in the image, reveal cortical organization through voxel tuning in prototype space, and perform controlled stimulus synthesis to probe cortical selectivity through targeted interventions\. Together, these results establish prototype\-based representations as a unified and interpretable foundation for studying visual representations in the human brain\.
 
 ## Default Feature Representations of the Cognitive Map
 
@@ -1609,14 +1415,4 @@ _Abstract unavailable from the accessible public sources._
 [Paper](<https://openreview.net/forum?id=9zIIpQP6FM>) | [PDF](<https://openreview.net/pdf?id=9zIIpQP6FM>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154918>)
 
 Updating a predictive cognitive map when the environment changes is a central problem for both biological agents and reinforcement learning, yet existing approaches either depend on explicit model knowledge or learn the full state\-indexed map from samples\. We propose Default Feature Representations \(DFR\), a featurized parameterization of predictive cognitive maps in which a fixed feature basis is composed with an operator that encodes the current environment\. We provide two forms for the operator: a model\-based closed form when the structural change between environments is known, and a model\-free temporal\-difference learning rule that recovers the operator from sampled transitions, with provable convergence to the model\-based solution\. The model\-free DFR reconstructs the perturbed map from samples alone, achieves planning performance comparable to the model\-based solution, and substantially outperforms successor\-representation baselines on replanning tasks\. We also show that DFR captures the local remapping of grid cells observed under local environmental change\. By separating the cognitive map into a stable feature basis and a fast\-adapting operator, DFR offers a sample\-based account of how a predictive map can be updated from local experience, mirroring the stability of entorhinal grid fields across environments\.
-
-## Emotion\-Trained Vision Models Do Not Necessarily Learn EEG\-Aligned Facial Dynamics
-
-**Authors:** Mariem Ben Slimen; Hamza Abdelhedi; Vanessa Hadid; Karim Jerbi
-
-**ID:** 150276 | **Topic source:** inferred | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=jMlzffZ5UW>) | [PDF](<https://openreview.net/pdf?id=jMlzffZ5UW>) | [Official poster](<https://neurips.cc/virtual/2026/poster/150276>)
-
-Facial expressions are one of the main ways humans communicate affect, but they are not static signals\. In natural vision, expressions evolve over time, with facial movements emerging, intensifying, and changing as emotion is expressed\. Prior model\-brain studies based on static images suggest that vision models can capture aspects of face\-related neural representations, but it remains unclear whether artificial vision models capture the temporal EEG dynamics of facial emotion perception\. We test the hypothesis that models trained for facial emotion recognition, especially video\-based or temporally structured models, should show stronger alignment with human EEG dynamics than randomly initialized controls\. We do so by aligning model representations with time\-resolved EEG representational geometry from 25 participants viewing one\-second dynamic facial\-expression videos\. We compare six models spanning static\-image, video\-based, self\-supervised, and vision\-language representations: ResNet18, VGGFace, CNN2D, CNN3D, DINOv2\-temporal, and Qwen2\.5\-VL\. Contrary to this hypothesis, supervised facial\-emotion training does not consistently increase alignment with human EEG dynamics\. In particular, video\-trained and temporally structured emotion models align less with fear\-related EEG geometry than the same architectures with randomly initialized weights, whereas static\-image emotion models show trained\-versus\-random differences close to zero\. These results are robust to stricter noise\-ceiling thresholds and are not explained by actor identity or raw pixel similarity\. Exploratory analyses further suggest that peak alignment is often localized to the first or last sampled video frames, and that fear alignment varies across scalp ROIs by training regime\. Overall, our results challenge the assumption that video\-based emotion supervision automatically yields more brain\-like dynamic representations of facial emotion\.
 

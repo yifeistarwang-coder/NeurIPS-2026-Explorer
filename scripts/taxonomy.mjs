@@ -25,6 +25,7 @@ const definitions = [
   ]],
   ['Data-centric AI', '以数据为中心的人工智能', [
     ['Data-centric AI methods and tools', '数据方法与工具', ['data-centric', 'data curation', 'data quality', 'data selection', 'dataset distillation', 'synthetic data', 'data valuation', '数据质量']],
+    ['Data augmentation', '数据增强', ['data augmentation', 'augmentation', 'augment', 'mixup', 'cutmix', '数据增强']],
     ['Everything Else', '其他数据研究', ['dataset', 'data annotation']],
   ]],
   ['Deep Learning', '深度学习', [

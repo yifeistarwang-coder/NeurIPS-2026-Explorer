@@ -2,19 +2,9 @@
 
 理论 / 领域适应与迁移学习理论
 
-9 source poster records. Repeated source event IDs are retained and explicitly marked.
+11 source poster records. Repeated source event IDs are retained and explicitly marked.
 
 Topic labels marked inferred are keyword-based, not official conference labels. PDF links marked derived are unverified. Missing abstracts are left empty in the JSON and CSV exports.
-
-## Pseudo\-Labeling for Unsupervised Domain Adaptation with Kernel GLMs
-
-**Authors:** Nathan Weill; Kaizheng Wang
-
-**ID:** 151774 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=Y7TGuV7hZn>) | [PDF](<https://openreview.net/pdf?id=Y7TGuV7hZn>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151774>)
-
-We propose a principled framework for unsupervised domain adaptation under covariate shift in kernel Generalized Linear Models \(GLMs\), encompassing kernelized linear, logistic, and Poisson regression with ridge regularization\. Our goal is to minimize prediction error in the target domain by leveraging labeled source data and unlabeled target data, despite differences in covariate distributions\. We partition the labeled source data into two batches: one for training a family of candidate models, and the other for building an imputation model\. This imputation model generates pseudo\-labels for the target data, enabling robust model selection\. We establish non\-asymptotic excess\-risk bounds that characterize adaptation performance through an “effective labeled sample size,” explicitly accounting for the unknown covariate shift\. Experiments on synthetic and real datasets demonstrate consistent performance gains over source\-only and importance weighting baselines\.
 
 ## On the Limits of Latent Reuse in Diffusion Models
 
@@ -25,36 +15,6 @@ We propose a principled framework for unsupervised domain adaptation under covar
 [Paper](<https://openreview.net/forum?id=9eRD2Dppl5>) | [PDF](<https://openreview.net/pdf?id=9eRD2Dppl5>) | [Official poster](<https://neurips.cc/virtual/2026/poster/154956>)
 
 Diffusion models are often trained in low\-dimensional latent spaces, which are then reused for related but shifted datasets\. In this work, we study when such latent reuse remains reliable under distribution shift\. We consider a source\-target setting in which both datasets are approximately low\-dimensional but may lie near different subspaces\. We show that freezing and reusing a source latent space induces a target\-domain score error governed by two quantities: the principal\-angle misalignment between the source and target subspaces, and the target ambient noise amplified by the diffusion time scale\. Motivated by these limits, we further study mixed source\-target training and characterize how the required shared latent dimension depends on the relative geometry of the two distributions\. Our results provide theoretical guidance on when latent reuse is reliable and when learning a shared representation may be necessary\.
-
-## Entropy Minimization without Model Collapse: Mitigating Prediction Bias in Medical Imaging
-
-**Authors:** Tim Nielen; Sameer Ambekar; Daniel Lang; Julia Schnabel
-
-**ID:** 149828 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=n0LfI4MJNe>) | [PDF](<https://openreview.net/pdf?id=n0LfI4MJNe>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149828>)
-
-Entropy minimization \(EM\) is the dominant objective for test\-time adaptation, yet its failure mode, model collapse, remains poorly understood\. In this work, we show that distribution shifts can cause feature clusters corresponding to distinct classes in the model’s representation space to merge, while the decision boundary remains fixed\. This induces a systematic skew in the predicted class distribution, referred to as prediction bias\. Prediction bias refers to a shift in the predicted class distribution, with some classes overrepresented and others suppressed\. We show that entropy minimization amplifies this prediction bias by tightening the existing clusters, reinforcing the incorrect groupings until all predictions collapse to a trivial solution\. Next, to demonstrate the significance of prediction bias and mitigate it, we further propose Distribution Shift Bias Reduction \(DSBR\), a bias\-correcting objective that specifically targets this failure mode by equalizing the contribution of each predicted class to the unsupervised entropy minimization loss\. To study this failure mode, we design suitable adaptation settings using four medical‑imaging datasets and additionally evaluate on ImageNet‑C\. We find that DSBR consistently stabilizes test‑time adaptation, prevents model collapse, and matches or outperforms the state‑of‑the‑art methods\. Moreover, DSBR operates solely at test\-time\.
-
-## Can Circuit Alignment Predict OOD Generalization?
-
-**Authors:** Ayan Banerjee; ABHRA CHAUDHURI; Josep Llados; Umapada Pal; Anjan Dutta
-
-**ID:** 155822 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=2cBK6cvSiw>) | [PDF](<https://openreview.net/pdf?id=2cBK6cvSiw>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155822>)
-
-_Abstract unavailable from the accessible public sources._
-
-## Langevin\-Informed Transfer Learning: Replacing the Target Samples by Black\-Box Feedback
-
-**Authors:** Vladimir Kostic; Karim Lounici; Hélène Halconruy; Timothée Devergne; Michele Parrinello; Massimiliano Pontil
-
-**ID:** 151211 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-[Paper](<https://openreview.net/forum?id=c9ETUr90Vp>) | [PDF](<https://openreview.net/pdf?id=c9ETUr90Vp>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151211>)
-
-_Abstract unavailable from the accessible public sources._
 
 ## A Theoretical Framework for Self\-Play Theorem Proving Algorithms
 
@@ -76,27 +36,83 @@ Self\-play, a type of training algorithm that enables a model to self\-improve, 
 
 Open\-Set Test\-Time Adaptation \(OSTTA\) operates on non\-stationary target streams where covariate and semantic shifts coexist\. Existing TTA methods often obtain adaptation signals by updating model parameters or maintaining mutable memories, which can be costly and vulnerable to unknown samples\. We present \*\*TALOR\*\*, a lightweight, backward\-free rectification module that uses the source linear head as a geometric anchor\. The head\-induced basis decomposes each normalized feature into high\-gain principal coordinates and low\-gain tail coordinates\. TALOR estimates a soft\-routed affine correction in the principal subspace, combining a \_regime\-level\_ principal bias with a tail\-conditioned slope that captures \_sample\-level\_ tail\-to\-principal coupling\. Using weighted ridge regression, it subtracts this drift estimate from the principal coordinates, reconstructs the feature and feeds it into the source head\. On the ImageNet\-C benchmark with six csOOD datasets, TALOR outperforms the next\-best UniEnt by \*\*2\.2%\*\* H\-score while running $\\mathbf\{2\.5\\times\}$ faster and using only \*\*12%\*\* of its GPU memory; as a post\-correction plug\-in, it further boosts COME to \*\*68\.4%\*\* H\-score with only \*\*2%\*\* additional memory overhead\.
 
-## Entropy Minimization without Model Collapse: Mitigating Prediction Bias in Medical Imaging
+## Partially Performative Prediction
 
-**Authors:** Tim Nielen; Sameer Ambekar; Daniel Lang; Julia Schnabel
+**Authors:** Jaewook Lee; Tijana Zrnic
 
-**ID:** 149828\-\-2 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+**ID:** 153061 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
-**Repeated source row:** 149828
+[Paper](<https://openreview.net/forum?id=OJ3tHPcSRq>) | [PDF](<https://openreview.net/pdf?id=OJ3tHPcSRq>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153061>)
 
-[Paper](<https://openreview.net/forum?id=n0LfI4MJNe>) | [PDF](<https://openreview.net/pdf?id=n0LfI4MJNe>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149828>)
+Performative prediction studies feedback loops that arise when predictive models are deployed in consequential domains\. In these settings, model updates can shape the population whose patterns they aim to predict, inducing a distribution shift that is \*endogenous\* to the learning system\. This perspective departs from classical treatments of distribution shift, where shifts are typically modeled as \*exogenous\* changes in the data\-generating process\. Yet, in practice, distribution shift is rarely one or the other\. Predictive models may influence future data through the decisions they support, while the world itself continues to drift for reasons beyond the learner’s control\. We study \*partially performative prediction\*, a framework that captures both endogenous and exogenous sources of distribution shift\. The framework generalizes performative prediction by allowing the data distribution to evolve both in response to the deployed model and according to an external, time\-varying process\. We extend the central notions of performative stability and performative optimality to this setting by defining online analogues that measure performance relative to the evolving partially performative environment\. We analyze practical learning heuristics, including repeated retraining, and characterize when they successfully adapt to partially performative environments\.
 
-Entropy minimization \(EM\) is the dominant objective for test\-time adaptation, yet its failure mode, model collapse, remains poorly understood\. In this work, we show that distribution shifts can cause feature clusters corresponding to distinct classes in the model’s representation space to merge, while the decision boundary remains fixed\. This induces a systematic skew in the predicted class distribution, referred to as prediction bias\. Prediction bias refers to a shift in the predicted class distribution, with some classes overrepresented and others suppressed\. We show that entropy minimization amplifies this prediction bias by tightening the existing clusters, reinforcing the incorrect groupings until all predictions collapse to a trivial solution\. Next, to demonstrate the significance of prediction bias and mitigate it, we further propose Distribution Shift Bias Reduction \(DSBR\), a bias\-correcting objective that specifically targets this failure mode by equalizing the contribution of each predicted class to the unsupervised entropy minimization loss\. To study this failure mode, we design suitable adaptation settings using four medical‑imaging datasets and additionally evaluate on ImageNet‑C\. We find that DSBR consistently stabilizes test‑time adaptation, prevents model collapse, and matches or outperforms the state‑of‑the‑art methods\. Moreover, DSBR operates solely at test\-time\.
+## Pseudo\-Labeling for Unsupervised Domain Adaptation with Kernel GLMs
+
+**Authors:** Nathan Weill; Kaizheng Wang
+
+**ID:** 151774 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=Y7TGuV7hZn>) | [PDF](<https://openreview.net/pdf?id=Y7TGuV7hZn>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151774>)
+
+We propose a principled framework for unsupervised domain adaptation under covariate shift in kernel Generalized Linear Models \(GLMs\), encompassing kernelized linear, logistic, and Poisson regression with ridge regularization\. Our goal is to minimize prediction error in the target domain by leveraging labeled source data and unlabeled target data, despite differences in covariate distributions\. We partition the labeled source data into two batches: one for training a family of candidate models, and the other for building an imputation model\. This imputation model generates pseudo\-labels for the target data, enabling robust model selection\. We establish non\-asymptotic excess\-risk bounds that characterize adaptation performance through an “effective labeled sample size,” explicitly accounting for the unknown covariate shift\. Experiments on synthetic and real datasets demonstrate consistent performance gains over source\-only and importance weighting baselines\.
 
 ## Can Circuit Alignment Predict OOD Generalization?
 
 **Authors:** Ayan Banerjee; ABHRA CHAUDHURI; Josep Llados; Umapada Pal; Anjan Dutta
 
-**ID:** 155822\-\-2 | **Topic source:** official | **Abstract source:** missing | **PDF source:** derived-openreview (unverified)
-
-**Repeated source row:** 155822
+**ID:** 155822 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
 
 [Paper](<https://openreview.net/forum?id=2cBK6cvSiw>) | [PDF](<https://openreview.net/pdf?id=2cBK6cvSiw>) | [Official poster](<https://neurips.cc/virtual/2026/poster/155822>)
 
-_Abstract unavailable from the accessible public sources._
+Can out\-of\-distribution \(OOD\) generalization be predicted from a trained model's weights alone, without any target\-domain data? Existing representational similarity metrics \(CKA, SVCCA, RSA\) compare activations rather than forecast generalization\. We show they are provably insensitive to structural rerouting in the computational graph, the very change distribution shift induces\. We close this gap with the Circuit Alignment Score \(CAS\), which compares class\-specific circuits across domains via graph kernels, decomposed into same\-class coherence and cross\-class confusion\. Casting CAS as a Lebesgue integral over the domain distribution, we prove its Monte Carlo estimate recovers the ground\-truth ranking of learners by OOD accuracy, with pairwise inversion error vanishing at rate $O\(1/M\)$, where $M$ is the number of sampled domains\. Across $48$ learners on PACS, CAS attains $0\.88$ rank correlation with OOD accuracy, versus $0\.58$ \(CKA\), $0\.23$ \(SVCCA\), and $0\.14$ \(RSA\), with similar trends on other benchmarks and even against data\-dependent methods, making it the first provably consistent predictor of distributional robustness requiring neither target\-domain data nor labels\.
+
+## Langevin\-Informed Transfer Learning: Replacing the Target Samples by Black\-Box Feedback
+
+**Authors:** Vladimir Kostic; Karim Lounici; Hélène Halconruy; Timothée Devergne; Michele Parrinello; Massimiliano Pontil
+
+**ID:** 151211 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=c9ETUr90Vp>) | [PDF](<https://openreview.net/pdf?id=c9ETUr90Vp>) | [Official poster](<https://neurips.cc/virtual/2026/poster/151211>)
+
+Many scientific and machine learning systems, from molecular dynamics to diffusion models and beyond, are governed by stochastic dynamics with low\-dimensional structure, evolving on slow timescales\. However, target trajectories, \{used to identify and interpret them\}, are often inaccessible: only biased or static samples that explore dynamics' manifold are available\. We introduce Langevin\-Informed Transfer Learning \(LITL\), a framework for recovering target Langevin dynamics from biased source samples using only black\-box feedback\. LITL learns the leading spectral structure of the target infinitesimal generator and the projected drift through Dirichlet representation learning, enabling kinetic reconstruction in spectral form and slow\-manifold gradient field estimation\.  We further introduce a spherical variant well suited to steering normalized latent representations commonly used in modern learning systems toward desired objective\.  We establish finite\-sample guarantees for eigenvalue, eigenfunction, and projected drift estimation in Sobolev norms, thus proving generalization of all objects in function and first order derivatives values\. Empirically, LITL recovers physical transition timescales from biased molecular simulations, builds kinetic structure from static samples of generative models, reconstructs spherical symmetries of physical systems, and enables post\-hoc latent steering of trained neural networks under black\-box feedback\. Together, these results position spectral operator learning as a practical framework for recovering stochastic dynamics under distribution shift and unlock applications across machine learning and the physical sciences\.
+
+## Entropy Minimization without Model Collapse: Mitigating Prediction Bias in Medical Imaging
+
+**Authors:** Tim Nielen; Sameer Ambekar; Daniel Lang; Julia Schnabel
+
+**ID:** 149828 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=n0LfI4MJNe>) | [PDF](<https://openreview.net/pdf?id=n0LfI4MJNe>) | [Official poster](<https://neurips.cc/virtual/2026/poster/149828>)
+
+Entropy minimization \(EM\) is the dominant objective for test\-time adaptation, yet its failure mode, model collapse, remains poorly understood\. In this work, we show that distribution shifts can cause feature clusters corresponding to distinct classes in the model’s representation space to merge, while the decision boundary remains fixed\. This induces a systematic skew in the predicted class distribution, referred to as prediction bias\. Prediction bias refers to a shift in the predicted class distribution, with some classes overrepresented and others suppressed\. We show that entropy minimization amplifies this prediction bias by tightening the existing clusters, reinforcing the incorrect groupings until all predictions collapse to a trivial solution\. Next, to demonstrate the significance of prediction bias and mitigate it, we further propose Distribution Shift Bias Reduction \(DSBR\), a bias\-correcting objective that specifically targets this failure mode by equalizing the contribution of each predicted class to the unsupervised entropy minimization loss\. To study this failure mode, we design suitable adaptation settings using four medical‑imaging datasets and additionally evaluate on ImageNet‑C\. We find that DSBR consistently stabilizes test‑time adaptation, prevents model collapse, and matches or outperforms the state‑of‑the‑art methods\. Moreover, DSBR operates solely at test\-time\.
+
+## Language\-Induced Priors for Domain Adaptation
+
+**Authors:** Qiyuan Chen; Jiayu Zhou; Raed AL Kontar
+
+**ID:** 152836 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=Q3UnPzR6xr>) | [PDF](<https://openreview.net/pdf?id=Q3UnPzR6xr>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152836>)
+
+Domain adaptation faces a fundamental paradox in the cold\-start regime\. When target data is scarce, statistical methods fail to distinguish relevant source domains from irrelevant ones, which often leads to negative transfer\. In this paper, we address this challenge by leveraging expert textual descriptions of the target domain, a resource that is often available but overlooked\. We propose a probabilistic framework that translates these semantic descriptions into a choice model, namely a Language\-Induced Prior \(LIP\), that learns the preferences from a pre\-trained Large Language Model \(LLM\)\. The LIP is then integrated into an Expectation\-Maximization \(EM\) algorithm to identify source relevance\. Methodologically, this framework is compatible with any parametric model where a likelihood is available\. It allows the LIP to guide the selection of sources when target signals are weak, while gradually refining these choices as samples accumulate\. Theoretically, we prove that the estimator roughly matches an oracle cold\-start MSE under a correct prior, while remaining asymptotically consistent regardless of the quality of the LIP\. Empirically, we validated the framework on a descriptive \(Gaussian estimation\), a predictive \(C\-MAPSS dataset\), and a prescriptive task \(MuJoCo Hopper\)\.
+
+## Transfer Learning Through Conditional Quantile Matching
+
+**Authors:** Yikun Zhang; Steven Wilkins\-Reeves; Wesley Lee; Aude Hofleitner
+
+**ID:** 152993 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=OmEzTubNlR>) | [PDF](<https://openreview.net/pdf?id=OmEzTubNlR>) | [Official poster](<https://neurips.cc/virtual/2026/poster/152993>)
+
+We introduce a transfer learning framework for regression that leverages heterogeneous source domains to improve predictive performance in a data\-scarce target domain\. Our approach learns a conditional generative model separately for each source domain and calibrates the generated responses to the target domain via conditional quantile matching\. This distributional alignment step corrects general discrepancies between source and target domains without imposing restrictive assumptions such as covariate or label shift\. The resulting framework provides a principled and flexible approach to high\-quality data augmentation for downstream learning tasks in the target domain\. From a theoretical perspective, we show that an empirical risk minimizer \(ERM\) trained on the augmented dataset achieves a tighter excess risk bound than the target\-only ERM under mild conditions\. In particular, we establish new convergence rates for the quantile matching estimator that governs the transfer bias\-variance tradeoff\. From a practical perspective, extensive simulations and real data applications demonstrate that the proposed method consistently improves prediction accuracy over target\-only learning and competing transfer learning methods\.
+
+## SGD Provably Prioritizes a Shortcut Spurious Feature in the XOR Model
+
+**Authors:** Tyler LaBonte; Vidya Muthukumar
+
+**ID:** 153017 | **Topic source:** official | **Abstract source:** official-abstracts | **PDF source:** derived-openreview (unverified)
+
+[Paper](<https://openreview.net/forum?id=ObLhQCyrtH>) | [PDF](<https://openreview.net/pdf?id=ObLhQCyrtH>) | [Official poster](<https://neurips.cc/virtual/2026/poster/153017>)
+
+Neural networks are known to be susceptible to over\-reliance on spurious correlations\. However, the precise mechanism by which models exploit shortcut features is not fully understood, and algorithms to mitigate this behavior rely on as yet unjustified assumptions about the learned representations\. In this work, we provide the first end\-to\-end theoretical characterization of spurious feature learning for two\-layer ReLU neural networks trained by online minibatch SGD on the logistic loss\. We consider data drawn from the high\-dimensional Boolean hypercube with a quadratic signal function \(namely XOR\) and a linear spurious correlation\. We show that SGD learns the spurious feature first, and exponentially fast\. Moreover, the optimization dynamics couple the spurious and signal features, with a stronger spurious component inhibiting signal feature learning\. Our analysis reveals precise phase transitions in the learning dynamics\. In the first phase, alignment between the signs of the spurious feature and second\-layer weight drives rapid growth of the spurious feature\. When the spurious correlation is maximally strong, we show theoretically that the spurious feature dominates even at the sample complexity threshold where XOR would be learned in isolation \(i\.e\., if the spurious feature was absent\)\. In contrast, when the correlation strength is constant, we provide preliminary empirical evidence that the model can eventually learn the XOR signal, although the spurious feature is not forgotten\.
 

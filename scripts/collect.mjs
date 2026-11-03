@@ -79,14 +79,19 @@ export function normalizePapers(metadata, abstracts, { openreviewNotes = [] } = 
     const feedAbstract = abstracts[sourceEventId]?.trim();
     const inlineAbstract = typeof row.abstract === 'string' ? row.abstract.trim() : '';
     const enrichedAbstract = enrichment.get(forumId) ?? '';
-    const abstract = feedAbstract || inlineAbstract || enrichedAbstract;
-    const abstractSource = feedAbstract ? 'official-abstracts' : inlineAbstract ? 'official-metadata' : enrichedAbstract ? 'openreview' : 'missing';
+    const suppliedSource = typeof row._abstractSource === 'string' ? row._abstractSource : '';
+    const abstract = suppliedSource ? (suppliedSource === 'missing' ? '' : inlineAbstract) : (feedAbstract || inlineAbstract || enrichedAbstract);
+    const abstractSource = suppliedSource || (feedAbstract ? 'official-abstracts' : inlineAbstract ? 'official-metadata' : enrichedAbstract ? 'openreview' : 'missing');
     const taxonomy = classifyTopic({ title: row.name, abstract, officialTopic: row.topic ?? null, keywords: row.keywords });
     const thumbnail = httpUrl(row.thumbnail_url ?? row.thumbnail);
     return {
       id, title: row.name.trim(),
       authors: (row.authors ?? []).map((author) => typeof author === 'string' ? author.trim() : String(author.fullname ?? author.name ?? '').trim()).filter(Boolean),
       abstract, abstractSource, ...taxonomy,
+      abstractSourceUrl: typeof row._abstractSourceUrl === 'string' && row._abstractSourceUrl ? row._abstractSourceUrl : null,
+      sourceKind: typeof row._sourceKind === 'string' ? row._sourceKind : 'official-json',
+      pageIndexed: Boolean(row._pageIndexed),
+      oralPresentation: Boolean(row._oralPresentation),
       paperUrl: link.url, pdfUrl,
       posterUrl: httpUrl(row.virtualsite_url, 'https://neurips.cc') || `https://neurips.cc/virtual/2026/poster/${encodeURIComponent(sourceEventId)}`,
       decision: typeof row.decision === 'string' ? row.decision : '',
